@@ -32,4 +32,9 @@ describe('Component FileUploadRowStatus', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render disabled view', () => {
+        const wrapper = setup({disabled: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

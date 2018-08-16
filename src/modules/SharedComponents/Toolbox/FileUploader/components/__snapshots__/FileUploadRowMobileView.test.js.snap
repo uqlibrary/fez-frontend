@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      direction="row"
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={1}
+      >
+        <pure(Attachment) />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={11}
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          noWrap={true}
+          variant="body1"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          gutterBottom={true}
+          variant="caption"
+        >
+          File name
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      direction="row"
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={1}
+      >
+        <pure(Attachment) />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={11}
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          noWrap={true}
+          variant="body1"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          gutterBottom={true}
+          variant="caption"
+        >
+          File name
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(LockOutlined) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={11}
+        >
+          <FileUploadAccessSelector
+            disabled={false}
+            locale={
+              Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              }
+            }
+            onChange={[MockFunction]}
+            value={8}
+          />
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File access
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(CalendarTodayOutlined) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={10}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="body1"
+          >
+            No date required
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Embargo date
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <Connect(FileUploadRowStatus)
+            disabled={false}
+            name="test.pdf"
+            onDelete={[MockFunction]}
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</WithStyles(Grid)>
+`;
+
+exports[`Component FileUploadRowMobileView should render default view 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      direction="row"
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={1}
+      >
+        <pure(Attachment) />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={11}
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          noWrap={true}
+          variant="body1"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          gutterBottom={true}
+          variant="caption"
+        >
+          File name
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(LockOutlined) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={11}
+        >
+          <FileUploadAccessSelector
+            disabled={false}
+            locale={
+              Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              }
+            }
+            onChange={[MockFunction]}
+            value={null}
+          />
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File access
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(CalendarTodayOutlined) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={10}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="body1"
+          >
+            No date required
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Embargo date
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <Connect(FileUploadRowStatus)
+            disabled={false}
+            name="test.pdf"
+            onDelete={[MockFunction]}
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</WithStyles(Grid)>
+`;
+
+exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      direction="row"
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={1}
+      >
+        <pure(Attachment) />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={11}
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          noWrap={true}
+          variant="body1"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          gutterBottom={true}
+          variant="caption"
+        >
+          File name
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(LockOutlined) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={11}
+        >
+          <FileUploadAccessSelector
+            disabled={false}
+            locale={
+              Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              }
+            }
+            onChange={[MockFunction]}
+            value={9}
+          />
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File access
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(CalendarTodayOutlined) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={10}
+        >
+          <FileUploadEmbargoDate
+            disabled={false}
+            minDate={2016-12-31T14:00:00.000Z}
+            onChange={[MockFunction]}
+            value={2016-12-31T14:00:00.000Z}
+          />
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Embargo date
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <Connect(FileUploadRowStatus)
+            disabled={false}
+            name="test.pdf"
+            onDelete={[MockFunction]}
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</WithStyles(Grid)>
+`;

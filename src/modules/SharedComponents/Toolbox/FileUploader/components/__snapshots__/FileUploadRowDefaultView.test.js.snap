@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadRowDefaultView should not render access selector or date picker if access condition is not required to select 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  direction="row"
+>
+  <WithStyles(Grid)
+    item={true}
+    md={6}
+    sm={5}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      noWrap={true}
+      variant="body1"
+    >
+      test.pdf
+       (
+      100 MB
+      )
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "textAlign": "center",
+      }
+    }
+    item={true}
+    xs={1}
+  >
+    <Connect(FileUploadRowStatus)
+      disabled={false}
+      onDelete={[MockFunction]}
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component FileUploadRowDefaultView should not render embargo date picker if access condition is set to closed access 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  direction="row"
+>
+  <WithStyles(Grid)
+    item={true}
+    md={6}
+    sm={5}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      noWrap={true}
+      variant="body1"
+    >
+      test.pdf
+       (
+      100 MB
+      )
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <FileUploadAccessSelector
+        disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
+        onChange={[MockFunction]}
+        value={8}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="body1"
+      >
+        No date required
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "textAlign": "center",
+      }
+    }
+    item={true}
+    xs={1}
+  >
+    <Connect(FileUploadRowStatus)
+      disabled={false}
+      onDelete={[MockFunction]}
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component FileUploadRowDefaultView should render default view 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  direction="row"
+>
+  <WithStyles(Grid)
+    item={true}
+    md={6}
+    sm={5}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      noWrap={true}
+      variant="body1"
+    >
+      test.pdf
+       (
+      100 MB
+      )
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <FileUploadAccessSelector
+        disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
+        onChange={[MockFunction]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="body1"
+      >
+        No date required
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "textAlign": "center",
+      }
+    }
+    item={true}
+    xs={1}
+  >
+    <Connect(FileUploadRowStatus)
+      disabled={false}
+      onDelete={[MockFunction]}
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component FileUploadRowDefaultView should render embargo date picker if access condition is set to open access 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  direction="row"
+>
+  <WithStyles(Grid)
+    item={true}
+    md={6}
+    sm={5}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      noWrap={true}
+      variant="body1"
+    >
+      test.pdf
+       (
+      100 MB
+      )
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <FileUploadAccessSelector
+        disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
+        onChange={[MockFunction]}
+        value={9}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <FileUploadEmbargoDate
+        disabled={false}
+        minDate={2016-12-31T14:00:00.000Z}
+        onChange={[MockFunction]}
+        value={2016-12-31T14:00:00.000Z}
+      />
+    </WithStyles(Grid)>
+  </React.Fragment>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "textAlign": "center",
+      }
+    }
+    item={true}
+    xs={1}
+  >
+    <Connect(FileUploadRowStatus)
+      disabled={false}
+      onDelete={[MockFunction]}
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

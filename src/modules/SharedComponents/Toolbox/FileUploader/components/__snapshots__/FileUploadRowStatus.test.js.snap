@@ -33,6 +33,21 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
 </React.Fragment>
 `;
 
+exports[`Component FileUploadRowStatus should render disabled view 1`] = `
+<React.Fragment>
+  <WithStyles(Tooltip)
+    title="Remove this file"
+  >
+    <WithStyles(IconButton)
+      disabled={true}
+      onClick={[MockFunction]}
+    >
+      <pure(Delete) />
+    </WithStyles(IconButton)>
+  </WithStyles(Tooltip)>
+</React.Fragment>
+`;
+
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <React.Fragment>
   <WithStyles(IconButton)>
