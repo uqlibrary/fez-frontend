@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadRowStatus should render circular progress if upload is in progress 1`] = `
+<React.Fragment>
+  <React.Fragment>
+    <WithStyles(CircularProgress)
+      size={20}
+      thickness={4}
+      value={50}
+      variant="determinate"
+    />
+    <WithStyles(Typography)
+      aria-label="50%"
+      variant="caption"
+    >
+      50%
+    </WithStyles(Typography)>
+  </React.Fragment>
+</React.Fragment>
+`;
+
+exports[`Component FileUploadRowStatus should render default view 1`] = `
+<React.Fragment>
+  <WithStyles(Tooltip)
+    title="Remove this file"
+  >
+    <WithStyles(IconButton)
+      onClick={[MockFunction]}
+    >
+      <pure(Delete) />
+    </WithStyles(IconButton)>
+  </WithStyles(Tooltip)>
+</React.Fragment>
+`;
+
+exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
+<React.Fragment>
+  <WithStyles(IconButton)>
+    <pure(Done) />
+  </WithStyles(IconButton)>
+</React.Fragment>
+`;
