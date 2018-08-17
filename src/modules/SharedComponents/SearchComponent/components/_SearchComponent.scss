@@ -4,7 +4,7 @@
   .searchQueryCaption {
     margin-top: 24px;
     font-size: $text-body-small !important;
-    word-break: break-all;
+    word-break: normal !important;
     hyphens: auto !important;
     .combiner {
       font-style: italic !important;
@@ -178,12 +178,24 @@
       width: 100% !important;
     }
   }
-  .advancedSearchOpenAccessCheckbox {
+  .sidebar {
     @include tablet-only {
-      margin-top: 18px !important;
+      width: 97%;
     }
-    @include mobile {
-      margin-top: 12px !important;
+    .advancedSearchOpenAccessCheckbox {
+      @include tablet-only {
+        margin-top: 36px !important;
+      }
+      @include mobile {
+        margin-top: 24px !important;
+      }
+    }
+    .advancedSearchPublicationType {
+      @include desktop {
+        margin-top: -12px;
+      }
+    }
+    .advancedSearchYearFilter {
     }
   }
   .actionButtons {
@@ -205,8 +217,10 @@
     }
     .column.combiner {
       overflow: hidden;
+      //min-width: 76px !important;
       @include mobile {
         text-align: right !important;
+        padding-right: 12px !important;
         margin: 0 0 0 12px !important;
       }
       span {
@@ -224,16 +238,33 @@
       }
     }
     .column.input {
-      &>div>div:nth-of-type(1){
-        width: 100% !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
+      overflow-x: hidden !important;
+      @include desktop {
+        max-width: 100%;
+        width: 100px;
+        & > div > div:nth-of-type(1) {
+          max-width: 100% !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+      }
+      @include tablet {
+        max-width: 100%;
+        width: 100px;
+        & > div > div:nth-of-type(1) {
+          max-width: 100% !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
       }
       @include mobile {
         margin-top: -12px !important;
       }
     }
+    .selectField {
+      max-width: 100% !important;
+    }
+
     // Override search box X
     input[type="search"]::-webkit-search-cancel-button {
       display: none;
@@ -256,5 +287,12 @@
         opacity: 0.66;
       }
     }
+  }
+}
+
+// Remove top padding for checked tick in dropdown lists
+span.menuitem {
+  svg {
+    top: 0px !important;
   }
 }

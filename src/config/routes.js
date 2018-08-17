@@ -7,18 +7,24 @@ import {openAccessIds} from 'config/openAccess';
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
-    `/records/search?${param({
+const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
+    const params = {
         ...defaultQueryParams,
         searchQueryParams: {
-            all: !!searchQuery && searchQuery || ''
+            ...searchQuery
         },
         activeFacets: {
             ...defaultQueryParams.activeFacets,
             ...activeFacets
         }
-    })}`
-);
+    };
+
+    if (searchQuery && !searchQuery.hasOwnProperty('all')) {
+        params.searchMode = 'advanced';
+    }
+
+    return `/records/search?${param(params)}`;
+};
 
 export const pathConfig = {
     index: '/',
@@ -48,19 +54,15 @@ export const pathConfig = {
     file: {
         url: (pid, fileName) => (`https://espace.library.uq.edu.au/view/${pid}/${fileName}`)
     },
-    // TODO: update links when we have list pages
+    // TODO: review institutional status and herdc status links when we start administrative epic
     list: {
-        author: (author) => getSearchUrl({searchQuery: author}),
-        authorId: (authorId, author) => getSearchUrl({
-            searchQuery: author,
-            activeFacets: {
-                filters: {
-                    'Author': authorId
-                }
+        author: (author, authorId) => getSearchUrl({
+            searchQuery: {
+                'rek_author': author,
+                'rek_author_id': authorId
             }
         }),
         subject: (subjectId, subject) => getSearchUrl({
-            searchQuery: subject,
             activeFacets: {
                 filters: {
                     'Subject': subjectId,
@@ -68,39 +70,38 @@ export const pathConfig = {
                 }
             }
         }),
-        herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
-        keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
-        institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: institutionalStatus}),
+        keyword: (keyword) => getSearchUrl({
+            activeFacets: {
+                filters: {
+                    'Keywords': keyword
+                }
+            }
+        }),
         openAccessStatus: (openAccessStatusId) => getSearchUrl({
             activeFacets: {
                 showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
             }
         }),
         journalName: (journalName) => getSearchUrl({
-            searchQuery: journalName,
+            searchQuery: {'rek_journal_name': journalName},
             activeFacets: {
                 filters: {
                     'Journal name': journalName
                 }
             }
         }),
-        publisher: (publisher) => getSearchUrl({searchQuery: publisher}),
-        license: (license) => getSearchUrl({searchQuery: license}),
-        collection: (collectionId, collection) => getSearchUrl({
-            searchQuery: collection,
-            activeFacets: {
-                filters: {
-                    'Collection': collectionId,
-                    'Collection (lookup)': collection
-                }
-            }
-        }),
-        orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: orgUnitName}),
-        series: (series) => getSearchUrl({searchQuery: series}),
-        bookTitle: (bookTitle) => getSearchUrl({searchQuery: bookTitle}),
-        jobNumber: (jobNumber) => getSearchUrl({searchQuery: jobNumber}),
-        conferenceName: (conferenceName) => getSearchUrl({searchQuery: conferenceName}),
-        proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: proceedingsTitle}),
+        bookTitle: (bookTitle) => getSearchUrl({searchQuery: {'rek_book_title': bookTitle}}),
+        collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': collectionId}}),
+        contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': contributor}}),
+        conferenceName: (conferenceName) => getSearchUrl({searchQuery: {'rek_conference_name': conferenceName}}),
+        orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: {'rek_org_unit_name': orgUnitName}}),
+        publisher: (publisher) => getSearchUrl({searchQuery: {'rek_publisher': publisher}}),
+        series: (series) => getSearchUrl({searchQuery: {'rek_series': series}}),
+        license: (license) => getSearchUrl({searchQuery: {all: license}}),
+        jobNumber: (jobNumber) => getSearchUrl({searchQuery: {all: jobNumber}}),
+        proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: {all: proceedingsTitle}}),
+        herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: {all: herdcStatus}}),
+        institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}}),
     },
     admin: {
         masquerade: '/admin/masquerade',

@@ -42,12 +42,13 @@ class SearchRecords extends PureComponent {
         this.initState = {
             page: 1,
             pageSize: 20,
-            sortBy: locale.components.sorting.sortBy[0].value,
+            sortBy: locale.components.sorting.sortBy[1].value,
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
                 ranges: {}
-            }
+            },
+            advancedSearchFields: []
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
@@ -84,7 +85,13 @@ class SearchRecords extends PureComponent {
             });
         } else {
             this.setState({
-                ...newProps.searchQuery
+                ...(
+                    (
+                        !!newProps.location.search
+                        && newProps.location.search.length > 1
+                        && this.parseSearchQueryStringFromUrl(newProps.location.search.substr(1))
+                    ) || {}
+                )
             });
         }
     }
@@ -124,7 +131,7 @@ class SearchRecords extends PureComponent {
         providedSearchQuery.sortBy = locale.components.sorting.sortBy
             .map(sortBy => sortBy.value)
             .indexOf(providedSearchQuery.sortBy) < 0
-            ? locale.components.sorting.sortBy[0].value
+            ? locale.components.sorting.sortBy[1].value
             : providedSearchQuery.sortBy;
 
         return providedSearchQuery;
@@ -186,17 +193,40 @@ class SearchRecords extends PureComponent {
         this.props.actions.exportEspacePublications({...exportFormat, ...this.state});
     };
 
+    handleFacetExcludesFromSearchFields = (searchFields) => {
+        const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
+        // Iterate the searchfields and add their map from locale into the excluded facets array
+        if(searchFields) {
+            const importedFacetExcludes = [];
+            Object.keys(searchFields).map((key) => {
+                const facetToHide = locale.components.searchComponent.advancedSearch.fieldTypes[searchFields[key].searchField].map;
+                if(facetToHide) {
+                    importedFacetExcludes.push(facetToHide);
+                }
+            });
+            this.setState({
+                advancedSearchFields: excludesFromLocale.concat(importedFacetExcludes)
+            });
+        }
+    };
+
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
         const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
-
         return (
             <StandardPage className="page-search-records">
                 <StandardCard className="searchComponent">
-                    <SearchComponent className="search-body" showAdvancedSearchButton />
+                    <SearchComponent
+                        className="search-body"
+                        showAdvancedSearchButton activeFacets={this.state.activeFacets}
+                        facetsChanged={this.facetsChanged}
+                        searchLoading={this.props.searchLoading}
+                        clearSearchQuery={this.props.actions.clearSearchQuery}
+                        updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
+                    />
                 </StandardCard>
                 {
                     // first time loading search results
@@ -281,7 +311,7 @@ class SearchRecords extends PureComponent {
                                         onFacetsChanged={this.facetsChanged}
                                         activeFacets={this.state.activeFacets}
                                         disabled={isLoadingOrExporting}
-                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                        excludeFacetsList={this.state.advancedSearchFields}
                                         renameFacetsList={txt.facetsFilter.renameFacetsList}
                                         lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                         showOpenAccessFilter/>

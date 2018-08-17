@@ -15,6 +15,7 @@ const orcidUrl = 'https://sandbox.orcid.org';
 const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 
 module.exports = {
+    mode: 'development',
     context: path.resolve(__dirname),
     devtool: 'source-map',
     entry: [
@@ -62,12 +63,12 @@ module.exports = {
             },
             {
                 test: /\.js?$/,
+                include: [
+                    path.resolve(__dirname, 'src')
+                ],
                 exclude: [
                     /node_modules/,
                     /custom_modules/
-                ],
-                include: [
-                    path.resolve(__dirname, 'src')
                 ],
                 use: [
                     'babel-loader',

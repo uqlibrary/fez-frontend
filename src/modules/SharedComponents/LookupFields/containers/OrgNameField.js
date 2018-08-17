@@ -9,10 +9,11 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: props.input.onChange,
+        onChange: (item) => props.input.onChange(item.value),
+        dataSourceConfig: { text: 'value', value: 'value'},
         async: true,
         errorText: props.meta ? props.meta.error : null,
-        selectedValue: props.input ? props.input.value : null
+        selectedValue: props.input ? {value: props.input.value} : null
     };
 };
 

@@ -3,7 +3,7 @@ import OpenAccessFilter from './OpenAccessFilter';
 function setup(testProps, isShallow = true) {
     const props = {
         onChange: jest.fn() || testProps.onChange,
-        value: {from: null, to: null} || testProps.value,
+        value: testProps.value || true,
         open: null || testProps.open,
         ...testProps
     };

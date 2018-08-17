@@ -27,7 +27,7 @@ export const getFacetsParams = (facets) => {
     return facetsParam;
 };
 
-export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
+export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
     const unknownAuthors = withUnknownAuthors >= 0 ? {with_unknown_authors: withUnknownAuthors} : {};
 
     return {
@@ -37,8 +37,13 @@ export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1
         sort: sortBy,
         order_by: sortDirection.toLowerCase(),
         ...getFacetsParams(facets),
-        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: openAccessConfig.openAccessIds} : {}),
         ...unknownAuthors
+    };
+};
+
+export const getOpenAccessSearchParams = ({facets = {}}) => {
+    return {
+        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: openAccessConfig.openAccessIds} : {})
     };
 };
 
@@ -121,31 +126,85 @@ export const RECORDS_ISSUES_API = ({pid}) => (
 
 // search/list records apis
 export const POSSIBLE_RECORDS_API = (values) => (
-    {apiUrl: 'records/search', options: {params: {rule: 'possible', ...getStandardSearchParams(values)}}}
+    {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'possible',
+                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+            }
+        }
+    }
 );
+
 export const HIDE_POSSIBLE_RECORD_API = () => (
     {apiUrl: 'records/search', options: {params: {rule: 'possible'}}}
 ); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
 export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
-    {apiUrl: `records/${route}`, options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}}
+    {
+        apiUrl: `records/${route}`,
+        options: {
+            params: {
+                rule: 'mine',
+                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+            }
+        }
+    }
 );
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
-    {apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}}
+    {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'mine',
+                'filters[stats_only]': true,
+                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+            }
+        }
+    }
 );
 export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
 
-export const SEARCH_INTERNAL_RECORDS_API = (values, route = 'search') => {
-    // values = {searchQuery (text value - title search, doi or pubmed id)
+export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
+    // query = {searchQuery (text value - title search, doi or pubmed id)
     // searchQueryParams = {} (search parameters, eg title, author etc)
-    // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
+    // page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'desc', facets = {}}
+    let {searchQueryParams} = query;
+
+    // convert {value, label} from advanced search to value string from api
+    const searchQueryParamsWithoutLabels = query.searchMode === 'advanced' && !!searchQueryParams && Object.keys(searchQueryParams).reduce((result, key) => {
+        const {value} = searchQueryParams[key];
+        return (
+            (key === 'rek_pid' && value.toLowerCase().indexOf('uq:') !== 0) && {...result, [key]: `UQ:${value}`}
+            || (key === 'rek_genre_type') && {...result, [key]: value.map(item => `"${item}"`)}
+            || (key === 'all' || !!value) && {...result, [key]: value}
+            || {...result, [key]: searchQueryParams[key]}
+        );
+    }, {}) || searchQueryParams;
+
+    const values = {...query, searchQueryParams: searchQueryParamsWithoutLabels};
+
+    searchQueryParams = {
+        ...values.searchQueryParams,
+        ...getOpenAccessSearchParams(values)
+    };
+
+    let advancedSearchQueryParams = null;
+    if (values.searchMode === 'advanced') {
+        advancedSearchQueryParams = {
+            mode: 'advanced',   // mode to let axios request interceptor to know for serialising query params
+            key: {...searchQueryParams}
+        };
+    }
+
     return {
         apiUrl: `records/${route}`,
         options: {
             params: {
                 ...getSearchType(values.searchQuery),
                 ...getStandardSearchParams(values),
-                ...values.searchQueryParams
+                ...(advancedSearchQueryParams || searchQueryParams)
             }
         }
     };
@@ -160,10 +219,20 @@ export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
         apiUrl: 'records/search',
         options: {
             params: {
-                rule: 'lookup_old',
+                rule: 'lookup',
                 search_key: searchKey,
                 lookup_value: searchQuery
             }
         }
     }
 );
+
+export const SEARCH_AUTHOR_LOOKUP_API = ({searchQuery}) => ({
+    apiUrl: 'fez-authors/search',
+    options: {
+        params: {
+            rule: 'lookup',
+            query: searchQuery
+        }
+    }
+});

@@ -123,9 +123,18 @@ mock
             return [200, mockData.searchKeyList[config.params.search_key]];
         }
         // SEARCH_INTERNAL_RECORDS_API
-        else if (config.params.id || config.params.doi || config.params.title || config.params.all || config.params.rek_title) {
+        else if (config.params.id || config.params.doi || config.params.hasOwnProperty('all') || config.params.rek_title || config.params.key) {
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
+        }
+        // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
+        else if (config.params.key.id || config.params.key.doi || config.params.key.title || config.params.key.all || config.params.key.rek_title) {
+            // return [200, mockData.internalTitleSearchListNoResults];
+            return [200, mockData.internalTitleSearchList];
+        }
+        // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
+        else if (config.params.key.rek_object_type === 2) {
+            return [200, mockData.collections];
         }
         return [404, ['Request not found']];
     })

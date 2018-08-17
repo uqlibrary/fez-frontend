@@ -9,16 +9,26 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: props.input.onChange,
+        onChange: !!props.input && ((item) => props.input.onChange(item.value)) || props.onChange,
         async: true,
-        errorText: props.meta ? props.meta.error : null,
-        selectedValue: props.input ? props.input.value : null
+        dataSourceConfig: {text: 'value', value: 'value'},
+        errorText: !!props.meta && props.meta.error || !!props.errorText && props.errorText || null,
+        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || ''
     };
 };
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = (dispatch, props) => (
     {
-        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+        onChange: (value) => {
+            if (!!props.input) {
+                props.input.onChange(value.value);
+            } else if (typeof value === 'string') {
+                props.onChange({value});
+            } else {
+                props.onChange(value);
+            }
+        }
     }
 );
 

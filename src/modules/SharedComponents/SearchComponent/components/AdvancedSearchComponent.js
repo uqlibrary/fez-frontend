@@ -8,17 +8,24 @@ import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-dow
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
-
-
+import {publicationTypes} from 'config';
 import {locale} from 'locale';
+import * as recordForms from '../../PublicationForm/components/Forms';
+import DocumentTypeField from './Fields/DocumentTypeField';
+import PublicationYearRangeField from './Fields/PublicationYearRangeField';
+import AdvancedSearchCaption from './AdvancedSearchCaption';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
 
         fieldRows: PropTypes.array,
+        docTypes: PropTypes.array,
+        yearFilter: PropTypes.object,
+        activeFacets: PropTypes.object,
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
+        isLoading: PropTypes.bool,
 
         // Event handlers
         onToggleSearchMode: PropTypes.func,
@@ -27,6 +34,8 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchRowAdd: PropTypes.func,
         onAdvancedSearchRowRemove: PropTypes.func,
         onAdvancedSearchReset: PropTypes.func,
+        updateDocTypeValues: PropTypes.func,
+        updateYearRangeFilter: PropTypes.func,
 
         onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
@@ -35,8 +44,14 @@ export default class AdvancedSearchComponent extends PureComponent {
     static defaultProps = {
         fieldRows: [{
             searchField: '0',
-            value: ''
+            value: '',
+            label: ''
         }],
+        yearFilter: {
+            from: null,
+            to: null,
+            invalid: true
+        },
         isMinimised: false,
         isOpenAccess: false,
 
@@ -48,33 +63,21 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchReset: () => {}
     };
 
-    getAdvancedSearchCaption = ({fieldRows, isOpenAccess}) => {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const searchFields = fieldRows
-            .filter(item => item.searchField !== '0' && item.value !== '')
-            .map((item, index) => (
-                <span key={item.searchField}>
-                    {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
-                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
-                    <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
-                    <span className="value"> {item.value}</span>
-                </span>
-            ));
-
-        const openAccessText = isOpenAccess
-            ? locale.components.searchComponent.advancedSearch.openAccess.captionText
-            : searchFields.length > 0 && '.' || null;
-        return (searchFields.length > 0 || !!isOpenAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
-    };
+    constructor(props) {
+        super(props);
+        this.publicationTypes = publicationTypes({...recordForms});
+    }
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return fieldRows.filter(item => item.searchField === '0' || item.value === ''
-            // Check if the locale specifies a minLength for this field and check it not shorter
-            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
-            // Check if this field is exceeding the maxLength
-            || (MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
-        ).length === 0;
+        return !this.props.isLoading && !this.props.yearFilter.invalid
+            && fieldRows.filter(item =>
+                item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
+            // Check if this field is a string exceeding the maxLength
+            || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
+            // Check if the value is an array, and not empty
+            || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
+            ).length === 0;
     };
 
     _handleAdvancedSearch = (event) => {
@@ -126,10 +129,10 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
+        const lastFieldAdded = [...this.props.fieldRows].pop();
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
-             && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
+            && lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
-        const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
         return (
             <div className={`searchComponent ${this.props.className}`}>
                 <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch}>
@@ -157,26 +160,51 @@ export default class AdvancedSearchComponent extends PureComponent {
                                     <div className="columns is-multiline is-mobile">
                                         <div className="column fields is-11-mobile is-11-tablet-only">
                                             {
-                                                this.props.fieldRows.map((item, index) => (
-                                                    <AdvancedSearchRow
-                                                        key={`advanced-search-field-${item.searchField}`}
-                                                        rowIndex={index}
-                                                        disabledFields={alreadyAddedFields}
-                                                        onSearchRowChange={this._handleAdvancedSearchRowChange}
-                                                        onSearchRowDelete={this._removeAdvancedSearchRow}
-                                                        {...item}
-                                                    />
-                                                ))
+                                                this.props.fieldRows
+                                                    .filter((item) => {
+                                                        return item.searchField && txt.advancedSearch.fieldTypes[item.searchField].type !== null;
+                                                    })
+                                                    .map((item, index) => (
+                                                        <AdvancedSearchRow
+                                                            key={`advanced-search-field-${item.searchField}`}
+                                                            rowIndex={index}
+                                                            disabledFields={alreadyAddedFields}
+                                                            onSearchRowChange={this._handleAdvancedSearchRowChange}
+                                                            onSearchRowDelete={this._removeAdvancedSearchRow}
+                                                            {...item}
+                                                        />
+                                                    ))
                                             }
                                         </div>
                                         <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
-                                            <Checkbox
-                                                className="advancedSearchOpenAccessCheckbox"
-                                                label={txt.advancedSearch.openAccess.title}
-                                                aria-label={txt.advancedSearch.openAccess.ariaLabel}
-                                                checked={this.props.isOpenAccess}
-                                                onCheck={this._toggleOpenAccess}
-                                            />
+                                            <div className="columns is-gapless is-mobile is-multiline sidebar">
+                                                <div className="column is-11-mobile is-narrow-tablet is-12-desktop" style={{minWidth: 166, marginRight: 12}}>
+                                                    <Checkbox
+                                                        className="advancedSearchOpenAccessCheckbox"
+                                                        label={txt.advancedSearch.openAccess.title}
+                                                        aria-label={txt.advancedSearch.openAccess.ariaLabel}
+                                                        checked={this.props.isOpenAccess}
+                                                        onCheck={this._toggleOpenAccess}
+                                                        disabled={this.props.isLoading}
+                                                    />
+                                                </div>
+                                                <div className="column is-11-mobile is-12-desktop" style={{marginRight: 12}}>
+                                                    <DocumentTypeField
+                                                        docTypes={this.props.docTypes}
+                                                        updateDocTypeValues={this.props.updateDocTypeValues}
+                                                        className="advancedSearchPublicationType"
+                                                        disabled={this.props.isLoading}
+                                                    />
+                                                </div>
+                                                <div className="column is-11-mobile is-12-desktop">
+                                                    <PublicationYearRangeField
+                                                        className="advancedSearchYearFilter"
+                                                        yearFilter={this.props.yearFilter}
+                                                        updateYearRangeFilter={this.props.updateYearRangeFilter}
+                                                        disabled={this.props.isLoading}
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="columns is-gapless is-mobile is-multiline actionButtons">
@@ -207,7 +235,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             />
                                         </div>
                                         <div className="column is-hidden-mobile" />
-                                        <div className="column is-3-desktop is-3-tablet is-12-mobile">
+                                        <div className="column is-3-desktop is-4-tablet is-12-mobile">
                                             <RaisedButton
                                                 className="advancedSearchButton"
                                                 label={txt.searchButtonText}
@@ -222,12 +250,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                     </div>
                                 </Fragment>
                         }
-                        {
-                            !!searchQueryCaption &&
-                            <div className="searchQueryCaption">
-                                {searchQueryCaption}
-                            </div>
-                        }
+                        <AdvancedSearchCaption {...this.props} />
                     </div>
                 </form>
             </div>

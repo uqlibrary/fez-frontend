@@ -124,7 +124,7 @@ describe('Backend routes method', () => {
                             page: 1,
                             per_page: 20,
                             rule: 'mine',
-                            sort: 'published_date'
+                            sort: 'score'
                         }
                     }
                 }
@@ -165,7 +165,7 @@ describe('Backend routes method', () => {
                             order_by: 'desc',
                             page: 1,
                             per_page: 20,
-                            sort: 'published_date',
+                            sort: 'score',
                             title: 'title search'
                         }
                     }
@@ -204,7 +204,7 @@ describe('Backend routes method', () => {
                     order_by: 'desc',
                     page: 1,
                     per_page: 20,
-                    sort: 'published_date'
+                    sort: 'score'
                 }
             },
             {
@@ -226,14 +226,32 @@ describe('Backend routes method', () => {
                     page: 2,
                     per_page: 30,
                     sort: 'score',
-                    ['filters[facets][one]']: 'one facet',
-                    "rek_oa_status": [453693, 453694, 453695, 453696, 453697, 453954]
+                    ['filters[facets][one]']: 'one facet'
                 }
             }
         ];
 
         testCases.map(item => {
             expect(routes.getStandardSearchParams({...item.values})).toEqual(item.expected);
+        });
+    });
+
+    it('should return parameters for search query string from getOpenAccessSearchParams method', () => {
+        const testCases = [
+            {
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { filters: {one: 'one facet'}}},
+                expected: {}
+            },
+            {
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { showOpenAccessOnly: true, filters: {one: 'one facet'}}},
+                expected: {
+                    "rek_oa_status": [453693, 453694, 453695, 453696, 453697, 453954]
+                }
+            }
+        ];
+
+        testCases.map(item => {
+            expect(routes.getOpenAccessSearchParams({...item.values})).toEqual(item.expected);
         });
     });
 
@@ -246,7 +264,7 @@ describe('Backend routes method', () => {
                     options: {
                         params: {
                             lookup_value: 'title search',
-                            rule: 'lookup_old',
+                            rule: 'lookup',
                             search_key: 'series'
                         }
                     }
@@ -272,7 +290,7 @@ describe('Backend routes method', () => {
                             page: 1,
                             per_page: 20,
                             rule: "possible",
-                            sort: "published_date"
+                            sort: "score"
                         }
                     }
                 }
@@ -289,7 +307,7 @@ describe('Backend routes method', () => {
                             page: 1,
                             per_page: 20,
                             rule: "possible",
-                            sort: "published_date",
+                            sort: "score",
                             ['filters[facets][one]']: 'one facet',
                             ['filters[facets][two]']: 'two facets'
                         }
@@ -351,7 +369,7 @@ describe('Backend routes method', () => {
                     "page": 1,
                     "per_page": 20,
                     "rule": "mine",
-                    "sort": "published_date"
+                    "sort": "score"
                 }
             }
         });

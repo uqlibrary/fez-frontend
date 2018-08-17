@@ -1,7 +1,7 @@
 import locale from 'locale/global';
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import {SEARCH_INTERNAL_RECORDS_API, SEARCH_EXTERNAL_RECORDS_API, SEARCH_KEY_LOOKUP_API} from 'repositories/routes';
+import {SEARCH_INTERNAL_RECORDS_API, SEARCH_EXTERNAL_RECORDS_API, SEARCH_KEY_LOOKUP_API, SEARCH_AUTHOR_LOOKUP_API} from 'repositories/routes';
 import {exportPublications} from './exportPublications';
 
 function getSearch(source, searchQuery) {
@@ -10,6 +10,22 @@ function getSearch(source, searchQuery) {
     } else {
         return get(SEARCH_EXTERNAL_RECORDS_API({source: source, searchQuery: searchQuery}));
     }
+}
+
+/**
+ * loadCollectionsList - returns records for a list of all collections in eSpace
+ * @returns {Promise}
+ */
+export function collectionsList() {
+    return dispatch => {
+        dispatch({type: `${actions.SEARCH_COLLECTION_LOADING}`});
+        return get(SEARCH_INTERNAL_RECORDS_API({searchMode: 'advanced', searchQueryParams: {rek_object_type: 2}, pageSize: 999, sortBy: 'title', sortDirection: 'asc'}))
+            .then((response) => {
+                dispatch({type: `${actions.SEARCH_COLLECTION_LOADED}`, payload: response.data});
+            }, (error) => {
+                dispatch({type: `${actions.SEARCH_COLLECTION_FAILED}`, payload: error.message});
+            });
+    };
 }
 
 /**
@@ -87,6 +103,14 @@ export function searchPublications(searchQuery) {
     };
 }
 
+export function getSearchLookupApi(searchQuery, searchKey) {
+    if (searchKey === 'author') {
+        return SEARCH_AUTHOR_LOOKUP_API({searchQuery: searchQuery});
+    } else {
+        return SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey});
+    }
+}
+
 /**
  * Get a list of values based on search key and value, eg for auto suggest controls
  * @param string - search key, eg 'series'
@@ -97,7 +121,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
 
-        return get(SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey}))
+        return get(getSearchLookupApi(searchQuery, searchKey))
             .then((response) => {
                 dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
             }, (error) => {
@@ -112,7 +136,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
  * {
  *  title: '',
  *  ...any other search parameters for advanced search...,
- *  page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc',
+ *  page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc',
  *  activeFacets = {filters: {}, ranges: {}}
  * }
  *
@@ -151,17 +175,9 @@ export function searchEspacePublications(searchParams) {
  * @param {string} format
  * @returns {action}
  */
-export function exportEspacePublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}, searchQueryParams = {}}) {
+export function exportEspacePublications(searchParams) {
     return exportPublications(SEARCH_INTERNAL_RECORDS_API(
-        {
-            exportPublicationsFormat: exportPublicationsFormat,
-            page: page,
-            pageSize: pageSize,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-            facets: activeFacets,
-            searchQueryParams: searchQueryParams
-        },
+        {...searchParams, facets: searchParams.activeFacets || {}},
         'export'
     ));
 }

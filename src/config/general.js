@@ -249,6 +249,59 @@ export const publicationTypes = (components) => [
     }
 ];
 
+export const documentTypesLookup = {
+    202: 'Generic document',
+    263: 'Audio document',
+    174: 'Book',
+    177: 'Book chapter',
+    130: 'Conference paper',
+    197: 'Conference proceedings',
+    313: 'Creative work',
+    371: 'Data collection',
+    181: 'Department technical report',
+    316: 'Design',
+    228: 'Digilib image',
+    238: 'Image',
+    294: 'Journal',
+    179: 'Journal article',
+    374: 'Manuscript',
+    191: 'Newspaper article',
+    185: 'Patent',
+    204: 'Preprint',
+    275: 'Research report',
+    189: 'Seminar paper',
+    187: 'Thesis',
+    310: 'Video document',
+    183: 'Working paper',
+    272: 'Reference entry'
+};
+
+export const publicationSubtypes = [
+    'Research book (original research)',
+    'Textbook',
+    'Edited book',
+    'Reference work, encyclopaedia, manual or handbook',
+    'Research book chapter (original research)',
+    'Critical review of research, literature review, critical commentary',
+    'Chapter in textbook',
+    'Chapter in reference work, encyclopaedia, manual or handbook',
+    'Introduction, foreword, editorial or appendix',
+    'Conference paper',
+    'Fully published paper',
+    'Published abstract',
+    'Poster',
+    'Oral presentation',
+    'Article (original research)',
+    'Critical review of research, literature review, critical commentary',
+    'Letter to editor, brief commentary or brief communication',
+    'Correction/erratum',
+    'Review of book, film, TV, video, software, performance, music etc',
+    'Editorial',
+    'Discussion - responses, round table/panel discussions, Q&A, reply',
+    'Creative work',
+    'Other',
+];
+
 export const QuickTemplates = {
     UQ_STAFF_STUDENTS_VIEW: 1,
     UQ_STAFF_STUDENTS_PRINTERY_VIEW: 6,
@@ -258,18 +311,18 @@ export const QuickTemplates = {
 };
 
 export const thesisSubtypes = [
-    'B.A. Thesis',
-    'B.Sc Thesis',
-    'Bachelor\'s Thesis',
-    'Higher Doctorate',
-    'Honours Thesis',
-    'M.A. Thesis',
-    'M.Sc Thesis',
-    'Master\'s Thesis',
-    'MPhil Thesis',
-    'Other',
-    'PhD Thesis',
-    'Professional Doctorate'
+    {value: 'B.A. Thesis', label: 'B.A. Thesis'},
+    {value: 'B.Sc Thesis', label: 'B.Sc Thesis'},
+    {value: 'Bachelor\'s Thesis', label: 'Bachelor\'s Thesis'},
+    {value: 'Higher Doctorate', label: 'Higher Doctorate'},
+    {value: 'Honours Thesis', label: 'Honours Thesis'},
+    {value: 'M.A. Thesis', label: 'M.A. Thesis'},
+    {value: 'M.Sc Thesis', label: 'M.Sc Thesis'},
+    {value: 'Master\'s Thesis', label: 'Master\'s Thesis'},
+    {value: 'MPhil Thesis', label: 'MPhil Thesis'},
+    {value: 'Other', label: 'Other'},
+    {value: 'PhD Thesis', label: 'PhD Thesis'},
+    {value: 'Professional Doctorate', label: 'Professional Doctorate'}
 ];
 
 export const thesisSubmissionSubtypes = [
@@ -325,7 +378,7 @@ export const SBS_THESIS_DEFAULT_VALUES = {
 export const defaultQueryParams = {
     page: 1,
     pageSize: 20,
-    sortBy: locale.components.sorting.sortBy[0].value,
+    sortBy: locale.components.sorting.sortBy[1].value,
     sortDirection: locale.components.sorting.sortDirection[0],
     activeFacets: {
         filters: {},

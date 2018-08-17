@@ -16,8 +16,8 @@ export default {
                 displayTitle: 'Open access status',
                 activeFilter: 'Show only open access records'
             },
-            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-            renameFacetsList: {'Display type': 'Publication type'},
+            excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
+            renameFacetsList: {'Display type': 'Publication type', 'Subtype': 'Publication subtype'},
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
@@ -814,30 +814,219 @@ export default {
                     show: 'Show advanced search',
                     hide: 'Hide advanced search'
                 },
+                selectAria: 'Click to select a field to search from the list - [current_selection] currently selected',
+                deleteAria: 'Click to delete this search row',
                 fieldTypes: {
                     '0': {
+                        order: 0, // order of appearance in adv search field list
+                        map: '', // map refers to its real world lookup name to match Facets
                         title: 'Select a field',
                         combiner: null,
-                        hint: 'Select a field to search on'
+                        type: 'TextField',
+                        hint: 'Select a field to search on',
+                        validation: [],
+                        ariaLabel: 'Select a field to search on'
+                    },
+                    'divider1': {
+                        order: 0.5,
+                        type: 'divider'
                     },
                     'all': {
+                        order: 1,
+                        map: '',
                         title: 'Any field',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add some text to search all fields with'
+                        hint: 'Add some text to search all fields with',
+                        captionValue: 'anything',
+                        validation: ['maxLength500'],
+                        ariaLabel: 'Type a value to search all fields for'
                     },
-                    'title': {
+                    'rek_title': {
+                        order: 2,
+                        map: 'Title',
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a title to search',
-                        minLength: 10
+                        hint: 'Add a title',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a title to search for'
+                    },
+                    'rek_book_title': {
+                        order: 2.5,
+                        map: 'Book title',
+                        title: 'Boot title for chapters',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a book title to search for'
+                    },
+                    'rek_pid': {
+                        order: 9,
+                        map: 'PID',
+                        title: 'PID',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Add a PID',
+                        validation: ['required'],
+                        ariaLabel: 'Type a PID to search for'
+                    },
+                    'rek_author': {
+                        order: 3,
+                        map: 'Author',
+                        title: 'Author Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an author name',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type an author name to search for'
+                    },
+                    'rek_contributor': {
+                        order: 5,
+                        map: 'Contributor',
+                        title: 'Editor/Contributor',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an editor/contributor name',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a contributor name to search for'
+                    },
+                    'rek_series': {
+                        order: 10,
+                        map: 'Series',
+                        title: 'Series',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a series name',
+                        validation: ['required', 'maxLength500'],
+                        ariaLabel: 'Type a series name to search for'
+                    },
+                    'rek_journal_name': {
+                        order: 11,
+                        map: 'Journal name',
+                        title: 'Journal name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a journal name',
+                        validation: ['required', 'maxLength500'],
+                        ariaLabel: 'Type a journal name to search for'
+                    },
+                    'rek_conference_name': {
+                        order: 12,
+                        map: 'Conference name',
+                        title: 'Conference Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a conference name',
+                        validation: ['required', 'maxLength500'],
+                        ariaLabel: 'Type a conference name to search for'
+                    },
+                    'rek_doi': {
+                        order: 8,
+                        map: '',
+                        title: 'DOI',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a DOI',
+                        validation: ['required', 'doi'],
+                        ariaLabel: 'Type a DOI to search for'
+                    },
+                    'rek_publisher': {
+                        order: 13,
+                        map: 'Publisher',
+                        title: 'Publisher',
+                        combiner: 'is',
+                        type: 'PublisherLookup',
+                        hint: 'Add a publisher',
+                        validation: ['required'],
+                        ariaLabel: 'Type a publisher to search for'
+                    },
+                    'rek_ismemberof': {
+                        order: 7,
+                        map: 'Collection',
+                        title: 'Collection',
+                        combiner: 'is one of',
+                        type: 'CollectionsLookup',
+                        hint: 'Select collections',
+                        loadingHint: 'Loading collections',
+                        errorHint: 'There has been an error loading collections',
+                        multiple: true,
+                        validation: ['required'],
+                        ariaLabel: 'Select multiple collections to search for'
+                    },
+                    'rek_genre_type': {
+                        order: 14,
+                        map: 'Genre',
+                        title: 'Thesis type',
+                        combiner: 'is one of',
+                        type: 'ThesisTypeLookup',
+                        hint: 'Select a Thesis type',
+                        multiple: true,
+                        validation: ['required'],
+                        ariaLabel: 'Select multiple thesis types to search for'
+                    },
+                    'rek_author_id': {
+                        order: 4,
+                        map: 'Author Id',
+                        title: 'Author ID',
+                        combiner: 'is',
+                        type: 'AuthorIdLookup',
+                        hint: 'Add an author id',
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an author ID to select an author from the list'
+                    },
+                    'rek_contributor_id': {
+                        order: 6,
+                        map: 'Contributor Id',
+                        title: 'Contributor ID',
+                        combiner: 'is',
+                        type: 'ContributorIdLookup',
+                        hint: 'Add a contributor id',
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an contributor ID to select an author from the list'
+                    },
+                    'rek_org_unit_name': {
+                        order: 15,
+                        map: '',
+                        title: 'School, Centre or Institute',
+                        combiner: 'is',
+                        type: 'OrgUnitLookup',
+                        hint: 'Add a school, centre or institute',
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list'
+                    },
+                    'rek_display_type': {
+                        order: 20,
+                        map: 'Publication type',
+                        title: 'Publication type',
+                        combiner: 'is one of',
+                        type: null,
+                        hint: 'Select document types',
+                        floatingLabelText: 'Test',
+                        validation: [],
+                        ariaLabel: 'Select multiple publications types to search on'
+                    },
+                    'facet_year_range': {
+                        order: 21,
+                        map: '',
+                        title: 'Published year range',
+                        captionTitle: 'Published',
+                        type: null,
+                        combiner: 'between',
+                        fromHint: 'Year from',
+                        fromAria: 'Enter a year to search from',
+                        toAria: 'Enter a year to search to',
+                        toHint: 'Year to',
+                        invalidText: 'Invalid year range',
+                        ariaLabel: 'Add valid year ranges to search between'
                     }
                 },
                 openAccess: {
-                    title: 'Open access/Full text',
+                    title: 'Open access',
+                    combiner: 'is',
                     captionText: (
-                        <span> AND is <span className="value">open access / full text.</span></span>
+                        <span className="value">open access/full text</span>
                     ),
                     ariaLabel: 'Check to search for publications with are only open access / full text'
                 },
@@ -876,3 +1065,4 @@ export default {
         }
     }
 };
+

@@ -5,7 +5,7 @@ export default class Async extends React.Component {
     static propTypes = {
         load: PropTypes.instanceOf(Promise).isRequired,
         componentProps: PropTypes.any
-    }
+    };
     componentWillMount = () => {
         this.cancelUpdate = false;
         this.props.load.then((c) => {
@@ -14,11 +14,11 @@ export default class Async extends React.Component {
                 this.forceUpdate();
             }
         });
-    }
+    };
 
     componentWillUnmount = () => {
         this.cancelUpdate = true;
-    }
+    };
 
     render = () => {
         const {componentProps} = this.props;

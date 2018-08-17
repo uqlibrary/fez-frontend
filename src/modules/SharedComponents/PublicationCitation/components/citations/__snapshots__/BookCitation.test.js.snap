@@ -357,6 +357,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -1382,6 +1383,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           >
             <AuthorsCitationView
               className="citationEditors"
+              getLink={[Function]}
               idSearchKey={
                 Object {
                   "idKey": "fez_record_search_key_contributor_id",
@@ -1859,6 +1861,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -2504,6 +2507,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           >
             <AuthorsCitationView
               className="citationEditors"
+              getLink={[Function]}
               idSearchKey={
                 Object {
                   "idKey": "fez_record_search_key_contributor_id",

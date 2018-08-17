@@ -6,7 +6,14 @@ function setup(testProps, isShallow = true) {
         publicationsList: [],
         searchLoading: false,
         exportPublicationsLoading: false,
-        actions: {exportEspacePublications: ()=>{}},
+        actions: {
+            exportEspacePublications: jest.fn(),
+            searchEspacePublications: jest.fn()
+        },
+        location: {
+            search: '?searchQueryParams%5Ball%5D=test'
+        },
+        history: {},
         ...testProps,
     };
     return getElement(SearchRecords, props, isShallow);
@@ -128,14 +135,6 @@ describe('SearchRecords page', () => {
         wrapper.instance().componentWillReceiveProps({history: {action: 'POP'}, location: {pathname: routes.pathConfig.records.search, state: null}});
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
-    });
-
-    it('should not retrieve data from history if user navigates to next page', () => {
-        const testAction = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testAction}});
-
-        wrapper.instance().componentWillReceiveProps({history: {action: 'PUSH'}, location: {pathname: routes.pathConfig.records.search}});
-        expect(testAction).not.toHaveBeenCalled();
     });
 
     it('should set state and update history and search records when page size changed', () => {
@@ -378,7 +377,7 @@ describe('SearchRecords page', () => {
     it('should correctly parse search query string from location search and reset sortBy if not in valid values', () => {
         const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=100&sortBy=publication_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
 
         expect(result).toEqual({
             page: '1',
@@ -416,7 +415,7 @@ describe('SearchRecords page', () => {
         const searchQuery = {
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -430,7 +429,8 @@ describe('SearchRecords page', () => {
                     }
                 },
                 showOpenAccessOnly: false
-            }
+            },
+            advancedSearchFields: []
         };
 
         const wrapper = setup({
@@ -446,5 +446,13 @@ describe('SearchRecords page', () => {
             ...searchQuery,
             exportPublicationsFormat: 'excel'
         });
+    });
+
+    it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
+        const wrapper = setup();
+        const test = [{"searchField":"rek_title","value":"Test","label":""},{"searchField":"rek_author","value":"Ky Lane","label":""}];
+        const result = ["Scopus document type", "Genre", "Year published", "Published year range", "Title", "Author"];
+        wrapper.instance().handleFacetExcludesFromSearchFields(test);
+        expect(wrapper.instance().state.advancedSearchFields).toEqual(result)
     });
 });

@@ -34,7 +34,7 @@ export default class MyRecords extends PureComponent {
         this.initState = {
             page: 1,
             pageSize: 20,
-            sortBy: locale.components.sorting.sortBy[0].value,
+            sortBy: locale.components.sorting.sortBy[1].value,
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},

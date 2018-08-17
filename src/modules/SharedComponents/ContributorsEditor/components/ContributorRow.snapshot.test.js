@@ -5,15 +5,15 @@ import {authorsSearch} from 'mock/data';
 function setup(testProps, isShallow = true) {
     // build full props list requied by the component
     const props = {
-        ...testProps,
-        index: testProps.index,
+        index: testProps.index || 0,
         contributor: testProps.contributor || { nameAsPublished: 'A. Smith'},
         canMoveUp: testProps.canMoveUp || false,
         canMoveDown: testProps.canMoveDown || false,
         showIdentifierLookup: testProps.showIdentifierLookup || false,
         showContributorAssignment: testProps.showContributorAssignment || false,
         disabledContributorAssignment: testProps.disabledContributorAssignment || false,
-        disabled: testProps.disabled || false
+        disabled: testProps.disabled || false,
+        ...testProps,
     };
     return getElement(ContributorRow, props, isShallow);
 }
@@ -152,7 +152,7 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({contributor: {nameAsPublished: "J. Smith"}});
         wrapper.instance().shouldComponentUpdate = testFunction;
         wrapper.setProps({contributor: {nameAsPublished: "K. Lane"}});
-        expect(testFunction).toBeCalledWith({"canMoveDown": false, "canMoveUp": false, "contributor": {"nameAsPublished": "K. Lane"}, "disabled": false, "disabledContributorAssignment": false, "index": undefined, "locale": {"deleteHint": "Remove this record", "deleteRecordConfirmation": {"cancelButtonLabel": "No", "confirmButtonLabel": "Yes", "confirmationMessage": "Are you sure you want to delete this record?", "confirmationTitle": "Delete record"}, "moveDownHint": "Move record down the order", "moveUpHint": "Move record up the order", "ordinalData": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], "selectHint": "Select this record ([name]) to assign it to you", "suffix": " listed contributor"}, "showContributorAssignment": false, "showIdentifierLookup": false}, null, {});
+        expect(testFunction).toBeCalledWith({"canMoveDown": false, "canMoveUp": false, "contributor": {"nameAsPublished": "K. Lane"}, "disabled": false, "disabledContributorAssignment": false, "index": 0, "locale": {"deleteHint": "Remove this record", "deleteRecordConfirmation": {"cancelButtonLabel": "No", "confirmButtonLabel": "Yes", "confirmationMessage": "Are you sure you want to delete this record?", "confirmationTitle": "Delete record"}, "moveDownHint": "Move record down the order", "moveUpHint": "Move record up the order", "ordinalData": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], "selectHint": "Select this record ([name]) to assign it to you", "suffix": " listed contributor"}, "showContributorAssignment": false, "showIdentifierLookup": false}, null, {});
     });
 
     it('triggers the confirmation box', () => {

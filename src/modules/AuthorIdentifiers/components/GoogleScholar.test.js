@@ -3,8 +3,44 @@ import {currentAuthor} from 'mock/data/account';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
-
+        "array": {
+            insert: jest.fn(),
+            move: jest.fn(),
+            pop: jest.fn(),
+            push: jest.fn(),
+            remove: jest.fn(),
+            removeAll: jest.fn(),
+            shift: jest.fn(),
+            splice: jest.fn(),
+            swap: jest.fn(),
+            unshift: jest.fn(),
+        },
+        autofill: jest.fn(),
+        blur: jest.fn(),
+        change: jest.fn(),
+        clearAsyncError: jest.fn(),
+        "anyTouched": true,
+        "asyncValidating": false,
+        asyncValidate: jest.fn(),
+        clearFields: jest.fn(),
+        clearSubmitErrors: jest.fn(),
+        destroy: jest.fn(),
+        dispatch: jest.fn(),
+        initialize: jest.fn(),
+        reset: jest.fn(),
+        resetSection: jest.fn(),
+        touch: jest.fn(),
+        submit: jest.fn(),
+        untouch: jest.fn(),
+        clearSubmit: jest.fn(),
+        "dirty": true,
+        "form": "form",
+        "initialized": false,
+        "invalid": false,
+        "valid": true,
+        pure: true,
+        pristine: true,
+        submitting: false,
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         author: testProps.author || null,
         actions: testProps.actions || {
@@ -22,7 +58,8 @@ function setup(testProps, isShallow = true) {
         },
         submitSucceeded: testProps.submitSucceeded || false,
         submitFailed: testProps.submitFailed || false,
-        error: testProps.error || null
+        error: testProps.error || null,
+        ...testProps,
     };
 
     return getElement(GoogleScholar, props, isShallow);

@@ -1,5 +1,1119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AdvancedSearchComponent should render advanced search docTypes with checked values based on fixed invalid props 1`] = `
+<SelectField
+  aria-label="Select multiple publications types to search on"
+  autoWidth={false}
+  disabled={false}
+  floatingLabelFixed={true}
+  floatingLabelText="Publication type"
+  fullWidth={true}
+  hintText="Select document types"
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
+  multiple={true}
+  onChange={[Function]}
+  value={
+    Array [
+      "179",
+      "202",
+    ]
+  }
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="Audio Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={263}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="2"
+    primaryText="Book"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={174}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="3"
+    primaryText="Book Chapter"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={177}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="4"
+    primaryText="Conference Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={130}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="5"
+    primaryText="Conference Proceedings"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={197}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="6"
+    primaryText="Creative Work"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={313}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="7"
+    primaryText="Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={371}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
+    primaryText="Department Technical Report"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={181}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="9"
+    primaryText="Design"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={316}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="10"
+    primaryText="Digilib Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={228}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="11"
+    primaryText="Generic Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={202}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="12"
+    primaryText="Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={238}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="13"
+    primaryText="Journal"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={294}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="14"
+    primaryText="Journal Article"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={179}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="15"
+    primaryText="Manuscript"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={374}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="16"
+    primaryText="Newspaper Article"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={191}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="17"
+    primaryText="Patent"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={185}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="18"
+    primaryText="Preprint"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={204}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="19"
+    primaryText="Research Report"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={275}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="20"
+    primaryText="Seminar Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={189}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="21"
+    primaryText="Thesis"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={187}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="22"
+    primaryText="Video Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={310}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="23"
+    primaryText="Working Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={183}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="24"
+    primaryText="Reference Entry"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={272}
+  />
+</SelectField>
+`;
+
+exports[`AdvancedSearchComponent should render advanced search docTypes with checked values based on props 1`] = `
+<SelectField
+  aria-label="Select multiple publications types to search on"
+  autoWidth={false}
+  disabled={false}
+  floatingLabelFixed={true}
+  floatingLabelText="Publication type"
+  fullWidth={true}
+  hintText="Select document types"
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
+  multiple={true}
+  onChange={[Function]}
+  value={
+    Array [
+      179,
+      202,
+    ]
+  }
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="Audio Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={263}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="2"
+    primaryText="Book"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={174}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="3"
+    primaryText="Book Chapter"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={177}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="4"
+    primaryText="Conference Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={130}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="5"
+    primaryText="Conference Proceedings"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={197}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="6"
+    primaryText="Creative Work"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={313}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="7"
+    primaryText="Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={371}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
+    primaryText="Department Technical Report"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={181}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="9"
+    primaryText="Design"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={316}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="10"
+    primaryText="Digilib Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={228}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={true}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="11"
+    primaryText="Generic Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={202}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="12"
+    primaryText="Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={238}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="13"
+    primaryText="Journal"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={294}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={true}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="14"
+    primaryText="Journal Article"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={179}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="15"
+    primaryText="Manuscript"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={374}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="16"
+    primaryText="Newspaper Article"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={191}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="17"
+    primaryText="Patent"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={185}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="18"
+    primaryText="Preprint"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={204}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="19"
+    primaryText="Research Report"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={275}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="20"
+    primaryText="Seminar Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={189}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="21"
+    primaryText="Thesis"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={187}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="22"
+    primaryText="Video Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={310}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="23"
+    primaryText="Working Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={183}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="24"
+    primaryText="Reference Entry"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={272}
+  />
+</SelectField>
+`;
+
 exports[`AdvancedSearchComponent should render advanced search row based on props 1`] = `
 <div
   className="searchComponent advanced-search"
@@ -61,15 +1175,57 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           <div
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
-            <Checkbox
-              aria-label="Check to search for publications with are only open access / full text"
-              checked={true}
-              className="advancedSearchOpenAccessCheckbox"
-              disabled={false}
-              label="Open access/Full text"
-              labelPosition="right"
-              onCheck={[Function]}
-            />
+            <div
+              className="columns is-gapless is-mobile is-multiline sidebar"
+            >
+              <div
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
+              >
+                <Checkbox
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  className="advancedSearchOpenAccessCheckbox"
+                  disabled={false}
+                  label="Open access"
+                  labelPosition="right"
+                  onCheck={[Function]}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
+              >
+                <DocumentTypeField
+                  className="advancedSearchPublicationType"
+                  disabled={false}
+                  value={Array []}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
+                  yearFilter={
+                    Object {
+                      "invalid": false,
+                    }
+                  }
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -126,7 +1282,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
@@ -143,45 +1299,594 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           </div>
         </div>
       </React.Fragment>
-      <div
-        className="searchQueryCaption"
-      >
-        <React.Fragment>
-          <span
-            key="all"
-          >
-            <span
-              className="title false"
-            >
-               
-              Any field
-            </span>
-            <span
-              className="combiner"
-            >
-               
-              contains
-            </span>
-            <span
-              className="value"
-            >
-               
-              i feel lucky
-            </span>
-          </span>
-          <span>
-             AND is 
-            <span
-              className="value"
-            >
-              open access / full text.
-            </span>
-          </span>
-        </React.Fragment>
-      </div>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "searchField": "all",
+              "value": "i feel lucky",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={true}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
+`;
+
+exports[`AdvancedSearchComponent should render advanced search with no valid checked docTypes based on invalid props 1`] = `
+<SelectField
+  aria-label="Select multiple publications types to search on"
+  autoWidth={false}
+  disabled={false}
+  floatingLabelFixed={true}
+  floatingLabelText="Publication type"
+  fullWidth={true}
+  hintText="Select document types"
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
+  multiple={true}
+  onChange={[Function]}
+  value={
+    Array [
+      "test",
+      202,
+    ]
+  }
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="Audio Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={263}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="2"
+    primaryText="Book"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={174}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="3"
+    primaryText="Book Chapter"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={177}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="4"
+    primaryText="Conference Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={130}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="5"
+    primaryText="Conference Proceedings"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={197}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="6"
+    primaryText="Creative Work"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={313}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="7"
+    primaryText="Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={371}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
+    primaryText="Department Technical Report"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={181}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="9"
+    primaryText="Design"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={316}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="10"
+    primaryText="Digilib Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={228}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={true}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="11"
+    primaryText="Generic Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={202}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="12"
+    primaryText="Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={238}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="13"
+    primaryText="Journal"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={294}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="14"
+    primaryText="Journal Article"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={179}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="15"
+    primaryText="Manuscript"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={374}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="16"
+    primaryText="Newspaper Article"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={191}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="17"
+    primaryText="Patent"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={185}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="18"
+    primaryText="Preprint"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={204}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="19"
+    primaryText="Research Report"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={275}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="20"
+    primaryText="Seminar Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={189}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="21"
+    primaryText="Thesis"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={187}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="22"
+    primaryText="Video Document"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={310}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="23"
+    primaryText="Working Paper"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={183}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="24"
+    primaryText="Reference Entry"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={272}
+  />
+</SelectField>
 `;
 
 exports[`AdvancedSearchComponent should render default view 1`] = `
@@ -235,6 +1940,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                 ]
               }
               key="advanced-search-field-0"
+              label=""
               onSearchRowChange={[Function]}
               onSearchRowDelete={[Function]}
               rowIndex={0}
@@ -245,15 +1951,57 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           <div
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
-            <Checkbox
-              aria-label="Check to search for publications with are only open access / full text"
-              checked={false}
-              className="advancedSearchOpenAccessCheckbox"
-              disabled={false}
-              label="Open access/Full text"
-              labelPosition="right"
-              onCheck={[Function]}
-            />
+            <div
+              className="columns is-gapless is-mobile is-multiline sidebar"
+            >
+              <div
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
+              >
+                <Checkbox
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={false}
+                  className="advancedSearchOpenAccessCheckbox"
+                  disabled={false}
+                  label="Open access"
+                  labelPosition="right"
+                  onCheck={[Function]}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
+              >
+                <DocumentTypeField
+                  className="advancedSearchPublicationType"
+                  disabled={false}
+                  value={Array []}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
+                  yearFilter={
+                    Object {
+                      "invalid": false,
+                    }
+                  }
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -310,12 +2058,12 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={true}
+              disabled={false}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -327,6 +2075,35 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           </div>
         </div>
       </React.Fragment>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={false}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -383,6 +2160,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 ]
               }
               key="advanced-search-field-0"
+              label=""
               onSearchRowChange={[Function]}
               onSearchRowDelete={[Function]}
               rowIndex={0}
@@ -393,15 +2171,57 @@ exports[`AdvancedSearchComponent should render default view with open access che
           <div
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
-            <Checkbox
-              aria-label="Check to search for publications with are only open access / full text"
-              checked={true}
-              className="advancedSearchOpenAccessCheckbox"
-              disabled={false}
-              label="Open access/Full text"
-              labelPosition="right"
-              onCheck={[Function]}
-            />
+            <div
+              className="columns is-gapless is-mobile is-multiline sidebar"
+            >
+              <div
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
+              >
+                <Checkbox
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  className="advancedSearchOpenAccessCheckbox"
+                  disabled={false}
+                  label="Open access"
+                  labelPosition="right"
+                  onCheck={[Function]}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
+              >
+                <DocumentTypeField
+                  className="advancedSearchPublicationType"
+                  disabled={false}
+                  value={Array []}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
+                  yearFilter={
+                    Object {
+                      "invalid": false,
+                    }
+                  }
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -458,12 +2278,12 @@ exports[`AdvancedSearchComponent should render default view with open access che
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={true}
+              disabled={false}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -475,20 +2295,35 @@ exports[`AdvancedSearchComponent should render default view with open access che
           </div>
         </div>
       </React.Fragment>
-      <div
-        className="searchQueryCaption"
-      >
-        <React.Fragment>
-          <span>
-             AND is 
-            <span
-              className="value"
-            >
-              open access / full text.
-            </span>
-          </span>
-        </React.Fragment>
-      </div>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={true}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -531,6 +2366,35 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           </IconButton>
         </div>
       </div>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={true}
+        isOpenAccess={false}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -587,6 +2451,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 ]
               }
               key="advanced-search-field-0"
+              label=""
               onSearchRowChange={[Function]}
               onSearchRowDelete={[Function]}
               rowIndex={0}
@@ -597,15 +2462,57 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           <div
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
-            <Checkbox
-              aria-label="Check to search for publications with are only open access / full text"
-              checked={false}
-              className="advancedSearchOpenAccessCheckbox"
-              disabled={false}
-              label="Open access/Full text"
-              labelPosition="right"
-              onCheck={[Function]}
-            />
+            <div
+              className="columns is-gapless is-mobile is-multiline sidebar"
+            >
+              <div
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
+              >
+                <Checkbox
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={false}
+                  className="advancedSearchOpenAccessCheckbox"
+                  disabled={false}
+                  label="Open access"
+                  labelPosition="right"
+                  onCheck={[Function]}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
+              >
+                <DocumentTypeField
+                  className="advancedSearchPublicationType"
+                  disabled={false}
+                  value={Array []}
+                />
+              </div>
+              <div
+                className="column is-11-mobile is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
+                  yearFilter={
+                    Object {
+                      "invalid": false,
+                    }
+                  }
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -662,12 +2569,12 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={true}
+              disabled={false}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -679,6 +2586,35 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           </div>
         </div>
       </React.Fragment>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={false}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[MockFunction]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>

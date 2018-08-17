@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component PublicationYearRangeField should render as expected 1`] = `
+<div
+  className="columns is-gapless is-mobile "
+>
+  <div
+    className="column"
+  >
+    <TextField
+      aria-label="Enter a year to search from"
+      disabled={false}
+      errorText={null}
+      floatingLabelFixed={true}
+      floatingLabelText="Published year range"
+      fullWidth={true}
+      hintText="Year from"
+      id="to"
+      multiLine={false}
+      onChange={[Function]}
+      rows={1}
+      type="text"
+      underlineShow={true}
+      value="1999"
+    />
+  </div>
+  <div
+    className="column is-narrow"
+  >
+    <TextField
+      disabled={true}
+      floatingLabelFixed={true}
+      floatingLabelText=" "
+      fullWidth={false}
+      multiLine={false}
+      rows={1}
+      style={
+        Object {
+          "width": 24,
+        }
+      }
+      type="text"
+      underlineDisabledStyle={
+        Object {
+          "display": "none",
+        }
+      }
+      underlineShow={true}
+      value=" to "
+    />
+  </div>
+  <div
+    className="column"
+  >
+    <TextField
+      aria-label="Enter a year to search to"
+      disabled={false}
+      errorText={null}
+      floatingLabelFixed={true}
+      floatingLabelText=" "
+      fullWidth={true}
+      hintText="Year to"
+      id="from"
+      multiLine={false}
+      onChange={[Function]}
+      rows={1}
+      type="text"
+      underlineShow={true}
+      value="2001"
+    />
+  </div>
+</div>
+`;
