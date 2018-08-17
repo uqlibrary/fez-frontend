@@ -2,7 +2,6 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import param from 'can-param';
 import {defaultQueryParams} from 'config/general';
-import {openAccessIds} from 'config/openAccess';
 
 const fullPath = process.env.FULL_PATH && process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
@@ -56,32 +55,20 @@ export const pathConfig = {
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
     list: {
-        author: (author, authorId) => getSearchUrl({
-            searchQuery: {
-                'rek_author': author,
-                'rek_author_id': authorId
-            }
-        }),
-        subject: (subjectId, subject) => getSearchUrl({
-            activeFacets: {
-                filters: {
-                    'Subject': subjectId,
-                    'Subject (lookup)': subject
+        author: (author, authorId) => getSearchUrl(
+            authorId ? {
+                searchQuery: {
+                    'rek_author_id': {
+                        'value': authorId,
+                        'label': authorId + ' (' + author + ')'
+                    }
+                }
+            } : {
+                searchQuery: {
+                    'rek_author': author
                 }
             }
-        }),
-        keyword: (keyword) => getSearchUrl({
-            activeFacets: {
-                filters: {
-                    'Keywords': keyword
-                }
-            }
-        }),
-        openAccessStatus: (openAccessStatusId) => getSearchUrl({
-            activeFacets: {
-                showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
-            }
-        }),
+        ),
         journalName: (journalName) => getSearchUrl({
             searchQuery: {'rek_journal_name': journalName},
             activeFacets: {
@@ -100,8 +87,10 @@ export const pathConfig = {
         license: (license) => getSearchUrl({searchQuery: {all: license}}),
         jobNumber: (jobNumber) => getSearchUrl({searchQuery: {all: jobNumber}}),
         proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: {all: proceedingsTitle}}),
+        // Exact match on Any Field
+        keyword: (keyword) => getSearchUrl({searchQuery: {all: '"' + keyword + '"'}}),
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: {all: herdcStatus}}),
-        institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}}),
+        institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}})
     },
     admin: {
         masquerade: '/admin/masquerade',

@@ -354,11 +354,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             className="authorIdLink"
             key="citationAuthor_1"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
           >
             <a
               className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
@@ -380,11 +380,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             className="authorIdLink"
             key="citationAuthor_2"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
           >
             <a
               className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
@@ -511,11 +511,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             className="authorNameLink"
             key="citationAuthor_1"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
           >
             <a
               className="authorNameLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
@@ -537,11 +537,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             className="authorNameLink"
             key="citationAuthor_2"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchMode=advanced"
           >
             <a
               className="authorNameLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
@@ -842,11 +842,11 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             className="authorIdLink"
             key="citationAuthor_1"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
           >
             <a
               className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
@@ -869,11 +869,11 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             className="authorIdLink"
             key="citationAuthor_2"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
           >
             <a
               className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
@@ -895,11 +895,11 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             className="authorIdLink"
             key="citationAuthor_3"
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
           >
             <a
               className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
+              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
               onClick={[Function]}
             >
               <CitationView
