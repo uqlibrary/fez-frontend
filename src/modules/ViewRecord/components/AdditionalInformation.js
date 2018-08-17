@@ -60,7 +60,6 @@ export default class AdditionalInformation extends Component {
             case 'rek_author': return this.renderAuthors(this.props.publication);
             case 'rek_contributor': return this.renderContributors(this.props.publication);
             case 'rek_keywords': return this.renderList(objects, subkey, routes.pathConfig.list.keyword);
-            case 'rek_subject': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
             case 'rek_seo_code': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
             case 'rek_alternate_genre': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
             case 'rek_contact_details_email': return this.renderContactEmail();
@@ -87,7 +86,6 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_journal_name': return this.renderJournalName();
             case 'rek_publisher': return this.renderLink(routes.pathConfig.list.publisher(data), data);
-            case 'rek_oa_status': return !!data ? this.renderLink(routes.pathConfig.list.openAccessStatus(object[subkey]), data) : '';
             case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.subject(object[subkey]), data);
             case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
             case 'rek_ands_collection_type': return !!data && data || '';
