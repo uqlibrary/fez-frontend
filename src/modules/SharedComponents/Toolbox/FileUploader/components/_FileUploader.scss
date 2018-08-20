@@ -22,30 +22,6 @@
 //Mobile
 @include mobile {
   /*
-   * Access selector
-   */
-  .file-access-selector {
-    display: flex;
-    span:nth-child(1) {
-      padding-top: 12px;
-    }
-    .select-container {
-      display: flex;
-      flex-direction: column;
-      padding-left: 10px;
-      .selectField {
-        div:nth-child(4) {
-          font-size: 9px !important;
-          margin-top: -12px;
-        }
-      }
-      span {
-        margin-top: -8px;
-      }
-    }
-  }
-
-  /*
    * Embargo date
    */
   .embargo-date-info {
