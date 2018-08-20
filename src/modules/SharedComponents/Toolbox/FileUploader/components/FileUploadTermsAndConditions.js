@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {FormControlLabel, Typography, Checkbox} from '@material-ui/core';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 export class FileUploadTermsAndConditions extends PureComponent {
     static propTypes = {
@@ -22,16 +22,17 @@ export class FileUploadTermsAndConditions extends PureComponent {
 
         return (
             <FormControlLabel
+                className={classes.root}
                 disabled={disabled}
                 control={
                     <Checkbox
                         checked={isTermsAndConditionsAccepted}
                         onChange={this._handleChange}
-                        className={!isTermsAndConditionsAccepted ? classes.error : null}
+                        className={classNames([classes.checkbox, !isTermsAndConditionsAccepted ? classes.error : null])}
                     />
                 }
                 label={
-                    <Typography className={classnames([classes.label, !isTermsAndConditionsAccepted ? classes.error : classes.accepted])}>
+                    <Typography className={classNames([classes.label, !isTermsAndConditionsAccepted ? classes.error : classes.accepted])}>
                         {accessTermsAndConditions}
                     </Typography>
                 }
@@ -41,14 +42,23 @@ export class FileUploadTermsAndConditions extends PureComponent {
 }
 
 const styles = () => ({
+    root: {
+        alignItems: 'flex-start'
+    },
+    checkbox: {
+        height: 28
+    },
     label: {
-        textAlign: 'justify'
+        textAlign: 'justify',
+        fontSize: 16,
+        fontWeight: 300,
+        lineHeight: '24px'
     },
     error: {
         color: '#e02500'
     },
     accepted: {
-        color: 'rgb(0, 0, 0, 0.5)'
+        color: 'rgb(136, 136, 136)'
     }
 });
 
