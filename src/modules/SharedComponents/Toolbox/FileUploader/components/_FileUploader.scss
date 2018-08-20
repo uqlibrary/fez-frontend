@@ -1,32 +1,5 @@
 @import '../../../../../sass/variables';
 
-.file-instructions {
-  margin: 20px 0 0 0;
-  padding: 16px;
-  background-color: $secondary-color-light;
-  border: 2px dashed lighten($secondary-color, 20%); // #8D8D8D
-  font-size: $text-body-small;
-  line-height: $text-line-height-small;
-
-  div, span, h3 {
-    color: $secondary-color !important;
-  }
-
-  h3 {
-    font-weight: $text-weight-bold !important;
-  }
-
-  .upload-instructions {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    text-align: center !important;
-    .material-icons {
-      font-size: 36px !important;
-    }
-  }
-}
-
 .sub-title {
   font-size: $text-body-large;
   padding: 0;
