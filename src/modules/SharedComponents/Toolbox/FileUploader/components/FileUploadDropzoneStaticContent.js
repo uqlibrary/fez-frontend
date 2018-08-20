@@ -6,11 +6,11 @@ import {withStyles} from '@material-ui/core/styles';
 
 const FileUploadDropzoneStaticContent = ({locale, classes}) => (
     <Grid container className={classes.dropzone}>
-        <Grid item xs sm={6}>
+        <Grid item xs={12} sm={6}>
             {locale.fileUploadRestrictionHeading}
             {locale.fileUploadRestrictions}
         </Grid>
-        <Grid item container xs sm={6}>
+        <Grid item container xs={12} sm={6}>
             <Grid container direction="column" alignItems="center" justify="center" className={classes.instructions}>
                 <Grid item>
                     <CloudUpload className={classes.cloudIcon}/>

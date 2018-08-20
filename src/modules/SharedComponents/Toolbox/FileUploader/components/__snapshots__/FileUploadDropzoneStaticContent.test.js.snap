@@ -206,7 +206,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                 <WithStyles(Grid)
                   item={true}
                   sm={6}
-                  xs={true}
+                  xs={12}
                 >
                   <Grid
                     alignContent="stretch"
@@ -323,11 +323,11 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                     spacing={0}
                     wrap="wrap"
                     xl={false}
-                    xs={true}
+                    xs={12}
                     zeroMinWidth={false}
                   >
                     <div
-                      className="MuiGrid-item-5 MuiGrid-grid-xs-true-32 MuiGrid-grid-sm-6-52"
+                      className="MuiGrid-item-5 MuiGrid-grid-xs-12-44 MuiGrid-grid-sm-6-52"
                     >
                       Restrictions for file upload
                       No restrictions applies to Tests!!!
@@ -338,7 +338,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                   container={true}
                   item={true}
                   sm={6}
-                  xs={true}
+                  xs={12}
                 >
                   <Grid
                     alignContent="stretch"
@@ -455,11 +455,11 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                     spacing={0}
                     wrap="wrap"
                     xl={false}
-                    xs={true}
+                    xs={12}
                     zeroMinWidth={false}
                   >
                     <div
-                      className="MuiGrid-container-4 MuiGrid-item-5 MuiGrid-grid-xs-true-32 MuiGrid-grid-sm-6-52"
+                      className="MuiGrid-container-4 MuiGrid-item-5 MuiGrid-grid-xs-12-44 MuiGrid-grid-sm-6-52"
                     >
                       <WithStyles(Grid)
                         alignItems="center"

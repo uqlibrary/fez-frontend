@@ -36,6 +36,7 @@ export class FileUploadRowHeader extends PureComponent {
 
     render() {
         const {filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation} = this.props.locale;
+        const {classes, requireOpenAccessStatus, disabled} = this.props;
         return (
             <Hidden only={['xs']}>
                 <ConfirmDialogBox
@@ -43,19 +44,19 @@ export class FileUploadRowHeader extends PureComponent {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllFilesConfirmation}
                 />
-                <Grid container direction="row" alignItems="center" spacing={8}>
+                <Grid container direction="row" alignItems="center" spacing={8} className={classes.header}>
                     <Grid item md={6} sm={5}>
                         <Typography variant="caption" gutterBottom>{filenameColumn}</Typography>
                     </Grid>
                     <Grid item md={3} sm={4}>
-                        <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && fileAccessColumn}</Typography>
+                        <Typography variant="caption" gutterBottom>{requireOpenAccessStatus && fileAccessColumn}</Typography>
                     </Grid>
                     <Grid item md={2} sm={2}>
-                        <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && embargoDateColumn}</Typography>
+                        <Typography variant="caption" gutterBottom>{requireOpenAccessStatus && embargoDateColumn}</Typography>
                     </Grid>
-                    <Grid item xs={1} className={this.props.classes.icon}>
+                    <Grid item xs={1} className={classes.icon}>
                         <Tooltip title={deleteAllFiles}>
-                            <IconButton onClick={this._showConfirmation} disabled={this.props.disabled}>
+                            <IconButton onClick={this._showConfirmation} disabled={disabled}>
                                 <DeleteForeverIcon/>
                             </IconButton>
                         </Tooltip>
@@ -68,6 +69,10 @@ export class FileUploadRowHeader extends PureComponent {
 const styles = () => ({
     icon: {
         textAlign: 'center'
+    },
+    header: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        marginBottom: '1.5rem'
     }
 });
 

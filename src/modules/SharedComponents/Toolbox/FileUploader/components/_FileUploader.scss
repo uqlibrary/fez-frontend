@@ -4,16 +4,6 @@
   padding: 10px;
 }
 
-.file-access-selector {
-  hr {
-    display: none;
-  }
-  .selectField {
-    font-size: $text-body-normal !important;
-    max-width: 200px;
-  }
-}
-
 .embargo-date-picker {
   display: block;
   hr {
@@ -26,17 +16,6 @@
     font-size: $text-body-normal;
     width: unset !important;
     max-width: 256px;
-  }
-}
-
-.headers {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.7);
-  .header {
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
-    line-height: 40px !important;
   }
 }
 

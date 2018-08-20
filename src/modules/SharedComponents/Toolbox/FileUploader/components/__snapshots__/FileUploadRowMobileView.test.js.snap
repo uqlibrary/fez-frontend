@@ -18,13 +18,13 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
     >
       <WithStyles(Grid)
         item={true}
-        xs={1}
+        xs={2}
       >
         <pure(Attachment) />
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        xs={11}
+        xs={10}
       >
         <WithStyles(Typography)
           gutterBottom={true}
@@ -66,13 +66,13 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     >
       <WithStyles(Grid)
         item={true}
-        xs={1}
+        xs={2}
       >
         <pure(Attachment) />
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        xs={11}
+        xs={10}
       >
         <WithStyles(Typography)
           gutterBottom={true}
@@ -106,13 +106,13 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       >
         <WithStyles(Grid)
           item={true}
-          xs={1}
+          xs={2}
         >
           <pure(LockOutlined) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs={11}
+          xs={10}
         >
           <WithStyles(FileUploadAccessSelector)
             disabled={false}
@@ -140,13 +140,13 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       >
         <WithStyles(Grid)
           item={true}
-          xs={1}
+          xs={2}
         >
           <pure(CalendarTodayOutlined) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs={10}
+          xs={9}
         >
           <WithStyles(Typography)
             gutterBottom={true}
@@ -195,13 +195,13 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     >
       <WithStyles(Grid)
         item={true}
-        xs={1}
+        xs={2}
       >
         <pure(Attachment) />
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        xs={11}
+        xs={10}
       >
         <WithStyles(Typography)
           gutterBottom={true}
@@ -235,13 +235,13 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={1}
+          xs={2}
         >
           <pure(LockOutlined) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs={11}
+          xs={10}
         >
           <WithStyles(FileUploadAccessSelector)
             disabled={false}
@@ -269,13 +269,13 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={1}
+          xs={2}
         >
           <pure(CalendarTodayOutlined) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs={10}
+          xs={9}
         >
           <WithStyles(Typography)
             gutterBottom={true}
@@ -324,13 +324,13 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     >
       <WithStyles(Grid)
         item={true}
-        xs={1}
+        xs={2}
       >
         <pure(Attachment) />
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        xs={11}
+        xs={10}
       >
         <WithStyles(Typography)
           gutterBottom={true}
@@ -364,13 +364,13 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       >
         <WithStyles(Grid)
           item={true}
-          xs={1}
+          xs={2}
         >
           <pure(LockOutlined) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs={11}
+          xs={10}
         >
           <WithStyles(FileUploadAccessSelector)
             disabled={false}
@@ -398,13 +398,13 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       >
         <WithStyles(Grid)
           item={true}
-          xs={1}
+          xs={2}
         >
           <pure(CalendarTodayOutlined) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs={10}
+          xs={9}
         >
           <FileUploadEmbargoDate
             disabled={false}

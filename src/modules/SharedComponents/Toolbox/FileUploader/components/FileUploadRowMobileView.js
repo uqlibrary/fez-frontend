@@ -44,10 +44,10 @@ export class FileUploadRowMobileView extends PureComponent {
             <Grid container className={this.props.classes.root} direction="column" spacing={8}>
                 <Grid item xs={12}>
                     <Grid container direction="row" alignItems="center" spacing={8}>
-                        <Grid item xs={1}>
+                        <Grid item xs={2}>
                             <Attachment/>
                         </Grid>
-                        <Grid item xs={11}>
+                        <Grid item xs={10}>
                             <Typography variant="body1" gutterBottom noWrap>
                                 {name} ({size})
                             </Typography>
@@ -62,10 +62,10 @@ export class FileUploadRowMobileView extends PureComponent {
                     <Fragment>
                         <Grid item xs={12}>
                             <Grid container direction="row" alignItems="center" spacing={8}>
-                                <Grid item xs={1}>
+                                <Grid item xs={2}>
                                     <LockOutlined/>
                                 </Grid>
-                                <Grid item xs={11}>
+                                <Grid item xs={10}>
                                     <FileUploadAccessSelector
                                         value={accessConditionId}
                                         onChange={this.props.onAccessConditionChange}
@@ -80,10 +80,10 @@ export class FileUploadRowMobileView extends PureComponent {
                         </Grid>
                         <Grid item xs={12}>
                             <Grid container direction="row" alignItems="center" spacing={8}>
-                                <Grid item xs={1}>
+                                <Grid item xs={2}>
                                     <CalendarTodayOutlined/>
                                 </Grid>
-                                <Grid item xs={10}>
+                                <Grid item xs={9}>
                                     {
                                         requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
                                         <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>

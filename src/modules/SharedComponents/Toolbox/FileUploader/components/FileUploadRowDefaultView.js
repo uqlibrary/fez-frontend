@@ -34,10 +34,10 @@ export class FileUploadRowDefaultView extends PureComponent {
 
     render() {
         const {embargoDateClosedAccess} = this.props.locale;
-        const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size} = this.props;
+        const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size, classes} = this.props;
 
         return (
-            <Grid container direction="row" alignItems="center" spacing={8}>
+            <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
                 <Grid item md={6} sm={5}>
                     <Typography variant="body1" gutterBottom noWrap>
                         {name} ({size})
@@ -70,8 +70,8 @@ export class FileUploadRowDefaultView extends PureComponent {
                         </Grid>
                     </Fragment>
                 }
-                <Grid item xs={1} className={this.props.classes.icon}>
-                    <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name} />
+                <Grid item xs={1} className={classes.icon}>
+                    <FileUploadRowStatus disabled={disabled} onDelete={this.props.onDelete} name={name} />
                 </Grid>
             </Grid>
         );
@@ -81,6 +81,10 @@ export class FileUploadRowDefaultView extends PureComponent {
 const styles = () => ({
     icon: {
         textAlign: 'center'
+    },
+    row: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+        marginBottom: '12px'
     }
 });
 

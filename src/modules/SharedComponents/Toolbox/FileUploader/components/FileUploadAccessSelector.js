@@ -51,7 +51,7 @@ export class FileUploadAccessSelector extends PureComponent {
                 </Select>
                 {
                     !value &&
-                    <FormHelperText>{errorMessage}</FormHelperText>
+                    <FormHelperText className={classes.error}>{errorMessage}</FormHelperText>
                 }
             </FormControl>
         );
@@ -71,6 +71,10 @@ const styles = () => ({
         '&:hover': {
             borderBottom: 0
         }
+    },
+    error: {
+        marginTop: 0,
+        fontSize: 10
     }
 });
 export default withStyles(styles)(FileUploadAccessSelector);
