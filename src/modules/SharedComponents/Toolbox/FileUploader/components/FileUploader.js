@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {clearFileUpload} from '../actions';
 
-import Checkbox from 'material-ui/Checkbox';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
@@ -12,6 +11,7 @@ import {Alert} from '../../Alert';
 import * as config from '../config';
 
 import Typography from '@material-ui/core/Typography';
+import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
 
 const moment = require('moment');
 
@@ -159,7 +159,7 @@ export class FileUploader extends PureComponent {
      * @param value
      * @private
      */
-    _acceptTermsAndConditions = (event, value) => {
+    _acceptTermsAndConditions = (value) => {
         this.setState({isTermsAndConditionsAccepted: value});
     };
 
@@ -336,13 +336,12 @@ export class FileUploader extends PureComponent {
 
                         {
                             requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) &&
-                            <div className={`open-access-checkbox${!isTermsAndConditionsAccepted ? ' error-checkbox' : ''}`}>
-                                <Checkbox
-                                    label={accessTermsAndConditions}
-                                    onCheck={this._acceptTermsAndConditions}
-                                    checked={isTermsAndConditionsAccepted}
-                                    disabled={disabled} />
-                            </div>
+                            <FileUploadTermsAndConditions
+                                onAcceptTermsAndConditions={this._acceptTermsAndConditions}
+                                accessTermsAndConditions={accessTermsAndConditions}
+                                isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
+                                disabled={disabled}
+                            />
                         }
                     </div>
                 }

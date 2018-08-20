@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadTermsAndConditions should render checked if terms and conditions accepted 1`] = `
+<WithStyles(FormControlLabel)
+  control={
+    <WithStyles(Checkbox)
+      checked={true}
+      className={null}
+      onChange={[Function]}
+    />
+  }
+  disabled={false}
+  label={
+    <WithStyles(Typography)
+      className="textAlign color"
+    />
+  }
+/>
+`;
+
+exports[`Component FileUploadTermsAndConditions should render default view 1`] = `
+<WithStyles(FormControlLabel)
+  control={
+    <WithStyles(Checkbox)
+      checked={false}
+      className={
+        Object {
+          "color": "#e02500",
+        }
+      }
+      onChange={[Function]}
+    />
+  }
+  disabled={false}
+  label={
+    <WithStyles(Typography)
+      className="textAlign color"
+    />
+  }
+/>
+`;
