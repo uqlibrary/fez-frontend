@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Grid} from '@material-ui/core';
+import {Grid, Typography} from '@material-ui/core';
 import {CloudUpload} from '@material-ui/icons';
 import {withStyles} from '@material-ui/core/styles';
 
 const FileUploadDropzoneStaticContent = ({locale, classes}) => (
     <Grid container className={classes.dropzone}>
         <Grid item xs={12} sm={6}>
-            {locale.fileUploadRestrictionHeading}
+            <Typography variant="subheading" className={classes.heading}>
+                {locale.fileUploadRestrictionHeading}
+            </Typography>
             {locale.fileUploadRestrictions}
         </Grid>
         <Grid item container xs={12} sm={6}>
@@ -37,11 +39,17 @@ const styles = () => ({
         fontSize: '12px',
         lineHeight: '16px'
     },
+    heading: {
+        fontSize: 14,
+        marginTop: '14px',
+        marginBottom: '14px'
+    },
     instructions: {
         height: '100%'
     },
     cloudIcon: {
-        fontSize: 36
+        fontSize: 36,
+        color: 'rgb(89, 89, 89)'
     }
 });
 

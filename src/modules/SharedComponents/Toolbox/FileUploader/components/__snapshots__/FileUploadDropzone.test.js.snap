@@ -351,9 +351,10 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                             <FileUploadDropzoneStaticContent
                               classes={
                                 Object {
-                                  "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-100",
+                                  "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-101",
                                   "dropzone": "FileUploadDropzoneStaticContent-dropzone-98",
-                                  "instructions": "FileUploadDropzoneStaticContent-instructions-99",
+                                  "heading": "FileUploadDropzoneStaticContent-heading-99",
+                                  "instructions": "FileUploadDropzoneStaticContent-instructions-100",
                                 }
                               }
                               locale={Object {}}
@@ -609,7 +610,68 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                       >
                                         <div
                                           className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
-                                        />
+                                        >
+                                          <WithStyles(Typography)
+                                            className="FileUploadDropzoneStaticContent-heading-99"
+                                            variant="subheading"
+                                          >
+                                            <Typography
+                                              align="inherit"
+                                              className="FileUploadDropzoneStaticContent-heading-99"
+                                              classes={
+                                                Object {
+                                                  "alignCenter": "MuiTypography-alignCenter-115",
+                                                  "alignJustify": "MuiTypography-alignJustify-117",
+                                                  "alignLeft": "MuiTypography-alignLeft-114",
+                                                  "alignRight": "MuiTypography-alignRight-116",
+                                                  "body1": "MuiTypography-body1-111",
+                                                  "body2": "MuiTypography-body2-110",
+                                                  "button": "MuiTypography-button-113",
+                                                  "caption": "MuiTypography-caption-112",
+                                                  "colorError": "MuiTypography-colorError-126",
+                                                  "colorInherit": "MuiTypography-colorInherit-121",
+                                                  "colorPrimary": "MuiTypography-colorPrimary-122",
+                                                  "colorSecondary": "MuiTypography-colorSecondary-123",
+                                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-124",
+                                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-125",
+                                                  "display1": "MuiTypography-display1-106",
+                                                  "display2": "MuiTypography-display2-105",
+                                                  "display3": "MuiTypography-display3-104",
+                                                  "display4": "MuiTypography-display4-103",
+                                                  "gutterBottom": "MuiTypography-gutterBottom-119",
+                                                  "headline": "MuiTypography-headline-107",
+                                                  "noWrap": "MuiTypography-noWrap-118",
+                                                  "paragraph": "MuiTypography-paragraph-120",
+                                                  "root": "MuiTypography-root-102",
+                                                  "subheading": "MuiTypography-subheading-109",
+                                                  "title": "MuiTypography-title-108",
+                                                }
+                                              }
+                                              color="default"
+                                              gutterBottom={false}
+                                              headlineMapping={
+                                                Object {
+                                                  "body1": "p",
+                                                  "body2": "aside",
+                                                  "display1": "h1",
+                                                  "display2": "h1",
+                                                  "display3": "h1",
+                                                  "display4": "h1",
+                                                  "headline": "h1",
+                                                  "subheading": "h3",
+                                                  "title": "h2",
+                                                }
+                                              }
+                                              noWrap={false}
+                                              paragraph={false}
+                                              variant="subheading"
+                                            >
+                                              <h3
+                                                className="MuiTypography-root-102 MuiTypography-subheading-109 FileUploadDropzoneStaticContent-heading-99"
+                                              />
+                                            </Typography>
+                                          </WithStyles(Typography)>
+                                        </div>
                                       </Grid>
                                     </WithStyles(Grid)>
                                     <WithStyles(Grid)
@@ -741,7 +803,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                         >
                                           <WithStyles(Grid)
                                             alignItems="center"
-                                            className="FileUploadDropzoneStaticContent-instructions-99"
+                                            className="FileUploadDropzoneStaticContent-instructions-100"
                                             container={true}
                                             direction="column"
                                             justify="center"
@@ -749,7 +811,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                             <Grid
                                               alignContent="stretch"
                                               alignItems="center"
-                                              className="FileUploadDropzoneStaticContent-instructions-99"
+                                              className="FileUploadDropzoneStaticContent-instructions-100"
                                               classes={
                                                 Object {
                                                   "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
@@ -866,7 +928,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                               zeroMinWidth={false}
                                             >
                                               <div
-                                                className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-center-18 FileUploadDropzoneStaticContent-instructions-99"
+                                                className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-center-18 FileUploadDropzoneStaticContent-instructions-100"
                                               >
                                                 <WithStyles(Grid)
                                                   item={true}
@@ -993,25 +1055,25 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                       className="MuiGrid-item-2"
                                                     >
                                                       <pure(CloudUpload)
-                                                        className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                        className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                       >
                                                         <CloudUpload
-                                                          className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                          className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                         >
                                                           <WithStyles(SvgIcon)
-                                                            className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                            className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                           >
                                                             <SvgIcon
-                                                              className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                              className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                               classes={
                                                                 Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction-104",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled-106",
-                                                                  "colorError": "MuiSvgIcon-colorError-105",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary-102",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary-103",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-107",
-                                                                  "root": "MuiSvgIcon-root-101",
+                                                                  "colorAction": "MuiSvgIcon-colorAction-130",
+                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled-132",
+                                                                  "colorError": "MuiSvgIcon-colorError-131",
+                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary-128",
+                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary-129",
+                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-133",
+                                                                  "root": "MuiSvgIcon-root-127",
                                                                 }
                                                               }
                                                               color="inherit"
@@ -1021,7 +1083,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                             >
                                                               <svg
                                                                 aria-hidden="true"
-                                                                className="MuiSvgIcon-root-101 FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                                className="MuiSvgIcon-root-127 FileUploadDropzoneStaticContent-cloudIcon-101"
                                                                 focusable="false"
                                                                 viewBox="0 0 24 24"
                                                               >
@@ -1599,9 +1661,10 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                             <FileUploadDropzoneStaticContent
                               classes={
                                 Object {
-                                  "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-100",
+                                  "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-101",
                                   "dropzone": "FileUploadDropzoneStaticContent-dropzone-98",
-                                  "instructions": "FileUploadDropzoneStaticContent-instructions-99",
+                                  "heading": "FileUploadDropzoneStaticContent-heading-99",
+                                  "instructions": "FileUploadDropzoneStaticContent-instructions-100",
                                 }
                               }
                               locale={Object {}}
@@ -1857,7 +1920,68 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                       >
                                         <div
                                           className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
-                                        />
+                                        >
+                                          <WithStyles(Typography)
+                                            className="FileUploadDropzoneStaticContent-heading-99"
+                                            variant="subheading"
+                                          >
+                                            <Typography
+                                              align="inherit"
+                                              className="FileUploadDropzoneStaticContent-heading-99"
+                                              classes={
+                                                Object {
+                                                  "alignCenter": "MuiTypography-alignCenter-115",
+                                                  "alignJustify": "MuiTypography-alignJustify-117",
+                                                  "alignLeft": "MuiTypography-alignLeft-114",
+                                                  "alignRight": "MuiTypography-alignRight-116",
+                                                  "body1": "MuiTypography-body1-111",
+                                                  "body2": "MuiTypography-body2-110",
+                                                  "button": "MuiTypography-button-113",
+                                                  "caption": "MuiTypography-caption-112",
+                                                  "colorError": "MuiTypography-colorError-126",
+                                                  "colorInherit": "MuiTypography-colorInherit-121",
+                                                  "colorPrimary": "MuiTypography-colorPrimary-122",
+                                                  "colorSecondary": "MuiTypography-colorSecondary-123",
+                                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-124",
+                                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-125",
+                                                  "display1": "MuiTypography-display1-106",
+                                                  "display2": "MuiTypography-display2-105",
+                                                  "display3": "MuiTypography-display3-104",
+                                                  "display4": "MuiTypography-display4-103",
+                                                  "gutterBottom": "MuiTypography-gutterBottom-119",
+                                                  "headline": "MuiTypography-headline-107",
+                                                  "noWrap": "MuiTypography-noWrap-118",
+                                                  "paragraph": "MuiTypography-paragraph-120",
+                                                  "root": "MuiTypography-root-102",
+                                                  "subheading": "MuiTypography-subheading-109",
+                                                  "title": "MuiTypography-title-108",
+                                                }
+                                              }
+                                              color="default"
+                                              gutterBottom={false}
+                                              headlineMapping={
+                                                Object {
+                                                  "body1": "p",
+                                                  "body2": "aside",
+                                                  "display1": "h1",
+                                                  "display2": "h1",
+                                                  "display3": "h1",
+                                                  "display4": "h1",
+                                                  "headline": "h1",
+                                                  "subheading": "h3",
+                                                  "title": "h2",
+                                                }
+                                              }
+                                              noWrap={false}
+                                              paragraph={false}
+                                              variant="subheading"
+                                            >
+                                              <h3
+                                                className="MuiTypography-root-102 MuiTypography-subheading-109 FileUploadDropzoneStaticContent-heading-99"
+                                              />
+                                            </Typography>
+                                          </WithStyles(Typography)>
+                                        </div>
                                       </Grid>
                                     </WithStyles(Grid)>
                                     <WithStyles(Grid)
@@ -1989,7 +2113,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                         >
                                           <WithStyles(Grid)
                                             alignItems="center"
-                                            className="FileUploadDropzoneStaticContent-instructions-99"
+                                            className="FileUploadDropzoneStaticContent-instructions-100"
                                             container={true}
                                             direction="column"
                                             justify="center"
@@ -1997,7 +2121,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                             <Grid
                                               alignContent="stretch"
                                               alignItems="center"
-                                              className="FileUploadDropzoneStaticContent-instructions-99"
+                                              className="FileUploadDropzoneStaticContent-instructions-100"
                                               classes={
                                                 Object {
                                                   "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
@@ -2114,7 +2238,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                               zeroMinWidth={false}
                                             >
                                               <div
-                                                className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-center-18 FileUploadDropzoneStaticContent-instructions-99"
+                                                className="MuiGrid-container-1 MuiGrid-direction-xs-column-4 MuiGrid-align-items-xs-center-9 MuiGrid-justify-xs-center-18 FileUploadDropzoneStaticContent-instructions-100"
                                               >
                                                 <WithStyles(Grid)
                                                   item={true}
@@ -2241,25 +2365,25 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                       className="MuiGrid-item-2"
                                                     >
                                                       <pure(CloudUpload)
-                                                        className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                        className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                       >
                                                         <CloudUpload
-                                                          className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                          className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                         >
                                                           <WithStyles(SvgIcon)
-                                                            className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                            className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                           >
                                                             <SvgIcon
-                                                              className="FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                              className="FileUploadDropzoneStaticContent-cloudIcon-101"
                                                               classes={
                                                                 Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction-104",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled-106",
-                                                                  "colorError": "MuiSvgIcon-colorError-105",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary-102",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary-103",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-107",
-                                                                  "root": "MuiSvgIcon-root-101",
+                                                                  "colorAction": "MuiSvgIcon-colorAction-130",
+                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled-132",
+                                                                  "colorError": "MuiSvgIcon-colorError-131",
+                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary-128",
+                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary-129",
+                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-133",
+                                                                  "root": "MuiSvgIcon-root-127",
                                                                 }
                                                               }
                                                               color="inherit"
@@ -2269,7 +2393,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                             >
                                                               <svg
                                                                 aria-hidden="true"
-                                                                className="MuiSvgIcon-root-101 FileUploadDropzoneStaticContent-cloudIcon-100"
+                                                                className="MuiSvgIcon-root-127 FileUploadDropzoneStaticContent-cloudIcon-101"
                                                                 focusable="false"
                                                                 viewBox="0 0 24 24"
                                                               >

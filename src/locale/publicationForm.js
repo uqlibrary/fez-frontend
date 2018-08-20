@@ -1101,7 +1101,7 @@ export default {
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 errorTitle: 'Upload Errors',
-                fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
+                fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 5Gb. <br/>

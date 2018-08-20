@@ -40,7 +40,7 @@ export class FileUploader extends PureComponent {
             errorTitle: 'Upload Errors',
             successTitle: 'Success',
             successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
-            fileUploadRestrictionHeading: (<h3>File upload restrictions</h3>),
+            fileUploadRestrictionHeading: 'File upload restrictions',
             fileUploadRestrictions: (
                 <div>
                     Please ensure your files:

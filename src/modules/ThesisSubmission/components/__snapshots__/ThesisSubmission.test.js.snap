@@ -452,16 +452,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "fileUploadInstruction": <p>
               Click here to select files, or drag files into this area to upload
             </p>,
-            "fileUploadRestrictionHeading": <h3>
-              <span
-                className="requiredField"
-              >
-                <label>
-                   
-                </label>
-              </span>
-              File upload restrictions
-            </h3>,
+            "fileUploadRestrictionHeading": "File upload restrictions",
             "fileUploadRestrictions": <div>
               Maximum file size is 5Gb. 
               <br />
@@ -957,16 +948,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "fileUploadInstruction": <p>
               Click here to select files, or drag files into this area to upload
             </p>,
-            "fileUploadRestrictionHeading": <h3>
-              <span
-                className="requiredField"
-              >
-                <label>
-                   
-                </label>
-              </span>
-              File upload restrictions
-            </h3>,
+            "fileUploadRestrictionHeading": "File upload restrictions",
             "fileUploadRestrictions": <div>
               Maximum file size is 5Gb. 
               <br />
