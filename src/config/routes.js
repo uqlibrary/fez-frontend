@@ -60,7 +60,7 @@ export const pathConfig = {
                 searchQuery: {
                     'rek_author_id': {
                         'value': authorId,
-                        'label': authorId + ' (' + author + ')'
+                        'label': `${authorId} (${author})`
                     }
                 }
             } : {
@@ -88,7 +88,7 @@ export const pathConfig = {
         jobNumber: (jobNumber) => getSearchUrl({searchQuery: {all: jobNumber}}),
         proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: {all: proceedingsTitle}}),
         // Exact match on Any Field
-        keyword: (keyword) => getSearchUrl({searchQuery: {all: '"' + keyword + '"'}}),
+        keyword: (keyword) => getSearchUrl({searchQuery: {all: `"${keyword}"`}}),
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: {all: herdcStatus}}),
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}})
     },
