@@ -70,18 +70,8 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       md={3}
       sm={4}
     >
-      <FileUploadAccessSelector
+      <WithStyles(FileUploadAccessSelector)
         disabled={false}
-        locale={
-          Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          }
-        }
         onChange={[MockFunction]}
         value={8}
       />
@@ -146,18 +136,8 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       md={3}
       sm={4}
     >
-      <FileUploadAccessSelector
+      <WithStyles(FileUploadAccessSelector)
         disabled={false}
-        locale={
-          Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          }
-        }
         onChange={[MockFunction]}
         value={null}
       />
@@ -222,18 +202,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       md={3}
       sm={4}
     >
-      <FileUploadAccessSelector
+      <WithStyles(FileUploadAccessSelector)
         disabled={false}
-        locale={
-          Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          }
-        }
         onChange={[MockFunction]}
         value={9}
       />

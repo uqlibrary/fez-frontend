@@ -114,18 +114,8 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           item={true}
           xs={11}
         >
-          <FileUploadAccessSelector
+          <WithStyles(FileUploadAccessSelector)
             disabled={false}
-            locale={
-              Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              }
-            }
             onChange={[MockFunction]}
             value={8}
           />
@@ -253,18 +243,8 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           item={true}
           xs={11}
         >
-          <FileUploadAccessSelector
+          <WithStyles(FileUploadAccessSelector)
             disabled={false}
-            locale={
-              Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              }
-            }
             onChange={[MockFunction]}
             value={null}
           />
@@ -392,18 +372,8 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           item={true}
           xs={11}
         >
-          <FileUploadAccessSelector
+          <WithStyles(FileUploadAccessSelector)
             disabled={false}
-            locale={
-              Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              }
-            }
             onChange={[MockFunction]}
             value={9}
           />

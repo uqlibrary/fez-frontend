@@ -1,7 +1,12 @@
-import FileUploadAccessSelector from './FileUploadAccessSelector';
+import {FileUploadAccessSelector} from './FileUploadAccessSelector';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = {
+        classes: {
+            selector: {}
+        },
+        ...testProps
+    };
     return getElement(FileUploadAccessSelector, props, isShallow);
 }
 
