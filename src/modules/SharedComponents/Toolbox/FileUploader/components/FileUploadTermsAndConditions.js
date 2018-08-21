@@ -28,7 +28,7 @@ export class FileUploadTermsAndConditions extends PureComponent {
                     <Checkbox
                         checked={isTermsAndConditionsAccepted}
                         onChange={this._handleChange}
-                        className={classNames([classes.checkbox, !isTermsAndConditionsAccepted ? classes.error : null])}
+                        className={classNames([!isTermsAndConditionsAccepted ? classes.error : null])}
                     />
                 }
                 label={
@@ -45,14 +45,12 @@ const styles = () => ({
     root: {
         alignItems: 'flex-start'
     },
-    checkbox: {
-        height: 28
-    },
     label: {
         textAlign: 'justify',
         fontSize: 16,
         fontWeight: 300,
-        lineHeight: '24px'
+        lineHeight: '24px',
+        paddingTop: 10
     },
     error: {
         color: '#e02500'
