@@ -38,6 +38,7 @@
     "favicons-webpack-plugin": "0.0.9",
     "file-loader": "1.1.11",
     "html-webpack-plugin": "3.2.0",
+    "jest": "^23.5.0",
     "jest-cli": "^22.4.2",
     "jest-localstorage-mock": "^2.2.0",
     "jsdom": "11.10.0",

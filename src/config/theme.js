@@ -55,5 +55,6 @@ export const mui1theme = createMuiTheme({
         fontWeightLight: 100,
         fontWeightRegular: 200,
         fontWeightMedium: 300,
+        fontWeightBold: 400
     }
 });

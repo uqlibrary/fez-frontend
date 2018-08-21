@@ -167,86 +167,88 @@ exports[`Application component should render alert if user is not fez author 1`]
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - undefined"
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - undefined"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -721,86 +723,88 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - J RHD Student"
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - J RHD Student"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -1146,86 +1150,88 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - J RHD Student"
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - J RHD Student"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -1532,86 +1538,88 @@ exports[`Application component should render app for account with fez author wit
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - undefined"
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - undefined"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -2070,86 +2078,88 @@ exports[`Application component should render app for account with fez author wit
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - undefined"
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - undefined"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -2626,72 +2636,74 @@ exports[`Application component should render app for account with fez author wit
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
+        />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
         >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - undefined"
-      />
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - undefined"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <div
@@ -3074,86 +3086,88 @@ exports[`Application component should render application with routing for the us
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - undefined"
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - undefined"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -3312,86 +3326,88 @@ exports[`Application component should render for anon user 1`] = `
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
-        >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <div
-        style={
-          Object {
-            "marginRight": 12,
-            "minWidth": "400px",
-          }
-        }
-      >
-        <withRouter(Connect(SearchComponent))
-          isInHeader={true}
-          showMobileSearchButton={true}
-          showPrefixIcon={true}
         />
-      </div>
-      <AuthButton
-        ariaLabel="Click to log in to eSpace"
-        isAuthorizedUser={false}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText=""
-      />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
+        >
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <div
+          style={
+            Object {
+              "marginRight": 12,
+              "minWidth": "400px",
+            }
+          }
+        >
+          <withRouter(Connect(SearchComponent))
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
+        <AuthButton
+          ariaLabel="Click to log in to eSpace"
+          isAuthorizedUser={false}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText=""
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <MenuDrawer
@@ -3568,72 +3584,74 @@ exports[`Application component should render thesis submission for HDR without m
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(Tooltip)
-        TransitionComponent={[Function]}
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Main navigation"
-      >
-        <WithStyles(IconButton)
-          aria-label="Click to open the main navigation"
-          onClick={[Function]}
-          style={
+      <React.Fragment>
+        <WithStyles(Tooltip)
+          TransitionComponent={[Function]}
+          TransitionProps={
             Object {
-              "marginLeft": "-12px",
-              "marginRight": "12px",
+              "timeout": 300,
             }
           }
+          placement="bottom-end"
+          title="Main navigation"
         >
-          <pure(Menu)
+          <WithStyles(IconButton)
+            aria-label="Click to open the main navigation"
+            onClick={[Function]}
             style={
               Object {
-                "color": "white",
+                "marginLeft": "-12px",
+                "marginRight": "12px",
               }
             }
-          />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-      <img
-        src="/src/images/uq-logo-white-minimal.svg"
-        style={
-          Object {
-            "height": 75,
-            "marginRight": 12,
-          }
-        }
-      />
-      <WithStyles(Typography)
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
-        variant="title"
-      >
-        <a
-          className="appTitle"
-          href="/"
+          >
+            <pure(Menu)
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </WithStyles(Tooltip)>
+        <img
+          src="/src/images/uq-logo-white-minimal.svg"
           style={
             Object {
-              "color": "#FFFFFF",
+              "height": 75,
+              "marginRight": 12,
             }
           }
-          title="Click to return to the eSpace home page"
+        />
+        <WithStyles(Typography)
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+          variant="title"
         >
-          UQ eSpace 
-        </a>
-      </WithStyles(Typography)>
-      <AuthButton
-        ariaLabel="Click to log out of eSpace"
-        isAuthorizedUser={true}
-        onClick={[Function]}
-        signInTooltipText="Log in"
-        signOutTooltipText="Log out - J RHD Student"
-      />
+          <a
+            className="appTitle"
+            href="/"
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+            title="Click to return to the eSpace home page"
+          >
+            UQ eSpace 
+          </a>
+        </WithStyles(Typography)>
+        <AuthButton
+          ariaLabel="Click to log out of eSpace"
+          isAuthorizedUser={true}
+          onClick={[Function]}
+          signInTooltipText="Log in"
+          signOutTooltipText="Log out - J RHD Student"
+        />
+      </React.Fragment>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <div

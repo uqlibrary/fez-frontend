@@ -29,6 +29,7 @@ export class FileUploadTermsAndConditions extends PureComponent {
                         checked={isTermsAndConditionsAccepted}
                         onChange={this._handleChange}
                         className={classNames([!isTermsAndConditionsAccepted ? classes.error : null])}
+                        color="primary"
                     />
                 }
                 label={

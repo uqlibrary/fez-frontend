@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
@@ -197,34 +197,36 @@ export default class App extends PureComponent {
                     color={'primary'}
                     position={'fixed'}>
                     <Toolbar>
-                        {/* Menu Button */}
-                        {this.state.docked || !this.state.menuDrawerOpen &&
-                            <Tooltip title={locale.global.mainNavButton.tooltip} placement="bottom-end"  TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
-                                <IconButton
-                                    aria-label={locale.global.mainNavButton.aria}
-                                    style={{marginLeft: '-12px', marginRight: '12px'}}
-                                    onClick={this.toggleDrawer} >
-                                    <Menu style={{color: 'white'}}/>
-                                </IconButton>
-                            </Tooltip>
-                        }
-                        {/* Title */}
-                        <img src={'/src/images/uq-logo-white-minimal.svg'} style={{height: 75, marginRight: 12}} />
-                        <Typography variant="title" style={{flexGrow: 1}}>
-                            {locale.global.appTitle}
-                        </Typography>
-                        {/* Search */}
-                        {!isThesisSubmissionPage && !isSearchPage &&
-                            <div style={{minWidth: '400px', marginRight: 12}}>
-                                <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
-                            </div>
-                        }
-                        <AuthButton
-                            isAuthorizedUser={isAuthorizedUser}
-                            onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
-                            signInTooltipText={locale.global.authentication.signInText}
-                            signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
-                            ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
+                        <Fragment>
+                            {/* Menu Button */}
+                            {this.state.docked || !this.state.menuDrawerOpen &&
+                                <Tooltip title={locale.global.mainNavButton.tooltip} placement="bottom-end"  TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                                    <IconButton
+                                        aria-label={locale.global.mainNavButton.aria}
+                                        style={{marginLeft: '-12px', marginRight: '12px'}}
+                                        onClick={this.toggleDrawer} >
+                                        <Menu style={{color: 'white'}}/>
+                                    </IconButton>
+                                </Tooltip>
+                            }
+                            {/* Title */}
+                            <img src={'/src/images/uq-logo-white-minimal.svg'} style={{height: 75, marginRight: 12}} />
+                            <Typography variant="title" style={{flexGrow: 1}}>
+                                {locale.global.appTitle}
+                            </Typography>
+                            {/* Search */}
+                            {!isThesisSubmissionPage && !isSearchPage &&
+                                <div style={{minWidth: '400px', marginRight: 12}}>
+                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
+                                </div>
+                            }
+                            <AuthButton
+                                isAuthorizedUser={isAuthorizedUser}
+                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                signInTooltipText={locale.global.authentication.signInText}
+                                signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
+                                ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
+                        </Fragment>
                     </Toolbar>
                 </AppBar>
                 {
