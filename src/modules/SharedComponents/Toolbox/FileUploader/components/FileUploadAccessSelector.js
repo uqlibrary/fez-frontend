@@ -74,7 +74,7 @@ const styles = () => ({
         color: 'rgba(0, 0, 0, 0.5)'
     },
     selected: {
-        fontWeight: 600
+        fontWeight: 400
     },
     error: {
         marginTop: 0,

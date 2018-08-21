@@ -37,7 +37,6 @@ export class FileUploadRowDefaultView extends PureComponent {
         const {embargoDateClosedAccess} = this.props.locale;
         const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size, classes, focusOnIndex} = this.props;
 
-        console.log(index, focusOnIndex);
         return (
             <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
                 <Grid item md={6} sm={5}>

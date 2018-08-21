@@ -15,7 +15,7 @@ export class FileUploadEmbargoDate extends PureComponent {
 
     static defaultProps = {
         value: new Date(),
-        minDate: new Date('yesterday')
+        minDate: new Date()
     };
 
     _onChange = (value) => {
@@ -48,7 +48,7 @@ export class FileUploadEmbargoDate extends PureComponent {
 const styles = () => ({
     input: {
         fontSize: 14,
-        fontWeight: 600
+        fontWeight: 400
     }
 });
 
