@@ -213,9 +213,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       md={2}
       sm={2}
     >
-      <FileUploadEmbargoDate
+      <WithStyles(FileUploadEmbargoDate)
         disabled={false}
-        minDate={2016-12-31T14:00:00.000Z}
         onChange={[MockFunction]}
         value={2016-12-31T14:00:00.000Z}
       />
