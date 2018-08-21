@@ -161,85 +161,94 @@ exports[`Application component should render alert if user is not fez author 1`]
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - undefined"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -706,85 +715,94 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - J RHD Student"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - J RHD Student"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -1122,85 +1140,94 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - J RHD Student"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - J RHD Student"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -1499,85 +1526,94 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - undefined"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -2028,85 +2064,94 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - undefined"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -2575,79 +2620,80 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
-        />
-        <div
-          className="column is-narrow auth-button-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={false}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - undefined"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <div
     className="content-container"
     style={Object {}}
@@ -3022,85 +3068,94 @@ exports[`Application component should render application with routing for the us
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - undefined"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -3251,85 +3306,94 @@ exports[`Application component should render for anon user 1`] = `
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <withRouter(Connect(SearchComponent))
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log in to eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={false}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText=""
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <div
+        style={
+          Object {
+            "marginRight": 12,
+            "minWidth": "400px",
+          }
+        }
+      >
+        <withRouter(Connect(SearchComponent))
+          isInHeader={true}
+          showMobileSearchButton={true}
+          showPrefixIcon={true}
+        />
+      </div>
+      <AuthButton
+        ariaLabel="Click to log in to eSpace"
+        isAuthorizedUser={false}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText=""
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <MenuDrawer
     docked={false}
     drawerOpen={false}
@@ -3498,79 +3562,80 @@ exports[`Application component should render thesis submission for HDR without m
       ]
     }
   />
-  <AppBar
+  <WithStyles(AppBar)
     className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "timeout": 300,
           }
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+        placement="bottom-end"
+        title="Main navigation"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
-        />
-        <div
-          className="column is-narrow auth-button-column"
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "12px",
+            }
+          }
         >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
+          <pure(Menu)
+            style={
               Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
+                "color": "white",
               }
             }
-            isAuthorizedUser={true}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText="Log out - J RHD Student"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={false}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
+      <WithStyles(Typography)
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        variant="title"
       >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        <a
+          className="appTitle"
+          href="/"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          title="Click to return to the eSpace home page"
+        >
+          UQ eSpace 
+        </a>
+      </WithStyles(Typography)>
+      <AuthButton
+        ariaLabel="Click to log out of eSpace"
+        isAuthorizedUser={true}
+        onClick={[Function]}
+        signInTooltipText="Log in"
+        signOutTooltipText="Log out - J RHD Student"
+      />
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <div
     className="content-container"
     style={Object {}}

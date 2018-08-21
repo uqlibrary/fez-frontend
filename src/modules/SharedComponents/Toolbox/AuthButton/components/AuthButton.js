@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from 'material-ui/IconButton';
-import SocialPersonOutline from 'material-ui/svg-icons/social/person-outline';
-import SocialPerson from 'material-ui/svg-icons/social/person';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import Person from '@material-ui/icons/Person';
+import PersonOutline from '@material-ui/icons/PersonOutline';
+import Fade from '@material-ui/core/Fade';
 
-const AuthButton = ({ariaLabel, isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', hoveredStyle, onClick}) => {
+const AuthButton = ({ariaLabel, isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', onClick}) => {
     return (
         <div className="auth-button-wrapper">
-            <IconButton
-                aria-label={ariaLabel}
-                tooltipPosition="bottom-left"
-                onClick={onClick}
-                hoveredStyle={hoveredStyle}
-                tooltip={isAuthorizedUser ? signOutTooltipText : signInTooltipText}
-                className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}>
-                {isAuthorizedUser ? <SocialPerson/> : <SocialPersonOutline/>}
-            </IconButton>
+            <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText} placement="bottom-start" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                <IconButton
+                    aria-label={ariaLabel}
+                    onClick={onClick}
+                    className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}>
+                    {isAuthorizedUser ? <Person style={{color: 'white'}} /> : <PersonOutline style={{color: 'white'}} />}
+                </IconButton>
+            </Tooltip>
         </div>
     );
 };

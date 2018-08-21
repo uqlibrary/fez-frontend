@@ -1,10 +1,16 @@
 import {white, darkBlack, fullBlack, grey300} from 'material-ui/styles/colors';
 import {fade, darken} from 'material-ui/utils/colorManipulator';
 import spacing from 'material-ui/styles/spacing';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-export default {
+// MUI1
+import {createMuiTheme} from '@material-ui/core/styles';
+
+export const oldtheme = getMuiTheme({
+    // Old styles MUI 0.x
     spacing: spacing,
     fontFamily: 'Roboto, sans-serif',
+    fontWeight: 300,
     palette: {
         primary1Color: '#49075E',
         primary2Color: '#370546',
@@ -21,5 +27,33 @@ export default {
         pickerHeaderColor: '#4285f4',
         clockCircleColor: fade(darkBlack, 0.07),
         shadowColor: fullBlack
+    },
+});
+
+export const mui1theme = createMuiTheme({
+    palette: {
+        primary: {
+            light: '#6B0C8A',
+            main: '#49075E',
+            dark: '#370546',
+        },
+        secondary: {
+            light: '#f2f2f2',
+            main: '#595959',
+            dark: '#333333'
+        },
+        accent: {
+            light: '#288BED',
+            main: '#2377CB',
+            dark: '#005EA5'
+        },
+        white: {
+            main: '#FFFFFF'
+        }
+    },
+    typography: {
+        fontWeightLight: 100,
+        fontWeightRegular: 200,
+        fontWeightMedium: 300,
     }
-};
+});

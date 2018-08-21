@@ -2,10 +2,11 @@ import React from 'react';
 import {ConnectedRouter} from 'connected-react-router/immutable';
 import {Route, Switch} from 'react-router';
 import PropTypes from 'prop-types';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { MuiThemeProvider as V0MuiThemeProvider} from 'material-ui';
+// MUI1
+import {mui1theme, oldtheme} from 'config';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 
-import {theme} from 'config';
 
 // Top level "pages"
 import {App} from 'modules/App';
@@ -15,10 +16,12 @@ const Root = ({history}) => {
     return (
         <ConnectedRouter history={history}>
             <ScrollToTop>
-                <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
-                    <Switch>
-                        <Route component={App} />
-                    </Switch>
+                <MuiThemeProvider theme={mui1theme}>
+                    <V0MuiThemeProvider muiTheme={oldtheme}>
+                        <Switch>
+                            <Route component={App} />
+                        </Switch>
+                    </V0MuiThemeProvider>
                 </MuiThemeProvider>
             </ScrollToTop>
         </ConnectedRouter>
