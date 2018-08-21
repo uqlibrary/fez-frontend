@@ -24,7 +24,8 @@ export class FileUploadRowMobileView extends PureComponent {
         classes: PropTypes.object,
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
-        onAccessConditionChange: PropTypes.func.isRequired
+        onAccessConditionChange: PropTypes.func.isRequired,
+        focusOnIndex: PropTypes.number
     };
 
     static defaultProps = {

@@ -23,7 +23,8 @@ export class FileUploadRowDefaultView extends PureComponent {
         classes: PropTypes.object,
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
-        onAccessConditionChange: PropTypes.func.isRequired
+        onAccessConditionChange: PropTypes.func.isRequired,
+        focusOnIndex: PropTypes.number
     };
 
     static defaultProps = {
@@ -34,8 +35,9 @@ export class FileUploadRowDefaultView extends PureComponent {
 
     render() {
         const {embargoDateClosedAccess} = this.props.locale;
-        const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size, classes} = this.props;
+        const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size, classes, focusOnIndex} = this.props;
 
+        console.log(index, focusOnIndex);
         return (
             <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
                 <Grid item md={6} sm={5}>
@@ -52,6 +54,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 onChange={this.props.onAccessConditionChange}
                                 disabled={disabled}
                                 ref={`accessConditionSelector${index}`}
+                                autoFocus={index === focusOnIndex}
                             />
                         </Grid>
                         <Grid item md={2} sm={2}>

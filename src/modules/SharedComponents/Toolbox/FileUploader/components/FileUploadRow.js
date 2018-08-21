@@ -39,16 +39,6 @@ export class FileUploadRow extends PureComponent {
         }
     };
 
-    componentDidMount() {
-        const indexToFocus = this.props.focusOnIndex;
-        if (this.refs.hasOwnProperty(`accessConditionSelector${indexToFocus}`)) {
-            // ReactDOM.findDOMNode(this.refs[`accessConditionSelector${indexToFocus}`]).getElementsByTagName('button').item(0).focus();
-        } else if (this.refs.hasOwnProperty(`fileName${indexToFocus}`)) {
-            // if access condition is not required, then scroll into filename
-            this.refs[`fileName${indexToFocus}`].scrollIntoView();
-        }
-    }
-
     _showConfirmation = () => {
         if (this.confirmationBox) this.confirmationBox.showConfirmation();
     };
@@ -72,7 +62,7 @@ export class FileUploadRow extends PureComponent {
 
     render() {
         const {deleteRecordConfirmation} = this.props.locale;
-        const {requireOpenAccessStatus, disabled, uploadedFile, index} = this.props;
+        const {requireOpenAccessStatus, disabled, uploadedFile, index, focusOnIndex} = this.props;
 
         const accessConditionId = uploadedFile[config.FILE_META_KEY_ACCESS_CONDITION];
         const embargoDate = uploadedFile[config.FILE_META_KEY_EMBARGO_DATE];
@@ -97,6 +87,7 @@ export class FileUploadRow extends PureComponent {
                     onDelete={this._showConfirmation}
                     onAccessConditionChange={this._updateAccessCondition}
                     onEmbargoDateChange={this._updateEmbargoDate}
+                    focusOnIndex={focusOnIndex}
                 />
             </Fragment>
         );

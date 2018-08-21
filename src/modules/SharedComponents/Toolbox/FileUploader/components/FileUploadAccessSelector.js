@@ -10,7 +10,8 @@ export class FileUploadAccessSelector extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         value: PropTypes.any,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        autoFocus: PropTypes.bool
     };
 
     static defaultProps = {
@@ -31,7 +32,7 @@ export class FileUploadAccessSelector extends PureComponent {
 
     render() {
         const {accessSelectOptionsText, errorMessage, initialValue} = this.props.locale;
-        const {value, disabled, classes} = this.props;
+        const {value, disabled, classes, autoFocus} = this.props;
         const accessOptions = [OPEN_ACCESS_ID, CLOSED_ACCESS_ID].map((access, index) => (
             <MenuItem value={parseInt(access, 10)} key={`access_option_key_${index}`}>{accessSelectOptionsText[access]}</MenuItem>
         ));
@@ -44,7 +45,13 @@ export class FileUploadAccessSelector extends PureComponent {
                     disabled={disabled}
                     value={value}
                     displayEmpty
-                    input={<Input name="accessCondition" id="access-condition"/>}
+                    input={<Input
+                        name="accessCondition"
+                        id="access-condition"
+                        disableUnderline
+                        autoFocus={autoFocus}
+                        classes={{root: !!value ? classes.selected : classes.placeholder}}
+                    />}
                 >
                     <MenuItem value="" disabled>{initialValue}</MenuItem>
                     {accessOptions}
@@ -61,16 +68,13 @@ export class FileUploadAccessSelector extends PureComponent {
 const styles = () => ({
     selector: {
         maxWidth: 200,
-        fontSize: '14px',
-        '&:before': {
-            borderBottom: 0
-        },
-        '&:after': {
-            borderBottom: 0
-        },
-        '&:hover': {
-            borderBottom: 0
-        }
+        fontSize: 14
+    },
+    placeholder: {
+        color: 'rgba(0, 0, 0, 0.5)'
+    },
+    selected: {
+        fontWeight: 600
     },
     error: {
         marginTop: 0,

@@ -101,6 +101,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                 displayEmpty={true}
                 input={
                   <WithStyles(Input)
+                    autoFocus={undefined}
+                    classes={
+                      Object {
+                        "root": undefined,
+                      }
+                    }
+                    disableUnderline={true}
                     id="access-condition"
                     name="accessCondition"
                   />
@@ -125,6 +132,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   displayEmpty={true}
                   input={
                     <WithStyles(Input)
+                      autoFocus={undefined}
+                      classes={
+                        Object {
+                          "root": undefined,
+                        }
+                      }
+                      disableUnderline={true}
                       id="access-condition"
                       name="accessCondition"
                     />
@@ -136,6 +150,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                 >
                   <WithStyles(Input)
                     className={Object {}}
+                    classes={
+                      Object {
+                        "root": undefined,
+                      }
+                    }
+                    disableUnderline={true}
                     disabled={true}
                     id="access-condition"
                     inputComponent={[Function]}
@@ -204,7 +224,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           "underline": "MuiInput-underline-14",
                         }
                       }
-                      disableUnderline={false}
+                      disableUnderline={true}
                       disabled={true}
                       fullWidth={false}
                       id="access-condition"
@@ -258,7 +278,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       value=""
                     >
                       <div
-                        className="MuiInput-root-10 MuiInput-disabled-13 MuiInput-error-15 MuiInput-formControl-11 MuiInput-underline-14"
+                        className="MuiInput-root-10 MuiInput-disabled-13 MuiInput-error-15 MuiInput-formControl-11"
                       >
                         <SelectInput
                           IconComponent={[Function]}
@@ -906,6 +926,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                 displayEmpty={true}
                 input={
                   <WithStyles(Input)
+                    autoFocus={undefined}
+                    classes={
+                      Object {
+                        "root": undefined,
+                      }
+                    }
+                    disableUnderline={true}
                     id="access-condition"
                     name="accessCondition"
                   />
@@ -930,6 +957,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   displayEmpty={true}
                   input={
                     <WithStyles(Input)
+                      autoFocus={undefined}
+                      classes={
+                        Object {
+                          "root": undefined,
+                        }
+                      }
+                      disableUnderline={true}
                       id="access-condition"
                       name="accessCondition"
                     />
@@ -941,6 +975,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                 >
                   <WithStyles(Input)
                     className={Object {}}
+                    classes={
+                      Object {
+                        "root": undefined,
+                      }
+                    }
+                    disableUnderline={true}
                     disabled={true}
                     id="access-condition"
                     inputComponent={[Function]}
@@ -1009,7 +1049,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           "underline": "MuiInput-underline-14",
                         }
                       }
-                      disableUnderline={false}
+                      disableUnderline={true}
                       disabled={true}
                       fullWidth={false}
                       id="access-condition"
@@ -1063,7 +1103,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       value={2}
                     >
                       <div
-                        className="MuiInput-root-10 MuiInput-disabled-13 MuiInput-formControl-11 MuiInput-underline-14"
+                        className="MuiInput-root-10 MuiInput-disabled-13 MuiInput-formControl-11"
                       >
                         <SelectInput
                           IconComponent={[Function]}
@@ -1606,6 +1646,13 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
     displayEmpty={true}
     input={
       <WithStyles(Input)
+        autoFocus={undefined}
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+        disableUnderline={true}
         id="access-condition"
         name="accessCondition"
       />
@@ -1648,6 +1695,13 @@ exports[`Component FileUploadAccessSelector should render with value 1`] = `
     displayEmpty={true}
     input={
       <WithStyles(Input)
+        autoFocus={undefined}
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+        disableUnderline={true}
         id="access-condition"
         name="accessCondition"
       />

@@ -71,6 +71,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       sm={4}
     >
       <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
         disabled={false}
         onChange={[MockFunction]}
         value={8}
@@ -137,6 +138,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       sm={4}
     >
       <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
         disabled={false}
         onChange={[MockFunction]}
         value={null}
@@ -203,6 +205,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       sm={4}
     >
       <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
         disabled={false}
         onChange={[MockFunction]}
         value={9}
