@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {FormControlLabel, Typography, Checkbox} from '@material-ui/core';
-import classNames from 'classnames';
 
 export class FileUploadTermsAndConditions extends PureComponent {
     static propTypes = {
@@ -22,18 +21,24 @@ export class FileUploadTermsAndConditions extends PureComponent {
 
         return (
             <FormControlLabel
-                className={classes.root}
+                classes={{
+                    root: classes.root
+                }}
                 disabled={disabled}
                 control={
                     <Checkbox
                         checked={isTermsAndConditionsAccepted}
                         onChange={this._handleChange}
-                        className={classNames([!isTermsAndConditionsAccepted ? classes.error : null])}
-                        color="primary"
+                        classes={{root: classes.checkboxRoot, checked: classes.checkboxChecked}}
                     />
                 }
                 label={
-                    <Typography className={classNames([classes.label, !isTermsAndConditionsAccepted ? classes.error : classes.accepted])}>
+                    <Typography
+                        classes={{
+                            root: classes.label
+                        }}
+                        color={!isTermsAndConditionsAccepted ? 'error' : 'secondary'}
+                    >
                         {accessTermsAndConditions}
                     </Typography>
                 }
@@ -42,7 +47,7 @@ export class FileUploadTermsAndConditions extends PureComponent {
     }
 }
 
-const styles = () => ({
+const styles = (theme) => ({
     root: {
         alignItems: 'flex-start'
     },
@@ -53,11 +58,11 @@ const styles = () => ({
         lineHeight: '24px',
         paddingTop: 10
     },
-    error: {
-        color: '#e02500'
+    checkboxRoot: {
+        color: theme.status.danger,
     },
-    accepted: {
-        color: 'rgb(136, 136, 136)'
+    checkboxChecked: {
+        color: `${theme.palette.primary.main} !important`
     }
 });
 

@@ -2,6 +2,7 @@ import {white, darkBlack, fullBlack, grey300} from 'material-ui/styles/colors';
 import {fade, darken} from 'material-ui/utils/colorManipulator';
 import spacing from 'material-ui/styles/spacing';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import red from '@material-ui/core/colors/red';
 
 // MUI1
 import {createMuiTheme} from '@material-ui/core/styles';
@@ -51,10 +52,12 @@ export const mui1theme = createMuiTheme({
             main: '#FFFFFF'
         }
     },
+    status: {
+        danger: red[500]
+    },
     typography: {
-        fontWeightLight: 100,
-        fontWeightRegular: 200,
-        fontWeightMedium: 300,
-        fontWeightBold: 400
+        fontWeightLight: 200,
+        fontWeightRegular: 300,
+        fontWeightMedium: 400
     }
 });
