@@ -102,7 +102,7 @@ export default class MenuDrawer extends Component {
                                             title={logoText}
                                             openInNewIcon={false}
                                         >
-                                            <img src={logoImage} alt={logoText}/>
+                                            <img src={logoImage} alt={logoText} style={{height: 50}}/>
                                         </ExternalLink>
                                     }
                                 </div>
