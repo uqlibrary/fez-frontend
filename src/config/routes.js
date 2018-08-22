@@ -65,25 +65,20 @@ export const pathConfig = {
                 }
             } : {
                 searchQuery: {
-                    'rek_author': author
+                    'rek_author': {
+                        'value': author
+                    }
                 }
             }
         ),
-        journalName: (journalName) => getSearchUrl({
-            searchQuery: {'rek_journal_name': journalName},
-            activeFacets: {
-                filters: {
-                    'Journal name': journalName
-                }
-            }
-        }),
-        bookTitle: (bookTitle) => getSearchUrl({searchQuery: {'rek_book_title': bookTitle}}),
-        collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': collectionId}}),
-        contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': contributor}}),
-        conferenceName: (conferenceName) => getSearchUrl({searchQuery: {'rek_conference_name': conferenceName}}),
-        orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: {'rek_org_unit_name': orgUnitName}}),
-        publisher: (publisher) => getSearchUrl({searchQuery: {'rek_publisher': publisher}}),
-        series: (series) => getSearchUrl({searchQuery: {'rek_series': series}}),
+        journalName: (journalName) => getSearchUrl({searchQuery: {'rek_journal_name': {'value': journalName}}}),
+        bookTitle: (bookTitle) => getSearchUrl({searchQuery: {'rek_book_title': {'value': bookTitle}}}),
+        collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': {'value': collectionId}}}),
+        contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': {'value': contributor}}}),
+        conferenceName: (conferenceName) => getSearchUrl({searchQuery: {'rek_conference_name': {'value': conferenceName}}}),
+        orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: {'rek_org_unit_name': {'value': orgUnitName}}}),
+        publisher: (publisher) => getSearchUrl({searchQuery: {'rek_publisher': {'value': publisher}}}),
+        series: (series) => getSearchUrl({searchQuery: {'rek_series': {'value': series}}}),
         license: (license) => getSearchUrl({searchQuery: {all: license}}),
         jobNumber: (jobNumber) => getSearchUrl({searchQuery: {all: jobNumber}}),
         proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: {all: proceedingsTitle}}),

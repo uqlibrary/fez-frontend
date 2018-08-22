@@ -1542,11 +1542,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorNameLink"
                                                       key="citationAuthor_1"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Shutter%2C+Leigh&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Shutter%2C+Leigh&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Shutter%2C+Leigh&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Shutter%2C+Leigh&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1569,11 +1569,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorNameLink"
                                                       key="citationAuthor_2"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Arthurs%2C+Andy&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Arthurs%2C+Andy&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Arthurs%2C+Andy&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Arthurs%2C+Andy&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1623,11 +1623,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorNameLink"
                                                       key="citationAuthor_4"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=McColl%2C+Mary+Rose&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=McColl%2C+Mary+Rose&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=McColl%2C+Mary+Rose&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=McColl%2C+Mary+Rose&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1797,7 +1797,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <Link
                                             replace={false}
-                                            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
+                                            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                                           >
                                             Centre for Subtropical Design, Queensland University of Technology
                                           </Link>
@@ -1905,10 +1905,10 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <Link
                                                   replace={false}
-                                                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
+                                                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                                                 >
                                                   <a
-                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
+                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                                                     onClick={[Function]}
                                                   >
                                                     Centre for Subtropical Design, Queensland University of Technology
@@ -2181,7 +2181,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <Link
                                             replace={false}
-                                            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
+                                            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=undefined&searchMode=advanced"
                                           />
                                         }
                                         heading="Series"
@@ -2287,10 +2287,10 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <Link
                                                   replace={false}
-                                                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
+                                                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=undefined&searchMode=advanced"
                                                 >
                                                   <a
-                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
+                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=undefined&searchMode=advanced"
                                                     onClick={[Function]}
                                                   />
                                                 </Link>
@@ -3466,7 +3466,7 @@ exports[`Additional Information Component  should render component with book 1`]
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Psychology+Press&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Psychology+Press&searchMode=advanced"
           >
             Psychology Press
           </Link>
@@ -3496,7 +3496,7 @@ exports[`Additional Information Component  should render component with book 1`]
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Clinical+Psychology%3A+A+Modular+Course&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Clinical+Psychology%3A+A+Modular+Course&searchMode=advanced"
           >
             Clinical Psychology: A Modular Course
           </Link>
@@ -4323,7 +4323,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_book_title%5D=Non-coding+RNA+and+the+Reproductive+System&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_book_title%5D%5Bvalue%5D=Non-coding+RNA+and+the+Reproductive+System&searchMode=advanced"
           >
             Non-coding RNA and the Reproductive System
           </Link>
@@ -4340,7 +4340,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Springer+New+York&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Springer+New+York&searchMode=advanced"
           >
             Springer New York
           </Link>
@@ -4378,7 +4378,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Advances+in+Experimental+Medicine+and+Biology&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Advances+in+Experimental+Medicine+and+Biology&searchMode=advanced"
           >
             Advances in Experimental Medicine and Biology
           </Link>
@@ -5712,7 +5712,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D%5Bvalue%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014&searchMode=advanced"
           >
             Australasian Professional Society on Alcohol and other Drugs Conference 2014
           </Link>
@@ -6432,7 +6432,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Wiley-Blackwell+Publishing&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Wiley-Blackwell+Publishing&searchMode=advanced"
           >
             Wiley-Blackwell Publishing
           </Link>
@@ -6974,7 +6974,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D%5Bvalue%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC&searchMode=advanced"
           >
             International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
           </Link>
@@ -7017,7 +7017,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland&searchMode=advanced"
           >
             Department of Civil Engineering at The University of Queensland
           </Link>
@@ -7703,7 +7703,7 @@ exports[`Additional Information Component  should render component with creative
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=School+of+Architecture%2C+The+University+of+Queensland&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=School+of+Architecture%2C+The+University+of+Queensland&searchMode=advanced"
           >
             School of Architecture, The University of Queensland
           </Link>
@@ -9701,7 +9701,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
           >
             Cold Spring Harbor Laboratory Press
           </Link>
@@ -11300,7 +11300,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Pangaea&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Pangaea&searchMode=advanced"
           >
             Pangaea
           </Link>
@@ -12470,7 +12470,7 @@ exports[`Additional Information Component  should render component with digilib 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=The+University+of+Queensland+Library&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=The+University+of+Queensland+Library&searchMode=advanced"
           >
             The University of Queensland Library
           </Link>
@@ -14515,7 +14515,7 @@ exports[`Additional Information Component  should render component with journal 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler&searchMode=advanced"
           >
             Betriebswirtschaftlicher Verlag T. Gabler
           </Link>
@@ -18217,11 +18217,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorNameLink"
                                                       key="citationAuthor_2"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18352,11 +18352,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorNameLink"
                                                       key="citationAuthor_7"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Thompson%2C+Erik+W.&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Thompson%2C+Erik+W.&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -20786,10 +20786,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   <span>
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Brek_journal_name%5D=Journal+of+Cell+Science&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Brek_journal_name%5D=Journal+of+Cell+Science&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <span>
@@ -22120,7 +22120,7 @@ exports[`Additional Information Component  should render component with journal 
                                         data={
                                           <Link
                                             replace={false}
-                                            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
+                                            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
                                           >
                                             Company of Biologists
                                           </Link>
@@ -22228,10 +22228,10 @@ exports[`Additional Information Component  should render component with journal 
                                               >
                                                 <Link
                                                   replace={false}
-                                                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
+                                                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
                                                 >
                                                   <a
-                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
+                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
                                                     onClick={[Function]}
                                                   >
                                                     Company of Biologists
@@ -23794,7 +23794,7 @@ exports[`Additional Information Component  should render component with manuscri
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2&searchMode=advanced"
           >
             Father Edward Leo Hayes Collection, UQFL2
           </Link>
@@ -26187,7 +26187,7 @@ exports[`Additional Information Component  should render component with newspape
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
           >
             Company of Biologists
           </Link>
@@ -26576,7 +26576,7 @@ exports[`Additional Information Component  should render component with patent 1
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=GC+Corporation&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=GC+Corporation&searchMode=advanced"
           >
             GC Corporation
           </Link>
@@ -27953,7 +27953,7 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D%5Bvalue%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous&searchMode=advanced"
           >
             17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous
           </Link>
@@ -28617,7 +28617,7 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Pergamon&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Pergamon&searchMode=advanced"
           >
             Pergamon
           </Link>
@@ -29097,7 +29097,7 @@ exports[`Additional Information Component  should render component with referenc
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Routledge&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Routledge&searchMode=advanced"
           >
             Routledge
           </Link>
@@ -29878,7 +29878,7 @@ exports[`Additional Information Component  should render component with research
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=UQ&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=UQ&searchMode=advanced"
           >
             UQ
           </Link>
@@ -30261,7 +30261,7 @@ exports[`Additional Information Component  should render component with thesis 1
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D%5Bvalue%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
           >
             School of Natural and Rural Systems
           </Link>
@@ -30729,7 +30729,7 @@ exports[`Additional Information Component  should render component with video do
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=SEG+Special+Publication+Video+Series&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=SEG+Special+Publication+Video+Series&searchMode=advanced"
           >
             SEG Special Publication Video Series
           </Link>
@@ -31180,7 +31180,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Economics&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D%5Bvalue%5D=School+of+Economics&searchMode=advanced"
           >
             School of Economics
           </Link>
@@ -31201,7 +31201,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development&searchMode=advanced"
           >
             Working papers on Social Economics, Policy and Development
           </Link>
@@ -31231,7 +31231,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=School+of+Economics&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=School+of+Economics&searchMode=advanced"
           >
             School of Economics
           </Link>
@@ -31685,7 +31685,7 @@ exports[`Additional Information Component  should render oa status value link in
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
+            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D%5Bvalue%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
           >
             School of Natural and Rural Systems
           </Link>
