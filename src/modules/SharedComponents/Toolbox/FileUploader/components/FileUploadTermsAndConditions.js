@@ -49,7 +49,8 @@ export class FileUploadTermsAndConditions extends PureComponent {
 
 const styles = (theme) => ({
     root: {
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        margin: 0
     },
     label: {
         textAlign: 'justify',

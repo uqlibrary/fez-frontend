@@ -1,99 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
-<WithStyles(Grid)
-  container={true}
-  direction="column"
-  spacing={8}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    xs={12}
+    container={true}
+    direction="column"
+    spacing={8}
   >
     <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      spacing={8}
+      item={true}
+      xs={12}
     >
       <WithStyles(Grid)
-        item={true}
-        xs={2}
+        alignItems="center"
+        container={true}
+        direction="row"
+        spacing={8}
       >
-        <pure(Attachment) />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={10}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          noWrap={true}
-          variant="body1"
+        <WithStyles(Grid)
+          item={true}
+          xs={2}
         >
-          test.pdf
-           (
-          100 MB
-          )
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
+          <pure(Attachment) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={10}
         >
-          File name
-        </WithStyles(Typography)>
+          <WithStyles(Typography)
+            gutterBottom={true}
+            noWrap={true}
+            variant="body1"
+          >
+            test.pdf
+             (
+            100 MB
+            )
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</WithStyles(Grid)>
+</div>
 `;
 
 exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
-<WithStyles(Grid)
-  container={true}
-  direction="column"
-  spacing={8}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    xs={12}
+    container={true}
+    direction="column"
+    spacing={8}
   >
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      spacing={8}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={2}
-      >
-        <pure(Attachment) />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={10}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          noWrap={true}
-          variant="body1"
-        >
-          test.pdf
-           (
-          100 MB
-          )
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <React.Fragment>
     <WithStyles(Grid)
       item={true}
       xs={12}
@@ -108,121 +85,141 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           item={true}
           xs={2}
         >
-          <pure(LockOutlined) />
+          <pure(Attachment) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           xs={10}
         >
-          <WithStyles(FileUploadAccessSelector)
-            disabled={false}
-            onChange={[MockFunction]}
-            value={8}
-          />
           <WithStyles(Typography)
             gutterBottom={true}
-            variant="caption"
-          >
-            File access
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        direction="row"
-        spacing={8}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={2}
-        >
-          <pure(CalendarTodayOutlined) />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={9}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
+            noWrap={true}
             variant="body1"
           >
-            No date required
+            test.pdf
+             (
+            100 MB
+            )
           </WithStyles(Typography)>
           <WithStyles(Typography)
             gutterBottom={true}
             variant="caption"
           >
-            Embargo date
+            File name
           </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={1}
-        >
-          <Connect(FileUploadRowStatus)
-            disabled={false}
-            name="test.pdf"
-            onDelete={[MockFunction]}
-          />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-  </React.Fragment>
-</WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Grid)
+          alignItems="center"
+          container={true}
+          direction="row"
+          spacing={8}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={2}
+          >
+            <pure(LockOutlined) />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={10}
+          >
+            <WithStyles(FileUploadAccessSelector)
+              autoFocus={false}
+              disabled={false}
+              onChange={[MockFunction]}
+              value={8}
+            />
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              File access
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <div
+          style={
+            Object {
+              "flexGrow": 1,
+              "padding": 4,
+            }
+          }
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            justify="space-around"
+            spacing={8}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={2}
+            >
+              <pure(CalendarTodayOutlined) />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={9}
+            >
+              <WithStyles(Typography)
+                gutterBottom={true}
+                variant="body1"
+              >
+                No date required
+              </WithStyles(Typography)>
+              <WithStyles(Typography)
+                gutterBottom={true}
+                variant="caption"
+              >
+                Embargo date
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <Connect(FileUploadRowStatus)
+                disabled={false}
+                name="test.pdf"
+                onDelete={[MockFunction]}
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </div>
+      </WithStyles(Grid)>
+    </React.Fragment>
+  </WithStyles(Grid)>
+</div>
 `;
 
 exports[`Component FileUploadRowMobileView should render default view 1`] = `
-<WithStyles(Grid)
-  container={true}
-  direction="column"
-  spacing={8}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    xs={12}
+    container={true}
+    direction="column"
+    spacing={8}
   >
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      spacing={8}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={2}
-      >
-        <pure(Attachment) />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={10}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          noWrap={true}
-          variant="body1"
-        >
-          test.pdf
-           (
-          100 MB
-          )
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <React.Fragment>
     <WithStyles(Grid)
       item={true}
       xs={12}
@@ -237,121 +234,141 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           item={true}
           xs={2}
         >
-          <pure(LockOutlined) />
+          <pure(Attachment) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           xs={10}
         >
-          <WithStyles(FileUploadAccessSelector)
-            disabled={false}
-            onChange={[MockFunction]}
-            value={null}
-          />
           <WithStyles(Typography)
             gutterBottom={true}
-            variant="caption"
-          >
-            File access
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        direction="row"
-        spacing={8}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={2}
-        >
-          <pure(CalendarTodayOutlined) />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={9}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
+            noWrap={true}
             variant="body1"
           >
-            No date required
+            test.pdf
+             (
+            100 MB
+            )
           </WithStyles(Typography)>
           <WithStyles(Typography)
             gutterBottom={true}
             variant="caption"
           >
-            Embargo date
+            File name
           </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={1}
-        >
-          <Connect(FileUploadRowStatus)
-            disabled={false}
-            name="test.pdf"
-            onDelete={[MockFunction]}
-          />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-  </React.Fragment>
-</WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Grid)
+          alignItems="center"
+          container={true}
+          direction="row"
+          spacing={8}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={2}
+          >
+            <pure(LockOutlined) />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={10}
+          >
+            <WithStyles(FileUploadAccessSelector)
+              autoFocus={false}
+              disabled={false}
+              onChange={[MockFunction]}
+              value={null}
+            />
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              File access
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <div
+          style={
+            Object {
+              "flexGrow": 1,
+              "padding": 4,
+            }
+          }
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            justify="space-around"
+            spacing={8}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={2}
+            >
+              <pure(CalendarTodayOutlined) />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={9}
+            >
+              <WithStyles(Typography)
+                gutterBottom={true}
+                variant="body1"
+              >
+                No date required
+              </WithStyles(Typography)>
+              <WithStyles(Typography)
+                gutterBottom={true}
+                variant="caption"
+              >
+                Embargo date
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <Connect(FileUploadRowStatus)
+                disabled={false}
+                name="test.pdf"
+                onDelete={[MockFunction]}
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </div>
+      </WithStyles(Grid)>
+    </React.Fragment>
+  </WithStyles(Grid)>
+</div>
 `;
 
 exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
-<WithStyles(Grid)
-  container={true}
-  direction="column"
-  spacing={8}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    xs={12}
+    container={true}
+    direction="column"
+    spacing={8}
   >
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      spacing={8}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={2}
-      >
-        <pure(Attachment) />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={10}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          noWrap={true}
-          variant="body1"
-        >
-          test.pdf
-           (
-          100 MB
-          )
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <React.Fragment>
     <WithStyles(Grid)
       item={true}
       xs={12}
@@ -366,70 +383,122 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           item={true}
           xs={2}
         >
-          <pure(LockOutlined) />
+          <pure(Attachment) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           xs={10}
         >
-          <WithStyles(FileUploadAccessSelector)
-            disabled={false}
-            onChange={[MockFunction]}
-            value={9}
-          />
+          <WithStyles(Typography)
+            gutterBottom={true}
+            noWrap={true}
+            variant="body1"
+          >
+            test.pdf
+             (
+            100 MB
+            )
+          </WithStyles(Typography)>
           <WithStyles(Typography)
             gutterBottom={true}
             variant="caption"
           >
-            File access
+            File name
           </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
+    <React.Fragment>
       <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        direction="row"
-        spacing={8}
+        item={true}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          xs={2}
+          alignItems="center"
+          container={true}
+          direction="row"
+          spacing={8}
         >
-          <pure(CalendarTodayOutlined) />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={9}
-        >
-          <WithStyles(FileUploadEmbargoDate)
-            disabled={false}
-            onChange={[MockFunction]}
-            value={2016-12-31T14:00:00.000Z}
-          />
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
+          <WithStyles(Grid)
+            item={true}
+            xs={2}
           >
-            Embargo date
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={1}
-        >
-          <Connect(FileUploadRowStatus)
-            disabled={false}
-            name="test.pdf"
-            onDelete={[MockFunction]}
-          />
+            <pure(LockOutlined) />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={10}
+          >
+            <WithStyles(FileUploadAccessSelector)
+              autoFocus={false}
+              disabled={false}
+              onChange={[MockFunction]}
+              value={9}
+            />
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              File access
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </React.Fragment>
-</WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <div
+          style={
+            Object {
+              "flexGrow": 1,
+              "padding": 4,
+            }
+          }
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            justify="space-around"
+            spacing={8}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={2}
+            >
+              <pure(CalendarTodayOutlined) />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={9}
+            >
+              <WithStyles(FileUploadEmbargoDate)
+                disabled={false}
+                onChange={[MockFunction]}
+                value={2016-12-31T14:00:00.000Z}
+              />
+              <WithStyles(Typography)
+                gutterBottom={true}
+                variant="caption"
+              >
+                Embargo date
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <Connect(FileUploadRowStatus)
+                disabled={false}
+                name="test.pdf"
+                onDelete={[MockFunction]}
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </div>
+      </WithStyles(Grid)>
+    </React.Fragment>
+  </WithStyles(Grid)>
+</div>
 `;

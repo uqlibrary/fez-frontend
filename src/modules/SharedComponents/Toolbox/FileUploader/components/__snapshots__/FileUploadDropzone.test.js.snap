@@ -613,7 +613,6 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                         >
                                           <WithStyles(Typography)
                                             className="FileUploadDropzoneStaticContent-heading-99"
-                                            variant="subheading"
                                           >
                                             <Typography
                                               align="inherit"
@@ -664,10 +663,10 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                               }
                                               noWrap={false}
                                               paragraph={false}
-                                              variant="subheading"
+                                              variant="body1"
                                             >
-                                              <h3
-                                                className="MuiTypography-root-102 MuiTypography-subheading-109 FileUploadDropzoneStaticContent-heading-99"
+                                              <p
+                                                className="MuiTypography-root-102 MuiTypography-body1-111 FileUploadDropzoneStaticContent-heading-99"
                                               />
                                             </Typography>
                                           </WithStyles(Typography)>
@@ -1923,7 +1922,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                         >
                                           <WithStyles(Typography)
                                             className="FileUploadDropzoneStaticContent-heading-99"
-                                            variant="subheading"
                                           >
                                             <Typography
                                               align="inherit"
@@ -1974,10 +1972,10 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                               }
                                               noWrap={false}
                                               paragraph={false}
-                                              variant="subheading"
+                                              variant="body1"
                                             >
-                                              <h3
-                                                className="MuiTypography-root-102 MuiTypography-subheading-109 FileUploadDropzoneStaticContent-heading-99"
+                                              <p
+                                                className="MuiTypography-root-102 MuiTypography-body1-111 FileUploadDropzoneStaticContent-heading-99"
                                               />
                                             </Typography>
                                           </WithStyles(Typography)>

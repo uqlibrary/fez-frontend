@@ -6,12 +6,10 @@ import {clearFileUpload} from '../actions';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
-import {Alert} from '../../Alert';
-
-import * as config from '../config';
-
-import Typography from '@material-ui/core/Typography';
 import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
+import {Alert} from '../../Alert';
+import {Grid, Typography} from '@material-ui/core';
+import * as config from '../config';
 
 const moment = require('moment');
 
@@ -314,7 +312,8 @@ export class FileUploader extends PureComponent {
                     filesInQueue={this.state.filesInQueue.map(file => file.name)}
                     fileNameRestrictions={fileNameRestrictions}
                     fileUploadLimit={fileUploadLimit}
-                    onDrop={this._handleDroppedFiles} />
+                    onDrop={this._handleDroppedFiles}
+                />
                 {
                     filesInQueue.length > 0 &&
                     <Alert title={successTitle} message={successMessage.replace('[numberOfFiles]', filesInQueue.length)} type="done" />
@@ -326,23 +325,30 @@ export class FileUploader extends PureComponent {
                 }
                 {
                     filesInQueue.length > 0 &&
-                    <div className="metadata-container">
-                        <FileUploadRowHeader
-                            onDeleteAll={this._deleteAllFiles}
-                            requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
-                            disabled={disabled} />
-
-                        {filesInQueueRow}
-
-                        {
-                            requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) &&
-                            <FileUploadTermsAndConditions
-                                onAcceptTermsAndConditions={this._acceptTermsAndConditions}
-                                accessTermsAndConditions={accessTermsAndConditions}
-                                isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
-                                disabled={disabled}
-                            />
-                        }
+                    <div style={{flexGrow: 1, padding: 8}}>
+                        <Grid container display="column" spacing={16}>
+                            <Grid item xs={12}>
+                                <FileUploadRowHeader
+                                    onDeleteAll={this._deleteAllFiles}
+                                    requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
+                                    disabled={disabled}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                {filesInQueueRow}
+                            </Grid>
+                            {
+                                requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) &&
+                                <Grid item xs={12}>
+                                    <FileUploadTermsAndConditions
+                                        onAcceptTermsAndConditions={this._acceptTermsAndConditions}
+                                        accessTermsAndConditions={accessTermsAndConditions}
+                                        isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
+                                        disabled={disabled}
+                                    />
+                                </Grid>
+                            }
+                        </Grid>
                     </div>
                 }
             </Fragment>

@@ -39,83 +39,87 @@ export class FileUploadRowMobileView extends PureComponent {
 
     render() {
         const {filenameColumn, fileAccessColumn, embargoDateColumn, embargoDateClosedAccess} = this.props.locale;
-        const {index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size} = this.props;
+        const {index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size, focusOnIndex} = this.props;
 
         return (
-            <Grid container className={this.props.classes.root} direction="column" spacing={8}>
-                <Grid item xs={12}>
-                    <Grid container direction="row" alignItems="center" spacing={8}>
-                        <Grid item xs={2}>
-                            <Attachment/>
-                        </Grid>
-                        <Grid item xs={10}>
-                            <Typography variant="body1" gutterBottom noWrap>
-                                {name} ({size})
-                            </Typography>
-                            <Typography variant="caption" gutterBottom>
-                                {filenameColumn}
-                            </Typography>
+            <div style={{flexGrow: 1, padding: 8}}>
+                <Grid container className={this.props.classes.root} direction="column" spacing={8}>
+                    <Grid item xs={12}>
+                        <Grid container direction="row" alignItems="center" spacing={8}>
+                            <Grid item xs={2}>
+                                <Attachment/>
+                            </Grid>
+                            <Grid item xs={10}>
+                                <Typography variant="body1" gutterBottom noWrap>
+                                    {name} ({size})
+                                </Typography>
+                                <Typography variant="caption" gutterBottom>
+                                    {filenameColumn}
+                                </Typography>
+                            </Grid>
                         </Grid>
                     </Grid>
-                </Grid>
-                {
-                    requireOpenAccessStatus &&
-                    <Fragment>
-                        <Grid item xs={12}>
-                            <Grid container direction="row" alignItems="center" spacing={8}>
-                                <Grid item xs={2}>
-                                    <LockOutlined/>
-                                </Grid>
-                                <Grid item xs={10}>
-                                    <FileUploadAccessSelector
-                                        value={accessConditionId}
-                                        onChange={this.props.onAccessConditionChange}
-                                        disabled={disabled}
-                                        ref={`accessConditionSelector${index}`}
-                                    />
-                                    <Typography variant="caption" gutterBottom>
-                                        {fileAccessColumn}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Grid container direction="row" alignItems="center" spacing={8}>
-                                <Grid item xs={2}>
-                                    <CalendarTodayOutlined/>
-                                </Grid>
-                                <Grid item xs={9}>
-                                    {
-                                        requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
-                                        <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
-                                    }
-                                    {
-                                        requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID &&
-                                        <FileUploadEmbargoDate
-                                            value={new Date(embargoDate)}
-                                            onChange={this.props.onEmbargoDateChange}
+                    {
+                        requireOpenAccessStatus &&
+                        <Fragment>
+                            <Grid item xs={12}>
+                                <Grid container direction="row" alignItems="center" spacing={8}>
+                                    <Grid item xs={2}>
+                                        <LockOutlined/>
+                                    </Grid>
+                                    <Grid item xs={10}>
+                                        <FileUploadAccessSelector
+                                            value={accessConditionId}
+                                            onChange={this.props.onAccessConditionChange}
                                             disabled={disabled}
+                                            ref={`accessConditionSelector${index}`}
+                                            autoFocus={index === focusOnIndex}
                                         />
-                                    }
-                                    <Typography variant="caption" gutterBottom>
-                                        {embargoDateColumn}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={1}>
-                                    <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name}/>
+                                        <Typography variant="caption" gutterBottom>
+                                            {fileAccessColumn}
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
                             </Grid>
-                        </Grid>
-                    </Fragment>
-                }
-            </Grid>
+                            <Grid item xs={12}>
+                                <div style={{flexGrow: 1, padding: 4}}>
+                                    <Grid container direction="row" alignItems="center" spacing={8} justify="space-around">
+                                        <Grid item xs={2}>
+                                            <CalendarTodayOutlined/>
+                                        </Grid>
+                                        <Grid item xs={9}>
+                                            {
+                                                requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
+                                                <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
+                                            }
+                                            {
+                                                requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID &&
+                                                <FileUploadEmbargoDate
+                                                    value={new Date(embargoDate)}
+                                                    onChange={this.props.onEmbargoDateChange}
+                                                    disabled={disabled}
+                                                />
+                                            }
+                                            <Typography variant="caption" gutterBottom>
+                                                {embargoDateColumn}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={1}>
+                                            <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name}/>
+                                        </Grid>
+                                    </Grid>
+                                </div>
+                            </Grid>
+                        </Fragment>
+                    }
+                </Grid>
+            </div>
         );
     }
 }
 
 const styles = () => ({
     root: {
-        marginBottom: '16px',
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
     }
 });

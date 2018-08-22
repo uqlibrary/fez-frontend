@@ -332,7 +332,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                     >
                       <WithStyles(Typography)
                         className="FileUploadDropzoneStaticContent-heading-2"
-                        variant="subheading"
                       >
                         <Typography
                           align="inherit"
@@ -383,13 +382,13 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                           }
                           noWrap={false}
                           paragraph={false}
-                          variant="subheading"
+                          variant="body1"
                         >
-                          <h3
-                            className="MuiTypography-root-102 MuiTypography-subheading-109 FileUploadDropzoneStaticContent-heading-2"
+                          <p
+                            className="MuiTypography-root-102 MuiTypography-body1-111 FileUploadDropzoneStaticContent-heading-2"
                           >
                             Restrictions for file upload
-                          </h3>
+                          </p>
                         </Typography>
                       </WithStyles(Typography)>
                       No restrictions applies to Tests!!!

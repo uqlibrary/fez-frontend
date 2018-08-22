@@ -38,44 +38,46 @@ export class FileUploadRowDefaultView extends PureComponent {
         const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size, classes, focusOnIndex} = this.props;
 
         return (
-            <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
-                <Grid item md={6} sm={5}>
-                    <Typography variant="body1" gutterBottom noWrap>
-                        {name} ({size})
-                    </Typography>
-                </Grid>
-                {
-                    requireOpenAccessStatus &&
-                    <Fragment>
-                        <Grid item md={3} sm={4}>
-                            <FileUploadAccessSelector
-                                value={accessConditionId}
-                                onChange={this.props.onAccessConditionChange}
-                                disabled={disabled}
-                                ref={`accessConditionSelector${index}`}
-                                autoFocus={index === focusOnIndex}
-                            />
-                        </Grid>
-                        <Grid item md={2} sm={2}>
-                            {
-                                accessConditionId !== config.OPEN_ACCESS_ID &&
-                                <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
-                            }
-                            {
-                                accessConditionId === config.OPEN_ACCESS_ID &&
-                                <FileUploadEmbargoDate
-                                    value={new Date(embargoDate)}
-                                    onChange={this.props.onEmbargoDateChange}
+            <div style={{flexGrow: 1, padding: 4}}>
+                <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
+                    <Grid item md={6} sm={5}>
+                        <Typography variant="body1" gutterBottom noWrap>
+                            {name} ({size})
+                        </Typography>
+                    </Grid>
+                    {
+                        requireOpenAccessStatus &&
+                        <Fragment>
+                            <Grid item md={3} sm={4}>
+                                <FileUploadAccessSelector
+                                    value={accessConditionId}
+                                    onChange={this.props.onAccessConditionChange}
                                     disabled={disabled}
+                                    ref={`accessConditionSelector${index}`}
+                                    autoFocus={index === focusOnIndex}
                                 />
-                            }
-                        </Grid>
-                    </Fragment>
-                }
-                <Grid item xs={1} className={classes.icon}>
-                    <FileUploadRowStatus disabled={disabled} onDelete={this.props.onDelete} name={name} />
+                            </Grid>
+                            <Grid item md={2} sm={2}>
+                                {
+                                    accessConditionId !== config.OPEN_ACCESS_ID &&
+                                    <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
+                                }
+                                {
+                                    accessConditionId === config.OPEN_ACCESS_ID &&
+                                    <FileUploadEmbargoDate
+                                        value={new Date(embargoDate)}
+                                        onChange={this.props.onEmbargoDateChange}
+                                        disabled={disabled}
+                                    />
+                                }
+                            </Grid>
+                        </Fragment>
+                    }
+                    <Grid item xs={1} className={classes.icon}>
+                        <FileUploadRowStatus disabled={disabled} onDelete={this.props.onDelete} name={name} />
+                    </Grid>
                 </Grid>
-            </Grid>
+            </div>
         );
     }
 }

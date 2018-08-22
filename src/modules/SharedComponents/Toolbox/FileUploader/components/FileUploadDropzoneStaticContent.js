@@ -7,7 +7,7 @@ import {withStyles} from '@material-ui/core/styles';
 const FileUploadDropzoneStaticContent = ({locale, classes}) => (
     <Grid container className={classes.dropzone}>
         <Grid item xs={12} sm={6}>
-            <Typography variant="subheading" className={classes.heading}>
+            <Typography className={classes.heading}>
                 {locale.fileUploadRestrictionHeading}
             </Typography>
             {locale.fileUploadRestrictions}
@@ -41,6 +41,7 @@ const styles = () => ({
     },
     heading: {
         fontSize: 14,
+        fontWeight: 400,
         marginTop: '14px',
         marginBottom: '14px'
     },
