@@ -130,8 +130,9 @@ export default class ListsEditor extends Component {
                     <ListRowHeader
                         {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                         onDeleteAll={this.deleteAllItems}
-                        hideReorder={this.props.hideReorder}
-                        disabled={this.props.disabled}/>
+                        hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
+                        disabled={this.props.disabled}
+                    />
                 }
                 {renderListsRows}
             </div>

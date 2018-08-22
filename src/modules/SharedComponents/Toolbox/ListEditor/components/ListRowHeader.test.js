@@ -1,10 +1,14 @@
-import ListRowHeader from './ListRowHeader';
+import {ListRowHeader} from './ListRowHeader';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        onDeleteAll: jest.fn(),
+        disabled: false,
+        classes: {
+            center: {},
+            header: {}
+        },
         ...testProps,
-        onDeleteAll: testProps.onDeleteAll || jest.fn(),
-        disabled: testProps.disabled || false
     };
     return getElement(ListRowHeader, props, isShallow);
 }
