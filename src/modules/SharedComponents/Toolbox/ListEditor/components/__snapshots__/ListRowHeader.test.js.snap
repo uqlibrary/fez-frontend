@@ -23,7 +23,6 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     onRef={[Function]}
   />
   <WithStyles(Grid)
-    alignContent="center"
     alignItems="center"
     className={Object {}}
     container={true}
@@ -31,7 +30,8 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
   >
     <WithStyles(Grid)
       item={true}
-      xs={9}
+      sm={6}
+      xs={5}
     >
       <WithStyles(Typography)
         variant="caption"
@@ -40,9 +40,9 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={Object {}}
       item={true}
-      xs={2}
+      sm={5}
+      xs={5}
     >
       <WithStyles(Typography)
         variant="caption"
@@ -53,7 +53,8 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     <WithStyles(Grid)
       className={Object {}}
       item={true}
-      xs={1}
+      sm={1}
+      xs={2}
     >
       <WithStyles(Tooltip)
         title="Remove all items"
@@ -93,7 +94,6 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     onRef={[Function]}
   />
   <WithStyles(Grid)
-    alignContent="center"
     alignItems="center"
     className={Object {}}
     container={true}
@@ -101,7 +101,8 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
   >
     <WithStyles(Grid)
       item={true}
-      xs={9}
+      sm={6}
+      xs={5}
     >
       <WithStyles(Typography)
         variant="caption"
@@ -110,9 +111,9 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={Object {}}
       item={true}
-      xs={2}
+      sm={5}
+      xs={5}
     >
       <WithStyles(Typography)
         variant="caption"
@@ -123,7 +124,8 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     <WithStyles(Grid)
       className={Object {}}
       item={true}
-      xs={1}
+      sm={1}
+      xs={2}
     >
       <WithStyles(Tooltip)
         title="Remove all items"

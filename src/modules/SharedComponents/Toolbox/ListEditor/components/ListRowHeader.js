@@ -47,15 +47,17 @@ export class ListRowHeader extends Component {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                <Grid container alignItems="center" alignContent="center" spacing={16} className={classes.header}>
-                    <Grid item xs={hideReorder ? 11 : 9}><Typography variant="caption">{nameColumn}</Typography></Grid>
+                <Grid container alignItems="center" spacing={16} className={classes.header}>
+                    <Grid item  xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
+                        <Typography variant="caption">{nameColumn}</Typography>
+                    </Grid>
                     {
                         !hideReorder &&
-                        <Grid item xs={2} className={classes.center}>
+                        <Grid item xs={5} sm={5} className={classes.right}>
                             <Typography variant="caption">{reorderColumn}</Typography>
                         </Grid>
                     }
-                    <Grid item xs={1} className={classes.center}>
+                    <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteAll}>
                             <IconButton onClick={this.showConfirmation} disabled={disabled}>
                                 <DeleteForever/>
@@ -67,7 +69,11 @@ export class ListRowHeader extends Component {
         );
     }
 }
+
 const styles = () => ({
+    right: {
+        textAlign: 'right'
+    },
     center: {
         textAlign: 'center'
     },

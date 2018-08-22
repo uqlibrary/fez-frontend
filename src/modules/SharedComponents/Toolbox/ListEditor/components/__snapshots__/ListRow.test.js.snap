@@ -2,7 +2,12 @@
 
 exports[`ListRow renders  a row with index and item and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile listRow datalist datalist-row"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -17,92 +22,62 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="column datalist-text"
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    spacing={16}
   >
-    one
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile listReorder datalist-buttons"
-  />
-  <div
-    className="column is-narrow listDelete datalist-buttons"
-  >
-    <IconButton
-      className="itemDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Remove this item"
-      tooltipPosition="bottom-center"
-      touch={false}
+    <WithStyles(Grid)
+      item={true}
+      sm={6}
+      xs={5}
     >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Typography)
+        variant="body1"
       >
-        delete
-      </FontIcon>
-    </IconButton>
-  </div>
-</div>
-`;
-
-exports[`ListRow renders  a row with index and item set calls delete function 1`] = `
-<div
-  className="columns is-gapless is-mobile listRow datalist datalist-row"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete this item?",
-        "confirmationTitle": "Delete item",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <div
-    className="column datalist-text"
-  >
-    one
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile listReorder datalist-buttons"
-  />
-  <div
-    className="column is-narrow listDelete datalist-buttons"
-  >
-    <IconButton
-      className="itemDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Remove this item"
-      tooltipPosition="bottom-center"
-      touch={false}
+        one
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={Object {}}
+      item={true}
+      sm={5}
+      xs={5}
     >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Grid)
+        container={true}
+        justify="flex-end"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={Object {}}
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove this item"
       >
-        delete
-      </FontIcon>
-    </IconButton>
-  </div>
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(Delete) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`ListRow renders  a row with index and item set, renders reorder buttons, and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile listRow datalist datalist-row"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -117,72 +92,79 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="column datalist-text"
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    spacing={16}
   >
-    one
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile listReorder datalist-buttons"
-  >
-    <IconButton
-      className="reorderUp"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Move item up the order"
-      tooltipPosition="bottom-center"
-      touch={false}
+    <WithStyles(Grid)
+      item={true}
+      sm={6}
+      xs={5}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Typography)
+        variant="body1"
       >
-        keyboard_arrow_up
-      </FontIcon>
-    </IconButton>
-    <IconButton
-      className="reorderDown"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Move item down the order"
-      tooltipPosition="bottom-center"
-      touch={false}
+        one
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={Object {}}
+      item={true}
+      sm={5}
+      xs={5}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Grid)
+        container={true}
+        justify="flex-end"
       >
-        keyboard_arrow_down
-      </FontIcon>
-    </IconButton>
-  </div>
-  <div
-    className="column is-narrow listDelete datalist-buttons"
-  >
-    <IconButton
-      className="itemDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Remove this item"
-      tooltipPosition="bottom-center"
-      touch={false}
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            title="Move item up the order"
+          >
+            <WithStyles(IconButton)
+              disabled={false}
+              onClick={[Function]}
+            >
+              <pure(KeyboardArrowUp) />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            title="Move item down the order"
+          >
+            <WithStyles(IconButton)
+              disabled={false}
+              onClick={[Function]}
+            >
+              <pure(KeyboardArrowDown) />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={Object {}}
+      item={true}
+      sm={1}
+      xs={2}
     >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Tooltip)
+        title="Remove this item"
       >
-        delete
-      </FontIcon>
-    </IconButton>
-  </div>
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(Delete) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
