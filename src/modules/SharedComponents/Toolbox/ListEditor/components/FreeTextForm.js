@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Grid, Typography} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
+import {orange500} from '@material-ui/core/colors';
 
 export class FreeTextForm extends Component {
     static propTypes = {
@@ -66,7 +67,7 @@ export class FreeTextForm extends Component {
         return (
             <div style={{flexGrow: 1, padding: 8}}>
                 <Grid container spacing={16} display="row">
-                    <Grid item xs={12} sm={10}>
+                    <Grid item xs={12} sm={9}>
                         <TextField
                             fullWidth
                             ref="itemName"
@@ -92,7 +93,7 @@ export class FreeTextForm extends Component {
                         }
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={2}>
+                <Grid item xs={12} sm={3}>
                     <RaisedButton
                         className="is-mui-spacing-button"
                         fullWidth
@@ -106,9 +107,9 @@ export class FreeTextForm extends Component {
     }
 }
 
-const styles = (theme) => ({
+const styles = () => ({
     remindToAdd: {
-        color: theme.status.warning
+        color: orange500
     }
 });
 
