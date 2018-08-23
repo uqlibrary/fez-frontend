@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
@@ -67,6 +67,7 @@ const styles = theme => {
         },
         mainMenu: {
             outline: 'none',
+            flexGrow: 1,
             '-webkit-box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
             'box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)'
         },
@@ -74,9 +75,7 @@ const styles = theme => {
             paddingLeft: '12px',
             paddingBottom: '12px',
             fontSize: theme.typography.caption.fontSize,
-            color: theme.palette.secondary.main,
-            position: 'absolute',
-            bottom: 0
+            color: theme.palette.secondary.main
         },
         iconButton: {
             color: theme.palette.white.main
@@ -171,7 +170,7 @@ export class MenuDrawer extends Component {
                 onClose={onToggleDrawer}>
                 {
                     drawerOpen &&
-                    <Grid style={{flexGrow: 1}}>
+                    <Fragment>
                         <Grid container spacing={0} wrap={'nowrap'} alignContent={'center'} alignItems={'center'} classes={{container: classes.header}}
                         >
                             <Grid item xs={10} sm={12} zeroMinWidth>
@@ -221,7 +220,7 @@ export class MenuDrawer extends Component {
                         <div className={classes.mainMenuFooter}>
                             {txt.cricos.prefix}<ExternalLink href={txt.cricos.link} title={txt.cricos.prefix} openInNewIcon={false} >{txt.cricos.number}</ExternalLink>
                         </div>
-                    </Grid>
+                    </Fragment>
                 }
             </Drawer>
         );

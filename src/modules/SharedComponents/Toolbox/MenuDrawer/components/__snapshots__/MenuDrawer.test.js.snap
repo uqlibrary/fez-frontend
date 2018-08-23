@@ -32,13 +32,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
   open={true}
   variant="temporary"
 >
-  <WithStyles(Grid)
-    style={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-  >
+  <React.Fragment>
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
@@ -165,7 +159,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         00025B
       </ExternalLink>
     </div>
-  </WithStyles(Grid)>
+  </React.Fragment>
 </WithStyles(Drawer)>
 `;
 
@@ -183,13 +177,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   open={true}
   variant="permanent"
 >
-  <WithStyles(Grid)
-    style={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-  >
+  <React.Fragment>
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
@@ -334,7 +322,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         00025B
       </ExternalLink>
     </div>
-  </WithStyles(Grid)>
+  </React.Fragment>
 </WithStyles(Drawer)>
 `;
 
@@ -352,13 +340,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   open={true}
   variant="permanent"
 >
-  <WithStyles(Grid)
-    style={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-  >
+  <React.Fragment>
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
@@ -503,6 +485,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         00025B
       </ExternalLink>
     </div>
-  </WithStyles(Grid)>
+  </React.Fragment>
 </WithStyles(Drawer)>
 `;
