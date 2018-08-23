@@ -3,7 +3,7 @@ import {FileUploadAccessSelector} from './FileUploadAccessSelector';
 function setup(testProps, isShallow = true) {
     const props = {
         classes: {
-            selector: {}
+            selector: ''
         },
         ...testProps
     };

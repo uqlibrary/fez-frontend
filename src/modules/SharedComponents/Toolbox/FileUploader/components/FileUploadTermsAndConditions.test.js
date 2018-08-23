@@ -7,15 +7,9 @@ function setup(testProps, isShallow = true) {
         onAcceptTermsAndConditions: jest.fn(),
         acceptTermsAndConditions: 'test terms and conditions',
         classes: {
-            label: {
-                textAlign: 'justify'
-            },
-            error: {
-                color: '#e02500'
-            },
-            accepted: {
-                color: 'rgb(0, 0, 0, 0.5)'
-            }
+            label: '',
+            error: '',
+            accepted: ''
         },
         ...testProps
     };

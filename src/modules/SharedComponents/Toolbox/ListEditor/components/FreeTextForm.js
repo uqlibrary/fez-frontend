@@ -2,15 +2,18 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import {Grid, Typography} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class FreeTextForm extends Component {
+export class FreeTextForm extends Component {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
         isValid: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         errorText: PropTypes.string,
-        remindToAdd: PropTypes.bool
+        remindToAdd: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -57,43 +60,56 @@ export default class FreeTextForm extends Component {
     };
 
     render() {
+        const {classes, locale, errorText} = this.props;
+        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
+
         return (
-            <div className="columns">
-                <div className="column">
-                    <TextField
-                        fullWidth
-                        ref="itemName"
-                        floatingLabelText={this.props.locale.inputFieldLabel}
-                        hintText={this.props.locale.inputFieldHint}
-                        value={this.state.itemName}
-                        onChange={this.onNameChanged}
-                        onKeyPress={this.addItem}
-                        errorText={this.props.isValid(this.state.itemName) || this.props.errorText
-                            ? `${this.props.errorText || ''} ${this.props.isValid(this.state.itemName)}`
-                            : null}
-                        disabled={this.props.disabled}
-                        className="mui-long-labels-fix"
-                    />
-                    {
-                        this.props.remindToAdd &&
-                        this.props.locale.remindToAdd &&
-                        this.state.itemName.length !== 0 &&
-                        !this.props.isValid(this.state.itemName) &&
-                        <div className="validationWarningMessage">
-                            {this.props.locale.remindToAdd}
-                        </div>
-                    }
-                </div>
-                <div className="column is-narrow">
+            <div style={{flexGrow: 1, padding: 8}}>
+                <Grid container spacing={16} display="row">
+                    <Grid item xs={12} sm={10}>
+                        <TextField
+                            fullWidth
+                            ref="itemName"
+                            floatingLabelText={inputFieldLabel}
+                            hintText={inputFieldHint}
+                            value={this.state.itemName}
+                            onChange={this.onNameChanged}
+                            onKeyPress={this.addItem}
+                            errorText={this.props.isValid(this.state.itemName) || errorText
+                                ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
+                                : null}
+                            disabled={this.props.disabled}
+                            className="mui-long-labels-fix"
+                        />
+                        {
+                            this.props.remindToAdd &&
+                            remindToAdd &&
+                            this.state.itemName.length !== 0 &&
+                            !this.props.isValid(this.state.itemName) &&
+                            <Typography variant="caption" className={classes.remindToAdd}>
+                                {remindToAdd}
+                            </Typography>
+                        }
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} sm={2}>
                     <RaisedButton
                         className="is-mui-spacing-button"
                         fullWidth
                         primary
-                        label={this.props.locale.addButtonLabel}
+                        label={addButtonLabel}
                         disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
                         onClick={this.addItem}/>
-                </div>
+                </Grid>
             </div>
         );
     }
 }
+
+const styles = (theme) => ({
+    remindToAdd: {
+        color: theme.status.warning
+    }
+});
+
+export default withStyles(styles)(FreeTextForm);

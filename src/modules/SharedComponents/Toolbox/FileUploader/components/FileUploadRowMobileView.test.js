@@ -10,9 +10,7 @@ function setup(testProps, isShallow = true) {
         requireOpenAccessStatus: true,
         disabled: false,
         classes: {
-            icon: {
-                textAlign: 'center'
-            }
+            icon: ''
         },
         onDelete: jest.fn(),
         onEmbargoDateChange: jest.fn(),

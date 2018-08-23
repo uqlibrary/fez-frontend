@@ -5,8 +5,8 @@ function setup(testProps, isShallow = true) {
         onDeleteAll: jest.fn(),
         disabled: false,
         classes: {
-            center: {},
-            header: {}
+            center: '',
+            header: ''
         },
         ...testProps,
     };

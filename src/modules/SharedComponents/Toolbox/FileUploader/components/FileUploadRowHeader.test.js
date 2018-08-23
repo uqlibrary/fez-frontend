@@ -17,9 +17,7 @@ function setup(testProps, isShallow = true) {
     const props = {
         onDeleteAll: testProps.onDeleteAll || jest.fn(),
         classes: {
-            icon: {
-                textAlign: 'center'
-            }
+            icon: ''
         },
         ...testProps
     };
