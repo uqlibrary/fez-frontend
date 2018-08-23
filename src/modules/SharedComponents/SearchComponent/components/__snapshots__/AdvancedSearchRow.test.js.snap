@@ -107,28 +107,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book title for chapters"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -336,6 +314,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           }
         }
         value="rek_conference_name"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_book_title"
+        primaryText="Book title for chapters"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
       />
       <MenuItem
         anchorOrigin={
@@ -543,28 +543,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book title for chapters"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -772,6 +750,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_conference_name"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_book_title"
+        primaryText="Book title for chapters"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
       />
       <MenuItem
         anchorOrigin={
@@ -991,28 +991,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book title for chapters"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -1220,6 +1198,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_conference_name"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_book_title"
+        primaryText="Book title for chapters"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
       />
       <MenuItem
         anchorOrigin={
