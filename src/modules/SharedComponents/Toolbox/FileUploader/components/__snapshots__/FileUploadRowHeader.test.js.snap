@@ -55,9 +55,7 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
       <FileUploadRowHeader
         classes={
           Object {
-            "icon": Object {
-              "textAlign": "center",
-            },
+            "icon": "",
           }
         }
         locale={
@@ -1186,22 +1184,14 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                             </Grid>
                           </WithStyles(Grid)>
                           <WithStyles(Grid)
-                            className={
-                              Object {
-                                "textAlign": "center",
-                              }
-                            }
+                            className=""
                             item={true}
                             xs={1}
                           >
                             <Grid
                               alignContent="stretch"
                               alignItems="stretch"
-                              className={
-                                Object {
-                                  "textAlign": "center",
-                                }
-                              }
+                              className=""
                               classes={
                                 Object {
                                   "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
@@ -1318,7 +1308,7 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                               zeroMinWidth={false}
                             >
                               <div
-                                className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 textAlign"
+                                className="MuiGrid-item-2 MuiGrid-grid-xs-1-30"
                               >
                                 <WithStyles(Tooltip)
                                   title="Remove all files from the upload queue"
@@ -2131,9 +2121,7 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
       <FileUploadRowHeader
         classes={
           Object {
-            "icon": Object {
-              "textAlign": "center",
-            },
+            "icon": "",
           }
         }
         locale={
@@ -3262,22 +3250,14 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                             </Grid>
                           </WithStyles(Grid)>
                           <WithStyles(Grid)
-                            className={
-                              Object {
-                                "textAlign": "center",
-                              }
-                            }
+                            className=""
                             item={true}
                             xs={1}
                           >
                             <Grid
                               alignContent="stretch"
                               alignItems="stretch"
-                              className={
-                                Object {
-                                  "textAlign": "center",
-                                }
-                              }
+                              className=""
                               classes={
                                 Object {
                                   "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
@@ -3394,7 +3374,7 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                               zeroMinWidth={false}
                             >
                               <div
-                                className="MuiGrid-item-2 MuiGrid-grid-xs-1-30 textAlign"
+                                className="MuiGrid-item-2 MuiGrid-grid-xs-1-30"
                               >
                                 <WithStyles(Tooltip)
                                   title="Remove all files from the upload queue"
@@ -4236,11 +4216,7 @@ exports[`Component FileUploadRowHeader should render with access condition and e
         </WithStyles(Typography)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        className={
-          Object {
-            "textAlign": "center",
-          }
-        }
+        className=""
         item={true}
         xs={1}
       >
@@ -4339,11 +4315,7 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        className={
-          Object {
-            "textAlign": "center",
-          }
-        }
+        className=""
         item={true}
         xs={1}
       >
@@ -4446,11 +4418,7 @@ exports[`Component FileUploadRowHeader should render without access condition ev
         </WithStyles(Typography)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        className={
-          Object {
-            "textAlign": "center",
-          }
-        }
+        className=""
         item={true}
         xs={1}
       >
