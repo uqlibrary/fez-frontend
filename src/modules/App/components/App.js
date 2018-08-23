@@ -26,10 +26,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/icons/Menu';
-import Close from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class App extends PureComponent {
+const styles = {};
+
+export class App extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -153,8 +156,8 @@ export default class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 330} : {};
-
+        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 280} : {};
+        const titleStyle = this.state.docked ? {paddingLeft: 200} : {paddingLeft: 0};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
@@ -191,46 +194,47 @@ export default class App extends PureComponent {
             isHdrStudent: isHdrStudent
         });
         return (
-            <div className="layout-fill align-stretch">
+            <div className="layout-fill">
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar"
                     color={'primary'}
                     position={'fixed'}>
-                    <Toolbar>
+                    <Toolbar style={{height: '70px'}}>
                         <Grid container spacing={8}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
                             justify="flex-start">
                             {/* Menu/Close Button */}
-                            <Grid item xs={'auto'} zeroMinWidth>
-                                <Tooltip title={locale.global.mainNavButton.tooltip}
-                                    placement="bottom-end"
-                                    TransitionComponent={Fade}>
-                                    <IconButton
-                                        aria-label={locale.global.mainNavButton.aria}
-                                        style={{marginLeft: '-12px', marginRight: '12px'}}
-                                        onClick={this.toggleDrawer}>
-                                        {this.state.docked || !this.state.menuDrawerOpen ?
+                            {!this.state.docked &&
+                                <Grid item xs={'auto'} zeroMinWidth>
+                                    <Tooltip title={locale.global.mainNavButton.tooltip}
+                                        placement="bottom-end"
+                                        TransitionComponent={Fade}>
+                                        <IconButton
+                                            aria-label={locale.global.mainNavButton.aria}
+                                            style={{marginLeft: '-12px', marginRight: '12px'}}
+                                            onClick={this.toggleDrawer}>
                                             <Menu style={{color: 'white'}}/>
-                                            : <Close style={{color: 'white'}}/>
-                                        }
-                                    </IconButton>
-                                </Tooltip>
-                            </Grid>
-                            <Grid item md={'auto'}>
-                                <img src={'/src/images/uq-logo-white-minimal.svg'}/>
-                            </Grid>
+                                        </IconButton>
+                                    </Tooltip>
+                                </Grid>
+                            }
+                            <Hidden smDown lgUp>
+                                <Grid item>
+                                    <img src={'/src/images/uq-logo-white-minimal.svg'} style={{height: '66px'}} alt={locale.global.logo.label} />
+                                </Grid>
+                            </Hidden>
                             {/* Title */}
                             <Grid item style={{flexGrow: 1}}>
-                                <Typography variant="title" noWrap>
+                                <Typography variant="title" noWrap style={titleStyle}>
                                     {locale.global.appTitle}
                                 </Typography>
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item xs={'auto'} md={4} zeroMinWidth>
+                                <Grid item md={4} zeroMinWidth>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
@@ -303,3 +307,5 @@ export default class App extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(App);

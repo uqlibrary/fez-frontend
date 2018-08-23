@@ -2,7 +2,7 @@
 
 exports[`Application component should render alert if user is not fez author 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -166,7 +166,13 @@ exports[`Application component should render alert if user is not fez author 1`]
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -205,14 +211,33 @@ exports[`Application component should render alert if user is not fez author 1`]
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -223,6 +248,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -236,13 +266,13 @@ exports[`Application component should render alert if user is not fez author 1`]
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -256,7 +286,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -267,7 +297,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -567,14 +597,14 @@ exports[`Application component should render alert if user is not fez author 1`]
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -738,7 +768,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -777,14 +813,33 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -795,6 +850,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -808,13 +868,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -828,7 +888,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -839,7 +899,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1123,14 +1183,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render app for HDR without ORCID ID 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1181,7 +1241,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -1220,14 +1286,33 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -1238,6 +1323,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -1251,13 +1341,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -1271,7 +1361,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -1282,7 +1372,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1414,14 +1504,14 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1585,7 +1675,13 @@ exports[`Application component should render app for account with fez author wit
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -1624,14 +1720,33 @@ exports[`Application component should render app for account with fez author wit
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -1642,6 +1757,11 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -1655,13 +1775,13 @@ exports[`Application component should render app for account with fez author wit
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -1675,7 +1795,7 @@ exports[`Application component should render app for account with fez author wit
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -1686,7 +1806,7 @@ exports[`Application component should render app for account with fez author wit
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1970,14 +2090,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2141,7 +2261,13 @@ exports[`Application component should render app for account with fez author wit
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -2180,14 +2306,33 @@ exports[`Application component should render app for account with fez author wit
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -2198,6 +2343,11 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -2211,13 +2361,13 @@ exports[`Application component should render app for account with fez author wit
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -2231,7 +2381,7 @@ exports[`Application component should render app for account with fez author wit
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -2242,7 +2392,7 @@ exports[`Application component should render app for account with fez author wit
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -2544,14 +2694,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2715,7 +2865,13 @@ exports[`Application component should render app for account with fez author wit
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -2754,14 +2910,33 @@ exports[`Application component should render app for account with fez author wit
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -2772,6 +2947,11 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -2785,6 +2965,7 @@ exports[`Application component should render app for account with fez author wit
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -2793,7 +2974,7 @@ exports[`Application component should render app for account with fez author wit
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -3012,14 +3193,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3183,7 +3364,13 @@ exports[`Application component should render application with routing for the us
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -3222,14 +3409,33 @@ exports[`Application component should render application with routing for the us
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -3240,6 +3446,11 @@ exports[`Application component should render application with routing for the us
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -3253,13 +3464,13 @@ exports[`Application component should render application with routing for the us
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -3273,7 +3484,7 @@ exports[`Application component should render application with routing for the us
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -3284,7 +3495,7 @@ exports[`Application component should render application with routing for the us
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -3385,14 +3596,14 @@ exports[`Application component should render application with routing for the us
       />
     </div>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
 
 exports[`Application component should render for anon user 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3439,7 +3650,13 @@ exports[`Application component should render for anon user 1`] = `
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -3478,14 +3695,33 @@ exports[`Application component should render for anon user 1`] = `
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -3496,6 +3732,11 @@ exports[`Application component should render for anon user 1`] = `
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -3509,13 +3750,13 @@ exports[`Application component should render for anon user 1`] = `
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           md={4}
-          xs="auto"
           zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
@@ -3529,7 +3770,7 @@ exports[`Application component should render for anon user 1`] = `
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log in to eSpace"
             isAuthorizedUser={false}
             onClick={[Function]}
@@ -3540,7 +3781,7 @@ exports[`Application component should render for anon user 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -3642,7 +3883,7 @@ exports[`Application component should render for anon user 1`] = `
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;
@@ -3662,7 +3903,7 @@ exports[`Application component should render loading screen while account is loa
 
 exports[`Application component should render thesis submission for HDR without menu 1`] = `
 <div
-  className="layout-fill align-stretch"
+  className="layout-fill"
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3713,7 +3954,13 @@ exports[`Application component should render thesis submission for HDR without m
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
       <WithStyles(Grid)
         alignItems="center"
         container={true}
@@ -3752,14 +3999,33 @@ exports[`Application component should render thesis submission for HDR without m
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md="auto"
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
         >
-          <img
-            src="/src/images/uq-logo-white-minimal.svg"
-          />
-        </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="/src/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
@@ -3770,6 +4036,11 @@ exports[`Application component should render thesis submission for HDR without m
         >
           <WithStyles(Typography)
             noWrap={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
             variant="title"
           >
             <a
@@ -3783,6 +4054,7 @@ exports[`Application component should render thesis submission for HDR without m
               title="Click to return to the eSpace home page"
             >
               UQ eSpace 
+              eSpace
             </a>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -3791,7 +4063,7 @@ exports[`Application component should render thesis submission for HDR without m
           xs="auto"
           zeroMinWidth={true}
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
@@ -3866,7 +4138,7 @@ exports[`Application component should render thesis submission for HDR without m
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
 </div>
 `;

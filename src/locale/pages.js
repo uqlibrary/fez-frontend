@@ -49,17 +49,15 @@ export default {
                         Email: <a href="mailto:m.marrington@library.uq.edu.au">m.marrington@library.uq.edu.au</a><br/>
                     </p>
                     <h3>About UQ eSpace</h3>
-                    <p>
-                        The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by:
-                        <ul>
-                            <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
-                            <li>Allowing researchers to deposit publications, datasets and open access materials and to view publication metrics</li>
-                            <li>Maintaining a complete and accurate record of all UQ research publications and research data sets that feeds into central UQ systems including UQ Researchers and the Academic Portal</li>
-                            <li>Enabling government reporting such as Australian Research Council’s Excellence in Research for Australia and the Engagement and Impact Assessment</li>
-                            <li>Supporting the deposit of open access publications to make UQ research globally accessible</li>
-                            <li>Preserving and making digitised materials accessible to the world including HDR theses, photographs, audio materials, videos, manuscripts and other original works.</li>
-                        </ul>
-                    </p>
+                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by:
+                    <ul>
+                        <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
+                        <li>Allowing researchers to deposit publications, datasets and open access materials and to view publication metrics</li>
+                        <li>Maintaining a complete and accurate record of all UQ research publications and research data sets that feeds into central UQ systems including UQ Researchers and the Academic Portal</li>
+                        <li>Enabling government reporting such as Australian Research Council’s Excellence in Research for Australia and the Engagement and Impact Assessment</li>
+                        <li>Supporting the deposit of open access publications to make UQ research globally accessible</li>
+                        <li>Preserving and making digitised materials accessible to the world including HDR theses, photographs, audio materials, videos, manuscripts and other original works.</li>
+                    </ul>
                 </StandardCard>
             )
         },

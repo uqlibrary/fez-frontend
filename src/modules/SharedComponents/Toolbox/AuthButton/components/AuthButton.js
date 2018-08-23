@@ -1,42 +1,45 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Person from '@material-ui/icons/Person';
 import PersonOutline from '@material-ui/icons/PersonOutline';
 import Fade from '@material-ui/core/Fade';
+import {withStyles} from '@material-ui/core/styles';
 
-const styles = {
-    authButton: {
-        icons: {
-            color: 'white',
-        }
+const styles = theme => ({
+    iconButton: {
+        color: theme.palette.white.main
     }
-};
+});
 
-const AuthButton = ({ariaLabel, isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', onClick}) => {
-    return (
-        <div className="auth-button-wrapper">
-            <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText} placement="bottom-start" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
-                <IconButton
-                    aria-label={ariaLabel}
-                    onClick={onClick}
-                    className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}>
-                    {isAuthorizedUser ? <Person style={styles.authButton.icons} /> : <PersonOutline style={styles.authButton.icons} />}
-                </IconButton>
-            </Tooltip>
-        </div>
-    );
-};
+export class AuthButton extends Component {
+    static propTypes = {
+        isAuthorizedUser: PropTypes.bool.isRequired,
+        signOutTooltipText: PropTypes.string,
+        ariaLabel: PropTypes.string,
+        signInTooltipText: PropTypes.string,
+        hoveredStyle: PropTypes.object,
+        onClick: PropTypes.func,
+        classes: PropTypes.object
+    };
 
-AuthButton.propTypes = {
-    isAuthorizedUser: PropTypes.bool.isRequired,
-    signOutTooltipText: PropTypes.string,
-    ariaLabel: PropTypes.string,
-    signInTooltipText: PropTypes.string,
-    hoveredStyle: PropTypes.object,
-    onClick: PropTypes.func
-};
+    render() {
+        const {classes, isAuthorizedUser, signOutTooltipText, signInTooltipText, ariaLabel, onClick} = this.props;
+        return (
+            <div className="auth-button-wrapper">
+                <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText} placement="bottom-start" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                    <IconButton
+                        aria-label={ariaLabel}
+                        onClick={onClick}
+                        className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}>
+                        {isAuthorizedUser ? <Person className={classes.iconButton} /> : <PersonOutline className={classes.iconButton} />}
+                    </IconButton>
+                </Tooltip>
+            </div>
+        );
+    }
+}
 
-export default AuthButton;
+export default withStyles(styles, { withTheme: true })(AuthButton);
 

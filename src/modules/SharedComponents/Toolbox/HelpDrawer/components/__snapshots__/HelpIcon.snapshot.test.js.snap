@@ -1,21 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HelpIcon snapshots tests renders help icon 1`] = `
-<IconButton
-  disableTouchRipple={false}
-  disabled={false}
-  iconStyle={Object {}}
-  onClick={[Function]}
-  tooltip="This is a tooltip"
-  tooltipPosition="bottom-left"
-  touch={false}
+<WithStyles(Tooltip)
+  TransitionComponent={[Function]}
+  placement="bottom-end"
+  title="This is a tooltip"
 >
-  <FontIcon
-    className="material-icons helpIcon"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+  <WithStyles(IconButton)
+    onClick={[Function]}
   >
-    help_outline
-  </FontIcon>
-</IconButton>
+    <pure(HelpOutline) />
+  </WithStyles(IconButton)>
+</WithStyles(Tooltip)>
 `;
