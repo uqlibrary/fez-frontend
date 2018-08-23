@@ -36,22 +36,22 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
         value=""
       />
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={2}
-    xs={12}
-  >
-    <RaisedButton
-      className="is-mui-spacing-button"
-      disabled={true}
-      fullWidth={true}
-      label="Add"
-      labelPosition="after"
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <RaisedButton
+        className="is-mui-spacing-button"
+        disabled={true}
+        fullWidth={true}
+        label="Add"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </div>
 `;
@@ -92,22 +92,22 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
         value=""
       />
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={2}
-    xs={12}
-  >
-    <RaisedButton
-      className="is-mui-spacing-button"
-      disabled={true}
-      fullWidth={true}
-      label="Add"
-      labelPosition="after"
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <RaisedButton
+        className="is-mui-spacing-button"
+        disabled={true}
+        fullWidth={true}
+        label="Add"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </div>
 `;
@@ -152,22 +152,22 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
         reminder text
       </WithStyles(Typography)>
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={2}
-    xs={12}
-  >
-    <RaisedButton
-      className="is-mui-spacing-button"
-      disabled={true}
-      fullWidth={true}
-      label="Add"
-      labelPosition="after"
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <RaisedButton
+        className="is-mui-spacing-button"
+        disabled={true}
+        fullWidth={true}
+        label="Add"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </div>
 `;

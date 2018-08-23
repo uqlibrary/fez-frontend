@@ -4,7 +4,6 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Grid, Typography} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
-import {orange500} from '@material-ui/core/colors';
 
 export class FreeTextForm extends Component {
     static propTypes = {
@@ -67,7 +66,7 @@ export class FreeTextForm extends Component {
         return (
             <div style={{flexGrow: 1, padding: 8}}>
                 <Grid container spacing={16} display="row">
-                    <Grid item xs={12} sm={9}>
+                    <Grid item xs={12} sm={10}>
                         <TextField
                             fullWidth
                             ref="itemName"
@@ -92,15 +91,15 @@ export class FreeTextForm extends Component {
                             </Typography>
                         }
                     </Grid>
-                </Grid>
-                <Grid item xs={12} sm={3}>
-                    <RaisedButton
-                        className="is-mui-spacing-button"
-                        fullWidth
-                        primary
-                        label={addButtonLabel}
-                        disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
-                        onClick={this.addItem}/>
+                    <Grid item xs={12} sm={2}>
+                        <RaisedButton
+                            className="is-mui-spacing-button"
+                            fullWidth
+                            primary
+                            label={addButtonLabel}
+                            disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                            onClick={this.addItem}/>
+                    </Grid>
                 </Grid>
             </div>
         );
@@ -109,7 +108,7 @@ export class FreeTextForm extends Component {
 
 const styles = () => ({
     remindToAdd: {
-        color: orange500
+        color: '#f06f0d'
     }
 });
 
