@@ -19,7 +19,6 @@ import nested from 'jss-nested';
 jss.use(nested());
 
 const styles = theme => {
-    console.log(theme);
     return {
         paper: {
             width: 260,
@@ -68,8 +67,6 @@ const styles = theme => {
         mainMenu: {
             outline: 'none',
             flexGrow: 1,
-            '-webkit-box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
-            'box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)'
         },
         mainMenuFooter: {
             paddingLeft: '12px',
