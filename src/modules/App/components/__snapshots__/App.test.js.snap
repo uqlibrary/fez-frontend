@@ -229,7 +229,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -831,7 +831,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -1304,7 +1304,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -1738,7 +1738,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -2324,7 +2324,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -2928,7 +2928,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -3427,7 +3427,7 @@ exports[`Application component should render application with routing for the us
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -3713,7 +3713,7 @@ exports[`Application component should render for anon user 1`] = `
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
@@ -4017,7 +4017,7 @@ exports[`Application component should render thesis submission for HDR without m
           >
             <img
               alt="University of Queensland"
-              src="/src/images/uq-logo-white-minimal.svg"
+              src="/public/images/uq-logo-white-minimal.svg"
               style={
                 Object {
                   "height": "66px",
