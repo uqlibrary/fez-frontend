@@ -852,16 +852,6 @@ export default {
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a title to search for'
                     },
-                    'rek_book_title': {
-                        order: 2.5,
-                        map: 'Book title',
-                        title: 'Book title for chapters',
-                        combiner: 'contains',
-                        type: 'TextField',
-                        hint: 'Add a book title',
-                        validation: ['required', 'maxLength255'],
-                        ariaLabel: 'Type a book title to search for'
-                    },
                     'rek_pid': {
                         order: 9,
                         map: 'PID',
@@ -921,6 +911,16 @@ export default {
                         hint: 'Add a conference name',
                         validation: ['required', 'maxLength500'],
                         ariaLabel: 'Type a conference name to search for'
+                    },
+                    'rek_book_title': {
+                        order: 12.5,
+                        map: 'Book title',
+                        title: 'Book title for chapters',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a book title to search for'
                     },
                     'rek_doi': {
                         order: 8,
