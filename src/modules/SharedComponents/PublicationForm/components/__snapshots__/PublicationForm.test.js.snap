@@ -3505,9 +3505,7 @@ exports[`Component PublicationForm should render component with all fields disab
       />
     </Field>
   </StandardCard>
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Creating new publication is in progress."
     showLoader={true}
     title="Saving"

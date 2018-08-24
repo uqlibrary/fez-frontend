@@ -262,12 +262,10 @@ exports[`Files Component  should render cultural message 1`] = `
     className=""
     title="Files"
   >
-    <Alert
+    <WithStyles(Alert)
       allowDismiss={true}
       dismissAction={[MockFunction]}
-      dismissTitle="Click to dismiss this alert"
       message="hello"
-      showLoader={false}
       type="info"
     />
     <div

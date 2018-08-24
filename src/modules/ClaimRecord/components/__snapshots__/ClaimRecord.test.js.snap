@@ -11440,11 +11440,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <div>
-              <Alert
-                allowDismiss={false}
-                dismissTitle="Click to dismiss this alert"
+              <WithStyles(Alert)
                 message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
-                showLoader={false}
                 title="File upload and/or edits/changes/comments post failed"
                 type="warning"
               />

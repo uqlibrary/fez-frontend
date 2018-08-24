@@ -21,11 +21,8 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
-    showLoader={false}
     title="Error"
     type="error_outline"
   />

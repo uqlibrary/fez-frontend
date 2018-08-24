@@ -49,11 +49,16 @@ export const mui1theme = createMuiTheme({
         },
         white: {
             main: '#FFFFFF'
+        },
+        warning: {
+            light: '#ff9a57',
+            main: '#f06f0d',
+            dark: '#994708',
         }
     },
     typography: {
-        fontWeightLight: 100,
-        fontWeightRegular: 200,
-        fontWeightMedium: 300,
+        fontWeightLight: 200,
+        fontWeightRegular: 300,
+        fontWeightMedium: 400,
     }
 });
