@@ -77,7 +77,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         </WithStyles(Grid)>
       </Hidden>
     </WithStyles(Grid)>
-    <List
+    <WithStyles(List)
+      component="nav"
       id="mainMenu"
       tabIndex={-1}
     >
@@ -85,63 +86,48 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         className="menu-item-container"
         key="menu_item_0"
       >
-        <ListItem
-          autoGenerateNestedIndicator={true}
-          containerElement="span"
-          disableKeyboardFocus={false}
-          disabled={false}
-          initiallyOpen={false}
-          insetChildren={false}
+        <WithStyles(ListItem)
+          button={true}
           leftIcon={null}
-          nestedItems={Array []}
-          nestedLevel={0}
           onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onNestedListToggle={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          open={null}
-          primaryText="Primary text 0"
-          primaryTogglesNestedList={false}
-          secondaryText="secondary text 0"
-          secondaryTextLines={1}
-        />
+        >
+          <WithStyles(ListItemText)
+            classes={
+              Object {
+                "primary": undefined,
+                "secondary": undefined,
+              }
+            }
+            primary="Primary text 0"
+            secondary="secondary text 0"
+          />
+        </WithStyles(ListItem)>
       </span>
-      <Divider
-        inset={false}
+      <WithStyles(Divider)
         key="menu_item_1"
       />
       <span
         className="menu-item-container"
         key="menu_item_2"
       >
-        <ListItem
-          autoGenerateNestedIndicator={true}
-          containerElement="span"
-          disableKeyboardFocus={false}
-          disabled={false}
-          initiallyOpen={false}
-          insetChildren={false}
+        <WithStyles(ListItem)
+          button={true}
           leftIcon={null}
-          nestedItems={Array []}
-          nestedLevel={0}
           onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onNestedListToggle={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          open={null}
-          primaryText="Primary text 1"
-          primaryTogglesNestedList={false}
-          secondaryText="secondary text 1"
-          secondaryTextLines={1}
-        />
+        >
+          <WithStyles(ListItemText)
+            classes={
+              Object {
+                "primary": undefined,
+                "secondary": undefined,
+              }
+            }
+            primary="Primary text 1"
+            secondary="secondary text 1"
+          />
+        </WithStyles(ListItem)>
       </span>
-    </List>
+    </WithStyles(List)>
     <div
       id="afterMenuDrawer"
       tabIndex={-1}
@@ -222,7 +208,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         </WithStyles(Grid)>
       </Hidden>
     </WithStyles(Grid)>
-    <List
+    <WithStyles(List)
+      component="nav"
       id="mainMenu"
       tabIndex={-1}
     >
@@ -248,63 +235,48 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         className="menu-item-container"
         key="menu_item_0"
       >
-        <ListItem
-          autoGenerateNestedIndicator={true}
-          containerElement="span"
-          disableKeyboardFocus={false}
-          disabled={false}
-          initiallyOpen={false}
-          insetChildren={false}
+        <WithStyles(ListItem)
+          button={true}
           leftIcon={null}
-          nestedItems={Array []}
-          nestedLevel={0}
           onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onNestedListToggle={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          open={null}
-          primaryText="Primary text 0"
-          primaryTogglesNestedList={false}
-          secondaryText="secondary text 0"
-          secondaryTextLines={1}
-        />
+        >
+          <WithStyles(ListItemText)
+            classes={
+              Object {
+                "primary": undefined,
+                "secondary": undefined,
+              }
+            }
+            primary="Primary text 0"
+            secondary="secondary text 0"
+          />
+        </WithStyles(ListItem)>
       </span>
-      <Divider
-        inset={false}
+      <WithStyles(Divider)
         key="menu_item_1"
       />
       <span
         className="menu-item-container"
         key="menu_item_2"
       >
-        <ListItem
-          autoGenerateNestedIndicator={true}
-          containerElement="span"
-          disableKeyboardFocus={false}
-          disabled={false}
-          initiallyOpen={false}
-          insetChildren={false}
+        <WithStyles(ListItem)
+          button={true}
           leftIcon={null}
-          nestedItems={Array []}
-          nestedLevel={0}
           onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onNestedListToggle={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          open={null}
-          primaryText="Primary text 1"
-          primaryTogglesNestedList={false}
-          secondaryText="secondary text 1"
-          secondaryTextLines={1}
-        />
+        >
+          <WithStyles(ListItemText)
+            classes={
+              Object {
+                "primary": undefined,
+                "secondary": undefined,
+              }
+            }
+            primary="Primary text 1"
+            secondary="secondary text 1"
+          />
+        </WithStyles(ListItem)>
       </span>
-    </List>
+    </WithStyles(List)>
     <div
       id="afterMenuDrawer"
       tabIndex={-1}
@@ -385,7 +357,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         </WithStyles(Grid)>
       </Hidden>
     </WithStyles(Grid)>
-    <List
+    <WithStyles(List)
+      component="nav"
       id="mainMenu"
       tabIndex={-1}
     >
@@ -411,63 +384,48 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         className="menu-item-container"
         key="menu_item_0"
       >
-        <ListItem
-          autoGenerateNestedIndicator={true}
-          containerElement="span"
-          disableKeyboardFocus={false}
-          disabled={false}
-          initiallyOpen={false}
-          insetChildren={false}
+        <WithStyles(ListItem)
+          button={true}
           leftIcon={null}
-          nestedItems={Array []}
-          nestedLevel={0}
           onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onNestedListToggle={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          open={null}
-          primaryText="Primary text 0"
-          primaryTogglesNestedList={false}
-          secondaryText="secondary text 0"
-          secondaryTextLines={1}
-        />
+        >
+          <WithStyles(ListItemText)
+            classes={
+              Object {
+                "primary": undefined,
+                "secondary": undefined,
+              }
+            }
+            primary="Primary text 0"
+            secondary="secondary text 0"
+          />
+        </WithStyles(ListItem)>
       </span>
-      <Divider
-        inset={false}
+      <WithStyles(Divider)
         key="menu_item_1"
       />
       <span
         className="menu-item-container"
         key="menu_item_2"
       >
-        <ListItem
-          autoGenerateNestedIndicator={true}
-          containerElement="span"
-          disableKeyboardFocus={false}
-          disabled={false}
-          initiallyOpen={false}
-          insetChildren={false}
+        <WithStyles(ListItem)
+          button={true}
           leftIcon={null}
-          nestedItems={Array []}
-          nestedLevel={0}
           onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onNestedListToggle={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          open={null}
-          primaryText="Primary text 1"
-          primaryTogglesNestedList={false}
-          secondaryText="secondary text 1"
-          secondaryTextLines={1}
-        />
+        >
+          <WithStyles(ListItemText)
+            classes={
+              Object {
+                "primary": undefined,
+                "secondary": undefined,
+              }
+            }
+            primary="Primary text 1"
+            secondary="secondary text 1"
+          />
+        </WithStyles(ListItem)>
       </span>
-    </List>
+    </WithStyles(List)>
     <div
       id="afterMenuDrawer"
       tabIndex={-1}

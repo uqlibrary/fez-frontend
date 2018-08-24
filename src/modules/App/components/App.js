@@ -30,7 +30,30 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import {withStyles} from '@material-ui/core/styles';
 
-const styles = {};
+import jss from 'jss';
+import nested from 'jss-nested';
+// import global from 'jss-global';
+jss.use(nested());
+
+const styles = theme => ({
+    layoutCard: {
+        // border: '5px dashed red',
+        maxWidth: '1200px',
+        margin: '24px auto',
+        width: '90%',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 auto 24px auto'
+        },
+    },
+    layoutFill: {
+        // border: '5px dashed green',
+        margin: 0,
+        padding: 0,
+        maxHeight: '100%',
+        height: '100%'
+    }
+});
 
 export class App extends PureComponent {
     static propTypes = {
@@ -41,7 +64,8 @@ export class App extends PureComponent {
         isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
     static childContextTypes = {
         isMobile: PropTypes.bool,
@@ -129,9 +153,10 @@ export class App extends PureComponent {
     };
 
     render() {
+        const {classes} = this.props;
         if (this.props.accountLoading) {
             return (
-                <div className="layout-fill">
+                <div className={classes.layoutFill}>
                     <AppLoader
                         title={locale.global.title}
                         logoImage={locale.global.logo.image}
@@ -194,7 +219,7 @@ export class App extends PureComponent {
             isHdrStudent: isHdrStudent
         });
         return (
-            <div className="layout-fill">
+            <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar"
@@ -276,16 +301,16 @@ export class App extends PureComponent {
                     />
                     {
                         userStatusAlert &&
-                        <div className="dashAlert">
-                            <div className="layout-card">
+                        <Grid container alignContent={'center'} justify={'center'} alignItems={'center'} >
+                            <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />
-                            </div>
-                        </div>
+                            </Grid>
+                        </Grid>
                     }
                     <AppAlertContainer/>
                     {
                         isAuthorLoading &&
-                        <div className="isLoading is-centered">
+                        <div style={{margin: '0 auto'}}>
                             <InlineLoader message={locale.global.loadingUserAccount}/>
                         </div>
                     }
@@ -303,7 +328,7 @@ export class App extends PureComponent {
                 </div>
                 <HelpDrawer/>
                 <OfflineSnackbar/>
-            </div>
+            </Grid>
         );
     }
 }

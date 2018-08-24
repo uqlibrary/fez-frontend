@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component GoogleScholar  should display submission error if saving failed 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Google Scholar identifier"
 >
   <form
@@ -123,12 +122,11 @@ exports[`Component GoogleScholar  should display submission error if saving fail
       </div>
     </div>
   </form>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component GoogleScholar  should display submission in progress alert 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Google Scholar identifier"
 >
   <form
@@ -249,12 +247,11 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
       </div>
     </div>
   </form>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component GoogleScholar  should render form if author doesn't have google scholar id 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Google Scholar identifier"
 >
   <form
@@ -367,12 +364,11 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
       </div>
     </div>
   </form>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component GoogleScholar  should render form if author has google scholar id 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Google Scholar identifier"
 >
   <form
@@ -482,7 +478,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
       </div>
     </div>
   </form>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component GoogleScholar  should render nothing if author is not loaded 1`] = `<div />`;

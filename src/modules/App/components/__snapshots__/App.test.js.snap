@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application component should render alert if user is not fez author 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -389,11 +389,20 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
         <Alert
           allowDismiss={false}
@@ -403,8 +412,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -599,12 +608,12 @@ exports[`Application component should render alert if user is not fez author 1`]
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1185,12 +1194,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for HDR without ORCID ID 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1440,11 +1449,20 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
         <Alert
           allowDismiss={false}
@@ -1454,8 +1472,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           title="ORCID ID REQUIRED"
           type="error_outline"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -1506,12 +1524,12 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2092,12 +2110,12 @@ exports[`Application component should render app for account with fez author wit
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2484,11 +2502,20 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
         <Alert
           action={[Function]}
@@ -2500,8 +2527,8 @@ exports[`Application component should render app for account with fez author wit
           title="ORCID ID REQUIRED"
           type="warning"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -2696,12 +2723,12 @@ exports[`Application component should render app for account with fez author wit
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3195,12 +3222,12 @@ exports[`Application component should render app for account with fez author wit
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3589,7 +3616,11 @@ exports[`Application component should render application with routing for the us
     />
     <Connect(AppAlert) />
     <div
-      className="isLoading is-centered"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
     >
       <InlineLoader
         message="Loading user account..."
@@ -3598,12 +3629,12 @@ exports[`Application component should render application with routing for the us
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render for anon user 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3885,13 +3916,11 @@ exports[`Application component should render for anon user 1`] = `
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render loading screen while account is loading 1`] = `
-<div
-  className="layout-fill"
->
+<div>
   <AppLoader
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
     logoText="University of Queensland"
@@ -3902,8 +3931,8 @@ exports[`Application component should render loading screen while account is loa
 `;
 
 exports[`Application component should render thesis submission for HDR without menu 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -4140,5 +4169,5 @@ exports[`Application component should render thesis submission for HDR without m
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;

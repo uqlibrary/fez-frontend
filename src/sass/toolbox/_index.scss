@@ -32,16 +32,16 @@ html, body {
   padding: 20px;
 }
 
-.layout-card {
-  max-width: 1200px;
-  margin: 24px auto;
-  width: 90%;
-  padding: 0;
-  @include mobile {
-    margin: 0 auto 24px auto;
-    padding: 0 10px 24px 10px;
-  }
-}
+//.layout-card {
+//  max-width: 1200px;
+//  margin: 24px auto;
+//  width: 90%;
+//  padding: 0;
+//  @include mobile {
+//    margin: 0 auto 24px auto;
+//    padding: 0 10px 24px 10px;
+//  }
+//}
 
 .card-header {
   padding: 0 0 0 24px !important;

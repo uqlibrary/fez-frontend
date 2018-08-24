@@ -1,11 +1,13 @@
 import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import {List, ListItem} from 'material-ui/List';
-import Divider from 'material-ui/Divider';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import {default as menuLocale} from 'locale/menu';
 
 // MUI 1
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
@@ -67,6 +69,12 @@ const styles = theme => {
         mainMenu: {
             outline: 'none',
             flexGrow: 1,
+        },
+        ListItemTextPrimary: {
+            fontWeight: 500,
+        },
+        ListItemTextSecondary: {
+            fontWeight: 500,
         },
         mainMenuFooter: {
             paddingLeft: '12px',
@@ -139,10 +147,16 @@ export class MenuDrawer extends Component {
                 ? <Divider key={`menu_item_${index}`}/>
                 : <span className="menu-item-container" key={`menu_item_${index}`}>
                     <ListItem
-                        primaryText={menuItem.primaryText}
-                        secondaryText={menuItem.secondaryText}
+                        button
                         onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
-                        leftIcon={menuItem.leftIcon ? menuItem.leftIcon : null}/>
+                        leftIcon={menuItem.leftIcon ? menuItem.leftIcon : null}>
+                        <ListItemText classes={{
+                            primary: this.props.classes.ListItemTextPrimary,
+                            secondary: this.props.classes.ListItemTextSecondary
+                        }}
+                        primary={menuItem.primaryText}
+                        secondary={menuItem.secondaryText}/>
+                    </ListItem>
                 </span>
         )));
 
@@ -189,8 +203,9 @@ export class MenuDrawer extends Component {
                                 </Grid>
                             </Hidden>
                         </Grid>
-                        <List id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
+                        <List component="nav" id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
                             {
+                                // Skip nav section
                                 docked &&
                                 <div
                                     type="button"

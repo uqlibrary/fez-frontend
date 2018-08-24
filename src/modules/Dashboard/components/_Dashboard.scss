@@ -137,12 +137,12 @@
 }
 
 // Fix for Dashboard alerts so they dont space down because of layout-fill and layout-card
-.dashAlert {
-  &.layout-fill, .layout-card{
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-}
+//.dashAlert {
+//  &.layout-fill, .layout-card{
+//    margin-bottom: 0 !important;
+//    padding-bottom: 0 !important;
+//  }
+//}
 
 .publicationTabContent {
   padding: 12px 24px;
