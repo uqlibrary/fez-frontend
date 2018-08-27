@@ -80,8 +80,11 @@ exports[`Component GoogleScholar  should display submission error if saving fail
         </div>
       </div>
     </StandardCard>
-    <WithStyles(Alert)
+    <Alert
+      allowDismiss={false}
+      dismissTitle="Click to dismiss this alert"
       message="Error has occurred during request and request cannot be processed. failed! Please contact eSpace administrators or try again later."
+      showLoader={false}
       title="Error"
       type="error_outline"
     />
@@ -202,7 +205,9 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
         </div>
       </div>
     </StandardCard>
-    <WithStyles(Alert)
+    <Alert
+      allowDismiss={false}
+      dismissTitle="Click to dismiss this alert"
       message="Request is being processed."
       showLoader={true}
       title="Saving"

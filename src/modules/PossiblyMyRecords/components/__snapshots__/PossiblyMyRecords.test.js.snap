@@ -81,8 +81,11 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
 <WithStyles(StandardPage)
   title="Claim possible publications"
 >
-  <WithStyles(Alert)
+  <Alert
+    allowDismiss={false}
+    dismissTitle="Click to dismiss this alert"
     message="Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later."
+    showLoader={false}
     title="Error"
     type="error"
   />

@@ -404,8 +404,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           }
         }
       >
-        <WithStyles(Alert)
+        <Alert
+          allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
+          showLoader={false}
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
         />
@@ -1461,8 +1464,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           }
         }
       >
-        <WithStyles(Alert)
+        <Alert
+          allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
+          showLoader={false}
           title="ORCID ID REQUIRED"
           type="error_outline"
         />
@@ -2511,10 +2517,13 @@ exports[`Application component should render app for account with fez author wit
           }
         }
       >
-        <WithStyles(Alert)
+        <Alert
           action={[Function]}
           actionButtonLabel="Click here to link or register"
+          allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
+          showLoader={false}
           title="ORCID ID REQUIRED"
           type="warning"
         />
