@@ -14,13 +14,13 @@ exports[`DesignForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of design"
+          label="Title"
           name="rek_title"
+          placeholder="Title of design"
+          required={true}
           type="text"
           validate={
             Array [
@@ -39,10 +39,10 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Project name"
           fullWidth={true}
-          hintText="Title of project"
+          label="Project name"
           name="fez_record_search_key_project_name.rek_project_name"
+          placeholder="Title of project"
           type="text"
         />
       </div>
@@ -56,11 +56,11 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Project description"
           fullWidth={true}
-          hintText="Provide a summary/description of the project."
-          multiLine={true}
+          label="Project description"
+          multiline={true}
           name="rek_description"
+          placeholder="Provide a summary/description of the project."
           rows={1}
           type="text"
         />
@@ -75,10 +75,10 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Type the name of the publisher."
+          label="Publisher"
           name="fez_record_search_key_publisher.rek_publisher"
+          placeholder="Type the name of the publisher."
           type="text"
         />
       </div>
@@ -88,10 +88,10 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText="Type the geographical location for the publisher."
+          label="Place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          placeholder="Type the geographical location for the publisher."
           type="text"
         />
       </div>
@@ -105,10 +105,10 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Location"
           fullWidth={true}
-          hintText="Type the geographical location for the design itself."
+          label="Location"
           name="fez_record_search_key_location[0].rek_location"
+          placeholder="Type the geographical location for the design itself."
           type="text"
         />
       </div>
@@ -249,11 +249,11 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here."
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
+          placeholder="Add any additional information here."
           rows={1}
           type="text"
         />
@@ -268,10 +268,10 @@ exports[`DesignForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Enter URL for this work."
+          label="Link"
           name="rek_link"
+          placeholder="Enter URL for this work."
           type="text"
           validate={
             Array [

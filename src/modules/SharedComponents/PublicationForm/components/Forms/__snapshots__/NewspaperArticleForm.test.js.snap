@@ -14,14 +14,14 @@ exports[`NewspaperArticleForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Enter article title"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Enter article title"
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -60,13 +60,13 @@ exports[`NewspaperArticleForm renders  component 1`] = `
         className="column is-3-tablet"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Start page"
           fullWidth={true}
-          hintText=""
+          label="Start page"
           name="fez_record_search_key_start_page.rek_start_page"
+          placeholder=""
+          required={true}
           type="text"
           validate={
             Array [
@@ -79,13 +79,13 @@ exports[`NewspaperArticleForm renders  component 1`] = `
         className="column is-3-tablet"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="End page"
           fullWidth={true}
-          hintText=""
+          label="End page"
           name="fez_record_search_key_end_page.rek_end_page"
+          placeholder=""
+          required={true}
           type="text"
           validate={
             Array [
@@ -234,11 +234,11 @@ exports[`NewspaperArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
+          placeholder="Add any additional information here"
           rows={1}
           type="text"
         />
@@ -253,10 +253,10 @@ exports[`NewspaperArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Type URL for this publication"
+          label="Link"
           name="rek_link"
+          placeholder="Type URL for this publication"
           type="text"
           validate={
             Array [

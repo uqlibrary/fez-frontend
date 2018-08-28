@@ -14,14 +14,14 @@ exports[`GenericDocumentForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of generic document"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Title of generic document"
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -41,10 +41,10 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText=""
+          label="Place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          placeholder=""
           type="text"
         />
       </div>
@@ -58,10 +58,10 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
           fullWidth={true}
-          hintText=""
+          label="Publisher"
           name="fez_record_search_key_publisher.rek_publisher"
+          placeholder=""
           type="text"
         />
       </div>
@@ -93,11 +93,11 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Add a full article abstract here."
-          multiLine={true}
+          label="Abstract"
+          multiline={true}
           name="rek_description"
+          placeholder="Add a full article abstract here."
           rows={3}
           type="text"
         />
@@ -224,11 +224,11 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
+          placeholder="Add any additional information"
           rows={1}
           type="text"
         />
@@ -243,10 +243,10 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Enter URL for this publication"
+          label="Link"
           name="rek_link"
+          placeholder="Enter URL for this publication"
           type="text"
           validate={
             Array [

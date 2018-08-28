@@ -34,10 +34,10 @@ export default class ConferenceProceedingsForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.title}
                                 validate={[validation.required]}
@@ -51,7 +51,7 @@ export default class ConferenceProceedingsForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_conference_name.rek_conference_name"
                                 type="text"
-                                className="requiredField"
+                                required
                                 fullWidth
                                 {...txt.information.fieldLabels.conferenceName}
                                 validate={[validation.required]} />
@@ -63,7 +63,7 @@ export default class ConferenceProceedingsForm extends Component {
                                 name="fez_record_search_key_conference_location.rek_conference_location"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                                 {...txt.information.fieldLabels.conferenceLocation} />
                         </div>
@@ -76,7 +76,7 @@ export default class ConferenceProceedingsForm extends Component {
                                 name="fez_record_search_key_conference_dates.rek_conference_dates"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                                 {...txt.information.fieldLabels.conferenceDates} />
                         </div>
@@ -162,8 +162,7 @@ export default class ConferenceProceedingsForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
+                                multiline
                                 {...txt.other.fieldLabels.notes}/>
                         </div>
                     </div>

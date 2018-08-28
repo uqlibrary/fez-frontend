@@ -37,7 +37,7 @@ export default class CreativeWorkForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.articleTitle}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -88,7 +88,7 @@ export default class CreativeWorkForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={3}
-                                multiLine
+                                multiline
                                 {...txt.information.fieldLabels.abstract}
                             />
                         </div>
@@ -117,8 +117,7 @@ export default class CreativeWorkForm extends Component {
                                 name="comments"
                                 type="text"
                                 fullWidth
-                                rows={1}
-                                multiLine
+                                multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </div>

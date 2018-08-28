@@ -19,19 +19,14 @@ exports[`PatentForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title of patent"
           fullWidth={true}
-          multiLine={true}
+          label="Title of patent"
+          multiline={true}
           name="rek_title"
+          required={true}
           rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -50,8 +45,8 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Patent number"
           fullWidth={true}
+          label="Patent number"
           name="fez_record_search_key_patent_number.rek_patent_number"
           type="text"
         />
@@ -84,8 +79,8 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Country of origin"
           fullWidth={true}
+          label="Country of origin"
           name="fez_record_search_key_country_of_issue.rek_country_of_issue"
           type="text"
         />
@@ -96,8 +91,8 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Patent owner"
           fullWidth={true}
+          label="Patent owner"
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
@@ -224,9 +219,9 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
           rows={1}
           type="text"
@@ -242,8 +237,8 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Enter URL for this patent"
           fullWidth={true}
+          label="Enter URL for this patent"
           name="rek_link"
           type="text"
           validate={

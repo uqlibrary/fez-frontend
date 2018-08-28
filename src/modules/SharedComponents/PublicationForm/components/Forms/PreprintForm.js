@@ -34,7 +34,7 @@ export default class PreprintForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
@@ -80,7 +80,7 @@ export default class PreprintForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={1}
-                                multiLine
+                                multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </div>

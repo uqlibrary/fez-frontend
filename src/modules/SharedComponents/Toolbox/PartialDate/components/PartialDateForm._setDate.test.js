@@ -1,4 +1,4 @@
-import PartialDateForm from './PartialDateForm';
+import {PartialDateForm} from './PartialDateForm';
 
 const validationMessages = {
     validationMessage: {

@@ -126,9 +126,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisTitle"
-          >
-            Title
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -149,13 +147,13 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           className="column is-half"
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
-            floatingLabelText="Author name"
             fullWidth={true}
-            hintText=""
+            label="Author name"
             name="currentAuthor.0.nameAsPublished"
+            placeholder=""
+            required={true}
             rows={1}
             type="text"
             validate={
@@ -227,9 +225,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisAbstract"
-          >
-            Abstract
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -629,9 +625,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisTitle"
-          >
-            Title
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -652,13 +646,13 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           className="column is-half"
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
-            floatingLabelText="Author name"
             fullWidth={true}
-            hintText=""
+            label="Author name"
             name="currentAuthor.0.nameAsPublished"
+            placeholder=""
+            required={true}
             rows={1}
             type="text"
             validate={
@@ -730,9 +724,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisAbstract"
-          >
-            Abstract
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}

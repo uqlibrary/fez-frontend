@@ -40,10 +40,10 @@ export default class JournalArticleForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 rows={1}
-                                multiLine
+                                multiline
                                 fullWidth
                                 {...txt.information.fieldLabels.documentTitle}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -55,7 +55,7 @@ export default class JournalArticleForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_journal_name.rek_journal_name"
                                 type="text"
-                                className="requiredField"
+                                required
                                 fullWidth
                                 {...txt.information.fieldLabels.journalTitle}
                                 validate={[validation.required]}
@@ -110,7 +110,7 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.optional.fieldLabels.volume}/>
+                                label={txt.optional.fieldLabels.volume}/>
                         </div>
                         <div className="column">
                             <Field
@@ -118,7 +118,7 @@ export default class JournalArticleForm extends Component {
                                 name="fez_record_search_key_issue_number.rek_issue_number"
                                 type="text" fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.optional.fieldLabels.issue}/>
+                                label={txt.optional.fieldLabels.issue}/>
                         </div>
 
                         <div className="column">
@@ -128,7 +128,7 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.optional.fieldLabels.startPage}/>
+                                label={txt.optional.fieldLabels.startPage}/>
                         </div>
                         <div className="column">
                             <Field
@@ -137,7 +137,7 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.optional.fieldLabels.endPage}/>
+                                label={txt.optional.fieldLabels.endPage}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -148,7 +148,7 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.optional.fieldLabels.articleNumber}/>
+                                label={txt.optional.fieldLabels.articleNumber}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -159,9 +159,9 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.notes}/>
+                                label={txt.optional.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -172,7 +172,7 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url}
+                                label={txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

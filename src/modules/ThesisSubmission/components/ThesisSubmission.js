@@ -145,7 +145,7 @@ export default class ThesisSubmission extends Component {
                                     fullWidth
                                     rows={1}
                                     {...txt.information.fieldLabels.author}
-                                    className="requiredField"
+                                    required
                                     validate={[validation.required]}/>
                             </div>
                             <div className="column ">

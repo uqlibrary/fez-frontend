@@ -88,67 +88,55 @@ exports[`Date range  should render disabled component 1`] = `
         primaryTogglesNestedList={false}
         secondaryTextLines={1}
       >
-        <div
-          className="yearPublished columns is-gapless"
+        <WithStyles(Grid)
+          alignItems="flex-end"
+          container={true}
+          spacing={16}
+          wrap="nowrap"
         >
-          <div
-            className="dateRangeFrom column"
+          <WithStyles(Grid)
+            item={true}
+            xs={4}
           >
             <TextField
               disabled={true}
-              floatingLabelFixed={false}
-              floatingLabelText="From"
               fullWidth={true}
-              multiLine={false}
+              label="From"
               onChange={[Function]}
-              rows={1}
+              required={false}
+              select={false}
               type="number"
-              underlineShow={true}
               value={2008}
             />
-          </div>
-          <div
-            className="dateRangeSeparator column is-narrow"
-          />
-          <div
-            className="dateRangeTo column"
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={4}
           >
             <TextField
               disabled={true}
-              floatingLabelFixed={false}
-              floatingLabelText="To"
               fullWidth={true}
-              multiLine={false}
+              label="To"
               onChange={[Function]}
-              rows={1}
+              required={false}
+              select={false}
               type="number"
-              underlineShow={true}
               value={2023}
             />
-          </div>
-          <div
-            className="dateRangeSeparator column is-narrow"
-          />
-          <div
-            className="dateRangeGo column is-narrow"
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
           >
-            <FlatButton
-              className="is-mui-spacing-button"
+            <WithStyles(Button)
               disabled={true}
               fullWidth={true}
-              label="Go"
-              labelPosition="after"
-              labelStyle={Object {}}
               onClick={[Function]}
-              onKeyboardFocus={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onTouchStart={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-        </div>
+              variant="flat"
+            >
+              Go
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </ListItem>,
     ]
   }
@@ -200,67 +188,55 @@ exports[`Date range  should render empty component 1`] = `
         primaryTogglesNestedList={false}
         secondaryTextLines={1}
       >
-        <div
-          className="yearPublished columns is-gapless"
+        <WithStyles(Grid)
+          alignItems="flex-end"
+          container={true}
+          spacing={16}
+          wrap="nowrap"
         >
-          <div
-            className="dateRangeFrom column"
+          <WithStyles(Grid)
+            item={true}
+            xs={4}
           >
             <TextField
-              disabled={false}
-              floatingLabelFixed={false}
-              floatingLabelText="From"
+              disabled={undefined}
               fullWidth={true}
-              multiLine={false}
+              label="From"
               onChange={[Function]}
-              rows={1}
+              required={false}
+              select={false}
               type="number"
-              underlineShow={true}
               value={2008}
             />
-          </div>
-          <div
-            className="dateRangeSeparator column is-narrow"
-          />
-          <div
-            className="dateRangeTo column"
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={4}
           >
             <TextField
-              disabled={false}
-              floatingLabelFixed={false}
-              floatingLabelText="To"
+              disabled={undefined}
               fullWidth={true}
-              multiLine={false}
+              label="To"
               onChange={[Function]}
-              rows={1}
+              required={false}
+              select={false}
               type="number"
-              underlineShow={true}
               value={2023}
             />
-          </div>
-          <div
-            className="dateRangeSeparator column is-narrow"
-          />
-          <div
-            className="dateRangeGo column is-narrow"
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
           >
-            <FlatButton
-              className="is-mui-spacing-button"
+            <WithStyles(Button)
               disabled={false}
               fullWidth={true}
-              label="Go"
-              labelPosition="after"
-              labelStyle={Object {}}
               onClick={[Function]}
-              onKeyboardFocus={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onTouchStart={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-        </div>
+              variant="flat"
+            >
+              Go
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </ListItem>,
     ]
   }

@@ -59,8 +59,8 @@ export default class GenericSelectField extends Component {
             };
         } else {
             return {
-                value: item,
-                primaryText: item
+                value: item.value,
+                primaryText: item.text || item.value
             };
         }
     };

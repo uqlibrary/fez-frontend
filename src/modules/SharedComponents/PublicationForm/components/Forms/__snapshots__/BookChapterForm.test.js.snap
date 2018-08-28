@@ -19,19 +19,14 @@ exports[`BookChapterForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Book chapter title"
           fullWidth={true}
-          multiLine={true}
+          label="Book chapter title"
+          multiline={true}
           name="rek_title"
+          required={true}
           rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -53,19 +48,14 @@ exports[`BookChapterForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Book title"
           fullWidth={true}
-          multiLine={true}
+          label="Book title"
+          multiline={true}
           name="fez_record_search_key_book_title.rek_book_title"
+          required={true}
           rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -82,12 +72,12 @@ exports[`BookChapterForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
           fullWidth={true}
+          label="Place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          required={true}
           type="text"
           validate={
             Array [
@@ -100,12 +90,12 @@ exports[`BookChapterForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
           fullWidth={true}
+          label="Publisher"
           name="fez_record_search_key_publisher.rek_publisher"
+          required={true}
           type="text"
           validate={
             Array [
@@ -514,8 +504,8 @@ exports[`BookChapterForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Edition"
           fullWidth={true}
+          label="Edition"
           name="fez_record_search_key_edition.rek_edition"
           type="text"
         />
@@ -524,12 +514,12 @@ exports[`BookChapterForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Start page"
           fullWidth={true}
+          label="Start page"
           name="fez_record_search_key_start_page.rek_start_page"
+          required={true}
           type="text"
           validate={
             Array [
@@ -542,12 +532,12 @@ exports[`BookChapterForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="End page"
           fullWidth={true}
+          label="End page"
           name="fez_record_search_key_end_page.rek_end_page"
+          required={true}
           type="text"
           validate={
             Array [
@@ -566,11 +556,10 @@ exports[`BookChapterForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
-          rows={1}
           type="text"
         />
       </div>
@@ -584,8 +573,8 @@ exports[`BookChapterForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
           fullWidth={true}
+          label="Link (URL)"
           name="rek_link"
           type="text"
           validate={

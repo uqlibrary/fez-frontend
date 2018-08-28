@@ -17,21 +17,23 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           className="column"
         >
           <TextField
+            InputProps={null}
             aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={null}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
+            error={null}
             fullWidth={true}
-            hintText={false}
             id="searchField"
-            multiLine={false}
+            label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            rows={1}
+            placeholder={null}
+            required={false}
+            select={false}
+            style={
+              Object {
+                "padding": 8,
+              }
+            }
             type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
             value=""
           />
         </div>
@@ -90,21 +92,23 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
           className="column"
         >
           <TextField
+            InputProps={null}
             aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={null}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
+            error={null}
             fullWidth={true}
-            hintText={false}
             id="searchField"
-            multiLine={false}
+            label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            rows={1}
+            placeholder={null}
+            required={false}
+            select={false}
+            style={
+              Object {
+                "padding": 8,
+              }
+            }
             type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
             value=""
           />
         </div>
@@ -175,21 +179,23 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           className="column"
         >
           <TextField
+            InputProps={null}
             aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={null}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
+            error={null}
             fullWidth={true}
-            hintText={false}
             id="searchField"
-            multiLine={false}
+            label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            rows={1}
+            placeholder={null}
+            required={false}
+            select={false}
+            style={
+              Object {
+                "padding": 8,
+              }
+            }
             type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
             value=""
           />
         </div>
@@ -233,25 +239,27 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
           className="column"
         >
           <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={null}
-            floatingLabelFixed={false}
-            floatingLabelText={false}
-            fullWidth={true}
-            hintText="Search eSpace"
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={
+            InputProps={
               Object {
-                "display": "none",
+                "disableUnderline": true,
               }
             }
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            error={null}
+            fullWidth={true}
+            id="searchField"
+            label={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Search eSpace"
+            required={false}
+            select={false}
+            style={
+              Object {
+                "padding": 8,
+              }
+            }
+            type="search"
             value=""
           />
         </div>
@@ -295,21 +303,23 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           className="column"
         >
           <TextField
+            InputProps={null}
             aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={null}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
+            error={null}
             fullWidth={true}
-            hintText={false}
             id="searchField"
-            multiLine={false}
+            label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            rows={1}
+            placeholder={null}
+            required={false}
+            select={false}
+            style={
+              Object {
+                "padding": 8,
+              }
+            }
             type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
             value="i feel lucky"
           />
         </div>

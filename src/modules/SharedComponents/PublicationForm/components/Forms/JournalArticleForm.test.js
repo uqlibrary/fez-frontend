@@ -24,7 +24,6 @@ describe('JournalArticleForm renders ', () => {
 
     it('component with 5 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(4);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 

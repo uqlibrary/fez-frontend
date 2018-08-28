@@ -17,28 +17,23 @@ exports[`Component Masquerade Should render form as expected 1`] = `
     }
     title="Masquerade"
   >
-    <div>
+    <WithStyles(Typography)>
       <div>
         <strong>
           WARNING!!
         </strong>
          Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
       </div>
-    </div>
+    </WithStyles(Typography)>
     <TextField
-      className="mui-long-labels-fix"
-      disabled={false}
-      floatingLabelFixed={false}
-      floatingLabelText="Username or student username"
       fullWidth={true}
-      hintText="Username or student username"
       id="userName"
-      multiLine={false}
+      label="Username or student username"
       onChange={[Function]}
       onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
+      placeholder="Username or student username"
+      required={false}
+      select={false}
       value=""
     />
   </StandardCard>
@@ -51,15 +46,15 @@ exports[`Component Masquerade Should render form as expected 1`] = `
     <div
       className="column is-narrow-desktop"
     >
-      <RaisedButton
+      <WithStyles(Button)
+        color="primary"
         disabled={false}
         fullWidth={true}
-        label="Masquerade"
-        labelPosition="after"
         onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
+        variant="raised"
+      >
+        Masquerade
+      </WithStyles(Button)>
     </div>
   </div>
 </WithStyles(StandardPage)>

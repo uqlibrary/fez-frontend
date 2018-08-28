@@ -19,20 +19,15 @@ exports[`ResearchReportForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Type title of research report"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Type title of research report"
+          required={true}
           rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -51,10 +46,10 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText="Type the place of publication"
+          label="Place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          placeholder="Type the place of publication"
           type="text"
         />
       </div>
@@ -64,10 +59,10 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Type the name of the publisher"
+          label="Publisher"
           name="fez_record_search_key_publisher.rek_publisher"
+          placeholder="Type the name of the publisher"
           type="text"
         />
       </div>
@@ -79,14 +74,14 @@ exports[`ResearchReportForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Total pages"
           fullWidth={true}
-          hintText="Type total number of pages in the publication"
+          label="Total pages"
           name="fez_record_search_key_total_pages.rek_total_pages"
           normalize={[Function]}
+          placeholder="Type total number of pages in the publication"
+          required={true}
           type="text"
           validate={
             Array [
@@ -390,12 +385,11 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Type an abstract or summary of the work"
-          multiLine={true}
+          label="Abstract"
+          multiline={true}
           name="rek_description"
-          rows={1}
+          placeholder="Type an abstract or summary of the work"
           type="text"
         />
       </div>
@@ -409,12 +403,11 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
-          rows={1}
+          placeholder="Add any additional information here"
           type="text"
         />
       </div>
@@ -428,10 +421,10 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Type URL for this publication"
+          label="Link"
           name="rek_link"
+          placeholder="Type URL for this publication"
           type="text"
           validate={
             Array [

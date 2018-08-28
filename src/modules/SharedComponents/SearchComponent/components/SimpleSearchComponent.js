@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
@@ -67,8 +67,8 @@ export default class SimpleSearchComponent extends PureComponent {
         });
     };
 
-    _handleSearchTextChange = (event, value) => {
-        this.props.onSearchTextChange(value);
+    _handleSearchTextChange = (event) => {
+        this.props.onSearchTextChange(event.target.value);
     };
 
     _handleSearchMode = () => {
@@ -127,14 +127,15 @@ export default class SimpleSearchComponent extends PureComponent {
                                     type="search"
                                     id="searchField"
                                     fullWidth
-                                    floatingLabelText={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                    hintText={this.props.isInHeader && txt.searchBoxPlaceholder}
+                                    label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                    placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : null}
                                     aria-label={txt.ariaInputLabel}
                                     onChange={this._handleSearchTextChange}
                                     onKeyPress={this._handleSearch}
                                     value={this.props.searchText}
-                                    underlineStyle={this.props.isInHeader ? {display: 'none'} : {}}
-                                    errorText={this.searchTextValidationMessage(this.props.searchText)}
+                                    InputProps={this.props.isInHeader ? {disableUnderline: true} : null}
+                                    error={this.searchTextValidationMessage(this.props.searchText)}
+                                    style={{padding: 8}}
                                 />
                             </div>
                             <div className="is-hidden-tablet mobileSpacer" />
@@ -147,8 +148,7 @@ export default class SimpleSearchComponent extends PureComponent {
                                 onClick={this._handleToggleMobile}
                                 aria-label={txt.mobileSearchButtonAriaLabel}
                                 className="searchButton"
-                                hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                            >
+                                hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}>
                                 <SearchIcon/>
                             </IconButton>
                         </div>

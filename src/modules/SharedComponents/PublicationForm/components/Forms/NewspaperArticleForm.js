@@ -33,10 +33,10 @@ export default class NewspaperArticleForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
@@ -65,7 +65,7 @@ export default class NewspaperArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.startPage}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -77,7 +77,7 @@ export default class NewspaperArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.endPage}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -117,7 +117,7 @@ export default class NewspaperArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={1}
-                                multiLine
+                                multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </div>

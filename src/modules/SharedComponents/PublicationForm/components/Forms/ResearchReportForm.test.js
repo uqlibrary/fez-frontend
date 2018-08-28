@@ -23,7 +23,6 @@ describe('ResearchReportForm renders ', () => {
 
     it('component with 4 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(3);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 

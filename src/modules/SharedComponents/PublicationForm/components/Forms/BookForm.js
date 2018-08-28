@@ -40,14 +40,13 @@ export default class BookForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.bookTitle}
-                                validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
+                                label={txt.information.fieldLabels.bookTitle}
+                                validate={[validation.required]} />
                         </div>
                     </div>
                     <div className="columns">
@@ -57,9 +56,9 @@ export default class BookForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
-                                className="requiredField"
+                                required
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
+                                label={txt.information.fieldLabels.publicationPlace}
                                 validate={[validation.required]} />
                         </div>
                         <div className="column">
@@ -68,9 +67,9 @@ export default class BookForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
-                                className="requiredField"
+                                required
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher}
+                                label={txt.information.fieldLabels.publisher}
                                 validate={[validation.required]} />
                         </div>
                     </div>
@@ -78,6 +77,7 @@ export default class BookForm extends Component {
                         <div className="column is-half">
                             <Field
                                 component={PublicationSubtypeField}
+                                fullWidth
                                 name="rek_subtype"
                                 disabled={this.props.submitting}
                                 vocabId={this.props.subtypeVocabId}
@@ -154,9 +154,8 @@ export default class BookForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.notes}/>
+                                multiline
+                                label={txt.optional.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -167,7 +166,7 @@ export default class BookForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url}
+                                label={txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

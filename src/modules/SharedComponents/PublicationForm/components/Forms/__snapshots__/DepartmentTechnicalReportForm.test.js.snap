@@ -14,14 +14,14 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of report"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Title of report"
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -68,8 +68,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
           component={[Function]}
           disabled={false}
           floatingLabelText="Series"
-          hintText=""
           name="fez_record_search_key_series.rek_series"
+          placeholder=""
         />
       </div>
     </div>
@@ -115,11 +115,11 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Provide an abstract or summary of the work."
-          multiLine={true}
+          label="Abstract"
+          multiline={true}
           name="rek_description"
+          placeholder="Provide an abstract or summary of the work."
           rows={3}
           type="text"
         />
@@ -246,12 +246,11 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
-          rows={1}
+          placeholder="Add any additional information here"
           type="text"
         />
       </div>
@@ -265,10 +264,10 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Type URL for this publication"
+          label="Link"
           name="rek_link"
+          placeholder="Type URL for this publication"
           type="text"
           validate={
             Array [

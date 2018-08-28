@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import {ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+
+import Grid from '@material-ui/core/Grid';
 
 export default class DateRange extends React.Component {
     static propTypes = {
@@ -54,8 +56,8 @@ export default class DateRange extends React.Component {
         });
     }
 
-    setValue = (key) => (event, value) => {
-        const intValue = parseInt(value, 10);
+    setValue = (key) => (event) => {
+        const intValue = parseInt(event.target.value, 10);
         this.setState({
             [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? '*' : intValue
         });
@@ -70,36 +72,34 @@ export default class DateRange extends React.Component {
     };
 
     renderDateRangeForm = () => (
-        <div className="yearPublished columns is-gapless">
-            <div className="dateRangeFrom column">
+        <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
+            <Grid item xs={4}>
                 <TextField
                     type="number"
-                    floatingLabelText={this.props.locale.fromFieldLabel}
+                    label={this.props.locale.fromFieldLabel}
                     value={this.state.from}
                     onChange={this.setValue('from')}
                     disabled={this.props.disabled}
                     fullWidth/>
-            </div>
-            <div className="dateRangeSeparator column is-narrow"/>
-            <div className="dateRangeTo column">
+            </Grid>
+            <Grid item xs={4}>
                 <TextField
                     type="number"
-                    floatingLabelText={this.props.locale.toFieldLabel}
+                    label={this.props.locale.toFieldLabel}
                     value={this.state.to}
                     onChange={this.setValue('to')}
                     disabled={this.props.disabled}
                     fullWidth/>
-            </div>
-            <div className="dateRangeSeparator column is-narrow"/>
-            <div className="dateRangeGo column is-narrow">
-                <FlatButton
-                    label={this.props.locale.rangeSubmitButtonLabel}
+            </Grid>
+            <Grid item>
+                <Button
+                    variant="flat"
+                    children={this.props.locale.rangeSubmitButtonLabel}
                     onClick={this.setDateRange}
-                    className="is-mui-spacing-button"
                     disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}
                     fullWidth/>
-            </div>
-        </div>
+            </Grid>
+        </Grid>
     );
 
     removeDateRange = () => {

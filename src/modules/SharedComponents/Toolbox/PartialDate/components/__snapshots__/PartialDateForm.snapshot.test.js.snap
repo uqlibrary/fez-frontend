@@ -1,1076 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] = `
-<div
-  className="columns is-multiline is-gapless-mobile"
->
-  <div
-    className="column is-12 dateTitle"
-  >
-    Enter a date
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      className={null}
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Day"
-      maxLength="2"
-      multiLine={false}
-      name="day"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-    />
-  </div>
-  <div
-    className="column"
-  >
-    <SelectField
-      autoWidth={false}
-      className={null}
-      disabled={false}
-      dropDownMenuProps={
-        Object {
-          "animated": false,
-        }
-      }
-      fullWidth={true}
-      hintText="Month"
-      multiple={false}
-      name="month"
-      onChange={[Function]}
-      value={null}
-    >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="-1"
-        primaryText=""
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={-1}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="January"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={0}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="February"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={1}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="2"
-        primaryText="March"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={2}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="3"
-        primaryText="April"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={3}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="4"
-        primaryText="May"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={4}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="5"
-        primaryText="June"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={5}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="6"
-        primaryText="July"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={6}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="7"
-        primaryText="August"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={7}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="8"
-        primaryText="September"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={8}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="9"
-        primaryText="October"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={9}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="10"
-        primaryText="November"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={10}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="11"
-        primaryText="December"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={11}
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      className=" mui-long-labels-fix"
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Year"
-      maxLength="4"
-      multiLine={false}
-      name="year"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-    />
-  </div>
-</div>
+<PartialDateForm
+  allowPartial={true}
+  className=""
+  classes={
+    Object {
+      "fakeTitle": "PartialDateForm-fakeTitle-1",
+    }
+  }
+  dateFormat="YYYY-MM-DD"
+  floatingTitle="Enter a date"
+  floatingTitleRequired={false}
+  locale={
+    Object {
+      "dayLabel": "Day",
+      "maxNumberCharCode": 57,
+      "minNumberCharCode": 48,
+      "monthLabel": "Month",
+      "validationMessage": Object {
+        "day": "Invalid day",
+        "month": "Invalid month",
+        "year": "Invalid year",
+      },
+      "yearLabel": "Year",
+    }
+  }
+  months={
+    Array [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+  }
+  name="partialDate"
+  onChange={[Function]}
+/>
 `;
 
 exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`] = `
-<div
-  className="columns is-multiline is-gapless-mobile"
->
-  <div
-    className="column is-12 dateTitle"
-  >
-    Enter a date
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      className={null}
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Day"
-      maxLength="2"
-      multiLine={false}
-      name="day"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-    />
-  </div>
-  <div
-    className="column"
-  >
-    <SelectField
-      autoWidth={false}
-      className={null}
-      disabled={false}
-      dropDownMenuProps={
-        Object {
-          "animated": false,
-        }
-      }
-      fullWidth={true}
-      hintText="Month"
-      multiple={false}
-      name="month"
-      onChange={[Function]}
-      value={null}
-    >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="-1"
-        primaryText=""
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={-1}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="January"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={0}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="February"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={1}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="2"
-        primaryText="March"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={2}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="3"
-        primaryText="April"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={3}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="4"
-        primaryText="May"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={4}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="5"
-        primaryText="June"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={5}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="6"
-        primaryText="July"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={6}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="7"
-        primaryText="August"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={7}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="8"
-        primaryText="September"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={8}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="9"
-        primaryText="October"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={9}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="10"
-        primaryText="November"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={10}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="11"
-        primaryText="December"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={11}
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      className="requiredField mui-long-labels-fix"
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Year"
-      maxLength="4"
-      multiLine={false}
-      name="year"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-    />
-  </div>
-</div>
+<PartialDateForm
+  allowPartial={true}
+  className="requiredField"
+  classes={
+    Object {
+      "fakeTitle": "PartialDateForm-fakeTitle-1",
+    }
+  }
+  dateFormat="YYYY-MM-DD"
+  floatingTitle="Enter a date"
+  floatingTitleRequired={false}
+  locale={
+    Object {
+      "dayLabel": "Day",
+      "maxNumberCharCode": 57,
+      "minNumberCharCode": 48,
+      "monthLabel": "Month",
+      "validationMessage": Object {
+        "day": "Invalid day",
+        "month": "Invalid month",
+        "year": "Invalid year",
+      },
+      "yearLabel": "Year",
+    }
+  }
+  months={
+    Array [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+  }
+  name="partialDate"
+  onChange={[Function]}
+/>
 `;
 
 exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`] = `
-<div
-  className="columns is-multiline is-gapless-mobile"
->
-  <div
-    className="column is-12 dateTitle"
-  >
-    Enter a date
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      className="requiredField"
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Day"
-      maxLength="2"
-      multiLine={false}
-      name="day"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-    />
-  </div>
-  <div
-    className="column"
-  >
-    <SelectField
-      autoWidth={false}
-      className="requiredField"
-      disabled={false}
-      dropDownMenuProps={
-        Object {
-          "animated": false,
-        }
-      }
-      fullWidth={true}
-      hintText="Month"
-      multiple={false}
-      name="month"
-      onChange={[Function]}
-      value={null}
-    >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="-1"
-        primaryText=""
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={-1}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="January"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={0}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="February"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={1}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="2"
-        primaryText="March"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={2}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="3"
-        primaryText="April"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={3}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="4"
-        primaryText="May"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={4}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="5"
-        primaryText="June"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={5}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="6"
-        primaryText="July"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={6}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="7"
-        primaryText="August"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={7}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="8"
-        primaryText="September"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={8}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="9"
-        primaryText="October"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={9}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="10"
-        primaryText="November"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={10}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="11"
-        primaryText="December"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={11}
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      className="requiredField mui-long-labels-fix"
-      disabled={false}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Year"
-      maxLength="4"
-      multiLine={false}
-      name="year"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-    />
-  </div>
-</div>
+<PartialDateForm
+  allowPartial={false}
+  className="requiredField"
+  classes={
+    Object {
+      "fakeTitle": "PartialDateForm-fakeTitle-1",
+    }
+  }
+  dateFormat="YYYY-MM-DD"
+  floatingTitle="Enter a date"
+  floatingTitleRequired={false}
+  locale={
+    Object {
+      "dayLabel": "Day",
+      "maxNumberCharCode": 57,
+      "minNumberCharCode": 48,
+      "monthLabel": "Month",
+      "validationMessage": Object {
+        "day": "Invalid day",
+        "month": "Invalid month",
+        "year": "Invalid year",
+      },
+      "yearLabel": "Year",
+    }
+  }
+  months={
+    Array [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+  }
+  name="partialDate"
+  onChange={[Function]}
+/>
 `;

@@ -24,20 +24,20 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of generic document'
+                    label: 'Title',
+                    placeholder: 'Title of generic document'
                 },
                 publicationPlace: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: ''
+                    label: 'Place of publication',
+                    placeholder: ''
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: ''
+                    label: 'Publisher',
+                    placeholder: ''
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Add a full article abstract here.'
+                    label: 'Abstract',
+                    placeholder: 'Add a full article abstract here.'
                 },
                 date: {
                     title: 'Publication date',
@@ -57,12 +57,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information'
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter URL for this publication'
+                    label: 'Link',
+                    placeholder: 'Enter URL for this publication'
                 }
             }
 
@@ -78,12 +78,12 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of journal article'
+                    label: 'Title',
+                    placeholder: 'Title of journal article'
                 },
                 journalTitle: {
-                    floatingLabelText: 'Journal name',
-                    hintText: ''
+                    label: 'Journal name',
+                    placeholder: ''
                 },
                 date: {
                     title: 'Publication date',
@@ -242,16 +242,16 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Type title of research report'
+                    label: 'Title',
+                    placeholder: 'Type title of research report'
                 },
                 publicationPlace: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: 'Type the place of publication'
+                    label: 'Place of publication',
+                    placeholder: 'Type the place of publication'
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: 'Type the name of the publisher'
+                    label: 'Publisher',
+                    placeholder: 'Type the name of the publisher'
                 },
                 date: {
                     title: 'Date published',
@@ -264,8 +264,8 @@ export default {
                     hintText: 'Enter title of series'
                 },
                 totalPages: {
-                    floatingLabelText: 'Total pages',
-                    hintText: 'Type total number of pages in the publication'
+                    label: 'Total pages',
+                    placeholder: 'Type total number of pages in the publication'
                 }
             }
         },
@@ -279,16 +279,16 @@ export default {
             // },
             fieldLabels: {
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Type an abstract or summary of the work'
+                    label: 'Abstract',
+                    placeholder: 'Type an abstract or summary of the work'
                 },
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here'
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Type URL for this publication'
+                    label: 'Link',
+                    placeholder: 'Type URL for this publication'
                 }
             }
         }
@@ -313,20 +313,20 @@ export default {
             },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of work'
+                    label: 'Title',
+                    placeholder: 'Title of work'
                 },
                 publicationPlace: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: 'City, Country'
+                    label: 'Place of publication',
+                    placeholder: 'City, Country'
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: 'Type the name of the publisher or producer of the work.'
+                    label: 'Publisher',
+                    placeholder: 'Type the name of the publisher or producer of the work.'
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work.'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work.'
                 },
                 date: {
                     title: 'Publication date',
@@ -347,12 +347,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here.',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here.',
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter URL for this work.',
+                    label: 'Link',
+                    placeholder: 'Enter URL for this work.',
                 }
             }
         },
@@ -402,8 +402,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of paper',
+                    label: 'Title',
+                    placeholder: 'Title of paper',
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, department or centre',
@@ -435,12 +435,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here',
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter a valid URL for this publication'
+                    label: 'Link',
+                    placeholder: 'Enter a valid URL for this publication'
                 }
             }
         },
@@ -455,8 +455,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Thesis title'
+                    label: 'Title',
+                    placeholder: 'Thesis title'
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
@@ -476,8 +476,8 @@ export default {
                     label: 'Thesis type'
                 },
                 author: {
-                    floatingLabelText: 'Author name',
-                    hintText: ''
+                    label: 'Author name',
+                    placeholder: ''
                 }
             }
         },
@@ -511,20 +511,20 @@ export default {
             // },
             fieldLabels: {
                 doi: {
-                    floatingLabelText: 'DOI',
-                    hintText: ''
+                    label: 'DOI',
+                    placeholder: ''
                 },
                 totalPages: {
-                    floatingLabelText: 'Total pages',
-                    hintText: ''
+                    label: 'Total pages',
+                    placeholder: ''
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work'
                 },
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Provide any additional information',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Provide any additional information',
                 }
             }
         },
@@ -539,8 +539,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of report'
+                    label: 'Title',
+                    placeholder: 'Title of report'
                 },
                 date: {
                     title: 'Preprint date',
@@ -560,12 +560,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here'
                 },
                 url: {
-                    floatingLabelText: 'Link (URL)',
-                    hintText: 'Enter URL for this publication'
+                    label: 'Link (URL)',
+                    placeholder: 'Enter URL for this publication'
                 }
             }
         }
@@ -580,16 +580,16 @@ export default {
             // },
             fieldLabels: {
                 articleTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of creative work'
+                    label: 'Title',
+                    placeholder: 'Title of creative work'
                 },
                 placeOfPublication: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: 'City, country'
+                    label: 'Place of publication',
+                    placeholder: 'City, country'
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: ''
+                    label: 'Publisher',
+                    placeholder: ''
                 },
                 date: {
                     title: 'Publication date',
@@ -598,8 +598,8 @@ export default {
                     year: 'Year'
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work.'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work.'
                 }
             }
         },
@@ -613,12 +613,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here.',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here.',
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter URL for this work.',
+                    label: 'Link',
+                    placeholder: 'Enter URL for this work.',
                 }
             }
         },
@@ -643,20 +643,20 @@ export default {
             },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of work'
+                    label: 'Title',
+                    placeholder: 'Title of work'
                 },
                 publicationPlace: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: 'City, Country'
+                    label: 'Place of publication',
+                    placeholder: 'City, Country'
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: 'Type the name of the publisher or producer of the work.'
+                    label: 'Publisher',
+                    placeholder: 'Type the name of the publisher or producer of the work.'
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work.'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work.'
                 },
                 date: {
                     title: 'Publication date',
@@ -677,12 +677,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here.',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here.',
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter URL for this work.',
+                    label: 'Link',
+                    placeholder: 'Enter URL for this work.',
                 }
             }
         },
@@ -697,8 +697,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of image'
+                    label: 'Title',
+                    placeholder: 'Title of image'
                 },
                 date: {
                     title: 'Date created',
@@ -707,8 +707,8 @@ export default {
                     year: 'Year'
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work.'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work.'
                 },
             },
         },
@@ -722,12 +722,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here.',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here.',
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter URL for this work.',
+                    label: 'Link',
+                    placeholder: 'Enter URL for this work.',
                 }
             }
         },
@@ -742,28 +742,28 @@ export default {
             // },
             fieldLabels: {
                 articleTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of design'
+                    label: 'Title',
+                    placeholder: 'Title of design'
                 },
                 projectName: {
-                    floatingLabelText: 'Project name',
-                    hintText: 'Title of project'
+                    label: 'Project name',
+                    placeholder: 'Title of project'
                 },
                 projectDescription: {
-                    floatingLabelText: 'Project description',
-                    hintText: 'Provide a summary/description of the project.'
+                    label: 'Project description',
+                    placeholder: 'Provide a summary/description of the project.'
                 },
                 placeOfPublication: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: 'Type the geographical location for the publisher.'
+                    label: 'Place of publication',
+                    placeholder: 'Type the geographical location for the publisher.'
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: 'Type the name of the publisher.'
+                    label: 'Publisher',
+                    placeholder: 'Type the name of the publisher.'
                 },
                 location: {
-                    floatingLabelText: 'Location',
-                    hintText: 'Type the geographical location for the design itself.'
+                    label: 'Location',
+                    placeholder: 'Type the geographical location for the design itself.'
                 },
                 date: {
                     title: 'Publication date',
@@ -783,12 +783,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here.',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here.',
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Enter URL for this work.',
+                    label: 'Link',
+                    placeholder: 'Enter URL for this work.',
                 }
             }
         },
@@ -803,8 +803,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Enter article title'
+                    label: 'Title',
+                    placeholder: 'Enter article title'
                 },
                 newspaperName: {
                     floatingLabelText: 'Newspaper name',
@@ -817,12 +817,12 @@ export default {
                     year: 'Year'
                 },
                 startPage: {
-                    floatingLabelText: 'Start page',
-                    hintText: ''
+                    label: 'Start page',
+                    placeholder: ''
                 },
                 endPage: {
-                    floatingLabelText: 'End page',
-                    hintText: ''
+                    label: 'End page',
+                    placeholder: ''
                 }
             }
         },
@@ -836,12 +836,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here'
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Type URL for this publication'
+                    label: 'Link',
+                    placeholder: 'Type URL for this publication'
                 }
             }
         }
@@ -856,8 +856,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of report'
+                    label: 'Title',
+                    placeholder: 'Title of report'
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
@@ -869,7 +869,7 @@ export default {
                 },
                 series: {
                     floatingLabelText: 'Series',
-                    hintText: ''
+                    placeholder: ''
                 },
                 reportNumber: {
                     floatingLabelText: 'Report number',
@@ -882,12 +882,12 @@ export default {
                     year: 'Year'
                 },
                 totalPages: {
-                    floatingLabelText: 'Total pages',
-                    hintText: 'Type total number of pages in the publication'
+                    label: 'Total pages',
+                    placeholder: 'Type total number of pages in the publication'
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work.'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work.'
                 }
             }
         },
@@ -901,12 +901,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here'
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Type URL for this publication'
+                    label: 'Link',
+                    placeholder: 'Type URL for this publication'
                 }
             }
         }
@@ -921,8 +921,8 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Title of paper'
+                    label: 'Title',
+                    placeholder: 'Title of paper'
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, Institute or Centre ',
@@ -947,12 +947,12 @@ export default {
                     hintText: ''
                 },
                 totalPages: {
-                    floatingLabelText: 'Total pages',
-                    hintText: 'Enter total number of pages in the paper.'
+                    label: 'Total pages',
+                    placeholder: 'Enter total number of pages in the paper.'
                 },
                 abstract: {
-                    floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work.'
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work.'
                 }
             }
         },
@@ -966,12 +966,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information here'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information here'
                 },
                 url: {
-                    floatingLabelText: 'Link',
-                    hintText: 'Type URL for this publication'
+                    label: 'Link',
+                    placeholder: 'Type URL for this publication'
                 }
             }
         }
@@ -986,32 +986,32 @@ export default {
             // },
             fieldLabels: {
                 title: {
-                    floatingLabelText: 'Title',
-                    hintText: 'Proceedings title'
+                    label: 'Title',
+                    placeholder: 'Proceedings title'
                 },
                 conferenceName: {
-                    floatingLabelText: 'Conference name',
-                    hintText: 'Type the name of conference'
+                    label: 'Conference name',
+                    placeholder: 'Type the name of conference'
                 },
                 conferenceLocation: {
-                    floatingLabelText: 'Conference location',
-                    hintText: 'Type the place of conference'
+                    label: 'Conference location',
+                    placeholder: 'Type the place of conference'
                 },
                 conferenceDates: {
-                    floatingLabelText: 'Conference dates (eg 13-15 December 2011)',
-                    hintText: 'Type the dates of conference'
+                    label: 'Conference dates (eg 13-15 December 2011)',
+                    placeholder: 'Type the dates of conference'
                 },
                 proceedingsTitle: {
-                    floatingLabelText: 'Proceedings title',
-                    hintText: 'Type the title of proceedings'
+                    label: 'Proceedings title',
+                    placeholder: 'Type the title of proceedings'
                 },
                 publicationPlace: {
-                    floatingLabelText: 'Place of publication',
-                    hintText: 'Type the place of publication'
+                    label: 'Place of publication',
+                    placeholder: 'Type the place of publication'
                 },
                 publisher: {
-                    floatingLabelText: 'Publisher',
-                    hintText: 'Type the name of the publisher'
+                    label: 'Publisher',
+                    placeholder: 'Type the name of the publisher'
                 },
                 date: {
                     title: 'Publication date',
@@ -1031,12 +1031,12 @@ export default {
             // },
             fieldLabels: {
                 notes: {
-                    floatingLabelText: 'Notes (not publicly viewable)',
-                    hintText: 'Add any additional information'
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Add any additional information'
                 },
                 link: {
-                    floatingLabelText: 'Link (URL)',
-                    hintText: 'Enter URL for this publication'
+                    label: 'Link (URL)',
+                    placeholder: 'Enter URL for this publication'
                 }
             }
         }

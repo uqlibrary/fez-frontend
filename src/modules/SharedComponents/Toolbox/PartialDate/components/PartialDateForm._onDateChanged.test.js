@@ -1,7 +1,12 @@
-import PartialDateForm from './PartialDateForm';
+import {PartialDateForm} from './PartialDateForm';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = {
+        classes:{
+            fakeTitle: {}
+        },
+        ...testProps
+    };
     return getElement(PartialDateForm, props, isShallow);
 }
 

@@ -19,19 +19,14 @@ exports[`ConferencePaperForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title of paper"
           fullWidth={true}
-          multiLine={true}
+          label="Title of paper"
+          multiline={true}
           name="rek_title"
+          required={true}
           rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -48,12 +43,12 @@ exports[`ConferencePaperForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Conference name"
           fullWidth={true}
+          label="Conference name"
           name="fez_record_search_key_conference_name.rek_conference_name"
+          required={true}
           type="text"
           validate={
             Array [
@@ -66,12 +61,12 @@ exports[`ConferencePaperForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Conference location"
           fullWidth={true}
+          label="Conference location"
           name="fez_record_search_key_conference_location.rek_conference_location"
+          required={true}
           type="text"
           validate={
             Array [
@@ -88,12 +83,12 @@ exports[`ConferencePaperForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Conference dates (eg 13-15 December 2011)"
           fullWidth={true}
+          label="Conference dates (eg 13-15 December 2011)"
           name="fez_record_search_key_conference_dates.rek_conference_dates"
+          required={true}
           type="text"
           validate={
             Array [
@@ -112,8 +107,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Proceedings title"
           fullWidth={true}
+          label="Proceedings title"
           name="fez_record_search_key_proceedings_title.rek_proceedings_title"
           type="text"
         />
@@ -124,8 +119,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Journal name"
           fullWidth={true}
+          label="Journal name"
           name="fez_record_search_key_journal_name.rek_journal_name"
           type="text"
         />
@@ -140,8 +135,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
           fullWidth={true}
+          label="Place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
@@ -152,8 +147,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
           fullWidth={true}
+          label="Publisher"
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
@@ -464,8 +459,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Start page"
           fullWidth={true}
+          label="Start page"
           name="fez_record_search_key_start_page.rek_start_page"
           type="text"
         />
@@ -476,8 +471,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="End page"
           fullWidth={true}
+          label="End page"
           name="fez_record_search_key_end_page.rek_end_page"
           type="text"
         />
@@ -492,11 +487,10 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
-          rows={1}
           type="text"
         />
       </div>
@@ -510,8 +504,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
           fullWidth={true}
+          label="Link (URL)"
           name="rek_link"
           type="text"
           validate={
