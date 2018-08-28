@@ -120,7 +120,7 @@
   &.selected {
     background-color: $accent-color-light;
     .datalist-text {
-      test-indent: 12px !important;
+      text-indent: 12px !important;
       color: $text-color-reverse;
       .datalist-text-subtitle {
         color: $text-color-reverse !important;
