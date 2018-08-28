@@ -3,25 +3,24 @@ import {authorsSearch} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        authorsList: [],
+        onAdd: jest.fn(),
+        showIdentifierLookup: false,
+        actions: {},
+        disabled: false,
         ...testProps,
-        authorsList: testProps.authorsList || [],
-        onAdd: testProps.onAdd || jest.fn(),
-        showIdentifierLookup: testProps.showIdentifierLookup || false,
-        actions: testProps.actions || {},
-        disabled: testProps.disabled || false
     };
     return getElement(ContributorForm, props, isShallow);
 }
 
 describe('Component ContributorForm', () => {
-
-    it('rendering display name field only', () => {
-        const wrapper = setup({}, false);
+    it('should render display name field only', () => {
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('rendering display name field and identifier field', () => {
-        const wrapper = setup({ showIdentifierLookup: true}, false);
+    it('should render display name field and identifier field', () => {
+        const wrapper = setup({ showIdentifierLookup: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import {Grid} from '@material-ui/core';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -90,10 +91,10 @@ export class ContributorForm extends PureComponent {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
         const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
         return (
-            <div className="contributorForm">
+            <div style={{flexGrow: 1, padding: 8}}>
                 {description}
-                <div className="columns">
-                    <div className="column contributor">
+                <Grid container spacing={16} alignItems="baseline">
+                    <Grid item xs={12} sm={this.props.showIdentifierLookup ? 12 : 9} md={this.props.showIdentifierLookup ? 5 : 10}>
                         <TextField
                             fullWidth
                             ref="nameAsPublishedField"
@@ -106,10 +107,10 @@ export class ContributorForm extends PureComponent {
                             disabled={this.props.disabled}
                             className="mui-long-labels-fix"
                         />
-                    </div>
+                    </Grid>
                     {
                         this.props.showIdentifierLookup &&
-                        <div className="column identifier">
+                        <Grid item xs={12} sm={12} md={5}>
                             <AutoComplete
                                 disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                                 listStyle={{maxHeight: 200, overflow: 'auto'}}
@@ -127,9 +128,9 @@ export class ContributorForm extends PureComponent {
                                 onUpdateInput={this._onUQIdentifierChanged}
                                 onNewRequest={this._onUQIdentifierSelected}
                             />
-                        </div>
+                        </Grid>
                     }
-                    <div className="column is-narrow">
+                    <Grid item xs={12} sm={3} md={2}>
                         <RaisedButton
                             className="is-mui-spacing-button"
                             fullWidth
@@ -137,8 +138,8 @@ export class ContributorForm extends PureComponent {
                             label={this.props.locale.addButton}
                             disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                             onClick={this._addContributor} />
-                    </div>
-                </div>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
