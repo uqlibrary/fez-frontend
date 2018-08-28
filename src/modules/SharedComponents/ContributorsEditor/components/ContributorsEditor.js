@@ -7,6 +7,7 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import Infinite from 'react-infinite';
+import {List} from '@material-ui/core';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -175,13 +176,16 @@ export class ContributorsEditor extends PureComponent {
                 }
                 {
                     this.state.contributors.length > 3
-                        ? <Infinite containerHeight={195}
+                        ? <List
+                            component={Infinite}
+                            containerHeight={195}
                             elementHeight={65}
                             threshold={130}
-                            className="authors-infinite">
+                            className="authors-infinite"
+                        >
                             {renderContributorsRows}
-                        </Infinite>
-                        : <div>{renderContributorsRows}</div>
+                        </List>
+                        : <List>{renderContributorsRows}</List>
                 }
                 {
                     this.props.meta && this.props.meta.error &&
