@@ -111,8 +111,9 @@ describe('ContributorsEditor tests ', () => {
 
     it('renders 3 contributor rows with no infinite scroll', () => {
         const wrapper = setup({contributors: []});
-        wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
-        expect(wrapper.find('ContributorRow').length).toEqual(3);
+        wrapper.setState({ contributors: [ {nameAsPublished: 1}, {nameAsPublished: 2}, {nameAsPublished: 3}]});
+        wrapper.update();
+        expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(3);
         expect(wrapper.find('Infinite').length).toEqual(0);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -120,8 +121,8 @@ describe('ContributorsEditor tests ', () => {
     it('renders 4 contributor rows wrapped in an infinite scroll', () => {
         const wrapper = setup({contributors: []});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}, {displayName: 4}]});
-        expect(wrapper.find('ContributorRow').length).toEqual(4);
-        expect(wrapper.find('Infinite').length).toEqual(1);
+        expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(4);
+        expect(wrapper.find('.authors-infinite').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -1724,7 +1724,25 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
               </div>
             </ContributorForm>
           </Connect(ContributorForm)>
-          <div />
+          <WithStyles(List)>
+            <List
+              classes={
+                Object {
+                  "dense": "MuiList-dense-3",
+                  "padding": "MuiList-padding-2",
+                  "root": "MuiList-root-1",
+                  "subheader": "MuiList-subheader-4",
+                }
+              }
+              component="ul"
+              dense={false}
+              disablePadding={false}
+            >
+              <ul
+                className="MuiList-root-1 MuiList-padding-2"
+              />
+            </List>
+          </WithStyles(List)>
         </div>
       </ContributorsEditor>
     </Router>
@@ -4979,7 +4997,25 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
               </div>
             </ContributorForm>
           </Connect(ContributorForm)>
-          <div />
+          <WithStyles(List)>
+            <List
+              classes={
+                Object {
+                  "dense": "MuiList-dense-3",
+                  "padding": "MuiList-padding-2",
+                  "root": "MuiList-root-1",
+                  "subheader": "MuiList-subheader-4",
+                }
+              }
+              component="ul"
+              dense={false}
+              disablePadding={false}
+            >
+              <ul
+                className="MuiList-root-1 MuiList-padding-2"
+              />
+            </List>
+          </WithStyles(List)>
         </div>
       </ContributorsEditor>
     </Router>
@@ -5016,45 +5052,18 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <div>
-    <ContributorRow
+  <WithStyles(List)>
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
       canMoveUp={false}
       contributor={
         Object {
-          "displayName": 1,
+          "nameAsPublished": 1,
         }
       }
       disabledContributorAssignment={false}
       index={0}
       key="ContributorRow_0"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5062,44 +5071,17 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-    <ContributorRow
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
       canMoveUp={true}
       contributor={
         Object {
-          "displayName": 2,
+          "nameAsPublished": 2,
         }
       }
       disabledContributorAssignment={false}
       index={1}
       key="ContributorRow_1"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5107,44 +5089,17 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-    <ContributorRow
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={false}
       canMoveUp={true}
       contributor={
         Object {
-          "displayName": 3,
+          "nameAsPublished": 3,
         }
       }
       disabledContributorAssignment={false}
       index={2}
       key="ContributorRow_2"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5152,7 +5107,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-  </div>
+  </WithStyles(List)>
 </div>
 `;
 
@@ -5185,21 +5140,14 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <Infinite
+  <WithStyles(List)
     className="authors-infinite"
+    component={[Function]}
     containerHeight={195}
-    displayBottomUpwards={false}
     elementHeight={65}
-    handleScroll={[Function]}
-    isInfiniteLoading={false}
-    loadingSpinnerDelegate={<div />}
-    onInfiniteLoad={[Function]}
-    styles={Object {}}
     threshold={130}
-    timeScrollStateLastsForAfterUserScrolls={150}
-    useWindowAsScrollContainer={false}
   >
-    <ContributorRow
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
       canMoveUp={false}
       contributor={
@@ -5210,33 +5158,6 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={0}
       key="ContributorRow_0"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5244,7 +5165,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-    <ContributorRow
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
       canMoveUp={true}
       contributor={
@@ -5255,33 +5176,6 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={1}
       key="ContributorRow_1"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5289,7 +5183,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-    <ContributorRow
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
       canMoveUp={true}
       contributor={
@@ -5300,33 +5194,6 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={2}
       key="ContributorRow_2"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5334,7 +5201,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-    <ContributorRow
+    <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={false}
       canMoveUp={true}
       contributor={
@@ -5345,33 +5212,6 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={3}
       key="ContributorRow_3"
-      locale={
-        Object {
-          "deleteHint": "Remove this record",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete this record?",
-            "confirmationTitle": "Delete record",
-          },
-          "moveDownHint": "Move record down the order",
-          "moveUpHint": "Move record up the order",
-          "ordinalData": Array [
-            "First",
-            "Second",
-            "Third",
-            "Fourth",
-            "Fifth",
-            "Sixth",
-            "Seventh",
-            "Eighth",
-            "Ninth",
-            "Tenth",
-          ],
-          "selectHint": "Select this record ([name]) to assign it to you",
-          "suffix": " listed contributor",
-        }
-      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5379,7 +5219,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       showContributorAssignment={false}
       showIdentifierLookup={false}
     />
-  </Infinite>
+  </WithStyles(List)>
 </div>
 `;
 
@@ -5390,7 +5230,7 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <div />
+  <WithStyles(List) />
 </div>
 `;
 
@@ -7121,7 +6961,25 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
               </div>
             </ContributorForm>
           </Connect(ContributorForm)>
-          <div />
+          <WithStyles(List)>
+            <List
+              classes={
+                Object {
+                  "dense": "MuiList-dense-3",
+                  "padding": "MuiList-padding-2",
+                  "root": "MuiList-root-1",
+                  "subheader": "MuiList-subheader-4",
+                }
+              }
+              component="ul"
+              dense={false}
+              disablePadding={false}
+            >
+              <ul
+                className="MuiList-root-1 MuiList-padding-2"
+              />
+            </List>
+          </WithStyles(List)>
           <div
             className="validationErrorMessage"
           >
