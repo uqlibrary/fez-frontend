@@ -11,12 +11,12 @@ function setup(testProps, isShallow = true){
 
 describe('ContributorsEditor tests ', () => {
     it('rendering full component with a defined className', () => {
-        const wrapper = setup({ className: 'requiredField' }, false);
+        const wrapper = setup({ className: 'requiredField' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering full component with identifier lookup', () => {
-        const wrapper = setup({ showIdentifierLookup: true }, false);
+        const wrapper = setup({ showIdentifierLookup: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -127,7 +127,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('should show validation error', () => {
-        const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}}, false);
+        const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}});
         expect(wrapper.find('.validationErrorMessage').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
