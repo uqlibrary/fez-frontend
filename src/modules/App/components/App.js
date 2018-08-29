@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
@@ -19,21 +19,9 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import * as pages from './pages';
 
 // MUI1
-import Tooltip from '@material-ui/core/Tooltip';
-import Fade from '@material-ui/core/Fade';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/icons/Menu';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import {Tooltip, Fade, AppBar, Toolbar, Typography, IconButton, Grid, Hidden} from '@material-ui/core';
+import {Menu} from '@material-ui/icons';
 import {withStyles} from '@material-ui/core/styles';
-
-import jss from 'jss';
-import nested from 'jss-nested';
-// import global from 'jss-global';
-jss.use(nested());
 
 const styles = theme => ({
     layoutCard: {
