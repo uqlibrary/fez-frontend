@@ -35,14 +35,13 @@ export default class ConferencePaperForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.title}
-                                validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
+                                label={txt.information.fieldLabels.title}
+                                validate={[validation.required]}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -52,9 +51,9 @@ export default class ConferencePaperForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_conference_name.rek_conference_name"
                                 type="text"
-                                className="requiredField"
+                                required
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.conferenceName}
+                                label={txt.information.fieldLabels.conferenceName}
                                 validate={[validation.required]} />
                         </div>
                         <div className="column">
@@ -64,9 +63,9 @@ export default class ConferencePaperForm extends Component {
                                 name="fez_record_search_key_conference_location.rek_conference_location"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
-                                floatingLabelText={txt.information.fieldLabels.conferenceLocation} />
+                                label={txt.information.fieldLabels.conferenceLocation} />
                         </div>
                     </div>
                     <div className="columns">
@@ -77,9 +76,9 @@ export default class ConferencePaperForm extends Component {
                                 name="fez_record_search_key_conference_dates.rek_conference_dates"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
-                                floatingLabelText={txt.information.fieldLabels.conferenceDates} />
+                                label={txt.information.fieldLabels.conferenceDates} />
                         </div>
                     </div>
                     <div className="columns">
@@ -90,7 +89,7 @@ export default class ConferencePaperForm extends Component {
                                 name="fez_record_search_key_proceedings_title.rek_proceedings_title"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.proceedingsTitle} />
+                                label={txt.information.fieldLabels.proceedingsTitle} />
                         </div>
                         <div className="column">
                             <Field
@@ -99,7 +98,7 @@ export default class ConferencePaperForm extends Component {
                                 name="fez_record_search_key_journal_name.rek_journal_name"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.journalName} />
+                                label={txt.information.fieldLabels.journalName} />
                         </div>
                     </div>
                     <div className="columns">
@@ -110,7 +109,7 @@ export default class ConferencePaperForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace} />
+                                label={txt.information.fieldLabels.publicationPlace} />
                         </div>
                         <div className="column">
                             <Field
@@ -119,7 +118,7 @@ export default class ConferencePaperForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher} />
+                                label={txt.information.fieldLabels.publisher} />
                         </div>
                     </div>
                     <div className="columns">
@@ -195,7 +194,7 @@ export default class ConferencePaperForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.other.fieldLabels.startPage}/>
+                                label={txt.other.fieldLabels.startPage}/>
                         </div>
                         <div className="column">
                             <Field
@@ -204,7 +203,7 @@ export default class ConferencePaperForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.other.fieldLabels.endPage}/>
+                                label={txt.other.fieldLabels.endPage}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -215,9 +214,8 @@ export default class ConferencePaperForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
-                                floatingLabelText={txt.other.fieldLabels.notes}/>
+                                multiline
+                                label={txt.other.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -228,7 +226,7 @@ export default class ConferencePaperForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.other.fieldLabels.url}
+                                label={txt.other.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

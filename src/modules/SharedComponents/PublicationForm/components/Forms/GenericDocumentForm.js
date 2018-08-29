@@ -36,10 +36,10 @@ export default class GenericDocumentForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -90,7 +90,7 @@ export default class GenericDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={3}
-                                multiLine
+                                multiline
                                 {...txt.information.fieldLabels.abstract}
                             />
                         </div>
@@ -119,7 +119,7 @@ export default class GenericDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={1}
-                                multiLine
+                                multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </div>

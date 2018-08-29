@@ -12,18 +12,11 @@ exports[`AuthButton snapshots test renders logged in user status 1`] = `
       }
     }
     placement="bottom-start"
-    title="Log out"
   >
     <WithStyles(IconButton)
       className="log-out-button"
     >
-      <pure(Person)
-        style={
-          Object {
-            "color": "white",
-          }
-        }
-      />
+      <pure(Person) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </div>
@@ -41,18 +34,11 @@ exports[`AuthButton snapshots test renders logged out status 1`] = `
       }
     }
     placement="bottom-start"
-    title="Log in"
   >
     <WithStyles(IconButton)
       className="log-in-button"
     >
-      <pure(PersonOutline)
-        style={
-          Object {
-            "color": "white",
-          }
-        }
-      />
+      <pure(PersonOutline) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </div>

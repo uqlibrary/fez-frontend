@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 import locale from 'locale/components';
 
 export default class PublicationYearRangeField extends PureComponent {
@@ -8,7 +9,8 @@ export default class PublicationYearRangeField extends PureComponent {
         yearFilter: PropTypes.object,
         updateYearRangeFilter: PropTypes.func.isRequired,
         className: PropTypes.string,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        invalid: PropTypes.bool
     };
 
     static defaultProps = {
@@ -28,60 +30,59 @@ export default class PublicationYearRangeField extends PureComponent {
         this.props.updateYearRangeFilter({
             ...this.props.yearFilter,
             [key]: isNaN(intValue) ? 0 : intValue,
-            invalid: !this.isValidText()
+            invalid: !!this.isValidText({...this.props.yearFilter, [key]: isNaN(intValue) ? 0 : intValue})
         });
     };
 
-    isValidText = () => {
-        const from = parseInt(this.props.yearFilter.from, 10);
-        const to = parseInt(this.props.yearFilter.to, 10);
-        return (from > to) || (from > 0 && !to) || (!from && to > 0) || (from > 9999) || (to > 9999)
-            ? locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range.invalidText : null;
+    isValidText = values => {
+        const from = values.from;
+        const to = values.to;
+        return (from > to || !from || !to || from > 9999 || to > 9999);
     };
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range;
         return (
-            <div className="columns is-gapless is-mobile ">
-                <div className="column">
+            <Grid container wrap={'nowrap'} alignContent={'center'} justify={'center'}>
+                <Grid item zeroMinWidth style={{flexGrow: 1}}>
                     <TextField
-                        id={'to'}
                         fullWidth
+                        id={'to'}
                         value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
-                        floatingLabelText={txt.title}
-                        floatingLabelFixed
+                        InputLabelProps={{shrink: true}}
+                        label={txt.title}
                         onChange={this.setValue('from')}
-                        errorText={this.isValidText()}
-                        hintText={txt.fromHint}
+                        error={!!this.props.invalid}
+                        helperText={this.props.invalid && txt.invalidText}
+                        placeholder={txt.fromHint}
                         aria-label={txt.fromAria}
                         disabled={this.props.disabled}
                     />
-                </div>
-                <div className="column is-narrow">
+                </Grid>
+                <Grid item xs={'auto'}>
                     <TextField
+                        style={{width: 24}}
                         value={' to '}
                         disabled
-                        floatingLabelText={' '}
-                        floatingLabelFixed
-                        style={{width: 24}}
-                        underlineDisabledStyle={{display: 'none'}}
+                        label={' '}
+                        InputProps={{disableUnderline: true}}
                     />
-                </div>
-                <div className="column" >
+                </Grid>
+                <Grid item zeroMinWidth style={{flexGrow: 1}}>
                     <TextField
-                        id={'from'}
                         fullWidth
+                        id={'from'}
+                        InputLabelProps={{shrink: true}}
                         value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
-                        floatingLabelText={' '}
-                        floatingLabelFixed
+                        label={' '}
                         onChange={this.setValue('to')}
-                        errorText={this.isValidText() && ' '}
-                        hintText={txt.toHint}
+                        error={!!this.props.invalid}
+                        placeholder={txt.toHint}
                         aria-label={txt.toAria}
                         disabled={this.props.disabled}
                     />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }

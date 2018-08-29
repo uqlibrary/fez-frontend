@@ -1,13 +1,28 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
+// MUI 1
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import {withStyles} from '@material-ui/core/styles';
+
 const moment = require('moment');
 
-class PartialDateForm extends Component {
+const styles = theme => ({
+    fakeTitle: {
+        color: theme.palette.secondary.main,
+        opacity: 0.66,
+        fontSize: 12,
+        margin: '11px 0 -25px 0'
+    }
+});
+
+export class PartialDateForm extends Component {
     static propTypes = {
         locale: PropTypes.object,
         onChange: PropTypes.func,
@@ -17,7 +32,8 @@ class PartialDateForm extends Component {
         months: PropTypes.array,
         className: PropTypes.string,
         floatingTitle: PropTypes.string.isRequired,
-        floatingTitleRequired: PropTypes.bool
+        floatingTitleRequired: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -116,27 +132,33 @@ class PartialDateForm extends Component {
         const renderMonths = months.map((month, index) =>
             <MenuItem key={index} value={index} primaryText={month}/>
         );
+        const {classes} = this.props;
+        const isError = !!this.errors.day || !!this.errors.month || !!this.errors.year;
         return (
-            <div className="columns is-multiline is-gapless-mobile">
-                <div className={this.props.floatingTitleRequired ? ('column is-12 dateTitle required') : ('column is-12 dateTitle')}>
-                    {this.props.floatingTitle}
-                </div>
-                <div className="column">
+            <Grid container spacing={16}>
+                <Grid item xs={12}>
+                    <Typography variant="subheading" classes={{subheading: classes.fakeTitle}}>{this.props.floatingTitle}</Typography>
+                </Grid>
+                <Grid item xs={4}>
                     <TextField
+                        style={{marginTop: 8}}
                         name="day"
                         type="text"
                         maxLength="2"
-                        className={!this.props.allowPartial && className ? className : null}
                         fullWidth
                         disabled={this.props.disabled}
-                        errorText={this.errors.day}
+                        error={isError}
                         onKeyPress={this._isNumber}
                         onChange={this._onDateChanged('day')}
                         onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
-                        hintText={locale.dayLabel}
+                        placeholder={locale.dayLabel}
                     />
-                </div>
-                <div className="column">
+                    {
+                        isError &&
+                        <FormHelperText error>Invalid date</FormHelperText>
+                    }
+                </Grid>
+                <Grid item xs={4}>
                     <SelectField
                         name="month"
                         dropDownMenuProps={{animated: false}}
@@ -145,31 +167,31 @@ class PartialDateForm extends Component {
                         value={this.state.month}
                         className={!this.props.allowPartial && className ? className : null}
                         hintText={locale.monthLabel}
-                        errorText={this.errors.month}
+                        errorText={isError && ' '}
                         onChange={this._onDateChanged('month')}>
                         <MenuItem key={-1} value={-1} primaryText=""/>
                         {renderMonths}
                     </SelectField>
-                </div>
-                <div className="column">
+                </Grid>
+                <Grid item xs={4}>
                     <TextField
+                        style={{marginTop: 8}}
                         name="year"
                         type="text"
                         fullWidth
-                        className={className + ' mui-long-labels-fix'}
                         maxLength="4"
                         disabled={this.props.disabled}
-                        hintText={locale.yearLabel}
-                        errorText={this.errors.year}
+                        placeholder={locale.yearLabel}
+                        error={isError}
                         onKeyPress={this._isNumber}
                         onChange={this._onDateChanged('year')}
                         onBlur={this._onDateChanged('year')}
                     />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }
 
 
-export default PartialDateForm;
+export default withStyles(styles)(PartialDateForm);

@@ -74,4 +74,3 @@ export default class Alert extends PureComponent {
         );
     }
 }
-

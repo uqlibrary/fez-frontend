@@ -45,7 +45,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
             <div
               className="is-pulled-right"
             >
-              <Connect(HelpIcon)
+              <Connect(WithStyles(HelpIcon))
                 buttonLabel="OK"
                 text={
                   <div>
@@ -926,7 +926,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
             <div
               className="is-pulled-right"
             >
-              <Connect(HelpIcon)
+              <Connect(WithStyles(HelpIcon))
                 buttonLabel="OK"
                 text={
                   <div>

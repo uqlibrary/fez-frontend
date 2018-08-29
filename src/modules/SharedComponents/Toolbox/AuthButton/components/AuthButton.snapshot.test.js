@@ -1,8 +1,9 @@
-import AuthButton from '../components/AuthButton';
+import {AuthButton} from '../components/AuthButton';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
+        classes: {}
     };
     return getElement(AuthButton, props, isShallow);
 }

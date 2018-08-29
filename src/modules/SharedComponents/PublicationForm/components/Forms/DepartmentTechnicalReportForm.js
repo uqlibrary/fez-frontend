@@ -33,10 +33,10 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
@@ -103,7 +103,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 name="rek_description"
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={3}
                                 {...txt.information.fieldLabels.abstract}
                             />
@@ -132,8 +132,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
+                                multiline
                                 {...txt.other.fieldLabels.notes}
                             />
                         </div>

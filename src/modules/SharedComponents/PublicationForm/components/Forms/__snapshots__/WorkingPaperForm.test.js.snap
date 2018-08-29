@@ -14,14 +14,14 @@ exports[`WorkingPaperForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of paper"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Title of paper"
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -93,11 +93,11 @@ exports[`WorkingPaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Total pages"
           fullWidth={true}
-          hintText="Enter total number of pages in the paper."
+          label="Total pages"
           name="fez_record_search_key_total_pages.rek_total_pages"
           normalize={[Function]}
+          placeholder="Enter total number of pages in the paper."
           type="text"
         />
       </div>
@@ -129,11 +129,11 @@ exports[`WorkingPaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Provide an abstract or summary of the work."
-          multiLine={true}
+          label="Abstract"
+          multiline={true}
           name="rek_description"
+          placeholder="Provide an abstract or summary of the work."
           rows={3}
           type="text"
         />
@@ -260,11 +260,11 @@ exports[`WorkingPaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
+          placeholder="Add any additional information here"
           rows={1}
           type="text"
         />
@@ -279,10 +279,10 @@ exports[`WorkingPaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Type URL for this publication"
+          label="Link"
           name="rek_link"
+          placeholder="Type URL for this publication"
           type="text"
           validate={
             Array [

@@ -54,7 +54,7 @@ describe('SimpleSearchComponent', () => {
         const testFn = jest.fn();
         const wrapper = setup({onSearchTextChange: testFn});
 
-        wrapper.instance()._handleSearchTextChange({}, 'new search value');
+        wrapper.instance()._handleSearchTextChange({target:{value: 'new search value'}});
 
         expect(testFn).toHaveBeenCalledWith('new search value');
     });

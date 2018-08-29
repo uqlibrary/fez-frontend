@@ -19,14 +19,14 @@ exports[`ThesisForm  should render component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Thesis title"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Thesis title"
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -124,13 +124,13 @@ exports[`ThesisForm  should render component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Author name"
           fullWidth={true}
-          hintText=""
+          label="Author name"
           name="currentAuthor.0.nameAsPublished"
+          placeholder=""
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -307,10 +307,10 @@ exports[`ThesisForm  should render component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="DOI"
           fullWidth={true}
-          hintText=""
+          label="DOI"
           name="fez_record_search_key_doi.rek_doi"
+          placeholder=""
           type="text"
           validate={
             Array [
@@ -325,11 +325,11 @@ exports[`ThesisForm  should render component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Total pages"
           fullWidth={true}
-          hintText=""
+          label="Total pages"
           name="fez_record_search_key_total_pages.rek_total_pages"
           normalize={[Function]}
+          placeholder=""
           type="text"
         />
       </div>
@@ -343,12 +343,11 @@ exports[`ThesisForm  should render component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Provide an abstract or summary of the work"
-          multiLine={true}
+          label="Abstract"
+          multiline={true}
           name="fez_record_search_key_description.rek_description"
-          rows={1}
+          placeholder="Provide an abstract or summary of the work"
           type="text"
         />
       </div>
@@ -362,12 +361,11 @@ exports[`ThesisForm  should render component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Provide any additional information"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
-          rows={1}
+          placeholder="Provide any additional information"
           type="text"
         />
       </div>

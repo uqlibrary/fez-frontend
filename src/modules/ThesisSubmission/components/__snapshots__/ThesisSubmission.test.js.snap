@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThesisSubmission test should display successfull submission screen 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Professional doctorate deposit"
 >
   <StandardCard
@@ -32,12 +31,11 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
       />
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`ThesisSubmission test should render hdr thesis submission acknowledgement 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Higher degree by research thesis deposit"
 >
   <StandardCard
@@ -67,12 +65,11 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
       />
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Higher degree by research thesis deposit"
 >
   <p>
@@ -129,9 +126,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisTitle"
-          >
-            Title
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -152,13 +147,13 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           className="column is-half"
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
-            floatingLabelText="Author name"
             fullWidth={true}
-            hintText=""
+            label="Author name"
             name="currentAuthor.0.nameAsPublished"
+            placeholder=""
+            required={true}
             rows={1}
             type="text"
             validate={
@@ -230,9 +225,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisAbstract"
-          >
-            Abstract
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -528,12 +521,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       </div>
     </div>
   </form>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`ThesisSubmission test should render sbs thesis submission acknowledgement 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Professional doctorate deposit"
 >
   <StandardCard
@@ -563,12 +555,11 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
       />
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Professional doctorate deposit"
 >
   <p>
@@ -625,9 +616,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisTitle"
-          >
-            Title
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -648,13 +637,13 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           className="column is-half"
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
-            floatingLabelText="Author name"
             fullWidth={true}
-            hintText=""
+            label="Author name"
             name="currentAuthor.0.nameAsPublished"
+            placeholder=""
+            required={true}
             rows={1}
             type="text"
             validate={
@@ -726,9 +715,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         >
           <label
             htmlFor="thesisAbstract"
-          >
-            Abstract
-          </label>
+          />
           <Field
             component={[Function]}
             disabled={false}
@@ -1024,5 +1011,5 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       </div>
     </div>
   </form>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;

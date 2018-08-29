@@ -1,9 +1,11 @@
-import HelpDrawer from './HelpDrawer';
+import {HelpDrawer} from './HelpDrawer';
 
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
+        classes: {},
+        theme: {palette:{white:{main: '#FFFFFF'}}},
         open: testProps.open,
         title: testProps.title,
         text: testProps.text,

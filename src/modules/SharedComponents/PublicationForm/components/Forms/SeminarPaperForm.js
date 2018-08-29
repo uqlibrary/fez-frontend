@@ -37,10 +37,10 @@ export default class SeminarPaperForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]} />
                         </div>
                     </div>
@@ -107,8 +107,7 @@ export default class SeminarPaperForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
+                                multiline
                                 {...txt.optional.fieldLabels.notes} />
                         </div>
                     </div>

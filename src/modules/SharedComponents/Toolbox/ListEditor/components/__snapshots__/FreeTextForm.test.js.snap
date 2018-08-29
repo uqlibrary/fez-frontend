@@ -20,19 +20,15 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
       xs={12}
     >
       <TextField
-        className="mui-long-labels-fix"
         disabled={false}
-        errorText={null}
-        floatingLabelFixed={false}
-        floatingLabelText="Item name"
+        error={null}
         fullWidth={true}
-        hintText="Please type the item name"
-        multiLine={false}
+        label="Item name"
         onChange={[Function]}
         onKeyPress={[Function]}
-        rows={1}
-        type="text"
-        underlineShow={true}
+        placeholder="Please type the item name"
+        required={false}
+        select={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -76,19 +72,15 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
       xs={12}
     >
       <TextField
-        className="mui-long-labels-fix"
         disabled={true}
-        errorText={null}
-        floatingLabelFixed={false}
-        floatingLabelText="Item name"
+        error={null}
         fullWidth={true}
-        hintText="Please type the item name"
-        multiLine={false}
+        label="Item name"
         onChange={[Function]}
         onKeyPress={[Function]}
-        rows={1}
-        type="text"
-        underlineShow={true}
+        placeholder="Please type the item name"
+        required={false}
+        select={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -132,17 +124,13 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
       xs={12}
     >
       <TextField
-        className="mui-long-labels-fix"
         disabled={false}
-        errorText={null}
-        floatingLabelFixed={false}
+        error={null}
         fullWidth={true}
-        multiLine={false}
         onChange={[Function]}
         onKeyPress={[Function]}
-        rows={1}
-        type="text"
-        underlineShow={true}
+        required={false}
+        select={false}
         value="one"
       />
       <WithStyles(Typography)

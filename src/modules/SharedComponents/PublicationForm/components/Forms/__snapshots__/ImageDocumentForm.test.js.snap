@@ -14,13 +14,13 @@ exports[`ImageDocumentForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of image"
+          label="Title"
           name="rek_title"
+          placeholder="Title of image"
+          required={true}
           type="text"
           validate={
             Array [
@@ -61,11 +61,11 @@ exports[`ImageDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Provide an abstract or summary of the work."
-          multiLine={true}
+          label="Abstract"
+          multiline={true}
           name="rek_description"
+          placeholder="Provide an abstract or summary of the work."
           rows={3}
           type="text"
         />
@@ -192,11 +192,11 @@ exports[`ImageDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here."
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
+          placeholder="Add any additional information here."
           rows={1}
           type="text"
         />
@@ -211,10 +211,10 @@ exports[`ImageDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Enter URL for this work."
+          label="Link"
           name="rek_link"
+          placeholder="Enter URL for this work."
           type="text"
           validate={
             Array [

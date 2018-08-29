@@ -36,14 +36,13 @@ export default class BookChapterForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.bookChapterTitle}
-                                validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
+                                label={txt.information.fieldLabels.bookChapterTitle}
+                                validate={[validation.required]} />
                         </div>
                     </div>
                     <div className="columns" style={{marginTop: '-12px'}}>
@@ -52,14 +51,13 @@ export default class BookChapterForm extends Component {
                                 component={TextField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_book_title.rek_book_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.bookTitle}
-                                validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
+                                label={txt.information.fieldLabels.bookTitle}
+                                validate={[validation.required]}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -69,9 +67,9 @@ export default class BookChapterForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
-                                className="requiredField"
+                                required
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
+                                label={txt.information.fieldLabels.publicationPlace}
                                 validate={[validation.required]} />
                         </div>
                         <div className="column">
@@ -81,9 +79,9 @@ export default class BookChapterForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
-                                floatingLabelText={txt.information.fieldLabels.publisher} />
+                                label={txt.information.fieldLabels.publisher} />
                         </div>
                     </div>
                     <div className="columns">
@@ -166,7 +164,7 @@ export default class BookChapterForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                floatingLabelText={txt.other.fieldLabels.edition}/>
+                                label={txt.other.fieldLabels.edition}/>
                         </div>
 
                         <div className="column">
@@ -176,9 +174,9 @@ export default class BookChapterForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
-                                floatingLabelText={txt.other.fieldLabels.startPage}/>
+                                label={txt.other.fieldLabels.startPage}/>
                         </div>
                         <div className="column">
                             <Field
@@ -187,9 +185,9 @@ export default class BookChapterForm extends Component {
                                 type="text"
                                 fullWidth
                                 disabled={this.props.submitting}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
-                                floatingLabelText={txt.other.fieldLabels.endPage}/>
+                                label={txt.other.fieldLabels.endPage}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -200,9 +198,8 @@ export default class BookChapterForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
-                                floatingLabelText={txt.other.fieldLabels.notes}/>
+                                multiline
+                                label={txt.other.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -213,7 +210,7 @@ export default class BookChapterForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.other.fieldLabels.url}
+                                label={txt.other.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

@@ -178,7 +178,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                         </div>
                                         <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
                                             <div className="columns is-gapless is-mobile is-multiline sidebar">
-                                                <div className="column is-11-mobile is-narrow-tablet is-12-desktop" style={{minWidth: 166, marginRight: 12}}>
+                                                <div className="column is-11-mobile is-3-tablet is-12-desktop">
                                                     <Checkbox
                                                         className="advancedSearchOpenAccessCheckbox"
                                                         label={txt.advancedSearch.openAccess.title}
@@ -196,12 +196,13 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                         disabled={this.props.isLoading}
                                                     />
                                                 </div>
-                                                <div className="column is-11-mobile is-12-desktop">
+                                                <div className="column is-11-mobile is-3-tablet is-12-desktop" style={{marginTop: 16}}>
                                                     <PublicationYearRangeField
                                                         className="advancedSearchYearFilter"
                                                         yearFilter={this.props.yearFilter}
                                                         updateYearRangeFilter={this.props.updateYearRangeFilter}
                                                         disabled={this.props.isLoading}
+                                                        invalid={this.props.yearFilter.invalid}
                                                     />
                                                 </div>
                                             </div>

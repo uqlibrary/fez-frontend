@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
@@ -39,25 +40,25 @@ export default class Masquerade extends Component {
         return (
             <StandardPage title={txt.title}>
                 <StandardCard title={txt.title} help={txt.help}>
-                    <div>{txt.description}</div>
+                    <Typography>{txt.description}</Typography>
                     <TextField
                         fullWidth
                         id="userName"
-                        floatingLabelText={txt.labels.hint}
-                        hintText={txt.labels.hint}
+                        label={txt.labels.hint}
+                        placeholder={txt.labels.hint}
                         value={this.state.userName}
                         onChange={this._usernameChanged}
                         onKeyPress={this._masqueradeAs}
-                        className="mui-long-labels-fix"
                     />
                 </StandardCard>
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>
                     <div className="column is-narrow-desktop">
-                        <RaisedButton
+                        <Button
+                            variant={'raised'}
                             fullWidth
-                            secondary
-                            label={txt.labels.submit}
+                            color="primary"
+                            children={txt.labels.submit}
                             disabled={this.state.loading}
                             onClick={this._masqueradeAs}/>
                     </div>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchRecords page renders error alert if error occurs during search 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -29,11 +29,11 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
     title="Error"
     type="error_outline"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page renders loading screen while export publications loading 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -56,11 +56,11 @@ exports[`SearchRecords page renders loading screen while export publications loa
   <div
     className="columns"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should render loading screen while export publications loading 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -121,11 +121,11 @@ exports[`SearchRecords page should render loading screen while export publicatio
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should render loading screen while loading publications while filtering 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -193,11 +193,11 @@ exports[`SearchRecords page should render loading screen while loading publicati
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should render loading screen while loading search results 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -227,11 +227,11 @@ exports[`SearchRecords page should render loading screen while loading search re
   <div
     className="columns"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should render no results 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -272,11 +272,11 @@ exports[`SearchRecords page should render no results 1`] = `
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should render placeholders 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -299,11 +299,11 @@ exports[`SearchRecords page should render placeholders 1`] = `
   <div
     className="columns"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should show available filters or selected filters if activeFacets OA selected (even if there are no results) 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -343,11 +343,11 @@ exports[`SearchRecords page should show available filters or selected filters if
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should show available filters or selected filters if activeFacets filter selected (even if there are no results) 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -389,11 +389,11 @@ exports[`SearchRecords page should show available filters or selected filters if
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should show available filters or selected filters if activeFacets range selected (even if there are no results) 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -438,11 +438,11 @@ exports[`SearchRecords page should show available filters or selected filters if
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`SearchRecords page should show available filters or selected filters if publicationsListFacets returned (even if there are no results) 1`] = `
-<StandardPage
+<WithStyles(StandardPage)
   className="page-search-records"
 >
   <StandardCard
@@ -522,5 +522,5 @@ exports[`SearchRecords page should show available filters or selected filters if
       </StandardRighthandCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;

@@ -19,14 +19,14 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Proceedings title"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Proceedings title"
+          required={true}
           rows={1}
           style={
             Object {
@@ -49,13 +49,13 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Conference name"
           fullWidth={true}
-          hintText="Type the name of conference"
+          label="Conference name"
           name="fez_record_search_key_conference_name.rek_conference_name"
+          placeholder="Type the name of conference"
+          required={true}
           type="text"
           validate={
             Array [
@@ -68,13 +68,13 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Conference location"
           fullWidth={true}
-          hintText="Type the place of conference"
+          label="Conference location"
           name="fez_record_search_key_conference_location.rek_conference_location"
+          placeholder="Type the place of conference"
+          required={true}
           type="text"
           validate={
             Array [
@@ -91,13 +91,13 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Conference dates (eg 13-15 December 2011)"
           fullWidth={true}
-          hintText="Type the dates of conference"
+          label="Conference dates (eg 13-15 December 2011)"
           name="fez_record_search_key_conference_dates.rek_conference_dates"
+          placeholder="Type the dates of conference"
+          required={true}
           type="text"
           validate={
             Array [
@@ -134,10 +134,10 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Type the name of the publisher"
+          label="Publisher"
           name="fez_record_search_key_publisher.rek_publisher"
+          placeholder="Type the name of the publisher"
           type="text"
         />
       </div>
@@ -147,10 +147,10 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText="Type the place of publication"
+          label="Place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          placeholder="Type the place of publication"
           type="text"
         />
       </div>
@@ -416,12 +416,11 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
-          rows={1}
+          placeholder="Add any additional information"
           type="text"
         />
       </div>
@@ -435,10 +434,10 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
           fullWidth={true}
-          hintText="Enter URL for this publication"
+          label="Link (URL)"
           name="rek_link"
+          placeholder="Enter URL for this publication"
           type="text"
           validate={
             Array [

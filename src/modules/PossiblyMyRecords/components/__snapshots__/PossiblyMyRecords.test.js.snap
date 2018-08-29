@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component PossiblyMyRecords renders active filters 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Claim possible publications"
 >
   <div
@@ -75,12 +74,11 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Claim possible publications"
 >
   <Alert
@@ -116,12 +114,11 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component PossiblyMyRecords renders list of publications and counts and facets 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Claim possible publications"
 >
   <ConfirmDialogBox
@@ -287,12 +284,11 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       </StandardRighthandCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component PossiblyMyRecords renders loading component while loading publication data 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Claim possible publications"
 >
   <div
@@ -305,12 +301,11 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
   <div
     className="columns"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component PossiblyMyRecords renders loading screen while loading publication counts 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Claim possible publications"
 >
   <div
@@ -323,12 +318,11 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
   <div
     className="columns"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component PossiblyMyRecords renders no results 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="Claim possible publications"
 >
   <div
@@ -356,7 +350,7 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`Component PossiblyMyRecords renders nothing while account is loading 1`] = `""`;

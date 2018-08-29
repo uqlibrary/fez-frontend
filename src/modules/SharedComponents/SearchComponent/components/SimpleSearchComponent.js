@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
@@ -67,8 +67,8 @@ export default class SimpleSearchComponent extends PureComponent {
         });
     };
 
-    _handleSearchTextChange = (event, value) => {
-        this.props.onSearchTextChange(value);
+    _handleSearchTextChange = (event) => {
+        this.props.onSearchTextChange(event.target.value);
     };
 
     _handleSearchMode = () => {
@@ -100,12 +100,20 @@ export default class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-
+        const inputStyles = () => {
+            if(this.state.showMobile) {
+                return {marginTop: 18};
+            } else if (this.props.isInHeader) {
+                return {padding: 8};
+            } else {
+                return {};
+            }
+        };
         return (
             <div className={`searchComponent ${this.props.isInHeader && 'header'} ${this.props.className}`}>
                 <div className="columns is-gapless">
                     <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
-                        <div className="columns is-gapless search-field is-mobile">
+                        <div className="columns is-gapless search-field is-mobile"  >
                             {
                                 this.props.showPrefixIcon &&
                                 <div className="column is-narrow searchIconPrefix is-hidden-mobile">
@@ -122,19 +130,20 @@ export default class SimpleSearchComponent extends PureComponent {
                                     </IconButton>
                                 </div>
                             }
-                            <div className="column">
+                            <div className="column" >
                                 <TextField
                                     type="search"
                                     id="searchField"
                                     fullWidth
-                                    floatingLabelText={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                    hintText={this.props.isInHeader && txt.searchBoxPlaceholder}
+                                    label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                    placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
                                     aria-label={txt.ariaInputLabel}
                                     onChange={this._handleSearchTextChange}
                                     onKeyPress={this._handleSearch}
                                     value={this.props.searchText}
-                                    underlineStyle={this.props.isInHeader ? {display: 'none'} : {}}
-                                    errorText={this.searchTextValidationMessage(this.props.searchText)}
+                                    InputProps={this.props.isInHeader ? {disableUnderline: true} : null}
+                                    error={this.searchTextValidationMessage(this.props.searchText)}
+                                    style={inputStyles()}
                                 />
                             </div>
                             <div className="is-hidden-tablet mobileSpacer" />
@@ -142,20 +151,19 @@ export default class SimpleSearchComponent extends PureComponent {
                     </div>
                     {
                         this.props.showMobileSearchButton &&
-                        <div className="column is-narrow is-hidden-tablet">
+                        <div className="column is-narrow is-hidden-tablet"  >
                             <IconButton
                                 onClick={this._handleToggleMobile}
                                 aria-label={txt.mobileSearchButtonAriaLabel}
                                 className="searchButton"
-                                hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                            >
+                                hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}>
                                 <SearchIcon/>
                             </IconButton>
                         </div>
                     }
                     {
                         this.props.showSearchButton &&
-                        <div className="column is-narrow iconSearchButtonWrapper">
+                        <div className="column is-narrow iconSearchButtonWrapper"  >
                             <IconButton
                                 tooltipPosition="bottom-left"
                                 onClick={this._handleSearch}
@@ -167,7 +175,7 @@ export default class SimpleSearchComponent extends PureComponent {
                             </IconButton>
                         </div>
                     }
-                    <div className="column is-narrow searchButtonWrapper">
+                    <div className="column is-narrow searchButtonWrapper"  >
                         <RaisedButton
                             label={txt.searchButtonText}
                             aria-label={txt.searchButtonAriaLabel}
@@ -178,7 +186,7 @@ export default class SimpleSearchComponent extends PureComponent {
                     </div>
                     {
                         this.props.showAdvancedSearchButton &&
-                        <div className="column is-narrow advancedSearchButtonWrapper">
+                        <div className="column is-narrow advancedSearchButtonWrapper"  >
                             <RaisedButton
                                 label={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}

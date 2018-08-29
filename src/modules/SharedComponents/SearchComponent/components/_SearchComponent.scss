@@ -27,19 +27,13 @@
      }
   }
   .searchButtonWrapper {
-    margin-top: 28px !important;
-    @include mobile {
-      margin-top: 6px !important;
-    }
+    margin-top: 12px !important;
     @include tablet {
       margin-left: 12px !important;
     }
   }
   .advancedSearchButtonWrapper {
-    margin-top: 28px !important;
-    @include mobile {
-      margin-top: 6px !important;
-    }
+    margin-top: 8px !important;
   }
   .searchIconPrefix {
     svg {
@@ -48,7 +42,7 @@
     }
   }
   .advancedButton {
-    margin-left: 6px !important;
+    margin-left: 12px !important;
     @include mobile {
       margin-top: 6px !important;
       margin-left: 0 !important;
@@ -180,6 +174,7 @@
   }
   .sidebar {
     @include tablet-only {
+      margin-top: 24px;
       width: 97%;
     }
     .advancedSearchOpenAccessCheckbox {
@@ -199,6 +194,7 @@
     }
   }
   .actionButtons {
+    margin-top: 24px;
     .column {
       @include tablet {
         margin: 3px !important;
@@ -238,7 +234,7 @@
       }
     }
     .column.input {
-      overflow-x: hidden !important;
+      overflow: hidden !important;
       @include desktop {
         max-width: 100%;
         width: 100px;

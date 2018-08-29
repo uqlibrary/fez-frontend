@@ -1179,13 +1179,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
               className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
+                className="column is-11-mobile is-3-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1212,11 +1206,17 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
                 />
               </div>
               <div
-                className="column is-11-mobile is-12-desktop"
+                className="column is-11-mobile is-3-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginTop": 16,
+                  }
+                }
               >
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  invalid={false}
                   updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
@@ -1955,13 +1955,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
               className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
+                className="column is-11-mobile is-3-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1988,11 +1982,17 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                 />
               </div>
               <div
-                className="column is-11-mobile is-12-desktop"
+                className="column is-11-mobile is-3-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginTop": 16,
+                  }
+                }
               >
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  invalid={false}
                   updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
@@ -2175,13 +2175,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
               className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
+                className="column is-11-mobile is-3-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -2208,11 +2202,17 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 />
               </div>
               <div
-                className="column is-11-mobile is-12-desktop"
+                className="column is-11-mobile is-3-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginTop": 16,
+                  }
+                }
               >
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  invalid={false}
                   updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
@@ -2466,13 +2466,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
               className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
+                className="column is-11-mobile is-3-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -2499,11 +2493,17 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 />
               </div>
               <div
-                className="column is-11-mobile is-12-desktop"
+                className="column is-11-mobile is-3-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginTop": 16,
+                  }
+                }
               >
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  invalid={false}
                   updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {

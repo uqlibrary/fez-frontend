@@ -33,14 +33,13 @@ export default class PatentForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.title}
-                                validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
+                                label={txt.information.fieldLabels.title}
+                                validate={[validation.required]} />
                         </div>
                     </div>
                     <div className="columns">
@@ -51,7 +50,7 @@ export default class PatentForm extends Component {
                                 name="fez_record_search_key_patent_number.rek_patent_number"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.patentNumber}/>
+                                label={txt.information.fieldLabels.patentNumber}/>
                         </div>
                         <div className="column">
                             <Field
@@ -74,7 +73,7 @@ export default class PatentForm extends Component {
                                 name="fez_record_search_key_country_of_issue.rek_country_of_issue"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.countryOfOrigin} />
+                                label={txt.information.fieldLabels.countryOfOrigin} />
                         </div>
                         <div className="column">
                             <Field
@@ -83,7 +82,7 @@ export default class PatentForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.patentOwner} />
+                                label={txt.information.fieldLabels.patentOwner} />
                         </div>
                     </div>
                 </StandardCard>
@@ -109,9 +108,9 @@ export default class PatentForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
-                                floatingLabelText={txt.other.fieldLabels.notes}/>
+                                label={txt.other.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -122,7 +121,7 @@ export default class PatentForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.other.fieldLabels.url}
+                                label={txt.other.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

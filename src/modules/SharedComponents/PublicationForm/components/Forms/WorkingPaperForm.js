@@ -36,10 +36,10 @@ export default class WorkingPaperForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
@@ -116,7 +116,7 @@ export default class WorkingPaperForm extends Component {
                                 name="rek_description"
                                 type="text"
                                 rows={3}
-                                multiLine
+                                multiline
                                 fullWidth
                                 {...txt.information.fieldLabels.abstract}
                             />
@@ -145,7 +145,7 @@ export default class WorkingPaperForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.other.fieldLabels.notes}
                             />

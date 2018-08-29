@@ -1,73 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component PublicationYearRangeField should render as expected 1`] = `
-<div
-  className="columns is-gapless is-mobile "
+<WithStyles(Grid)
+  alignContent="center"
+  container={true}
+  justify="center"
+  wrap="nowrap"
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+    zeroMinWidth={true}
   >
     <TextField
+      InputLabelProps={
+        Object {
+          "shrink": true,
+        }
+      }
       aria-label="Enter a year to search from"
       disabled={false}
-      errorText={null}
-      floatingLabelFixed={true}
-      floatingLabelText="Published year range"
+      error={false}
       fullWidth={true}
-      hintText="Year from"
       id="to"
-      multiLine={false}
+      label="Published year range"
       onChange={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
+      placeholder="Year from"
+      required={false}
+      select={false}
       value="1999"
     />
-  </div>
-  <div
-    className="column is-narrow"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs="auto"
   >
     <TextField
+      InputProps={
+        Object {
+          "disableUnderline": true,
+        }
+      }
       disabled={true}
-      floatingLabelFixed={true}
-      floatingLabelText=" "
-      fullWidth={false}
-      multiLine={false}
-      rows={1}
+      label=" "
+      required={false}
+      select={false}
       style={
         Object {
           "width": 24,
         }
       }
-      type="text"
-      underlineDisabledStyle={
-        Object {
-          "display": "none",
-        }
-      }
-      underlineShow={true}
       value=" to "
     />
-  </div>
-  <div
-    className="column"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+    zeroMinWidth={true}
   >
     <TextField
+      InputLabelProps={
+        Object {
+          "shrink": true,
+        }
+      }
       aria-label="Enter a year to search to"
       disabled={false}
-      errorText={null}
-      floatingLabelFixed={true}
-      floatingLabelText=" "
+      error={false}
       fullWidth={true}
-      hintText="Year to"
       id="from"
-      multiLine={false}
+      label=" "
       onChange={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
+      placeholder="Year to"
+      required={false}
+      select={false}
       value="2001"
     />
-  </div>
-</div>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

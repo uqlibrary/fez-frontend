@@ -29,7 +29,7 @@ export default {
                 title="Click to return to the eSpace home page"
                 style={{color: '#FFFFFF'}}
             >
-                UQ eSpace {process.env.TITLE_SUFFIX || ''}
+                UQ eSpace {process.env.TITLE_SUFFIX || 'eSpace'}
             </a>
         ),
         logo: {

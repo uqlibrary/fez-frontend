@@ -17,7 +17,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
   <div
     className="is-pulled-right"
   >
-    <Connect(HelpIcon)
+    <Connect(WithStyles(HelpIcon))
       buttonLabel="OK"
       text={
         <div>

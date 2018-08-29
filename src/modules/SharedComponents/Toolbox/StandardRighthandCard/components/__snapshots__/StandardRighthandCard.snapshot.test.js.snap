@@ -19,7 +19,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders StandardRigh
     <div
       className="column is-narrow is-helpicon"
     >
-      <Connect(HelpIcon)
+      <Connect(WithStyles(HelpIcon))
         buttonLabel="OK"
         text="Some help text"
         title="Help text"
@@ -48,7 +48,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders StandardRigh
     <div
       className="column is-narrow is-helpicon"
     >
-      <Connect(HelpIcon)
+      <Connect(WithStyles(HelpIcon))
         buttonLabel="OK"
         text="Some help text"
         title="Help text"

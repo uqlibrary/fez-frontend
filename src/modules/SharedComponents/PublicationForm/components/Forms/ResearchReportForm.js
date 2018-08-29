@@ -39,14 +39,13 @@ export default class ResearchReportForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
-                                className="requiredField"
+                                required
                                 type="text"
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
-                                style={{marginBottom: '-12px'}}
                             />
                         </div>
                     </div>
@@ -80,7 +79,7 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                className="requiredField"
+                                required
                                 {...txt.information.fieldLabels.totalPages}
                                 normalize={this.getNumbersOnly}
                                 validate={[validation.required]}
@@ -160,8 +159,7 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
+                                multiline
                                 {...txt.other.fieldLabels.abstract}
                             />
                         </div>
@@ -174,8 +172,7 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
-                                rows={1}
+                                multiline
                                 {...txt.other.fieldLabels.notes}
                             />
                         </div>

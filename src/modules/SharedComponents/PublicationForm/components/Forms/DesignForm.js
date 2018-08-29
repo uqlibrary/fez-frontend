@@ -38,7 +38,7 @@ export default class DesignForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.articleTitle}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -64,7 +64,7 @@ export default class DesignForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={1}
-                                multiLine
+                                multiline
                                 {...txt.information.fieldLabels.projectDescription}
                             />
                         </div>
@@ -135,7 +135,7 @@ export default class DesignForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                multiLine
+                                multiline
                                 rows={1}
                                 {...txt.optional.fieldLabels.notes}/>
                         </div>

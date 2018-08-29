@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Grid, Typography} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
@@ -70,16 +70,15 @@ export class FreeTextForm extends Component {
                         <TextField
                             fullWidth
                             ref="itemName"
-                            floatingLabelText={inputFieldLabel}
-                            hintText={inputFieldHint}
+                            label={inputFieldLabel}
+                            placeholder={inputFieldHint}
                             value={this.state.itemName}
                             onChange={this.onNameChanged}
                             onKeyPress={this.addItem}
-                            errorText={this.props.isValid(this.state.itemName) || errorText
+                            error={this.props.isValid(this.state.itemName) || errorText
                                 ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
                                 : null}
                             disabled={this.props.disabled}
-                            className="mui-long-labels-fix"
                         />
                         {
                             this.props.remindToAdd &&

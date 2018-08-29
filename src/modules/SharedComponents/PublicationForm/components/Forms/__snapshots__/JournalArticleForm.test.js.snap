@@ -14,14 +14,14 @@ exports[`JournalArticleForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of journal article"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Title of journal article"
+          required={true}
           rows={1}
           type="text"
           validate={
@@ -39,13 +39,13 @@ exports[`JournalArticleForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Journal name"
           fullWidth={true}
-          hintText=""
+          label="Journal name"
           name="fez_record_search_key_journal_name.rek_journal_name"
+          placeholder=""
+          required={true}
           type="text"
           validate={
             Array [
@@ -220,8 +220,8 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Volume"
           fullWidth={true}
+          label="Volume"
           name="fez_record_search_key_volume_number.rek_volume_number"
           type="text"
         />
@@ -232,8 +232,8 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Issue"
           fullWidth={true}
+          label="Issue"
           name="fez_record_search_key_issue_number.rek_issue_number"
           type="text"
         />
@@ -244,8 +244,8 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Start page"
           fullWidth={true}
+          label="Start page"
           name="fez_record_search_key_start_page.rek_start_page"
           type="text"
         />
@@ -256,8 +256,8 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="End page"
           fullWidth={true}
+          label="End page"
           name="fez_record_search_key_end_page.rek_end_page"
           type="text"
         />
@@ -272,8 +272,8 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Article number"
           fullWidth={true}
+          label="Article number"
           name="fez_record_search_key_article_number.rek_article_number"
           type="text"
         />
@@ -288,9 +288,9 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
           rows={1}
           type="text"
@@ -306,8 +306,8 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
           fullWidth={true}
+          label="Link (URL)"
           name="rek_link"
           type="text"
           validate={

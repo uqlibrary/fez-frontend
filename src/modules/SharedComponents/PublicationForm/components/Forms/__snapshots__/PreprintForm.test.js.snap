@@ -17,11 +17,11 @@ exports[`PreprintForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of report"
-          multiLine={true}
+          label="Title"
+          multiline={true}
           name="rek_title"
+          placeholder="Title of report"
           rows={1}
           type="text"
           validate={
@@ -175,11 +175,11 @@ exports[`PreprintForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Add any additional information here"
-          multiLine={true}
+          label="Notes (not publicly viewable)"
+          multiline={true}
           name="comments"
+          placeholder="Add any additional information here"
           rows={1}
           type="text"
         />
@@ -194,10 +194,10 @@ exports[`PreprintForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
           fullWidth={true}
-          hintText="Enter URL for this publication"
+          label="Link (URL)"
           name="rek_link"
+          placeholder="Enter URL for this publication"
           type="text"
           validate={
             Array [

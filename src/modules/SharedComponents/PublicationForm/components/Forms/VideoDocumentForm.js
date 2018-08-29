@@ -41,7 +41,7 @@ export default class VideoDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.documentTitle}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </div>
@@ -91,7 +91,7 @@ export default class VideoDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={3}
-                                multiLine
+                                multiline
                                 {...txt.information.fieldLabels.abstract}
                             />
                         </div>
@@ -130,8 +130,7 @@ export default class VideoDocumentForm extends Component {
                                 name="comments"
                                 type="text"
                                 fullWidth
-                                rows={1}
-                                multiLine
+                                multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </div>

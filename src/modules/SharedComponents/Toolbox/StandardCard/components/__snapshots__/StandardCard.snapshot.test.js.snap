@@ -26,7 +26,7 @@ exports[`Snapshot tests for StandardCard component renders StandardCard with tit
       <div
         className="column is-narrow is-helpicon"
       >
-        <Connect(HelpIcon)
+        <Connect(WithStyles(HelpIcon))
           buttonLabel="OK"
           text="help text"
           title="help"

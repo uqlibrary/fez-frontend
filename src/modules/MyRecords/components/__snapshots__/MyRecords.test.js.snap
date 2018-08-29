@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MyRecords test renders active filters 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -94,12 +93,11 @@ exports[`MyRecords test renders active filters 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`MyRecords test renders list of publications no facets 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -196,12 +194,11 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`MyRecords test renders list of publications with facets 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -394,12 +391,11 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`MyRecords test renders loading screen while export publications loading 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -460,14 +456,13 @@ exports[`MyRecords test renders loading screen while export publications loading
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`MyRecords test renders loading screen while loading account data 1`] = `""`;
 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -480,12 +475,11 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
   <div
     className="columns"
   />
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`MyRecords test renders loading screen while loading publications while filtering 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -546,12 +540,11 @@ exports[`MyRecords test renders loading screen while loading publications while 
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;
 
 exports[`MyRecords test renders no results 1`] = `
-<StandardPage
-  className=""
+<WithStyles(StandardPage)
   title="My research"
 >
   <div
@@ -597,5 +590,5 @@ exports[`MyRecords test renders no results 1`] = `
       </StandardCard>
     </div>
   </div>
-</StandardPage>
+</WithStyles(StandardPage)>
 `;

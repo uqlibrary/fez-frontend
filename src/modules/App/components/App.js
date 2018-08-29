@@ -26,8 +26,36 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/icons/Menu';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class App extends PureComponent {
+import jss from 'jss';
+import nested from 'jss-nested';
+// import global from 'jss-global';
+jss.use(nested());
+
+const styles = theme => ({
+    layoutCard: {
+        // border: '5px dashed red',
+        maxWidth: '1200px',
+        margin: '24px auto',
+        width: '90%',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 auto 24px auto'
+        },
+    },
+    layoutFill: {
+        // border: '5px dashed green',
+        margin: 0,
+        padding: 0,
+        maxHeight: '100%',
+        height: '100%'
+    }
+});
+
+export class App extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -36,7 +64,8 @@ export default class App extends PureComponent {
         isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
     static childContextTypes = {
         isMobile: PropTypes.bool,
@@ -124,9 +153,10 @@ export default class App extends PureComponent {
     };
 
     render() {
+        const {classes} = this.props;
         if (this.props.accountLoading) {
             return (
-                <div className="layout-fill">
+                <div className={classes.layoutFill}>
                     <AppLoader
                         title={locale.global.title}
                         logoImage={locale.global.logo.image}
@@ -151,9 +181,8 @@ export default class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        // const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
-        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
-
+        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 280} : {};
+        const titleStyle = this.state.docked ? {paddingLeft: 200} : {paddingLeft: 0};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
@@ -190,43 +219,59 @@ export default class App extends PureComponent {
             isHdrStudent: isHdrStudent
         });
         return (
-            <div className="layout-fill align-stretch">
+            <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
-                    className="AppBar align-center"
+                    className="AppBar"
                     color={'primary'}
                     position={'fixed'}>
-                    <Toolbar>
-                        <Fragment>
-                            {/* Menu Button */}
-                            {this.state.docked || !this.state.menuDrawerOpen &&
-                                <Tooltip title={locale.global.mainNavButton.tooltip} placement="bottom-end"  TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
-                                    <IconButton
-                                        aria-label={locale.global.mainNavButton.aria}
-                                        style={{marginLeft: '-12px', marginRight: '12px'}}
-                                        onClick={this.toggleDrawer} >
-                                        <Menu style={{color: 'white'}}/>
-                                    </IconButton>
-                                </Tooltip>
+                    <Toolbar style={{height: '70px'}}>
+                        <Grid container spacing={8}
+                            alignItems="center"
+                            direction="row"
+                            wrap="nowrap"
+                            justify="flex-start">
+                            {/* Menu/Close Button */}
+                            {!this.state.docked &&
+                                <Grid item xs={'auto'} zeroMinWidth>
+                                    <Tooltip title={locale.global.mainNavButton.tooltip}
+                                        placement="bottom-end"
+                                        TransitionComponent={Fade}>
+                                        <IconButton
+                                            aria-label={locale.global.mainNavButton.aria}
+                                            style={{marginLeft: '-12px', marginRight: '12px'}}
+                                            onClick={this.toggleDrawer}>
+                                            <Menu style={{color: 'white'}}/>
+                                        </IconButton>
+                                    </Tooltip>
+                                </Grid>
                             }
+                            <Hidden smDown lgUp>
+                                <Grid item>
+                                    <img src={'../../../../public/images/uq-logo-white-minimal.svg'} style={{height: '66px'}} alt={locale.global.logo.label} />
+                                </Grid>
+                            </Hidden>
                             {/* Title */}
-                            <img src={'/src/images/uq-logo-white-minimal.svg'} style={{height: 75, marginRight: 12}} />
-                            <Typography variant="title" style={{flexGrow: 1}}>
-                                {locale.global.appTitle}
-                            </Typography>
+                            <Grid item style={{flexGrow: 1}}>
+                                <Typography variant="title" noWrap style={titleStyle}>
+                                    {locale.global.appTitle}
+                                </Typography>
+                            </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <div style={{minWidth: '400px', marginRight: 12}}>
+                                <Grid item md={4} zeroMinWidth>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
-                                </div>
+                                </Grid>
                             }
-                            <AuthButton
-                                isAuthorizedUser={isAuthorizedUser}
-                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
-                                signInTooltipText={locale.global.authentication.signInText}
-                                signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
-                                ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
-                        </Fragment>
+                            <Grid item xs={'auto'} zeroMinWidth>
+                                <AuthButton
+                                    isAuthorizedUser={isAuthorizedUser}
+                                    onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                    signInTooltipText={locale.global.authentication.signInText}
+                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
+                                    ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
+                            </Grid>
+                        </Grid>
                     </Toolbar>
                 </AppBar>
                 {
@@ -256,16 +301,16 @@ export default class App extends PureComponent {
                     />
                     {
                         userStatusAlert &&
-                        <div className="dashAlert">
-                            <div className="layout-card">
+                        <Grid container alignContent={'center'} justify={'center'} alignItems={'center'} >
+                            <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />
-                            </div>
-                        </div>
+                            </Grid>
+                        </Grid>
                     }
                     <AppAlertContainer/>
                     {
                         isAuthorLoading &&
-                        <div className="isLoading is-centered">
+                        <div style={{margin: '0 auto'}}>
                             <InlineLoader message={locale.global.loadingUserAccount}/>
                         </div>
                     }
@@ -283,7 +328,9 @@ export default class App extends PureComponent {
                 </div>
                 <HelpDrawer/>
                 <OfflineSnackbar/>
-            </div>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(App);

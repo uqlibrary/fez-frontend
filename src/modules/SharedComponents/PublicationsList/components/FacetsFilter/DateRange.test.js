@@ -90,14 +90,14 @@ describe('Date range ', () => {
     it('should not call onChange year range is set', () => {
         const testFn = jest.fn();
         const wrapper = setup({onChange: testFn});
-        wrapper.instance().setValue('from')({}, '');
-        wrapper.instance().setValue('to')({}, '2015');
+        wrapper.instance().setValue('from')({target:{value: null}});
+        wrapper.instance().setValue('to')({target:{value: '2015'}});
         wrapper.instance().setDateRange();
         wrapper.update();
         expect(testFn).toHaveBeenCalledWith({from: null, to: 2015});
 
-        wrapper.instance().setValue('from')({}, 2000);
-        wrapper.instance().setValue('to')({}, '');
+        wrapper.instance().setValue('from')({target:{value: 2000}});
+        wrapper.instance().setValue('to')({target:{value: null}});
         wrapper.instance().setDateRange();
         wrapper.update();
         expect(testFn).toHaveBeenCalledWith({from: 2000, to: null});

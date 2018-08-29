@@ -49,6 +49,11 @@ export const mui1theme = createMuiTheme({
         },
         white: {
             main: '#FFFFFF'
+        },
+        warning: {
+            light: '#ff9a57',
+            main: '#f06f0d',
+            dark: '#994708',
         }
     },
     status: {
@@ -58,6 +63,6 @@ export const mui1theme = createMuiTheme({
     typography: {
         fontWeightLight: 200,
         fontWeightRegular: 300,
-        fontWeightMedium: 400
+        fontWeightMedium: 400,
     }
 });

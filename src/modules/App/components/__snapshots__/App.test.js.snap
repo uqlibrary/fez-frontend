@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application component should render alert if user is not fez author 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -162,96 +162,142 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -343,11 +389,20 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
         <Alert
           allowDismiss={false}
@@ -357,8 +412,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -551,14 +606,14 @@ exports[`Application component should render alert if user is not fez author 1`]
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -718,96 +773,142 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - J RHD Student"
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - J RHD Student"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1091,14 +1192,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for HDR without ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1145,96 +1246,142 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - J RHD Student"
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - J RHD Student"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1302,11 +1449,20 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
         <Alert
           allowDismiss={false}
@@ -1316,8 +1472,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           title="ORCID ID REQUIRED"
           type="error_outline"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -1366,14 +1522,14 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1533,96 +1689,142 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1906,14 +2108,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2073,96 +2275,142 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -2254,11 +2502,20 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
         <Alert
           action={[Function]}
@@ -2270,8 +2527,8 @@ exports[`Application component should render app for account with fez author wit
           title="ORCID ID REQUIRED"
           type="warning"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -2464,14 +2721,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2631,79 +2888,128 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </React.Fragment>
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <div
@@ -2914,14 +3220,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3081,96 +3387,142 @@ exports[`Application component should render application with routing for the us
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -3264,21 +3616,25 @@ exports[`Application component should render application with routing for the us
     />
     <Connect(AppAlert) />
     <div
-      className="isLoading is-centered"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
     >
       <InlineLoader
         message="Loading user account..."
       />
     </div>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render for anon user 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3321,96 +3677,142 @@ exports[`Application component should render for anon user 1`] = `
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <div
-          style={
-            Object {
-              "marginRight": 12,
-              "minWidth": "400px",
-            }
-          }
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <AuthButton
-          ariaLabel="Click to log in to eSpace"
-          isAuthorizedUser={false}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText=""
-        />
-      </React.Fragment>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log in to eSpace"
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
-  <MenuDrawer
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -3512,15 +3914,13 @@ exports[`Application component should render for anon user 1`] = `
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render loading screen while account is loading 1`] = `
-<div
-  className="layout-fill"
->
+<div>
   <AppLoader
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
     logoText="University of Queensland"
@@ -3531,8 +3931,8 @@ exports[`Application component should render loading screen while account is loa
 `;
 
 exports[`Application component should render thesis submission for HDR without menu 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3579,79 +3979,128 @@ exports[`Application component should render thesis submission for HDR without m
     }
   />
   <WithStyles(AppBar)
-    className="AppBar align-center"
+    className="AppBar"
     color="primary"
     position="fixed"
   >
-    <WithStyles(Toolbar)>
-      <React.Fragment>
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
-          }
-          placement="bottom-end"
-          title="Main navigation"
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to open the main navigation"
-            onClick={[Function]}
-            style={
-              Object {
-                "marginLeft": "-12px",
-                "marginRight": "12px",
-              }
-            }
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
           >
-            <pure(Menu)
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
               style={
                 Object {
-                  "color": "white",
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(Menu)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={true}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <img
+              alt="University of Queensland"
+              src="../../../../public/images/uq-logo-white-minimal.svg"
+              style={
+                Object {
+                  "height": "66px",
                 }
               }
             />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-        <img
-          src="/src/images/uq-logo-white-minimal.svg"
-          style={
-            Object {
-              "height": 75,
-              "marginRight": 12,
-            }
-          }
-        />
-        <WithStyles(Typography)
+          </WithStyles(Grid)>
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
           style={
             Object {
               "flexGrow": 1,
             }
           }
-          variant="title"
         >
-          <a
-            className="appTitle"
-            href="/"
+          <WithStyles(Typography)
+            noWrap={true}
             style={
               Object {
-                "color": "#FFFFFF",
+                "paddingLeft": 0,
               }
             }
-            title="Click to return to the eSpace home page"
+            variant="title"
           >
-            UQ eSpace 
-          </a>
-        </WithStyles(Typography)>
-        <AuthButton
-          ariaLabel="Click to log out of eSpace"
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - J RHD Student"
-        />
-      </React.Fragment>
+            <a
+              className="appTitle"
+              href="/"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+              title="Click to return to the eSpace home page"
+            >
+              UQ eSpace 
+              eSpace
+            </a>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+          zeroMinWidth={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - J RHD Student"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </WithStyles(Toolbar)>
   </WithStyles(AppBar)>
   <div
@@ -3718,7 +4167,7 @@ exports[`Application component should render thesis submission for HDR without m
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
+  <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
-</div>
+</WithStyles(Grid)>
 `;
