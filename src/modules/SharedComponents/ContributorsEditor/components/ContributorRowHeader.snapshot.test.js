@@ -1,14 +1,24 @@
-import ContributorRowHeader from './ContributorRowHeader';
+import {ContributorRowHeader} from './ContributorRowHeader';
+import {createShallow} from '@material-ui/core/test-utils';
+
 
 function setup(testProps, isShallow = true) {
     const props = {
+        onDeleteAll: jest.fn(),
+        showIdentifierLookup: false,
+        showContributorAssignment: false,
+        disabled: false,
+        classes: {
+            right: 'right',
+            header: 'header',
+            text: 'text',
+            paddingRight24: 'paddingRight24',
+            paddingRight36: 'paddingRight36',
+            paddingRight14: 'paddingRight14'
+        },
         ...testProps,
-        onDeleteAll: testProps.onDeleteAll || jest.fn(),
-        showIdentifierLookup: testProps.showIdentifierLookup || false,
-        showContributorAssignment: testProps.showContributorAssignment || false,
-        disabled: testProps.disabled || false
     };
-    return getElement(ContributorRowHeader, props, isShallow);
+    return getElement(ContributorRowHeader, props, isShallow, createShallow);
 }
 
 describe('Component ContributorRowHeader', () => {
@@ -36,15 +46,6 @@ describe('Component ContributorRowHeader', () => {
         expect(testFunction).toHaveBeenCalled;
     });
 
-    it('applies correct classname to righthand spacer when infinite scroller is used', () => {
-        const wrapper = setup({isInfinite: true});
-        expect(wrapper.find('.scrollbar-spacer-infinite').length).toEqual(1);
-        expect(wrapper.find('.scrollbar-spacer').length).toEqual(0);
-        wrapper.setProps({isInfinite: false});
-        expect(wrapper.find('.scrollbar-spacer-infinite').length).toEqual(0);
-        expect(wrapper.find('.scrollbar-spacer').length).toEqual(1);
-    });
-
     it('triggers the confirmation box', () => {
         const testFunction = jest.fn();
         const wrapper = setup({});
@@ -52,6 +53,4 @@ describe('Component ContributorRowHeader', () => {
         wrapper.instance()._showConfirmation();
         expect(testFunction).toHaveBeenCalled;
     });
-
-
 });

@@ -2,10 +2,9 @@ import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
-import IconButton from 'material-ui/IconButton';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {Grid, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction, Tooltip, Typography} from '@material-ui/core';
+import {Grid, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction, Tooltip, Typography, IconButton, Hidden} from '@material-ui/core';
 import {Person, PersonOutlined, Delete, KeyboardArrowDown, KeyboardArrowUp} from '@material-ui/icons';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export class ContributorRow extends PureComponent {
     static propTypes = {
@@ -133,7 +132,7 @@ export class ContributorRow extends PureComponent {
 
     render() {
         const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
-        const {contributor, canMoveDown, canMoveUp, disabled, classes, width} = this.props;
+        const {contributor, canMoveDown, canMoveUp, disabled, classes} = this.props;
 
 
         const ariaLabel = selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', contributor.nameAsPublished) : null;
@@ -150,14 +149,16 @@ export class ContributorRow extends PureComponent {
                 <ListItem
                     style={{cursor: 'pointer'}}
                     divider
-                    classes={{root: selectedClass}}
+                    classes={{root: contributor.selected ? classes.rowSelected : ''}}
                     onClick={disableAssignment ? this._onContributorAssigned : () => {}}
                     onKeyDown={disableAssignment ? this._onContributorAssignedKeyboard : () => {}}
                     aria-label={ariaLabel}
                 >
-                    <ListItemIcon classes={{root: `${width === 'xs' ? classes.hideIcon : ''} ${selectedClass}`}}>
-                        {contributor.selected ? <Person/> : <PersonOutlined/>}
-                    </ListItemIcon>
+                    <Hidden xsDown>
+                        <ListItemIcon classes={{root: selectedClass}}>
+                            {contributor.selected ? <Person/> : <PersonOutlined/>}
+                        </ListItemIcon>
+                    </Hidden>
                     {
                         this.getContributorRowText(this.props.showIdentifierLookup, selectedClass)
                     }
@@ -206,8 +207,10 @@ const styles = (theme) => ({
     listItem: {
         padding: '0 16px'
     },
+    rowSelected: {
+        backgroundColor: theme.palette.accent.light
+    },
     selected: {
-        backgroundColor: theme.palette.accent.light,
         color: 'white !important'
     },
     hideIcon: {

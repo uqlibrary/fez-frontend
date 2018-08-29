@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
 
-import {Grid, Typography, withWidth, Hidden, IconButton, Tooltip} from '@material-ui/core';
+import {Grid, Typography, Hidden, IconButton, Tooltip} from '@material-ui/core';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -77,4 +77,4 @@ const styles = () => ({
     }
 });
 
-export default withWidth()(withStyles(styles)(FileUploadRowHeader));
+export default withStyles(styles)(FileUploadRowHeader);

@@ -165,14 +165,16 @@ export class ContributorsEditor extends PureComponent {
                 />
                 {
                     this.state.contributors.length > 0 &&
-                    <ContributorRowHeader
-                        onDeleteAll={this.deleteAllContributors}
-                        {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
-                        showIdentifierLookup={this.props.showIdentifierLookup}
-                        disabled={this.props.disabled}
-                        showContributorAssignment={this.props.showContributorAssignment}
-                        isInfinite={this.state.contributors.length > 3}
-                    />
+                    <List>
+                        <ContributorRowHeader
+                            onDeleteAll={this.deleteAllContributors}
+                            {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
+                            showIdentifierLookup={this.props.showIdentifierLookup}
+                            disabled={this.props.disabled}
+                            showContributorAssignment={this.props.showContributorAssignment}
+                            isInfinite={this.state.contributors.length > 3}
+                        />
+                    </List>
                 }
                 {
                     this.state.contributors.length > 3
