@@ -9,7 +9,8 @@ export default class PublicationYearRangeField extends PureComponent {
         yearFilter: PropTypes.object,
         updateYearRangeFilter: PropTypes.func.isRequired,
         className: PropTypes.string,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        invalid: PropTypes.bool
     };
 
     static defaultProps = {
@@ -29,15 +30,14 @@ export default class PublicationYearRangeField extends PureComponent {
         this.props.updateYearRangeFilter({
             ...this.props.yearFilter,
             [key]: isNaN(intValue) ? 0 : intValue,
-            invalid: !this.isValidText()
+            invalid: !!this.isValidText({...this.props.yearFilter, [key]: isNaN(intValue) ? 0 : intValue})
         });
     };
 
-    isValidText = () => {
-        const from = parseInt(this.props.yearFilter.from, 10);
-        const to = parseInt(this.props.yearFilter.to, 10);
-        return (from > to) || (from > 0 && !to) || (!from && to > 0) || (from > 9999) || (to > 9999)
-            ? locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range.invalidText : null;
+    isValidText = values => {
+        const from = values.from;
+        const to = values.to;
+        return (from > to || !from || !to || from > 9999 || to > 9999);
     };
 
     render() {
@@ -52,8 +52,8 @@ export default class PublicationYearRangeField extends PureComponent {
                         InputLabelProps={{shrink: true}}
                         label={txt.title}
                         onChange={this.setValue('from')}
-                        error={!!this.isValidText()}
-                        helperText={this.isValidText()}
+                        error={!!this.props.invalid}
+                        helperText={this.props.invalid && txt.invalidText}
                         placeholder={txt.fromHint}
                         aria-label={txt.fromAria}
                         disabled={this.props.disabled}
@@ -76,7 +76,7 @@ export default class PublicationYearRangeField extends PureComponent {
                         value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
                         label={' '}
                         onChange={this.setValue('to')}
-                        error={this.isValidText() && ' '}
+                        error={!!this.props.invalid}
                         placeholder={txt.toHint}
                         aria-label={txt.toAria}
                         disabled={this.props.disabled}

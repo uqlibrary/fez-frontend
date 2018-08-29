@@ -25,14 +25,10 @@ exports[`SimpleSearchComponent should render default view 1`] = `
             label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            placeholder={null}
+            placeholder="Enter your search query to search all fields in eSpace"
             required={false}
             select={false}
-            style={
-              Object {
-                "padding": 8,
-              }
-            }
+            style={Object {}}
             type="search"
             value=""
           />
@@ -100,14 +96,10 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
             label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            placeholder={null}
+            placeholder="Enter your search query to search all fields in eSpace"
             required={false}
             select={false}
-            style={
-              Object {
-                "padding": 8,
-              }
-            }
+            style={Object {}}
             type="search"
             value=""
           />
@@ -187,14 +179,10 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
             label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            placeholder={null}
+            placeholder="Enter your search query to search all fields in eSpace"
             required={false}
             select={false}
-            style={
-              Object {
-                "padding": 8,
-              }
-            }
+            style={Object {}}
             type="search"
             value=""
           />
@@ -311,14 +299,10 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
             label="Search eSpace"
             onChange={[Function]}
             onKeyPress={[Function]}
-            placeholder={null}
+            placeholder="Enter your search query to search all fields in eSpace"
             required={false}
             select={false}
-            style={
-              Object {
-                "padding": 8,
-              }
-            }
+            style={Object {}}
             type="search"
             value="i feel lucky"
           />

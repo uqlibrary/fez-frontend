@@ -1,6 +1,6 @@
 import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
@@ -19,6 +19,7 @@ class AdvancedSearchRowInput extends PureComponent {
             type: PropTypes.string.isRequired,
             validation: PropTypes.array.isRequired,
             hint: PropTypes.string,
+            label: PropTypes.string,
             multiple: PropTypes.bool,
             errorHint: PropTypes.string,
             loadingHint: PropTypes.string,
@@ -46,7 +47,8 @@ class AdvancedSearchRowInput extends PureComponent {
             ...this.state,
             inputProps: {
                 ...this.state.inputProps,
-                'errorText': this.runValidationRules(nextProps.value)
+                'error': !!this.runValidationRules(nextProps.value),
+                'helperText': this.runValidationRules(nextProps.value)
             }
         });
     }
@@ -78,7 +80,16 @@ class AdvancedSearchRowInput extends PureComponent {
             'hintText': this.props.inputField.hint,
             'aria-label': this.props.inputField.ariaLabel,
             'errorText': this.runValidationRules(this.props.value),
-            'floatingLabelText': null,
+            'label': this.props.inputField.label,
+        };
+
+        const textFieldMui1Props = {
+            'style': {marginTop: 8},
+            'placeholder': this.props.inputField.hint,
+            'aria-label': this.props.inputField.ariaLabel,
+            'error': !!this.runValidationRules(this.props.value),
+            'helperText': this.runValidationRules(this.props.value),
+            'label': null,
         };
 
         const lookupDefaultProps = {
@@ -89,6 +100,7 @@ class AdvancedSearchRowInput extends PureComponent {
 
         const selectDefaultProps = {
             ...defaultProps,
+            'errorText': defaultProps.error,
             'locale': {label: null},
             'selectedValue': this.props.value,
             'fullWidth': true,
@@ -99,9 +111,9 @@ class AdvancedSearchRowInput extends PureComponent {
         switch (this.props.inputField.type) {
             case 'TextField':
                 return {
-                    ...defaultProps,
+                    ...textFieldMui1Props,
                     'autoComplete': 'off',
-                    'onChange': (event, value) => this.props.onChange(value),
+                    'onChange': (event) => this.props.onChange(event.target.value),
                 };
             case 'PublisherLookup':
             case 'OrgUnitLookup':
@@ -113,6 +125,7 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'ContributorIdLookup':
                 return {
                     ...lookupDefaultProps,
+                    'label': null,
                     'onChange': (item) => this.props.onChange(item.id, item.text)
                 };
             case 'SubTypeLookup':

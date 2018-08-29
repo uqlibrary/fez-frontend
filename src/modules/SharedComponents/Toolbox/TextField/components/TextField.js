@@ -10,7 +10,6 @@ const styles = {};
 
 const TextFieldWrapper = props => {
     const filteredProps = propFilter(props, TextField.propTypes);
-    console.log(filteredProps);
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const error = filteredProps.errorText;
     delete filteredProps.errorText;
@@ -18,7 +17,7 @@ const TextFieldWrapper = props => {
     return (
         <Fragment>
             <TextField {...filteredProps}
-                style={{marginTop: 12}} // TODO: hack to sit the input alongside old MUI stuff in bulma
+                // style={{marginTop: 12}} // TODO: hack to sit the input alongside old MUI stuff in bulma
                 helperText={error}
                 error={!!error}
                 InputLabelProps={!!filteredProps.floatinglabelfixed && {shrink: true}}

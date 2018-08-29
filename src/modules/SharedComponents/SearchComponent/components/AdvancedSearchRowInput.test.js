@@ -28,13 +28,16 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render given children with component and props', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.defaultProps.type).toEqual('text');
+            console.log(InputComponent.defaultProps);
+            expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
-                'aria-label': undefined,
-                'autoComplete': 'off',
-                'errorText': undefined,
-                'floatingLabelText': null,
-                'hintText': 'Field hint',
+                "aria-label": undefined,
+                "autoComplete": "off",
+                "error": false,
+                "helperText": undefined,
+                "label": null,
+                "placeholder": "Field hint",
+                "style": {"marginTop": 8},
                 'onChange': inputProps.onChange
             });
         });
@@ -47,13 +50,15 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render given children with component and props and show error', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.defaultProps.type).toEqual('text');
+            expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
-                'aria-label': undefined,
-                'autoComplete': 'off',
-                'errorText': 'Must be at least 10 characters',
-                'floatingLabelText': null,
-                'hintText': 'This is hint for text input',
+                "aria-label": undefined,
+                "autoComplete": "off",
+                "error": true,
+                "helperText": "Must be at least 10 characters",
+                "label": null,
+                "placeholder": "This is hint for text input",
+                "style": {"marginTop": 8},
                 'onChange': inputProps.onChange
             });
         });

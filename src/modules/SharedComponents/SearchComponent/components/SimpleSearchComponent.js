@@ -100,12 +100,20 @@ export default class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-
+        const inputStyles = () => {
+            if(this.state.showMobile) {
+                return {marginTop: 18};
+            } else if (this.props.isInHeader) {
+                return {padding: 8};
+            } else {
+                return {};
+            }
+        };
         return (
             <div className={`searchComponent ${this.props.isInHeader && 'header'} ${this.props.className}`}>
                 <div className="columns is-gapless">
                     <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
-                        <div className="columns is-gapless search-field is-mobile">
+                        <div className="columns is-gapless search-field is-mobile"  >
                             {
                                 this.props.showPrefixIcon &&
                                 <div className="column is-narrow searchIconPrefix is-hidden-mobile">
@@ -122,20 +130,20 @@ export default class SimpleSearchComponent extends PureComponent {
                                     </IconButton>
                                 </div>
                             }
-                            <div className="column">
+                            <div className="column" >
                                 <TextField
                                     type="search"
                                     id="searchField"
                                     fullWidth
                                     label={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                    placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : null}
+                                    placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
                                     aria-label={txt.ariaInputLabel}
                                     onChange={this._handleSearchTextChange}
                                     onKeyPress={this._handleSearch}
                                     value={this.props.searchText}
                                     InputProps={this.props.isInHeader ? {disableUnderline: true} : null}
                                     error={this.searchTextValidationMessage(this.props.searchText)}
-                                    style={{padding: 8}}
+                                    style={inputStyles()}
                                 />
                             </div>
                             <div className="is-hidden-tablet mobileSpacer" />
@@ -143,7 +151,7 @@ export default class SimpleSearchComponent extends PureComponent {
                     </div>
                     {
                         this.props.showMobileSearchButton &&
-                        <div className="column is-narrow is-hidden-tablet">
+                        <div className="column is-narrow is-hidden-tablet"  >
                             <IconButton
                                 onClick={this._handleToggleMobile}
                                 aria-label={txt.mobileSearchButtonAriaLabel}
@@ -155,7 +163,7 @@ export default class SimpleSearchComponent extends PureComponent {
                     }
                     {
                         this.props.showSearchButton &&
-                        <div className="column is-narrow iconSearchButtonWrapper">
+                        <div className="column is-narrow iconSearchButtonWrapper"  >
                             <IconButton
                                 tooltipPosition="bottom-left"
                                 onClick={this._handleSearch}
@@ -167,7 +175,7 @@ export default class SimpleSearchComponent extends PureComponent {
                             </IconButton>
                         </div>
                     }
-                    <div className="column is-narrow searchButtonWrapper">
+                    <div className="column is-narrow searchButtonWrapper"  >
                         <RaisedButton
                             label={txt.searchButtonText}
                             aria-label={txt.searchButtonAriaLabel}
@@ -178,7 +186,7 @@ export default class SimpleSearchComponent extends PureComponent {
                     </div>
                     {
                         this.props.showAdvancedSearchButton &&
-                        <div className="column is-narrow advancedSearchButtonWrapper">
+                        <div className="column is-narrow advancedSearchButtonWrapper"  >
                             <RaisedButton
                                 label={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}

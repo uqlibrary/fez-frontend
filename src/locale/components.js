@@ -799,6 +799,7 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            searchBoxHint: 'Enter your search query to search all fields in eSpace',
             ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
             mobileSearchButtonAriaLabel: 'Click to search eSpace',

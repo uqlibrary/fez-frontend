@@ -27,8 +27,8 @@ export class AutoSuggestField extends Component {
     static defaultProps = {
         maxResults: 7,
         allowFreeText: false,
-        floatingLabelText: 'Enter text',
-        hintText: 'Please type text',
+        floatingLabelText: '',
+        hintText: '',
         debounceDelay: 150,
         className: '',
         selectedValue: {value: ''}

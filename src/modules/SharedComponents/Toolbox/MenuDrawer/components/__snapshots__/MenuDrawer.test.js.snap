@@ -88,7 +88,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       >
         <WithStyles(ListItem)
           button={true}
-          leftIcon={null}
           onClick={[Function]}
         >
           <WithStyles(ListItemText)
@@ -112,7 +111,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       >
         <WithStyles(ListItem)
           button={true}
-          leftIcon={null}
           onClick={[Function]}
         >
           <WithStyles(ListItemText)
@@ -237,7 +235,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <WithStyles(ListItem)
           button={true}
-          leftIcon={null}
           onClick={[Function]}
         >
           <WithStyles(ListItemText)
@@ -261,7 +258,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <WithStyles(ListItem)
           button={true}
-          leftIcon={null}
           onClick={[Function]}
         >
           <WithStyles(ListItemText)
@@ -386,7 +382,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <WithStyles(ListItem)
           button={true}
-          leftIcon={null}
           onClick={[Function]}
         >
           <WithStyles(ListItemText)
@@ -410,7 +405,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <WithStyles(ListItem)
           button={true}
-          leftIcon={null}
           onClick={[Function]}
         >
           <WithStyles(ListItemText)

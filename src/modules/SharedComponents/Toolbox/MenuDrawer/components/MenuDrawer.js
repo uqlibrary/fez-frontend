@@ -148,8 +148,7 @@ export class MenuDrawer extends Component {
                 : <span className="menu-item-container" key={`menu_item_${index}`}>
                     <ListItem
                         button
-                        onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
-                        leftIcon={menuItem.leftIcon ? menuItem.leftIcon : null}>
+                        onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)} >
                         <ListItemText classes={{
                             primary: this.props.classes.ListItemTextPrimary,
                             secondary: this.props.classes.ListItemTextSecondary

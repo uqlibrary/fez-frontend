@@ -14,10 +14,10 @@ class Index extends PureComponent {
         return (
             <StandardPage>
                 <Grid container spacing={24}>
-                    <Grid item xs={8} >
+                    <Grid item xs={12} md={8} >
                         <TopCitedPublications/>
                     </Grid>
-                    <Grid item xs={4} >
+                    <Grid item xs={12} md={4} >
                         <WhatIsEspace />
                         <NewsFeed />
                     </Grid>
