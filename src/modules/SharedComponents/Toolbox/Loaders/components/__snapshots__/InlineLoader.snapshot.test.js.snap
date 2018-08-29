@@ -4,24 +4,20 @@ exports[`Component InlineLoader should render as expected 1`] = `
 <WithStyles(Grid)
   alignItems="center"
   container={true}
-  direction="column"
+  direction="row"
   justify="center"
 >
   <WithStyles(Grid)
     item={true}
-    justify="center"
-    xs={12}
   >
     <WithStyles(CircularProgress)
       color="primary"
-      size={60}
+      size={32}
       thickness={1}
     />
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-    justify="center"
-    xs={12}
   >
     <WithStyles(Typography)
       className={
@@ -30,7 +26,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
           "margin": "24px 0",
         }
       }
-      variant="title"
+      variant="headline"
     >
       This is a tst
     </WithStyles(Typography)>
