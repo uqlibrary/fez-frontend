@@ -3,8 +3,12 @@ import {authorsSearch} from 'mock/data';
 
 function setup(testProps, isShallow = true){
     const props = {
+        author: { aut_id: 1 },
+        classes: {
+            list: 'list',
+            scroll: 'scroll'
+        },
         ...testProps,
-        author: testProps.author || { aut_id: 1 }
     };
     return getElement(ContributorsEditor, props, isShallow);
 }
@@ -122,14 +126,13 @@ describe('ContributorsEditor tests ', () => {
         const wrapper = setup({contributors: []});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}, {displayName: 4}]});
         expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(4);
-        expect(wrapper.find('.authors-infinite').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should show validation error', () => {
         const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}});
-        expect(wrapper.find('.validationErrorMessage').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('WithStyles(Typography)').length).toEqual(1);
     });
 
 });

@@ -31,15 +31,29 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " ",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(PersonOutlined) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlined) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -73,14 +87,10 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -89,7 +99,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -127,15 +137,29 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " ",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(PersonOutlined) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlined) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -169,14 +193,10 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -185,7 +205,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -223,15 +243,29 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " ",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(PersonOutlined) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlined) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -265,14 +299,10 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -281,7 +311,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -319,15 +349,29 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": "hideIcon ",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(PersonOutlined) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlined) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -361,14 +405,10 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -377,7 +417,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -415,15 +455,29 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " ",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(PersonOutlined) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlined) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -457,14 +511,10 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       <WithStyles(Tooltip)
         title="Move record up the order"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Move record up the order"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(KeyboardArrowUp)
             classes={
@@ -473,19 +523,15 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
       <WithStyles(Tooltip)
         title="Move record down the order"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Move record down the order"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(KeyboardArrowDown)
             classes={
@@ -494,19 +540,15 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -515,7 +557,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -541,7 +583,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "selected",
+        "root": undefined,
       }
     }
     divider={true}
@@ -553,15 +595,29 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " selected",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(Person) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "selected",
+          }
+        }
+      >
+        <pure(Person) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -595,14 +651,10 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -611,7 +663,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -637,7 +689,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "selected",
+        "root": undefined,
       }
     }
     divider={true}
@@ -649,15 +701,29 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " selected",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(Person) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "selected",
+          }
+        }
+      >
+        <pure(Person) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(ListItemText)
       disableTypography={true}
       primary={
@@ -691,14 +757,10 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -707,7 +769,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -745,15 +807,29 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": " ",
-        }
-      }
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <pure(PersonOutlined) />
-    </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlined) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
     <WithStyles(Grid)
       classes={
         Object {
@@ -839,14 +915,10 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       <WithStyles(Tooltip)
         title="Remove this record"
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Remove this record"
-          disableTouchRipple={false}
           disabled={false}
-          iconStyle={Object {}}
           onClick={[Function]}
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(Delete)
             classes={
@@ -855,7 +927,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               }
             }
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>

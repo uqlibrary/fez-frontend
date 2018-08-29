@@ -9,7 +9,13 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List) />
+  <WithStyles(List)
+    classes={
+      Object {
+        "root": "list ",
+      }
+    }
+  />
 </div>
 `;
 
@@ -20,7 +26,13 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
     showContributorAssignment={false}
     showIdentifierLookup={true}
   />
-  <WithStyles(List) />
+  <WithStyles(List)
+    classes={
+      Object {
+        "root": "list ",
+      }
+    }
+  />
 </div>
 `;
 
@@ -31,29 +43,21 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <ContributorRowHeader
-    isInfinite={false}
-    locale={
+  <WithStyles(List)>
+    <WithStyles(ContributorRowHeader)
+      isInfinite={false}
+      onDeleteAll={[Function]}
+      showContributorAssignment={false}
+      showIdentifierLookup={false}
+    />
+  </WithStyles(List)>
+  <WithStyles(List)
+    classes={
       Object {
-        "contributorAssignmentColumn": "Select your name",
-        "deleteAll": "Remove all records",
-        "deleteAllConfirmation": Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all records?",
-          "confirmationTitle": "Delete all",
-        },
-        "descriptionStep2": "Step 2 - Select your name from the list below",
-        "identifierColumn": "UQ identifier",
-        "nameColumn": "Name as published",
-        "reorderColumn": "Reorder records",
+        "root": "list ",
       }
     }
-    onDeleteAll={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-  />
-  <WithStyles(List)>
+  >
     <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
       canMoveUp={false}
@@ -119,34 +123,20 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <ContributorRowHeader
-    isInfinite={true}
-    locale={
+  <WithStyles(List)>
+    <WithStyles(ContributorRowHeader)
+      isInfinite={true}
+      onDeleteAll={[Function]}
+      showContributorAssignment={false}
+      showIdentifierLookup={false}
+    />
+  </WithStyles(List)>
+  <WithStyles(List)
+    classes={
       Object {
-        "contributorAssignmentColumn": "Select your name",
-        "deleteAll": "Remove all records",
-        "deleteAllConfirmation": Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all records?",
-          "confirmationTitle": "Delete all",
-        },
-        "descriptionStep2": "Step 2 - Select your name from the list below",
-        "identifierColumn": "UQ identifier",
-        "nameColumn": "Name as published",
-        "reorderColumn": "Reorder records",
+        "root": "list scroll",
       }
     }
-    onDeleteAll={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-  />
-  <WithStyles(List)
-    className="authors-infinite"
-    component={[Function]}
-    containerHeight={195}
-    elementHeight={65}
-    threshold={130}
   >
     <WithStyles(WithTheme(WithWidth(ContributorRow)))
       canMoveDown={true}
@@ -231,7 +221,13 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List) />
+  <WithStyles(List)
+    classes={
+      Object {
+        "root": "list ",
+      }
+    }
+  />
 </div>
 `;
 
@@ -242,11 +238,18 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List) />
-  <div
-    className="validationErrorMessage"
+  <WithStyles(List)
+    classes={
+      Object {
+        "root": "list ",
+      }
+    }
+  />
+  <WithStyles(Typography)
+    color="error"
+    variant="caption"
   >
     This is a test error
-  </div>
+  </WithStyles(Typography)>
 </div>
 `;
