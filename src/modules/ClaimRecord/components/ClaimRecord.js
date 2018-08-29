@@ -2,7 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -126,7 +127,7 @@ export default class ClaimRecord extends PureComponent {
                     </StandardCard>
                     {
                         (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
-                        <div>
+                        <React.Fragment>
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
@@ -177,24 +178,29 @@ export default class ClaimRecord extends PureComponent {
                                 </StandardCard>
                             }
                             <StandardCard title={txt.comments.title} help={txt.comments.help}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="comments"
-                                    type="text"
-                                    fullWidth
-                                    multiLine
-                                    rows={1}
-                                    floatingLabelText={txt.comments.fieldLabels.comments}/>
-
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="rek_link"
-                                    type="text"
-                                    fullWidth
-                                    floatingLabelText={txt.comments.fieldLabels.url}
-                                    validate={[validation.url]}/>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={TextField}
+                                            disabled={this.props.submitting}
+                                            name="comments"
+                                            type="text"
+                                            fullWidth
+                                            multiline
+                                            rows={3}
+                                            label={txt.comments.fieldLabels.comments}/>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={TextField}
+                                            disabled={this.props.submitting}
+                                            name="rek_link"
+                                            type="text"
+                                            fullWidth
+                                            label={txt.comments.fieldLabels.url}
+                                            validate={[validation.url]}/>
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
 
                             <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
@@ -206,32 +212,33 @@ export default class ClaimRecord extends PureComponent {
                                     validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>
-                        </div>
+                        </React.Fragment>
                     }
                     {
                         alertProps && <Alert {...alertProps} />
                     }
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
+                    <Grid container spacing={16} justify={'flex-end'} alignItems={'flex-end'}>
+                        <Grid item>
+                            <Button
+                                variant={'raised'}
                                 fullWidth
-                                label={txt.cancel}
+                                children={txt.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this._cancelClaim}/>
-                        </div>
+                        </Grid>
                         {
                             (!publication.rek_pid || !(authorLinked || contributorLinked)) && !(!publication.rek_pid && this.props.submitFailed) &&
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    secondary
+                            <Grid item>
+                                <Button
+                                    variant={'raised'}
+                                    color={'primary'}
                                     fullWidth
-                                    label={txt.submit}
+                                    children={txt.submit}
                                     onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}/>
-                            </div>
+                            </Grid>
                         }
-                    </div>
+                    </Grid>
                 </form>
             </StandardPage>
         );

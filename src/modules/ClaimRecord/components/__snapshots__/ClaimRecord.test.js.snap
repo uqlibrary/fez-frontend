@@ -989,7 +989,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -1032,29 +1032,44 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -1072,40 +1087,38 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -1799,7 +1812,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -1913,29 +1926,44 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -1953,40 +1981,38 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -2965,7 +2991,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -3046,29 +3072,44 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -3086,40 +3127,38 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -3806,7 +3845,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -3882,29 +3921,44 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -3922,40 +3976,38 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -5037,7 +5089,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -5223,29 +5275,44 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -5263,40 +5330,38 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -6378,7 +6443,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -6564,29 +6629,44 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -6604,40 +6684,38 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -7719,7 +7797,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -7905,29 +7983,44 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -7945,40 +8038,38 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -9060,7 +9151,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -9246,29 +9337,44 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -9286,40 +9392,38 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -10330,26 +10434,25 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       title="Error"
       type="error"
     />
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -11431,7 +11534,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -11625,29 +11728,44 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -11665,40 +11783,38 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
@@ -12780,7 +12896,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         }
       />
     </StandardCard>
-    <div>
+    <React.Fragment>
       <ConfirmDialogBox
         hideCancelButton={false}
         locale={
@@ -12966,29 +13082,44 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         className=""
         title="Optional: Suggest changes or add links to this record"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Type edits/changes/comments here"
-          fullWidth={true}
-          multiLine={true}
-          name="comments"
-          rows={1}
-          type="text"
-        />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Link (URL)"
-          fullWidth={true}
-          name="rek_link"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Type edits/changes/comments here"
+              multiline={true}
+              name="comments"
+              rows={3}
+              type="text"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              label="Link (URL)"
+              name="rek_link"
+              type="text"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
       <StandardCard
         className=""
@@ -13006,40 +13137,38 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           }
         />
       </StandardCard>
-    </div>
-    <div
-      className="columns action-buttons"
+    </React.Fragment>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      justify="flex-end"
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel this claim"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="raised"
+        >
+          Cancel this claim
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Claim this publication"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Claim this publication
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </WithStyles(StandardPage)>
 `;
