@@ -4,7 +4,7 @@ import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/Core/Button';
+import Button from '@material-ui/core/Button';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
