@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VideoDocumentForm renders  component 1`] = `
-<div>
+<React.Fragment>
   <StandardCard
     className=""
     help={
@@ -26,11 +26,13 @@ exports[`VideoDocumentForm renders  component 1`] = `
     }
     title="Video information"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           autoFocus={true}
@@ -48,13 +50,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -65,13 +64,11 @@ exports[`VideoDocumentForm renders  component 1`] = `
           placeholder="City, Country"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -82,9 +79,11 @@ exports[`VideoDocumentForm renders  component 1`] = `
           placeholder="Type the name of the publisher or producer of the work."
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           allowPartial={true}
@@ -100,13 +99,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -119,16 +115,16 @@ exports[`VideoDocumentForm renders  component 1`] = `
           rows={3}
           type="text"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
     className=""
     title="Creators"
   >
-    <div>
+    <WithStyles(Typography)>
       Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.
-    </div>
+    </WithStyles(Typography)>
     <Field
       className="requiredField"
       component={[Function]}
@@ -235,7 +231,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
     }
     title="Contributors"
   >
-    <div />
+    <WithStyles(Typography) />
     <Field
       component={[Function]}
       disabled={false}
@@ -334,11 +330,13 @@ exports[`VideoDocumentForm renders  component 1`] = `
     className=""
     title="Optional information"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -350,13 +348,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
           placeholder="Add any additional information here."
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -372,8 +367,8 @@ exports[`VideoDocumentForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
-</div>
+</React.Fragment>
 `;

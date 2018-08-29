@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`JournalArticleForm renders  component 1`] = `
-<div>
+<React.Fragment>
   <StandardCard
     className=""
     title="Journal article information"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           autoFocus={true}
@@ -30,13 +32,11 @@ exports[`JournalArticleForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -53,9 +53,11 @@ exports[`JournalArticleForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           allowPartial={true}
@@ -71,13 +73,10 @@ exports[`JournalArticleForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           className="requiredField"
@@ -90,6 +89,7 @@ exports[`JournalArticleForm renders  component 1`] = `
             }
           }
           name="rek_subtype"
+          required={true}
           validate={
             Array [
               [Function],
@@ -97,16 +97,16 @@ exports[`JournalArticleForm renders  component 1`] = `
           }
           vocabId={0}
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
     className=""
     title="Authors"
   >
-    <div>
+    <WithStyles(Typography)>
       Please provide a list of authors and then select your name from the list.
-    </div>
+    </WithStyles(Typography)>
     <Field
       className="requiredField"
       component={[Function]}
@@ -211,11 +211,14 @@ exports[`JournalArticleForm renders  component 1`] = `
     className=""
     title="Optional publication details"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={6}
       >
         <Field
           component={[Function]}
@@ -225,9 +228,11 @@ exports[`JournalArticleForm renders  component 1`] = `
           name="fez_record_search_key_volume_number.rek_volume_number"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={6}
       >
         <Field
           component={[Function]}
@@ -237,9 +242,11 @@ exports[`JournalArticleForm renders  component 1`] = `
           name="fez_record_search_key_issue_number.rek_issue_number"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={6}
       >
         <Field
           component={[Function]}
@@ -249,9 +256,11 @@ exports[`JournalArticleForm renders  component 1`] = `
           name="fez_record_search_key_start_page.rek_start_page"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={6}
       >
         <Field
           component={[Function]}
@@ -261,13 +270,10 @@ exports[`JournalArticleForm renders  component 1`] = `
           name="fez_record_search_key_end_page.rek_end_page"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -277,13 +283,10 @@ exports[`JournalArticleForm renders  component 1`] = `
           name="fez_record_search_key_article_number.rek_article_number"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -295,13 +298,10 @@ exports[`JournalArticleForm renders  component 1`] = `
           rows={1}
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -316,8 +316,8 @@ exports[`JournalArticleForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
-</div>
+</React.Fragment>
 `;

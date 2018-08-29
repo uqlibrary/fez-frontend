@@ -1,63 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppLoader snapshots tests renders loader with image 1`] = `
-<div
-  className="app-loader columns is-gapless layout-fill"
+exports[`Component AppLoader should render as expected 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  className={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "red",
+      "display": "flex",
+      "height": "100%",
+      "justifyContent": "center",
+      "textAlign": "center !important",
+      "width": "100%",
+    }
+  }
+  container={true}
+  direction="column"
+  justify="center"
+  spacing={0}
 >
-  <div
-    className="app-loader-content column is-centered"
+  <WithStyles(Grid)
+    className={
+      Object {
+        "margin": "16px 0",
+      }
+    }
+    item={true}
   >
-    <h1
-      className="title is-2 color-reverse"
+    <WithStyles(Typography)
+      className={
+        Object {
+          "color": "white",
+          "fontWeight": 200,
+        }
+      }
+      variant="title"
     >
       Fez frontend
-    </h1>
-    <br />
-    <br />
-    <CircularProgress
-      color="#CCC"
-      max={100}
-      min={0}
-      mode="indeterminate"
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "margin": "16px 0",
+      }
+    }
+    item={true}
+  >
+    <WithStyles(CircularProgress)
+      className={
+        Object {
+          "color": "white",
+          "fontWeight": 200,
+        }
+      }
       size={80}
-      thickness={8}
-      value={0}
+      thickness={1}
     />
-    <br />
-    <br />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "margin": "16px 0",
+      }
+    }
+    item={true}
+  >
     <img
       alt="Fez logo"
       src="http://image/image.svg"
     />
-  </div>
-</div>
-`;
-
-exports[`AppLoader snapshots tests renders loader without image 1`] = `
-<div
-  className="app-loader columns is-gapless layout-fill"
->
-  <div
-    className="app-loader-content column is-centered"
-  >
-    <h1
-      className="title is-2 color-reverse"
-    >
-      Fez frontend
-    </h1>
-    <br />
-    <br />
-    <CircularProgress
-      color="#FFF"
-      max={100}
-      min={0}
-      mode="indeterminate"
-      size={80}
-      thickness={8}
-      value={0}
-    />
-    <br />
-    <br />
-  </div>
-</div>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

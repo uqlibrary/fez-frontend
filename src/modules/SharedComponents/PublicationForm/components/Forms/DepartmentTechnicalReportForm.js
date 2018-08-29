@@ -11,6 +11,9 @@ import {SeriesField, ReportNumberField, OrgUnitNameField, OrgNameField} from 'mo
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 
 export default class DepartmentTechnicalReportForm extends Component {
     static propTypes = {
@@ -24,10 +27,10 @@ export default class DepartmentTechnicalReportForm extends Component {
     render() {
         const txt = formLocale.departmentTechnicalReport;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 autoFocus
@@ -41,48 +44,40 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={OrgUnitNameField}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                 disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.orgUnitName}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={OrgNameField}
                                 name="fez_record_search_key_org_name.rek_org_name"
                                 disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.orgName}
                             />
-                        </div>
-                    </div>
-
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={SeriesField}
                                 name="fez_record_search_key_series.rek_series"
                                 disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.series}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={ReportNumberField}
                                 name="fez_record_search_key_report_number.rek_report_number"
                                 disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.reportNumber}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -93,10 +88,8 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -107,12 +100,12 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 rows={3}
                                 {...txt.information.fieldLabels.abstract}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <Typography>{txt.authors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
@@ -124,8 +117,8 @@ export default class DepartmentTechnicalReportForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -135,10 +128,8 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 multiline
                                 {...txt.other.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -148,10 +139,10 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 {...txt.other.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

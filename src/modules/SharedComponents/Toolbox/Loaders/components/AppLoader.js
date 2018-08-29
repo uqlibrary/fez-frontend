@@ -1,30 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CircularProgress from 'material-ui/CircularProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import {withStyles} from '@material-ui/core/styles';
 
-export default function AppLoader({title, logoImage, logoText, progressColor}) {
-    return (
-        <div className="app-loader columns is-gapless layout-fill" >
-            <div className="app-loader-content column is-centered">
-                <h1 className="title is-2 color-reverse">{title}</h1>
-                <br />
-                <br />
-                <CircularProgress size={80} thickness={8} color={progressColor} />
-                <br />
-                <br />
-                {logoImage && <img src={logoImage} alt={logoText} />}
-            </div>
-        </div>
-    );
+const styles = theme => ({
+    appLoader: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: theme.palette.primary.main,
+        width: '100%',
+        height: '100%',
+        textAlign: 'center !important'
+    },
+    white: {
+        color: theme.palette.white.main,
+        fontWeight: theme.typography.fontWeightLight
+    },
+    spaceBetween: {
+        margin: '16px 0'
+    }
+});
+
+export class AppLoader extends React.Component {
+    static propTypes = {
+        title: PropTypes.string.isRequired,
+        logoImage: PropTypes.string,
+        logoText: PropTypes.string,
+        classes: PropTypes.object
+    };
+
+    render() {
+        const {classes, title, logoImage, logoText} = this.props;
+        return (
+            <Grid container spacing={0} direction="column" justify="center" alignItems="center" className={classes.appLoader}>
+                <Grid item className={classes.spaceBetween}>
+                    <Typography variant={'title'} className={classes.white}>{title}</Typography>
+                </Grid>
+                <Grid item  className={classes.spaceBetween}>
+                    <CircularProgress size={80} thickness={1} className={classes.white}/>
+                </Grid>
+                <Grid item  className={classes.spaceBetween}>
+                    {logoImage && <img src={logoImage} alt={logoText}/>}
+                </Grid>
+            </Grid>
+        );
+    }
 }
 
-AppLoader.propTypes = {
-    title: PropTypes.string.isRequired,
-    logoImage: PropTypes.string,
-    logoText: PropTypes.string,
-    progressColor: PropTypes.string
-};
+export default withStyles(styles, {withTheme: true})(AppLoader);
 
-AppLoader.defaultProps = {
-    progressColor: '#FFF'
-};

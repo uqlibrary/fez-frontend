@@ -3615,17 +3615,9 @@ exports[`Application component should render application with routing for the us
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <div
-      style={
-        Object {
-          "margin": "0 auto",
-        }
-      }
-    >
-      <InlineLoader
-        message="Loading user account..."
-      />
-    </div>
+    <WithStyles(InlineLoader)
+      message="Loading user account..."
+    />
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <OfflineSnackbar />
@@ -3920,14 +3912,21 @@ exports[`Application component should render for anon user 1`] = `
 `;
 
 exports[`Application component should render loading screen while account is loading 1`] = `
-<div>
-  <AppLoader
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="University of Queensland"
-    progressColor="#FFF"
-    title="UQ eSpace "
-  />
-</div>
+<WithStyles(Grid)
+  container={true}
+  zeroMinWidth={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(AppLoader)
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="University of Queensland"
+      title="UQ eSpace "
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render thesis submission for HDR without menu 1`] = `

@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CreativeWorkForm renders  component 1`] = `
-<div>
+<React.Fragment>
   <StandardCard
     className=""
     title="Creative work information"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           autoFocus={true}
@@ -28,13 +30,10 @@ exports[`CreativeWorkForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -45,13 +44,11 @@ exports[`CreativeWorkForm renders  component 1`] = `
           placeholder="City, country"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -62,9 +59,11 @@ exports[`CreativeWorkForm renders  component 1`] = `
           placeholder=""
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           allowPartial={true}
@@ -80,13 +79,10 @@ exports[`CreativeWorkForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -99,16 +95,16 @@ exports[`CreativeWorkForm renders  component 1`] = `
           rows={3}
           type="text"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
     className=""
     title="Authors"
   >
-    <div>
+    <WithStyles(Typography)>
       Please provide a list of authors and then select your name from the list.
-    </div>
+    </WithStyles(Typography)>
     <Field
       className="requiredField"
       component={[Function]}
@@ -213,11 +209,13 @@ exports[`CreativeWorkForm renders  component 1`] = `
     className=""
     title="Optional information"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -229,13 +227,10 @@ exports[`CreativeWorkForm renders  component 1`] = `
           placeholder="Add any additional information here."
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -251,8 +246,8 @@ exports[`CreativeWorkForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
-</div>
+</React.Fragment>
 `;

@@ -156,12 +156,14 @@ export class App extends PureComponent {
         const {classes} = this.props;
         if (this.props.accountLoading) {
             return (
-                <div className={classes.layoutFill}>
-                    <AppLoader
-                        title={locale.global.title}
-                        logoImage={locale.global.logo.image}
-                        logoText={locale.global.logo.label}/>
-                </div>
+                <Grid container zeroMinWidth className={classes.layoutFill}>
+                    <Grid item xs={12}>
+                        <AppLoader
+                            title={locale.global.title}
+                            logoImage={locale.global.logo.image}
+                            logoText={locale.global.logo.label}/>
+                    </Grid>
+                </Grid>
             );
         }
 
@@ -310,9 +312,7 @@ export class App extends PureComponent {
                     <AppAlertContainer/>
                     {
                         isAuthorLoading &&
-                        <div style={{margin: '0 auto'}}>
-                            <InlineLoader message={locale.global.loadingUserAccount}/>
-                        </div>
+                        <InlineLoader message={locale.global.loadingUserAccount}/>
                     }
 
                     {

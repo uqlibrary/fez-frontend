@@ -1,21 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BookChapterForm renders  component 1`] = `
-<div>
+<React.Fragment>
   <StandardCard
     className=""
     title="Book chapter information"
   >
-    <div
-      className="columns"
-      style={
-        Object {
-          "marginTop": "-12px",
-        }
-      }
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           autoFocus={true}
@@ -34,18 +31,10 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-      style={
-        Object {
-          "marginTop": "-12px",
-        }
-      }
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -63,13 +52,11 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -85,9 +72,11 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -103,13 +92,11 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           className="requiredField"
@@ -129,9 +116,11 @@ exports[`BookChapterForm renders  component 1`] = `
           }
           vocabId={0}
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           allowPartial={true}
@@ -147,8 +136,8 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
     className=""
@@ -355,9 +344,9 @@ exports[`BookChapterForm renders  component 1`] = `
     className=""
     title="ISBN"
   >
-    <div>
+    <WithStyles(Typography)>
       You can add up to five ISBN values
-    </div>
+    </WithStyles(Typography)>
     <Field
       component={[Function]}
       disabled={false}
@@ -425,9 +414,9 @@ exports[`BookChapterForm renders  component 1`] = `
     className=""
     title="ISSN"
   >
-    <div>
+    <WithStyles(Typography)>
       You can add up to five ISSN values
-    </div>
+    </WithStyles(Typography)>
     <Field
       component={[Function]}
       disabled={false}
@@ -495,11 +484,13 @@ exports[`BookChapterForm renders  component 1`] = `
     className=""
     title="Other publication details"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -509,9 +500,11 @@ exports[`BookChapterForm renders  component 1`] = `
           name="fez_record_search_key_edition.rek_edition"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -527,9 +520,11 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -545,13 +540,15 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -562,13 +559,10 @@ exports[`BookChapterForm renders  component 1`] = `
           name="comments"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -583,8 +577,8 @@ exports[`BookChapterForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
-</div>
+</React.Fragment>
 `;

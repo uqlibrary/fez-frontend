@@ -14,6 +14,9 @@ import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class ResearchReportForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool
@@ -30,10 +33,10 @@ export default class ResearchReportForm extends Component {
     render() {
         const txt = formLocale.researchReport;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns" style={{marginTop: '-12px'}}>
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid iteam xs={12}>
                             <Field
                                 component={TextField}
                                 autoFocus
@@ -47,10 +50,8 @@ export default class ResearchReportForm extends Component {
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -59,8 +60,8 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -69,10 +70,8 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 name="fez_record_search_key_total_pages.rek_total_pages"
@@ -84,8 +83,8 @@ export default class ResearchReportForm extends Component {
                                 normalize={this.getNumbersOnly}
                                 validate={[validation.required]}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -96,22 +95,20 @@ export default class ResearchReportForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid iteam xs={12}>
                             <Field
                                 component={SeriesField}
                                 name="fez_record_search_key_series.rek_series"
                                 disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.series}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <Typography>{txt.authors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
@@ -123,7 +120,7 @@ export default class ResearchReportForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
-                    <div>{locale.components.isbnForm.text}</div>
+                    <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
                         component={ListEditorField}
                         remindToAdd
@@ -137,7 +134,7 @@ export default class ResearchReportForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
-                    <div>{locale.components.issnForm.text}</div>
+                    <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
                         component={ListEditorField}
                         remindToAdd
@@ -151,8 +148,8 @@ export default class ResearchReportForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid iteam xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_description"
@@ -160,12 +157,11 @@ export default class ResearchReportForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 multiline
+                                rows={3}
                                 {...txt.other.fieldLabels.abstract}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid iteam xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -175,10 +171,8 @@ export default class ResearchReportForm extends Component {
                                 multiline
                                 {...txt.other.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid iteam xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -188,10 +182,10 @@ export default class ResearchReportForm extends Component {
                                 {...txt.other.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

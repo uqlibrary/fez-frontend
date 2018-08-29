@@ -67,7 +67,7 @@ exports[`Component ViewRecord  should render loader 1`] = `
 <div
   className="is-centered"
 >
-  <InlineLoader
+  <WithStyles(InlineLoader)
     message="Loading record..."
   />
 </div>

@@ -1,25 +1,40 @@
-import AppLoader from './AppLoader';
+import {AppLoader} from './AppLoader';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = {
+        ...testProps,
+        classes: {
+            appLoader: {
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'red',
+                width: '100%',
+                height: '100%',
+                textAlign: 'center !important'
+            },
+            white: {
+                color: 'white',
+                fontWeight: 200
+            },
+            spaceBetween: {
+                margin: '16px 0'
+            }
+        }
+    };
     return getElement(AppLoader, props, isShallow);
 }
 
-describe('AppLoader snapshots tests', () => {
-    it('renders loader without image', () => {
-        const wrapper = setup({title: 'Fez frontend'});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
+describe('Component AppLoader', () => {
 
-    it('renders loader with image', () => {
-        const wrapper = setup({
+    it('should render as expected', () => {
+        // set initial props values
+        const props = {
             title:'Fez frontend',
             logoImage: 'http://image/image.svg',
-            logoText: 'Fez logo',
-            progressColor: '#CCC'
-        });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+            logoText: 'Fez logo'
+        };
+        const wrapper = setup({...props});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

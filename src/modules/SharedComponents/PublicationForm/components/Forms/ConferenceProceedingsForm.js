@@ -12,6 +12,9 @@ import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class ConferenceProceedingsForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -25,10 +28,10 @@ export default class ConferenceProceedingsForm extends Component {
     render() {
         const txt = formLocale.conferenceProceedings;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns" style={{marginTop: '-12px'}}>
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 autoFocus
@@ -42,10 +45,10 @@ export default class ConferenceProceedingsForm extends Component {
                                 {...txt.information.fieldLabels.title}
                                 validate={[validation.required]}
                                 style={{marginBottom: '-12px'}} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16}>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -55,8 +58,8 @@ export default class ConferenceProceedingsForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.conferenceName}
                                 validate={[validation.required]} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -66,10 +69,8 @@ export default class ConferenceProceedingsForm extends Component {
                                 required
                                 validate={[validation.required]}
                                 {...txt.information.fieldLabels.conferenceLocation} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -79,8 +80,8 @@ export default class ConferenceProceedingsForm extends Component {
                                 required
                                 validate={[validation.required]}
                                 {...txt.information.fieldLabels.conferenceDates} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -91,10 +92,8 @@ export default class ConferenceProceedingsForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -102,8 +101,8 @@ export default class ConferenceProceedingsForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -111,12 +110,12 @@ export default class ConferenceProceedingsForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace} />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <div>{txt.editors.description}</div>
+                    <Typography>{txt.editors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         name="editors"
@@ -128,7 +127,7 @@ export default class ConferenceProceedingsForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
-                    <div>{locale.components.isbnForm.text}</div>
+                    <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
                         component={ListEditorField}
                         remindToAdd
@@ -141,7 +140,7 @@ export default class ConferenceProceedingsForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
-                    <div>{locale.components.issnForm.text}</div>
+                    <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
                         component={ListEditorField}
                         remindToAdd
@@ -154,8 +153,8 @@ export default class ConferenceProceedingsForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -164,10 +163,8 @@ export default class ConferenceProceedingsForm extends Component {
                                 fullWidth
                                 multiline
                                 {...txt.other.fieldLabels.notes}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -177,10 +174,10 @@ export default class ConferenceProceedingsForm extends Component {
                                 {...txt.other.fieldLabels.link}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

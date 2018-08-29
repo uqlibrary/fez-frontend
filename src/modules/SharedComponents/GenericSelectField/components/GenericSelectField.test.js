@@ -39,7 +39,7 @@ describe('GenericSelectField ', () => {
         it('componentWillUpdate', () => {
             const testOnChangeFn = jest.fn();
             const wrapper = setup({itemsList: ['Item 1', 'Item 2', 'Item 3'], selectedValue: 'Item 2', onChange: testOnChangeFn});
-            wrapper.instance()._itemSelected({}, 2, 'Item 3');
+            wrapper.instance()._itemSelected({target: {value: 'Item 2'}});
             expect(testOnChangeFn).toHaveBeenCalled();
         });
     });

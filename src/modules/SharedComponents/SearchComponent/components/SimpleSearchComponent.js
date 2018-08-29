@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import SearchIcon from 'material-ui/svg-icons/action/search';
 
+import SearchIcon from 'material-ui/svg-icons/action/search';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {locale} from 'locale';
 

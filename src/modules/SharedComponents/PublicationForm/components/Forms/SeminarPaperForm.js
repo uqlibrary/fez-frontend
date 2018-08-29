@@ -12,6 +12,9 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class SeminarPaperForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -26,10 +29,10 @@ export default class SeminarPaperForm extends Component {
         const txt = formLocale.seminarPaper;
 
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -42,35 +45,29 @@ export default class SeminarPaperForm extends Component {
                                 {...txt.information.fieldLabels.documentTitle}
                                 required
                                 validate={[validation.required]} />
-                        </div>
-                    </div>
-
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={OrgUnitNameField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                 {...txt.information.fieldLabels.orgUnitName} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={OrgNameField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_org_name.rek_org_name"
                                 {...txt.information.fieldLabels.orgName} />
-                        </div>
-                    </div>
-
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={SeriesField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_series.rek_series"
                                 {...txt.information.fieldLabels.series} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -81,12 +78,12 @@ export default class SeminarPaperForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.seminarDate.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <Typography>{txt.authors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -99,8 +96,8 @@ export default class SeminarPaperForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -109,10 +106,8 @@ export default class SeminarPaperForm extends Component {
                                 fullWidth
                                 multiline
                                 {...txt.optional.fieldLabels.notes} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="fez_record_search_key_link[0].rek_link"
@@ -121,10 +116,10 @@ export default class SeminarPaperForm extends Component {
                                 fullWidth
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]} />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

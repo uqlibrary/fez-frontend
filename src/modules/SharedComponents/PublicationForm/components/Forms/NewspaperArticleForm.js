@@ -11,6 +11,9 @@ import {JournalNameField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 
 export default class NewspaperArticleForm extends Component {
     static propTypes = {
@@ -24,10 +27,10 @@ export default class NewspaperArticleForm extends Component {
     render() {
         const txt = formLocale.newspaperArticle;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 autoFocus
@@ -41,10 +44,8 @@ export default class NewspaperArticleForm extends Component {
                                 {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={JournalNameField}
                                 name="fez_record_search_key_newspaper.rek_newspaper"
@@ -53,11 +54,8 @@ export default class NewspaperArticleForm extends Component {
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-
-                    <div className="columns">
-                        <div className="column is-3-tablet">
+                        </Grid>
+                        <Grid item xs={12} sm={3}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -68,8 +66,8 @@ export default class NewspaperArticleForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                        <div className="column is-3-tablet">
+                        </Grid>
+                        <Grid item xs={12} sm={3}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -80,8 +78,8 @@ export default class NewspaperArticleForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -92,12 +90,11 @@ export default class NewspaperArticleForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-
+                        </Grid>
+                    </Grid>
                 </StandardCard>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <Typography>{txt.authors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
@@ -108,8 +105,8 @@ export default class NewspaperArticleForm extends Component {
                         disabled={this.props.submitting}/>
                 </StandardCard>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -120,10 +117,8 @@ export default class NewspaperArticleForm extends Component {
                                 multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -133,10 +128,10 @@ export default class NewspaperArticleForm extends Component {
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

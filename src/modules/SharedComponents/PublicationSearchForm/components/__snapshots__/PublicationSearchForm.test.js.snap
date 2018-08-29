@@ -7,20 +7,22 @@ exports[`PublicationSearchForm renders  component 1`] = `
 >
   <WithStyles(Grid)
     container={true}
+    spacing={16}
   >
     <WithStyles(Grid)
       item={true}
     >
-      Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+      <WithStyles(Typography)>
+        Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <form
     onSubmit={[MockFunction]}
   >
     <WithStyles(Grid)
-      alignItems="flex-start"
       container={true}
-      spacing={8}
+      spacing={16}
     >
       <WithStyles(Grid)
         item={true}
@@ -32,6 +34,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
       >
         <Field
           autoFocus={true}
+          color="primary"
           component={[Function]}
           fullWidth={true}
           label="Enter DOI, Pubmed Id or Title"
@@ -47,20 +50,15 @@ exports[`PublicationSearchForm renders  component 1`] = `
       <WithStyles(Grid)
         item={true}
       >
-        <RaisedButton
+        <WithStyles(Button)
+          color="secondary"
           disabled={false}
           fullWidth={true}
-          label="Search"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-          style={
-            Object {
-              "marginTop": 22,
-            }
-          }
-        />
+          variant="raised"
+        >
+          Search
+        </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>

@@ -589,7 +589,7 @@ exports[`Component FixRecord should render loader when author is loading 1`] = `
 <div
   className="is-centered"
 >
-  <InlineLoader
+  <WithStyles(InlineLoader)
     message="Loading record..."
   />
 </div>
@@ -599,7 +599,7 @@ exports[`Component FixRecord should render loader when record is loading 1`] = `
 <div
   className="is-centered"
 >
-  <InlineLoader
+  <WithStyles(InlineLoader)
     message="Loading record..."
   />
 </div>

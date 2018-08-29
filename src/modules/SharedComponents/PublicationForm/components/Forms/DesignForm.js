@@ -11,6 +11,8 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+
 export default class DesignForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -26,10 +28,10 @@ export default class DesignForm extends Component {
         const txt = formLocale.design;
 
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -41,10 +43,8 @@ export default class DesignForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -53,10 +53,8 @@ export default class DesignForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.projectName}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -67,10 +65,8 @@ export default class DesignForm extends Component {
                                 multiline
                                 {...txt.information.fieldLabels.projectDescription}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -79,8 +75,8 @@ export default class DesignForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -89,10 +85,8 @@ export default class DesignForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.placeOfPublication}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -101,8 +95,8 @@ export default class DesignForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.location}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -113,8 +107,8 @@ export default class DesignForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Field
@@ -127,8 +121,8 @@ export default class DesignForm extends Component {
                         validate={[validation.authorRequired]} />
                 </StandardCard>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -138,10 +132,8 @@ export default class DesignForm extends Component {
                                 multiline
                                 rows={1}
                                 {...txt.optional.fieldLabels.notes}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -151,10 +143,10 @@ export default class DesignForm extends Component {
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }
