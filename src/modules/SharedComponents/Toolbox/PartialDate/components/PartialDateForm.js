@@ -130,7 +130,6 @@ export class PartialDateForm extends Component {
     };
 
     render() {
-        console.log(this.state);
         const {locale, months} = this.props;
         const renderMonths = months.map((month, index) =>
             <MenuItem key={index} value={index + 1}>{month}</MenuItem>
