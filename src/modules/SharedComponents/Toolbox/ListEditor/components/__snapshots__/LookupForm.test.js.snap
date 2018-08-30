@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LookupForm tests  should render lookup form 1`] = `
-<inputField
-  className="mui-long-labels-fix"
-  floatingLabelText="Item name"
-  hintText="Please type the item name, then select from the list"
-  input={
-    Object {
-      "onChange": [MockFunction],
-    }
-  }
-/>
 <React.Fragment>
   <inputField
     className="mui-long-labels-fix"
