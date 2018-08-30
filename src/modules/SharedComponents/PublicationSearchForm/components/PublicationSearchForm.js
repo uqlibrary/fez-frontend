@@ -25,14 +25,10 @@ export default class PublicationSearchForm extends Component {
     render() {
         return (
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
-                <Grid container spacing={16}>
-                    <Grid item>
-                        <Typography>{this.props.locale.text}</Typography>
-                    </Grid>
-                </Grid>
+                <Typography gutterBottom>{this.props.locale.text}</Typography>
                 <form onSubmit={this.props.handleSubmit}>
-                    <Grid container spacing={16}>
-                        <Grid item style={{flexGrow: 1}}>
+                    <Grid container spacing={16} alignItems="center">
+                        <Grid item xs={12} sm={12} md={8}>
                             <Field
                                 component={TextField}
                                 color={'primary'}
@@ -43,7 +39,7 @@ export default class PublicationSearchForm extends Component {
                                 autoFocus
                                 validate={[validation.required]}/>
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={12} sm={6} md={2}>
                             <Button
                                 variant={'raised'}
                                 children={this.props.locale.submit}
@@ -55,7 +51,7 @@ export default class PublicationSearchForm extends Component {
                         </Grid>
                         {
                             this.props.onSkipSearch &&
-                            <Grid item>
+                            <Grid item xs={12} sm={6} md={2}>
                                 <Button
                                     variant={'flat'}
                                     children={this.props.locale.skip}
