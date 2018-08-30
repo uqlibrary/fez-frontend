@@ -6,6 +6,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
   container={true}
   direction="row"
   justify="center"
+  spacing={40}
 >
   <WithStyles(Grid)
     item={true}
@@ -26,7 +27,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
           "margin": "24px 0",
         }
       }
-      variant="headline"
+      variant="title"
     >
       This is a tst
     </WithStyles(Typography)>

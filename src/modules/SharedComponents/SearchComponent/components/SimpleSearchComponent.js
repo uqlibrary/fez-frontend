@@ -2,15 +2,18 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import IconButton from 'material-ui/IconButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {locale} from 'locale';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class SimpleSearchComponent extends PureComponent {
+const styles = {};
+
+export class SimpleSearchComponent extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
 
@@ -27,7 +30,6 @@ export default class SimpleSearchComponent extends PureComponent {
         onToggleSearchMode: PropTypes.func,
         onInvalidSearch: PropTypes.func
     };
-
     static defaultProps = {
         searchText: '',
 
@@ -177,10 +179,11 @@ export default class SimpleSearchComponent extends PureComponent {
                         </div>
                     }
                     <div className="column is-narrow searchButtonWrapper"  >
-                        <RaisedButton
-                            label={txt.searchButtonText}
+                        <Button
+                            children={txt.searchButtonText}
                             aria-label={txt.searchButtonAriaLabel}
-                            primary
+                            variant={'raised'}
+                            color={'primary'}
                             disabled={!!this.searchTextValidationMessage(this.props.searchText)}
                             onClick={this._handleSearch}
                             fullWidth />
@@ -188,8 +191,9 @@ export default class SimpleSearchComponent extends PureComponent {
                     {
                         this.props.showAdvancedSearchButton &&
                         <div className="column is-narrow advancedSearchButtonWrapper"  >
-                            <RaisedButton
-                                label={txt.advancedSearchButtonText}
+                            <Button
+                                variant={'raised'}
+                                children={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}
                                 onClick={this._handleSearchMode}
                                 className="advancedButton"
@@ -202,3 +206,5 @@ export default class SimpleSearchComponent extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(SimpleSearchComponent);

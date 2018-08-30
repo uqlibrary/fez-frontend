@@ -6,9 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
+    root: {
+        margin: '24px 0'
+    },
     text: {
         color: theme.palette.secondary.main,
-        margin: '0 24px'
     },
 });
 
@@ -25,12 +27,12 @@ export class InlineLoader extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <Grid container direction="row" justify="center" alignItems="center">
+            <Grid container spacing={40} direction="row" justify="center" alignItems="center" className={classes.root}>
                 <Grid item>
                     <CircularProgress size={32} thickness={1} color="primary"/>
                 </Grid>
                 <Grid item>
-                    <Typography className={classes.text} variant={'headline'}>{this.props.message}</Typography>
+                    <Typography className={classes.text} variant={'title'}>{this.props.message}</Typography>
                 </Grid>
             </Grid>
         );

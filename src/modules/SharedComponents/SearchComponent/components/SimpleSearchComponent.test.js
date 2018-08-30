@@ -1,4 +1,4 @@
-import SimpleSearchComponent from './SimpleSearchComponent';
+import {SimpleSearchComponent} from './SimpleSearchComponent';
 import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){

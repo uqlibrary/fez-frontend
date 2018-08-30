@@ -30,10 +30,7 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import {withStyles} from '@material-ui/core/styles';
 
-import jss from 'jss';
-import nested from 'jss-nested';
-// import global from 'jss-global';
-jss.use(nested());
+const logo = require('../../../images/uq-logo-white-minimal.svg');
 
 const styles = theme => ({
     layoutCard: {
@@ -152,6 +149,10 @@ export class App extends PureComponent {
         this.sessionExpiredConfirmationBox = ref;
     };
 
+    hideBrokenImage = () =>{
+        document.getElementById('logo').style.display = 'none';
+    };
+
     render() {
         const {classes} = this.props;
         if (this.props.accountLoading) {
@@ -248,9 +249,10 @@ export class App extends PureComponent {
                                     </Tooltip>
                                 </Grid>
                             }
+                            {/* Logo */}
                             <Hidden smDown lgUp>
                                 <Grid item>
-                                    <div style={{backgroundImage: 'url(/src/images/uq-logo-white-minimal.svg)', width: 66, height: 66}} aria-label={locale.global.logo.label} />
+                                    <img id="logo" src={logo} style={{width: 66, height: 66}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
                                 </Grid>
                             </Hidden>
                             {/* Title */}

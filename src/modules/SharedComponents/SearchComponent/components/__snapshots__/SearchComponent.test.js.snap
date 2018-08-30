@@ -76,7 +76,7 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
 
 exports[`SearchComponent should display simple search with query string 1`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
@@ -98,7 +98,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
 
 exports[`SearchComponent should display simple search with query string 2`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
@@ -120,7 +120,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
 
 exports[`SearchComponent should handle simple search text change 1`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
@@ -227,7 +227,7 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
 
 exports[`SearchComponent should render default view 1`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
@@ -284,7 +284,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
 
 exports[`SearchComponent should render simple search even if it says is advanced, if in header 1`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={true}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
@@ -306,7 +306,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
 
 exports[`SearchComponent should render with a class "header" for use in AppBar 1`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={true}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
@@ -547,7 +547,7 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
 
 exports[`SearchComponent should toggle search to minimised view of advanced search 1`] = `
 <React.Fragment>
-  <SimpleSearchComponent
+  <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
     onSearch={[Function]}
