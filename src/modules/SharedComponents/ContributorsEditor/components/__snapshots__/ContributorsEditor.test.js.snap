@@ -9,13 +9,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List)
-    classes={
-      Object {
-        "root": "list ",
-      }
-    }
-  />
 </div>
 `;
 
@@ -25,13 +18,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={true}
-  />
-  <WithStyles(List)
-    classes={
-      Object {
-        "root": "list ",
-      }
-    }
   />
 </div>
 `;
@@ -43,76 +29,78 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List)>
-    <WithStyles(ContributorRowHeader)
-      isInfinite={false}
-      onDeleteAll={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-  </WithStyles(List)>
-  <WithStyles(List)
-    classes={
-      Object {
-        "root": "list ",
-      }
-    }
-  >
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={true}
-      canMoveUp={false}
-      contributor={
+  <React.Fragment>
+    <WithStyles(List)>
+      <WithStyles(ContributorRowHeader)
+        isInfinite={false}
+        onDeleteAll={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+    </WithStyles(List)>
+    <WithStyles(List)
+      classes={
         Object {
-          "nameAsPublished": 1,
+          "root": "list ",
         }
       }
-      disabledContributorAssignment={false}
-      index={0}
-      key="ContributorRow_0"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={true}
-      canMoveUp={true}
-      contributor={
-        Object {
-          "nameAsPublished": 2,
+    >
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={true}
+        canMoveUp={false}
+        contributor={
+          Object {
+            "nameAsPublished": 1,
+          }
         }
-      }
-      disabledContributorAssignment={false}
-      index={1}
-      key="ContributorRow_1"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={false}
-      canMoveUp={true}
-      contributor={
-        Object {
-          "nameAsPublished": 3,
+        disabledContributorAssignment={false}
+        index={0}
+        key="ContributorRow_0"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={true}
+        canMoveUp={true}
+        contributor={
+          Object {
+            "nameAsPublished": 2,
+          }
         }
-      }
-      disabledContributorAssignment={false}
-      index={2}
-      key="ContributorRow_2"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-  </WithStyles(List)>
+        disabledContributorAssignment={false}
+        index={1}
+        key="ContributorRow_1"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={false}
+        canMoveUp={true}
+        contributor={
+          Object {
+            "nameAsPublished": 3,
+          }
+        }
+        disabledContributorAssignment={false}
+        index={2}
+        key="ContributorRow_2"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+    </WithStyles(List)>
+  </React.Fragment>
 </div>
 `;
 
@@ -123,94 +111,96 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List)>
-    <WithStyles(ContributorRowHeader)
-      isInfinite={true}
-      onDeleteAll={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-  </WithStyles(List)>
-  <WithStyles(List)
-    classes={
-      Object {
-        "root": "list scroll",
-      }
-    }
-  >
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={true}
-      canMoveUp={false}
-      contributor={
+  <React.Fragment>
+    <WithStyles(List)>
+      <WithStyles(ContributorRowHeader)
+        isInfinite={true}
+        onDeleteAll={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+    </WithStyles(List)>
+    <WithStyles(List)
+      classes={
         Object {
-          "displayName": 1,
+          "root": "list scroll",
         }
       }
-      disabledContributorAssignment={false}
-      index={0}
-      key="ContributorRow_0"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={true}
-      canMoveUp={true}
-      contributor={
-        Object {
-          "displayName": 2,
+    >
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={true}
+        canMoveUp={false}
+        contributor={
+          Object {
+            "displayName": 1,
+          }
         }
-      }
-      disabledContributorAssignment={false}
-      index={1}
-      key="ContributorRow_1"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={true}
-      canMoveUp={true}
-      contributor={
-        Object {
-          "displayName": 3,
+        disabledContributorAssignment={false}
+        index={0}
+        key="ContributorRow_0"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={true}
+        canMoveUp={true}
+        contributor={
+          Object {
+            "displayName": 2,
+          }
         }
-      }
-      disabledContributorAssignment={false}
-      index={2}
-      key="ContributorRow_2"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-    <WithStyles(WithTheme(WithWidth(ContributorRow)))
-      canMoveDown={false}
-      canMoveUp={true}
-      contributor={
-        Object {
-          "displayName": 4,
+        disabledContributorAssignment={false}
+        index={1}
+        key="ContributorRow_1"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={true}
+        canMoveUp={true}
+        contributor={
+          Object {
+            "displayName": 3,
+          }
         }
-      }
-      disabledContributorAssignment={false}
-      index={3}
-      key="ContributorRow_3"
-      onContributorAssigned={[Function]}
-      onDelete={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      showContributorAssignment={false}
-      showIdentifierLookup={false}
-    />
-  </WithStyles(List)>
+        disabledContributorAssignment={false}
+        index={2}
+        key="ContributorRow_2"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+      <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        canMoveDown={false}
+        canMoveUp={true}
+        contributor={
+          Object {
+            "displayName": 4,
+          }
+        }
+        disabledContributorAssignment={false}
+        index={3}
+        key="ContributorRow_3"
+        onContributorAssigned={[Function]}
+        onDelete={[Function]}
+        onMoveDown={[Function]}
+        onMoveUp={[Function]}
+        showContributorAssignment={false}
+        showIdentifierLookup={false}
+      />
+    </WithStyles(List)>
+  </React.Fragment>
 </div>
 `;
 
@@ -221,13 +211,6 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
-  <WithStyles(List)
-    classes={
-      Object {
-        "root": "list ",
-      }
-    }
-  />
 </div>
 `;
 
@@ -237,13 +220,6 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
-  />
-  <WithStyles(List)
-    classes={
-      Object {
-        "root": "list ",
-      }
-    }
   />
   <WithStyles(Typography)
     color="error"
