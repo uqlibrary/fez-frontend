@@ -60,12 +60,12 @@ export class FreeTextForm extends Component {
     };
 
     render() {
-        const {classes, locale, errorText} = this.props;
+        const {classes, locale, errorText, disabled} = this.props;
         const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
 
         return (
             <div style={{flexGrow: 1, padding: 8}}>
-                <Grid container spacing={16} display="row">
+                <Grid container spacing={16} display="row" alignItems="baseline">
                     <Grid item style={{flexGrow: 1}}>
                         <TextField
                             fullWidth
@@ -78,10 +78,10 @@ export class FreeTextForm extends Component {
                             error={this.props.isValid(this.state.itemName) || errorText
                                 ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
                                 : null}
-                            helperText={this.props.isValid(this.state.itemName) || this.props.errorText
-                                ? `${this.props.errorText || ''} ${this.props.isValid(this.state.itemName)}`
+                            helperText={this.props.isValid(this.state.itemName) || errorText
+                                ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
                                 : null}
-                            disabled={this.props.disabled}
+                            disabled={disabled}
                         />
                         {
                             this.props.remindToAdd &&
@@ -99,7 +99,7 @@ export class FreeTextForm extends Component {
                             color={'primary'}
                             variant={'raised'}
                             children={addButtonLabel}
-                            disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                            disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
                             onClick={this.addItem}
                         />
                     </Grid>
