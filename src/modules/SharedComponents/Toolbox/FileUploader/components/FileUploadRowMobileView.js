@@ -7,7 +7,7 @@ import FileUploadRowStatus from './FileUploadRowStatus';
 
 import * as config from '../config';
 
-import {Grid, Typography} from '@material-ui/core';
+import {Typography, List, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction} from '@material-ui/core';
 import {Attachment, CalendarTodayOutlined, LockOutlined} from '@material-ui/icons';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -39,81 +39,52 @@ export class FileUploadRowMobileView extends PureComponent {
 
     render() {
         const {filenameColumn, fileAccessColumn, embargoDateColumn, embargoDateClosedAccess} = this.props.locale;
-        const {index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size, focusOnIndex} = this.props;
+        const {index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size, focusOnIndex, classes} = this.props;
 
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
-                <Grid container className={this.props.classes.root} direction="column" spacing={8}>
-                    <Grid item xs={12}>
-                        <Grid container direction="row" alignItems="center" spacing={8}>
-                            <Grid item xs={2}>
-                                <Attachment/>
-                            </Grid>
-                            <Grid item xs={10}>
-                                <Typography variant="body1" gutterBottom noWrap>
-                                    {name} ({size})
-                                </Typography>
-                                <Typography variant="caption" gutterBottom>
-                                    {filenameColumn}
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    {
-                        requireOpenAccessStatus &&
-                        <Fragment>
-                            <Grid item xs={12}>
-                                <Grid container direction="row" alignItems="center" spacing={8}>
-                                    <Grid item xs={2}>
-                                        <LockOutlined/>
-                                    </Grid>
-                                    <Grid item xs={10}>
-                                        <FileUploadAccessSelector
-                                            value={accessConditionId}
-                                            onChange={this.props.onAccessConditionChange}
-                                            disabled={disabled}
-                                            ref={`accessConditionSelector${index}`}
-                                            autoFocus={index === focusOnIndex}
-                                        />
-                                        <Typography variant="caption" gutterBottom>
-                                            {fileAccessColumn}
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <div style={{flexGrow: 1, padding: 4}}>
-                                    <Grid container direction="row" alignItems="center" spacing={8} justify="space-around">
-                                        <Grid item xs={2}>
-                                            <CalendarTodayOutlined/>
-                                        </Grid>
-                                        <Grid item xs={9}>
-                                            {
-                                                requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
-                                                <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
-                                            }
-                                            {
-                                                requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID &&
-                                                <FileUploadEmbargoDate
-                                                    value={new Date(embargoDate)}
-                                                    onChange={this.props.onEmbargoDateChange}
-                                                    disabled={disabled}
-                                                />
-                                            }
-                                            <Typography variant="caption" gutterBottom>
-                                                {embargoDateColumn}
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={1}>
-                                            <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name}/>
-                                        </Grid>
-                                    </Grid>
-                                </div>
-                            </Grid>
-                        </Fragment>
-                    }
-                </Grid>
-            </div>
+            <List classes={{root: classes.root}}>
+                <ListItem classes={{root: classes.listItem}}>
+                    <ListItemIcon classes={{root: classes.listIcon}}><Attachment/></ListItemIcon>
+                    <ListItemText primary={`${name} (${size})`} secondary={filenameColumn} classes={{primary: classes.primaryText, secondary: classes.secondaryText}}/>
+                </ListItem>
+                {
+                    requireOpenAccessStatus &&
+                    <Fragment>
+                        <ListItem classes={{root: classes.listItem}}>
+                            <ListItemIcon classes={{root: classes.listIcon}}><LockOutlined/></ListItemIcon>
+                            <ListItemText secondary={fileAccessColumn} classes={{secondary: classes.secondaryText}}>
+                                <FileUploadAccessSelector
+                                    value={accessConditionId}
+                                    onChange={this.props.onAccessConditionChange}
+                                    disabled={disabled}
+                                    ref={`accessConditionSelector${index}`}
+                                    autoFocus={index === focusOnIndex}
+                                />
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem classes={{root: classes.listItem}}>
+                            <ListItemIcon classes={{root: classes.listIcon}}><CalendarTodayOutlined/></ListItemIcon>
+                            <ListItemText secondary={embargoDateColumn} classes={{primary: classes.primaryText, secondary: classes.secondaryText}}>
+                                {
+                                    requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
+                                    <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
+                                }
+                                {
+                                    requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID &&
+                                    <FileUploadEmbargoDate
+                                        value={new Date(embargoDate)}
+                                        onChange={this.props.onEmbargoDateChange}
+                                        disabled={disabled}
+                                    />
+                                }
+                            </ListItemText>
+                            <ListItemSecondaryAction classes={{root: classes.secondaryAction}}>
+                                <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name}/>
+                            </ListItemSecondaryAction>
+                        </ListItem>
+                    </Fragment>
+                }
+            </List>
         );
     }
 }
@@ -121,6 +92,23 @@ export class FileUploadRowMobileView extends PureComponent {
 const styles = () => ({
     root: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+    },
+    listItem: {
+        paddingLeft: 0,
+        paddingRight: 0
+    },
+    listIcon: {
+        marginRight: 0
+    },
+    primaryText: {
+        fontSize: '0.8rem',
+        fontWeight: 400
+    },
+    secondaryText: {
+        fontSize: '0.7rem'
+    },
+    secondaryAction: {
+        textAlign: 'center'
     }
 });
 

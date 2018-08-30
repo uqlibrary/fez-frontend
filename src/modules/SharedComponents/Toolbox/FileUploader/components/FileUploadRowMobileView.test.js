@@ -10,7 +10,13 @@ function setup(testProps, isShallow = true) {
         requireOpenAccessStatus: true,
         disabled: false,
         classes: {
-            icon: ''
+            root: 'root',
+            listItem: 'listItem',
+            listIcon: 'listIcon',
+            primary: 'primary',
+            secondary: 'secondary',
+            primaryText: 'primaryText',
+            secondaryText: 'secondaryText'
         },
         onDelete: jest.fn(),
         onEmbargoDateChange: jest.fn(),
