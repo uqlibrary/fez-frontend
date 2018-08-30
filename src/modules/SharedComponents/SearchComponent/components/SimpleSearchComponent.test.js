@@ -17,6 +17,9 @@ function setup(testProps, isShallow = true){
         onInvalidSearch: jest.fn(),
         onToggle: jest.fn(),
         onSearchTextChange: jest.fn(),
+        classes: {
+            inHeader: {},
+        },
 
         ...testProps
     };

@@ -31,7 +31,7 @@ export default class PublicationSearchForm extends Component {
                     </Grid>
                 </Grid>
                 <form onSubmit={this.props.handleSubmit}>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={16} alignContent={'flex-end'} alignItems={'flex-end'}>
                         <Grid item style={{flexGrow: 1}}>
                             <Field
                                 component={TextField}

@@ -21,6 +21,8 @@ exports[`PublicationSearchForm renders  component 1`] = `
     onSubmit={[MockFunction]}
   >
     <WithStyles(Grid)
+      alignContent="flex-end"
+      alignItems="flex-end"
       container={true}
       spacing={16}
     >

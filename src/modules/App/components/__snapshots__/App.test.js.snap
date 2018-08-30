@@ -183,7 +183,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -797,7 +796,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -1273,7 +1271,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -1719,7 +1716,6 @@ exports[`Application component should render app for account with fez author wit
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -2308,7 +2304,6 @@ exports[`Application component should render app for account with fez author wit
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -2924,7 +2919,6 @@ exports[`Application component should render app for account with fez author wit
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -3426,7 +3420,6 @@ exports[`Application component should render application with routing for the us
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -3711,7 +3704,6 @@ exports[`Application component should render for anon user 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
@@ -4023,7 +4015,6 @@ exports[`Application component should render thesis submission for HDR without m
       >
         <WithStyles(Grid)
           item={true}
-          xs="auto"
           zeroMinWidth={true}
         >
           <WithStyles(Tooltip)

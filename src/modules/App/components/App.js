@@ -65,7 +65,7 @@ export class App extends PureComponent {
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1200px)'),
+            mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
         };
     }
@@ -175,8 +175,7 @@ export class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 280} : {};
-        const titleStyle = this.state.docked ? {paddingLeft: 200} : {paddingLeft: 0};
+        const containerStyle = this.state.docked ? {paddingLeft: 260} : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
@@ -212,6 +211,7 @@ export class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+        const titleStyle = this.state.docked ? {paddingLeft: 284} : {paddingLeft: 0};
         return (
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
@@ -226,8 +226,9 @@ export class App extends PureComponent {
                             wrap="nowrap"
                             justify="flex-start">
                             {/* Menu/Close Button */}
-                            {!this.state.docked &&
-                                <Grid item xs={'auto'} zeroMinWidth>
+                            {
+                                !this.state.docked &&
+                                <Grid item zeroMinWidth>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
                                         TransitionComponent={Fade}>

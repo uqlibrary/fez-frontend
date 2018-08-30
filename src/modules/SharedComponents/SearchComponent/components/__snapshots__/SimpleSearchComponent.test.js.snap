@@ -1,230 +1,237 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SimpleSearchComponent should render default view 1`] = `
-<div
-  className="searchComponent false simple-search"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
+<React.Fragment>
+  <React.Fragment>
+    <WithStyles(Grid)
+      alignContent="flex-end"
+      alignItems="flex-end"
+      container={true}
+      spacing={16}
     >
-      <div
-        className="columns is-gapless search-field is-mobile"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
       >
-        <div
-          className="column"
-        >
-          <TextField
-            InputProps={null}
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            id="searchField"
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            style={Object {}}
-            type="search"
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value=""
         />
-      </div>
-    </div>
-    <div
-      className="column is-narrow searchButtonWrapper"
-    >
-      <WithStyles(Button)
-        aria-label="Click to search eSpace"
-        color="primary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        Search
-      </WithStyles(Button)>
-    </div>
-  </div>
-</div>
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</React.Fragment>
 `;
 
 exports[`SimpleSearchComponent should render show mobile button 1`] = `
-<div
-  className="searchComponent false simple-search"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
+<React.Fragment>
+  <React.Fragment>
+    <WithStyles(Grid)
+      alignContent="flex-end"
+      alignItems="flex-end"
+      container={true}
+      spacing={16}
     >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column is-narrow searchIconPrefix is-hidden-tablet"
-        >
-          <IconButton
-            className="mobileBackArrow"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <NavigationArrowBack />
-          </IconButton>
-        </div>
-        <div
-          className="column"
-        >
-          <TextField
-            InputProps={null}
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            id="searchField"
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            style={Object {}}
-            type="search"
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow is-hidden-tablet"
-    >
-      <IconButton
-        aria-label="Click to search eSpace"
-        className="searchButton"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
+      <WithStyles(Grid)
+        item={true}
+        style={
           Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
+            "flexGrow": 1,
           }
         }
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltipPosition="bottom-center"
-        touch={false}
       >
-        <ActionSearch />
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow searchButtonWrapper"
-    >
-      <WithStyles(Button)
-        aria-label="Click to search eSpace"
-        color="primary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value=""
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        Search
-      </WithStyles(Button)>
-    </div>
-  </div>
-</div>
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</React.Fragment>
 `;
 
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
-<div
-  className="searchComponent false simple-search"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
+<React.Fragment>
+  <React.Fragment>
+    <WithStyles(Grid)
+      alignContent="flex-end"
+      alignItems="flex-end"
+      container={true}
+      spacing={16}
     >
-      <div
-        className="columns is-gapless search-field is-mobile"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
       >
-        <div
-          className="column is-narrow searchIconPrefix is-hidden-mobile"
-        >
-          <ActionSearch />
-        </div>
-        <div
-          className="column"
-        >
-          <TextField
-            InputProps={null}
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            id="searchField"
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            style={Object {}}
-            type="search"
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value=""
         />
-      </div>
-    </div>
-    <div
-      className="column is-narrow searchButtonWrapper"
-    >
-      <WithStyles(Button)
-        aria-label="Click to search eSpace"
-        color="primary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        Search
-      </WithStyles(Button)>
-    </div>
-  </div>
-</div>
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</React.Fragment>
 `;
 
 exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
-<div
-  className="searchComponent header simple-search"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
+<React.Fragment>
+  <React.Fragment>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        className="columns is-gapless search-field is-mobile"
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        className={Object {}}
+        container={true}
+        justify="center"
+        spacing={16}
       >
-        <div
-          className="column"
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
         >
           <TextField
             InputProps={
@@ -235,110 +242,116 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
             aria-label="Enter your search query to search eSpace and then press Enter"
             error={null}
             fullWidth={true}
-            id="searchField"
             label={false}
             onChange={[Function]}
             onKeyPress={[Function]}
             placeholder="Search eSpace"
             required={false}
             select={false}
-            style={
-              Object {
-                "padding": 8,
-              }
-            }
             type="search"
             value=""
           />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow searchButtonWrapper"
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <WithStyles(Button)
-        aria-label="Click to search eSpace"
-        color="primary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
+        title="Search eSpace"
       >
-        Search
-      </WithStyles(Button)>
-    </div>
-  </div>
-</div>
+        <WithStyles(IconButton)
+          aria-label="Click to search eSpace"
+          onClick={[Function]}
+        >
+          <pure(Search) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </Hidden>
+  </React.Fragment>
+</React.Fragment>
 `;
 
 exports[`SimpleSearchComponent should set search value from prop 1`] = `
-<div
-  className="searchComponent false simple-search"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
+<React.Fragment>
+  <React.Fragment>
+    <WithStyles(Grid)
+      alignContent="flex-end"
+      alignItems="flex-end"
+      container={true}
+      spacing={16}
     >
-      <div
-        className="columns is-gapless search-field is-mobile"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
       >
-        <div
-          className="column"
-        >
-          <TextField
-            InputProps={null}
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            id="searchField"
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            style={Object {}}
-            type="search"
-            value="i feel lucky"
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value="i feel lucky"
         />
-      </div>
-    </div>
-    <div
-      className="column is-narrow searchButtonWrapper"
-    >
-      <WithStyles(Button)
-        aria-label="Click to search eSpace"
-        color="primary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        Search
-      </WithStyles(Button)>
-    </div>
-    <div
-      className="column is-narrow advancedSearchButtonWrapper"
-    >
-      <WithStyles(Button)
-        aria-label="Click to switch to Advanced search"
-        className="advancedButton"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        Advanced search
-      </WithStyles(Button)>
-    </div>
-  </div>
-</div>
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</React.Fragment>
 `;
