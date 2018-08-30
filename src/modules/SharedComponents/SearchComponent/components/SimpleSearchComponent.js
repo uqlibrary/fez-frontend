@@ -41,6 +41,7 @@ const styles = theme => ({
         width: 70,
     },
     mobileHeader: {
+        zIndex: 100,
         backgroundColor: theme.palette.white.main,
         position: 'absolute',
         top: 0,
@@ -49,9 +50,11 @@ const styles = theme => ({
         height: 70
     },
     mobileSearchInput: {
+        width: '99%',
         height: 70,
-        margin: ' 0 12px',
         '& input': {
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
             marginTop: 10,
             fontSize: 32,
             lineHeight: 70,
@@ -198,7 +201,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         </Tooltip>
                                         :
                                         <div className={classes.mobileHeader}>
-                                            <Grid container spacing={0} alignItems={'stretch'} justify={'center'}>
+                                            <Grid container spacing={0} direction={'row'} wrap={'nowrap'} alignItems={'stretch'} justify={'center'}>
                                                 {
                                                     this.props.showMobileSearchButton && this.state.showMobile &&
                                                     <Hidden smUp>
@@ -209,7 +212,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                         </Grid>
                                                     </Hidden>
                                                 }
-                                                <Grid item style={{flexGrow: 1}}>
+                                                <Grid item style={{flexGrow: 1}} zeroMinWidth>
                                                     <TextField
                                                         className={classes.mobileSearchInput}
                                                         type="search"
@@ -232,7 +235,7 @@ export class SimpleSearchComponent extends PureComponent {
                         :
                         <React.Fragment>
                             {/* NOT in header */}
-                            <Grid container spacing={16} alignContent={'flex-end'} alignItems={'flex-end'}>
+                            <Grid container spacing={16}>
                                 <Grid item style={{flexGrow: 1}}>
                                     <TextField
                                         type="search"

@@ -38,14 +38,14 @@ export const mui1theme = createMuiTheme({
             dark: '#370546',
         },
         secondary: {
-            light: '#288BED',
-            main: '#2377CB',
-            dark: '#005EA5'
-        },
-        tertiary: {
             light: '#f2f2f2',
             main: '#595959',
             dark: '#333333'
+        },
+        tertiary: {
+            light: '#288BED',
+            main: '#2377CB',
+            dark: '#005EA5'
         },
         white: {
             main: '#FFFFFF'
