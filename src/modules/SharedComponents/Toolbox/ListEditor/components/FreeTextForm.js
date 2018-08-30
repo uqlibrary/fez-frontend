@@ -98,7 +98,7 @@ export class FreeTextForm extends Component {
                             fullWidth
                             color={'primary'}
                             variant={'raised'}
-                            children={this.props.locale.addButtonLabel}
+                            children={addButtonLabel}
                             disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
                             onClick={this.addItem}
                         />
