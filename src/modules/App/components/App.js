@@ -25,7 +25,6 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     layoutCard: {
-        // border: '5px dashed red',
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',
@@ -35,7 +34,6 @@ const styles = theme => ({
         },
     },
     layoutFill: {
-        // border: '5px dashed green',
         margin: 0,
         padding: 0,
         maxHeight: '100%',

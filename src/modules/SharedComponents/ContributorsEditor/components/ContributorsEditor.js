@@ -217,6 +217,3 @@ export default compose(
     withStyles(styles),
     connect(mapStateToProps)
 )(ContributorsEditor);
-// export default connect(mapStateToProps)(ContributorsEditor);
-
-
