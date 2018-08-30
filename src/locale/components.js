@@ -303,7 +303,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
@@ -317,7 +317,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Author\'s name as published',
@@ -366,7 +366,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format "John Smith".</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format "John Smith".</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
@@ -380,7 +380,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
                         nameColumn: 'Editor\'s name in the format eg. "John Smith"',
@@ -428,7 +428,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
@@ -442,7 +442,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Creator\'s name as published',
@@ -489,7 +489,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
@@ -503,7 +503,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Designers name as published',
@@ -550,7 +550,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
@@ -564,7 +564,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Supervisor\'s name as published',
@@ -662,7 +662,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
@@ -676,7 +676,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Contributor\'s name as published',

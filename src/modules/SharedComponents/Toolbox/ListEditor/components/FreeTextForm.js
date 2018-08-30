@@ -31,6 +31,7 @@ export class FreeTextForm extends Component {
         this.state = {
             itemName: ''
         };
+        this.textField = null;
     }
 
     addItem = (event) => {
@@ -50,7 +51,7 @@ export class FreeTextForm extends Component {
         });
 
         // move focus to name as published text field after item was added
-        if (this.refs.itemName) this.refs.itemName.focus();
+        if (this.textField) this.textField.focus();
     };
 
     onNameChanged = (event) => {
@@ -69,15 +70,13 @@ export class FreeTextForm extends Component {
                     <Grid item style={{flexGrow: 1}}>
                         <TextField
                             fullWidth
-                            ref="itemName"
+                            inputRef={(node) => {this.textField = node;}}
                             label={inputFieldLabel}
                             placeholder={inputFieldHint}
                             value={this.state.itemName}
                             onChange={this.onNameChanged}
                             onKeyPress={this.addItem}
-                            error={this.props.isValid(this.state.itemName) || errorText
-                                ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
-                                : null}
+                            error={!!this.props.isValid(this.state.itemName)}
                             helperText={this.props.isValid(this.state.itemName) || errorText
                                 ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
                                 : null}
@@ -111,6 +110,7 @@ export class FreeTextForm extends Component {
 
 const styles = () => ({
     remindToAdd: {
+        marginTop: 8,
         color: '#f06f0d'
     }
 });
