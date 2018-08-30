@@ -4,6 +4,9 @@ import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import {withStyles} from '@material-ui/core/styles';
+
+const styles = {};
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -164,4 +167,4 @@ class AdvancedSearchRowInput extends PureComponent {
     }
 }
 
-export default AdvancedSearchRowInput;
+export default withStyles(styles, {withTheme: true})(AdvancedSearchRowInput);

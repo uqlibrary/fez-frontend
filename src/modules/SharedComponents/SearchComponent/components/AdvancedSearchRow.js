@@ -1,14 +1,30 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-import Divider from 'material-ui/Divider';
-import IconButton from 'material-ui/IconButton';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+
 import Close from 'material-ui/svg-icons/navigation/close';
 import {locale} from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
-export default class AdvancedSearchRow extends PureComponent {
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
+
+const styles = {
+    advancedSearchRowDeleteButton: {
+        marginTop: -6,
+        marginBottom: -6,
+        opacity: 0.66
+    },
+    advancedSearchCombiner: {
+        marginTop: 6
+    }
+};
+
+export class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
         searchField: PropTypes.string,
@@ -21,13 +37,15 @@ export default class AdvancedSearchRow extends PureComponent {
         disabledFields: PropTypes.array,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,
+        classes: PropTypes.object
     };
 
     _handleTextChange = (value, label = '') => {
         this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value, label});
     };
 
-    _handleSearchFieldChange = (event, index, searchField) => {
+    _handleSearchFieldChange = (event) => {
+        const searchField = event.target.value;
         this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: '', label: ''});
     };
 
@@ -55,15 +73,16 @@ export default class AdvancedSearchRow extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
+        const {classes} = this.props;
         return (
-            <div className="columns is-gapless is-multiline is-mobile advancedSearchRow">
-                <div className="column is-4-tablet">
-                    <SelectField
+            <Grid container spacing={16}>
+                <Grid item xs={12} sm={3}>
+                    <Select
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
-                        errorText={this.selectFieldValidation()}
+                        error={!!this.selectFieldValidation()}
+                        helpertext={this.selectFieldValidation()}
                         aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
-                        menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
                         fullWidth
                     >
                         {
@@ -78,22 +97,21 @@ export default class AdvancedSearchRow extends PureComponent {
                                         <MenuItem
                                             key={item}
                                             value={item}
-                                            primaryText={txt.fieldTypes[item].title}
+                                            children={txt.fieldTypes[item].title}
                                             disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
                                         />
                                     );
                                 })
                         }
-                    </SelectField>
-                </div>
+                    </Select>
+                </Grid>
                 {
-                    txt.fieldTypes[this.props.searchField].combiner ?
-                        <div className="column is-narrow combiner">
-                            <span>{txt.fieldTypes[this.props.searchField].combiner}</span>
-                        </div>
-                        : <div className="column is-narrow spacer" />
+                    txt.fieldTypes[this.props.searchField].combiner &&
+                        <Grid item>
+                            <Typography className={classes.advancedSearchCombiner}>{txt.fieldTypes[this.props.searchField].combiner}</Typography>
+                        </Grid>
                 }
-                <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
+                <Grid item style={{flexGrow: 1}}>
                     <AdvancedSearchRowInput
                         {...this.props}
                         onChange={this._handleTextChange}
@@ -103,10 +121,10 @@ export default class AdvancedSearchRow extends PureComponent {
                             this.renderInputComponentAndProps()
                         }
                     </AdvancedSearchRowInput>
-                </div>
+                </Grid>
                 {
                     this.props.rowIndex !== 0 &&
-                    <div className="column is-1-mobile is-narrow-tablet">
+                    <Grid item className={classes.advancedSearchRowDeleteButton}>
                         <IconButton
                             aria-label={txt.deleteAria}
                             className="deleteFieldButton"
@@ -114,9 +132,11 @@ export default class AdvancedSearchRow extends PureComponent {
                         >
                             <Close/>
                         </IconButton>
-                    </div>
+                    </Grid>
                 }
-            </div>
+            </Grid>
         );
     }
 }
+export default withStyles(styles, {withTheme: true})(AdvancedSearchRow);
+
