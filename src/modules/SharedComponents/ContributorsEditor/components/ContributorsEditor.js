@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
@@ -6,7 +7,8 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import Infinite from 'react-infinite';
+import {List, Typography} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -18,7 +20,8 @@ export class ContributorsEditor extends PureComponent {
         author: PropTypes.object,
         onChange: PropTypes.func,
         locale: PropTypes.object,
-        input: PropTypes.object
+        input: PropTypes.object,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -128,66 +131,65 @@ export class ContributorsEditor extends PureComponent {
     };
 
     render() {
-        const renderContributorsRows = this.state.contributors.map((contributor, index) => (
+        const {classes, showIdentifierLookup, showContributorAssignment, disabled} = this.props;
+        const {contributors, isCurrentAuthorSelected, errorMessage} = this.state;
+
+        const renderContributorsRows = contributors.map((contributor, index) => (
             <ContributorRow
                 key={`ContributorRow_${index}`}
                 index={index}
                 contributor={contributor}
-                canMoveDown={index !== this.state.contributors.length - 1}
+                canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 onMoveUp={this.moveUpContributor}
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
-                showIdentifierLookup={this.props.showIdentifierLookup}
+                showIdentifierLookup={showIdentifierLookup}
                 contributorSuffix={this.props.locale.contributorSuffix}
-                disabled={this.props.disabled}
-                showContributorAssignment={this.props.showContributorAssignment}
-                disabledContributorAssignment={this.state.isCurrentAuthorSelected}
+                disabled={disabled}
+                showContributorAssignment={showContributorAssignment}
+                disabledContributorAssignment={isCurrentAuthorSelected}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 onContributorAssigned={this.assignContributor} />
         ));
+
         return (
             <div className={this.props.className}>
                 {
-                    this.state.errorMessage &&
+                    errorMessage &&
                     <Alert
                         title={this.props.locale.errorTitle}
-                        message={this.state.errorMessage}
+                        message={errorMessage}
                         type="warning" />
                 }
                 <ContributorForm
                     onAdd={this.addContributor}
-                    showIdentifierLookup={this.props.showIdentifierLookup}
+                    showIdentifierLookup={showIdentifierLookup}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
-                    disabled={this.props.disabled}
-                    showContributorAssignment={this.props.showContributorAssignment}
+                    disabled={disabled}
+                    showContributorAssignment={showContributorAssignment}
                 />
                 {
-                    this.state.contributors.length > 0 &&
-                    <ContributorRowHeader
-                        onDeleteAll={this.deleteAllContributors}
-                        {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
-                        showIdentifierLookup={this.props.showIdentifierLookup}
-                        disabled={this.props.disabled}
-                        showContributorAssignment={this.props.showContributorAssignment}
-                        isInfinite={this.state.contributors.length > 3}
-                    />
+                    contributors.length > 0 &&
+                    <List>
+                        <ContributorRowHeader
+                            onDeleteAll={this.deleteAllContributors}
+                            {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
+                            showIdentifierLookup={showIdentifierLookup}
+                            disabled={disabled}
+                            showContributorAssignment={showContributorAssignment}
+                            isInfinite={contributors.length > 3}
+                        />
+                    </List>
                 }
-                {
-                    this.state.contributors.length > 3
-                        ? <Infinite containerHeight={195}
-                            elementHeight={65}
-                            threshold={130}
-                            className="authors-infinite">
-                            {renderContributorsRows}
-                        </Infinite>
-                        : <div>{renderContributorsRows}</div>
-                }
+                <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
+                    {renderContributorsRows}
+                </List>
                 {
                     this.props.meta && this.props.meta.error &&
-                    <div className="validationErrorMessage">
+                    <Typography color="error" variant="caption">
                         {this.props.meta.error}
-                    </div>
+                    </Typography>
                 }
             </div>
         );
@@ -200,6 +202,18 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(ContributorsEditor);
+const styles = () => ({
+    list: {
+        maxHeight: 200,
+        overflow: 'hidden',
+        marginBottom: 8
+    },
+    scroll: {
+        overflowY: 'scroll'
+    }
+});
 
-
+export default compose(
+    withStyles(styles),
+    connect(mapStateToProps)
+)(ContributorsEditor);

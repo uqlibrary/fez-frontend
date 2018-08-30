@@ -2,7 +2,12 @@
 
 exports[`ListRowHeader renders  header for contributor editor control with delete all disabled 1`] = `
 <div
-  className="columns is-gapless is-mobile listHeader datalist datalist-header"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -17,43 +22,63 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <div
-    className="column name datalist-title"
+  <WithStyles(Grid)
+    alignItems="center"
+    className=""
+    container={true}
+    spacing={16}
   >
-    Name
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile order datalist-title"
-  >
-    Reorder items
-  </div>
-  <div
-    className="column is-narrow buttons datalist-buttons"
-  >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={true}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Remove all items"
-      tooltipPosition="bottom-center"
-      touch={false}
+    <WithStyles(Grid)
+      item={true}
+      sm={6}
+      xs={5}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Typography)
+        variant="caption"
       >
-        delete_forever
-      </FontIcon>
-    </IconButton>
-  </div>
+        Name
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={5}
+      xs={5}
+    >
+      <WithStyles(Typography)
+        variant="caption"
+      >
+        Reorder items
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className=""
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove all items"
+      >
+        <WithStyles(IconButton)
+          disabled={true}
+          onClick={[Function]}
+        >
+          <pure(DeleteForever) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`ListRowHeader renders  header for contributor editor control with name and delete all button only 1`] = `
 <div
-  className="columns is-gapless is-mobile listHeader datalist datalist-header"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -68,36 +93,51 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <div
-    className="column name datalist-title"
+  <WithStyles(Grid)
+    alignItems="center"
+    className=""
+    container={true}
+    spacing={16}
   >
-    Name
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile order datalist-title"
-  >
-    Reorder items
-  </div>
-  <div
-    className="column is-narrow buttons datalist-buttons"
-  >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      tooltip="Remove all items"
-      tooltipPosition="bottom-center"
-      touch={false}
+    <WithStyles(Grid)
+      item={true}
+      sm={6}
+      xs={5}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Typography)
+        variant="caption"
       >
-        delete_forever
-      </FontIcon>
-    </IconButton>
-  </div>
+        Name
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={5}
+      xs={5}
+    >
+      <WithStyles(Typography)
+        variant="caption"
+      >
+        Reorder items
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className=""
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove all items"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteForever) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;

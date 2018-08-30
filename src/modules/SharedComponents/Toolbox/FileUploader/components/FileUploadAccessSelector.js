@@ -1,16 +1,17 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from 'material-ui/MenuItem';
-import SelectField from 'material-ui/SelectField';
-
+import {Input, MenuItem, FormHelperText, FormControl, Select} from '@material-ui/core';
 import {OPEN_ACCESS_ID, CLOSED_ACCESS_ID} from '../config';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class FileUploadAccessSelector extends PureComponent {
+export class FileUploadAccessSelector extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        value: PropTypes.number
+        value: PropTypes.any,
+        classes: PropTypes.object,
+        autoFocus: PropTypes.bool
     };
 
     static defaultProps = {
@@ -22,34 +23,62 @@ export default class FileUploadAccessSelector extends PureComponent {
             },
             errorMessage: 'This field is required'
         },
-        value: null
+        value: ''
     };
 
-    _onChange = (event, index, value) => {
-        if (this.props.onChange) this.props.onChange(value);
+    _onChange = (event) => {
+        if (this.props.onChange) this.props.onChange(event.target.value);
     };
 
     render() {
-        const {initialValue, accessSelectOptionsText, errorMessage} = this.props.locale;
-        const {value, disabled} = this.props;
+        const {accessSelectOptionsText, errorMessage, initialValue} = this.props.locale;
+        const {value, disabled, classes, autoFocus} = this.props;
         const accessOptions = [OPEN_ACCESS_ID, CLOSED_ACCESS_ID].map((access, index) => (
-            <MenuItem value={parseInt(access, 10)} primaryText={accessSelectOptionsText[access]} key={`access_option_key_${index}`} />
+            <MenuItem value={parseInt(access, 10)} key={`access_option_key_${index}`}>{accessSelectOptionsText[access]}</MenuItem>
         ));
 
         return (
-            <SelectField
-                id={'accessCondition'}
-                className="selectField requiredField"
-                hintText={initialValue}
-                dropDownMenuProps={{animated: false}}
-                maxHeight={250}
-                onChange={this._onChange}
-                errorText={!value ? errorMessage : ''}
-                floatingLabelFixed
-                disabled={disabled}
-                value={value}>
-                {accessOptions}
-            </SelectField>
+            <FormControl required {...(!value ? {error: true} : {})} fullWidth>
+                <Select
+                    className={classes.selector}
+                    onChange={this._onChange}
+                    disabled={disabled}
+                    value={value}
+                    displayEmpty
+                    input={<Input
+                        name="accessCondition"
+                        id="access-condition"
+                        disableUnderline
+                        autoFocus={autoFocus}
+                        classes={{root: !!value ? classes.selected : classes.placeholder}}
+                    />}
+                >
+                    <MenuItem value="" disabled>{initialValue}</MenuItem>
+                    {accessOptions}
+                </Select>
+                {
+                    !value &&
+                    <FormHelperText className={classes.error}>{errorMessage}</FormHelperText>
+                }
+            </FormControl>
         );
     }
 }
+
+const styles = () => ({
+    selector: {
+        maxWidth: 200,
+        fontSize: 14
+    },
+    placeholder: {
+        color: 'rgba(0, 0, 0, 0.5)'
+    },
+    selected: {
+        fontWeight: 400
+    },
+    error: {
+        marginTop: 0,
+        fontSize: 10
+    }
+});
+export default withStyles(styles)(FileUploadAccessSelector);

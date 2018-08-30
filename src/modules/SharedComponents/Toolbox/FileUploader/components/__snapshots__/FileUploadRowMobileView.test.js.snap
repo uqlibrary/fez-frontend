@@ -1,0 +1,392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
+<WithStyles(List)
+  classes={
+    Object {
+      "root": "root",
+    }
+  }
+>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)
+      classes={
+        Object {
+          "root": "listIcon",
+        }
+      }
+    >
+      <pure(Attachment) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      classes={
+        Object {
+          "primary": "primaryText",
+          "secondary": "secondaryText",
+        }
+      }
+      primary="test.pdf (100 MB)"
+      secondary="File name"
+    />
+  </WithStyles(ListItem)>
+</WithStyles(List)>
+`;
+
+exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
+<WithStyles(List)
+  classes={
+    Object {
+      "root": "root",
+    }
+  }
+>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)
+      classes={
+        Object {
+          "root": "listIcon",
+        }
+      }
+    >
+      <pure(Attachment) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      classes={
+        Object {
+          "primary": "primaryText",
+          "secondary": "secondaryText",
+        }
+      }
+      primary="test.pdf (100 MB)"
+      secondary="File name"
+    />
+  </WithStyles(ListItem)>
+  <React.Fragment>
+    <WithStyles(ListItem)
+      classes={
+        Object {
+          "root": "listItem",
+        }
+      }
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "listIcon",
+          }
+        }
+      >
+        <pure(LockOutlined) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "secondaryText",
+          }
+        }
+        secondary="File access"
+      >
+        <WithStyles(FileUploadAccessSelector)
+          autoFocus={false}
+          disabled={false}
+          onChange={[MockFunction]}
+          value={8}
+        />
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+    <WithStyles(ListItem)
+      classes={
+        Object {
+          "root": "listItem",
+        }
+      }
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "listIcon",
+          }
+        }
+      >
+        <pure(CalendarTodayOutlined) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "primary": "primaryText",
+            "secondary": "secondaryText",
+          }
+        }
+        secondary="Embargo date"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          variant="body1"
+        >
+          No date required
+        </WithStyles(Typography)>
+      </WithStyles(ListItemText)>
+      <WithStyles(ListItemSecondaryAction)
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+      >
+        <Connect(FileUploadRowStatus)
+          disabled={false}
+          name="test.pdf"
+          onDelete={[MockFunction]}
+        />
+      </WithStyles(ListItemSecondaryAction)>
+    </WithStyles(ListItem)>
+  </React.Fragment>
+</WithStyles(List)>
+`;
+
+exports[`Component FileUploadRowMobileView should render default view 1`] = `
+<WithStyles(List)
+  classes={
+    Object {
+      "root": "root",
+    }
+  }
+>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)
+      classes={
+        Object {
+          "root": "listIcon",
+        }
+      }
+    >
+      <pure(Attachment) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      classes={
+        Object {
+          "primary": "primaryText",
+          "secondary": "secondaryText",
+        }
+      }
+      primary="test.pdf (100 MB)"
+      secondary="File name"
+    />
+  </WithStyles(ListItem)>
+  <React.Fragment>
+    <WithStyles(ListItem)
+      classes={
+        Object {
+          "root": "listItem",
+        }
+      }
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "listIcon",
+          }
+        }
+      >
+        <pure(LockOutlined) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "secondaryText",
+          }
+        }
+        secondary="File access"
+      >
+        <WithStyles(FileUploadAccessSelector)
+          autoFocus={false}
+          disabled={false}
+          onChange={[MockFunction]}
+          value={null}
+        />
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+    <WithStyles(ListItem)
+      classes={
+        Object {
+          "root": "listItem",
+        }
+      }
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "listIcon",
+          }
+        }
+      >
+        <pure(CalendarTodayOutlined) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "primary": "primaryText",
+            "secondary": "secondaryText",
+          }
+        }
+        secondary="Embargo date"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          variant="body1"
+        >
+          No date required
+        </WithStyles(Typography)>
+      </WithStyles(ListItemText)>
+      <WithStyles(ListItemSecondaryAction)
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+      >
+        <Connect(FileUploadRowStatus)
+          disabled={false}
+          name="test.pdf"
+          onDelete={[MockFunction]}
+        />
+      </WithStyles(ListItemSecondaryAction)>
+    </WithStyles(ListItem)>
+  </React.Fragment>
+</WithStyles(List)>
+`;
+
+exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
+<WithStyles(List)
+  classes={
+    Object {
+      "root": "root",
+    }
+  }
+>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)
+      classes={
+        Object {
+          "root": "listIcon",
+        }
+      }
+    >
+      <pure(Attachment) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      classes={
+        Object {
+          "primary": "primaryText",
+          "secondary": "secondaryText",
+        }
+      }
+      primary="test.pdf (100 MB)"
+      secondary="File name"
+    />
+  </WithStyles(ListItem)>
+  <React.Fragment>
+    <WithStyles(ListItem)
+      classes={
+        Object {
+          "root": "listItem",
+        }
+      }
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "listIcon",
+          }
+        }
+      >
+        <pure(LockOutlined) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "secondaryText",
+          }
+        }
+        secondary="File access"
+      >
+        <WithStyles(FileUploadAccessSelector)
+          autoFocus={false}
+          disabled={false}
+          onChange={[MockFunction]}
+          value={9}
+        />
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+    <WithStyles(ListItem)
+      classes={
+        Object {
+          "root": "listItem",
+        }
+      }
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "listIcon",
+          }
+        }
+      >
+        <pure(CalendarTodayOutlined) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "primary": "primaryText",
+            "secondary": "secondaryText",
+          }
+        }
+        secondary="Embargo date"
+      >
+        <WithStyles(FileUploadEmbargoDate)
+          disabled={false}
+          onChange={[MockFunction]}
+          value={2016-12-31T14:00:00.000Z}
+        />
+      </WithStyles(ListItemText)>
+      <WithStyles(ListItemSecondaryAction)
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+      >
+        <Connect(FileUploadRowStatus)
+          disabled={false}
+          name="test.pdf"
+          onDelete={[MockFunction]}
+        />
+      </WithStyles(ListItemSecondaryAction)>
+    </WithStyles(ListItem)>
+  </React.Fragment>
+</WithStyles(List)>
+`;

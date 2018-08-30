@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
+import {Grid, Typography, IconButton, Tooltip} from '@material-ui/core';
+import DeleteForever from '@material-ui/icons/DeleteForever';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class ListRowHeader extends Component {
+export class ListRowHeader extends Component {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        hideReorder: PropTypes.bool
+        hideReorder: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -36,27 +38,48 @@ export default class ListRowHeader extends Component {
 
     render() {
         const {nameColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
+        const {disabled, hideReorder, classes} = this.props;
 
         return (
-            <div className="columns is-gapless is-mobile listHeader datalist datalist-header">
+            <div style={{flexGrow: 1, padding: 8}}>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.props.onDeleteAll}
-                    locale={deleteAllConfirmation}/>
-                <div className="column name datalist-title">{nameColumn}</div>
-                {
-                    !this.props.hideReorder &&
-                    <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
-                }
-                <div className="column is-narrow buttons datalist-buttons">
-                    <IconButton
-                        tooltip={deleteAll}
-                        onClick={this.showConfirmation}
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">delete_forever</FontIcon>
-                    </IconButton>
-                </div>
+                    locale={deleteAllConfirmation}
+                />
+                <Grid container alignItems="center" spacing={16} className={classes.header}>
+                    <Grid item  xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
+                        <Typography variant="caption">{nameColumn}</Typography>
+                    </Grid>
+                    {
+                        !hideReorder &&
+                        <Grid item xs={5} sm={5} className={classes.right}>
+                            <Typography variant="caption">{reorderColumn}</Typography>
+                        </Grid>
+                    }
+                    <Grid item xs={2} sm={1} className={classes.center}>
+                        <Tooltip title={deleteAll}>
+                            <IconButton onClick={this.showConfirmation} disabled={disabled}>
+                                <DeleteForever/>
+                            </IconButton>
+                        </Tooltip>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
 }
+
+const styles = () => ({
+    right: {
+        textAlign: 'right'
+    },
+    center: {
+        textAlign: 'center'
+    },
+    header: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+    }
+});
+
+export default withStyles(styles)(ListRowHeader);

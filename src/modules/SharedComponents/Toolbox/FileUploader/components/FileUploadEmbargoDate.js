@@ -1,15 +1,16 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from 'material-ui/DatePicker';
+import DatePicker from 'material-ui-pickers/DatePicker';
+import { withStyles } from '@material-ui/core/styles';
 
-const moment = require('moment');
 
-export default class FileUploadEmbargoDate extends PureComponent {
+export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
         disabled: PropTypes.bool,
         value: PropTypes.instanceOf(Date),
-        minDate: PropTypes.instanceOf(Date)
+        minDate: PropTypes.instanceOf(Date),
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -17,39 +18,38 @@ export default class FileUploadEmbargoDate extends PureComponent {
         minDate: new Date()
     };
 
-    constructor(props) {
-        super(props);
-        this.datePickerRef = null;
-    }
-
-    _onChange = (event, value) => {
+    _onChange = (value) => {
         if (this.props.onChange) this.props.onChange(value);
     };
 
-    _onKeyPress = () => {
-        this.datePickerRef.openDialog();
-    };
-
-    formatDate = (date) => {
-        return moment(date).format('DD/MM/YYYY');
-    }
-
     render() {
+        const {classes} = this.props;
+        const inputProps = {
+            disableUnderline: true,
+            classes: {
+                root: classes.input
+            }
+        };
+
         return (
-            <div tabIndex={0} onKeyPress={this._onKeyPress}>
-                <DatePicker
-                    className="embargo-date-picker requiredField"
-                    firstDayOfWeek={0}
-                    formatDate={this.formatDate}
-                    autoOk
-                    minDate={this.props.minDate}
-                    value={this.props.value}
-                    id={'accessDatePicker'}
-                    onChange={this._onChange}
-                    disabled={this.props.disabled}
-                    ref={(datePicker) => (this.datePickerRef = datePicker)}
-                />
-            </div>
+            <DatePicker
+                autoOk
+                format="DD/MM/YYYY"
+                minDate={this.props.minDate}
+                value={this.props.value}
+                onChange={this._onChange}
+                disabled={this.props.disabled}
+                InputProps={inputProps}
+            />
         );
     }
 }
+
+const styles = () => ({
+    input: {
+        fontSize: 14,
+        fontWeight: 400
+    }
+});
+
+export default withStyles(styles)(FileUploadEmbargoDate);

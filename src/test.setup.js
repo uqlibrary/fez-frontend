@@ -128,3 +128,6 @@ global.mockApi = setupMockAdapter();
 global.toHaveDispatchedActions = toHaveDispatchedActions;
 global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
+
+var MockDate = require('mockdate');
+MockDate.set('1/1/2017');

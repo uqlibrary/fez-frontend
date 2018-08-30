@@ -1,130 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FreeTextForm tests  rendering active form 1`] = `
-<WithStyles(Grid)
-  container={true}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    style={
-      Object {
-        "flexGrow": 1,
+    container={true}
+    display="row"
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
       }
-    }
-  >
-    <TextField
-      disabled={false}
-      error={false}
-      fullWidth={true}
-      helperText={null}
-      label="Item name"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      placeholder="Please type the item name"
-      required={false}
-      select={false}
-      value=""
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-  >
-    <WithStyles(Button)
-      color="primary"
-      disabled={true}
-      fullWidth={true}
-      onClick={[Function]}
-      variant="raised"
     >
-      Add
-    </WithStyles(Button)>
+      <TextField
+        disabled={false}
+        error={null}
+        fullWidth={true}
+        helperText={null}
+        label="Item name"
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Please type the item name"
+        required={false}
+        select={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="raised"
+      >
+        Add
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
-</WithStyles(Grid)>
+</div>
 `;
 
 exports[`FreeTextForm tests  rendering disabled form 1`] = `
-<WithStyles(Grid)
-  container={true}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    style={
-      Object {
-        "flexGrow": 1,
+    container={true}
+    display="row"
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
       }
-    }
-  >
-    <TextField
-      disabled={true}
-      error={false}
-      fullWidth={true}
-      helperText={null}
-      label="Item name"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      placeholder="Please type the item name"
-      required={false}
-      select={false}
-      value=""
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-  >
-    <WithStyles(Button)
-      color="primary"
-      disabled={true}
-      fullWidth={true}
-      onClick={[Function]}
-      variant="raised"
     >
-      Add
-    </WithStyles(Button)>
+      <TextField
+        disabled={true}
+        error={null}
+        fullWidth={true}
+        helperText={null}
+        label="Item name"
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Please type the item name"
+        required={false}
+        select={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="raised"
+      >
+        Add
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
-</WithStyles(Grid)>
+</div>
 `;
 
 exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
-<WithStyles(Grid)
-  container={true}
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
-    style={
-      Object {
-        "flexGrow": 1,
+    container={true}
+    display="row"
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
       }
-    }
-  >
-    <TextField
-      disabled={false}
-      error={false}
-      fullWidth={true}
-      helperText={null}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      required={false}
-      select={false}
-      value="one"
-    />
-    <div
-      className="validationWarningMessage"
     >
-      reminder text
-    </div>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-  >
-    <WithStyles(Button)
-      color="primary"
-      disabled={true}
-      fullWidth={true}
-      onClick={[Function]}
-      variant="raised"
+      <TextField
+        disabled={false}
+        error={null}
+        fullWidth={true}
+        helperText={null}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        required={false}
+        select={false}
+        value="one"
+      />
+      <WithStyles(Typography)
+        className=""
+        variant="caption"
+      >
+        reminder text
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
     >
-      Add
-    </WithStyles(Button)>
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="raised"
+      >
+        Add
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
-</WithStyles(Grid)>
+</div>
 `;

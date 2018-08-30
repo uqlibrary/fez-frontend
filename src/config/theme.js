@@ -1,4 +1,4 @@
-import {white, darkBlack, fullBlack, grey300} from 'material-ui/styles/colors';
+import {white, darkBlack, fullBlack, grey300, orange500, red500} from 'material-ui/styles/colors';
 import {fade, darken} from 'material-ui/utils/colorManipulator';
 import spacing from 'material-ui/styles/spacing';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -55,6 +55,10 @@ export const mui1theme = createMuiTheme({
             main: '#f06f0d',
             dark: '#994708',
         }
+    },
+    status: {
+        danger: red500,
+        warning: orange500
     },
     typography: {
         fontWeightLight: 200,

@@ -1,4 +1,4 @@
-import FileUploadRowHeader from './FileUploadRowHeader';
+import {FileUploadRowHeader} from './FileUploadRowHeader';
 
 const locale = {
     filenameColumn: 'Filename',
@@ -16,6 +16,9 @@ const locale = {
 function setup(testProps, isShallow = true) {
     const props = {
         onDeleteAll: testProps.onDeleteAll || jest.fn(),
+        classes: {
+            icon: ''
+        },
         ...testProps
     };
 

@@ -19,22 +19,14 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import * as pages from './pages';
 
 // MUI1
-import Tooltip from '@material-ui/core/Tooltip';
-import Fade from '@material-ui/core/Fade';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/icons/Menu';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import {Tooltip, Fade, AppBar, Toolbar, Typography, IconButton, Grid, Hidden} from '@material-ui/core';
+import {Menu} from '@material-ui/icons';
 import {withStyles} from '@material-ui/core/styles';
 
 const logo = require('../../../images/uq-logo-white-minimal.svg');
 
 const styles = theme => ({
     layoutCard: {
-        // border: '5px dashed red',
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',
@@ -44,7 +36,6 @@ const styles = theme => ({
         },
     },
     layoutFill: {
-        // border: '5px dashed green',
         margin: 0,
         padding: 0,
         maxHeight: '100%',

@@ -1,4 +1,4 @@
-import FreeTextForm from './FreeTextForm';
+import {FreeTextForm} from './FreeTextForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -9,6 +9,9 @@ function setup(testProps, isShallow = true) {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name',
             addButtonLabel: 'Add'
+        },
+        classes: {
+            remindToAdd: ''
         },
         ...testProps
     };
