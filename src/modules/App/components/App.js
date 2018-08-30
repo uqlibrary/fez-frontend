@@ -23,6 +23,8 @@ import {Tooltip, Fade, AppBar, Toolbar, Typography, IconButton, Grid, Hidden} fr
 import {Menu} from '@material-ui/icons';
 import {withStyles} from '@material-ui/core/styles';
 
+const logo = require('../../../images/uq-logo-white-minimal.svg');
+
 const styles = theme => ({
     layoutCard: {
         maxWidth: '1200px',
@@ -138,16 +140,22 @@ export class App extends PureComponent {
         this.sessionExpiredConfirmationBox = ref;
     };
 
+    hideBrokenImage = () =>{
+        document.getElementById('logo').style.display = 'none';
+    };
+
     render() {
         const {classes} = this.props;
         if (this.props.accountLoading) {
             return (
-                <div className={classes.layoutFill}>
-                    <AppLoader
-                        title={locale.global.title}
-                        logoImage={locale.global.logo.image}
-                        logoText={locale.global.logo.label}/>
-                </div>
+                <Grid container zeroMinWidth className={classes.layoutFill}>
+                    <Grid item xs={12}>
+                        <AppLoader
+                            title={locale.global.title}
+                            logoImage={locale.global.logo.image}
+                            logoText={locale.global.logo.label}/>
+                    </Grid>
+                </Grid>
             );
         }
 
@@ -232,9 +240,10 @@ export class App extends PureComponent {
                                     </Tooltip>
                                 </Grid>
                             }
+                            {/* Logo */}
                             <Hidden smDown lgUp>
                                 <Grid item>
-                                    <img src={'../../../../public/images/uq-logo-white-minimal.svg'} style={{height: '66px'}} alt={locale.global.logo.label} />
+                                    <img id="logo" src={logo} style={{width: 66, height: 66}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
                                 </Grid>
                             </Hidden>
                             {/* Title */}
@@ -296,9 +305,7 @@ export class App extends PureComponent {
                     <AppAlertContainer/>
                     {
                         isAuthorLoading &&
-                        <div style={{margin: '0 auto'}}>
-                            <InlineLoader message={locale.global.loadingUserAccount}/>
-                        </div>
+                        <InlineLoader message={locale.global.loadingUserAccount}/>
                     }
 
                     {

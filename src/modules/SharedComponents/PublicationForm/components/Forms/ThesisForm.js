@@ -14,6 +14,9 @@ import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class ThesisForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool
@@ -29,10 +32,10 @@ export default class ThesisForm extends Component {
     render() {
         const txt = formLocale.thesis;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns" style={{marginTop: '-12px'}}>
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -46,10 +49,8 @@ export default class ThesisForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={OrgUnitNameField}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -58,8 +59,8 @@ export default class ThesisForm extends Component {
                                 className="requiredField"
                                 {...txt.information.fieldLabels.orgUnitName}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={OrgNameField}
                                 disabled={this.props.submitting}
@@ -67,10 +68,8 @@ export default class ThesisForm extends Component {
                                 className="requiredField"
                                 validate={[validation.required]}
                                 {...txt.information.fieldLabels.orgName}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={ThesisSubtypeField}
                                 name="rek_genre_type"
@@ -78,8 +77,8 @@ export default class ThesisForm extends Component {
                                 validate={[validation.required]}
                                 locale={txt.information.fieldLabels.thesisType}
                                 className="requiredField" />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -89,10 +88,8 @@ export default class ThesisForm extends Component {
                                 validate={[validation.required]}
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -103,8 +100,8 @@ export default class ThesisForm extends Component {
                                 {...txt.information.fieldLabels.author}
                                 required
                                 validate={[validation.required]} />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
                 <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                     <Field
@@ -118,7 +115,7 @@ export default class ThesisForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.fieldOfResearch.title} help={txt.fieldOfResearch.help}>
-                    <div>{txt.fieldOfResearch.description}</div>
+                    <Typography>{txt.fieldOfResearch.description}</Typography>
                     <Field
                         component={FieldOfResearchListField}
                         name="fieldOfResearch"
@@ -130,8 +127,8 @@ export default class ThesisForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column is-half">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -140,8 +137,8 @@ export default class ThesisForm extends Component {
                                 validate={[validation.doi]}
                                 fullWidth
                                 {...txt.optional.fieldLabels.doi} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -150,10 +147,8 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 normalize={this.getNumbersOnly}
                                 {...txt.optional.fieldLabels.totalPages} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="fez_record_search_key_description.rek_description"
@@ -162,10 +157,8 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 multiline
                                 {...txt.optional.fieldLabels.abstract} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -174,10 +167,10 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 multiline
                                 {...txt.optional.fieldLabels.notes} />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -5,12 +5,11 @@ import {propTypes} from 'redux-form/immutable';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import {validation} from 'config';
 
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 export default class PublicationSearchForm extends Component {
     static propTypes = {
@@ -26,16 +25,17 @@ export default class PublicationSearchForm extends Component {
     render() {
         return (
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
-                <Grid container>
+                <Grid container spacing={16}>
                     <Grid item>
-                        {this.props.locale.text}
+                        <Typography>{this.props.locale.text}</Typography>
                     </Grid>
                 </Grid>
                 <form onSubmit={this.props.handleSubmit}>
-                    <Grid container spacing={8} alignItems={'flex-start'}>
+                    <Grid container spacing={16}>
                         <Grid item style={{flexGrow: 1}}>
                             <Field
                                 component={TextField}
+                                color={'primary'}
                                 required
                                 name="searchQuery"
                                 fullWidth
@@ -44,11 +44,11 @@ export default class PublicationSearchForm extends Component {
                                 validate={[validation.required]}/>
                         </Grid>
                         <Grid item>
-                            <RaisedButton
-                                style={{marginTop: 22}}
-                                label={this.props.locale.submit}
+                            <Button
+                                variant={'raised'}
+                                children={this.props.locale.submit}
                                 fullWidth
-                                secondary
+                                color={'secondary'}
                                 onClick={this.props.handleSubmit}
                                 disabled={this.props.invalid}
                             />
@@ -56,9 +56,9 @@ export default class PublicationSearchForm extends Component {
                         {
                             this.props.onSkipSearch &&
                             <Grid item>
-                                <FlatButton
-                                    style={{marginTop: 22}}
-                                    label={this.props.locale.skip}
+                                <Button
+                                    variant={'flat'}
+                                    children={this.props.locale.skip}
                                     fullWidth
                                     onClick={this.props.onSkipSearch}
                                 />

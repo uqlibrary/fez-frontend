@@ -37,7 +37,6 @@ describe('AdvancedSearchRowInput', () => {
                 "helperText": undefined,
                 "label": null,
                 "placeholder": "Field hint",
-                "style": {"marginTop": 8},
                 'onChange': inputProps.onChange
             });
         });
@@ -58,7 +57,6 @@ describe('AdvancedSearchRowInput', () => {
                 "helperText": "Must be at least 10 characters",
                 "label": null,
                 "placeholder": "This is hint for text input",
-                "style": {"marginTop": 8},
                 'onChange': inputProps.onChange
             });
         });

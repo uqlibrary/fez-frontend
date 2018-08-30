@@ -1,21 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResearchReportForm renders  component 1`] = `
-<div>
+<React.Fragment>
   <StandardCard
     className=""
     title="Research report information"
   >
-    <div
-      className="columns"
-      style={
-        Object {
-          "marginTop": "-12px",
-        }
-      }
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        iteam={true}
+        xs={12}
       >
         <Field
           autoFocus={true}
@@ -35,13 +32,11 @@ exports[`ResearchReportForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -52,9 +47,11 @@ exports[`ResearchReportForm renders  component 1`] = `
           placeholder="Type the place of publication"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -65,13 +62,11 @@ exports[`ResearchReportForm renders  component 1`] = `
           placeholder="Type the name of the publisher"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -89,9 +84,11 @@ exports[`ResearchReportForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           allowPartial={true}
@@ -107,13 +104,10 @@ exports[`ResearchReportForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        iteam={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -122,16 +116,16 @@ exports[`ResearchReportForm renders  component 1`] = `
           hintText="Enter title of series"
           name="fez_record_search_key_series.rek_series"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
     className=""
     title="Authors"
   >
-    <div>
+    <WithStyles(Typography)>
       Please provide a list of authors and then select your name from the list.
-    </div>
+    </WithStyles(Typography)>
     <Field
       className="requiredField"
       component={[Function]}
@@ -236,9 +230,9 @@ exports[`ResearchReportForm renders  component 1`] = `
     className=""
     title="ISBN"
   >
-    <div>
+    <WithStyles(Typography)>
       You can add up to five ISBN values
-    </div>
+    </WithStyles(Typography)>
     <Field
       component={[Function]}
       disabled={false}
@@ -306,9 +300,9 @@ exports[`ResearchReportForm renders  component 1`] = `
     className=""
     title="ISSN"
   >
-    <div>
+    <WithStyles(Typography)>
       You can add up to five ISSN values
-    </div>
+    </WithStyles(Typography)>
     <Field
       component={[Function]}
       disabled={false}
@@ -376,11 +370,13 @@ exports[`ResearchReportForm renders  component 1`] = `
     className=""
     title="Other publication details"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        iteam={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -390,15 +386,13 @@ exports[`ResearchReportForm renders  component 1`] = `
           multiline={true}
           name="rek_description"
           placeholder="Type an abstract or summary of the work"
+          rows={3}
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        iteam={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -410,13 +404,10 @@ exports[`ResearchReportForm renders  component 1`] = `
           placeholder="Add any additional information here"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        iteam={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -432,8 +423,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
-</div>
+</React.Fragment>
 `;

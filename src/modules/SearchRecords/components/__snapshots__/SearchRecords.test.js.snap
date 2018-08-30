@@ -109,7 +109,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
         <div
           className="is-centered"
         >
-          <InlineLoader
+          <WithStyles(InlineLoader)
             message="Exporting search results..."
           />
         </div>
@@ -148,7 +148,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
   <div
     className="is-centered"
   >
-    <InlineLoader
+    <WithStyles(InlineLoader)
       message="Searching for publications..."
     />
   </div>
@@ -181,7 +181,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
         <div
           className="is-centered"
         >
-          <InlineLoader
+          <WithStyles(InlineLoader)
             message="Searching for publications..."
           />
         </div>
@@ -220,7 +220,7 @@ exports[`SearchRecords page should render loading screen while loading search re
   <div
     className="is-centered"
   >
-    <InlineLoader
+    <WithStyles(InlineLoader)
       message="Searching for publications..."
     />
   </div>

@@ -158,4 +158,130 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </div>
+<WithStyles(Grid)
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <TextField
+      disabled={false}
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      label="Item name"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Please type the item name"
+      required={false}
+      select={false}
+      value=""
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="raised"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`FreeTextForm tests  rendering disabled form 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <TextField
+      disabled={true}
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      label="Item name"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Please type the item name"
+      required={false}
+      select={false}
+      value=""
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="raised"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <TextField
+      disabled={false}
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={false}
+      select={false}
+      value="one"
+    />
+    <div
+      className="validationWarningMessage"
+    >
+      reminder text
+    </div>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="raised"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

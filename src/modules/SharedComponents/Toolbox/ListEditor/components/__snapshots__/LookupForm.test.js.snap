@@ -11,4 +11,16 @@ exports[`LookupForm tests  should render lookup form 1`] = `
     }
   }
 />
+<React.Fragment>
+  <inputField
+    className="mui-long-labels-fix"
+    floatingLabelText="Item name"
+    hintText="Please type the item name, then select from the list"
+    input={
+      Object {
+        "onChange": [MockFunction],
+      }
+    }
+  />
+</React.Fragment>
 `;

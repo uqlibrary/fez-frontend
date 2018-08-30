@@ -17,10 +17,9 @@ const TextFieldWrapper = props => {
     return (
         <Fragment>
             <TextField {...filteredProps}
-                // style={{marginTop: 12}} // TODO: hack to sit the input alongside old MUI stuff in bulma
                 helperText={error}
                 error={!!error}
-                InputLabelProps={!!filteredProps.floatinglabelfixed && {shrink: true}}
+                InputLabelProps={filteredProps.floatinglabelfixed ? {shrink: true} : null}
             />
             {props.help && props.help.text && (
                 <HelpIcon {...props.help} />

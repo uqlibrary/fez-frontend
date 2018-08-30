@@ -1,21 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConferencePaperForm renders  component 1`] = `
-<div>
+<React.Fragment>
   <StandardCard
     className=""
     title="Conference paper information"
   >
-    <div
-      className="columns"
-      style={
-        Object {
-          "marginTop": "-12px",
-        }
-      }
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           autoFocus={true}
@@ -34,13 +31,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -56,9 +51,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -74,13 +71,10 @@ exports[`ConferencePaperForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -96,13 +90,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -112,9 +104,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="fez_record_search_key_proceedings_title.rek_proceedings_title"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -124,13 +118,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="fez_record_search_key_journal_name.rek_journal_name"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -140,9 +132,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -152,13 +146,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           className="requiredField"
@@ -178,9 +170,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
           }
           vocabId={0}
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           allowPartial={true}
@@ -196,16 +190,16 @@ exports[`ConferencePaperForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
     className=""
     title="Authors"
   >
-    <div>
+    <WithStyles(Typography)>
       Please provide a list of authors and then select your name from the list.
-    </div>
+    </WithStyles(Typography)>
     <Field
       className="requiredField"
       component={[Function]}
@@ -310,9 +304,9 @@ exports[`ConferencePaperForm renders  component 1`] = `
     className=""
     title="ISBN"
   >
-    <div>
+    <WithStyles(Typography)>
       You can add up to five ISBN values
-    </div>
+    </WithStyles(Typography)>
     <Field
       component={[Function]}
       disabled={false}
@@ -380,9 +374,9 @@ exports[`ConferencePaperForm renders  component 1`] = `
     className=""
     title="ISSN"
   >
-    <div>
+    <WithStyles(Typography)>
       You can add up to five ISSN values
-    </div>
+    </WithStyles(Typography)>
     <Field
       component={[Function]}
       disabled={false}
@@ -450,11 +444,14 @@ exports[`ConferencePaperForm renders  component 1`] = `
     className=""
     title="Other publication details"
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column is-half"
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -464,9 +461,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="fez_record_search_key_start_page.rek_start_page"
           type="text"
         />
-      </div>
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -476,13 +475,10 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="fez_record_search_key_end_page.rek_end_page"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -493,13 +489,10 @@ exports[`ConferencePaperForm renders  component 1`] = `
           name="comments"
           type="text"
         />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
         <Field
           component={[Function]}
@@ -514,8 +507,8 @@ exports[`ConferencePaperForm renders  component 1`] = `
             ]
           }
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </StandardCard>
-</div>
+</React.Fragment>
 `;

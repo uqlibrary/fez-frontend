@@ -11,6 +11,8 @@ import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubty
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import PropTypes from 'prop-types';
 
@@ -27,10 +29,10 @@ export default class BookChapterForm extends Component {
     render() {
         const txt = formLocale.bookChapter;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns" style={{marginTop: '-12px'}}>
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 autoFocus
@@ -43,10 +45,8 @@ export default class BookChapterForm extends Component {
                                 rows={1}
                                 label={txt.information.fieldLabels.bookChapterTitle}
                                 validate={[validation.required]} />
-                        </div>
-                    </div>
-                    <div className="columns" style={{marginTop: '-12px'}}>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -58,10 +58,8 @@ export default class BookChapterForm extends Component {
                                 rows={1}
                                 label={txt.information.fieldLabels.bookTitle}
                                 validate={[validation.required]}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -71,8 +69,8 @@ export default class BookChapterForm extends Component {
                                 fullWidth
                                 label={txt.information.fieldLabels.publicationPlace}
                                 validate={[validation.required]} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -82,10 +80,8 @@ export default class BookChapterForm extends Component {
                                 required
                                 validate={[validation.required]}
                                 label={txt.information.fieldLabels.publisher} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PublicationSubtypeField}
                                 name="rek_subtype"
@@ -94,8 +90,8 @@ export default class BookChapterForm extends Component {
                                 className="requiredField"
                                 locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
                                 validate={[validation.required]} />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -106,8 +102,8 @@ export default class BookChapterForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
@@ -130,7 +126,7 @@ export default class BookChapterForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
-                    <div>{locale.components.isbnForm.text}</div>
+                    <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
                         component={ListEditorField}
                         remindToAdd
@@ -143,7 +139,7 @@ export default class BookChapterForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
-                    <div>{locale.components.issnForm.text}</div>
+                    <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
                         component={ListEditorField}
                         remindToAdd
@@ -156,8 +152,8 @@ export default class BookChapterForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="fez_record_search_key_edition.rek_edition"
@@ -165,9 +161,8 @@ export default class BookChapterForm extends Component {
                                 fullWidth
                                 disabled={this.props.submitting}
                                 label={txt.other.fieldLabels.edition}/>
-                        </div>
-
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 name="fez_record_search_key_start_page.rek_start_page"
@@ -177,8 +172,8 @@ export default class BookChapterForm extends Component {
                                 required
                                 validate={[validation.required]}
                                 label={txt.other.fieldLabels.startPage}/>
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 name="fez_record_search_key_end_page.rek_end_page"
@@ -188,10 +183,10 @@ export default class BookChapterForm extends Component {
                                 required
                                 validate={[validation.required]}
                                 label={txt.other.fieldLabels.endPage}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="comments"
@@ -200,10 +195,8 @@ export default class BookChapterForm extends Component {
                                 fullWidth
                                 multiline
                                 label={txt.other.fieldLabels.notes}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -213,10 +206,10 @@ export default class BookChapterForm extends Component {
                                 label={txt.other.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -11,6 +11,9 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class VideoDocumentForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -29,10 +32,10 @@ export default class VideoDocumentForm extends Component {
         const authors = this.props.formValues && this.props.formValues.get('authors');
         const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -44,10 +47,8 @@ export default class VideoDocumentForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -56,10 +57,8 @@ export default class VideoDocumentForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -68,8 +67,8 @@ export default class VideoDocumentForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -80,10 +79,8 @@ export default class VideoDocumentForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -94,12 +91,12 @@ export default class VideoDocumentForm extends Component {
                                 multiline
                                 {...txt.information.fieldLabels.abstract}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
-                    <div>{txt.creator.descriptionCreatorOrContributor}</div>
+                    <Typography>{txt.creator.descriptionCreatorOrContributor}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment={!editorSelected}
@@ -111,7 +108,7 @@ export default class VideoDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
-                    <div>{txt.contributor.descriptionCreatorOrContributor}</div>
+                    <Typography>{txt.contributor.descriptionCreatorOrContributor}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment={!authorSelected}
@@ -122,8 +119,8 @@ export default class VideoDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -133,10 +130,8 @@ export default class VideoDocumentForm extends Component {
                                 multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -146,10 +141,10 @@ export default class VideoDocumentForm extends Component {
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -84,7 +84,6 @@ class AdvancedSearchRowInput extends PureComponent {
         };
 
         const textFieldMui1Props = {
-            'style': {marginTop: 8},
             'placeholder': this.props.inputField.hint,
             'aria-label': this.props.inputField.ariaLabel,
             'error': !!this.runValidationRules(this.props.value),

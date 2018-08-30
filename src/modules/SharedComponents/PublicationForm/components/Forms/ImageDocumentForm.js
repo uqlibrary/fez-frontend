@@ -12,6 +12,9 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class ImageDocumentForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool
@@ -26,10 +29,10 @@ export default class ImageDocumentForm extends Component {
         const txt = formLocale.imageDocument;
 
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -41,10 +44,10 @@ export default class ImageDocumentForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -55,10 +58,10 @@ export default class ImageDocumentForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -69,12 +72,12 @@ export default class ImageDocumentForm extends Component {
                                 multiline
                                 {...txt.information.fieldLabels.abstract}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
-                    <div>{txt.creator.description}</div>
+                    <Typography>{txt.creator.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -87,8 +90,8 @@ export default class ImageDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -99,10 +102,8 @@ export default class ImageDocumentForm extends Component {
                                 multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 name="rek_link"
@@ -112,10 +113,10 @@ export default class ImageDocumentForm extends Component {
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

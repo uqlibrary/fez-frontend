@@ -10,7 +10,7 @@ exports[`ContentLoader snapshots tests renders loader 1`] = `
   <CardText
     className="column layout-fill align-center justify-center"
   >
-    <InlineLoader
+    <WithStyles(InlineLoader)
       message="Waiting to load..."
     />
   </CardText>

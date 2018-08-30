@@ -41,16 +41,16 @@ exports[`SimpleSearchComponent should render default view 1`] = `
     <div
       className="column is-narrow searchButtonWrapper"
     >
-      <RaisedButton
+      <WithStyles(Button)
         aria-label="Click to search eSpace"
+        color="primary"
         disabled={false}
         fullWidth={true}
-        label="Search"
-        labelPosition="after"
         onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
+        variant="raised"
+      >
+        Search
+      </WithStyles(Button)>
     </div>
   </div>
 </div>
@@ -134,16 +134,16 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
     <div
       className="column is-narrow searchButtonWrapper"
     >
-      <RaisedButton
+      <WithStyles(Button)
         aria-label="Click to search eSpace"
+        color="primary"
         disabled={false}
         fullWidth={true}
-        label="Search"
-        labelPosition="after"
         onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
+        variant="raised"
+      >
+        Search
+      </WithStyles(Button)>
     </div>
   </div>
 </div>
@@ -195,16 +195,16 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
     <div
       className="column is-narrow searchButtonWrapper"
     >
-      <RaisedButton
+      <WithStyles(Button)
         aria-label="Click to search eSpace"
+        color="primary"
         disabled={false}
         fullWidth={true}
-        label="Search"
-        labelPosition="after"
         onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
+        variant="raised"
+      >
+        Search
+      </WithStyles(Button)>
     </div>
   </div>
 </div>
@@ -259,16 +259,16 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
     <div
       className="column is-narrow searchButtonWrapper"
     >
-      <RaisedButton
+      <WithStyles(Button)
         aria-label="Click to search eSpace"
+        color="primary"
         disabled={false}
         fullWidth={true}
-        label="Search"
-        labelPosition="after"
         onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
+        variant="raised"
+      >
+        Search
+      </WithStyles(Button)>
     </div>
   </div>
 </div>
@@ -315,31 +315,29 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
     <div
       className="column is-narrow searchButtonWrapper"
     >
-      <RaisedButton
+      <WithStyles(Button)
         aria-label="Click to search eSpace"
+        color="primary"
         disabled={false}
         fullWidth={true}
-        label="Search"
-        labelPosition="after"
         onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
+        variant="raised"
+      >
+        Search
+      </WithStyles(Button)>
     </div>
     <div
       className="column is-narrow advancedSearchButtonWrapper"
     >
-      <RaisedButton
+      <WithStyles(Button)
         aria-label="Click to switch to Advanced search"
         className="advancedButton"
-        disabled={false}
         fullWidth={true}
-        label="Advanced search"
-        labelPosition="after"
         onClick={[Function]}
-        primary={false}
-        secondary={false}
-      />
+        variant="raised"
+      >
+        Advanced search
+      </WithStyles(Button)>
     </div>
   </div>
 </div>

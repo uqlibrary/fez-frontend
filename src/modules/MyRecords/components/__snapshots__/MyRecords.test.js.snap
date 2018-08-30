@@ -443,7 +443,7 @@ exports[`MyRecords test renders loading screen while export publications loading
         <div
           className="is-centered"
         >
-          <InlineLoader
+          <WithStyles(InlineLoader)
             message="Exporting your publications..."
           />
         </div>
@@ -468,7 +468,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
   <div
     className="is-centered"
   >
-    <InlineLoader
+    <WithStyles(InlineLoader)
       message="Searching for your publications..."
     />
   </div>
@@ -527,7 +527,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
         <div
           className="is-centered"
         >
-          <InlineLoader
+          <WithStyles(InlineLoader)
             message="Retrieving your publications..."
           />
         </div>

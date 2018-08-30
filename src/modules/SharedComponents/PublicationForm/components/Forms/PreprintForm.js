@@ -10,6 +10,9 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class PreprintForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -23,10 +26,10 @@ export default class PreprintForm extends Component {
         // path to the locale data for each of the sections
         const txt = formLocale.preprint;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -40,10 +43,8 @@ export default class PreprintForm extends Component {
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -54,12 +55,12 @@ export default class PreprintForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <Typography>{txt.authors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -71,8 +72,8 @@ export default class PreprintForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -83,10 +84,8 @@ export default class PreprintForm extends Component {
                                 multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -96,10 +95,10 @@ export default class PreprintForm extends Component {
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

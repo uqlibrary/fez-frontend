@@ -10,6 +10,9 @@ import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 
 export default class GenericDocumentForm extends Component {
     static propTypes = {
@@ -25,10 +28,10 @@ export default class GenericDocumentForm extends Component {
         // path to the locale data for each of the sections
         const txt = formLocale.generic;
         return (
-            <div>
+            <React.Fragment>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -42,11 +45,8 @@ export default class GenericDocumentForm extends Component {
                                 required
                                 validate={[validation.required]}
                             />
-                        </div>
-                    </div>
-
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -55,10 +55,8 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -67,8 +65,8 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
                             />
-                        </div>
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
@@ -79,10 +77,8 @@ export default class GenericDocumentForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -93,12 +89,12 @@ export default class GenericDocumentForm extends Component {
                                 multiline
                                 {...txt.information.fieldLabels.abstract}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <Typography>{txt.authors.description}</Typography>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -110,8 +106,8 @@ export default class GenericDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16}>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -122,10 +118,8 @@ export default class GenericDocumentForm extends Component {
                                 multiline
                                 {...txt.optional.fieldLabels.notes}
                             />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        </Grid>
+                        <Grid item xs={12}>
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -135,10 +129,10 @@ export default class GenericDocumentForm extends Component {
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-            </div>
+            </React.Fragment>
         );
     }
 }

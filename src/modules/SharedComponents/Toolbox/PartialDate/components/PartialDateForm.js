@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // MUI 1
 import Grid from '@material-ui/core/Grid';
@@ -18,7 +18,8 @@ const styles = theme => ({
         color: theme.palette.secondary.main,
         opacity: 0.66,
         fontSize: 12,
-        margin: '11px 0 -25px 0'
+        marginBottom: -100,
+        marginTop: 0
     }
 });
 
@@ -33,7 +34,8 @@ export class PartialDateForm extends Component {
         className: PropTypes.string,
         floatingTitle: PropTypes.string.isRequired,
         floatingTitleRequired: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -128,9 +130,9 @@ export class PartialDateForm extends Component {
     };
 
     render() {
-        const {locale, months, className} = this.props;
+        const {locale, months} = this.props;
         const renderMonths = months.map((month, index) =>
-            <MenuItem key={index} value={index} primaryText={month}/>
+            <MenuItem key={index} value={index + 1}>{month}</MenuItem>
         );
         const {classes} = this.props;
         const isError = !!this.errors.day || !!this.errors.month || !!this.errors.year;
@@ -141,7 +143,6 @@ export class PartialDateForm extends Component {
                 </Grid>
                 <Grid item xs={4}>
                     <TextField
-                        style={{marginTop: 8}}
                         name="day"
                         type="text"
                         maxLength="2"
@@ -159,23 +160,20 @@ export class PartialDateForm extends Component {
                     }
                 </Grid>
                 <Grid item xs={4}>
-                    <SelectField
+                    <Select
+                        style={{width: '100%'}}
                         name="month"
-                        dropDownMenuProps={{animated: false}}
-                        fullWidth
+                        error={isError}
                         disabled={this.props.disabled}
-                        value={this.state.month}
-                        className={!this.props.allowPartial && className ? className : null}
-                        hintText={locale.monthLabel}
-                        errorText={isError && ' '}
+                        value={this.state.month || -1}
+                        placeholder={locale.monthLabel}
                         onChange={this._onDateChanged('month')}>
-                        <MenuItem key={-1} value={-1} primaryText=""/>
+                        <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
                         {renderMonths}
-                    </SelectField>
+                    </Select>
                 </Grid>
                 <Grid item xs={4}>
                     <TextField
-                        style={{marginTop: 8}}
                         name="year"
                         type="text"
                         fullWidth
