@@ -1,16 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FreeTextForm tests  rendering active form 1`] = `
-<div
-  className="columns"
+<WithStyles(Grid)
+  container={true}
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
   >
     <TextField
       disabled={false}
-      error={null}
+      error={false}
       fullWidth={true}
+      helperText={null}
       label="Item name"
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -19,35 +25,40 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
       select={false}
       value=""
     />
-  </div>
-  <div
-    className="column is-narrow"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
   >
-    <RaisedButton
-      className="is-mui-spacing-button"
+    <WithStyles(Button)
+      color="primary"
       disabled={true}
       fullWidth={true}
-      label="Add"
-      labelPosition="after"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
-  </div>
-</div>
+      variant="raised"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`FreeTextForm tests  rendering disabled form 1`] = `
-<div
-  className="columns"
+<WithStyles(Grid)
+  container={true}
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
   >
     <TextField
       disabled={true}
-      error={null}
+      error={false}
       fullWidth={true}
+      helperText={null}
       label="Item name"
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -56,35 +67,40 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
       select={false}
       value=""
     />
-  </div>
-  <div
-    className="column is-narrow"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
   >
-    <RaisedButton
-      className="is-mui-spacing-button"
+    <WithStyles(Button)
+      color="primary"
       disabled={true}
       fullWidth={true}
-      label="Add"
-      labelPosition="after"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
-  </div>
-</div>
+      variant="raised"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
-<div
-  className="columns"
+<WithStyles(Grid)
+  container={true}
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
   >
     <TextField
       disabled={false}
-      error={null}
+      error={false}
       fullWidth={true}
+      helperText={null}
       onChange={[Function]}
       onKeyPress={[Function]}
       required={false}
@@ -96,20 +112,19 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
     >
       reminder text
     </div>
-  </div>
-  <div
-    className="column is-narrow"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
   >
-    <RaisedButton
-      className="is-mui-spacing-button"
+    <WithStyles(Button)
+      color="primary"
       disabled={true}
       fullWidth={true}
-      label="Add"
-      labelPosition="after"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
-  </div>
-</div>
+      variant="raised"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

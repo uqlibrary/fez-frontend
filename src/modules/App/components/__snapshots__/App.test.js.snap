@@ -227,12 +227,13 @@ exports[`Application component should render alert if user is not fez author 1`]
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -838,12 +839,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -1311,12 +1313,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -1754,12 +1757,13 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -2340,12 +2344,13 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -2953,12 +2958,13 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -3452,12 +3458,13 @@ exports[`Application component should render application with routing for the us
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -3734,12 +3741,13 @@ exports[`Application component should render for anon user 1`] = `
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />
@@ -4043,12 +4051,13 @@ exports[`Application component should render thesis submission for HDR without m
           <WithStyles(Grid)
             item={true}
           >
-            <img
-              alt="University of Queensland"
-              src="../../../../public/images/uq-logo-white-minimal.svg"
+            <div
+              aria-label="University of Queensland"
               style={
                 Object {
-                  "height": "66px",
+                  "backgroundImage": "url(/src/images/uq-logo-white-minimal.svg)",
+                  "height": 66,
+                  "width": 66,
                 }
               }
             />

@@ -250,7 +250,7 @@ export class App extends PureComponent {
                             }
                             <Hidden smDown lgUp>
                                 <Grid item>
-                                    <img src={'../../../../public/images/uq-logo-white-minimal.svg'} style={{height: '66px'}} alt={locale.global.logo.label} />
+                                    <div style={{backgroundImage: 'url(/src/images/uq-logo-white-minimal.svg)', width: 66, height: 66}} aria-label={locale.global.logo.label} />
                                 </Grid>
                             </Hidden>
                             {/* Title */}

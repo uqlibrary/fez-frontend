@@ -46,7 +46,7 @@ describe('FreeTextForm tests ', () => {
     it('setting state', () => {
         const wrapper = setup({ });
         expect(wrapper.state().itemName).toBeFalsy();
-        wrapper.instance().onNameChanged({}, 'one');
+        wrapper.instance().onNameChanged({target:{value: 'one'}});
         expect(wrapper.state().itemName).toEqual('one');
     });
 

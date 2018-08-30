@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 export default class FreeTextForm extends Component {
     static propTypes = {
@@ -50,16 +51,16 @@ export default class FreeTextForm extends Component {
         if (this.refs.itemName) this.refs.itemName.focus();
     };
 
-    onNameChanged = (event, newValue) => {
+    onNameChanged = (event) => {
         this.setState({
-            itemName: newValue
+            itemName: event.target.value
         });
     };
 
     render() {
         return (
-            <div className="columns">
-                <div className="column">
+            <Grid container>
+                <Grid item style={{flexGrow: 1}}>
                     <TextField
                         fullWidth
                         ref="itemName"
@@ -68,7 +69,10 @@ export default class FreeTextForm extends Component {
                         value={this.state.itemName}
                         onChange={this.onNameChanged}
                         onKeyPress={this.addItem}
-                        error={this.props.isValid(this.state.itemName) || this.props.errorText
+                        error={!!(this.props.isValid(this.state.itemName) || this.props.errorText
+                            ? `${this.props.errorText || ''} ${this.props.isValid(this.state.itemName)}`
+                            : null)}
+                        helperText={this.props.isValid(this.state.itemName) || this.props.errorText
                             ? `${this.props.errorText || ''} ${this.props.isValid(this.state.itemName)}`
                             : null}
                         disabled={this.props.disabled}
@@ -82,17 +86,17 @@ export default class FreeTextForm extends Component {
                             {this.props.locale.remindToAdd}
                         </div>
                     }
-                </div>
-                <div className="column is-narrow">
-                    <RaisedButton
-                        className="is-mui-spacing-button"
+                </Grid>
+                <Grid item>
+                    <Button
                         fullWidth
-                        primary
-                        label={this.props.locale.addButtonLabel}
+                        color={'primary'}
+                        variant={'raised'}
+                        children={this.props.locale.addButtonLabel}
                         disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
                         onClick={this.addItem}/>
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }

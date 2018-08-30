@@ -28,21 +28,19 @@ export default class LookupForm extends Component {
 
     render() {
         return (
-            <div className="columns">
-                <div className="column">
-                    {
-                        this.props.inputField &&
-                        <this.props.inputField
-                            input={{onChange: this.props.onAdd}}
-                            floatingLabelText={this.props.locale.inputFieldLabel}
-                            hintText={this.props.locale.inputFieldHint}
-                            disabled={this.props.disabled}
-                            errorText={this.props.errorText}
-                            className="mui-long-labels-fix"
-                        />
-                    }
-                </div>
-            </div>
+            <React.Fragment>
+                {
+                    this.props.inputField &&
+                    <this.props.inputField
+                        input={{onChange: this.props.onAdd}}
+                        floatingLabelText={this.props.locale.inputFieldLabel}
+                        hintText={this.props.locale.inputFieldHint}
+                        disabled={this.props.disabled}
+                        errorText={this.props.errorText}
+                        className="mui-long-labels-fix"
+                    />
+                }
+            </React.Fragment>
         );
     }
 }
