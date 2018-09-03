@@ -12,7 +12,11 @@ import {exportPublications} from './exportPublications';
 export function searchLatestPublications() {
     return dispatch => {
         dispatch({type: actions.LATEST_PUBLICATIONS_LOADING});
-        return get(routes.CURRENT_USER_RECORDS_API({pageSize: 5}))
+        return get(routes.CURRENT_USER_RECORDS_API({
+            pageSize: 5,
+            sortBy: 'published_date',
+            sortDirection: 'desc'
+        }))
             .then(response => {
                 dispatch({
                     type: actions.LATEST_PUBLICATIONS_LOADED,
