@@ -4,23 +4,34 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-
-import Close from 'material-ui/svg-icons/navigation/close';
 import {locale} from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
+import Close from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 const styles = {
+    autoWidth: {
+        flexGrow: 1,
+        width: 1
+    },
     advancedSearchRowDeleteButton: {
-        marginTop: -6,
-        marginBottom: -6,
-        opacity: 0.66
+        margin: -6,
+        opacity: 0.33,
+        '&:hover': {
+            opacity: 1
+        }
     },
     advancedSearchCombiner: {
         marginTop: 6
+    },
+    mobileRowSpacer: {
+        margin: '12px -18px',
     }
 };
 
@@ -75,66 +86,80 @@ export class AdvancedSearchRow extends PureComponent {
         const txt = locale.components.searchComponent.advancedSearch;
         const {classes} = this.props;
         return (
-            <Grid container spacing={16}>
-                <Grid item xs={12} sm={3}>
-                    <Select
-                        value={this.props.searchField}
-                        onChange={this._handleSearchFieldChange}
-                        error={!!this.selectFieldValidation()}
-                        helpertext={this.selectFieldValidation()}
-                        aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
-                        fullWidth
-                    >
-                        {
-                            Object.keys(txt.fieldTypes)
-                                .filter(item => txt.fieldTypes[item].type !== null)
-                                .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
-                                .map((item, index) => {
-                                    if(txt.fieldTypes[item].type === 'divider') {
-                                        return <Divider key={index} />;
-                                    }
-                                    return  (
-                                        <MenuItem
-                                            key={item}
-                                            value={item}
-                                            children={txt.fieldTypes[item].title}
-                                            disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
-                                        />
-                                    );
-                                })
-                        }
-                    </Select>
-                </Grid>
-                {
-                    txt.fieldTypes[this.props.searchField].combiner &&
-                        <Grid item>
-                            <Typography className={classes.advancedSearchCombiner}>{txt.fieldTypes[this.props.searchField].combiner}</Typography>
+            <React.Fragment>
+                <Grid container spacing={16}>
+                    <Grid item xs={12} md={6}>
+                        {/* Select and combiner */}
+                        <Grid container spacing={16}>
+                            <Grid item className={classes.autoWidth} style={{minWidth: 200}}>
+                                <FormControl fullWidth>
+                                    <Select
+                                        value={this.props.searchField}
+                                        onChange={this._handleSearchFieldChange}
+                                        error={!!this.selectFieldValidation()}
+                                        aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
+                                    >
+                                        {
+                                            Object.keys(txt.fieldTypes)
+                                                .filter(item => txt.fieldTypes[item].type !== null)
+                                                .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
+                                                .map((item, index) => {
+                                                    if(txt.fieldTypes[item].type === 'divider') {
+                                                        return <Divider key={index} />;
+                                                    }
+                                                    return  (
+                                                        <MenuItem
+                                                            key={item}
+                                                            value={item}
+                                                            children={txt.fieldTypes[item].title}
+                                                            disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
+                                                        />
+                                                    );
+                                                })
+                                        }
+                                    </Select>
+                                    <FormHelperText error={!!this.selectFieldValidation()}>{this.selectFieldValidation()}</FormHelperText>
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={'auto'}>
+                                <Typography className={classes.advancedSearchCombiner}>{txt.fieldTypes[this.props.searchField].combiner}</Typography>
+                            </Grid>
                         </Grid>
-                }
-                <Grid item style={{flexGrow: 1}}>
-                    <AdvancedSearchRowInput
-                        {...this.props}
-                        onChange={this._handleTextChange}
-                        inputField={txt.fieldTypes[this.props.searchField]}
-                    >
-                        {
-                            this.renderInputComponentAndProps()
-                        }
-                    </AdvancedSearchRowInput>
-                </Grid>
-                {
-                    this.props.rowIndex !== 0 &&
-                    <Grid item className={classes.advancedSearchRowDeleteButton}>
-                        <IconButton
-                            aria-label={txt.deleteAria}
-                            className="deleteFieldButton"
-                            onClick={this._deleteRow}
-                        >
-                            <Close/>
-                        </IconButton>
+                        {/* Select and combiner */}
                     </Grid>
-                }
-            </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Grid container spacing={16}>
+                            <Grid item className={classes.autoWidth} zeroMinWidth>
+                                <AdvancedSearchRowInput
+                                    {...this.props}
+                                    onChange={this._handleTextChange}
+                                    inputField={txt.fieldTypes[this.props.searchField]}
+                                >
+                                    {
+                                        this.renderInputComponentAndProps()
+                                    }
+                                </AdvancedSearchRowInput>
+                            </Grid>
+                            {
+                                this.props.rowIndex !== 0 &&
+                        <Grid item className={classes.advancedSearchRowDeleteButton}>
+                            <IconButton
+                                style={{float: 'right'}}
+                                aria-label={txt.deleteAria}
+                                className="deleteFieldButton"
+                                onClick={this._deleteRow}
+                            >
+                                <Close/>
+                            </IconButton>
+                        </Grid>
+                            }
+                            <Hidden mdUp>
+                                <Grid item xs={12}><Divider className={classes.mobileRowSpacer}/></Grid>
+                            </Hidden>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </React.Fragment>
         );
     }
 }

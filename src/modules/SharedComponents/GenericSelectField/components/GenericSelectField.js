@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
 
 export default class GenericSelectField extends Component {
     static propTypes = {
         onChange: PropTypes.func,
-        locale: PropTypes.object,
         itemsList: PropTypes.array,
         itemsLoading: PropTypes.bool,
         loadItemsList: PropTypes.func,
+        itemsLoadingHint: PropTypes.string,
         selectedValue: PropTypes.any,
         parentItemsId: PropTypes.number,
         className: PropTypes.string,
@@ -24,7 +24,12 @@ export default class GenericSelectField extends Component {
         hintText: PropTypes.string,
         multiple: PropTypes.bool,
         required: PropTypes.bool,
-        ariaLabel: PropTypes.string
+        error: PropTypes.any,
+        ariaLabel: PropTypes.string,
+        loadingHint: PropTypes.string,
+        label: PropTypes.string,
+        locale: PropTypes.object,
+        hideLabel: PropTypes.bool
     };
 
     static defaultProps = {
@@ -47,7 +52,13 @@ export default class GenericSelectField extends Component {
     }
 
     _itemSelected = (event) => {
-        this.props.onChange(event.target.value);
+        let value = event.target.value;
+        if(value[0] === -1 && value.length > 1) {
+            value.shift();
+        } else if (value === [-1]) {
+            value = '';
+        }
+        this.props.onChange(value);
     };
 
     getMenuItemProps = (item, selectedValue, multiple) => {
@@ -64,34 +75,53 @@ export default class GenericSelectField extends Component {
     };
 
     render() {
-        const renderMenuItems = this.props.itemsList.map((item, index) => {
-            return (<MenuItem
-                {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
-                key={`select_field_${index}`}>
-                {item.text || item.value || item}
-            </MenuItem>);
-        });
-        const loadingIndicationText = !!this.props.locale.label && `${this.props.locale.label} ${this.props.itemsLoading ? this.props.locale.loading : ''}` || null;
+        const loadingIndicationText = !!this.props.locale.label && `${this.props.locale.label} ${this.props.itemsLoading ? this.props.loadingHint : ''}`;
+        const renderMenuItems = [
+            this.props.hideLabel && <MenuItem value={-1} key={0} disabled>{loadingIndicationText}</MenuItem>,
+            ...this.props.itemsList.map((item, index) => {
+                return (<MenuItem
+                    {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
+                    key={index + 1}>
+                    {item.text || item.value || item}
+                </MenuItem>);
+            })
+        ];
+        const newValue = () => {
+            if(this.props.multiple) {
+                if(this.props.hideLabel) {
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [-1];
+                } else {
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [];
+                }
+            } else {
+                if(this.props.hideLabel) {
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
+                } else{
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '';
+                }
+            }
+        };
+
         return (
-            <FormControl style={{width: '100%'}}>
-                <InputLabel required={this.props.required}>{loadingIndicationText}</InputLabel>
+            <FormControl fullWidth>
+                {
+                    this.props.locale.label && !this.props.hideLabel &&
+                    <InputLabel>{this.props.locale.label}</InputLabel>
+                }
                 <Select
-                    id="selectedValue"
-                    name="selectedValue"
-                    value={this.props.itemsLoading ? null : this.props.selectedValue || ''}
+                    value={newValue()}
+                    displayEmpty
                     onChange={this._itemSelected}
                     disabled={this.props.disabled || this.props.itemsLoading}
-                    placeholder={this.props.hintText}
                     aria-label={this.props.ariaLabel}
                     autoWidth={this.props.autoWidth}
-                    error={this.props.required && !this.props.selectedValue}
-                    multiple={this.props.multiple}
-                >
+                    error={!!this.props.error}
+                    multiple={this.props.multiple}>
                     {renderMenuItems}
                 </Select>
                 {
-                    this.props.required && !this.props.selectedValue &&
-                    <FormHelperText error>{this.props.errorText || 'Selection required'}</FormHelperText>
+                    !!this.props.error &&
+                    <FormHelperText error={!!this.props.error}>{this.props.errorText}</FormHelperText>
                 }
             </FormControl>
         );

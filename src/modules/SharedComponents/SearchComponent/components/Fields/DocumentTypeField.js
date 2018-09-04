@@ -1,16 +1,26 @@
 import React, {PureComponent} from 'react';
 import {publicationTypes} from 'config';
-import MenuItem from 'material-ui/MenuItem';
+import MenuItem from '@material-ui/core/MenuItem';
 import {locale} from 'locale';
 import PropTypes from 'prop-types';
-import SelectField from 'material-ui/SelectField';
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class DocumentTypeField extends PureComponent {
+const styles = theme => ({
+    title: {
+        ...theme.typography.caption
+    }
+});
+
+export class DocumentTypeField extends PureComponent {
     static propTypes = {
         docTypes: PropTypes.array,
         updateDocTypeValues: PropTypes.func,
         className: PropTypes.string,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -24,40 +34,40 @@ export default class DocumentTypeField extends PureComponent {
         this.publicationTypes = publicationTypes();
     }
 
-    _handleDocTypeChange = (event, index, value) => {
-        this.props.updateDocTypeValues(value);
+    _handleDocTypeChange = (event) => {
+        this.props.updateDocTypeValues(event.target.value);
     };
 
     render() {
         const txt = locale.components.searchComponent;
         const docTypeItems = [
+            <MenuItem key={0} disabled>{txt.advancedSearch.fieldTypes.rek_display_type.hint}</MenuItem>,
             ...this.publicationTypes.map((item, index) => {
                 return (
                     <MenuItem
                         checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
                         value={item.id}
-                        primaryText={item.name}
+                        children={item.name}
                         key={index + 1}
                     />
                 );
             })
         ];
-
+        // const {classes} = this.props;
         return (
-            <SelectField
-                floatingLabelText={txt.advancedSearch.fieldTypes.rek_display_type.title}
-                floatingLabelFixed
-                hintText={txt.advancedSearch.fieldTypes.rek_display_type.hint}
-                aria-label={txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel}
-                value={this.props.docTypes}
-                onChange={this._handleDocTypeChange}
-                multiple
-                fullWidth
-                menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
-                disabled={this.props.disabled}
-            >
-                {docTypeItems}
-            </SelectField>
+            <FormControl fullWidth>
+                <InputLabel>{txt.advancedSearch.fieldTypes.rek_display_type.title}</InputLabel>
+                <Select
+                    aria-label={txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel}
+                    value={this.props.docTypes || '0'}
+                    onChange={this._handleDocTypeChange}
+                    multiple
+                    fullWidth
+                    disabled={this.props.disabled}
+                    children={docTypeItems} />
+            </FormControl>
         );
     }
 }
+export default withStyles(styles, {withTheme: true})(DocumentTypeField);
+

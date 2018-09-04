@@ -1,9 +1,10 @@
-import PublicationYearRangeField from './PublicationYearRangeField';
+import {PublicationYearRangeField} from './PublicationYearRangeField';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
         updateYearRangeFilter: jest.fn(),
+        classes: {},
         ...testProps,
     };
     return getElement(PublicationYearRangeField, props, isShallow);
