@@ -2,39 +2,66 @@
 
 exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
 <WithStyles(FormControl)
-  style={
-    Object {
-      "width": "100%",
-    }
-  }
+  fullWidth={true}
 >
   <WithStyles(InputLabel)>
-    Select item loading...
+    Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     autoWidth={false}
     disabled={true}
-    id="selectedValue"
+    error={false}
     multiple={false}
-    name="selectedValue"
     onChange={[Function]}
-    placeholder={null}
-    value={null}
+    value=""
   >
     <WithStyles(MenuItem)
-      key="select_field_0"
+      aria-label="Item 1"
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="1"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
       value="Item 1"
     >
       Item 1
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
-      key="select_field_1"
+      aria-label="Item 2"
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
       value="Item 2"
     >
       Item 2
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
-      key="select_field_2"
+      aria-label="Item 3"
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="3"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
       value="Item 3"
     >
       Item 3
@@ -45,22 +72,16 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
 
 exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
 <WithStyles(FormControl)
-  style={
-    Object {
-      "width": "100%",
-    }
-  }
+  fullWidth={true}
 >
   <WithStyles(InputLabel)>
-    Select item 
+    Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     autoWidth={false}
-    id="selectedValue"
+    error={false}
     multiple={false}
-    name="selectedValue"
     onChange={[Function]}
-    placeholder={null}
     value=""
   />
 </WithStyles(FormControl)>
@@ -68,26 +89,31 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
 
 exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
 <WithStyles(FormControl)
-  style={
-    Object {
-      "width": "100%",
-    }
-  }
+  fullWidth={true}
 >
   <WithStyles(InputLabel)>
-    Select item 
+    Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     autoWidth={false}
-    id="selectedValue"
+    error={false}
     multiple={false}
-    name="selectedValue"
     onChange={[Function]}
-    placeholder={null}
     value=""
   >
     <WithStyles(MenuItem)
-      key="select_field_0"
+      aria-label="Item 1"
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="1"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
       value="Item 1"
     >
       Item 1

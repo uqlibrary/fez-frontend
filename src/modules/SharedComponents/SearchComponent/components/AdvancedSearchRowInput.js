@@ -5,7 +5,7 @@ import * as validationRules from 'config/validation';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
-class AdvancedSearchRowInput extends PureComponent {
+export default class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
         children: PropTypes.func.isRequired,
         value: PropTypes.oneOfType([
@@ -13,6 +13,7 @@ class AdvancedSearchRowInput extends PureComponent {
             PropTypes.array,
             PropTypes.number
         ]),
+        hintText: PropTypes.string,
         label: PropTypes.any,
         onChange: PropTypes.func,
         inputField: PropTypes.shape({
@@ -80,6 +81,7 @@ class AdvancedSearchRowInput extends PureComponent {
             'hintText': this.props.inputField.hint,
             'aria-label': this.props.inputField.ariaLabel,
             'errorText': this.runValidationRules(this.props.value),
+            'error': !!this.runValidationRules(this.props.value),
             'label': this.props.inputField.label,
         };
 
@@ -99,10 +101,8 @@ class AdvancedSearchRowInput extends PureComponent {
 
         const selectDefaultProps = {
             ...defaultProps,
-            'errorText': defaultProps.error,
-            'locale': {label: null},
             'selectedValue': this.props.value,
-            'fullWidth': true,
+            'hintText': this.props.inputField.hint,
             'onChange': (item) => this.props.onChange(item, item),
             'aria-label': this.props.inputField.ariaLabel,
         };
@@ -130,13 +130,14 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'SubTypeLookup':
                 return {
                     ...selectDefaultProps,
-                    'menuItemClassName': 'subtype menuitem'
                 };
             case 'ThesisTypeLookup':
                 return {
                     ...selectDefaultProps,
                     'multiple': this.props.inputField.multiple,
-                    'menuItemClassName': 'thesistype menuitem'
+                    'autoWidth': false,
+                    'hideLabel': true,
+                    'displayEmpty': true
                 };
             case 'CollectionsLookup':
                 return {
@@ -144,8 +145,10 @@ class AdvancedSearchRowInput extends PureComponent {
                     'loadingHint': this.props.inputField.loadingHint,
                     'errorHint': this.props.inputField.errorHint,
                     'multiple': this.props.inputField.multiple,
-                    'menuItemClassName': 'advancedsearchselectfield menuitem',
-                    'onChange': this.props.onChange
+                    'onChange': this.props.onChange,
+                    'autoWidth': false,
+                    'hideLabel': true,
+                    'displayEmpty': true
                 };
             default: return {};
         }
@@ -163,5 +166,3 @@ class AdvancedSearchRowInput extends PureComponent {
         return this.props.children(this.state.InputComponent, this.state.inputProps);
     }
 }
-
-export default AdvancedSearchRowInput;

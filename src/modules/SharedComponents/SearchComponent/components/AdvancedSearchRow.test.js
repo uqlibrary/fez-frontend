@@ -1,4 +1,4 @@
-import AdvancedSearchRow from './AdvancedSearchRow';
+import {AdvancedSearchRow} from './AdvancedSearchRow';
 import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){
@@ -9,6 +9,7 @@ function setup(testProps, isShallow = true){
         rowIndex: 0,
         onSearchRowChange: jest.fn(),
         onSearchRowDelete: jest.fn(),
+        classes: {},
         ...testProps
     };
 
@@ -34,8 +35,8 @@ describe('AdvancedSearchRow', () => {
     it('should handle search field dropdown change', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 1, onSearchRowChange: testFn});
-        wrapper.instance()._handleSearchFieldChange({}, 2, 'rek_title');
-        expect(testFn).toHaveBeenCalledWith(1, {searchField: 'rek_title', value: '', label: ''});
+        wrapper.instance()._handleSearchFieldChange({target: {value: 2}});
+        expect(testFn).toHaveBeenCalledWith(1, {"label": "", "searchField": 2, "value": ""});
     });
 
     it('should handle search field text change', () => {

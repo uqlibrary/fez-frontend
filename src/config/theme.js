@@ -42,7 +42,7 @@ export const mui1theme = createMuiTheme({
             main: '#595959',
             dark: '#333333'
         },
-        tertiary: {
+        accent: {
             light: '#288BED',
             main: '#2377CB',
             dark: '#005EA5'

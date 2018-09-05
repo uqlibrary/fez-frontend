@@ -2,7 +2,7 @@
 
 exports[`SearchComponent should add one row for advanced search 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -37,7 +37,7 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
 
 exports[`SearchComponent should add one row for advanced search 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -142,7 +142,7 @@ exports[`SearchComponent should handle simple search text change 1`] = `
 
 exports[`SearchComponent should remove one row from advanced search 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -187,7 +187,7 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
 
 exports[`SearchComponent should remove one row from advanced search 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -249,7 +249,7 @@ exports[`SearchComponent should render default view 1`] = `
 
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -328,7 +328,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
 
 exports[`SearchComponent should reset advanced search 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -368,7 +368,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
 
 exports[`SearchComponent should reset advanced search 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -378,7 +378,6 @@ exports[`SearchComponent should reset advanced search 2`] = `
         },
       ]
     }
-    isMinimised={false}
     isOpenAccess={false}
     onAdvancedSearchReset={[Function]}
     onAdvancedSearchRowAdd={[Function]}
@@ -407,7 +406,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
 
 exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -442,7 +441,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 
 exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -477,7 +476,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
 
 exports[`SearchComponent should toggle open access for advanced search 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -512,7 +511,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
 
 exports[`SearchComponent should toggle open access for advanced search 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -569,7 +568,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 
 exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -609,7 +608,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 
 exports[`SearchComponent should update advanced search row on search text changed 1`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [
@@ -644,7 +643,7 @@ exports[`SearchComponent should update advanced search row on search text change
 
 exports[`SearchComponent should update advanced search row on search text changed 2`] = `
 <React.Fragment>
-  <AdvancedSearchComponent
+  <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
       Array [

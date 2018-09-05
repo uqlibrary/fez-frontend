@@ -856,7 +856,7 @@ export default {
                     'rek_book_title': {
                         order: 2.5,
                         map: 'Book title',
-                        title: 'Boot title for chapters',
+                        title: 'Book title for chapters',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a book title',
