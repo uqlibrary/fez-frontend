@@ -153,6 +153,20 @@ export class ContributorsEditor extends PureComponent {
                 onContributorAssigned={this.assignContributor} />
         ));
 
+        let error = null;
+        if (this.props.meta && this.props.meta.error) {
+            console.log(this.props.meta.error);
+            error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {
+                        key: index
+                    });
+                } else {
+                    return child;
+                }
+            });
+        }
+
         return (
             <div className={this.props.className}>
                 {
@@ -190,7 +204,9 @@ export class ContributorsEditor extends PureComponent {
                 {
                     this.props.meta && this.props.meta.error &&
                     <Typography color="error" variant="caption">
-                        {this.props.meta.error}
+                        {
+                            error || this.props.meta.error
+                        }
                     </Typography>
                 }
             </div>

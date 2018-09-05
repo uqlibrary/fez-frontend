@@ -51,7 +51,7 @@ export default class NewspaperArticleForm extends Component {
                                 name="fez_record_search_key_newspaper.rek_newspaper"
                                 disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.newspaperName}
-                                className="requiredField"
+                                required
                                 validate={[validation.required]}
                             />
                         </Grid>

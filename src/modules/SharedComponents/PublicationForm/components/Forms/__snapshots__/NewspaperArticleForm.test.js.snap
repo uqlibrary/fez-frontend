@@ -38,12 +38,12 @@ exports[`NewspaperArticleForm renders  component 1`] = `
         xs={12}
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="Newspaper name"
           hintText="Enter title of the journal"
           name="fez_record_search_key_newspaper.rek_newspaper"
+          required={true}
           validate={
             Array [
               [Function],
