@@ -8,6 +8,7 @@ function setup(testProps, isShallow = true){
             validation: [],
             hint: 'Field hint'
         },
+        classes: {},
         ...testProps
     };
 

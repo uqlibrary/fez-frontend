@@ -11,6 +11,10 @@ import {withStyles} from '@material-ui/core/styles';
 const styles = theme => ({
     title: {
         ...theme.typography.caption
+    },
+    selectedMenuItem: {
+        backgroundColor: `${theme.palette.accent.main} !important`,
+        color: theme.palette.white.main
     }
 });
 
@@ -39,12 +43,15 @@ export class DocumentTypeField extends PureComponent {
     };
 
     render() {
+        const {classes} = this.props;
         const txt = locale.components.searchComponent;
         const docTypeItems = [
             <MenuItem key={0} disabled>{txt.advancedSearch.fieldTypes.rek_display_type.hint}</MenuItem>,
             ...this.publicationTypes.map((item, index) => {
                 return (
                     <MenuItem
+                        classes={{selected: classes.selectedMenuItem}}
+                        style={{display: 'block'}}
                         checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
                         value={item.id}
                         children={item.name}

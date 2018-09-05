@@ -109,6 +109,7 @@ export class AdvancedSearchRow extends PureComponent {
                                                     }
                                                     return  (
                                                         <MenuItem
+                                                            style={{display: 'block'}}
                                                             key={item}
                                                             value={item}
                                                             children={txt.fieldTypes[item].title}

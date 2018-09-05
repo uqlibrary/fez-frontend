@@ -13,7 +13,7 @@ const mapStateToProps = (state, props) => {
         itemsList: translatedItemList || [],
         itemsLoading: state.get('collectionsReducer').itemsLoading || false,
         itemsLoadingError: state.get('collectionsReducer').itemsLoadingError || false,
-        itemsLoadingHint: state.get('collectionsReducer').itemsLoading ? props.loadingHint : props.hintText,
+        itemsLoadingHint: props.loadingHint || 'Loading..',
         hideLabel: true
     };
 };

@@ -30,6 +30,13 @@ const styles = theme => ({
         [theme.breakpoints.up('sm')]: {
             paddingLeft: 32
         }
+    },
+    blueButton: {
+        backgroundColor: theme.palette.accent.main,
+        color: theme.palette.white.main,
+        '&:hover': {
+            backgroundColor: theme.palette.accent.dark,
+        }
     }
 });
 
@@ -116,8 +123,7 @@ export class AdvancedSearchComponent extends PureComponent {
         }
     };
 
-    _toggleOpenAccess = (event) => {
-        event.preventDefault();
+    _toggleOpenAccess = () => {
         if (!!this.props.onToggleOpenAccess) {
             this.props.onToggleOpenAccess();
         }
@@ -229,9 +235,9 @@ export class AdvancedSearchComponent extends PureComponent {
                                     <Grid item xs={12} sm={'auto'}>
                                         <Button
                                             variant={'raised'}
+                                            classes={{root: classes.blueButton}}
                                             children={txt.advancedSearch.addField.title}
                                             aria-label={txt.advancedSearch.addField.aria}
-                                            color={'secondary'}
                                             disabled={!canAddAnotherField}
                                             onClick={this._addAdvancedSearchRow}
                                             fullWidth

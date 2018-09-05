@@ -5,8 +5,16 @@ import Select from '@material-ui/core/Select';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class GenericSelectField extends Component {
+const styles = theme => ({
+    selectedMenuItem: {
+        backgroundColor: `${theme.palette.accent.main} !important`,
+        color: theme.palette.white.main
+    }
+});
+
+export class GenericSelectField extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         itemsList: PropTypes.array,
@@ -29,7 +37,10 @@ export default class GenericSelectField extends Component {
         loadingHint: PropTypes.string,
         label: PropTypes.string,
         locale: PropTypes.object,
-        hideLabel: PropTypes.bool
+        hideLabel: PropTypes.bool,
+        displayEmpty: PropTypes.bool,
+
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -75,15 +86,21 @@ export default class GenericSelectField extends Component {
     };
 
     render() {
-        const loadingIndicationText = !!this.props.locale.label && `${this.props.locale.label} ${this.props.itemsLoading ? this.props.loadingHint : ''}`;
+        const {classes} = this.props;
+        const loadingIndicationText = this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
         const renderMenuItems = [
-            this.props.hideLabel && <MenuItem value={-1} key={0} disabled>{loadingIndicationText}</MenuItem>,
+            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{loadingIndicationText}</MenuItem>,
             ...this.props.itemsList.map((item, index) => {
-                return (<MenuItem
-                    {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
-                    key={index + 1}>
-                    {item.text || item.value || item}
-                </MenuItem>);
+                return (
+                    <MenuItem
+                        classes={{selected: classes.selectedMenuItem}}
+                        style={{display: 'block'}}
+                        {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
+                        key={index + 1}
+                        aria-label={item.text || item.value || item}>
+                        {item.text || item.value || item}
+                    </MenuItem>
+                );
             })
         ];
         const newValue = () => {
@@ -110,13 +127,14 @@ export default class GenericSelectField extends Component {
                 }
                 <Select
                     value={newValue()}
-                    displayEmpty
+                    displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
                     disabled={this.props.disabled || this.props.itemsLoading}
                     aria-label={this.props.ariaLabel}
                     autoWidth={this.props.autoWidth}
                     error={!!this.props.error}
-                    multiple={this.props.multiple}>
+                    multiple={this.props.multiple}
+                >
                     {renderMenuItems}
                 </Select>
                 {
@@ -127,3 +145,6 @@ export default class GenericSelectField extends Component {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(GenericSelectField);
+

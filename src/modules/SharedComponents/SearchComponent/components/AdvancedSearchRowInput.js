@@ -135,6 +135,9 @@ export default class AdvancedSearchRowInput extends PureComponent {
                 return {
                     ...selectDefaultProps,
                     'multiple': this.props.inputField.multiple,
+                    'autoWidth': false,
+                    'hideLabel': true,
+                    'displayEmpty': true
                 };
             case 'CollectionsLookup':
                 return {
@@ -142,7 +145,10 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     'loadingHint': this.props.inputField.loadingHint,
                     'errorHint': this.props.inputField.errorHint,
                     'multiple': this.props.inputField.multiple,
-                    'onChange': this.props.onChange
+                    'onChange': this.props.onChange,
+                    'autoWidth': false,
+                    'hideLabel': true,
+                    'displayEmpty': true
                 };
             default: return {};
         }
