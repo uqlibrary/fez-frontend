@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from 'material-ui/Checkbox';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
 
@@ -192,11 +193,17 @@ export default class AuthorLinking extends PureComponent {
                     <div className="columns is-gapless is-multiline is-desktop is-mobile">
                         <div className="column">
                             <div className={!authorLinkingConfirmed ? 'author-linking-checkbox error-checkbox' : 'author-linking-checkbox'}>
-                                <Checkbox name="authorLinkingConfirmation"
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox name="authorLinkingConfirmation"
+                                            color="primary"
+                                            label={confirmation}
+                                            onChange={this._acceptAuthorLinkingTermsAndConditions}
+                                            checked={authorLinkingConfirmed}
+                                            disabled={this.props.disabled}
+                                        />
+                                    }
                                     label={confirmation}
-                                    onCheck={this._acceptAuthorLinkingTermsAndConditions}
-                                    checked={authorLinkingConfirmed}
-                                    disabled={this.props.disabled}
                                 />
                             </div>
                         </div>

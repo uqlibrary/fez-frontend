@@ -53,8 +53,9 @@ exports[`SearchRecords page renders loading screen while export publications loa
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   />
 </WithStyles(StandardPage)>
 `;
@@ -80,47 +81,76 @@ exports[`SearchRecords page should render loading screen while export publicatio
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      sm={true}
+      xs={true}
     >
       <StandardCard
         className=""
       >
-        <span>
-          Searching for publications...
-        </span>
-        <PublicationsListSorting
-          disabled={true}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-        />
-        <div
-          className="is-centered"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <WithStyles(InlineLoader)
-            message="Exporting search results..."
-          />
-        </div>
-        <PublicationsListPaging
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Searching for publications...
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={true}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          container={true}
+          justify="center"
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(InlineLoader)
+              message="Exporting search results..."
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(PublicationsListPaging)
           disabled={true}
           loading={true}
           onPageChanged={[Function]}
         />
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;
 
@@ -145,54 +175,88 @@ exports[`SearchRecords page should render loading screen while loading publicati
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="is-centered"
+  <WithStyles(Grid)
+    container={true}
+    justify="center"
   >
-    <WithStyles(InlineLoader)
-      message="Searching for publications..."
-    />
-  </div>
-  <div
-    className="columns"
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(InlineLoader)
+        message="Searching for publications..."
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      sm={true}
+      xs={true}
     >
       <StandardCard
         className=""
       >
-        <span>
-          Searching for publications...
-        </span>
-        <PublicationsListSorting
-          disabled={true}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-        />
-        <div
-          className="is-centered"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <WithStyles(InlineLoader)
-            message="Searching for publications..."
-          />
-        </div>
-        <PublicationsListPaging
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Searching for publications...
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={true}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          container={true}
+          justify="center"
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(InlineLoader)
+              message="Searching for publications..."
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(PublicationsListPaging)
           disabled={true}
           loading={true}
           onPageChanged={[Function]}
         />
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;
 
@@ -217,15 +281,21 @@ exports[`SearchRecords page should render loading screen while loading search re
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="is-centered"
+  <WithStyles(Grid)
+    container={true}
+    justify="center"
   >
-    <WithStyles(InlineLoader)
-      message="Searching for publications..."
-    />
-  </div>
-  <div
-    className="columns"
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(InlineLoader)
+        message="Searching for publications..."
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   />
 </WithStyles(StandardPage)>
 `;
@@ -251,11 +321,12 @@ exports[`SearchRecords page should render no results 1`] = `
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
     >
       <StandardCard
         className=""
@@ -270,8 +341,8 @@ exports[`SearchRecords page should render no results 1`] = `
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;
 
@@ -296,8 +367,9 @@ exports[`SearchRecords page should render placeholders 1`] = `
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   />
 </WithStyles(StandardPage)>
 `;
@@ -322,11 +394,12 @@ exports[`SearchRecords page should show available filters or selected filters if
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
     >
       <StandardCard
         className=""
@@ -341,8 +414,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;
 
@@ -368,11 +441,12 @@ exports[`SearchRecords page should show available filters or selected filters if
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
     >
       <StandardCard
         className=""
@@ -387,8 +461,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;
 
@@ -417,11 +491,12 @@ exports[`SearchRecords page should show available filters or selected filters if
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
     >
       <StandardCard
         className=""
@@ -436,8 +511,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;
 
@@ -462,11 +537,12 @@ exports[`SearchRecords page should show available filters or selected filters if
       updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
     >
       <StandardCard
         className=""
@@ -481,46 +557,61 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-    <div
-      className="column is-3 is-hidden-mobile"
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <StandardRighthandCard
-        title="Refine results"
+      <WithStyles(Grid)
+        item={true}
+        md={3}
       >
-        <FacetsFilter
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {},
+              }
             }
-          }
-          disabled={false}
-          excludeFacetsList={Array []}
-          facetsData={
-            Object {
-              "Another facet": 2,
-              "Some facet": 1,
+            disabled={false}
+            excludeFacetsList={Array []}
+            facetsData={
+              Object {
+                "Another facet": 2,
+                "Some facet": 1,
+              }
             }
-          }
-          lookupFacetsList={
-            Object {
-              "Author": "Author (lookup)",
-              "Collection": "Collection (lookup)",
-              "Subject": "Subject (lookup)",
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
             }
-          }
-          onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-              "Subtype": "Publication subtype",
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Publication type",
+                "Subtype": "Publication subtype",
+              }
             }
-          }
-          showOpenAccessFilter={true}
-        />
-      </StandardRighthandCard>
-    </div>
-  </div>
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </WithStyles(StandardPage)>
 `;

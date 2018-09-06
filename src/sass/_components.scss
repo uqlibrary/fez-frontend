@@ -4,8 +4,6 @@
 @import '../modules/SharedComponents/PublicationCitation/components/PublicationCitation';
 @import '../modules/SharedComponents/PublicationStats/components/PublicationStats';
 @import '../modules/SharedComponents/PublicationsList/components/PublicationList';
-@import '../modules/SharedComponents/PublicationsList/components/PublicationListPaging';
-@import '../modules/SharedComponents/PublicationsList/components/PublicationListSorting';
 @import '../modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress';
 @import '../modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetsFilter';
 @import '../modules/SharedComponents/AuthorLinking/components/AuthorLinking';
@@ -17,5 +15,3 @@
 @import '../modules/SharedComponents/OfflineSnackbar/components/OfflineSnackbar';
 @import '../modules/SharedComponents/ExternalLink/components/ExternalLink';
 @import '../modules/SharedComponents/NewsFeed/components/NewsFeed';
-@import '../modules/SharedComponents/SearchComponent/components/SearchComponent';
-@import '../modules/SearchRecords/components/SearchRecords';

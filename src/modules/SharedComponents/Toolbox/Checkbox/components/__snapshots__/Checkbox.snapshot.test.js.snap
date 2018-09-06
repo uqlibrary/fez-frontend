@@ -10,11 +10,9 @@ exports[`Checkbox snapshots tests renders Checkbox component 1`] = `
     }
   }
 >
-  <Checkbox
-    disabled={false}
+  <WithStyles(Checkbox)
     label="This is a test checkbox component"
-    labelPosition="right"
-    onCheck={[Function]}
+    onChange={[Function]}
   />
 </div>
 `;
