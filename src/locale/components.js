@@ -953,7 +953,7 @@ export default {
                         loadingHint: 'Loading collections',
                         errorHint: 'There has been an error loading collections',
                         multiple: true,
-                        validation: ['required'],
+                        validation: ['requiredList'],
                         ariaLabel: 'Select multiple collections to search for'
                     },
                     'rek_genre_type': {

@@ -9,7 +9,6 @@ import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from '@material-ui/core/Checkbox';
-import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
@@ -18,6 +17,7 @@ import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
 import {withStyles} from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
+import * as validationRules from 'config/validation';
 
 const styles = theme => ({
     sideBar: {
@@ -96,13 +96,15 @@ export class AdvancedSearchComponent extends PureComponent {
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return !this.props.isLoading && !this.props.yearFilter.invalid
-            && fieldRows.filter(item =>
-                item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
-            // Check if this field is a string exceeding the maxLength
-            || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
-            // Check if the value is an array, and not empty
-            || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
-            ).length === 0;
+            && (
+                fieldRows
+                    .reduce((errors, item) => {
+                        const newErrors = fieldTypes[item.searchField].validation.map(rule => validationRules[rule](item.value));
+                        return [...errors, ...newErrors];
+                    }, [])
+                    .filter(error => !!error)
+                    .length === 0
+            );
     };
 
     _handleAdvancedSearch = (event) => {
