@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import { withStyles } from '@material-ui/core/styles';
-import {Paper, TextField, MenuItem} from '@material-ui/core';
+import {Paper, TextField, MenuItem, ListItemText} from '@material-ui/core';
 
 const styles = theme => ({
     root: {
@@ -99,7 +99,7 @@ export class AutoCompleteAsyncField extends Component {
                     height: 'auto'
                 }}
             >
-                {suggestion.value}
+                <ListItemText primary={suggestion.value} secondary={suggestion.id}/>
             </MenuItem>
         );
     };
