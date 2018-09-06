@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Paper from '@material-ui/core/Paper';
-import MenuItem from '@material-ui/core/MenuItem';
+import {Paper, TextField, MenuItem} from '@material-ui/core';
 
 const styles = theme => ({
     root: {
@@ -91,12 +89,14 @@ export class AutoCompleteAsyncField extends Component {
 
         return (
             <MenuItem
+                button
                 {...itemProps}
                 key={suggestion.value}
                 selected={isHighlighted}
-                component="div"
                 style={{
                     fontWeight: isSelected ? 500 : 400,
+                    whiteSpace: 'normal',
+                    height: 'auto'
                 }}
             >
                 {suggestion.value}
