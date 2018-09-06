@@ -609,7 +609,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -1197,7 +1197,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -1529,7 +1529,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -2117,7 +2117,7 @@ exports[`Application component should render app for account with fez author wit
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -2732,7 +2732,7 @@ exports[`Application component should render app for account with fez author wit
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -3233,7 +3233,7 @@ exports[`Application component should render app for account with fez author wit
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -3634,7 +3634,7 @@ exports[`Application component should render application with routing for the us
     />
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -3923,7 +3923,7 @@ exports[`Application component should render for anon user 1`] = `
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
 
@@ -4185,6 +4185,6 @@ exports[`Application component should render thesis submission for HDR without m
     </Switch>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
-  <OfflineSnackbar />
+  <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
