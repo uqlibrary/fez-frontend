@@ -1,39 +1,47 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class ExportPublications extends PureComponent {
+export class ExportPublications extends PureComponent {
     static propTypes = {
         format: PropTypes.string,
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
     };
 
-    formatChanged =  (event, index, value) => {
-        this.props.onChange(value);
-    }
+    formatChanged =  (event) => {
+        this.props.onChange(event.target.value);
+    };
 
     render() {
         const txt = locale.components.export;
         return (
-            <SelectField
-                id="exportPublicationsFormat"
-                maxHeight={250}
-                onChange={this.formatChanged}
-                disabled={this.props.disabled}
-                value={this.props.format}
-                fullWidth
-                floatingLabelText={txt.label}>
-                {
-                    txt.format.map((item, index) => {
-                        return (
-                            <MenuItem key={index} value={item.value} primaryText={item.label}/>
-                        );
-                    })
-                }
-            </SelectField>
+            <FormControl fullWidth>
+                <InputLabel shrink>{txt.label}</InputLabel>
+                <Select
+                    id="exportPublicationsFormat"
+                    onChange={this.formatChanged}
+                    disabled={this.props.disabled}
+                    value={this.props.format || -1}
+                    displayEmpty>
+                    <MenuItem key={-1} value={-1} disabled>Please select</MenuItem>
+                    {
+                        txt.format.map((item, index) => {
+                            return (
+                                <MenuItem key={index} value={item.value}>{item.label}</MenuItem>
+                            );
+                        })
+                    }
+                </Select>
+            </FormControl>
         );
     }
 }
+
+export default withStyles(null, {withTheme: true})(ExportPublications);
+

@@ -112,85 +112,115 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
         <span>
           Displaying records 1 to 20 of 147 total records. 
         </span>
-        <span>
-          Add to this list by 
-          <a
-            href="/records/possible"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
           >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a publication
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing publication
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
           >
-            adding a missing publication
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          disabled={false}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 20,
-              "total": 147,
-            }
-          }
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={false}
-          loading={false}
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 20,
-              "total": 147,
-            }
-          }
-        />
-        <PublicationsList
-          hideCountDiff={false}
-          publicationsList={
-            Array [
-              1,
-              2,
-              3,
-            ]
-          }
-          publicationsListSubset={Array []}
-          showDefaultActions={true}
-          showMetrics={false}
-          showSourceCountIcon={false}
-          showSources={false}
-          subsetCustomActions={Array []}
-        />
-        <PublicationsListPaging
-          disabled={false}
-          loading={false}
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 20,
-              "total": 147,
-            }
-          }
-        />
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              disabled={false}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={true}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              subsetCustomActions={Array []}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
   </div>
@@ -213,85 +243,115 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         <span>
           Displaying records 1 to 20 of 147 total records. 
         </span>
-        <span>
-          Add to this list by 
-          <a
-            href="/records/possible"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
           >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a publication
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing publication
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
           >
-            adding a missing publication
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          disabled={false}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 20,
-              "total": 147,
-            }
-          }
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={false}
-          loading={false}
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 20,
-              "total": 147,
-            }
-          }
-        />
-        <PublicationsList
-          hideCountDiff={false}
-          publicationsList={
-            Array [
-              1,
-              2,
-              3,
-            ]
-          }
-          publicationsListSubset={Array []}
-          showDefaultActions={true}
-          showMetrics={false}
-          showSourceCountIcon={false}
-          showSources={false}
-          subsetCustomActions={Array []}
-        />
-        <PublicationsListPaging
-          disabled={false}
-          loading={false}
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 20,
-              "total": 147,
-            }
-          }
-        />
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              disabled={false}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={true}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              subsetCustomActions={Array []}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
     <div
@@ -407,52 +467,82 @@ exports[`MyRecords test renders loading screen while export publications loading
       <StandardCard
         className=""
       >
-        <span>
-          Add to this list by 
-          <a
-            href="/records/possible"
-          >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            adding a missing publication
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          disabled={true}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={Object {}}
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-          pagingData={Object {}}
-        />
-        <div
-          className="is-centered"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <WithStyles(InlineLoader)
-            message="Exporting your publications..."
-          />
-        </div>
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-          pagingData={Object {}}
-        />
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a publication
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing publication
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              disabled={true}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={Object {}}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <div
+              className="is-centered"
+            >
+              <WithStyles(InlineLoader)
+                message="Exporting your publications..."
+              />
+            </div>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
   </div>
@@ -491,52 +581,82 @@ exports[`MyRecords test renders loading screen while loading publications while 
       <StandardCard
         className=""
       >
-        <span>
-          Add to this list by 
-          <a
-            href="/records/possible"
-          >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            adding a missing publication
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          disabled={true}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={Object {}}
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-          pagingData={Object {}}
-        />
-        <div
-          className="is-centered"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <WithStyles(InlineLoader)
-            message="Retrieving your publications..."
-          />
-        </div>
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-          pagingData={Object {}}
-        />
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a publication
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing publication
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              disabled={true}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={Object {}}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <div
+              className="is-centered"
+            >
+              <WithStyles(InlineLoader)
+                message="Retrieving your publications..."
+              />
+            </div>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
   </div>

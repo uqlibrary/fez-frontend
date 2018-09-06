@@ -9,6 +9,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
 import {routes, general} from 'config';
+import Grid from '@material-ui/core/Grid';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -192,38 +193,50 @@ export default class MyRecords extends PureComponent {
                                                 .replace('[recordsTo]', pagingData.to)}
                                         </span>
                                 }
-                                {txt.text}
-                                <PublicationsListSorting
-                                    initPageLength={this.initState.pageSize}
-                                    sortBy={this.state.sortBy}
-                                    sortDirection={this.state.sortDirection}
-                                    pageSize={this.state.pageSize}
-                                    pagingData={pagingData}
-                                    canUseExport
-                                    onSortByChanged={this.sortByChanged}
-                                    onPageSizeChanged={this.pageSizeChanged}
-                                    onExportPublications={this.handleExportPublications}
-                                    disabled={isLoadingOrExporting} />
-                                <PublicationsListPaging
-                                    loading={isLoadingOrExporting}
-                                    pagingData={pagingData}
-                                    onPageChanged={this.pageChanged}
-                                    disabled={isLoadingOrExporting} />
-                                {
-                                    isLoadingOrExporting &&
-                                    <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
-                                }
-                                {
-                                    !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                    <PublicationsList
-                                        publicationsList={this.props.publicationsList}
-                                        showDefaultActions />
-                                }
-                                <PublicationsListPaging
-                                    loading={isLoadingOrExporting}
-                                    pagingData={pagingData}
-                                    onPageChanged={this.pageChanged}
-                                    disabled={isLoadingOrExporting} />
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12}>
+                                        {txt.text}
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListSorting
+                                            initPageLength={this.initState.pageSize}
+                                            sortBy={this.state.sortBy}
+                                            sortDirection={this.state.sortDirection}
+                                            pageSize={this.state.pageSize}
+                                            pagingData={pagingData}
+                                            canUseExport
+                                            onSortByChanged={this.sortByChanged}
+                                            onPageSizeChanged={this.pageSizeChanged}
+                                            onExportPublications={this.handleExportPublications}
+                                            disabled={isLoadingOrExporting} />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListPaging
+                                            loading={isLoadingOrExporting}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={isLoadingOrExporting} />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        {
+                                            isLoadingOrExporting &&
+                                            <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
+                                        }
+                                        {
+                                            !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                            <PublicationsList
+                                                publicationsList={this.props.publicationsList}
+                                                showDefaultActions />
+                                        }
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListPaging
+                                            loading={isLoadingOrExporting}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={isLoadingOrExporting} />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </div>
                     }

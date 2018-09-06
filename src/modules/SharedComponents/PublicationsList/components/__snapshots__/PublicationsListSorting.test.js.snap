@@ -7,1053 +7,490 @@ exports[`PublicationsListSorting renders  component with empty paging data 1`] =
 `;
 
 exports[`PublicationsListSorting renders  component with export dropdown for admin or author 1`] = `
-<div
-  className="publicationsListSorting columns is-gapless is-mobile"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    md={3}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Sort results by"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="sortBy"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value="published_date"
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Sort results by
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Published date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="sortBy"
+        onChange={[Function]}
         value="published_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="Search relevance"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="score"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="2"
-        primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="3"
-        primaryText="Created date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="created_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="4"
-        primaryText="Updated date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="updated_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="5"
-        primaryText="Altmetric score"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="altmetric_score"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="6"
-        primaryText="Scopus citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="scopus_citation_count"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="7"
-        primaryText="Web of Science citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="thomson_citation_count"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile"
-  />
-  <div
-    className="column is-hidden-mobile"
+      >
+        <WithStyles(MenuItem)
+          key="0"
+          value="published_date"
+        >
+          Published date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="1"
+          value="score"
+        >
+          Search relevance
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="2"
+          value="title"
+        >
+          Title
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="3"
+          value="created_date"
+        >
+          Created date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="4"
+          value="updated_date"
+        >
+          Updated date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="5"
+          value="altmetric_score"
+        >
+          Altmetric score
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="6"
+          value="scopus_citation_count"
+        >
+          Scopus citation count
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="7"
+          value="thomson_citation_count"
+        >
+          Web of Science citation count
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={3}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Sort order"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="sortOrder"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value="Desc"
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Sort order
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Desc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="sortOrder"
+        onChange={[Function]}
         value="Desc"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="Asc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="Asc"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile"
-  />
-  <div
-    className="column is-hidden-mobile"
+      >
+        <WithStyles(MenuItem)
+          key="0"
+          value="Desc"
+        >
+          Desc
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="1"
+          value="Asc"
+        >
+          Asc
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={3}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Records per page"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="pageSize"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value={20}
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Records per page
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-20"
-        primaryText={20}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="pageSize"
+        onChange={[Function]}
         value={20}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-50"
-        primaryText={50}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={50}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-100"
-        primaryText={100}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={100}
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
-  />
-  <div
-    className="column is-hidden-mobile is-hidden-tablet-only"
+      >
+        <WithStyles(MenuItem)
+          key="records-per-page-20"
+          value={20}
+        >
+          20
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="records-per-page-50"
+          value={50}
+        >
+          50
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="records-per-page-100"
+          value={100}
+        >
+          100
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={false}
+    xlDown={false}
+    xlUp={false}
+    xsDown={true}
+    xsUp={false}
   >
-    <ExportPublications
-      disabled={false}
-      onChange={[Function]}
-    />
-  </div>
-</div>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+    >
+      <WithStyles(ExportPublications)
+        disabled={false}
+        onChange={[Function]}
+      />
+    </WithStyles(Grid)>
+  </Hidden>
+</WithStyles(Grid)>
 `;
 
 exports[`PublicationsListSorting renders  component with export dropdown hidden 1`] = `
-<div
-  className="publicationsListSorting columns is-gapless is-mobile"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Sort results by"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="sortBy"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value="published_date"
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Sort results by
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Published date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="sortBy"
+        onChange={[Function]}
         value="published_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="Search relevance"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="score"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="2"
-        primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="3"
-        primaryText="Created date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="created_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="4"
-        primaryText="Updated date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="updated_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="5"
-        primaryText="Altmetric score"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="altmetric_score"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="6"
-        primaryText="Scopus citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="scopus_citation_count"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="7"
-        primaryText="Web of Science citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="thomson_citation_count"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile"
-  />
-  <div
-    className="column is-hidden-mobile"
+      >
+        <WithStyles(MenuItem)
+          key="0"
+          value="published_date"
+        >
+          Published date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="1"
+          value="score"
+        >
+          Search relevance
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="2"
+          value="title"
+        >
+          Title
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="3"
+          value="created_date"
+        >
+          Created date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="4"
+          value="updated_date"
+        >
+          Updated date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="5"
+          value="altmetric_score"
+        >
+          Altmetric score
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="6"
+          value="scopus_citation_count"
+        >
+          Scopus citation count
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="7"
+          value="thomson_citation_count"
+        >
+          Web of Science citation count
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Sort order"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="sortOrder"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value="Desc"
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Sort order
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Desc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="sortOrder"
+        onChange={[Function]}
         value="Desc"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="Asc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="Asc"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile"
-  />
-  <div
-    className="column is-hidden-mobile"
+      >
+        <WithStyles(MenuItem)
+          key="0"
+          value="Desc"
+        >
+          Desc
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="1"
+          value="Asc"
+        >
+          Asc
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={4}
+    sm={12}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Records per page"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="pageSize"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value={20}
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Records per page
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-20"
-        primaryText={20}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="pageSize"
+        onChange={[Function]}
         value={20}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-50"
-        primaryText={50}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={50}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-100"
-        primaryText={100}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={100}
-      />
-    </SelectField>
-  </div>
-</div>
+      >
+        <WithStyles(MenuItem)
+          key="records-per-page-20"
+          value={20}
+        >
+          20
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="records-per-page-50"
+          value={50}
+        >
+          50
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="records-per-page-100"
+          value={100}
+        >
+          100
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`PublicationsListSorting renders  component with non-empty paging data 1`] = `
-<div
-  className="publicationsListSorting columns is-gapless is-mobile"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Sort results by"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="sortBy"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value="published_date"
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Sort results by
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Published date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="sortBy"
+        onChange={[Function]}
         value="published_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="Search relevance"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="score"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="2"
-        primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="3"
-        primaryText="Created date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="created_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="4"
-        primaryText="Updated date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="updated_date"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="5"
-        primaryText="Altmetric score"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="altmetric_score"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="6"
-        primaryText="Scopus citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="scopus_citation_count"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="7"
-        primaryText="Web of Science citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="thomson_citation_count"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile"
-  />
-  <div
-    className="column is-hidden-mobile"
+      >
+        <WithStyles(MenuItem)
+          key="0"
+          value="published_date"
+        >
+          Published date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="1"
+          value="score"
+        >
+          Search relevance
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="2"
+          value="title"
+        >
+          Title
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="3"
+          value="created_date"
+        >
+          Created date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="4"
+          value="updated_date"
+        >
+          Updated date
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="5"
+          value="altmetric_score"
+        >
+          Altmetric score
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="6"
+          value="scopus_citation_count"
+        >
+          Scopus citation count
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="7"
+          value="thomson_citation_count"
+        >
+          Web of Science citation count
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Sort order"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="sortOrder"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value="Desc"
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Sort order
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Desc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="sortOrder"
+        onChange={[Function]}
         value="Desc"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
-        primaryText="Asc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="Asc"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow is-spacer is-hidden-mobile"
-  />
-  <div
-    className="column is-hidden-mobile"
+      >
+        <WithStyles(MenuItem)
+          key="0"
+          value="Desc"
+        >
+          Desc
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="1"
+          value="Asc"
+        >
+          Asc
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={4}
+    sm={12}
+    xs={12}
   >
-    <SelectField
-      autoWidth={false}
-      disabled={false}
-      floatingLabelText="Records per page"
+    <WithStyles(FormControl)
       fullWidth={true}
-      id="pageSize"
-      maxHeight={250}
-      multiple={false}
-      onChange={[Function]}
-      value={20}
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Records per page
+      </WithStyles(InputLabel)>
+      <WithStyles(Select)
         disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-20"
-        primaryText={20}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        id="pageSize"
+        onChange={[Function]}
         value={20}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-50"
-        primaryText={50}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={50}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-100"
-        primaryText={100}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={100}
-      />
-    </SelectField>
-  </div>
-</div>
+      >
+        <WithStyles(MenuItem)
+          key="records-per-page-20"
+          value={20}
+        >
+          20
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="records-per-page-50"
+          value={50}
+        >
+          50
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          key="records-per-page-100"
+          value={100}
+        >
+          100
+        </WithStyles(MenuItem)>
+      </WithStyles(Select)>
+    </WithStyles(FormControl)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

@@ -1,11 +1,18 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import {ExportPublications} from 'modules/SharedComponents/ExportPublications';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class PublicationsListSorting extends PureComponent {
+const styles = {};
+
+export class PublicationsListSorting extends PureComponent {
     static propTypes = {
         sortBy: PropTypes.string,
         sortDirection: PropTypes.string,
@@ -29,8 +36,8 @@ export default class PublicationsListSorting extends PureComponent {
         super(props);
 
         this.state = {
-            sortBy: props.sortBy || locale.components.sorting.sortBy[0].value,
-            sortDirection: props.sortDirection || locale.components.sorting.sortDirection[0],
+            sortBy: props.sortBy || locale.components.sorting.sortBy[0].value || 'published_date',
+            sortDirection: props.sortDirection || locale.components.sorting.sortDirection[0] || 'Desc',
             pageSize: props.pageSize || props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20,
         };
     }
@@ -44,28 +51,28 @@ export default class PublicationsListSorting extends PureComponent {
         });
     }
 
-    pageSizeChanged = (event, index, value) => {
+    pageSizeChanged = (event) => {
         this.setState({
-            pageSize: value,
+            pageSize: event.target.value,
             exportPublicationsFormat: null
         });
-        this.props.onPageSizeChanged(value);
+        this.props.onPageSizeChanged(event.target.value);
     }
 
-    orderDirectionsChanged = (event, index, value) => {
+    orderDirectionsChanged = (event) => {
         this.setState({
-            sortDirection: value,
+            sortDirection: event.target.value,
             exportPublicationsFormat: null
         });
-        this.props.onSortByChanged(this.state.sortBy, value);
+        this.props.onSortByChanged(this.state.sortBy, event.target.value);
     }
 
-    sortByChanged = (event, index, value) => {
+    sortByChanged = (event) => {
         this.setState({
-            sortBy: value,
+            sortBy: event.target.value,
             exportPublicationsFormat: null
         });
-        this.props.onSortByChanged(value, this.state.sortDirection);
+        this.props.onSortByChanged(event.target.value, this.state.sortDirection);
     }
 
     exportPublicationsFormatChanged = (value) => {
@@ -76,7 +83,7 @@ export default class PublicationsListSorting extends PureComponent {
     }
 
     render() {
-        if (!this.props.pagingData || this.props.pagingData.total === 0) {
+        if (!this.props.pagingData || this.props.pagingData.total === 0 || !this.state.sortBy || !this.state.sortDirection || !this.state.pageSize) {
             return (
                 <span className="publicationsListSorting empty"/>
             );
@@ -90,76 +97,69 @@ export default class PublicationsListSorting extends PureComponent {
             pageLength.sort((a, b) => a - b);
         }
         return (
-            <div className="publicationsListSorting columns is-gapless is-mobile">
-                <div className="column">
-                    <SelectField
-                        id="sortBy"
-                        fullWidth
-                        maxHeight={250}
-                        onChange={this.sortByChanged}
-                        value={this.state.sortBy}
-                        disabled={this.props.disabled}
-                        floatingLabelText={txt.sortLabel}>
-                        {
-                            txt.sortBy.map((item, index) => {
-                                return (
-                                    <MenuItem key={index} value={item.value} primaryText={item.label}/>
-                                );
-                            })
-                        }
-                    </SelectField>
-                </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile"/>
-                <div className="column is-hidden-mobile">
-                    <SelectField
-                        id="sortOrder"
-                        maxHeight={250}
-                        fullWidth
-                        onChange={this.orderDirectionsChanged}
-                        value={this.state.sortDirection}
-                        disabled={this.props.disabled}
-                        floatingLabelText={txt.sortDirectionLabel}>
-                        {
-                            txt.sortDirection.map((item, index) => {
-                                return (
-                                    <MenuItem key={index} value={item} primaryText={item}/>
-                                );
-                            })
-                        }
-                    </SelectField>
-                </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile"/>
-                <div className="column is-hidden-mobile">
-                    <SelectField
-                        id="pageSize"
-                        value={this.state.pageSize}
-                        maxHeight={250}
-                        fullWidth
-                        disabled={this.props.disabled}
-                        onChange={this.pageSizeChanged}
-                        floatingLabelText={txt.pageSize}>
-                        {
-                            pageLength.map(number => {
-                                return (<MenuItem key={`records-per-page-${number}`} value={number} primaryText={number} />);
-                            })
-                        }
-                    </SelectField>
-                </div>
+            <Grid container spacing={16}>
+                <Grid item xs={12} sm={6} md={this.props.canUseExport ? 3 : 4}>
+                    <FormControl fullWidth>
+                        <InputLabel shrink>{txt.sortLabel}</InputLabel>
+                        <Select
+                            id="sortBy"
+                            onChange={this.sortByChanged}
+                            value={this.state.sortBy}
+                            disabled={this.props.disabled}>
+                            {
+                                txt.sortBy.map((item, index) => {
+                                    return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                })
+                            }
+                        </Select>
+                    </FormControl>
+                </Grid>
+                <Grid item xs={12} sm={6} md={this.props.canUseExport ? 3 : 4}>
+                    <FormControl fullWidth>
+                        <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
+                        <Select
+                            id="sortOrder"
+                            onChange={this.orderDirectionsChanged}
+                            value={this.state.sortDirection}
+                            disabled={this.props.disabled}>
+                            {
+                                txt.sortDirection.map((item, index) => {
+                                    return <MenuItem key={index} value={item}>{item}</MenuItem>;
+                                })
+                            }
+                        </Select>
+                    </FormControl>
+                </Grid>
+                <Grid item xs={12} sm={this.props.canUseExport ? 6 : 12} md={this.props.canUseExport ? 3 : 4}>
+                    <FormControl fullWidth>
+                        <InputLabel shrink>{txt.pageSize}</InputLabel>
+                        <Select
+                            id="pageSize"
+                            value={this.state.pageSize}
+                            disabled={this.props.disabled}
+                            onChange={this.pageSizeChanged}>
+                            {
+                                pageLength.map(number => {
+                                    return <MenuItem key={`records-per-page-${number}`} value={number}>{number}</MenuItem>;
+                                })
+                            }
+                        </Select>
+                    </FormControl>
+                </Grid>
                 {
                     this.props.canUseExport &&
-                    <div className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"/>
+                        <Hidden xsDown>
+                            <Grid item sm={6} md={3}>
+                                <ExportPublications
+                                    format={this.state.exportPublicationsFormat}
+                                    onChange={this.exportPublicationsFormatChanged}
+                                    disabled={this.props.disabled}/>
+                            </Grid>
+                        </Hidden>
                 }
-                {
-                    this.props.canUseExport &&
-                    <div className="column is-hidden-mobile is-hidden-tablet-only">
-                        <ExportPublications
-                            format={this.state.exportPublicationsFormat}
-                            onChange={this.exportPublicationsFormatChanged}
-                            disabled={this.props.disabled}/>
-                    </div>
-                }
-            </div>
-
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(PublicationsListSorting);

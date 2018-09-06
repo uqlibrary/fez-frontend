@@ -1,12 +1,32 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import FlatButton from 'material-ui/FlatButton';
-import NavigationChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
-import NavigationChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import ChevronRight from '@material-ui/icons/ChevronRight';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
+import {withStyles} from '@material-ui/core/styles';
+import classNames from 'classnames';
 
-export default class PublicationsListPaging extends Component {
+const styles = theme => ({
+    pageButton: {
+        width: 32, height: 32, minWidth: 32, minHeight: 32, margin: '0 2px'
+    },
+    nextPrevButtons: {
+        height: 32, minHeight: 32, maxHeight: 32, overflow: 'hidden'
+    },
+    nextPrevIcons: {
+        fontSize: '1rem'
+    },
+    fakeDisabled: {
+        backgroundColor: theme.palette.primary.main
+    }
+});
+
+export class PublicationsListPaging extends Component {
     static propTypes = {
+        classes: PropTypes.object,
         onPageChanged: PropTypes.func,
         disabled: PropTypes.bool,
         pagingData: PropTypes.shape({
@@ -20,8 +40,6 @@ export default class PublicationsListPaging extends Component {
 
     constructor(props) {
         super(props);
-
-        // keep local copy of paging data not to render empty paging component when loading a new page or sorting
         this.state = {
             ...this.props.pagingData
         };
@@ -39,17 +57,21 @@ export default class PublicationsListPaging extends Component {
 
     renderButton = (key) => {
         const currentPage = this.state.current_page;
+        const isCurrentPage = !!(key === currentPage);
         const totalPages = this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         return (
-            <FlatButton
+            <Button
+                variant={'flat'}
                 key={key}
+                size={'small'}
+                className={classNames(this.props.classes.pageButton, isCurrentPage && this.props.classes.pageButton)}
                 onClick={() => {this.pageChanged(key);}}
-                disabled={this.props.disabled || (key) === currentPage}
-                className={'page' + ((key) === currentPage ? ' selectedPage' : '')}
+                disabled={this.props.disabled || isCurrentPage}
+                color={isCurrentPage ? 'primary' : 'default'}
                 aria-label={locale.components.paging.pageButtonAriaLabel
                     .replace('[pageNumber]', key)
                     .replace('[totalPages]', totalPages)}
-                label={key}
+                children={key}
             />
         );
     };
@@ -67,6 +89,7 @@ export default class PublicationsListPaging extends Component {
     };
 
     render() {
+        const {classes} = this.props;
         const txt = locale.components.paging;
         const totalPages = this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         const currentPage = this.state.current_page;
@@ -77,52 +100,67 @@ export default class PublicationsListPaging extends Component {
             <div>
                 {
                     totalPages > 1 &&
-                    <div className="publicationsListPaging is-gapless columns is-gapless is-mobile">
+                    <Grid container spacing={0}>
                         {
                             currentPage >= 1 &&
-                                <div className="column is-narrow is-pulled-left">
-                                    <FlatButton
-                                        className="pagingPrevious"
+                                <Grid item>
+                                    <Button
+                                        style={{paddingLeft: 4}}
+                                        variant={'flat'}
+                                        className={classes.nextPrevButtons}
                                         onClick={() => {
                                             this.pageChanged(currentPage - 1);
                                         }}
-                                        disabled={this.props.disabled || currentPage === 1}
-                                        label={txt.previousPage}
-                                        labelPosition="after"
-                                        icon={<NavigationChevronLeft/>}/>
-                                </div>
+                                        disabled={this.props.disabled || currentPage === 1}>
+                                        <ChevronLeft className={classes.nextPrevIcons}/>
+                                        {txt.previousPage}
+                                    </Button>
+                                </Grid>
                         }
-                        <div className="publicationsListPagingItems column is-hidden-mobile has-text-centered">
-                            {(currentPage - (txt.pagingBracket + 1) >= 1) && this.renderButton(1)}
-                            {(currentPage - (txt.pagingBracket + 2) >= 1) && txt.firstLastSeparator}
-                            {this.renderPageButtons()}
-                            {(currentPage + (txt.pagingBracket + 2) <= totalPages) && txt.firstLastSeparator}
-                            {(currentPage + (txt.pagingBracket + 1) <= totalPages) && this.renderButton(totalPages)}
-                        </div>
-                        <div className="column is-hidden-tablet-only is-hidden-desktop has-text-centered">
-                            <FlatButton className="pagingTotals"
-                                label={txt.pageOf
-                                    .replace('[currentPage]', currentPage)
-                                    .replace('[totalPages]', totalPages)
-                                }/>
-                        </div>
+                        <Grid item style={{flexGrow: 1}}/>
+                        <Hidden xsDown>
+                            <Grid item>
+                                {(currentPage - (txt.pagingBracket + 1) >= 1) && this.renderButton(1)}
+                                {(currentPage - (txt.pagingBracket + 2) >= 1) && txt.firstLastSeparator}
+                                {this.renderPageButtons()}
+                                {(currentPage + (txt.pagingBracket + 2) <= totalPages) && txt.firstLastSeparator}
+                                {(currentPage + (txt.pagingBracket + 1) <= totalPages) && this.renderButton(totalPages)}
+                            </Grid>
+                        </Hidden>
+                        <Hidden smUp>
+                            <Grid item style={{flexGrow: 1}}>
+                                <Button
+                                    style={{margin: '0 auto'}}
+                                    variant={'flat'}
+                                    className={classes.nextPrevButtons}
+                                    children={txt.pageOf
+                                        .replace('[currentPage]', currentPage)
+                                        .replace('[totalPages]', totalPages)
+                                    }/>
+                            </Grid>
+                        </Hidden>
+                        <Grid item style={{flexGrow: 1}}/>
                         {
                             currentPage <= totalPages &&
-                            <div className="column is-narrow is-pulled-right">
-                                <FlatButton
-                                    className="pagingNext"
+                            <Grid item>
+                                <Button
+                                    variant={'flat'}
+                                    size={'small'}
+                                    className={classes.nextPrevButtons}
                                     onClick={() => {
                                         this.pageChanged(currentPage + 1);
                                     }}
-                                    disabled={this.props.disabled || currentPage === totalPages}
-                                    label={txt.nextPage}
-                                    labelPosition="before"
-                                    icon={<NavigationChevronRight/>}/>
-                            </div>
+                                    disabled={this.props.disabled || currentPage === totalPages}>
+                                    {txt.nextPage}
+                                    <ChevronRight className={classes.nextPrevIcons}/>
+                                </Button>
+                            </Grid>
                         }
-                    </div>
+                    </Grid>
                 }
             </div>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(PublicationsListPaging);
