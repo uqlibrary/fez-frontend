@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
@@ -10,24 +10,17 @@ const mapStateToProps = (state, props) => {
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
         async: true,
-        dataSourceConfig: {text: 'value', value: 'value'},
-        errorText: props.errorText,
-        selectedValue: !!props.value && {value: props.value} || ''
+        onChange: (item) => props.onChange(item),
+        selectedValue: !!props.value && {value: props.value} || '',
+        itemToString: (item) => !!item && String(item.value) || ''
     };
 };
 
-const mapDispatchToProps = (dispatch, props) => (
+const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
-        onChange: (value) => {
-            if (typeof value === 'string') {
-                props.onChange({value});
-            } else {
-                props.onChange(value);
-            }
-        }
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
     }
 );
 
-export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
 

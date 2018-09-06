@@ -97,6 +97,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             ...defaultProps,
             'value': this.props.label || this.props.value,
             'aria-label': this.props.inputField.ariaLabel,
+            'allowFreeText': true
         };
 
         const selectDefaultProps = {

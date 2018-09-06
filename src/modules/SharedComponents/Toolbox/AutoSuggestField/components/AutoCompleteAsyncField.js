@@ -140,7 +140,10 @@ export class AutoCompleteAsyncField extends Component {
                     stateReducer={this.stateReducer}
                     onChange={this.handleSelected}
                     itemToString={itemToString}
-                    onStateChange={allowFreeText ? ({inputValue}) => this.props.onChange({value: inputValue}) : () => {}}
+                    onStateChange={allowFreeText
+                        ? ({inputValue}) => !!inputValue && this.props.onChange({value: inputValue})
+                        : () => {}
+                    }
                 >
                     {({ getInputProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex }) => (
                         <div className={classes.container}>
