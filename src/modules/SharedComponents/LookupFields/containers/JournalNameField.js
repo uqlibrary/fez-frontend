@@ -10,7 +10,6 @@ const mapStateToProps = (state, props) => {
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
         onChange: (item) => props.input.onChange(item.value),
-        dataSourceConfig: { text: 'value', value: 'value'},
         async: true,
         errorText: props.meta ? props.meta.error : null,
         error: props.meta ? !!props.meta.error : null,

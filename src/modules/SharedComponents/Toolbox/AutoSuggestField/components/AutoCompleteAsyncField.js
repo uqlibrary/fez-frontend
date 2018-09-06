@@ -70,8 +70,7 @@ export class AutoCompleteAsyncField extends Component {
         this.props.onChange(value);
     };
 
-    renderInput = (inputProps) => {
-        const { InputProps, classes, ref, ...other } = inputProps;
+    renderInput = ({ inputProps, classes, ref, ...other }) => {
         return (
             <TextField
                 InputProps={{
@@ -79,7 +78,7 @@ export class AutoCompleteAsyncField extends Component {
                     classes: {
                         root: classes.inputRoot,
                     },
-                    ...InputProps,
+                    ...inputProps,
                 }}
                 {...other}
             />
@@ -168,7 +167,7 @@ export class AutoCompleteAsyncField extends Component {
                                             itemProps: getItemProps({ item: suggestion }),
                                             highlightedIndex,
                                             selectedItem,
-                                        }),
+                                        })
                                     )}
                                 </Paper>
                             ) : null}

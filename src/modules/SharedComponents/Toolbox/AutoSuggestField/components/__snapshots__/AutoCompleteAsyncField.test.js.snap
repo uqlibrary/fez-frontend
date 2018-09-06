@@ -135,28 +135,24 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               <TextField
                 InputProps={
                   Object {
-                    "classes": Object {
-                      "root": "inputRoot",
-                    },
-                    "inputRef": undefined,
-                  }
-                }
-                fullWidth={true}
-                helperText=""
-                inputProps={
-                  Object {
                     "aria-activedescendant": null,
                     "aria-autocomplete": "list",
                     "aria-controls": null,
                     "aria-labelledby": "downshift-1-label",
                     "autoComplete": "off",
+                    "classes": Object {
+                      "root": "inputRoot",
+                    },
                     "id": "downshift-1-input",
+                    "inputRef": undefined,
                     "onBlur": [Function],
                     "onChange": [Function],
                     "onKeyDown": [Function],
                     "value": "",
                   }
                 }
+                fullWidth={true}
+                helperText=""
                 required={true}
                 select={false}
                 value=""
@@ -185,29 +181,29 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                       className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                     >
                       <WithStyles(Input)
+                        aria-activedescendant={null}
+                        aria-autocomplete="list"
+                        aria-controls={null}
+                        aria-labelledby="downshift-1-label"
+                        autoComplete="off"
                         classes={
                           Object {
                             "root": "inputRoot",
                           }
                         }
                         fullWidth={true}
-                        inputProps={
-                          Object {
-                            "aria-activedescendant": null,
-                            "aria-autocomplete": "list",
-                            "aria-controls": null,
-                            "aria-labelledby": "downshift-1-label",
-                            "autoComplete": "off",
-                            "id": "downshift-1-input",
-                            "onBlur": [Function],
-                            "onChange": [Function],
-                            "onKeyDown": [Function],
-                            "value": "",
-                          }
-                        }
+                        id="downshift-1-input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onKeyDown={[Function]}
                         value=""
                       >
                         <Input
+                          aria-activedescendant={null}
+                          aria-autocomplete="list"
+                          aria-controls={null}
+                          aria-labelledby="downshift-1-label"
+                          autoComplete="off"
                           classes={
                             Object {
                               "disabled": "MuiInput-disabled-8",
@@ -227,33 +223,23 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                           }
                           disableUnderline={false}
                           fullWidth={true}
-                          inputProps={
-                            Object {
-                              "aria-activedescendant": null,
-                              "aria-autocomplete": "list",
-                              "aria-controls": null,
-                              "aria-labelledby": "downshift-1-label",
-                              "autoComplete": "off",
-                              "id": "downshift-1-input",
-                              "onBlur": [Function],
-                              "onChange": [Function],
-                              "onKeyDown": [Function],
-                              "value": "",
-                            }
-                          }
+                          id="downshift-1-input"
                           multiline={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
                           type="text"
                           value=""
                         >
                           <div
+                            aria-activedescendant={null}
+                            aria-autocomplete="list"
+                            aria-controls={null}
+                            aria-labelledby="downshift-1-label"
                             className="MuiInput-root-5 inputRoot MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
                           >
                             <input
-                              aria-activedescendant={null}
-                              aria-autocomplete="list"
-                              aria-controls={null}
                               aria-invalid={false}
-                              aria-labelledby="downshift-1-label"
                               autoComplete="off"
                               className="MuiInput-input-13"
                               disabled={false}
@@ -391,28 +377,24 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               <TextField
                 InputProps={
                   Object {
-                    "classes": Object {
-                      "root": "inputRoot",
-                    },
-                    "inputRef": undefined,
-                  }
-                }
-                fullWidth={true}
-                helperText=""
-                inputProps={
-                  Object {
                     "aria-activedescendant": null,
                     "aria-autocomplete": "list",
                     "aria-controls": null,
                     "aria-labelledby": "downshift-2-label",
                     "autoComplete": "off",
+                    "classes": Object {
+                      "root": "inputRoot",
+                    },
                     "id": "downshift-2-input",
+                    "inputRef": undefined,
                     "onBlur": [Function],
                     "onChange": [Function],
                     "onKeyDown": [Function],
                     "value": "",
                   }
                 }
+                fullWidth={true}
+                helperText=""
                 required={false}
                 select={false}
                 value=""
@@ -441,29 +423,29 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                       className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                     >
                       <WithStyles(Input)
+                        aria-activedescendant={null}
+                        aria-autocomplete="list"
+                        aria-controls={null}
+                        aria-labelledby="downshift-2-label"
+                        autoComplete="off"
                         classes={
                           Object {
                             "root": "inputRoot",
                           }
                         }
                         fullWidth={true}
-                        inputProps={
-                          Object {
-                            "aria-activedescendant": null,
-                            "aria-autocomplete": "list",
-                            "aria-controls": null,
-                            "aria-labelledby": "downshift-2-label",
-                            "autoComplete": "off",
-                            "id": "downshift-2-input",
-                            "onBlur": [Function],
-                            "onChange": [Function],
-                            "onKeyDown": [Function],
-                            "value": "",
-                          }
-                        }
+                        id="downshift-2-input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onKeyDown={[Function]}
                         value=""
                       >
                         <Input
+                          aria-activedescendant={null}
+                          aria-autocomplete="list"
+                          aria-controls={null}
+                          aria-labelledby="downshift-2-label"
+                          autoComplete="off"
                           classes={
                             Object {
                               "disabled": "MuiInput-disabled-8",
@@ -483,33 +465,23 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                           }
                           disableUnderline={false}
                           fullWidth={true}
-                          inputProps={
-                            Object {
-                              "aria-activedescendant": null,
-                              "aria-autocomplete": "list",
-                              "aria-controls": null,
-                              "aria-labelledby": "downshift-2-label",
-                              "autoComplete": "off",
-                              "id": "downshift-2-input",
-                              "onBlur": [Function],
-                              "onChange": [Function],
-                              "onKeyDown": [Function],
-                              "value": "",
-                            }
-                          }
+                          id="downshift-2-input"
                           multiline={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
                           type="text"
                           value=""
                         >
                           <div
+                            aria-activedescendant={null}
+                            aria-autocomplete="list"
+                            aria-controls={null}
+                            aria-labelledby="downshift-2-label"
                             className="MuiInput-root-5 inputRoot MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
                           >
                             <input
-                              aria-activedescendant={null}
-                              aria-autocomplete="list"
-                              aria-controls={null}
                               aria-invalid={false}
-                              aria-labelledby="downshift-2-label"
                               autoComplete="off"
                               className="MuiInput-input-13"
                               disabled={false}
@@ -648,29 +620,25 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
               <TextField
                 InputProps={
                   Object {
-                    "classes": Object {
-                      "root": "inputRoot",
-                    },
-                    "inputRef": undefined,
-                  }
-                }
-                disabled={true}
-                fullWidth={true}
-                helperText=""
-                inputProps={
-                  Object {
                     "aria-activedescendant": null,
                     "aria-autocomplete": "list",
                     "aria-controls": null,
                     "aria-labelledby": "downshift-0-label",
                     "autoComplete": "off",
+                    "classes": Object {
+                      "root": "inputRoot",
+                    },
                     "id": "downshift-0-input",
+                    "inputRef": undefined,
                     "onBlur": [Function],
                     "onChange": [Function],
                     "onKeyDown": [Function],
                     "value": "",
                   }
                 }
+                disabled={true}
+                fullWidth={true}
+                helperText=""
                 required={false}
                 select={false}
                 value=""
@@ -699,6 +667,11 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                       className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                     >
                       <WithStyles(Input)
+                        aria-activedescendant={null}
+                        aria-autocomplete="list"
+                        aria-controls={null}
+                        aria-labelledby="downshift-0-label"
+                        autoComplete="off"
                         classes={
                           Object {
                             "root": "inputRoot",
@@ -706,23 +679,18 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                         }
                         disabled={true}
                         fullWidth={true}
-                        inputProps={
-                          Object {
-                            "aria-activedescendant": null,
-                            "aria-autocomplete": "list",
-                            "aria-controls": null,
-                            "aria-labelledby": "downshift-0-label",
-                            "autoComplete": "off",
-                            "id": "downshift-0-input",
-                            "onBlur": [Function],
-                            "onChange": [Function],
-                            "onKeyDown": [Function],
-                            "value": "",
-                          }
-                        }
+                        id="downshift-0-input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onKeyDown={[Function]}
                         value=""
                       >
                         <Input
+                          aria-activedescendant={null}
+                          aria-autocomplete="list"
+                          aria-controls={null}
+                          aria-labelledby="downshift-0-label"
+                          autoComplete="off"
                           classes={
                             Object {
                               "disabled": "MuiInput-disabled-8",
@@ -743,33 +711,23 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                           disableUnderline={false}
                           disabled={true}
                           fullWidth={true}
-                          inputProps={
-                            Object {
-                              "aria-activedescendant": null,
-                              "aria-autocomplete": "list",
-                              "aria-controls": null,
-                              "aria-labelledby": "downshift-0-label",
-                              "autoComplete": "off",
-                              "id": "downshift-0-input",
-                              "onBlur": [Function],
-                              "onChange": [Function],
-                              "onKeyDown": [Function],
-                              "value": "",
-                            }
-                          }
+                          id="downshift-0-input"
                           multiline={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
                           type="text"
                           value=""
                         >
                           <div
+                            aria-activedescendant={null}
+                            aria-autocomplete="list"
+                            aria-controls={null}
+                            aria-labelledby="downshift-0-label"
                             className="MuiInput-root-5 inputRoot MuiInput-disabled-8 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
                           >
                             <input
-                              aria-activedescendant={null}
-                              aria-autocomplete="list"
-                              aria-controls={null}
                               aria-invalid={false}
-                              aria-labelledby="downshift-0-label"
                               autoComplete="off"
                               className="MuiInput-input-13 MuiInput-disabled-8"
                               disabled={true}
