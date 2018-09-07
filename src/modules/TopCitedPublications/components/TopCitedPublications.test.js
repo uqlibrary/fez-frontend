@@ -1,9 +1,10 @@
 import {trendingPublications} from 'mock/data/testing/trendingPublications';
-import TopCitedPublications from './TopCitedPublications';
+import {TopCitedPublications} from './TopCitedPublications';
 import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
 
 function setup(testProps, isShallow = true){
     const props = {
+        classes: {},
         actions: {
             searchTopCitedPublications: jest.fn()
         },

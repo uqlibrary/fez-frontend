@@ -21,21 +21,17 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
     >
       <WithStyles(Typography)
         component="span"
+        key="title"
         variant="title"
       >
         HelpDrawer Title
       </WithStyles(Typography)>
       <WithStyles(Typography)
         component="span"
+        key="text"
         variant="body1"
       >
         Integer mattis rutrum velit nec posuere. Quisque rhoncus quam elit.
-      </WithStyles(Typography)>
-      <WithStyles(Typography)
-        component="span"
-        variant="body1"
-      >
-        This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. 
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
