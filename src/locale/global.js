@@ -163,7 +163,7 @@ export default {
             },
             offline: {
                 message: 'Your connection is offline',
-                autoHideDuration: 0
+                autoHideDuration: null
             }
         },
         audioPlayer: {

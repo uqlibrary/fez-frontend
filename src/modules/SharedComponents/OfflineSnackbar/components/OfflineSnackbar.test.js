@@ -1,7 +1,8 @@
-import OfflineSnackbar from './OfflineSnackbar';
+import {OfflineSnackbar} from './OfflineSnackbar';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         ...testProps,
     };
     return getElement(OfflineSnackbar, props, isShallow);

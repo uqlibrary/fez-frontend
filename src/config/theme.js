@@ -54,6 +54,11 @@ export const mui1theme = createMuiTheme({
             light: '#ff9a57',
             main: '#f06f0d',
             dark: '#994708',
+        },
+        success: {
+            light: '#00a700',
+            main: '#007200',
+            dark: '#003000'
         }
     },
     status: {
