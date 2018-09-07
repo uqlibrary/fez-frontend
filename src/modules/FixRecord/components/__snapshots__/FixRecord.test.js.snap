@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FixRecord should render fix record form 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Request a correction or upload files"
 >
   <form
@@ -563,7 +563,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component FixRecord should render loader when author is loading 1`] = `
@@ -583,7 +583,7 @@ exports[`Component FixRecord should render loader when record is loading 1`] = `
 `;
 
 exports[`Component FixRecord should render record citation, two actions in select field and a cancel button 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Request a correction or upload files"
 >
   <form
@@ -1035,11 +1035,11 @@ exports[`Component FixRecord should render record citation, two actions in selec
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component FixRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Request a correction or upload files"
 >
   <form
@@ -1609,11 +1609,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component FixRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Request a correction or upload files"
 >
   <form
@@ -2175,11 +2175,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component FixRecord should render unclaim form 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Request a correction or upload files"
 >
   <form
@@ -2670,5 +2670,5 @@ exports[`Component FixRecord should render unclaim form 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;

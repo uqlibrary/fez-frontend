@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
@@ -11,9 +11,10 @@ const mapStateToProps = (state, props) => {
         allowFreeText: true,
         onChange: !!props.input && ((item) => props.input.onChange(item.value)) || props.onChange,
         async: true,
-        dataSourceConfig: {text: 'value', value: 'value'},
         errorText: !!props.meta && props.meta.error || !!props.errorText && props.errorText || null,
-        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || ''
+        error: props.meta ? !!props.meta.error : !!props.errorText || null,
+        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || '',
+        itemToString: (item) => !!item && String(item.value) || ''
     };
 };
 
@@ -32,5 +33,5 @@ const mapDispatchToProps = (dispatch, props) => (
     }
 );
 
-export const OrgUnitNameField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const OrgUnitNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThesisSubmission test should display successfull submission screen 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Professional doctorate deposit"
 >
   <StandardCard
@@ -31,11 +31,11 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
       />
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`ThesisSubmission test should render hdr thesis submission acknowledgement 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Higher degree by research thesis deposit"
 >
   <StandardCard
@@ -65,11 +65,11 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
       />
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Higher degree by research thesis deposit"
 >
   <p>
@@ -521,11 +521,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       </div>
     </div>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`ThesisSubmission test should render sbs thesis submission acknowledgement 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Professional doctorate deposit"
 >
   <StandardCard
@@ -555,11 +555,11 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
       />
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Professional doctorate deposit"
 >
   <p>
@@ -1011,5 +1011,5 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       </div>
     </div>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;

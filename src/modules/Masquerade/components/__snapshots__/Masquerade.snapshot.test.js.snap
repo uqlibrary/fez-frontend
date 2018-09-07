@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Masquerade Should render form as expected 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Masquerade"
 >
   <StandardCard
@@ -57,5 +57,5 @@ exports[`Component Masquerade Should render form as expected 1`] = `
       </WithStyles(Button)>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;

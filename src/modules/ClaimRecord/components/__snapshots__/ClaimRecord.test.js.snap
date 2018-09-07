@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID but current author was assigned (author linking component should not be rendered) 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -1120,11 +1120,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render claim form, author linking component and contributor linking component should be rendered even if there are only one author and one contributor on a publication 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -2014,11 +2014,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render claim form, author linking component should be rendered even if there's only one author on a publication 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -3160,11 +3160,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render claim form, contributor linking component should be rendered even if there's only one contributor on a publication 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -4009,11 +4009,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render claim form, contributor linking component should not be rendered for Journal Article 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -5363,11 +5363,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render claim publication form 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -6717,11 +6717,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render navigation prompt 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -8071,11 +8071,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render navigation prompt 2`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -9425,11 +9425,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render publication citation, error message if publication has PID and it was claimed by current author already 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -10454,11 +10454,11 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render the confirm dialog with an alert due to a file upload error 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -11816,11 +11816,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should render the confirm dialog without an alert due to file upload success 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Claim a publication"
 >
   <form
@@ -13170,7 +13170,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component ClaimRecord  should return and render alert message depending on form status 1`] = `

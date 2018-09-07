@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MyRecords test renders active filters 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -93,11 +93,11 @@ exports[`MyRecords test renders active filters 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`MyRecords test renders list of publications no facets 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -224,11 +224,11 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`MyRecords test renders list of publications with facets 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -451,11 +451,11 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`MyRecords test renders loading screen while export publications loading 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -546,13 +546,13 @@ exports[`MyRecords test renders loading screen while export publications loading
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`MyRecords test renders loading screen while loading account data 1`] = `""`;
 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -565,11 +565,11 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
   <div
     className="columns"
   />
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`MyRecords test renders loading screen while loading publications while filtering 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -660,11 +660,11 @@ exports[`MyRecords test renders loading screen while loading publications while 
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`MyRecords test renders no results 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research"
 >
   <div
@@ -710,5 +710,5 @@ exports[`MyRecords test renders no results 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
