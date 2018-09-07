@@ -41,7 +41,6 @@ class SearchRecords extends PureComponent {
 
     constructor(props) {
         super(props);
-
         this.initState = {
             page: 1,
             pageSize: 20,
@@ -122,6 +121,11 @@ class SearchRecords extends PureComponent {
             if (providedSearchQuery.activeFacets.hasOwnProperty('showOpenAccessOnly')) {
                 providedSearchQuery.activeFacets.showOpenAccessOnly = (providedSearchQuery.activeFacets.showOpenAccessOnly === 'true');
             }
+        } else {
+            providedSearchQuery.activeFacets = {
+                filters: {},
+                ranges: {}
+            };
         }
 
         const pageSize = parseInt(providedSearchQuery.pageSize, 10);
