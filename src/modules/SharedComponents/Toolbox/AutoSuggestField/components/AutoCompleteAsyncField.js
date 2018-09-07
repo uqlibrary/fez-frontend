@@ -18,6 +18,8 @@ const styles = theme => ({
         marginTop: theme.spacing.unit,
         left: 0,
         right: 0,
+        height: 250,
+        overflowY: 'scroll'
     },
     inputRoot: {
         flexWrap: 'wrap',
@@ -99,7 +101,16 @@ export class AutoCompleteAsyncField extends Component {
                     height: 'auto'
                 }}
             >
-                <ListItemText primary={suggestion.value} secondary={suggestion.id}/>
+                <ListItemText
+                    primary={suggestion.value}
+                    secondary={suggestion.id}
+                    primaryTypographyProps={{
+                        variant: 'body2'
+                    }}
+                    secondaryTypographyProps={{
+                        variant: 'body1'
+                    }}
+                />
             </MenuItem>
         );
     };
