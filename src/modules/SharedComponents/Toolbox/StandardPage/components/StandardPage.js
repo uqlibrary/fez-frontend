@@ -2,13 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import jss from 'jss';
-import nested from 'jss-nested';
-jss.use(nested());
 
 const styles = theme => ({
     layoutCard: {
-        // border: '5px dashed red',
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',
@@ -19,10 +15,9 @@ const styles = theme => ({
     },
 });
 
-class StandardPage extends Component {
+class Page extends Component {
     static propTypes = {
         title: PropTypes.any,
-        className: PropTypes.string,
         children: PropTypes.any,
         classes: PropTypes.object
     };
@@ -42,4 +37,6 @@ class StandardPage extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(StandardPage);
+const StyledPage = withStyles(styles, {withTheme: true})(Page);
+const StandardPage = (props) => <StyledPage {...props}/>;
+export default StandardPage;

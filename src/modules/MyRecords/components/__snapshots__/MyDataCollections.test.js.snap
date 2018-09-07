@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`myDatasets test renders active filters 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -39,11 +39,11 @@ exports[`myDatasets test renders active filters 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders list of publications no facets 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -160,11 +160,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders list of publications with facets 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -372,13 +372,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders loading screen while loading account data 1`] = `""`;
 
 exports[`myDatasets test renders loading screen while loading publications  1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -391,11 +391,11 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
   <div
     className="columns"
   />
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders loading screen while loading publications while filtering 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -481,11 +481,11 @@ exports[`myDatasets test renders loading screen while loading publications while
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders no results 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -523,5 +523,5 @@ exports[`myDatasets test renders no results 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;

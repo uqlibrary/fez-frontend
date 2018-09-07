@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [0] and Stepper should render the 1st step 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Add a missing publication to eSpace"
 >
   <CustomStepper
@@ -37,11 +37,11 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
     match={Object {}}
     rawSearchQuery=""
   />
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [1] and Stepper should render the 2nd step 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Add a missing publication to eSpace"
 >
   <CustomStepper
@@ -77,11 +77,11 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
     match={Object {}}
     rawSearchQuery="This is a test"
   />
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [2] and Stepper should render the 3rd step 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Add a missing publication to eSpace"
 >
   <CustomStepper
@@ -117,5 +117,5 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
     match={Object {}}
     rawSearchQuery=""
   />
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
