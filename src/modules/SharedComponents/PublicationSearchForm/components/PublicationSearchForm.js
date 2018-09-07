@@ -25,10 +25,12 @@ export default class PublicationSearchForm extends Component {
     render() {
         return (
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
-                <Typography gutterBottom>{this.props.locale.text}</Typography>
                 <form onSubmit={this.props.handleSubmit}>
-                    <Grid container spacing={16}>
-                        <Grid item style={{flexGrow: 1}}>
+                    <Grid container spacing={16} alignItems={'flex-end'}>
+                        <Grid item xs={12}>
+                            <Typography gutterBottom>{this.props.locale.text}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm>
                             <Field
                                 component={TextField}
                                 color={'primary'}
@@ -39,19 +41,19 @@ export default class PublicationSearchForm extends Component {
                                 autoFocus
                                 validate={[validation.required]}/>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={2}>
+                        <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'raised'}
                                 children={this.props.locale.submit}
                                 fullWidth
-                                color={'secondary'}
+                                color={'primary'}
                                 onClick={this.props.handleSubmit}
                                 disabled={this.props.invalid}
                             />
                         </Grid>
                         {
                             this.props.onSkipSearch &&
-                            <Grid item xs={12} sm={6} md={2}>
+                            <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'flat'}
                                     children={this.props.locale.skip}
