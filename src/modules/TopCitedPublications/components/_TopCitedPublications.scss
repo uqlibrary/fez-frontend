@@ -1,50 +1,10 @@
-@import '../../../sass/variables';
-
-
-button.publicationTab {
-  white-space: normal !important;
-}
-
-.publicationCitation:first-child {
-  padding-top: 0 !important;
-}
-
-.topCitedPublications {
-  // Rainbow count difference values
-  .publicationsList {
-    @for $i from 1 through 20 {
-      div.publicationCitation:nth-of-type(#{$i}) {
-        span.trendingPubsDifference {
-          color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
-          @include mobile {
-            font-size: $text-body-xlarge !important;
-          }
-        }
+// Rainbow count difference values
+.publicationsList {
+  @for $i from 1 through 20 {
+    div.publicationCitation:nth-of-type(#{$i}) {
+      span.trendingPubsDifference {
+        color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
       }
-    }
-  }
-  .subTitle {
-    height: 40px;
-  }
-  .publicationCitation .count-icon-container .count {
-    font-size: $text-body-large;
-  }
-  .trendingPubsSection .publicationCitation {
-    min-height: 65px;
-  }
-  .card-header {
-    display: none;
-  }
-  .body-1 {
-    padding: 0 !important;
-  }
-  .alertWrapper {
-    margin-top: 0 !important;
-  }
-  h3.publicationTitle {
-    font-size: $text-body-xlarge !important;
-    @include mobile {
-      font-size: $text-body-large !important;
     }
   }
 }
