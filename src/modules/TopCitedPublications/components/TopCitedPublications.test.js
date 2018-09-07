@@ -5,6 +5,7 @@ import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTran
 function setup(testProps, isShallow = true){
     const props = {
         classes: {},
+        theme: {},
         actions: {
             searchTopCitedPublications: jest.fn()
         },
