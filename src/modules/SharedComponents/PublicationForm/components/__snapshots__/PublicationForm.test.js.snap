@@ -193,14 +193,16 @@ exports[`Component PublicationForm should render component initialised with just
       </WithStyles(MenuItem)>
     </Field>
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+    spacing={16}
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="secondary"
@@ -211,8 +213,8 @@ exports[`Component PublicationForm should render component initialised with just
       >
         Abandon and search again
       </WithStyles(Button)>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </form>
 `;
 
@@ -435,14 +437,16 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       }
     />
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+    spacing={16}
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="secondary"
@@ -453,9 +457,12 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       >
         Abandon and search again
       </WithStyles(Button)>
-    </div>
-    <div
-      className="column is-narrow-desktop"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="primary"
@@ -465,8 +472,8 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       >
         Submit for approval
       </WithStyles(Button)>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </form>
 `;
 
@@ -688,14 +695,16 @@ exports[`Component PublicationForm should render component with GenericDocument 
       }
     />
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+    spacing={16}
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="secondary"
@@ -706,9 +715,12 @@ exports[`Component PublicationForm should render component with GenericDocument 
       >
         Abandon and search again
       </WithStyles(Button)>
-    </div>
-    <div
-      className="column is-narrow-desktop"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="primary"
@@ -718,8 +730,8 @@ exports[`Component PublicationForm should render component with GenericDocument 
       >
         Submit for approval
       </WithStyles(Button)>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </form>
 `;
 
@@ -942,14 +954,16 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       }
     />
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+    spacing={16}
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="secondary"
@@ -960,9 +974,12 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       >
         Abandon and search again
       </WithStyles(Button)>
-    </div>
-    <div
-      className="column is-narrow-desktop"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="primary"
@@ -972,8 +989,8 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       >
         Submit for approval
       </WithStyles(Button)>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </form>
 `;
 
@@ -1195,14 +1212,16 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       }
     />
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+    spacing={16}
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="secondary"
@@ -1213,9 +1232,12 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       >
         Abandon and search again
       </WithStyles(Button)>
-    </div>
-    <div
-      className="column is-narrow-desktop"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="primary"
@@ -1225,8 +1247,8 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       >
         Submit for approval
       </WithStyles(Button)>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </form>
 `;
 
@@ -1431,14 +1453,16 @@ exports[`Component PublicationForm should render component with all fields disab
     title="Saving"
     type="info_outline"
   />
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+    spacing={16}
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={6}
+      xs={12}
     >
       <WithStyles(Button)
         color="secondary"
@@ -1449,7 +1473,7 @@ exports[`Component PublicationForm should render component with all fields disab
       >
         Abandon and search again
       </WithStyles(Button)>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </form>
 `;

@@ -44,9 +44,7 @@ input::-ms-clear {
   align-content: center;
 }
 
-.action-buttons {
-  margin-top: 0px !important;
-}
+
 
 // Bring a button down to meet the baseline of an input on the same row
 @include tablet {
@@ -67,14 +65,6 @@ button[type=button] {
   padding-right: 5px;
   padding-left: 5px;
   color: $error-color;
-}
-
-// To negate the spacing fix for column inside a form
-@include mobile {
-  div.columns.action-buttons > .column {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
-  }
 }
 
 // Styles to remove header and all padding for a StandardCard so the content will fill it

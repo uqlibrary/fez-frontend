@@ -5,6 +5,7 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
@@ -107,29 +108,29 @@ export default class PublicationForm extends Component {
                     alertProps &&
                     <Alert {...alertProps} />
                 }
-                <div className="columns action-buttons">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow-desktop">
+                <Grid container justify="flex-end" spacing={16}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Button
-                            variant={'raised'}
-                            color={'secondary'}
+                            variant="raised"
+                            color="secondary"
                             fullWidth
                             children={txt.cancel}
                             disabled={this.props.submitting}
                             onClick={this.props.onFormCancel} />
-                    </div>
-                    {this.props.formValues.get('rek_display_type') > 0 &&
-                    <div className="column is-narrow-desktop">
-                        <Button
-                            variant={'raised'}
-                            color={'primary'}
-                            fullWidth
-                            children={txt.submit}
-                            onClick={this.props.handleSubmit}
-                            disabled={this.props.submitting || this.props.disableSubmit}/>
-                    </div>
+                    </Grid>
+                    {
+                        this.props.formValues.get('rek_display_type') > 0 &&
+                        <Grid item xs={12} sm={6} md={3}>
+                            <Button
+                                variant="raised"
+                                color="primary"
+                                fullWidth
+                                children={txt.submit}
+                                onClick={this.props.handleSubmit}
+                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                        </Grid>
                     }
-                </div>
+                </Grid>
             </form>
         );
     }
