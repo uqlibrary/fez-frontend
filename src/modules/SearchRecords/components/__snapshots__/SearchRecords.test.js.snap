@@ -91,9 +91,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
       sm={true}
       xs={true}
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -197,9 +195,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
       sm={true}
       xs={true}
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -329,7 +325,6 @@ exports[`SearchRecords page should render no results 1`] = `
       item={true}
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results.
@@ -402,7 +397,6 @@ exports[`SearchRecords page should show available filters or selected filters if
       item={true}
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results.
@@ -449,7 +443,6 @@ exports[`SearchRecords page should show available filters or selected filters if
       item={true}
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results.
@@ -499,7 +492,6 @@ exports[`SearchRecords page should show available filters or selected filters if
       item={true}
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results.
@@ -545,7 +537,6 @@ exports[`SearchRecords page should show available filters or selected filters if
       item={true}
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results.

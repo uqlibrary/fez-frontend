@@ -69,5 +69,21 @@ export const mui1theme = createMuiTheme({
         fontWeightLight: 200,
         fontWeightRegular: 300,
         fontWeightMedium: 400,
+        title: {
+            fontSize: '1.5rem',
+            fontWeight: 300
+        }
+    },
+    // Converts a color hex code to RGBA when referenced from a component
+    hexToRGBA: (hex, alpha) => {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+
+        if (alpha) {
+            return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')';
+        } else {
+            return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+        }
     }
 });

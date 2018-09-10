@@ -2,7 +2,6 @@
 
 exports[`Grant Information Component  should not break if grant text is not in the record 1`] = `
 <StandardCard
-  className=""
   title="Grant information"
 >
   <Table
@@ -39,6 +38,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
           <b>
             Grant agency
           </b>
+           (Grant ID)
         </TableRowColumn>
         <TableRowColumn
           className="data"
@@ -47,6 +47,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
           <b>
             National Health and Medical Research Council
           </b>
+           (569645 | 1022263)
           <span
             className="grantText"
           />
@@ -121,7 +122,6 @@ exports[`Grant Information Component  should not break if grant text is not in t
 
 exports[`Grant Information Component  should not break if rek_grant_id is not in the search key 1`] = `
 <StandardCard
-  className=""
   title="Grant information"
 >
   <p
@@ -243,7 +243,6 @@ exports[`Grant Information Component  should not render component with empty pub
 
 exports[`Grant Information Component  should render component 1`] = `
 <StandardCard
-  className=""
   title="Grant information"
 >
   <p
@@ -369,7 +368,6 @@ exports[`Grant Information Component  should render component 1`] = `
 
 exports[`Grant Information Component  should render with publication without grant id data 1`] = `
 <StandardCard
-  className=""
   title="Grant information"
 >
   <p

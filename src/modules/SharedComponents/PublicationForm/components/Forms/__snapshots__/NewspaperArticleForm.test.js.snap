@@ -3,7 +3,6 @@
 exports[`NewspaperArticleForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Newspaper article information"
   >
     <WithStyles(Grid)
@@ -116,7 +115,6 @@ exports[`NewspaperArticleForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Authors"
   >
     <WithStyles(Typography)>
@@ -223,7 +221,6 @@ exports[`NewspaperArticleForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Optional publication details"
   >
     <WithStyles(Grid)

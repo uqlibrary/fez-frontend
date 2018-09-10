@@ -3,7 +3,6 @@
 exports[`BookForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Book information"
   >
     <WithStyles(Grid)
@@ -120,7 +119,6 @@ exports[`BookForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Authors"
   >
     <Field
@@ -219,7 +217,6 @@ exports[`BookForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Editors"
   >
     <Field
@@ -317,7 +314,6 @@ exports[`BookForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="ISBN"
   >
     <WithStyles(Typography)>
@@ -387,7 +383,6 @@ exports[`BookForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="ISSN"
   >
     <WithStyles(Typography)>
@@ -457,7 +452,6 @@ exports[`BookForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Optional publication details"
   >
     <WithStyles(Grid)

@@ -26,7 +26,7 @@ export default class PublicationSearchForm extends Component {
         return (
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
                 <form onSubmit={this.props.handleSubmit}>
-                    <Grid container spacing={16} alignItems={'flex-end'}>
+                    <Grid container spacing={16} alignItems={'center'}>
                         <Grid item xs={12}>
                             <Typography gutterBottom>{this.props.locale.text}</Typography>
                         </Grid>

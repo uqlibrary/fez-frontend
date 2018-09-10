@@ -5,7 +5,6 @@ exports[`Files Component  should not render component with no files 1`] = `""`;
 exports[`Files Component  should not render cultural message 1`] = `
 <section>
   <StandardCard
-    className=""
     title="Files"
   >
     <div
@@ -148,7 +147,6 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
 exports[`Files Component  should render component 1`] = `
 <section>
   <StandardCard
-    className=""
     title="Files"
   >
     <div
@@ -259,7 +257,6 @@ exports[`Files Component  should render component 1`] = `
 exports[`Files Component  should render cultural message 1`] = `
 <section>
   <StandardCard
-    className=""
     title="Files"
   >
     <Alert

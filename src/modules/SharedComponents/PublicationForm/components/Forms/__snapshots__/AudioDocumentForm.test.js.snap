@@ -3,7 +3,6 @@
 exports[`AudioDocumentForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     help={
       Object {
         "buttonLabel": "OK",
@@ -119,7 +118,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Creators"
   >
     <Field
@@ -218,7 +216,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     help={
       Object {
         "buttonLabel": "OK",
@@ -323,7 +320,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Optional information"
   >
     <WithStyles(Grid)

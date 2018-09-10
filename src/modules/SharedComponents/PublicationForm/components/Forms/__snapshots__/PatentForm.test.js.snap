@@ -3,7 +3,6 @@
 exports[`PatentForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Patent information"
   >
     <WithStyles(Grid)
@@ -97,7 +96,6 @@ exports[`PatentForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Creators"
   >
     <WithStyles(Typography)>
@@ -204,7 +202,6 @@ exports[`PatentForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Other patent details"
   >
     <WithStyles(Grid)

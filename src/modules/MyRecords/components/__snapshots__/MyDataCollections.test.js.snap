@@ -11,7 +11,6 @@ exports[`myDatasets test renders active filters 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results. You may be able to 
@@ -52,9 +51,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
@@ -173,9 +170,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
@@ -404,9 +399,7 @@ exports[`myDatasets test renders loading screen while loading publications while
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -495,7 +488,6 @@ exports[`myDatasets test renders no results 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results. You may be able to 

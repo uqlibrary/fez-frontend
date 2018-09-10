@@ -1,80 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot tests for StandardRighthandCard component renders StandardRighthandCard with title and help button 1`] = `
-<div
-  className="StandardRighthandCard"
->
-  <div
-    className="columns is-gapless is-mobile StandardRighthandCardTitle"
-  >
-    <div
-      className="column"
-    >
-      <h2
-        className="cardTitle"
-      >
-        Title
-      </h2>
-    </div>
-    <div
-      className="column is-narrow is-helpicon"
-    >
-      <Connect(WithStyles(HelpIcon))
-        buttonLabel="OK"
-        text="Some help text"
-        title="Help text"
-      />
-    </div>
-  </div>
-</div>
+<WithStyles(RighthandCard)
+  help={
+    Object {
+      "buttonLabel": "OK",
+      "text": "Some help text",
+      "title": "Help text",
+    }
+  }
+  title="Title"
+/>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders StandardRighthandCard with title and help button and some content 1`] = `
-<div
-  className="StandardRighthandCard"
+<WithStyles(RighthandCard)
+  help={
+    Object {
+      "buttonLabel": "OK",
+      "text": "Some help text",
+      "title": "Help text",
+    }
+  }
+  title="Title"
 >
-  <div
-    className="columns is-gapless is-mobile StandardRighthandCardTitle"
-  >
-    <div
-      className="column"
-    >
-      <h2
-        className="cardTitle"
-      >
-        Title
-      </h2>
-    </div>
-    <div
-      className="column is-narrow is-helpicon"
-    >
-      <Connect(WithStyles(HelpIcon))
-        buttonLabel="OK"
-        text="Some help text"
-        title="Help text"
-      />
-    </div>
-  </div>
   Some content
-</div>
+</WithStyles(RighthandCard)>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders StandardRighthandCard with title and no help icon 1`] = `
-<div
-  className="StandardRighthandCard"
->
-  <div
-    className="columns is-gapless is-mobile StandardRighthandCardTitle"
-  >
-    <div
-      className="column"
-    >
-      <h2
-        className="cardTitle"
-      >
-        card title
-      </h2>
-    </div>
-  </div>
-</div>
+<WithStyles(RighthandCard)
+  title="card title"
+/>
 `;

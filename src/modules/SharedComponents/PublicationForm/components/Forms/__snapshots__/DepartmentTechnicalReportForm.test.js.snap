@@ -3,7 +3,6 @@
 exports[`DepartmentTechnicalReportForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Department technical report information"
   >
     <WithStyles(Grid)
@@ -123,7 +122,6 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Authors"
   >
     <WithStyles(Typography)>
@@ -230,7 +228,6 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Other publication details"
   >
     <WithStyles(Grid)

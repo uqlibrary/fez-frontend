@@ -11,7 +11,6 @@ exports[`MyRecords test renders active filters 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results. You may be able to 
@@ -106,9 +105,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <span>
           Displaying records 1 to 20 of 147 total records. 
         </span>
@@ -237,9 +234,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <span>
           Displaying records 1 to 20 of 147 total records. 
         </span>
@@ -464,9 +459,7 @@ exports[`MyRecords test renders loading screen while export publications loading
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -578,9 +571,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -674,7 +665,6 @@ exports[`MyRecords test renders no results 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results. You may be able to 

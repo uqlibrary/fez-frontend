@@ -3,7 +3,6 @@
 exports[`ThesisForm  should render component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Thesis information"
   >
     <WithStyles(Grid)
@@ -137,7 +136,6 @@ exports[`ThesisForm  should render component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Supervisors"
   >
     <Field
@@ -240,7 +238,6 @@ exports[`ThesisForm  should render component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Field of research"
   >
     <WithStyles(Typography)>
@@ -289,7 +286,6 @@ exports[`ThesisForm  should render component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Optional information"
   >
     <WithStyles(Grid)

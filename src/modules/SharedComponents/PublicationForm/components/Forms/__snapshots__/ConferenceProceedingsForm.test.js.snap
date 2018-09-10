@@ -3,7 +3,6 @@
 exports[`ConferenceProceedingsForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Conference proceedings information"
   >
     <WithStyles(Grid)
@@ -159,7 +158,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Editors"
   >
     <WithStyles(Typography)>
@@ -266,7 +264,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="ISBN"
   >
     <WithStyles(Typography)>
@@ -336,7 +333,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="ISSN"
   >
     <WithStyles(Typography)>
@@ -406,7 +402,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Other publication details"
   >
     <WithStyles(Grid)

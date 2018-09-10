@@ -8,7 +8,6 @@ exports[`Component GoogleScholar  should display submission error if saving fail
     onKeyDown={[Function]}
   >
     <StandardCard
-      className=""
       help={
         Object {
           "buttonLabel": "OK",
@@ -133,7 +132,6 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
     onKeyDown={[Function]}
   >
     <StandardCard
-      className=""
       help={
         Object {
           "buttonLabel": "OK",
@@ -258,7 +256,6 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
     onKeyDown={[Function]}
   >
     <StandardCard
-      className=""
       help={
         Object {
           "buttonLabel": "OK",
@@ -375,7 +372,6 @@ exports[`Component GoogleScholar  should render form if author has google schola
     onKeyDown={[Function]}
   >
     <StandardCard
-      className=""
       help={
         Object {
           "buttonLabel": "OK",

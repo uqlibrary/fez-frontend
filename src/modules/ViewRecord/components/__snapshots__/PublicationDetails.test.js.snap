@@ -4,7 +4,6 @@ exports[`Publication Details Component  should not render component with empty p
 
 exports[`Publication Details Component  should render component 1`] = `
 <StandardCard
-  className=""
   title="Publication details"
 >
   <Table
@@ -71,7 +70,6 @@ exports[`Publication Details Component  should render component 1`] = `
 
 exports[`Publication Details Component  should render with publication without collection data 1`] = `
 <StandardCard
-  className=""
   title="Publication details"
 >
   <Table
@@ -103,7 +101,6 @@ exports[`Publication Details Component  should render with publication without c
 
 exports[`Publication Details Component  should render with publication without subtype data 1`] = `
 <StandardCard
-  className=""
   title="Publication details"
 >
   <Table

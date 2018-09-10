@@ -2,14 +2,13 @@
 
 exports[`PublicationSearchForm renders  component 1`] = `
 <StandardCard
-  className=""
   title="Search for your publication"
 >
   <form
     onSubmit={[MockFunction]}
   >
     <WithStyles(Grid)
-      alignItems="flex-end"
+      alignItems="center"
       container={true}
       spacing={16}
     >

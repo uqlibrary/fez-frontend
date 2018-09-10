@@ -33,7 +33,6 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     type="error_outline"
   />
   <StandardCard
-    className=""
     title="I already have an ORCID iD"
   >
     <div>
@@ -63,7 +62,6 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     </div>
   </StandardCard>
   <StandardCard
-    className=""
     title="I need an ORCID iD"
   >
     <div>
@@ -133,7 +131,6 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     type="error_outline"
   />
   <StandardCard
-    className=""
     title="I already have an ORCID iD"
   >
     <div>
@@ -163,7 +160,6 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     </div>
   </StandardCard>
   <StandardCard
-    className=""
     title="I need an ORCID iD"
   >
     <div>
@@ -224,7 +220,6 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     onRef={[Function]}
   />
   <StandardCard
-    className=""
     title="I already have an ORCID iD"
   >
     <div>
@@ -254,7 +249,6 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     </div>
   </StandardCard>
   <StandardCard
-    className=""
     title="I need an ORCID iD"
   >
     <div>

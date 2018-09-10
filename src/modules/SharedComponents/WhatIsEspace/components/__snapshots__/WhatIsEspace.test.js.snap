@@ -2,7 +2,7 @@
 
 exports[`Component WhatIsEspace should render component 1`] = `
 <StandardCard
-  className="whatIsEspace primaryHeader"
+  darkHeader={true}
   title="What is eSpace?"
 >
   <span>

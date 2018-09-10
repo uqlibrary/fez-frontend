@@ -3,7 +3,6 @@
 exports[`ImageDocumentForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Image information"
   >
     <WithStyles(Grid)
@@ -79,7 +78,6 @@ exports[`ImageDocumentForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Creators"
   >
     <WithStyles(Typography)>
@@ -186,7 +184,6 @@ exports[`ImageDocumentForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Optional information"
   >
     <WithStyles(Grid)

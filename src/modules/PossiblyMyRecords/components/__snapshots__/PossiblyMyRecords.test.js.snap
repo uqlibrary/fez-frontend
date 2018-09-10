@@ -13,7 +13,6 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
       xs={12}
     >
       <StandardCard
-        className=""
         text={
           <div>
             <p>
@@ -115,7 +114,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
       xs={12}
     >
       <StandardCard
-        className=""
         text={
           <div>
             <p>
@@ -163,7 +161,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       xs={12}
     >
       <StandardCard
-        className=""
         title="Possibly your publications"
       >
         <React.Fragment>
@@ -412,7 +409,6 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
       xs={12}
     >
       <StandardCard
-        className=""
         text={
           <div>
             <p>

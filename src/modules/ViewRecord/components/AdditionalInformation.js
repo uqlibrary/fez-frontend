@@ -260,7 +260,7 @@ export default class AdditionalInformation extends Component {
     }
 
     render() {
-        if (!this.props.publication.rek_display_type_lookup) {
+        if (!this.props.publication || !this.props.publication.rek_display_type_lookup) {
             return null;
         }
 

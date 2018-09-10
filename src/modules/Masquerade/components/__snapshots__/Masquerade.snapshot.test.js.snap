@@ -5,7 +5,6 @@ exports[`Component Masquerade Should render form as expected 1`] = `
   title="Masquerade"
 >
   <StandardCard
-    className=""
     help={
       Object {
         "buttonLabel": "OK",

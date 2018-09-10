@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import StandardCard from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
 
 export default class RelatedPublications extends PureComponent {

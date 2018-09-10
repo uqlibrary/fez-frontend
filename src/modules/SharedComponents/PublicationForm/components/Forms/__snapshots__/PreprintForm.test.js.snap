@@ -3,7 +3,6 @@
 exports[`PreprintForm renders  component 1`] = `
 <React.Fragment>
   <StandardCard
-    className=""
     title="Preprint information"
   >
     <WithStyles(Grid)
@@ -55,7 +54,6 @@ exports[`PreprintForm renders  component 1`] = `
     </WithStyles(Grid)>
   </StandardCard>
   <StandardCard
-    className=""
     title="Authors"
   >
     <WithStyles(Typography)>
@@ -162,7 +160,6 @@ exports[`PreprintForm renders  component 1`] = `
     />
   </StandardCard>
   <StandardCard
-    className=""
     title="Optional publication details"
   >
     <WithStyles(Grid)

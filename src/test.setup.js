@@ -10,11 +10,12 @@ import 'babel-polyfill';
 import {Provider} from 'react-redux';
 import Immutable from 'immutable';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { createMuiTheme } from '@material-ui/core/styles';
 import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {api} from 'config';
+import {api, mui1theme} from 'config';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -96,7 +97,7 @@ const getElement = (component, props, isShallow = true) => {
         </Provider>,
         {
             context: {
-                muiTheme: getMuiTheme()
+                muiTheme: {...getMuiTheme(), ...createMuiTheme(mui1theme)}
             },
             childContextTypes: {
                 muiTheme: PropTypes.object.isRequired

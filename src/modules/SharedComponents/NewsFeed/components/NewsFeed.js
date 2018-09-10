@@ -43,7 +43,7 @@ export default class NewsFeed extends PureComponent {
             );
 
         return (
-            <StandardCard title={txt.title} className={'newsFeed primaryHeader'}>
+            <StandardCard title={txt.title} darkHeader>
                 {
                     !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
                         <div key={`newsItem-${index}`} className="newsItemContainer">

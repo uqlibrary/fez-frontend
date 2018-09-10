@@ -16,7 +16,6 @@ exports[`Component PublicationForm should render component initialised with just
     when={true}
   />
   <StandardCard
-    className=""
     title="Publication type"
   >
     <Field
@@ -234,7 +233,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
     when={true}
   />
   <StandardCard
-    className=""
     title="Publication type"
   >
     <Field
@@ -422,7 +420,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
     subtypeVocabId={453581}
   />
   <StandardCard
-    className=""
     title="Upload files"
   >
     <Field
@@ -493,7 +490,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
     when={true}
   />
   <StandardCard
-    className=""
     title="Publication type"
   >
     <Field
@@ -680,7 +676,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
     submitting={false}
   />
   <StandardCard
-    className=""
     title="Upload files"
   >
     <Field
@@ -751,7 +746,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
     when={true}
   />
   <StandardCard
-    className=""
     title="Publication type"
   >
     <Field
@@ -939,7 +933,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
     subtypeVocabId={453573}
   />
   <StandardCard
-    className=""
     title="Upload files"
   >
     <Field
@@ -1010,7 +1003,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
     when={true}
   />
   <StandardCard
-    className=""
     title="Publication type"
   >
     <Field
@@ -1197,7 +1189,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
     submitting={false}
   />
   <StandardCard
-    className=""
     title="Upload files"
   >
     <Field
@@ -1268,7 +1259,6 @@ exports[`Component PublicationForm should render component with all fields disab
     when={true}
   />
   <StandardCard
-    className=""
     title="Publication type"
   >
     <Field

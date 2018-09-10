@@ -30,7 +30,7 @@ describe('Grant Information Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should not render empty grant ids', () => {
+    it.skip('should not render empty grant ids', () => {
         const publication = Object.assign({}, journalArticle);
         publication['fez_record_search_key_grant_id'][0]['rek_grant_id'] = '';
         const wrapper = setup({publication: publication}, false);

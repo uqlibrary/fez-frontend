@@ -4,9 +4,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <StandardCard
-    className=""
-  >
+  <StandardCard>
     <p>
       Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
@@ -38,9 +36,7 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
 <StandardPage
   title="Higher degree by research thesis deposit"
 >
-  <StandardCard
-    className=""
-  >
+  <StandardCard>
     <p>
       Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
@@ -110,7 +106,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       onRef={[Function]}
     />
     <StandardCard
-      className=""
       title="Thesis information"
     >
       <div
@@ -240,7 +235,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       </div>
     </StandardCard>
     <StandardCard
-      className=""
       title="Supervisors"
     >
       <Field
@@ -313,7 +307,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       />
     </StandardCard>
     <StandardCard
-      className=""
       title="Field of research"
     >
       <div>
@@ -368,7 +361,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       />
     </StandardCard>
     <StandardCard
-      className=""
       title="Keywords"
     >
       <div>
@@ -431,7 +423,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       />
     </StandardCard>
     <StandardCard
-      className=""
       title="Upload files"
     >
       <Field
@@ -528,9 +519,7 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <StandardCard
-    className=""
-  >
+  <StandardCard>
     <p>
       Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
@@ -600,7 +589,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       onRef={[Function]}
     />
     <StandardCard
-      className=""
       title="Thesis information"
     >
       <div
@@ -730,7 +718,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       </div>
     </StandardCard>
     <StandardCard
-      className=""
       title="Supervisors"
     >
       <Field
@@ -803,7 +790,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       />
     </StandardCard>
     <StandardCard
-      className=""
       title="Field of research"
     >
       <div>
@@ -858,7 +844,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       />
     </StandardCard>
     <StandardCard
-      className=""
       title="Keywords"
     >
       <div>
@@ -921,7 +906,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       />
     </StandardCard>
     <StandardCard
-      className=""
       title="Upload files"
     >
       <Field

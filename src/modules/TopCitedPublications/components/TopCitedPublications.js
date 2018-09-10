@@ -15,7 +15,7 @@ import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 const styles = theme => ({
     tabs: {
         marginLeft: -24,
-        marginTop: -32,
+        marginTop: -16,
         marginRight: -24,
         backgroundColor: theme.palette.primary.main,
     },

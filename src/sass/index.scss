@@ -6,9 +6,9 @@ $desktop: 1024px;
 // Frontend specific variables override toolbox defaults if defined
 @import "./variables";
 // Various fixes and hacks to make MUI work
-@import './muifixes';
+//@import './muifixes';
 // Typography
-@import './typography';
+//@import './typography';
 // Data list styles for Contributor editor and FileUploader
 @import './datalist';
 // Charts styles from toolbox

@@ -40,6 +40,14 @@ const styles = theme => ({
         padding: 0,
         maxHeight: '100%',
         height: '100%'
+    },
+    titleLink: {
+        '& a': {
+            textDecoration: 'none',
+            '&:hover': {
+                textDecoration: 'underline'
+            }
+        }
     }
 });
 
@@ -249,7 +257,7 @@ export class App extends PureComponent {
                             </Hidden>
                             {/* Title */}
                             <Grid item style={{flexGrow: 1}}>
-                                <Typography variant="title" noWrap style={titleStyle}>
+                                <Typography variant="title" noWrap style={titleStyle} className={classes.titleLink}>
                                     {locale.global.appTitle}
                                 </Typography>
                             </Grid>

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-
+import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
     layoutCard: {
         maxWidth: '1200px',
@@ -13,6 +13,15 @@ const styles = theme => ({
             margin: '0 auto 24px auto'
         },
     },
+    layoutTitle: {
+        maxWidth: 1200,
+        width: '90%',
+        margin: '12px auto',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 auto 12px auto'
+        }
+    }
 });
 
 class Page extends Component {
@@ -27,7 +36,7 @@ class Page extends Component {
         return (
             <Grid container>
                 {title &&
-                <h1 className="pageTitle">{title}</h1>
+                <Typography variant={'headline'} className={classes.layoutTitle}>{title}</Typography>
                 }
                 <Grid item className={classes.layoutCard}>
                     {children}
