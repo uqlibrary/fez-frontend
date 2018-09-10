@@ -36,7 +36,7 @@ class Page extends Component {
         return (
             <Grid container>
                 {title &&
-                <Typography variant={'headline'} className={classes.layoutTitle}>{title}</Typography>
+                <Typography variant={'title'} className={classes.layoutTitle}>{title}</Typography>
                 }
                 <Grid item className={classes.layoutCard}>
                     {children}
