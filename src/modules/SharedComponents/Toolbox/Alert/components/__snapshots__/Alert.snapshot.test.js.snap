@@ -22,6 +22,7 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
         justify="center"
       >
         <WithStyles(Grid)
+          id="icon"
           item={true}
         >
           <pure(Error)
@@ -29,6 +30,7 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          id="text"
           item={true}
           xs={true}
         >
@@ -91,6 +93,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
         justify="center"
       >
         <WithStyles(Grid)
+          id="icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -100,6 +103,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          id="text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -131,6 +135,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
       <WithStyles(Button)
         className="action"
         fullWidth={true}
+        id="alertButton"
         onClick={[MockFunction]}
         variant="flat"
       >
@@ -176,6 +181,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         justify="center"
       >
         <WithStyles(Grid)
+          id="icon"
           item={true}
         >
           <pure(Error)
@@ -183,6 +189,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          id="text"
           item={true}
           xs={true}
         >
@@ -210,6 +217,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
               disableTouchRipple={false}
               disabled={false}
               iconStyle={Object {}}
+              id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
               tooltipPosition="bottom-center"
@@ -244,6 +252,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           disableTouchRipple={false}
           disabled={false}
           iconStyle={Object {}}
+          id="dismiss"
           onClick={[MockFunction]}
           title="Click to dismiss this alert"
           tooltipPosition="bottom-center"
@@ -281,6 +290,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         justify="center"
       >
         <WithStyles(Grid)
+          id="icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -290,6 +300,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          id="text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -319,6 +330,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
               disableTouchRipple={false}
               disabled={false}
               iconStyle={Object {}}
+              id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
               tooltipPosition="bottom-center"
@@ -340,6 +352,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       <WithStyles(Button)
         className="action"
         fullWidth={true}
+        id="alertButton"
         onClick={[MockFunction]}
         variant="flat"
       >
@@ -367,6 +380,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           disableTouchRipple={false}
           disabled={false}
           iconStyle={Object {}}
+          id="dismiss"
           onClick={[MockFunction]}
           title="Click to dismiss this alert"
           tooltipPosition="bottom-center"
@@ -404,6 +418,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         justify="center"
       >
         <WithStyles(Grid)
+          id="icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -415,6 +430,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          id="text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -444,6 +460,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
               disableTouchRipple={false}
               disabled={false}
               iconStyle={Object {}}
+              id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
               tooltipPosition="bottom-center"
@@ -465,6 +482,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       <WithStyles(Button)
         className="action"
         fullWidth={true}
+        id="alertButton"
         onClick={[MockFunction]}
         variant="flat"
       >
@@ -492,6 +510,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           disableTouchRipple={false}
           disabled={false}
           iconStyle={Object {}}
+          id="dismiss"
           onClick={[MockFunction]}
           title="Click to dismiss this alert"
           tooltipPosition="bottom-center"

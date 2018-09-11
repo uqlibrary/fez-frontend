@@ -269,17 +269,17 @@ export class Alert extends PureComponent {
                 <Grid container spacing={24} className={classNames(classes[this.props.type], classes.common)} justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
                     <Grid item xs={12} sm className={this.props.action && classes.linked}>
                         <Grid container justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
-                            <Grid item className={classes.icon} onClick={this.props.action} onKeyDown={this.props.action}>
+                            <Grid item className={classes.icon} onClick={this.props.action} onKeyDown={this.props.action} id={'icon'}>
                                 {this.props.showLoader ? <CircularProgress className={'spinner'} size={38} thickness={3} /> : this.renderIcon(this.props.type)}
                             </Grid>
-                            <Grid item xs className={classes.text} onClick={this.props.action} onKeyDown={this.props.action}>
+                            <Grid item xs className={classes.text} onClick={this.props.action} onKeyDown={this.props.action} id={'text'}>
                                 <b>{this.props.title && `${this.props.title} - `}</b>{this.props.message}
                             </Grid>
                             <Hidden smUp>
                                 {
                                     this.props.allowDismiss && this.props.dismissAction &&
                                     <Grid item className={classes.dismissButton}>
-                                        <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
+                                        <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle} aria-label={this.props.dismissTitle} id={'dismiss'}>
                                             <Close className="dismiss"/>
                                         </IconButton>
                                     </Grid>
@@ -291,6 +291,7 @@ export class Alert extends PureComponent {
                         this.props.action && this.props.actionButtonLabel &&
                         <Grid item xs sm={'auto'} className={classes.actionButton}>
                             <Button
+                                id={'alertButton'}
                                 variant={'flat'}
                                 children={this.props.actionButtonLabel}
                                 onClick={this.props.action}
@@ -302,7 +303,7 @@ export class Alert extends PureComponent {
                         {
                             this.props.allowDismiss && this.props.dismissAction &&
                             <Grid item className={classes.dismissButton}>
-                                <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
+                                <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle} aria-label={this.props.dismissTitle} id={'dismiss'}>
                                     <Close className="dismiss"/>
                                 </IconButton>
                             </Grid>
