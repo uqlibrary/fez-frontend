@@ -1485,11 +1485,8 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <UNDEFINED>
-              <Alert
-                allowDismiss={false}
-                dismissTitle="Click to dismiss this alert"
+              <WithStyles(Alert)
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-                showLoader={false}
                 title="File upload failed"
                 type="info"
               />
@@ -2603,11 +2600,8 @@ exports[`Component FixRecord should render unclaim form 1`] = `
     <StandardCard
       title="Remove this record from my profile"
     >
-      <Alert
-        allowDismiss={false}
-        dismissTitle="Click to dismiss this alert"
+      <WithStyles(Alert)
         message="You are about to remove this publication from your eSpace profile."
-        showLoader={false}
         title="WARNING"
         type="warning"
       />

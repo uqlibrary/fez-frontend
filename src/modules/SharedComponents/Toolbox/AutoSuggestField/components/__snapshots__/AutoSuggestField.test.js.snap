@@ -516,9 +516,9 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                         "divider": "rgba(0, 0, 0, 0.12)",
                         "error": Object {
                           "contrastText": "#fff",
-                          "dark": "#d32f2f",
-                          "light": "#e57373",
-                          "main": "#f44336",
+                          "dark": "#790000",
+                          "light": "#ff0000",
+                          "main": "#c80000",
                         },
                         "getContrastText": [Function],
                         "grey": Object {
@@ -540,7 +540,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                         "primary": Object {
                           "contrastText": "#fff",
                           "dark": "#370546",
-                          "light": "#6B0C8A",
+                          "light": "#760d98",
                           "main": "#49075E",
                         },
                         "secondary": Object {
@@ -550,7 +550,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                           "main": "#595959",
                         },
                         "success": Object {
-                          "dark": "#003000",
+                          "dark": "#005000",
                           "light": "#00a700",
                           "main": "#007200",
                         },
@@ -1476,9 +1476,9 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                         "divider": "rgba(0, 0, 0, 0.12)",
                         "error": Object {
                           "contrastText": "#fff",
-                          "dark": "#d32f2f",
-                          "light": "#e57373",
-                          "main": "#f44336",
+                          "dark": "#790000",
+                          "light": "#ff0000",
+                          "main": "#c80000",
                         },
                         "getContrastText": [Function],
                         "grey": Object {
@@ -1500,7 +1500,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                         "primary": Object {
                           "contrastText": "#fff",
                           "dark": "#370546",
-                          "light": "#6B0C8A",
+                          "light": "#760d98",
                           "main": "#49075E",
                         },
                         "secondary": Object {
@@ -1510,7 +1510,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                           "main": "#595959",
                         },
                         "success": Object {
-                          "dark": "#003000",
+                          "dark": "#005000",
                           "light": "#00a700",
                           "main": "#007200",
                         },
@@ -2438,9 +2438,9 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                         "divider": "rgba(0, 0, 0, 0.12)",
                         "error": Object {
                           "contrastText": "#fff",
-                          "dark": "#d32f2f",
-                          "light": "#e57373",
-                          "main": "#f44336",
+                          "dark": "#790000",
+                          "light": "#ff0000",
+                          "main": "#c80000",
                         },
                         "getContrastText": [Function],
                         "grey": Object {
@@ -2462,7 +2462,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                         "primary": Object {
                           "contrastText": "#fff",
                           "dark": "#370546",
-                          "light": "#6B0C8A",
+                          "light": "#760d98",
                           "main": "#49075E",
                         },
                         "secondary": Object {
@@ -2472,7 +2472,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                           "main": "#595959",
                         },
                         "success": Object {
-                          "dark": "#003000",
+                          "dark": "#005000",
                           "light": "#00a700",
                           "main": "#007200",
                         },

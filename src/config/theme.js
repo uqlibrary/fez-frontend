@@ -33,7 +33,7 @@ export const oldtheme = getMuiTheme({
 export const mui1theme = createMuiTheme({
     palette: {
         primary: {
-            light: '#6B0C8A',
+            light: '#760d98',
             main: '#49075E',
             dark: '#370546',
         },
@@ -58,7 +58,12 @@ export const mui1theme = createMuiTheme({
         success: {
             light: '#00a700',
             main: '#007200',
-            dark: '#003000'
+            dark: '#005000'
+        },
+        error: {
+            light: '#ff0000',
+            main: '#c80000',
+            dark: '#790000'
         }
     },
     status: {

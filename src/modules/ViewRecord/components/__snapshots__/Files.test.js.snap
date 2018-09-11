@@ -113,35 +113,461 @@ exports[`Files Component  should not render cultural message 1`] = `
 `;
 
 exports[`Files Component  should render alert for video files and firefox 1`] = `
-<div
-  className="help_outline alertWrapper "
->
-  <div
-    className="columns is-multiline is-mobile"
+<section>
+  <StandardCard
+    title="Files"
   >
+    <WithStyles(Alert)
+      allowDismiss={true}
+      message="Please RIGHT CLICK then select link SAVE AS option to save and play video files"
+      title="FireFox Users"
+      type="help_outline"
+    />
     <div
-      className="column is-narrow alertIcon"
+      className="files"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="header columns is-gapless is-vcentered is-mobile"
       >
-        help_outline
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText"
-    >
-      <div>
-        <b>
-          FireFox Users - 
-        </b>
-        Please RIGHT CLICK then select link SAVE AS option to save and play video files
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        />
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          File name
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          Size
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered is-hidden-mobile"
+        />
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered is-mobile"
+        key="file-0"
+      >
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        >
+          <Thumbnail
+            fileName="CH7409_movie_1.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="2.86 MB"
+            description="Movie 1"
+            fileName="CH7409_movie_1.mov"
+            icon={
+              <Thumbnail
+                fileName="CH7409_movie_1.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Movie 1
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          2.86 MB
+        </div>
+        <div
+          className="column oa is-2 is-hidden-mobile is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453697}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered is-mobile"
+        key="file-1"
+      >
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        >
+          <Thumbnail
+            fileName="CH7409_movie_2.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="2.62 MB"
+            description="Movie 2"
+            fileName="CH7409_movie_2.mov"
+            icon={
+              <Thumbnail
+                fileName="CH7409_movie_2.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Movie 2
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          2.62 MB
+        </div>
+        <div
+          className="column oa is-2 is-hidden-mobile is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453697}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered is-mobile"
+        key="file-2"
+      >
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        >
+          <Thumbnail
+            fileName="CH7409_movie_3.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="2.86 MB"
+            description="Movie 3"
+            fileName="CH7409_movie_3.mov"
+            icon={
+              <Thumbnail
+                fileName="CH7409_movie_3.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Movie 3
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          2.86 MB
+        </div>
+        <div
+          className="column oa is-2 is-hidden-mobile is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453697}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered is-mobile"
+        key="file-3"
+      >
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        >
+          <Thumbnail
+            fileName="CH7409_movie_4.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="4.29 MB"
+            description="Movie 4"
+            fileName="CH7409_movie_4.mov"
+            icon={
+              <Thumbnail
+                fileName="CH7409_movie_4.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Movie 4
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          4.29 MB
+        </div>
+        <div
+          className="column oa is-2 is-hidden-mobile is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453697}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered is-mobile"
+        key="file-4"
+      >
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        >
+          <Thumbnail
+            fileName="CH7409_movie_5.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="1.12 MB"
+            description="Movie 5"
+            fileName="CH7409_movie_5.mov"
+            icon={
+              <Thumbnail
+                fileName="CH7409_movie_5.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Movie 5
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          1.12 MB
+        </div>
+        <div
+          className="column oa is-2 is-hidden-mobile is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453697}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered is-mobile"
+        key="file-5"
+      >
+        <div
+          className="column filetype fileIcon is-narrow is-vcentered"
+        >
+          <ImagePictureAsPdf />
+        </div>
+        <div
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="6.67 MB"
+            description="Technical report PDF file"
+            fileName="ch7409_report.pdf"
+            icon={<ImagePictureAsPdf />}
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/ch7409_report.pdf"
+            mimeType="application/pdf"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/ch7409_report.pdf"
+            thumbnailFileName={false}
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Technical report PDF file
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          6.67 MB
+        </div>
+        <div
+          className="column oa is-2 is-hidden-mobile is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453697}
+            showEmbargoText={false}
+          />
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </StandardCard>
+</section>
 `;
 
 exports[`Files Component  should render component 1`] = `
@@ -259,12 +685,10 @@ exports[`Files Component  should render cultural message 1`] = `
   <StandardCard
     title="Files"
   >
-    <Alert
+    <WithStyles(Alert)
       allowDismiss={true}
       dismissAction={[MockFunction]}
-      dismissTitle="Click to dismiss this alert"
       message="hello"
-      showLoader={false}
       type="info"
     />
     <div

@@ -2,12 +2,14 @@ jest.dontMock('./Alert');
 
 import {mount} from 'enzyme';
 import React from 'react';
-import Alert from './Alert';
+import {Alert} from './Alert';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
+import {mui1theme} from "../../../../../config";
 
 function setup({title, message, type, allowDismiss, dismissAction, action, actionButtonLabel, showLoader}){
     const props = {
+        classes: {...mui1theme},
         title: title || 'Title',
         message: message || 'Message',
         type: type || 'warning',
@@ -26,10 +28,6 @@ function setup({title, message, type, allowDismiss, dismissAction, action, actio
         }
     });
 }
-
-beforeAll(() => {
-
-});
 
 describe('Alert component functionality test ', () => {
     it('fires the action when clicking on the message text', () => {

@@ -1003,6 +1003,6 @@ describe('Files Component ', () => {
         Object.defineProperty(window.navigator, 'userAgent', {value: 'FireFox'});
         const wrapper = setup({publication: pub});
         // wrapper.instance().hasVideo === true;
-        expect(toJson(wrapper.find('Alert').dive())).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

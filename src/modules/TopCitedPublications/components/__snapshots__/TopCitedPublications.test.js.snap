@@ -61,11 +61,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
 
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
 <React.Fragment>
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Trending publications are temporarily unavailable"
-    showLoader={false}
     title="There has been an error"
     type="error"
   />

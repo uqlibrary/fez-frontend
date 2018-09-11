@@ -56,11 +56,8 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -180,11 +177,8 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -316,11 +310,8 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -452,11 +443,8 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -579,11 +567,8 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -732,11 +717,8 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -887,11 +869,8 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -1046,11 +1025,8 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 4 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -1425,11 +1401,8 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -1577,11 +1550,8 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -1812,11 +1782,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -2024,11 +1991,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -2177,11 +2141,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -2332,11 +2293,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -2497,11 +2455,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
@@ -2717,11 +2672,8 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />

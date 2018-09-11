@@ -72,6 +72,7 @@
     "bulma": "0.7.1",
     "can-deparam": "^1.1.1",
     "can-param": "^1.0.4",
+    "classnames": "^2.2.6",
     "connected-react-router": "^4.3.0",
     "dompurify": "^1.0.4",
     "downshift": "^2.2.0",
