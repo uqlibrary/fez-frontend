@@ -27,20 +27,15 @@ exports[`Component ContributorForm should render display name field and identifi
       sm={12}
       xs={12}
     >
-      <TextField
-        className="mui-long-labels-fix"
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
         disabled={false}
-        floatingLabelFixed={false}
-        floatingLabelText="Name as published"
         fullWidth={true}
-        hintText="Please type the name exactly as published"
+        helperText="Please type the name exactly as published"
         id="nameAsPublishedField"
-        multiLine={false}
+        label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
-        rows={1}
-        type="text"
-        underlineShow={true}
         value=""
       />
     </WithStyles(Grid)>
@@ -99,7 +94,6 @@ exports[`Component ContributorForm should render display name field and identifi
       xs={12}
     >
       <RaisedButton
-        className="is-mui-spacing-button"
         disabled={true}
         fullWidth={true}
         label="Add author"
@@ -140,20 +134,15 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       sm={9}
       xs={12}
     >
-      <TextField
-        className="mui-long-labels-fix"
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
         disabled={false}
-        floatingLabelFixed={false}
-        floatingLabelText="Name as published"
         fullWidth={true}
-        hintText="Please type the name exactly as published"
+        helperText="Please type the name exactly as published"
         id="nameAsPublishedField"
-        multiLine={false}
+        label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
-        rows={1}
-        type="text"
-        underlineShow={true}
         value=""
       />
     </WithStyles(Grid)>
@@ -164,7 +153,6 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       xs={12}
     >
       <RaisedButton
-        className="is-mui-spacing-button"
         disabled={true}
         fullWidth={true}
         label="Add author"

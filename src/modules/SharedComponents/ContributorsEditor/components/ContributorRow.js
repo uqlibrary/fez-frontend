@@ -208,7 +208,7 @@ const styles = (theme) => ({
         padding: '0 16px'
     },
     rowSelected: {
-        backgroundColor: theme.palette.secondary.light
+        backgroundColor: theme.palette.accent.light
     },
     selected: {
         color: 'white !important'

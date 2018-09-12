@@ -44,15 +44,6 @@ input::-ms-clear {
   align-content: center;
 }
 
-
-
-// Bring a button down to meet the baseline of an input on the same row
-@include tablet {
-  .is-mui-spacing-button {
-    margin-top: 30px !important;
-  }
-}
-
 // Stop MUI button labels from wrapping
 button[type=button] {
   white-space: nowrap;

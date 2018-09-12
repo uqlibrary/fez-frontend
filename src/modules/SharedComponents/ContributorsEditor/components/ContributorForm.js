@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
-import TextField from 'material-ui/TextField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Grid} from '@material-ui/core';
 
@@ -18,7 +18,8 @@ export class ContributorForm extends PureComponent {
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool
+        showContributorAssignment: PropTypes.bool,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -57,12 +58,12 @@ export class ContributorForm extends PureComponent {
         });
 
         // move focus to name as published text field after item was added
-        if (this.refs.nameAsPublishedField) this.refs.nameAsPublishedField.focus();
+        // if (this.refs.nameAsPublishedField) this.refs.nameAsPublishedField.focus();
     }
 
-    _onNameChanged = (event, newValue) => {
+    _onNameChanged = (event) => {
         this.setState({
-            nameAsPublished: newValue
+            nameAsPublished: event.target.value
         });
     }
 
@@ -99,13 +100,14 @@ export class ContributorForm extends PureComponent {
                             fullWidth
                             ref="nameAsPublishedField"
                             id="nameAsPublishedField"
-                            floatingLabelText={this.props.locale.nameAsPublishedLabel}
-                            hintText={this.props.locale.nameAsPublishedHint}
+                            label={this.props.locale.nameAsPublishedLabel}
+                            helperText={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyPress={this._addContributor}
                             disabled={this.props.disabled}
-                            className="mui-long-labels-fix"
+                            required={this.props.required}
+                            autoComplete="off"
                         />
                     </Grid>
                     {
@@ -132,7 +134,6 @@ export class ContributorForm extends PureComponent {
                     }
                     <Grid item xs={12} sm={3} md={2}>
                         <RaisedButton
-                            className="is-mui-spacing-button"
                             fullWidth
                             primary
                             label={this.props.locale.addButton}
