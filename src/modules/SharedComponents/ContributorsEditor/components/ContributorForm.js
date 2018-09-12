@@ -56,9 +56,6 @@ export class ContributorForm extends PureComponent {
             uqIdentifier: '',
             contributor: {}
         });
-
-        // move focus to name as published text field after item was added
-        // if (this.refs.nameAsPublishedField) this.refs.nameAsPublishedField.focus();
     }
 
     _onNameChanged = (event) => {
