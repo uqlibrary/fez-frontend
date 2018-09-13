@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CitationCountView test  should render component with given count 1`] = `
-<div
-  className="citationCount"
->
+<React.Fragment>
   <ExternalLink
     aria-label="Google"
     className="wosCitationCount"
@@ -13,14 +11,16 @@ exports[`CitationCountView test  should render component with given count 1`] = 
     target="_blank"
     title="Google"
   >
-    <div
+    <span
       className="fez-icon wos large"
     />
+     
     <span
       className="citationCountNumber"
     >
       4
     </span>
+      
   </ExternalLink>
-</div>
+</React.Fragment>
 `;

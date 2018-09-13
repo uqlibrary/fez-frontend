@@ -5,14 +5,22 @@ exports[`Component WhatIsEspace should render component 1`] = `
   darkHeader={true}
   title="What is eSpace?"
 >
-  <span>
-    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
-  </span>
-  <Link
-    replace={false}
-    to="/contact"
+  <WithStyles(Typography)
+    style={
+      Object {
+        "paddingTop": 12,
+      }
+    }
   >
-     read more
-  </Link>
+    <span>
+      The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
+    </span>
+    <Link
+      replace={false}
+      to="/contact"
+    >
+       read more
+    </Link>
+  </WithStyles(Typography)>
 </StandardCard>
 `;

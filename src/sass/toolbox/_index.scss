@@ -10,13 +10,3 @@
 @import 'variables';
 @import 'components';
 
-html, body {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background-color: $main-background-color;
-  font-family: $font-family;
-}

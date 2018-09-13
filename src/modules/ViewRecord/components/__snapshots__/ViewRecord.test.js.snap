@@ -5,7 +5,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
   className="viewRecord"
   title={Array []}
 >
-  <withRouter(Connect(PublicationCitation))
+  <withRouter(Connect(WithStyles(PublicationCitation)))
     hideTitle={true}
     publication={Object {}}
   />
@@ -78,7 +78,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
     ]
   }
 >
-  <withRouter(Connect(PublicationCitation))
+  <withRouter(Connect(WithStyles(PublicationCitation)))
     hideTitle={true}
     publication={
       Object {
@@ -3263,7 +3263,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
     ]
   }
 >
-  <withRouter(Connect(PublicationCitation))
+  <withRouter(Connect(WithStyles(PublicationCitation)))
     hideTitle={true}
     publication={
       Object {

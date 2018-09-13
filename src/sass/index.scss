@@ -19,3 +19,52 @@ $desktop: 1024px;
 @import './components';
 // Print styles
 @import "./print";
+
+html, body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $main-background-color;
+  font-family: $font-family;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.layout-fill {
+  margin: 0; padding: 0;
+  max-height: 100%;
+  height: 100%;
+}
+
+.layout-card {
+  max-width: 1200px;
+  margin: 24px auto;
+  width: 90%;
+  padding: 0;
+  @include mobile {
+    margin: 0 auto 24px auto;
+    padding: 0 10px 24px 10px;
+  }
+}
+
+// The container which houses content
+.content-container {
+  width: 100%;
+  height: calc(100% - 75px);
+  overflow-y: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 75px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
