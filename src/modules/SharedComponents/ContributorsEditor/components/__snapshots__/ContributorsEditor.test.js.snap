@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
-<div
-  className="requiredField"
->
+<div>
   <Connect(ContributorForm)
     onAdd={[Function]}
     showContributorAssignment={false}

@@ -14,14 +14,14 @@ export class ContributorsEditor extends PureComponent {
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
-        className: PropTypes.string,
         disabled: PropTypes.bool,
         meta: PropTypes.object,
         author: PropTypes.object,
         onChange: PropTypes.func,
         locale: PropTypes.object,
         input: PropTypes.object,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -167,7 +167,7 @@ export class ContributorsEditor extends PureComponent {
         }
 
         return (
-            <div className={this.props.className}>
+            <div>
                 {
                     errorMessage &&
                     <Alert
@@ -181,6 +181,7 @@ export class ContributorsEditor extends PureComponent {
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     disabled={disabled}
                     showContributorAssignment={showContributorAssignment}
+                    required={this.props.required}
                 />
                 {
                     contributors.length > 0 &&

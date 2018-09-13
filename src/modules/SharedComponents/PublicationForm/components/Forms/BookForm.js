@@ -105,7 +105,7 @@ export default class BookForm extends Component {
                         name="authors"
                         locale={txt.authors.field}
                         showContributorAssignment={!editorSelected}
-                        className="requiredField"
+                        required
                         disabled={this.props.submitting} />
                 </StandardCard>
 
