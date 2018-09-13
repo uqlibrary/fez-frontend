@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationsList renders  renders component with items 1`] = `
-<div
-  className="publicationsList"
->
+<React.Fragment>
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
@@ -19558,11 +19556,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showSourceCountIcon={false}
     showSources={false}
   />
-</div>
+</React.Fragment>
 `;
 
-exports[`PublicationsList renders  renders empty component 1`] = `
-<div
-  className="publicationsList"
-/>
-`;
+exports[`PublicationsList renders  renders empty component 1`] = `<React.Fragment />`;
