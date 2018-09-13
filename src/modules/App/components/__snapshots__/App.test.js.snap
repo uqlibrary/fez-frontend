@@ -379,7 +379,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -989,7 +989,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -1440,7 +1440,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -1906,7 +1906,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -2494,7 +2494,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3019,7 +3019,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3607,7 +3607,7 @@ exports[`Application component should render application with routing for the us
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3858,7 +3858,7 @@ exports[`Application component should render for anon user 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -4115,7 +4115,7 @@ exports[`Application component should render thesis submission for HDR without m
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {

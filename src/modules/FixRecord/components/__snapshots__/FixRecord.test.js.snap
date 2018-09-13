@@ -444,8 +444,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         }
         when={true}
       />
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "cancelButtonLabel": "Go to my dashboard",
@@ -1478,8 +1477,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         }
         when={true}
       />
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "cancelButtonLabel": "Go to my dashboard",
@@ -2046,8 +2044,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         }
         when={true}
       />
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "cancelButtonLabel": "Go to my dashboard",
@@ -2605,8 +2602,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         title="WARNING"
         type="warning"
       />
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "cancelButtonLabel": "Go to my dashboard",
