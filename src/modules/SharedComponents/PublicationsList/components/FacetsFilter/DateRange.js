@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {ListItem} from 'material-ui/List';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
-
-import Grid from '@material-ui/core/Grid';
+import {Grid} from '@material-ui/core';
+import FacetFilterListItem from './FacetFilterListItem';
+import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
 export default class DateRange extends React.Component {
     static propTypes = {
@@ -17,7 +16,8 @@ export default class DateRange extends React.Component {
         open: PropTypes.bool,
         locale: PropTypes.object,
         itemClassName: PropTypes.string,
-        subitemClassName: PropTypes.string
+        subitemClassName: PropTypes.string,
+        onToggle: PropTypes.func.isRequired
     };
 
     static defaultProps = {
@@ -50,9 +50,10 @@ export default class DateRange extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({
+            ...this.state,
             from: nextProps.value.from || this.props.defaultValue.from,
             to: nextProps.value.to || this.props.defaultValue.to,
-            isActive: !!nextProps.value.from || !!nextProps.value.to
+            isActive: !!nextProps.value.from || !!nextProps.value.to,
         });
     }
 
@@ -72,34 +73,36 @@ export default class DateRange extends React.Component {
     };
 
     renderDateRangeForm = () => (
-        <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
-            <Grid item xs={4}>
-                <TextField
-                    type="number"
-                    label={this.props.locale.fromFieldLabel}
-                    value={this.state.from}
-                    onChange={this.setValue('from')}
-                    disabled={this.props.disabled}
-                    fullWidth/>
+        <div style={{padding: 8}}>
+            <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
+                <Grid item xs={4}>
+                    <TextField
+                        type="number"
+                        label={this.props.locale.fromFieldLabel}
+                        value={this.state.from}
+                        onChange={this.setValue('from')}
+                        disabled={this.props.disabled}
+                        fullWidth/>
+                </Grid>
+                <Grid item xs={4}>
+                    <TextField
+                        type="number"
+                        label={this.props.locale.toFieldLabel}
+                        value={this.state.to}
+                        onChange={this.setValue('to')}
+                        disabled={this.props.disabled}
+                        fullWidth/>
+                </Grid>
+                <Grid item>
+                    <Button
+                        variant="flat"
+                        children={this.props.locale.rangeSubmitButtonLabel}
+                        onClick={this.setDateRange}
+                        disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}
+                        fullWidth/>
+                </Grid>
             </Grid>
-            <Grid item xs={4}>
-                <TextField
-                    type="number"
-                    label={this.props.locale.toFieldLabel}
-                    value={this.state.to}
-                    onChange={this.setValue('to')}
-                    disabled={this.props.disabled}
-                    fullWidth/>
-            </Grid>
-            <Grid item>
-                <Button
-                    variant="flat"
-                    children={this.props.locale.rangeSubmitButtonLabel}
-                    onClick={this.setDateRange}
-                    disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}
-                    fullWidth/>
-            </Grid>
-        </Grid>
+        </div>
     );
 
     removeDateRange = () => {
@@ -112,30 +115,28 @@ export default class DateRange extends React.Component {
     getNestedItem = () => {
         const isActive = this.state.isActive;
         return (
-            <ListItem
-                key="dateRangeItem"
-                className={`${this.props.subitemClassName} ${(isActive ? 'active ' : '')} ${(this.props.disabled ? 'disabled' : '')}`}
-                primaryText={isActive ? `${this.state.from} - ${this.state.to}` : ''}
-                disabled={this.props.disabled}
-                onClick={this.removeDateRange}
-                leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}>
-                {
-                    !isActive && this.renderDateRangeForm()
-                }
-            </ListItem>
+            !isActive
+                ? this.renderDateRangeForm()
+                : <FacetFilterNestedListItem
+                    onFacetClick={this.removeDateRange}
+                    isActive={isActive}
+                    primaryText={`${this.state.from} - ${this.state.to}`}
+                    disabled={this.props.disabled}
+                />
         );
     }
 
     render() {
         const txt = this.props.locale;
         return (
-            <ListItem
-                open={this.props.open}
-                primaryText={txt.displayTitle}
+            <FacetFilterListItem
+                key="date-range"
+                facetTitle={txt.displayTitle}
                 disabled={this.props.disabled}
-                className={`${this.props.itemClassName} ${(this.state.isActive ? 'active ' : '')} ${(this.props.disabled ? 'disabled' : '')}`}
-                primaryTogglesNestedList
-                nestedItems={[this.getNestedItem()]} />
+                onToggle={this.props.onToggle}
+                nestedItems={this.getNestedItem()}
+                open={this.props.open}
+            />
         );
     }
 }

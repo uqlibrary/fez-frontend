@@ -2,15 +2,31 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import FlatButton from 'material-ui/RaisedButton';
-import {List, ListItem} from 'material-ui/List';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import {List, withStyles} from '@material-ui/core';
 
 import {publicationTypes, general} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
+import FacetFilterListItem from './FacetFilterListItem';
+import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-export default class FacetsFilter extends PureComponent {
+const styles = (theme) => ({
+    listItemGutters: {
+        paddingLeft: theme.spacing.unit,
+        paddingRight: theme.spacing.unit,
+    },
+    inset: {
+        '&:first-child': {
+            paddingLeft: theme.spacing.unit * 2
+        }
+    },
+    selectedFacet: {
+        color: theme.palette.accent.dark
+    }
+});
+
+export class FacetsFilter extends PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
@@ -21,6 +37,7 @@ export default class FacetsFilter extends PureComponent {
         disabled: PropTypes.bool,
         showOpenAccessFilter: PropTypes.bool,
         isMyDataSetPage: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -36,6 +53,7 @@ export default class FacetsFilter extends PureComponent {
         // always keep props/state in sync
         this.state = {
             activeFacets: props.activeFacets,
+            toggledFacets: {}
         };
     }
 
@@ -133,15 +151,15 @@ export default class FacetsFilter extends PureComponent {
     getNestedListItems = (facetCategory) => {
         return facetCategory.facets.map((item, index) => {
             const isActive = this.isFacetFilterActive(this.state.activeFacets, facetCategory.facetTitle, item.key);
-
             return (
-                <ListItem
+                <FacetFilterNestedListItem
                     key={index}
-                    className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
+                    index={index}
+                    onFacetClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
+                    isActive={isActive}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
                     disabled={this.props.disabled}
-                    leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
+                />
             );
         });
     };
@@ -208,8 +226,17 @@ export default class FacetsFilter extends PureComponent {
         }
     }
 
+    toggleFacet = (item) => () => {
+        this.setState({
+            toggledFacets: {
+                ...this.state.toggledFacets,
+                [item]: !this.state.toggledFacets[item]
+            }
+        });
+    };
+
     render() {
-        const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
+        const {yearPublishedCategory, yearPublishedFacet, resetButtonText, openAccessFilter} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList, this.props.lookupFacetsList);
         const hasActiveFilters = (this.areClientFiltersAvailable()
             || Object.keys(this.state.activeFacets.ranges).length > 0
@@ -217,19 +244,20 @@ export default class FacetsFilter extends PureComponent {
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
-                <List>
+                <List component="nav">
                     {
                         facetsToDisplay.map((item, index) => {
-                            const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
+                            // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
+                            const nestedItems = this.getNestedListItems(item);
                             return (
-                                <ListItem
-                                    primaryText={item.title}
-                                    {...(this.state.activeFacets.filters[item.facetTitle] ? {open: true} : {})}
+                                <FacetFilterListItem
+                                    key={`${index}`}
+                                    facetTitle={item.title}
                                     disabled={this.props.disabled}
-                                    className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
-                                    primaryTogglesNestedList
-                                    key={`key_facet_item_${index}`}
-                                    nestedItems={this.getNestedListItems(item)} />
+                                    onToggle={this.toggleFacet(item.facetTitle)}
+                                    nestedItems={nestedItems}
+                                    open={this.state.toggledFacets[item.facetTitle]}
+                                />
                             );
                         })
                     }
@@ -238,11 +266,12 @@ export default class FacetsFilter extends PureComponent {
                         <DateRange
                             itemClassName="dateRange facetsCategory"
                             subitemClassName="dateRange facetsLink"
-                            {...(this.state.activeFacets.ranges[yearPublishedCategory] ? {open: true} : {})}
                             value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
                             disabled={this.props.disabled}
                             onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
                             locale={yearPublishedFacet}
+                            onToggle={this.toggleFacet(yearPublishedCategory)}
+                            open={this.state.toggledFacets[yearPublishedCategory]}
                         />
                     }
                     {
@@ -250,10 +279,12 @@ export default class FacetsFilter extends PureComponent {
                         <OpenAccessFilter
                             itemClassName="facetsCategory openAccessOnly"
                             subitemClassName="facetsLink openAccessOnly"
-                            {...(!!this.state.activeFacets.showOpenAccessOnly ? {open: true} : {})}
-                            value={this.state.activeFacets.showOpenAccessOnly}
+                            isActive={this.state.activeFacets.showOpenAccessOnly}
                             disabled={this.props.disabled}
+                            locale={openAccessFilter}
                             onChange={this._handleOpenAccessFilter}
+                            onToggle={this.toggleFacet(openAccessFilter.displayTitle)}
+                            open={this.state.toggledFacets[openAccessFilter.displayTitle]}
                         />
                     }
                 </List>
@@ -274,3 +305,5 @@ export default class FacetsFilter extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles)(FacetsFilter);
