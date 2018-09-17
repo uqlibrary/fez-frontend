@@ -1,8 +1,9 @@
 // Rainbow count difference values
 .publicationsList {
+
   @for $i from 1 through 20 {
-    div.publicationCitation:nth-of-type(#{$i}) {
-      span.trendingPubsDifference {
+    div:nth-of-type(#{$i}) {
+      .citationMetrics, .citationMetrics a {
         color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
       }
     }

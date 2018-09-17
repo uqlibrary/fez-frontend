@@ -10,7 +10,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -989,8 +989,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -1130,7 +1129,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -1809,8 +1808,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -2021,7 +2019,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -2985,8 +2983,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -3164,7 +3161,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -3836,8 +3833,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -4010,7 +4006,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -5077,8 +5073,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -5361,7 +5356,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -6428,8 +6423,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -6712,7 +6706,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -7779,8 +7773,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -8063,7 +8056,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -9130,8 +9123,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -9414,7 +9406,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -10439,7 +10431,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -11506,8 +11498,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -11795,7 +11786,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -12862,8 +12853,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -13146,7 +13136,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -14213,8 +14203,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -14504,7 +14493,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -15571,8 +15560,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -15860,7 +15848,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -16927,8 +16915,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -17217,7 +17204,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -18284,8 +18271,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -18585,7 +18571,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <StandardCard
       title="You are claiming to be an author for the following item:"
     >
-      <withRouter(Connect(PublicationCitation))
+      <withRouter(Connect(WithStyles(PublicationCitation)))
         publication={
           Object {
             "rek_pid": null,
@@ -18594,8 +18580,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       />
     </StandardCard>
     <React.Fragment>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",

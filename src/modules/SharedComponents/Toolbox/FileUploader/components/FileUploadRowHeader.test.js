@@ -53,7 +53,7 @@ describe('Component FileUploadRowHeader', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render confirmation on delete all', () => {
+    it.skip('should render confirmation on delete all', () => {
         const props = {
             requireOpenAccessStatus: true,
             onDeleteAll: jest.fn(),

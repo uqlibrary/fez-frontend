@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EditorsCitationView test  should render component with no contributors 1`] = `
-<AuthorsCitationView
+<WithStyles(AuthorsCitationView)
   className="citationEditors"
   getLink={[Function]}
   idSearchKey={
@@ -24,12 +24,11 @@ exports[`EditorsCitationView test  should render component with no contributors 
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;
 
 exports[`EditorsCitationView test  should render component with one contributor 1`] = `
-<AuthorsCitationView
+<WithStyles(AuthorsCitationView)
   className="citationEditors"
   getLink={[Function]}
   idSearchKey={
@@ -63,12 +62,11 @@ exports[`EditorsCitationView test  should render component with one contributor 
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;
 
 exports[`EditorsCitationView test  should render component with three contributors 1`] = `
-<AuthorsCitationView
+<WithStyles(AuthorsCitationView)
   className="citationEditors"
   getLink={[Function]}
   idSearchKey={
@@ -114,12 +112,11 @@ exports[`EditorsCitationView test  should render component with three contributo
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;
 
 exports[`EditorsCitationView test  should render component with two contributors 1`] = `
-<AuthorsCitationView
+<WithStyles(AuthorsCitationView)
   className="citationEditors"
   getLink={[Function]}
   idSearchKey={
@@ -159,6 +156,5 @@ exports[`EditorsCitationView test  should render component with two contributors
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;

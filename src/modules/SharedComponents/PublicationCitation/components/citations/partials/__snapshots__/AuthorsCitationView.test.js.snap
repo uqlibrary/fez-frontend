@@ -52,60 +52,342 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
+              },
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
+              },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
         >
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_1"
-            prefix=""
-            suffix=""
-            value="Pedroso, Marcelo Monteiro"
+          <span
+            className=""
           >
-            <span
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_1"
+              prefix=""
+              suffix=""
+              value="Pedroso, Marcelo Monteiro"
             >
-              Pedroso, Marcelo Monteiro
-            </span>
-          </CitationView>
-           
-        </span>
-      </AuthorsCitationView>
+              <span
+                className="citationAuthor"
+              >
+                Pedroso, Marcelo Monteiro
+              </span>
+            </CitationView>
+             
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -163,80 +445,362 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
+              },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
         >
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_1"
-            prefix=""
-            suffix=""
-            value="Pedroso, Marcelo Monteiro"
+          <span
+            className=""
           >
-            <span
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_1"
+              prefix=""
+              suffix=""
+              value="Pedroso, Marcelo Monteiro"
             >
-              Pedroso, Marcelo Monteiro
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_2"
-            prefix=" and "
-            suffix=""
-            value="Smith, J"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Pedroso, Marcelo Monteiro
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_2"
+              prefix=" and "
+              suffix=""
+              value="Smith, J"
             >
-               and 
-              Smith, J
-            </span>
-          </CitationView>
-           
-        </span>
-      </AuthorsCitationView>
+              <span
+                className="citationAuthor"
+              >
+                 and 
+                Smith, J
+              </span>
+            </CitationView>
+             
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -294,118 +858,396 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
+              },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
-            "fez_record_search_key_author_id": Array [
-              Object {
-                "rek_author_id": 1,
-                "rek_author_id_id": null,
-                "rek_author_id_order": 1,
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
               },
-              Object {
-                "rek_author_id": 2,
-                "rek_author_id_id": null,
-                "rek_author_id_order": 2,
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
               },
-            ],
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={true}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+              "fez_record_search_key_author_id": Array [
+                Object {
+                  "rek_author_id": 1,
+                  "rek_author_id_id": null,
+                  "rek_author_id_order": 1,
+                },
+                Object {
+                  "rek_author_id": 2,
+                  "rek_author_id_id": null,
+                  "rek_author_id_order": 2,
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={true}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
         >
-          <Link
-            className="authorIdLink"
-            key="citationAuthor_1"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+          <span
+            className=""
           >
-            <a
-              className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
-              onClick={[Function]}
+            <Link
+              key="citationAuthor_1"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_1"
-                prefix=""
-                suffix=""
-                value="Pedroso, Marcelo Monteiro"
+              <a
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_1"
+                  prefix=""
+                  suffix=""
+                  value="Pedroso, Marcelo Monteiro"
                 >
-                  Pedroso, Marcelo Monteiro
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-          <Link
-            className="authorIdLink"
-            key="citationAuthor_2"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
-          >
-            <a
-              className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
-              onClick={[Function]}
+                  <span
+                    className="citationAuthor"
+                  >
+                    Pedroso, Marcelo Monteiro
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+            <Link
+              key="citationAuthor_2"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_2"
-                prefix=", "
-                suffix=""
-                value="Smith, J"
+              <a
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_2"
+                  prefix=", "
+                  suffix=""
+                  value="Smith, J"
                 >
-                  , 
-                  Smith, J
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-           
-        </span>
-      </AuthorsCitationView>
+                  <span
+                    className="citationAuthor"
+                  >
+                    , 
+                    Smith, J
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+             
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -463,106 +1305,388 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
+              },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={true}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={true}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
         >
-          <Link
-            className="authorNameLink"
-            key="citationAuthor_1"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+          <span
+            className=""
           >
-            <a
+            <Link
               className="authorNameLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
-              onClick={[Function]}
+              key="citationAuthor_1"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_1"
-                prefix=""
-                suffix=""
-                value="Pedroso, Marcelo Monteiro"
+              <a
+                className="authorNameLink"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_1"
+                  prefix=""
+                  suffix=""
+                  value="Pedroso, Marcelo Monteiro"
                 >
-                  Pedroso, Marcelo Monteiro
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-          <Link
-            className="authorNameLink"
-            key="citationAuthor_2"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
-          >
-            <a
+                  <span
+                    className="citationAuthor"
+                  >
+                    Pedroso, Marcelo Monteiro
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+            <Link
               className="authorNameLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
-              onClick={[Function]}
+              key="citationAuthor_2"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_2"
-                prefix=", "
-                suffix=""
-                value="Smith, J"
+              <a
+                className="authorNameLink"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_2"
+                  prefix=", "
+                  suffix=""
+                  value="Smith, J"
                 >
-                  , 
-                  Smith, J
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-           
-        </span>
-      </AuthorsCitationView>
+                  <span
+                    className="citationAuthor"
+                  >
+                    , 
+                    Smith, J
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+             
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -620,100 +1744,382 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
-              Object {
-                "rek_author": "Andersen, J",
-                "rek_author_id": null,
-                "rek_author_order": 3,
-                "rek_author_pid": "UQ:678742",
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
               },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Andersen, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 3,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
         >
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_1"
-            prefix=""
-            suffix=", "
-            value="Pedroso, Marcelo Monteiro"
+          <span
+            className=""
           >
-            <span
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_1"
+              prefix=""
+              suffix=", "
+              value="Pedroso, Marcelo Monteiro"
             >
-              Pedroso, Marcelo Monteiro
-              , 
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_2"
-            prefix=""
-            suffix=""
-            value="Smith, J"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Pedroso, Marcelo Monteiro
+                , 
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_2"
+              prefix=""
+              suffix=""
+              value="Smith, J"
             >
-              Smith, J
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_3"
-            prefix=" and "
-            suffix=""
-            value="Andersen, J"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Smith, J
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_3"
+              prefix=" and "
+              suffix=""
+              value="Andersen, J"
             >
-               and 
-              Andersen, J
-            </span>
-          </CitationView>
-           
-        </span>
-      </AuthorsCitationView>
+              <span
+                className="citationAuthor"
+              >
+                 and 
+                Andersen, J
+              </span>
+            </CitationView>
+             
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -771,156 +2177,432 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 3,
-                "rek_author_pid": "UQ:678742",
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
               },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
-            "fez_record_search_key_author_id": Array [
-              Object {
-                "rek_author_id": 1,
-                "rek_author_id_id": null,
-                "rek_author_id_order": 1,
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
               },
-              Object {
-                "rek_author_id": 2,
-                "rek_author_id_id": null,
-                "rek_author_id_order": 2,
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
               },
-              Object {
-                "rek_author_id": 3,
-                "rek_author_id_id": null,
-                "rek_author_id_order": 3,
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
               },
-            ],
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={true}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 3,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+              "fez_record_search_key_author_id": Array [
+                Object {
+                  "rek_author_id": 1,
+                  "rek_author_id_id": null,
+                  "rek_author_id_order": 1,
+                },
+                Object {
+                  "rek_author_id": 2,
+                  "rek_author_id_id": null,
+                  "rek_author_id_order": 2,
+                },
+                Object {
+                  "rek_author_id": 3,
+                  "rek_author_id_id": null,
+                  "rek_author_id_order": 3,
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={true}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
         >
-          <Link
-            className="authorIdLink"
-            key="citationAuthor_1"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+          <span
+            className=""
           >
-            <a
-              className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
-              onClick={[Function]}
+            <Link
+              key="citationAuthor_1"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_1"
-                prefix=""
-                suffix=", "
-                value="Pedroso, Marcelo Monteiro"
+              <a
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_1"
+                  prefix=""
+                  suffix=", "
+                  value="Pedroso, Marcelo Monteiro"
                 >
-                  Pedroso, Marcelo Monteiro
-                  , 
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-          <Link
-            className="authorIdLink"
-            key="citationAuthor_2"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
-          >
-            <a
-              className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
-              onClick={[Function]}
+                  <span
+                    className="citationAuthor"
+                  >
+                    Pedroso, Marcelo Monteiro
+                    , 
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+            <Link
+              key="citationAuthor_2"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_2"
-                prefix=""
-                suffix=""
-                value="Smith, J"
+              <a
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_2"
+                  prefix=""
+                  suffix=""
+                  value="Smith, J"
                 >
-                  Smith, J
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-          <Link
-            className="authorIdLink"
-            key="citationAuthor_3"
-            replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
-          >
-            <a
-              className="authorIdLink"
-              href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
-              onClick={[Function]}
+                  <span
+                    className="citationAuthor"
+                  >
+                    Smith, J
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+            <Link
+              key="citationAuthor_3"
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
             >
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_3"
-                prefix=", "
-                suffix=""
-                value="Smith, J"
+              <a
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
+                onClick={[Function]}
               >
-                <span
+                <CitationView
                   className="citationAuthor"
+                  key="citationAuthor_3"
+                  prefix=", "
+                  suffix=""
+                  value="Smith, J"
                 >
-                  , 
-                  Smith, J
-                </span>
-              </CitationView>
-            </a>
-          </Link>
-           
-        </span>
-      </AuthorsCitationView>
+                  <span
+                    className="citationAuthor"
+                  >
+                    , 
+                    Smith, J
+                  </span>
+                </CitationView>
+              </a>
+            </Link>
+             
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -978,102 +2660,384 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        prefix="Authored by: "
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
-              Object {
-                "rek_author": "Andersen, J",
-                "rek_author_id": null,
-                "rek_author_order": 3,
-                "rek_author_pid": "UQ:678742",
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
               },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" people."
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          prefix="Authored by: "
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Andersen, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 3,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" people."
+          thresholdNumberOfAuthors={3}
         >
-          Authored by: 
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_1"
-            prefix=""
-            suffix=", "
-            value="Pedroso, Marcelo Monteiro"
+          <span
+            className=""
           >
-            <span
+            Authored by: 
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_1"
+              prefix=""
+              suffix=", "
+              value="Pedroso, Marcelo Monteiro"
             >
-              Pedroso, Marcelo Monteiro
-              , 
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_2"
-            prefix=""
-            suffix=""
-            value="Smith, J"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Pedroso, Marcelo Monteiro
+                , 
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_2"
+              prefix=""
+              suffix=""
+              value="Smith, J"
             >
-              Smith, J
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_3"
-            prefix=" and "
-            suffix=""
-            value="Andersen, J"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Smith, J
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_3"
+              prefix=" and "
+              suffix=""
+              value="Andersen, J"
             >
-               and 
-              Andersen, J
-            </span>
-          </CitationView>
-           people.
-        </span>
-      </AuthorsCitationView>
+              <span
+                className="citationAuthor"
+              >
+                 and 
+                Andersen, J
+              </span>
+            </CitationView>
+             people.
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1131,102 +3095,384 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
-          }
-        }
-        initialNumberOfAuthors={10}
-        prefix="Authored by: "
-        publication={
-          Object {
-            "fez_record_search_key_author": Array [
-              Object {
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_id": null,
-                "rek_author_order": 3,
-                "rek_author_pid": "UQ:678742",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
               },
-              Object {
-                "rek_author": "Smith, J",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:678742",
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
               },
-              Object {
-                "rek_author": "Andersen, J",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:678742",
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
               },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
             ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" people."
-        thresholdNumberOfAuthors={3}
       >
-        <span
+        <AuthorsCitationView
           className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          prefix="Authored by: "
+          publication={
+            Object {
+              "fez_record_search_key_author": Array [
+                Object {
+                  "rek_author": "Pedroso, Marcelo Monteiro",
+                  "rek_author_id": null,
+                  "rek_author_order": 3,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Smith, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 1,
+                  "rek_author_pid": "UQ:678742",
+                },
+                Object {
+                  "rek_author": "Andersen, J",
+                  "rek_author_id": null,
+                  "rek_author_order": 2,
+                  "rek_author_pid": "UQ:678742",
+                },
+              ],
+            }
+          }
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" people."
+          thresholdNumberOfAuthors={3}
         >
-          Authored by: 
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_1"
-            prefix=""
-            suffix=", "
-            value="Smith, J"
+          <span
+            className=""
           >
-            <span
+            Authored by: 
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_1"
+              prefix=""
+              suffix=", "
+              value="Smith, J"
             >
-              Smith, J
-              , 
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_2"
-            prefix=""
-            suffix=""
-            value="Andersen, J"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Smith, J
+                , 
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_2"
+              prefix=""
+              suffix=""
+              value="Andersen, J"
             >
-              Andersen, J
-            </span>
-          </CitationView>
-          <CitationView
-            className="citationAuthor"
-            key="citationAuthor_3"
-            prefix=" and "
-            suffix=""
-            value="Pedroso, Marcelo Monteiro"
-          >
-            <span
+              <span
+                className="citationAuthor"
+              >
+                Andersen, J
+              </span>
+            </CitationView>
+            <CitationView
               className="citationAuthor"
+              key="citationAuthor_3"
+              prefix=" and "
+              suffix=""
+              value="Pedroso, Marcelo Monteiro"
             >
-               and 
-              Pedroso, Marcelo Monteiro
-            </span>
-          </CitationView>
-           people.
-        </span>
-      </AuthorsCitationView>
+              <span
+                className="citationAuthor"
+              >
+                 and 
+                Pedroso, Marcelo Monteiro
+              </span>
+            </CitationView>
+             people.
+          </span>
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1636,34 +3882,316 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
         }
       }
     >
-      <AuthorsCitationView
-        className=""
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
+              },
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
+              },
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
+              },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+            ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        initialNumberOfAuthors={10}
-        publication={Object {}}
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
-          className=" empty"
-        />
-      </AuthorsCitationView>
+        <AuthorsCitationView
+          className=""
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={Object {}}
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
+        >
+          <span
+            className=" empty"
+          />
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1721,34 +4249,316 @@ exports[`AuthorsCitationView test  should set class on component with no authors
         }
       }
     >
-      <AuthorsCitationView
-        className="myClass"
-        getLink={[Function]}
-        idSearchKey={
+      <MuiThemeProvider
+        theme={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
+            "breakpoints": Object {
+              "between": [Function],
+              "down": [Function],
+              "keys": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+              "only": [Function],
+              "up": [Function],
+              "values": Object {
+                "lg": 1280,
+                "md": 960,
+                "sm": 600,
+                "xl": 1920,
+                "xs": 0,
+              },
+              "width": [Function],
+            },
+            "direction": "ltr",
+            "hexToRGBA": [Function],
+            "mixins": Object {
+              "gutters": [Function],
+              "toolbar": Object {
+                "@media (min-width:0px) and (orientation: landscape)": Object {
+                  "minHeight": 48,
+                },
+                "@media (min-width:600px)": Object {
+                  "minHeight": 64,
+                },
+                "minHeight": 56,
+              },
+            },
+            "overrides": Object {},
+            "palette": Object {
+              "accent": Object {
+                "dark": "#005EA5",
+                "light": "#288BED",
+                "main": "#2377CB",
+              },
+              "action": Object {
+                "active": "rgba(0, 0, 0, 0.54)",
+                "disabled": "rgba(0, 0, 0, 0.26)",
+                "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                "hover": "rgba(0, 0, 0, 0.08)",
+                "hoverOpacity": 0.08,
+                "selected": "rgba(0, 0, 0, 0.14)",
+              },
+              "augmentColor": [Function],
+              "background": Object {
+                "default": "#fafafa",
+                "paper": "#fff",
+              },
+              "common": Object {
+                "black": "#000",
+                "white": "#fff",
+              },
+              "contrastThreshold": 3,
+              "divider": "rgba(0, 0, 0, 0.12)",
+              "error": Object {
+                "contrastText": "#fff",
+                "dark": "#790000",
+                "light": "#ff0000",
+                "main": "#c80000",
+              },
+              "getContrastText": [Function],
+              "grey": Object {
+                "100": "#f5f5f5",
+                "200": "#eeeeee",
+                "300": "#e0e0e0",
+                "400": "#bdbdbd",
+                "50": "#fafafa",
+                "500": "#9e9e9e",
+                "600": "#757575",
+                "700": "#616161",
+                "800": "#424242",
+                "900": "#212121",
+                "A100": "#d5d5d5",
+                "A200": "#aaaaaa",
+                "A400": "#303030",
+                "A700": "#616161",
+              },
+              "primary": Object {
+                "contrastText": "#fff",
+                "dark": "#370546",
+                "light": "#760d98",
+                "main": "#49075E",
+              },
+              "secondary": Object {
+                "contrastText": "#fff",
+                "dark": "#333333",
+                "light": "#f2f2f2",
+                "main": "#595959",
+              },
+              "success": Object {
+                "dark": "#005000",
+                "light": "#00a700",
+                "main": "#007200",
+              },
+              "text": Object {
+                "disabled": "rgba(0, 0, 0, 0.38)",
+                "hint": "rgba(0, 0, 0, 0.38)",
+                "primary": "rgba(0, 0, 0, 0.87)",
+                "secondary": "rgba(0, 0, 0, 0.54)",
+              },
+              "tonalOffset": 0.2,
+              "type": "light",
+              "warning": Object {
+                "dark": "#994708",
+                "light": "#ff9a57",
+                "main": "#f06f0d",
+              },
+              "white": Object {
+                "main": "#FFFFFF",
+              },
+            },
+            "props": Object {},
+            "shadows": Array [
+              "none",
+              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
+              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
+              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
+              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
+              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
+              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
+              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
+              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
+              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
+              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
+              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
+              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
+              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
+              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
+              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
+              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
+              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+            ],
+            "shape": Object {
+              "borderRadius": 4,
+            },
+            "spacing": Object {
+              "unit": 8,
+            },
+            "status": Object {
+              "danger": "#f44336",
+              "warning": "#ff9800",
+            },
+            "transitions": Object {
+              "create": [Function],
+              "duration": Object {
+                "complex": 375,
+                "enteringScreen": 225,
+                "leavingScreen": 195,
+                "short": 250,
+                "shorter": 200,
+                "shortest": 150,
+                "standard": 300,
+              },
+              "easing": Object {
+                "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+              },
+              "getAutoHeightDuration": [Function],
+            },
+            "typography": Object {
+              "body1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "lineHeight": "1.46429em",
+              },
+              "body2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "lineHeight": "1.71429em",
+              },
+              "button": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "textTransform": "uppercase",
+              },
+              "caption": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "lineHeight": "1.375em",
+              },
+              "display1": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.20588em",
+              },
+              "display2": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.8125rem",
+                "fontWeight": 300,
+                "lineHeight": "1.13333em",
+                "marginLeft": "-.02em",
+              },
+              "display3": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "-.02em",
+                "lineHeight": "1.30357em",
+                "marginLeft": "-.02em",
+              },
+              "display4": Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "7rem",
+                "fontWeight": 200,
+                "letterSpacing": "-.04em",
+                "lineHeight": "1.14286em",
+                "marginLeft": "-.04em",
+              },
+              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+              "fontSize": 14,
+              "fontWeightLight": 200,
+              "fontWeightMedium": 400,
+              "fontWeightRegular": 300,
+              "headline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.35417em",
+              },
+              "pxToRem": [Function],
+              "round": [Function],
+              "subheading": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "lineHeight": "1.5em",
+              },
+              "title": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "lineHeight": "1.16667em",
+              },
+            },
+            "zIndex": Object {
+              "appBar": 1100,
+              "drawer": 1200,
+              "mobileStepper": 1000,
+              "modal": 1300,
+              "snackbar": 1400,
+              "tooltip": 1500,
+            },
           }
         }
-        initialNumberOfAuthors={10}
-        publication={Object {}}
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_author",
-            "order": "rek_author_order",
-            "subkey": "rek_author",
-          }
-        }
-        separator=", "
-        showLink={false}
-        suffix=" "
-        thresholdNumberOfAuthors={3}
       >
-        <span
-          className="myClass empty"
-        />
-      </AuthorsCitationView>
+        <AuthorsCitationView
+          className="myClass"
+          classes={Object {}}
+          getLink={[Function]}
+          idSearchKey={
+            Object {
+              "idKey": "fez_record_search_key_author_id",
+              "idOrder": "rek_author_id_order",
+              "idSubkey": "rek_author_id",
+            }
+          }
+          initialNumberOfAuthors={10}
+          publication={Object {}}
+          searchKey={
+            Object {
+              "key": "fez_record_search_key_author",
+              "order": "rek_author_order",
+              "subkey": "rek_author",
+            }
+          }
+          separator=", "
+          showLink={false}
+          suffix=" "
+          thresholdNumberOfAuthors={3}
+        >
+          <span
+            className="myClass empty"
+          />
+        </AuthorsCitationView>
+      </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>

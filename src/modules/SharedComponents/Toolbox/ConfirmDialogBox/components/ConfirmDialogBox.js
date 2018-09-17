@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Dialog from 'material-ui/Dialog';
-import RaisedButton from 'material-ui/RaisedButton';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogContent from '@material-ui/core/DialogContent';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class ConfirmDialogBox extends Component {
+const styles = {};
+
+export class ConfirmDialogBox extends Component {
     static propTypes = {
         locale: PropTypes.object,
         onAction: PropTypes.func,
@@ -67,40 +74,31 @@ export default class ConfirmDialogBox extends Component {
     }
 
     render() {
-        const actions = [
-            <div className="columns dialog-actions ConfirmDialogBox-actions">
-                <div className="column is-hidden-mobile"/>
-                {
-                    !this.props.hideCancelButton &&
-                    <div className="column is-narrow">
-                        <RaisedButton
-                            label={this.props.locale.cancelButtonLabel}
-                            fullWidth
-                            className="ConfirmDialogBox-actions-cancel"
-                            onClick={this._onCancelAction}/>
-                    </div>
-                }
-                <div className="column is-narrow">
-                    <RaisedButton
-                        label={this.props.locale.confirmButtonLabel}
-                        fullWidth
-                        className="ConfirmDialogBox-actions-confirm"
-                        secondary
-                        keyboardFocused
-                        onClick={this._onAction}/>
-                </div>
-                <div className="is-clearfix"/>
-            </div>
-        ];
-
+        // const {classes} = this.props;
         return (
-            <Dialog
-                title={this.props.locale.confirmationTitle}
-                actions={actions}
-                modal
-                open={this.state.isDialogOpen}>
-                {this.props.locale.confirmationMessage}
+            <Dialog style={{padding: 6}} open={this.state.isDialogOpen}>
+                <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        children={this.props.locale.confirmButtonLabel}
+                        autoFocus
+                        color={'primary'}
+                        onClick={this._onAction}/>
+                    {
+                        !this.props.hideCancelButton &&
+                        <Button
+                            variant={'raised'}
+                            color={'primary'}
+                            children={this.props.locale.cancelButtonLabel}
+                            onClick={this._onCancelAction}/>
+                    }
+                </DialogActions>
             </Dialog>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(ConfirmDialogBox);

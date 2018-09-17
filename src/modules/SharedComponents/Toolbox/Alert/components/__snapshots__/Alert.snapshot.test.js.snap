@@ -39,34 +39,8 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
           </b>
           This is the message
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={true}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
-    />
   </WithStyles(Grid)>
 </div>
 `;
@@ -112,19 +86,6 @@ exports[`Alert snapshots test renders Alert of error type should render action b
           <b />
           Unexpected error
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={true}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -142,19 +103,6 @@ exports[`Alert snapshots test renders Alert of error type should render action b
         Do something
       </WithStyles(Button)>
     </WithStyles(Grid)>
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
-    />
   </WithStyles(Grid)>
 </div>
 `;
