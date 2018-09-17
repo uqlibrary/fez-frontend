@@ -1,19 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search record results should render a single claimable item with no authors on the record (record should appear in publicationsList prop) 1`] = `
-<div
-  className="columns searchWrapper"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column is-hidden-desktop is-hidden-tablet mobileWrapper"
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
   >
-    <PublicationListLoadingProgress
-      loadingPublicationSources={Object {}}
-      mobile={true}
-    />
-  </div>
-  <div
-    className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <PublicationListLoadingProgress
+        loadingPublicationSources={Object {}}
+        mobile={true}
+      />
+    </WithStyles(Grid)>
+  </Hidden>
+  <WithStyles(Grid)
+    item={true}
+    md={9}
+    sm={8}
   >
     <StandardCard
       resultsText="Top [noOfResults] potential match(es) displayed for \\"[searchQuery]\\"."
@@ -367,70 +385,105 @@ exports[`Search record results should render a single claimable item with no aut
         }
       />
     </StandardCard>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
       />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
           fullWidth={true}
-          label="Abandon and search again"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="contained"
+        >
+          Abandon and search again
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          autoFocus={false}
-          disabled={false}
+        <WithStyles(Button)
+          color="secondary"
           fullWidth={true}
-          keyboardFocused={false}
-          label="Create a new eSpace record"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="column is-3-desktop is-4-tablet is-hidden-mobile"
+          variant="contained"
+        >
+          Create a new eSpace record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={false}
+    xlDown={false}
+    xlUp={false}
+    xsDown={true}
+    xsUp={false}
   >
-    <StandardRighthandCard
-      title="Repository search"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
     >
-      <PublicationListLoadingProgress
-        loadingPublicationSources={Object {}}
-      />
-    </StandardRighthandCard>
-  </div>
-</div>
+      <StandardRighthandCard
+        title="Repository search"
+      >
+        <PublicationListLoadingProgress
+          loadingPublicationSources={Object {}}
+        />
+      </StandardRighthandCard>
+    </WithStyles(Grid)>
+  </Hidden>
+</WithStyles(Grid)>
 `;
 
 exports[`Search record results should render a single unclaimable item with no authors on the record (record should appear in publicationsListSubset prop) 1`] = `
-<div
-  className="columns searchWrapper"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column is-hidden-desktop is-hidden-tablet mobileWrapper"
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
   >
-    <PublicationListLoadingProgress
-      loadingPublicationSources={Object {}}
-      mobile={true}
-    />
-  </div>
-  <div
-    className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <PublicationListLoadingProgress
+        loadingPublicationSources={Object {}}
+        mobile={true}
+      />
+    </WithStyles(Grid)>
+  </Hidden>
+  <WithStyles(Grid)
+    item={true}
+    md={9}
+    sm={8}
   >
     <StandardCard
       resultsText="Top [noOfResults] potential match(es) displayed for \\"[searchQuery]\\"."
@@ -557,70 +610,105 @@ exports[`Search record results should render a single unclaimable item with no a
         }
       />
     </StandardCard>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
       />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
           fullWidth={true}
-          label="Abandon and search again"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="contained"
+        >
+          Abandon and search again
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          autoFocus={false}
-          disabled={false}
+        <WithStyles(Button)
+          color="secondary"
           fullWidth={true}
-          keyboardFocused={false}
-          label="Create a new eSpace record"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="column is-3-desktop is-4-tablet is-hidden-mobile"
+          variant="contained"
+        >
+          Create a new eSpace record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={false}
+    xlDown={false}
+    xlUp={false}
+    xsDown={true}
+    xsUp={false}
   >
-    <StandardRighthandCard
-      title="Repository search"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
     >
-      <PublicationListLoadingProgress
-        loadingPublicationSources={Object {}}
-      />
-    </StandardRighthandCard>
-  </div>
-</div>
+      <StandardRighthandCard
+        title="Repository search"
+      >
+        <PublicationListLoadingProgress
+          loadingPublicationSources={Object {}}
+        />
+      </StandardRighthandCard>
+    </WithStyles(Grid)>
+  </Hidden>
+</WithStyles(Grid)>
 `;
 
 exports[`Search record results should render publications list with one publication to be able to claim (record should not appear in publicationsListSubset prop) 1`] = `
-<div
-  className="columns searchWrapper"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column is-hidden-desktop is-hidden-tablet mobileWrapper"
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
   >
-    <PublicationListLoadingProgress
-      loadingPublicationSources={Object {}}
-      mobile={true}
-    />
-  </div>
-  <div
-    className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <PublicationListLoadingProgress
+        loadingPublicationSources={Object {}}
+        mobile={true}
+      />
+    </WithStyles(Grid)>
+  </Hidden>
+  <WithStyles(Grid)
+    item={true}
+    md={9}
+    sm={8}
   >
     <StandardCard
       resultsText="Top [noOfResults] potential match(es) displayed for \\"[searchQuery]\\"."
@@ -727,70 +815,105 @@ exports[`Search record results should render publications list with one publicat
         }
       />
     </StandardCard>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
       />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
           fullWidth={true}
-          label="Abandon and search again"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="contained"
+        >
+          Abandon and search again
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          autoFocus={false}
-          disabled={false}
+        <WithStyles(Button)
+          color="secondary"
           fullWidth={true}
-          keyboardFocused={false}
-          label="Create a new eSpace record"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="column is-3-desktop is-4-tablet is-hidden-mobile"
+          variant="contained"
+        >
+          Create a new eSpace record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={false}
+    xlDown={false}
+    xlUp={false}
+    xsDown={true}
+    xsUp={false}
   >
-    <StandardRighthandCard
-      title="Repository search"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
     >
-      <PublicationListLoadingProgress
-        loadingPublicationSources={Object {}}
-      />
-    </StandardRighthandCard>
-  </div>
-</div>
+      <StandardRighthandCard
+        title="Repository search"
+      >
+        <PublicationListLoadingProgress
+          loadingPublicationSources={Object {}}
+        />
+      </StandardRighthandCard>
+    </WithStyles(Grid)>
+  </Hidden>
+</WithStyles(Grid)>
 `;
 
 exports[`Search record results should render stepper and no results 1`] = `
-<div
-  className="columns searchWrapper"
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
 >
-  <div
-    className="column is-hidden-desktop is-hidden-tablet mobileWrapper"
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
   >
-    <PublicationListLoadingProgress
-      loadingPublicationSources={Object {}}
-      mobile={true}
-    />
-  </div>
-  <div
-    className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <PublicationListLoadingProgress
+        loadingPublicationSources={Object {}}
+        mobile={true}
+      />
+    </WithStyles(Grid)>
+  </Hidden>
+  <WithStyles(Grid)
+    item={true}
+    md={9}
+    sm={8}
   >
     <StandardCard
       text="We were unable to match any results to your search criteria. Please search again or create a new eSpace record."
@@ -798,52 +921,69 @@ exports[`Search record results should render stepper and no results 1`] = `
     >
       We were unable to match any results to your search criteria. Please search again or create a new eSpace record.
     </StandardCard>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
       />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
           fullWidth={true}
-          label="Abandon and search again"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </div>
-      <div
-        className="column is-narrow-desktop"
+          variant="contained"
+        >
+          Abandon and search again
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          autoFocus={true}
-          disabled={false}
+        <WithStyles(Button)
+          color="secondary"
           fullWidth={true}
-          keyboardFocused={true}
-          label="Create a new eSpace record"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="column is-3-desktop is-4-tablet is-hidden-mobile"
+          variant="contained"
+        >
+          Create a new eSpace record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={false}
+    xlDown={false}
+    xlUp={false}
+    xsDown={true}
+    xsUp={false}
   >
-    <StandardRighthandCard
-      title="Repository search"
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
     >
-      <PublicationListLoadingProgress
-        loadingPublicationSources={Object {}}
-      />
-    </StandardRighthandCard>
-  </div>
-</div>
+      <StandardRighthandCard
+        title="Repository search"
+      >
+        <PublicationListLoadingProgress
+          loadingPublicationSources={Object {}}
+        />
+      </StandardRighthandCard>
+    </WithStyles(Grid)>
+  </Hidden>
+</WithStyles(Grid)>
 `;

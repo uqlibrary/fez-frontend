@@ -1,10 +1,11 @@
 import React, {PureComponent} from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {Grid, Hidden, Button} from '@material-ui/core';
 
 // forms & custom components
 import Async from 'modules/SharedComponents/Async';
@@ -37,6 +38,12 @@ export default class RecordsSearchResults extends PureComponent {
         publicationsList: [],
         loadingPublicationSources: {}
     };
+
+    componentWillReceiveProps(nextProps) {
+        if (this.showNewRecordButton && nextProps.publicationsList.length === 0) {
+            ReactDOM.findDOMNode(this.showNewRecordButton).focus();
+        }
+    }
 
     _showNewRecordForm = () => {
         this.props.history.push(pathConfig.records.add.new);
@@ -113,18 +120,18 @@ export default class RecordsSearchResults extends PureComponent {
         ];
 
         return (
-            <div className="columns searchWrapper">
-                {/* Mobile search dashboard (progress bar) */}
-                <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
-                    <PublicationListLoadingProgress
-                        mobile
-                        loadingPublicationSources={this.props.loadingPublicationSources} />
-                </div>
-                {/* Search results */}
-                <div className="column">
+            <Grid container spacing={16}>
+                <Hidden smUp>
+                    <Grid item xs>
+                        <PublicationListLoadingProgress
+                            mobile
+                            loadingPublicationSources={this.props.loadingPublicationSources} />
+                    </Grid>
+                </Hidden>
+                <Grid item sm={8} md={9}>
                     {
                         this.props.searchLoading &&
-                        <div className="is-centered"><InlineLoader message={searchResultsTxt.loadingMessage}/></div>
+                        <InlineLoader message={searchResultsTxt.loadingMessage}/>
                     }
                     {
                         this.props.publicationsList.length > 0 &&
@@ -153,38 +160,41 @@ export default class RecordsSearchResults extends PureComponent {
                             {searchResultsTxt.noResultsFound.text}
                         </StandardCard>
                     }
-
                     {
                         !this.props.searchLoading &&
-                        <div className="columns action-buttons">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
+                        <Grid container spacing={8}>
+                            <Grid item xs />
+                            <Grid item xs={12} sm="auto">
+                                <Button
                                     fullWidth
-                                    label={searchResultsTxt.cancel}
+                                    variant="contained"
                                     onClick={this._cancelWorkflow}
-                                />
-                            </div>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    label={searchResultsTxt.submit}
-                                    secondary
+                                >
+                                    {searchResultsTxt.cancel}
+                                </Button>
+                            </Grid>
+                            <Grid item xs={12} sm="auto">
+                                <Button
                                     fullWidth
-                                    autoFocus={this.props.publicationsList.length === 0}
-                                    keyboardFocused={this.props.publicationsList.length === 0}
+                                    variant="contained"
+                                    color="secondary"
                                     onClick={this._showNewRecordForm}
-                                />
-                            </div>
-                        </div>
+                                    ref={(node) => {this.showNewRecordButton = node;}}
+                                >
+                                    {searchResultsTxt.submit}
+                                </Button>
+                            </Grid>
+                        </Grid>
                     }
-                </div>
-                {/* Desktop search dashboard */}
-                <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
-                    <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
-                        <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
-                    </StandardRighthandCard>
-                </div>
-            </div>
+                </Grid>
+                <Hidden xsDown>
+                    <Grid item sm={4} md={3}>
+                        <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
+                            <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                        </StandardRighthandCard>
+                    </Grid>
+                </Hidden>
+            </Grid>
         );
     }
 }
