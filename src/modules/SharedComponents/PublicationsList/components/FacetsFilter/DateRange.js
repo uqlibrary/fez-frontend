@@ -15,8 +15,6 @@ export default class DateRange extends React.Component {
         defaultValue: PropTypes.object,
         open: PropTypes.bool,
         locale: PropTypes.object,
-        itemClassName: PropTypes.string,
-        subitemClassName: PropTypes.string,
         onToggle: PropTypes.func.isRequired
     };
 
@@ -34,9 +32,7 @@ export default class DateRange extends React.Component {
             toFieldLabel: 'To',
             rangeSubmitButtonLabel: 'Go',
             displayTitle: 'Date range'
-        },
-        itemClassName: 'dateRange',
-        subitemClassName: 'dateRage'
+        }
     };
 
     constructor(props) {

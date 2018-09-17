@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import FlatButton from 'material-ui/RaisedButton';
-import {List, withStyles} from '@material-ui/core';
+import {List} from '@material-ui/core';
 
 import {publicationTypes, general} from 'config';
 import {locale} from 'locale';
@@ -11,22 +11,7 @@ import OpenAccessFilter from './OpenAccessFilter';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-const styles = (theme) => ({
-    listItemGutters: {
-        paddingLeft: theme.spacing.unit,
-        paddingRight: theme.spacing.unit,
-    },
-    inset: {
-        '&:first-child': {
-            paddingLeft: theme.spacing.unit * 2
-        }
-    },
-    selectedFacet: {
-        color: theme.palette.accent.dark
-    }
-});
-
-export class FacetsFilter extends PureComponent {
+export default class FacetsFilter extends PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
@@ -36,8 +21,7 @@ export class FacetsFilter extends PureComponent {
         lookupFacetsList: PropTypes.object,
         disabled: PropTypes.bool,
         showOpenAccessFilter: PropTypes.bool,
-        isMyDataSetPage: PropTypes.bool,
-        classes: PropTypes.object
+        isMyDataSetPage: PropTypes.bool
     };
 
     static defaultProps = {
@@ -153,6 +137,7 @@ export class FacetsFilter extends PureComponent {
             const isActive = this.isFacetFilterActive(this.state.activeFacets, facetCategory.facetTitle, item.key);
             return (
                 <FacetFilterNestedListItem
+                    className={`facetsCategoryFilter${isActive ? ' active' : ''}`}
                     key={index}
                     index={index}
                     onFacetClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
@@ -244,13 +229,15 @@ export class FacetsFilter extends PureComponent {
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
-                <List component="nav">
+                <List component="nav" dense>
                     {
                         facetsToDisplay.map((item, index) => {
                             // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
                             const nestedItems = this.getNestedListItems(item);
                             return (
                                 <FacetFilterListItem
+                                    id={`facet-category-${item.facetTitle.replace(' ', '-')}`}
+                                    className="facetsCategory"
                                     key={`${index}`}
                                     facetTitle={item.title}
                                     disabled={this.props.disabled}
@@ -264,8 +251,6 @@ export class FacetsFilter extends PureComponent {
                     {
                         this.props.excludeFacetsList.indexOf('Published year range') === -1 &&
                         <DateRange
-                            itemClassName="dateRange facetsCategory"
-                            subitemClassName="dateRange facetsLink"
                             value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
                             disabled={this.props.disabled}
                             onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
@@ -277,8 +262,6 @@ export class FacetsFilter extends PureComponent {
                     {
                         this.props.showOpenAccessFilter &&
                         <OpenAccessFilter
-                            itemClassName="facetsCategory openAccessOnly"
-                            subitemClassName="facetsLink openAccessOnly"
                             isActive={this.state.activeFacets.showOpenAccessOnly}
                             disabled={this.props.disabled}
                             locale={openAccessFilter}
@@ -305,5 +288,3 @@ export class FacetsFilter extends PureComponent {
         );
     }
 }
-
-export default withStyles(styles)(FacetsFilter);

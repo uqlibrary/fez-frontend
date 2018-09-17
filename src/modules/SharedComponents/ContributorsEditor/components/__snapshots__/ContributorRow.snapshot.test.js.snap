@@ -51,7 +51,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
           }
         }
       >
-        <pure(PersonOutlined) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -92,7 +92,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "",
@@ -157,7 +157,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
           }
         }
       >
-        <pure(PersonOutlined) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -198,7 +198,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "",
@@ -263,7 +263,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           }
         }
       >
-        <pure(PersonOutlined) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -304,7 +304,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "",
@@ -369,7 +369,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           }
         }
       >
-        <pure(PersonOutlined) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -410,7 +410,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "",
@@ -475,7 +475,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           }
         }
       >
-        <pure(PersonOutlined) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -516,7 +516,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           disabled={false}
           onClick={[Function]}
         >
-          <pure(KeyboardArrowUp)
+          <pure(KeyboardArrowUpIcon)
             classes={
               Object {
                 "root": "",
@@ -533,7 +533,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           disabled={false}
           onClick={[Function]}
         >
-          <pure(KeyboardArrowDown)
+          <pure(KeyboardArrowDownIcon)
             classes={
               Object {
                 "root": "",
@@ -550,7 +550,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "",
@@ -615,7 +615,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         }
       >
-        <pure(Person) />
+        <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -656,7 +656,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "selected",
@@ -721,7 +721,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         }
       >
-        <pure(Person) />
+        <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -762,7 +762,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "selected",
@@ -827,7 +827,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         }
       >
-        <pure(PersonOutlined) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -920,7 +920,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete)
+          <pure(DeleteIcon)
             classes={
               Object {
                 "root": "",

@@ -275,7 +275,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
           aria-label="Click to search eSpace"
           onClick={[Function]}
         >
-          <pure(Search) />
+          <pure(SearchIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </Hidden>

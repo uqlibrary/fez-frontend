@@ -25,7 +25,7 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
           id="icon"
           item={true}
         >
-          <pure(Error)
+          <pure(ErrorIcon)
             className="icon"
           />
         </WithStyles(Grid)>
@@ -98,7 +98,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
         >
-          <pure(Error)
+          <pure(ErrorIcon)
             className="icon"
           />
         </WithStyles(Grid)>
@@ -184,7 +184,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           id="icon"
           item={true}
         >
-          <pure(Error)
+          <pure(ErrorIcon)
             className="icon"
           />
         </WithStyles(Grid)>
@@ -223,7 +223,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
               tooltipPosition="bottom-center"
               touch={false}
             >
-              <pure(Close)
+              <pure(CloseIcon)
                 className="dismiss"
               />
             </IconButton>
@@ -258,7 +258,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           tooltipPosition="bottom-center"
           touch={false}
         >
-          <pure(Close)
+          <pure(CloseIcon)
             className="dismiss"
           />
         </IconButton>
@@ -295,7 +295,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
         >
-          <pure(Error)
+          <pure(ErrorIcon)
             className="icon"
           />
         </WithStyles(Grid)>
@@ -336,7 +336,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
               tooltipPosition="bottom-center"
               touch={false}
             >
-              <pure(Close)
+              <pure(CloseIcon)
                 className="dismiss"
               />
             </IconButton>
@@ -386,7 +386,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           tooltipPosition="bottom-center"
           touch={false}
         >
-          <pure(Close)
+          <pure(CloseIcon)
             className="dismiss"
           />
         </IconButton>
@@ -466,7 +466,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
               tooltipPosition="bottom-center"
               touch={false}
             >
-              <pure(Close)
+              <pure(CloseIcon)
                 className="dismiss"
               />
             </IconButton>
@@ -516,7 +516,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           tooltipPosition="bottom-center"
           touch={false}
         >
-          <pure(Close)
+          <pure(CloseIcon)
             className="dismiss"
           />
         </IconButton>

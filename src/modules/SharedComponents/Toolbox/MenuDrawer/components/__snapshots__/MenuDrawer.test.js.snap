@@ -72,7 +72,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             aria-label="Close menu"
             onClick={[MockFunction]}
           >
-            <pure(KeyboardArrowLeft) />
+            <pure(KeyboardArrowLeftIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </Hidden>
@@ -201,7 +201,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             aria-label="Close menu"
             onClick={[MockFunction]}
           >
-            <pure(KeyboardArrowLeft) />
+            <pure(KeyboardArrowLeftIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </Hidden>
@@ -348,7 +348,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             aria-label="Close menu"
             onClick={[MockFunction]}
           >
-            <pure(KeyboardArrowLeft) />
+            <pure(KeyboardArrowLeftIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </Hidden>

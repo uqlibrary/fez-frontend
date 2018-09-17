@@ -9,8 +9,6 @@ export default class OpenAccessFilter extends PureComponent {
         disabled: PropTypes.bool,
         isActive: PropTypes.bool,
         open: PropTypes.bool,
-        itemClassName: PropTypes.string,
-        subitemClassName: PropTypes.string,
         onToggle: PropTypes.func.isRequired,
         locale: PropTypes.object
     };

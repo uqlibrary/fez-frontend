@@ -16,7 +16,7 @@ const styles = (theme) => ({
         }
     },
     selectedFacet: {
-        color: theme.palette.accent.dark
+        color: theme.palette.primary.main
     }
 });
 

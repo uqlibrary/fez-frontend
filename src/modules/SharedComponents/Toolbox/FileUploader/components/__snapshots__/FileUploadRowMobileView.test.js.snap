@@ -22,7 +22,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
         }
       }
     >
-      <pure(Attachment) />
+      <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
       classes={
@@ -60,7 +60,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     >
-      <pure(Attachment) />
+      <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
       classes={
@@ -88,7 +88,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           }
         }
       >
-        <pure(LockOutlined) />
+        <pure(LockOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         classes={
@@ -120,7 +120,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           }
         }
       >
-        <pure(CalendarTodayOutlined) />
+        <pure(CalendarTodayOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         classes={
@@ -178,7 +178,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     >
-      <pure(Attachment) />
+      <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
       classes={
@@ -206,7 +206,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           }
         }
       >
-        <pure(LockOutlined) />
+        <pure(LockOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         classes={
@@ -238,7 +238,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           }
         }
       >
-        <pure(CalendarTodayOutlined) />
+        <pure(CalendarTodayOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         classes={
@@ -296,7 +296,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         }
       }
     >
-      <pure(Attachment) />
+      <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
       classes={
@@ -324,7 +324,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           }
         }
       >
-        <pure(LockOutlined) />
+        <pure(LockOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         classes={
@@ -356,7 +356,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           }
         }
       >
-        <pure(CalendarTodayOutlined) />
+        <pure(CalendarTodayOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         classes={
