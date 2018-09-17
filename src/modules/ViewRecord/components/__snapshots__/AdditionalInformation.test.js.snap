@@ -26,16 +26,7 @@ exports[`Additional Information Component  should render component with audio do
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={5}
             publication={
               Object {
@@ -408,17 +399,7 @@ exports[`Additional Information Component  should render component with audio do
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Creator(s)"
@@ -612,16 +593,7 @@ exports[`Additional Information Component  should render component with book 1`]
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={4}
             publication={
               Object {
@@ -921,17 +893,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "rek_wok_doc_type": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -1355,16 +1317,7 @@ exports[`Additional Information Component  should render component with book cha
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={5}
             publication={
               Object {
@@ -1782,17 +1735,7 @@ exports[`Additional Information Component  should render component with book cha
                 "rek_wok_doc_type": "@",
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -2485,16 +2428,7 @@ exports[`Additional Information Component  should render component with conferen
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={14}
             publication={
               Object {
@@ -3181,17 +3115,7 @@ exports[`Additional Information Component  should render component with conferen
                 "rek_wok_doc_type": "MC",
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -4770,16 +4694,7 @@ exports[`Additional Information Component  should render component with creative
       />
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -5181,17 +5096,7 @@ exports[`Additional Information Component  should render component with creative
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -6151,16 +6056,7 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={5}
             publication={
               Object {
@@ -6917,17 +6813,7 @@ exports[`Additional Information Component  should render component with data col
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Creator name"
@@ -8103,16 +7989,7 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={5}
             publication={
               Object {
@@ -8616,17 +8493,7 @@ exports[`Additional Information Component  should render component with data col
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Creator name"
@@ -8925,16 +8792,7 @@ exports[`Additional Information Component  should render component with design d
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={2}
             publication={
               Object {
@@ -9348,17 +9206,7 @@ exports[`Additional Information Component  should render component with design d
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Designer(s)"
@@ -10053,16 +9901,7 @@ exports[`Additional Information Component  should render component with digilib 
       />
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -10346,17 +10185,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Photographer"
@@ -10598,16 +10427,7 @@ exports[`Additional Information Component  should render component with generic 
       />
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -11078,17 +10898,7 @@ exports[`Additional Information Component  should render component with generic 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -12181,16 +11991,7 @@ exports[`Additional Information Component  should render component with journal 
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={9}
             publication={
               Object {
@@ -13255,17 +13056,7 @@ exports[`Additional Information Component  should render component with journal 
                 "rek_wok_doc_type": "@",
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -14557,16 +14348,7 @@ exports[`Additional Information Component  should render component with manuscri
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -15023,17 +14805,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Creator"
@@ -15691,16 +15463,7 @@ exports[`Additional Information Component  should render component with patent 1
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={4}
             publication={
               Object {
@@ -15916,17 +15679,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Creator"
@@ -16211,16 +15964,7 @@ exports[`Additional Information Component  should render component with preprint
       />
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={3}
             publication={
               Object {
@@ -16552,17 +16296,7 @@ exports[`Additional Information Component  should render component with preprint
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -16707,16 +16441,7 @@ exports[`Additional Information Component  should render component with proceedi
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={3}
             publication={
               Object {
@@ -17335,17 +17060,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -18194,16 +17909,7 @@ exports[`Additional Information Component  should render component with referenc
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -18480,17 +18186,7 @@ exports[`Additional Information Component  should render component with referenc
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -18973,16 +18669,7 @@ exports[`Additional Information Component  should render component with research
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -19258,17 +18945,7 @@ exports[`Additional Information Component  should render component with research
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -19379,16 +19056,7 @@ exports[`Additional Information Component  should render component with thesis 1
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -19667,17 +19335,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -19828,16 +19486,7 @@ exports[`Additional Information Component  should render component with video do
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -20127,17 +19776,7 @@ exports[`Additional Information Component  should render component with video do
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Creator"
@@ -20257,16 +19896,7 @@ exports[`Additional Information Component  should render component with working 
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={2}
             publication={
               Object {
@@ -20595,17 +20225,7 @@ exports[`Additional Information Component  should render component with working 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"
@@ -20821,16 +20441,7 @@ exports[`Additional Information Component  should render oa status value link in
     >
       <ViewRecordTableRow
         data={
-          <AuthorsCitationView
-            className="citationAuthors"
-            getLink={[Function]}
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_author_id",
-                "idOrder": "rek_author_id_order",
-                "idSubkey": "rek_author_id",
-              }
-            }
+          <WithStyles(AuthorsCitationView)
             initialNumberOfAuthors={1}
             publication={
               Object {
@@ -21110,17 +20721,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_author",
-                "order": "rek_author_order",
-                "subkey": "rek_author",
-              }
-            }
-            separator=", "
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         }
         heading="Author(s)"

@@ -432,7 +432,6 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -1340,7 +1339,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -2216,7 +2214,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -3054,7 +3051,6 @@ exports[`PublicationCitation  should render component with default list hiding t
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -3892,7 +3888,6 @@ exports[`PublicationCitation  should render component with default list hiding t
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -4736,7 +4731,6 @@ exports[`PublicationCitation  should render component with publication from mult
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -5599,7 +5593,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts
@@ -6498,7 +6491,6 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          wrap="nowrap"
           xs={12}
         >
           <CitationCounts

@@ -275,16 +275,17 @@ export class Alert extends PureComponent {
                             <Grid item xs className={classes.text} onClick={this.props.action} onKeyDown={this.props.action} id={'text'}>
                                 <b>{this.props.title && `${this.props.title} - `}</b>{this.props.message}
                             </Grid>
-                            <Hidden smUp>
-                                {
-                                    this.props.allowDismiss && this.props.dismissAction &&
+                            {
+                                this.props.allowDismiss && this.props.dismissAction &&
+                                <Hidden smUp>
                                     <Grid item className={classes.dismissButton}>
-                                        <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle} aria-label={this.props.dismissTitle} id={'dismiss'}>
+                                        <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle}
+                                            aria-label={this.props.dismissTitle} id={'dismiss'}>
                                             <Close className="dismiss"/>
                                         </IconButton>
                                     </Grid>
-                                }
-                            </Hidden>
+                                </Hidden>
+                            }
                         </Grid>
                     </Grid>
                     {
@@ -299,16 +300,17 @@ export class Alert extends PureComponent {
                                 className="action"/>
                         </Grid>
                     }
-                    <Hidden xsDown>
-                        {
-                            this.props.allowDismiss && this.props.dismissAction &&
+                    {
+                        this.props.allowDismiss && this.props.dismissAction &&
+                        <Hidden xsDown>
                             <Grid item className={classes.dismissButton}>
-                                <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle} aria-label={this.props.dismissTitle} id={'dismiss'}>
+                                <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle}
+                                    aria-label={this.props.dismissTitle} id={'dismiss'}>
                                     <Close className="dismiss"/>
                                 </IconButton>
                             </Grid>
-                        }
-                    </Hidden>
+                        </Hidden>
+                    }
                 </Grid>
             </div>
         );

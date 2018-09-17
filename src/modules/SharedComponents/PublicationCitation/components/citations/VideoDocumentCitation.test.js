@@ -3,6 +3,7 @@ import {videoDocument} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
+        classes: {},
         ...testProps,
         publication: testProps.publication || {},
     };

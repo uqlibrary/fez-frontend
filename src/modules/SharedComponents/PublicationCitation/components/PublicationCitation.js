@@ -234,7 +234,7 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs={12} className={classes.citationText}>
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
-                            <Grid item xs={12} wrap={'nowrap'} className={classes.citationCounts}>
+                            <Grid item xs={12} className={classes.citationCounts}>
                                 <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
                             </Grid>
                             {this.props.showSources && this.props.publication.sources &&
