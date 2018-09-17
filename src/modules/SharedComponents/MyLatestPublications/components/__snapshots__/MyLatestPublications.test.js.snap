@@ -3481,14 +3481,28 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
     showSources={false}
     subsetCustomActions={Array []}
   />
-  <WithStyles(Button)
-    className="blueButton"
-    color="secondary"
-    onClick={[Function]}
-    variant="contained"
+  <WithStyles(Grid)
+    container={true}
   >
-    View all (137)
-  </WithStyles(Button)>
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        className="blueButton"
+        color="secondary"
+        onClick={[Function]}
+        variant="contained"
+      >
+        View all (137)
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 

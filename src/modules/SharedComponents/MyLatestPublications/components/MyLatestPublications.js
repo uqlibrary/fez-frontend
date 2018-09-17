@@ -6,7 +6,7 @@ import {locale} from 'locale';
 
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import {Button, withStyles} from '@material-ui/core';
+import {Grid, Button, withStyles} from '@material-ui/core';
 
 const styles = (theme) => ({
     blueButton: {
@@ -14,8 +14,7 @@ const styles = (theme) => ({
         color: theme.palette.white.main,
         '&:hover': {
             backgroundColor: theme.palette.accent.dark,
-        },
-        float: 'right'
+        }
     }
 });
 
@@ -62,14 +61,19 @@ export class MyLatestPublications extends PureComponent {
                 <PublicationsList
                     publicationsList={this.props.latestPublicationsList}
                     showDefaultActions/>
-                <Button
-                    variant="contained"
-                    onClick={this._viewMyResearch}
-                    color="secondary"
-                    className={this.props.classes.blueButton}
-                >
-                    {`${txt.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                </Button>
+                <Grid container>
+                    <Grid item xs />
+                    <Grid item xs={12} sm="auto">
+                        <Button
+                            variant="contained"
+                            onClick={this._viewMyResearch}
+                            color="secondary"
+                            className={this.props.classes.blueButton}
+                        >
+                            {`${txt.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
+                        </Button>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
