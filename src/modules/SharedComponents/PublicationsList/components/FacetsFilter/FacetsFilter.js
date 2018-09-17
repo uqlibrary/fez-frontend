@@ -1,8 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import FlatButton from 'material-ui/RaisedButton';
-import {List} from '@material-ui/core';
+import {List, Button, Grid} from '@material-ui/core';
 
 import {publicationTypes, general} from 'config';
 import {locale} from 'locale';
@@ -273,16 +272,13 @@ export default class FacetsFilter extends PureComponent {
                 </List>
                 {
                     hasActiveFilters &&
-                    <div className="columns">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-tablet">
-                            <FlatButton
-                                fullWidth
-                                disabled={this.props.disabled}
-                                label={resetButtonText}
-                                onClick={this._handleResetClick}/>
-                        </div>
-                    </div>
+                    <Grid container justify="flex-end">
+                        <Grid item>
+                            <Button variant="contained" onClick={this._handleResetClick}>
+                                {resetButtonText}
+                            </Button>
+                        </Grid>
+                    </Grid>
                 }
             </div>
         );
