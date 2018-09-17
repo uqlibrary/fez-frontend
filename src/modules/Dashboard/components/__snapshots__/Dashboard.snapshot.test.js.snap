@@ -87,7 +87,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
         <div
           className="publicationTabContent"
         >
-          <withRouter(Connect(MyLatestPublications)) />
+          <withRouter(Connect(WithStyles(MyLatestPublications))) />
         </div>
       </Tab>
       <Tab
@@ -193,7 +193,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
         <div
           className="publicationTabContent"
         >
-          <withRouter(Connect(MyLatestPublications)) />
+          <withRouter(Connect(WithStyles(MyLatestPublications))) />
         </div>
       </Tab>
     </Tabs>

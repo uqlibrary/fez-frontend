@@ -38,7 +38,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={Object {}}
+      className="center"
       item={true}
       sm={5}
       xs={5}
@@ -49,7 +49,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={Object {}}
+      className="center"
       item={true}
       sm={1}
       xs={2}
@@ -107,7 +107,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={Object {}}
+      className="center"
       item={true}
       sm={5}
       xs={5}
@@ -147,7 +147,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={Object {}}
+      className="center"
       item={true}
       sm={1}
       xs={2}

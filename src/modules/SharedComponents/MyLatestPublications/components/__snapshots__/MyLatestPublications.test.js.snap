@@ -3481,26 +3481,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
     showSources={false}
     subsetCustomActions={Array []}
   />
-  <div
-    className="columns"
+  <WithStyles(Button)
+    className="blueButton"
+    color="secondary"
+    onClick={[Function]}
+    variant="contained"
   >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="View all (137)"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+    View all (137)
+  </WithStyles(Button)>
 </div>
 `;
 

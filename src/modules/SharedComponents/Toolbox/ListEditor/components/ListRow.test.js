@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true) {
         onMoveDown: jest.fn(),
         onDelete: jest.fn(),
         disabled: false,
-        classes: {center: {}, right: {}},
+        classes: {center: 'center', right: 'right'},
         ...testProps,
     };
     return getElement(ListRow, props, isShallow);
