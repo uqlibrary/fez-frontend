@@ -791,7 +791,7 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}
@@ -1718,7 +1718,7 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}

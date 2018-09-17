@@ -939,7 +939,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}
@@ -2802,7 +2802,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                   className="citationEditors"
                   classes={
                     Object {
-                      "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                      "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                     }
                   }
                   getLink={[Function]}
@@ -3848,7 +3848,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}
@@ -5329,7 +5329,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                   className="citationEditors"
                   classes={
                     Object {
-                      "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                      "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                     }
                   }
                   getLink={[Function]}

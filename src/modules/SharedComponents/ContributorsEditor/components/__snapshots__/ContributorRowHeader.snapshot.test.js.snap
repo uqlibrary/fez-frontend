@@ -39,7 +39,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemIcon)>
-        <pure(People) />
+        <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -108,7 +108,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
@@ -151,7 +151,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemIcon)>
-        <pure(People) />
+        <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -198,7 +198,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           disabled={true}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
@@ -241,7 +241,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemIcon)>
-        <pure(People) />
+        <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -288,7 +288,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>

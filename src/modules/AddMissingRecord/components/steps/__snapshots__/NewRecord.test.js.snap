@@ -377,17 +377,18 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       TransitionComponent={[Function]}
       classes={
         Object {
-          "paper": "MuiDialog-paper-4",
-          "paperFullScreen": "MuiDialog-paperFullScreen-11",
-          "paperFullWidth": "MuiDialog-paperFullWidth-10",
-          "paperScrollBody": "MuiDialog-paperScrollBody-6",
-          "paperScrollPaper": "MuiDialog-paperScrollPaper-5",
-          "paperWidthMd": "MuiDialog-paperWidthMd-9",
-          "paperWidthSm": "MuiDialog-paperWidthSm-8",
-          "paperWidthXs": "MuiDialog-paperWidthXs-7",
-          "root": "MuiDialog-root-1",
-          "scrollBody": "MuiDialog-scrollBody-3",
-          "scrollPaper": "MuiDialog-scrollPaper-2",
+          "paper": "MuiDialog-paper-04",
+          "paperFullScreen": "MuiDialog-paperFullScreen-012",
+          "paperFullWidth": "MuiDialog-paperFullWidth-011",
+          "paperScrollBody": "MuiDialog-paperScrollBody-06",
+          "paperScrollPaper": "MuiDialog-paperScrollPaper-05",
+          "paperWidthLg": "MuiDialog-paperWidthLg-010",
+          "paperWidthMd": "MuiDialog-paperWidthMd-09",
+          "paperWidthSm": "MuiDialog-paperWidthSm-08",
+          "paperWidthXs": "MuiDialog-paperWidthXs-07",
+          "root": "MuiDialog-root-01",
+          "scrollBody": "MuiDialog-scrollBody-03",
+          "scrollPaper": "MuiDialog-scrollPaper-02",
         }
       }
       disableBackdropClick={false}
@@ -418,7 +419,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
             },
           }
         }
-        className="MuiDialog-root-1 MuiDialog-scrollPaper-2"
+        className="MuiDialog-root-01 MuiDialog-scrollPaper-02"
         disableBackdropClick={false}
         disableEscapeKeyDown={false}
         open={false}
@@ -439,11 +440,11 @@ exports[`Add new record should render the confirm dialog with an alert for faile
               },
             }
           }
-          className="MuiDialog-root-1 MuiDialog-scrollPaper-2"
+          className="MuiDialog-root-01 MuiDialog-scrollPaper-02"
           classes={
             Object {
-              "hidden": "MuiModal-hidden-13",
-              "root": "MuiModal-root-12",
+              "hidden": "MuiModal-hidden-014",
+              "root": "MuiModal-root-013",
             }
           }
           disableAutoFocus={false}

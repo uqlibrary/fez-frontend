@@ -444,10 +444,10 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                     <FormControl
                       classes={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "fullWidth": "MuiFormControl-fullWidth-04",
+                          "marginDense": "MuiFormControl-marginDense-03",
+                          "marginNormal": "MuiFormControl-marginNormal-02",
+                          "root": "MuiFormControl-root-01",
                         }
                       }
                       component="div"
@@ -458,7 +458,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                       required={true}
                     >
                       <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                        className="MuiFormControl-root-01 MuiFormControl-fullWidth-04"
                       >
                         <WithStyles(Input)
                           aria-activedescendant={null}
@@ -486,24 +486,25 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                             autoComplete="off"
                             classes={
                               Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
+                                "disabled": "MuiInput-disabled-08",
+                                "error": "MuiInput-error-010",
+                                "focused": "MuiInput-focused-07",
+                                "formControl": "MuiInput-formControl-06",
+                                "fullWidth": "MuiInput-fullWidth-012",
+                                "input": "MuiInput-input-013",
+                                "inputMarginDense": "MuiInput-inputMarginDense-014",
+                                "inputMultiline": "MuiInput-inputMultiline-015",
+                                "inputType": "MuiInput-inputType-016",
+                                "inputTypeSearch": "MuiInput-inputTypeSearch-017",
+                                "multiline": "MuiInput-multiline-011",
+                                "root": "MuiInput-root-05 inputRoot",
+                                "underline": "MuiInput-underline-09",
                               }
                             }
                             disableUnderline={false}
                             fullWidth={true}
                             id="downshift-1-input"
+                            inputComponent="input"
                             multiline={false}
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -516,12 +517,12 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                               aria-autocomplete="list"
                               aria-controls={null}
                               aria-labelledby="downshift-1-label"
-                              className="MuiInput-root-5 inputRoot MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
+                              className="MuiInput-root-05 inputRoot MuiInput-fullWidth-012 MuiInput-formControl-06 MuiInput-underline-09"
                             >
                               <input
                                 aria-invalid={false}
                                 autoComplete="off"
-                                className="MuiInput-input-13"
+                                className="MuiInput-input-013"
                                 disabled={false}
                                 id="downshift-1-input"
                                 onBlur={[Function]}
@@ -967,10 +968,10 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                     <FormControl
                       classes={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "fullWidth": "MuiFormControl-fullWidth-04",
+                          "marginDense": "MuiFormControl-marginDense-03",
+                          "marginNormal": "MuiFormControl-marginNormal-02",
+                          "root": "MuiFormControl-root-01",
                         }
                       }
                       component="div"
@@ -981,7 +982,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                       required={false}
                     >
                       <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                        className="MuiFormControl-root-01 MuiFormControl-fullWidth-04"
                       >
                         <WithStyles(Input)
                           aria-activedescendant={null}
@@ -1009,24 +1010,25 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                             autoComplete="off"
                             classes={
                               Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
+                                "disabled": "MuiInput-disabled-08",
+                                "error": "MuiInput-error-010",
+                                "focused": "MuiInput-focused-07",
+                                "formControl": "MuiInput-formControl-06",
+                                "fullWidth": "MuiInput-fullWidth-012",
+                                "input": "MuiInput-input-013",
+                                "inputMarginDense": "MuiInput-inputMarginDense-014",
+                                "inputMultiline": "MuiInput-inputMultiline-015",
+                                "inputType": "MuiInput-inputType-016",
+                                "inputTypeSearch": "MuiInput-inputTypeSearch-017",
+                                "multiline": "MuiInput-multiline-011",
+                                "root": "MuiInput-root-05 inputRoot",
+                                "underline": "MuiInput-underline-09",
                               }
                             }
                             disableUnderline={false}
                             fullWidth={true}
                             id="downshift-2-input"
+                            inputComponent="input"
                             multiline={false}
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -1039,12 +1041,12 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                               aria-autocomplete="list"
                               aria-controls={null}
                               aria-labelledby="downshift-2-label"
-                              className="MuiInput-root-5 inputRoot MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
+                              className="MuiInput-root-05 inputRoot MuiInput-fullWidth-012 MuiInput-formControl-06 MuiInput-underline-09"
                             >
                               <input
                                 aria-invalid={false}
                                 autoComplete="off"
-                                className="MuiInput-input-13"
+                                className="MuiInput-input-013"
                                 disabled={false}
                                 id="downshift-2-input"
                                 onBlur={[Function]}
@@ -1486,27 +1488,28 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                   value=""
                 >
                   <WithStyles(FormControl)
+                    disabled={true}
                     fullWidth={true}
                     required={false}
                   >
                     <FormControl
                       classes={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "fullWidth": "MuiFormControl-fullWidth-04",
+                          "marginDense": "MuiFormControl-marginDense-03",
+                          "marginNormal": "MuiFormControl-marginNormal-02",
+                          "root": "MuiFormControl-root-01",
                         }
                       }
                       component="div"
-                      disabled={false}
+                      disabled={true}
                       error={false}
                       fullWidth={true}
                       margin="none"
                       required={false}
                     >
                       <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                        className="MuiFormControl-root-01 MuiFormControl-fullWidth-04"
                       >
                         <WithStyles(Input)
                           aria-activedescendant={null}
@@ -1519,7 +1522,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                               "root": "inputRoot",
                             }
                           }
-                          disabled={true}
                           fullWidth={true}
                           id="downshift-0-input"
                           onBlur={[Function]}
@@ -1535,25 +1537,25 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                             autoComplete="off"
                             classes={
                               Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
+                                "disabled": "MuiInput-disabled-08",
+                                "error": "MuiInput-error-010",
+                                "focused": "MuiInput-focused-07",
+                                "formControl": "MuiInput-formControl-06",
+                                "fullWidth": "MuiInput-fullWidth-012",
+                                "input": "MuiInput-input-013",
+                                "inputMarginDense": "MuiInput-inputMarginDense-014",
+                                "inputMultiline": "MuiInput-inputMultiline-015",
+                                "inputType": "MuiInput-inputType-016",
+                                "inputTypeSearch": "MuiInput-inputTypeSearch-017",
+                                "multiline": "MuiInput-multiline-011",
+                                "root": "MuiInput-root-05 inputRoot",
+                                "underline": "MuiInput-underline-09",
                               }
                             }
                             disableUnderline={false}
-                            disabled={true}
                             fullWidth={true}
                             id="downshift-0-input"
+                            inputComponent="input"
                             multiline={false}
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -1566,12 +1568,12 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                               aria-autocomplete="list"
                               aria-controls={null}
                               aria-labelledby="downshift-0-label"
-                              className="MuiInput-root-5 inputRoot MuiInput-disabled-8 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
+                              className="MuiInput-root-05 inputRoot MuiInput-disabled-08 MuiInput-fullWidth-012 MuiInput-formControl-06 MuiInput-underline-09"
                             >
                               <input
                                 aria-invalid={false}
                                 autoComplete="off"
-                                className="MuiInput-input-13 MuiInput-disabled-8"
+                                className="MuiInput-input-013 MuiInput-disabled-08"
                                 disabled={true}
                                 id="downshift-0-input"
                                 onBlur={[Function]}

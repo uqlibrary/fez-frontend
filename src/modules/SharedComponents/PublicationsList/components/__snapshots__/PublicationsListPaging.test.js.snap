@@ -25,7 +25,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         }
         variant="flat"
       >
-        <pure(ChevronLeft) />
+        <pure(ChevronLeftIcon) />
         Previous
       </WithStyles(Button)>
     </WithStyles(Grid)>
@@ -216,7 +216,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         variant="flat"
       >
         Next
-        <pure(ChevronRight) />
+        <pure(ChevronRightIcon) />
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -248,7 +248,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         }
         variant="flat"
       >
-        <pure(ChevronLeft) />
+        <pure(ChevronLeftIcon) />
         Previous
       </WithStyles(Button)>
     </WithStyles(Grid)>
@@ -365,7 +365,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         variant="flat"
       >
         Next
-        <pure(ChevronRight) />
+        <pure(ChevronRightIcon) />
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -391,7 +391,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         }
         variant="flat"
       >
-        <pure(ChevronLeft) />
+        <pure(ChevronLeftIcon) />
         Previous
       </WithStyles(Button)>
     </WithStyles(Grid)>
@@ -508,7 +508,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         variant="flat"
       >
         Next
-        <pure(ChevronRight) />
+        <pure(ChevronRightIcon) />
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -534,7 +534,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         }
         variant="flat"
       >
-        <pure(ChevronLeft) />
+        <pure(ChevronLeftIcon) />
         Previous
       </WithStyles(Button)>
     </WithStyles(Grid)>
@@ -651,7 +651,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         variant="flat"
       >
         Next
-        <pure(ChevronRight) />
+        <pure(ChevronRightIcon) />
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>

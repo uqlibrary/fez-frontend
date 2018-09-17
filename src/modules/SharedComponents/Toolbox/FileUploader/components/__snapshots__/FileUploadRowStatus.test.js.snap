@@ -27,7 +27,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
     <WithStyles(IconButton)
       onClick={[MockFunction]}
     >
-      <pure(Delete) />
+      <pure(DeleteIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </React.Fragment>
@@ -42,7 +42,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
       disabled={true}
       onClick={[MockFunction]}
     >
-      <pure(Delete) />
+      <pure(DeleteIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </React.Fragment>
@@ -51,7 +51,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <React.Fragment>
   <WithStyles(IconButton)>
-    <pure(Done) />
+    <pure(DoneIcon) />
   </WithStyles(IconButton)>
 </React.Fragment>
 `;
@@ -81,7 +81,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
     <WithStyles(IconButton)
       onClick={[MockFunction]}
     >
-      <pure(Delete) />
+      <pure(DeleteIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </React.Fragment>

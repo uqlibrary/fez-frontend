@@ -1592,7 +1592,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                   className="citationEditors"
                   classes={
                     Object {
-                      "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                      "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                     }
                   }
                   getLink={[Function]}
@@ -4053,7 +4053,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                   className="citationEditors"
                   classes={
                     Object {
-                      "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                      "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                     }
                   }
                   getLink={[Function]}
@@ -5287,7 +5287,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                   className="citationEditors"
                   classes={
                     Object {
-                      "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                      "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                     }
                   }
                   getLink={[Function]}

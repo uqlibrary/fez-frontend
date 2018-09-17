@@ -767,7 +767,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}
@@ -2174,7 +2174,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}
@@ -3154,7 +3154,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                 className="citationAuthors"
                 classes={
                   Object {
-                    "authorIdLink": "AuthorsCitationView-authorIdLink-1",
+                    "authorIdLink": "AuthorsCitationView-authorIdLink-01",
                   }
                 }
                 getLink={[Function]}

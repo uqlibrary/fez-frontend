@@ -16,7 +16,7 @@ exports[`AuthButton snapshots test renders logged in user status 1`] = `
     <WithStyles(IconButton)
       className="log-out-button"
     >
-      <pure(Person) />
+      <pure(PersonIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </div>
@@ -38,7 +38,7 @@ exports[`AuthButton snapshots test renders logged out status 1`] = `
     <WithStyles(IconButton)
       className="log-in-button"
     >
-      <pure(PersonOutline) />
+      <pure(PersonOutlineIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
 </div>

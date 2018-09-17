@@ -61,7 +61,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete) />
+          <pure(DeleteIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
@@ -126,7 +126,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
               disabled={false}
               onClick={[Function]}
             >
-              <pure(KeyboardArrowUp) />
+              <pure(KeyboardArrowUpIcon) />
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
@@ -140,7 +140,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
               disabled={false}
               onClick={[Function]}
             >
-              <pure(KeyboardArrowDown) />
+              <pure(KeyboardArrowDownIcon) />
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
@@ -159,7 +159,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
           disabled={false}
           onClick={[Function]}
         >
-          <pure(Delete) />
+          <pure(DeleteIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>

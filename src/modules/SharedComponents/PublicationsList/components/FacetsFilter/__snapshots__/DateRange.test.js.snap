@@ -1,255 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Date range  should render component with values set 1`] = `
-<ListItem
-  autoGenerateNestedIndicator={true}
-  className="dateRange active  "
-  containerElement="span"
-  disableKeyboardFocus={false}
-  disabled={false}
-  initiallyOpen={false}
-  insetChildren={false}
+<WithStyles(FacetsFilterListItem)
+  facetTitle="Date range"
+  key="date-range"
   nestedItems={
-    Array [
-      <ListItem
-        autoGenerateNestedIndicator={true}
-        className="dateRage active  "
-        containerElement="span"
-        disableKeyboardFocus={false}
-        disabled={false}
-        initiallyOpen={false}
-        insetChildren={false}
-        leftIcon={
-          <NavigationClose
-            disabled={undefined}
-          />
-        }
-        nestedItems={Array []}
-        nestedLevel={0}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onNestedListToggle={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
-        open={null}
-        primaryText="2010 - 2016"
-        primaryTogglesNestedList={false}
-        secondaryTextLines={1}
-      />,
-    ]
+    <WithStyles(FacetsFilterNestedListItem)
+      disabled={undefined}
+      isActive={true}
+      onFacetClick={[Function]}
+      primaryText="2010 - 2016"
+    />
   }
-  nestedLevel={0}
-  onKeyboardFocus={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onNestedListToggle={[Function]}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
-  open={null}
-  primaryText="Date range"
-  primaryTogglesNestedList={true}
-  secondaryTextLines={1}
 />
 `;
 
 exports[`Date range  should render disabled component 1`] = `
-<ListItem
-  autoGenerateNestedIndicator={true}
-  className="dateRange  disabled"
-  containerElement="span"
-  disableKeyboardFocus={false}
+<WithStyles(FacetsFilterListItem)
   disabled={true}
-  initiallyOpen={false}
-  insetChildren={false}
+  facetTitle="Date range"
+  key="date-range"
   nestedItems={
-    Array [
-      <ListItem
-        autoGenerateNestedIndicator={true}
-        className="dateRage  disabled"
-        containerElement="span"
-        disableKeyboardFocus={false}
-        disabled={true}
-        initiallyOpen={false}
-        insetChildren={false}
-        leftIcon={null}
-        nestedItems={Array []}
-        nestedLevel={0}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onNestedListToggle={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
-        open={null}
-        primaryText=""
-        primaryTogglesNestedList={false}
-        secondaryTextLines={1}
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-end"
+        container={true}
+        spacing={16}
+        wrap="nowrap"
       >
         <WithStyles(Grid)
-          alignItems="flex-end"
-          container={true}
-          spacing={16}
-          wrap="nowrap"
+          item={true}
+          xs={4}
         >
-          <WithStyles(Grid)
-            item={true}
-            xs={4}
-          >
-            <TextField
-              disabled={true}
-              fullWidth={true}
-              label="From"
-              onChange={[Function]}
-              required={false}
-              select={false}
-              type="number"
-              value={2007}
-            />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            xs={4}
-          >
-            <TextField
-              disabled={true}
-              fullWidth={true}
-              label="To"
-              onChange={[Function]}
-              required={false}
-              select={false}
-              type="number"
-              value={2022}
-            />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-          >
-            <WithStyles(Button)
-              disabled={true}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="flat"
-            >
-              Go
-            </WithStyles(Button)>
-          </WithStyles(Grid)>
+          <TextField
+            disabled={true}
+            fullWidth={true}
+            label="From"
+            onChange={[Function]}
+            required={false}
+            select={false}
+            type="number"
+            value={2007}
+          />
         </WithStyles(Grid)>
-      </ListItem>,
-    ]
+        <WithStyles(Grid)
+          item={true}
+          xs={4}
+        >
+          <TextField
+            disabled={true}
+            fullWidth={true}
+            label="To"
+            onChange={[Function]}
+            required={false}
+            select={false}
+            type="number"
+            value={2022}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Button)
+            disabled={true}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="flat"
+          >
+            Go
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
   }
-  nestedLevel={0}
-  onKeyboardFocus={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onNestedListToggle={[Function]}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
-  open={null}
-  primaryText="Date range"
-  primaryTogglesNestedList={true}
-  secondaryTextLines={1}
 />
 `;
 
 exports[`Date range  should render empty component 1`] = `
-<ListItem
-  autoGenerateNestedIndicator={true}
-  className="dateRange  "
-  containerElement="span"
-  disableKeyboardFocus={false}
-  disabled={false}
-  initiallyOpen={false}
-  insetChildren={false}
+<WithStyles(FacetsFilterListItem)
+  facetTitle="Date range"
+  key="date-range"
   nestedItems={
-    Array [
-      <ListItem
-        autoGenerateNestedIndicator={true}
-        className="dateRage  "
-        containerElement="span"
-        disableKeyboardFocus={false}
-        disabled={false}
-        initiallyOpen={false}
-        insetChildren={false}
-        leftIcon={null}
-        nestedItems={Array []}
-        nestedLevel={0}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onNestedListToggle={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
-        open={null}
-        primaryText=""
-        primaryTogglesNestedList={false}
-        secondaryTextLines={1}
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-end"
+        container={true}
+        spacing={16}
+        wrap="nowrap"
       >
         <WithStyles(Grid)
-          alignItems="flex-end"
-          container={true}
-          spacing={16}
-          wrap="nowrap"
+          item={true}
+          xs={4}
         >
-          <WithStyles(Grid)
-            item={true}
-            xs={4}
-          >
-            <TextField
-              disabled={undefined}
-              fullWidth={true}
-              label="From"
-              onChange={[Function]}
-              required={false}
-              select={false}
-              type="number"
-              value={2007}
-            />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            xs={4}
-          >
-            <TextField
-              disabled={undefined}
-              fullWidth={true}
-              label="To"
-              onChange={[Function]}
-              required={false}
-              select={false}
-              type="number"
-              value={2022}
-            />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-          >
-            <WithStyles(Button)
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="flat"
-            >
-              Go
-            </WithStyles(Button)>
-          </WithStyles(Grid)>
+          <TextField
+            disabled={undefined}
+            fullWidth={true}
+            label="From"
+            onChange={[Function]}
+            required={false}
+            select={false}
+            type="number"
+            value={2007}
+          />
         </WithStyles(Grid)>
-      </ListItem>,
-    ]
+        <WithStyles(Grid)
+          item={true}
+          xs={4}
+        >
+          <TextField
+            disabled={undefined}
+            fullWidth={true}
+            label="To"
+            onChange={[Function]}
+            required={false}
+            select={false}
+            type="number"
+            value={2022}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Button)
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="flat"
+          >
+            Go
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
   }
-  nestedLevel={0}
-  onKeyboardFocus={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onNestedListToggle={[Function]}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
-  open={null}
-  primaryText="Date range"
-  primaryTogglesNestedList={true}
-  secondaryTextLines={1}
 />
 `;
