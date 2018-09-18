@@ -1,16 +1,3 @@
-.author-button {
-  margin: 2px !important;
-  button {
-    text-align: left !important;
-    white-space: inherit !important;
-    height: unset !important;
-  }
-}
-
-.author-link-name {
-  width: 70%;
-}
-
 .author-linking-checkbox {
   position: relative;
   width: 100%;
@@ -28,22 +15,6 @@
   div:first-of-type {
     margin-bottom: 0 !important;
   }
-}
-
-.author-link-order {
-  margin-top: -12px;
-  margin-bottom: 15px;
-}
-
-.author-link-order-text {
-  font-size: $text-body-xsmall;
-  margin-left: 45px;
-  color: rgba($text-color, 0.75);
-}
-
-.author-link-status {
-  float: left;
-  margin-top: 6px;
 }
 
 .author-link-infinite-scroll {
