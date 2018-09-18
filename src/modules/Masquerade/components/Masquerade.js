@@ -29,9 +29,9 @@ export default class Masquerade extends Component {
         window.location.href = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(window.location.href)}`;
     };
 
-    _usernameChanged = (event, newValue) => {
+    _usernameChanged = (event) => {
         this.setState({
-            userName: newValue
+            userName: event.target.value
         });
     };
 
@@ -39,7 +39,7 @@ export default class Masquerade extends Component {
         const txt = locale.pages.masquerade;
 
         return (
-            <StandardPage title={txt.title}>
+            <StandardPage>
                 <StandardCard title={txt.title} help={txt.help}>
                     <Typography>{txt.description}</Typography>
                     <Grid container spacing={24}>
