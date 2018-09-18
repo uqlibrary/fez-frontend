@@ -9,26 +9,26 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
       Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
   >
-    <div
-      className="column is-hidden-mobile"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
     >
-      <RaisedButton
-        disabled={false}
+      <WithStyles(Button)
+        color="secondary"
         fullWidth={true}
-        label="Return to the Graduate School website"
-        labelPosition="after"
         onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+        variant="raised"
+      >
+        Return to the Graduate School website
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -41,26 +41,26 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
       Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
   >
-    <div
-      className="column is-hidden-mobile"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
     >
-      <RaisedButton
-        disabled={false}
+      <WithStyles(Button)
+        color="secondary"
         fullWidth={true}
-        label="Return to the Graduate School website"
-        labelPosition="after"
         onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+        variant="raised"
+      >
+        Return to the Graduate School website
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -68,18 +68,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
 <StandardPage
   title="Higher degree by research thesis deposit"
 >
-  <p>
-    <span>
-      Required fields are marked with 
-      <span
-        className="requiredField"
-      >
-        <label>
-           
-        </label>
-      </span>
-    </span>
-  </p>
   <form>
     <NavigationDialogBox
       txt={
@@ -107,16 +95,13 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
     <StandardCard
       title="Thesis information"
     >
-      <div
-        className="columns"
-        style={
-          Object {
-            "marginTop": "6px",
-          }
-        }
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
       >
-        <div
-          className="column requiredField"
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
         >
           <label
             htmlFor="thesisTitle"
@@ -132,13 +117,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column is-half"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={6}
+          xs={12}
         >
           <Field
             component={[Function]}
@@ -156,9 +139,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-        <div
-          className="column "
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={6}
+          xs={12}
         >
           <Field
             className="requiredField"
@@ -183,13 +168,10 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
         >
           <Field
             className="requiredField"
@@ -204,18 +186,10 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
-      <div
-        className="columns"
-        style={
-          Object {
-            "marginTop": "6px",
-          }
-        }
-      >
-        <div
-          className="column requiredField"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
         >
           <label
             htmlFor="thesisAbstract"
@@ -230,8 +204,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </StandardCard>
     <StandardCard
       title="Supervisors"
@@ -486,28 +460,26 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       <div
         className="column is-narrow-desktop"
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
+          variant="raised"
+        >
+          Cancel
+        </WithStyles(Button)>
       </div>
       <div
         className="column is-narrow-desktop"
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Deposit your thesis"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
+          variant="raised"
+        >
+          Deposit your thesis
+        </WithStyles(Button)>
       </div>
     </div>
   </form>
@@ -523,26 +495,26 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
       Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
   </StandardCard>
-  <div
-    className="columns action-buttons"
+  <WithStyles(Grid)
+    container={true}
   >
-    <div
-      className="column is-hidden-mobile"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      item={true}
     >
-      <RaisedButton
-        disabled={false}
+      <WithStyles(Button)
+        color="secondary"
         fullWidth={true}
-        label="Return to the Graduate School website"
-        labelPosition="after"
         onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+        variant="raised"
+      >
+        Return to the Graduate School website
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -550,18 +522,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <p>
-    <span>
-      Required fields are marked with 
-      <span
-        className="requiredField"
-      >
-        <label>
-           
-        </label>
-      </span>
-    </span>
-  </p>
   <form>
     <NavigationDialogBox
       txt={
@@ -589,16 +549,13 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
     <StandardCard
       title="Thesis information"
     >
-      <div
-        className="columns"
-        style={
-          Object {
-            "marginTop": "6px",
-          }
-        }
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
       >
-        <div
-          className="column requiredField"
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
         >
           <label
             htmlFor="thesisTitle"
@@ -614,13 +571,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column is-half"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={6}
+          xs={12}
         >
           <Field
             component={[Function]}
@@ -638,9 +593,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-        <div
-          className="column "
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={6}
+          xs={12}
         >
           <Field
             className="requiredField"
@@ -665,13 +622,10 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
         >
           <Field
             className="requiredField"
@@ -686,18 +640,10 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
-      <div
-        className="columns"
-        style={
-          Object {
-            "marginTop": "6px",
-          }
-        }
-      >
-        <div
-          className="column requiredField"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
         >
           <label
             htmlFor="thesisAbstract"
@@ -712,8 +658,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               ]
             }
           />
-        </div>
-      </div>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </StandardCard>
     <StandardCard
       title="Supervisors"
@@ -968,28 +914,26 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       <div
         className="column is-narrow-desktop"
       >
-        <RaisedButton
+        <WithStyles(Button)
           disabled={false}
           fullWidth={true}
-          label="Cancel"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={false}
-        />
+          variant="raised"
+        >
+          Cancel
+        </WithStyles(Button)>
       </div>
       <div
         className="column is-narrow-desktop"
       >
-        <RaisedButton
-          disabled={false}
+        <WithStyles(Button)
+          color="primary"
           fullWidth={true}
-          label="Deposit your thesis"
-          labelPosition="after"
           onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
+          variant="raised"
+        >
+          Deposit your thesis
+        </WithStyles(Button)>
       </div>
     </div>
   </form>

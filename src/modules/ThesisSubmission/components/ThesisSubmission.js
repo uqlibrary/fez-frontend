@@ -7,7 +7,8 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -84,16 +85,17 @@ export default class ThesisSubmission extends Component {
                     <StandardCard>
                         {formLocale.thesisSubmission.afterSubmitText}
                     </StandardCard>
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
+                    <Grid container>
+                        <Grid item xs/>
+                        <Grid item>
+                            <Button
+                                variant={'raised'}
+                                color={'secondary'}
                                 fullWidth
-                                label={formLocale.thesisSubmission.afterSubmit}
+                                children={formLocale.thesisSubmission.afterSubmit}
                                 onClick={this.afterSubmit}/>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardPage>
             );
         }
@@ -111,7 +113,6 @@ export default class ThesisSubmission extends Component {
             }});
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
-                <p>{formLocale.thesisSubmission.text}</p>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
@@ -124,8 +125,8 @@ export default class ThesisSubmission extends Component {
                     />
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <div className="columns" style={{marginTop: '6px'}}>
-                            <div className="column requiredField">
+                        <Grid container spacing={24}>
+                            <Grid item xs={12}>
                                 <label htmlFor="thesisTitle">{txt.information.fieldLabels.documentTitle.floatingLabelText}</label>
                                 <Field
                                     component={RichEditorField}
@@ -133,10 +134,8 @@ export default class ThesisSubmission extends Component {
                                     disabled={this.props.submitting}
                                     height={50}
                                     validate={[validation.required]}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column is-half">
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -147,8 +146,8 @@ export default class ThesisSubmission extends Component {
                                     {...txt.information.fieldLabels.author}
                                     required
                                     validate={[validation.required]}/>
-                            </div>
-                            <div className="column ">
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={ThesisSubtypeField}
                                     itemsList={thesisSubmissionSubtypes}
@@ -157,10 +156,8 @@ export default class ThesisSubmission extends Component {
                                     validate={[validation.required]}
                                     locale={txt.information.fieldLabels.thesisType}
                                     className="requiredField"/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
+                            </Grid>
+                            <Grid item xs={12}>
                                 <Field
                                     component={OrgUnitNameField}
                                     name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -169,18 +166,16 @@ export default class ThesisSubmission extends Component {
                                     className="requiredField"
                                     {...txt.information.fieldLabels.orgUnitName}
                                 />
-                            </div>
-                        </div>
-                        <div className="columns" style={{marginTop: '6px'}}>
-                            <div className="column requiredField">
+                            </Grid>
+                            <Grid item xs={12}>
                                 <label htmlFor="thesisAbstract">{txt.optional.fieldLabels.abstract.floatingLabelText}</label>
                                 <Field
                                     component={RichEditorField}
                                     disabled={this.props.submitting}
                                     name="thesisAbstract"
                                     validate={[validation.required]}/>
-                            </div>
-                        </div>
+                            </Grid>
+                        </Grid>
                     </StandardCard>
 
 
@@ -240,17 +235,19 @@ export default class ThesisSubmission extends Component {
                     <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
-                            <RaisedButton
+                            <Button
+                                variant={'raised'}
                                 fullWidth
-                                label={formLocale.thesisSubmission.cancel}
+                                children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this.cancelSubmit}/>
                         </div>
                         <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
+                            <Button
+                                variant={'raised'}
+                                color={'primary'}
                                 fullWidth
-                                label={formLocale.thesisSubmission.submit}
+                                children={formLocale.thesisSubmission.submit}
                                 onClick={this.deposit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </div>

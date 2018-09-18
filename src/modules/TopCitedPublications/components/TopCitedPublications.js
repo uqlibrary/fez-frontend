@@ -113,7 +113,7 @@ export class TopCitedPublications extends PureComponent {
                                     <Grid item>
                                         <HelpIcon style={{marginBottom: -24}} {...locale.components.trendingPublicationHelp}/>
                                     </Grid>
-                                    <Grid item xs={12} style={{paddingTop: 24}}>
+                                    <Grid item xs={12} style={{paddingTop: 24}} id={'topCitedPublications'}>
                                         <PublicationsList
                                             key={key}
                                             publicationsList={values}

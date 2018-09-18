@@ -183,7 +183,7 @@ export class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        const containerStyle = this.state.docked ? {paddingLeft: 260} : {};
+        const containerStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 260} : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
