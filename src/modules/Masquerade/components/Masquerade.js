@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
@@ -41,28 +42,27 @@ export default class Masquerade extends Component {
             <StandardPage title={txt.title}>
                 <StandardCard title={txt.title} help={txt.help}>
                     <Typography>{txt.description}</Typography>
-                    <TextField
-                        fullWidth
-                        id="userName"
-                        label={txt.labels.hint}
-                        placeholder={txt.labels.hint}
-                        value={this.state.userName}
-                        onChange={this._usernameChanged}
-                        onKeyPress={this._masqueradeAs}
-                    />
+                    <Grid container>
+                        <Grid item xs>
+                            <TextField
+                                fullWidth
+                                id="userName"
+                                label={txt.labels.hint}
+                                value={this.state.userName}
+                                onChange={this._usernameChanged}
+                            />
+                        </Grid>
+                        <Grid item>
+                            <Button
+                                variant={'raised'}
+                                fullWidth
+                                color="primary"
+                                children={txt.labels.submit}
+                                disabled={this.state.loading}
+                                onClick={this._masqueradeAs}/>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-                <div className="columns action-buttons">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow-desktop">
-                        <Button
-                            variant={'raised'}
-                            fullWidth
-                            color="primary"
-                            children={txt.labels.submit}
-                            disabled={this.state.loading}
-                            onClick={this._masqueradeAs}/>
-                    </div>
-                </div>
             </StandardPage>
         );
     }

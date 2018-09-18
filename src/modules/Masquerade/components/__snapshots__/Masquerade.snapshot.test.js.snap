@@ -24,37 +24,37 @@ exports[`Component Masquerade Should render form as expected 1`] = `
          Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
       </div>
     </WithStyles(Typography)>
-    <TextField
-      fullWidth={true}
-      id="userName"
-      label="Username or student username"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      placeholder="Username or student username"
-      required={false}
-      select={false}
-      value=""
-    />
-  </StandardCard>
-  <div
-    className="columns action-buttons"
-  >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-desktop"
+    <WithStyles(Grid)
+      container={true}
     >
-      <WithStyles(Button)
-        color="primary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
       >
-        Masquerade
-      </WithStyles(Button)>
-    </div>
-  </div>
+        <TextField
+          fullWidth={true}
+          id="userName"
+          label="Username or student username"
+          onChange={[Function]}
+          required={false}
+          select={false}
+          value=""
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Masquerade
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </StandardCard>
 </StandardPage>
 `;
