@@ -3,8 +3,9 @@
 exports[`AuthorItem renders  should be disabled 1`] = `
 <WithStyles(Grid)
   item={true}
-  sm={4}
-  xs={true}
+  md={4}
+  sm={6}
+  xs={12}
 >
   <WithStyles(Grid)
     container={true}
@@ -44,8 +45,9 @@ exports[`AuthorItem renders  should be disabled 1`] = `
 exports[`AuthorItem renders  should be linked 1`] = `
 <WithStyles(Grid)
   item={true}
-  sm={4}
-  xs={true}
+  md={4}
+  sm={6}
+  xs={12}
 >
   <WithStyles(Grid)
     container={true}
@@ -83,8 +85,9 @@ exports[`AuthorItem renders  should be linked 1`] = `
 exports[`AuthorItem renders  should be linked and disabled 1`] = `
 <WithStyles(Grid)
   item={true}
-  sm={4}
-  xs={true}
+  md={4}
+  sm={6}
+  xs={12}
 >
   <WithStyles(Grid)
     container={true}
@@ -124,8 +127,9 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
 exports[`AuthorItem renders  should be selected 1`] = `
 <WithStyles(Grid)
   item={true}
-  sm={4}
-  xs={true}
+  md={4}
+  sm={6}
+  xs={12}
 >
   <WithStyles(Grid)
     container={true}
@@ -164,8 +168,9 @@ exports[`AuthorItem renders  should be selected 1`] = `
 exports[`AuthorItem renders  should be selected and disabled 1`] = `
 <WithStyles(Grid)
   item={true}
-  sm={4}
-  xs={true}
+  md={4}
+  sm={6}
+  xs={12}
 >
   <WithStyles(Grid)
     container={true}
@@ -204,8 +209,9 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
 exports[`AuthorItem renders  should be unselected and able to select author 1`] = `
 <WithStyles(Grid)
   item={true}
-  sm={4}
-  xs={true}
+  md={4}
+  sm={6}
+  xs={12}
 >
   <WithStyles(Grid)
     container={true}

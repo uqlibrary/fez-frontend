@@ -1,10 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
-import {Grid, withStyles} from '@material-ui/core';
+import {Grid, Typography, FormControlLabel, Checkbox, withStyles} from '@material-ui/core';
 
 const styles = (theme) => ({
     infiniteContainer: {
@@ -12,6 +10,23 @@ const styles = (theme) => ({
         borderColor: theme.palette.secondary.light,
         margin: '16px 0px',
         padding: '8px 0px'
+    },
+    root: {
+        alignItems: 'flex-start',
+        margin: 0
+    },
+    label: {
+        textAlign: 'justify',
+        fontSize: 16,
+        fontWeight: 300,
+        lineHeight: '30px',
+        paddingTop: 10
+    },
+    checkboxRoot: {
+        color: theme.palette.error.light,
+    },
+    checkboxChecked: {
+        color: `${theme.palette.primary.main} !important`
     }
 });
 
@@ -202,24 +217,29 @@ export class AuthorLinking extends PureComponent {
                 </Grid>
                 {
                     selectedAuthor !== null &&
-                    <div className="columns is-gapless is-multiline is-desktop is-mobile">
-                        <div className="column">
-                            <div className={!authorLinkingConfirmed ? 'author-linking-checkbox error-checkbox' : 'author-linking-checkbox'}>
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox name="authorLinkingConfirmation"
-                                            color="primary"
-                                            label={confirmation}
-                                            onChange={this._acceptAuthorLinkingTermsAndConditions}
-                                            checked={authorLinkingConfirmed}
-                                            disabled={this.props.disabled}
-                                        />
-                                    }
-                                    label={confirmation}
-                                />
-                            </div>
-                        </div>
-                    </div>
+                    <FormControlLabel
+                        classes={{
+                            root: this.props.classes.root
+                        }}
+                        disabled={this.props.disabled}
+                        control={
+                            <Checkbox
+                                checked={authorLinkingConfirmed}
+                                onChange={this._acceptAuthorLinkingTermsAndConditions}
+                                classes={{root: this.props.classes.checkboxRoot, checked: this.props.classes.checkboxChecked}}
+                            />
+                        }
+                        label={
+                            <Typography
+                                classes={{
+                                    root: this.props.classes.label
+                                }}
+                                color={!authorLinkingConfirmed ? 'error' : 'secondary'}
+                            >
+                                {confirmation}
+                            </Typography>
+                        }
+                    />
                 }
             </div>
         );

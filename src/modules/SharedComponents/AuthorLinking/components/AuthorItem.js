@@ -70,7 +70,7 @@ export class AuthorItem extends PureComponent {
         const disabled = this.props.disabled || linked;
 
         return (
-            <Grid item xs sm={4}>
+            <Grid item xs={12} sm={6} md={4}>
                 <Grid container>
                     <Grid item xs={12}>
                         <Button

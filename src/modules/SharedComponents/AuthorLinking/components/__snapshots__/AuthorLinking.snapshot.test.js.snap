@@ -62,7 +62,11 @@ exports[`AuthorLinking should be disabled 1`] = `
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={true}
@@ -149,7 +153,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={false}
@@ -236,7 +244,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={false}
@@ -322,7 +334,11 @@ exports[`AuthorLinking should render authors correctly 1`] = `
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={false}
@@ -397,7 +413,11 @@ exports[`ContributorLinking should be disabled 1`] = `
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={true}
@@ -454,7 +474,11 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={false}
@@ -511,7 +535,11 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
   }
   classes={
     Object {
+      "checkboxChecked": "AuthorLinking-checkboxChecked-05",
+      "checkboxRoot": "AuthorLinking-checkboxRoot-04",
       "infiniteContainer": "AuthorLinking-infiniteContainer-01",
+      "label": "AuthorLinking-label-03",
+      "root": "AuthorLinking-root-02",
     }
   }
   disabled={false}
