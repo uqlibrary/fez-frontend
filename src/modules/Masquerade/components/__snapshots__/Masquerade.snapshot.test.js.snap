@@ -23,8 +23,14 @@ exports[`Component Masquerade Should render form as expected 1`] = `
       </div>
     </WithStyles(Typography)>
     <WithStyles(Grid)
+      alignItems="flex-end"
       container={true}
       spacing={24}
+      style={
+        Object {
+          "marginTop": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}

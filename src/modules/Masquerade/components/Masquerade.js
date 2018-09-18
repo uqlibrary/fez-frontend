@@ -42,7 +42,7 @@ export default class Masquerade extends Component {
             <StandardPage>
                 <StandardCard title={txt.title} help={txt.help}>
                     <Typography>{txt.description}</Typography>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={24} alignItems={'flex-end'} style={{marginTop: 12}}>
                         <Grid item xs>
                             <TextField
                                 fullWidth
