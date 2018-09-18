@@ -2480,7 +2480,7 @@ exports[`Component FileUploadRowHeader should render with access condition and e
           <WithStyles(IconButton)
             onClick={[Function]}
           >
-            <pure(DeleteForever) />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Tooltip)>
       </WithStyles(Grid)>
@@ -2578,7 +2578,7 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
           <WithStyles(IconButton)
             onClick={[Function]}
           >
-            <pure(DeleteForever) />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Tooltip)>
       </WithStyles(Grid)>
@@ -2680,7 +2680,7 @@ exports[`Component FileUploadRowHeader should render without access condition ev
           <WithStyles(IconButton)
             onClick={[Function]}
           >
-            <pure(DeleteForever) />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Tooltip)>
       </WithStyles(Grid)>
