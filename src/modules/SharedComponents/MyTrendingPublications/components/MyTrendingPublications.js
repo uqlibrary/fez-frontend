@@ -9,29 +9,19 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core';
 
-const styles = theme => ({
+const styles = {
     pubCounts: {
-        color: theme.palette.accent.main,
+        // color: theme.palette.accent.main,
         '& .citationMetrics': {
-            color: theme.palette.accent.main,
-            '& a': {
-                color: theme.palette.accent.main,
-                '&:hover': {
-                    color: theme.palette.accent.main + ' !important',
-                    textDecoration: 'none'
-                }
-            },
             '& .count': {
-                color: theme.palette.text.primary,
                 fontSize: '1.75rem'
             },
             '& .difference': {
-                color: theme.palette.text.secondary,
                 fontSize: '1rem',
             }
         }
     }
-});
+};
 
 export class MyTrendingPublications extends PureComponent {
     static propTypes = {
@@ -53,9 +43,17 @@ export class MyTrendingPublications extends PureComponent {
         }
     }
 
-    render() {
-        const txt = locale.components.myTrendingPublications;
+    rainbowClass = () => {
+        let totalCount = 0;
+        this.props.trendingPublicationsList.map((key) => {
+            totalCount = totalCount + key.values.length;
+        });
+        return totalCount;
+    };
 
+    render() {
+        console.log(this.rainbowClass());
+        const txt = locale.components.myTrendingPublications;
         if (this.props.loadingTrendingPublications) {
             return (
                 <Grid container alignItems={'center'}>
