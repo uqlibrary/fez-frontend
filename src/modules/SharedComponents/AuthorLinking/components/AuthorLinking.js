@@ -4,9 +4,18 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
-import {Grid} from '@material-ui/core';
+import {Grid, withStyles} from '@material-ui/core';
 
-export default class AuthorLinking extends PureComponent {
+const styles = (theme) => ({
+    infiniteContainer: {
+        border: '1px solid',
+        borderColor: theme.palette.secondary.light,
+        margin: '16px 0px',
+        padding: '8px 0px'
+    }
+});
+
+export class AuthorLinking extends PureComponent {
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
@@ -15,7 +24,8 @@ export default class AuthorLinking extends PureComponent {
         locale: PropTypes.object,
         onChange: PropTypes.func,
         disabled: PropTypes.bool,
-        className: PropTypes.string
+        className: PropTypes.string,
+        classes: PropTypes.object
     };
 
     static contextTypes = {
@@ -179,16 +189,17 @@ export default class AuthorLinking extends PureComponent {
         const {selectedAuthor, authorLinkingConfirmed} = this.state;
         return (
             <div className={this.props.className}>
-                <div className="author-link-list">
-                    <Infinite
-                        className="author-link-infinite-scroll"
-                        containerHeight={200}
-                        elementHeight={73}
-                        infiniteLoadBeginEdgeOffset={50}
-                    >
-                        {this.authorsToRender}
-                    </Infinite>
-                </div>
+                <Grid container>
+                    <Grid item className={this.props.classes.infiniteContainer}>
+                        <Infinite
+                            containerHeight={200}
+                            elementHeight={73}
+                            infiniteLoadBeginEdgeOffset={50}
+                        >
+                            {this.authorsToRender}
+                        </Infinite>
+                    </Grid>
+                </Grid>
                 {
                     selectedAuthor !== null &&
                     <div className="columns is-gapless is-multiline is-desktop is-mobile">
@@ -214,3 +225,5 @@ export default class AuthorLinking extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles)(AuthorLinking);

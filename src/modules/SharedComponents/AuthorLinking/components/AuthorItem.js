@@ -11,7 +11,8 @@ const styles = (theme) => ({
         justifyContent: 'left'
     },
     authorOrder: {
-        marginLeft: theme.spacing.unit * 6
+        marginLeft: theme.spacing.unit * 6,
+        marginBottom: theme.spacing.unit * 2
     }
 });
 
