@@ -42,7 +42,7 @@ export default class Masquerade extends Component {
             <StandardPage title={txt.title}>
                 <StandardCard title={txt.title} help={txt.help}>
                     <Typography>{txt.description}</Typography>
-                    <Grid container>
+                    <Grid container spacing={24}>
                         <Grid item xs>
                             <TextField
                                 fullWidth
@@ -52,7 +52,7 @@ export default class Masquerade extends Component {
                                 onChange={this._usernameChanged}
                             />
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'raised'}
                                 fullWidth
