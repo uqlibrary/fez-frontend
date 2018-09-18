@@ -4,6 +4,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
+import {Grid} from '@material-ui/core';
 
 export default class AuthorLinking extends PureComponent {
     static propTypes = {
@@ -108,11 +109,11 @@ export default class AuthorLinking extends PureComponent {
         const itemsPerRow = 3;
         if (authors.length > 0) {
             for (let i = 0; i < authors.length; i += itemsPerRow) {
-                rows.push(<div className="columns is-multiline is-gapless is-marginless" key={i}>
+                rows.push(<Grid container key={i}>
                     {
                         authors.slice(i, i + itemsPerRow)
                     }
-                </div>);
+                </Grid>);
             }
         }
         return rows;

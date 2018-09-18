@@ -1,268 +1,243 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorItem renders  should be disabled 1`] = `
-<div
-  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+<WithStyles(Grid)
+  item={true}
+  sm={4}
+  xs={true}
 >
-  <div
-    className="author-button"
+  <WithStyles(Grid)
+    container={true}
   >
-    <FlatButton
-      disabled={true}
-      fullWidth={true}
-      icon={
-        <ToggleRadioButtonUnchecked
-          className="author-link-status"
-        />
-      }
-      label={
-        <span
-          className="author-link-name"
-        >
-          Test user
-        </span>
-      }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onClick={[Function]}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      primary={false}
-      secondary={false}
-    />
-    <div
-      className="author-link-order"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="author-link-order-text"
+      <WithStyles(Button)
+        className="buttonBase"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+      >
+        <pure(RadioButtonUncheckedIcon)
+          className="authorLinkIcon"
+          color="secondary"
+        />
+        Test user
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        className="authorOrder"
+        variant="caption"
       >
         First  listed author
-      </span>
-    </div>
-  </div>
-</div>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`AuthorItem renders  should be linked 1`] = `
-<div
-  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+<WithStyles(Grid)
+  item={true}
+  sm={4}
+  xs={true}
 >
-  <div
-    className="author-button"
+  <WithStyles(Grid)
+    container={true}
   >
-    <FlatButton
-      disabled={true}
-      fullWidth={true}
-      icon={
-        <ContentLink
-          className="author-link-status"
-        />
-      }
-      label={
-        <span
-          className="author-link-name"
-        >
-          Test user
-        </span>
-      }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      primary={false}
-      secondary={false}
-    />
-    <div
-      className="author-link-order"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="author-link-order-text"
+      <WithStyles(Button)
+        className="buttonBase"
+        disabled={true}
+        fullWidth={true}
+      >
+        <pure(LinkIcon)
+          className="authorLinkIcon"
+        />
+        Test user
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        className="authorOrder"
+        variant="caption"
       >
         First  listed author
-      </span>
-    </div>
-  </div>
-</div>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`AuthorItem renders  should be linked and disabled 1`] = `
-<div
-  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+<WithStyles(Grid)
+  item={true}
+  sm={4}
+  xs={true}
 >
-  <div
-    className="author-button"
+  <WithStyles(Grid)
+    container={true}
   >
-    <FlatButton
-      disabled={true}
-      fullWidth={true}
-      icon={
-        <ToggleRadioButtonUnchecked
-          className="author-link-status"
-        />
-      }
-      label={
-        <span
-          className="author-link-name"
-        >
-          Test user
-        </span>
-      }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onClick={[Function]}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      primary={false}
-      secondary={false}
-    />
-    <div
-      className="author-link-order"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="author-link-order-text"
+      <WithStyles(Button)
+        className="buttonBase"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+      >
+        <pure(RadioButtonUncheckedIcon)
+          className="authorLinkIcon"
+          color="secondary"
+        />
+        Test user
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        className="authorOrder"
+        variant="caption"
       >
         First  listed author
-      </span>
-    </div>
-  </div>
-</div>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`AuthorItem renders  should be selected 1`] = `
-<div
-  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+<WithStyles(Grid)
+  item={true}
+  sm={4}
+  xs={true}
 >
-  <div
-    className="author-button"
+  <WithStyles(Grid)
+    container={true}
   >
-    <FlatButton
-      disabled={false}
-      fullWidth={true}
-      icon={
-        <ToggleRadioButtonChecked
-          className="author-link-status"
-        />
-      }
-      label={
-        <span
-          className="author-link-name"
-        >
-          Test user
-        </span>
-      }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      primary={true}
-      secondary={false}
-    />
-    <div
-      className="author-link-order"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="author-link-order-text"
+      <WithStyles(Button)
+        className="buttonBase"
+        disabled={false}
+        fullWidth={true}
+      >
+        <pure(RadioButtonCheckedIcon)
+          className="authorLinkIcon"
+          color="primary"
+        />
+        Test user
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        className="authorOrder"
+        variant="caption"
       >
         First  listed author
-      </span>
-    </div>
-  </div>
-</div>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`AuthorItem renders  should be selected and disabled 1`] = `
-<div
-  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+<WithStyles(Grid)
+  item={true}
+  sm={4}
+  xs={true}
 >
-  <div
-    className="author-button"
+  <WithStyles(Grid)
+    container={true}
   >
-    <FlatButton
-      disabled={true}
-      fullWidth={true}
-      icon={
-        <ToggleRadioButtonChecked
-          className="author-link-status"
-        />
-      }
-      label={
-        <span
-          className="author-link-name"
-        >
-          Test user
-        </span>
-      }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      primary={true}
-      secondary={false}
-    />
-    <div
-      className="author-link-order"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="author-link-order-text"
+      <WithStyles(Button)
+        className="buttonBase"
+        disabled={true}
+        fullWidth={true}
+      >
+        <pure(RadioButtonCheckedIcon)
+          className="authorLinkIcon"
+          color="primary"
+        />
+        Test user
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        className="authorOrder"
+        variant="caption"
       >
         First  listed author
-      </span>
-    </div>
-  </div>
-</div>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`AuthorItem renders  should be unselected and able to select author 1`] = `
-<div
-  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+<WithStyles(Grid)
+  item={true}
+  sm={4}
+  xs={true}
 >
-  <div
-    className="author-button"
+  <WithStyles(Grid)
+    container={true}
   >
-    <FlatButton
-      disabled={false}
-      fullWidth={true}
-      icon={
-        <ToggleRadioButtonUnchecked
-          className="author-link-status"
-        />
-      }
-      label={
-        <span
-          className="author-link-name"
-        >
-          Test user
-        </span>
-      }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onClick={[Function]}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      primary={false}
-      secondary={false}
-    />
-    <div
-      className="author-link-order"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="author-link-order-text"
+      <WithStyles(Button)
+        className="buttonBase"
+        disabled={false}
+        fullWidth={true}
+        onClick={[Function]}
+      >
+        <pure(RadioButtonUncheckedIcon)
+          className="authorLinkIcon"
+          color="secondary"
+        />
+        Test user
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        className="authorOrder"
+        variant="caption"
       >
         First  listed author
-      </span>
-    </div>
-  </div>
-</div>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

@@ -156,7 +156,7 @@ describe('AuthorLinking', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        expect(wrapper.find('AuthorItem').get(1).props.linked).toBeFalsy();
+        expect(wrapper.find('WithStyles(AuthorItem)').get(1).props.linked).toBeFalsy();
     })
 });
 

@@ -19,11 +19,11 @@ exports[`AuthorLinking should be disabled 1`] = `
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Overgaard, Nana H.",
@@ -36,28 +36,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Cruz, Jazmina L.",
@@ -70,28 +53,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Bridge, Jennifer A.",
@@ -104,33 +70,16 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={2}
           key="2"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="3"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Nel, Hendrik J.",
@@ -143,28 +92,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={3}
           key="3"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Frazer, Ian H.",
@@ -177,28 +109,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={4}
           key="4"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "La Gruta, Nicole L.",
@@ -211,33 +126,16 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={5}
           key="5"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="6"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Blumenthal, Antje",
@@ -250,28 +148,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={6}
           key="6"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Steptoe, Raymond J.",
@@ -284,28 +165,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={7}
           key="7"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Wells, James W.",
@@ -318,28 +182,11 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={8}
           key="8"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -364,11 +211,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Overgaard, Nana H.",
@@ -381,28 +228,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Cruz, Jazmina L.",
@@ -415,28 +245,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Bridge, Jennifer A.",
@@ -449,33 +262,16 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={2}
           key="2"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="3"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Nel, Hendrik J.",
@@ -488,28 +284,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={3}
           key="3"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Frazer, Ian H.",
@@ -522,28 +301,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={4}
           key="4"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "La Gruta, Nicole L.",
@@ -556,33 +318,16 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={5}
           key="5"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="6"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Blumenthal, Antje",
@@ -595,28 +340,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={6}
           key="6"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Steptoe, Raymond J.",
@@ -629,28 +357,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={7}
           key="7"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Wells, James W.",
@@ -663,28 +374,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={8}
           key="8"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -709,11 +403,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Overgaard, Nana H.",
@@ -726,28 +420,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Cruz, Jazmina L.",
@@ -760,28 +437,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Bridge, Jennifer A.",
@@ -794,33 +454,16 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={2}
           key="2"
           linked={true}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="3"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Nel, Hendrik J.",
@@ -833,28 +476,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={3}
           key="3"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Frazer, Ian H.",
@@ -867,28 +493,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={4}
           key="4"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "La Gruta, Nicole L.",
@@ -901,33 +510,16 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={5}
           key="5"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="6"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Blumenthal, Antje",
@@ -940,28 +532,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={6}
           key="6"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Steptoe, Raymond J.",
@@ -974,28 +549,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={7}
           key="7"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Wells, James W.",
@@ -1008,28 +566,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={8}
           key="8"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -1054,11 +595,11 @@ exports[`AuthorLinking should render authors correctly 1`] = `
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "J Smith",
@@ -1072,28 +613,11 @@ exports[`AuthorLinking should render authors correctly 1`] = `
           index={0}
           key="0"
           linked={true}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "A Smith",
@@ -1107,28 +631,11 @@ exports[`AuthorLinking should render authors correctly 1`] = `
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -1153,11 +660,11 @@ exports[`ContributorLinking should be disabled 1`] = `
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Overgaard, Nana H.",
@@ -1170,28 +677,11 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Cruz, Jazmina L.",
@@ -1204,28 +694,11 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Bridge, Jennifer A.",
@@ -1238,33 +711,16 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={2}
           key="2"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="3"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Nel, Hendrik J.",
@@ -1277,28 +733,11 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={3}
           key="3"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -1323,11 +762,11 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Overgaard, Nana H.",
@@ -1340,28 +779,11 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Cruz, Jazmina L.",
@@ -1374,28 +796,11 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Bridge, Jennifer A.",
@@ -1408,33 +813,16 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={2}
           key="2"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="3"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Nel, Hendrik J.",
@@ -1447,28 +835,11 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={3}
           key="3"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -1493,11 +864,11 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Overgaard, Nana H.",
@@ -1510,28 +881,11 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Cruz, Jazmina L.",
@@ -1544,28 +898,11 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Bridge, Jennifer A.",
@@ -1578,33 +915,16 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={2}
           key="2"
           linked={true}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-      </div>
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
         key="3"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_contributor": "Nel, Hendrik J.",
@@ -1617,28 +937,11 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={3}
           key="3"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="contributor"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>

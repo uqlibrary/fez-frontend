@@ -1,4 +1,4 @@
-import AuthorItem from './AuthorItem';
+import {AuthorItem} from './AuthorItem';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -7,6 +7,11 @@ function setup(testProps, isShallow = true) {
         index: testProps.index || 0,
         onAuthorSelected: testProps.onAuthorSelected || undefined,
         type: 'author',
+        classes: {
+            authorLinkIcon: 'authorLinkIcon',
+            buttonBase: 'buttonBase',
+            authorOrder: 'authorOrder'
+        },
         ...testProps
     };
     return getElement(AuthorItem, props, isShallow);

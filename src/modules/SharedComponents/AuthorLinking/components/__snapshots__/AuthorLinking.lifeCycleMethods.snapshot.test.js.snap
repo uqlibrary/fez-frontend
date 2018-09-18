@@ -19,11 +19,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Overgaard, Nana H.",
@@ -36,28 +36,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Cruz, Jazmina L.",
@@ -70,28 +53,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -116,11 +82,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Overgaard, Nana H.",
@@ -133,28 +99,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Cruz, Jazmina L.",
@@ -167,28 +116,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
@@ -213,11 +145,11 @@ exports[`AuthorLinking should render component if authorList has more authors th
       timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
-      <div
-        className="columns is-multiline is-gapless is-marginless"
+      <WithStyles(Grid)
+        container={true}
         key="0"
       >
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Overgaard, Nana H.",
@@ -230,28 +162,11 @@ exports[`AuthorLinking should render component if authorList has more authors th
           index={0}
           key="0"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-        <AuthorItem
+        <WithStyles(AuthorItem)
           author={
             Object {
               "rek_author": "Cruz, Jazmina L.",
@@ -264,28 +179,11 @@ exports[`AuthorLinking should render component if authorList has more authors th
           index={1}
           key="1"
           linked={false}
-          locale={
-            Object {
-              "ordinalData": Array [
-                "First",
-                "Second",
-                "Third",
-                "Fourth",
-                "Fifth",
-                "Sixth",
-                "Seventh",
-                "Eighth",
-                "Ninth",
-                "Tenth",
-              ],
-              "suffix": " listed [type]",
-            }
-          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
         />
-      </div>
+      </WithStyles(Grid)>
     </Infinite>
   </div>
 </div>
