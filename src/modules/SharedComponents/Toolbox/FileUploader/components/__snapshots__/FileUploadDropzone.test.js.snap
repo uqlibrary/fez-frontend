@@ -954,7 +954,6 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                         </Grid>
                                       </WithStyles(Grid)>
                                       <WithStyles(Grid)
-                                        container={true}
                                         item={true}
                                         sm={6}
                                         xs={12}
@@ -1064,7 +1063,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                             }
                                           }
                                           component="div"
-                                          container={true}
+                                          container={false}
                                           direction="row"
                                           item={true}
                                           justify="flex-start"
@@ -1078,7 +1077,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                           zeroMinWidth={false}
                                         >
                                           <div
-                                            className="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
+                                            className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
                                           >
                                             <WithStyles(Grid)
                                               alignItems="center"
@@ -2544,7 +2543,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                         </Grid>
                                       </WithStyles(Grid)>
                                       <WithStyles(Grid)
-                                        container={true}
                                         item={true}
                                         sm={6}
                                         xs={12}
@@ -2654,7 +2652,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                             }
                                           }
                                           component="div"
-                                          container={true}
+                                          container={false}
                                           direction="row"
                                           item={true}
                                           justify="flex-start"
@@ -2668,7 +2666,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                           zeroMinWidth={false}
                                         >
                                           <div
-                                            className="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
+                                            className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
                                           >
                                             <WithStyles(Grid)
                                               alignItems="center"

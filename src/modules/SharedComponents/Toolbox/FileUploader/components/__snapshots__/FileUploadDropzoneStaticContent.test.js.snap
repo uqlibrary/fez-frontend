@@ -676,7 +676,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                     </Grid>
                   </WithStyles(Grid)>
                   <WithStyles(Grid)
-                    container={true}
                     item={true}
                     sm={6}
                     xs={12}
@@ -786,7 +785,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                         }
                       }
                       component="div"
-                      container={true}
+                      container={false}
                       direction="row"
                       item={true}
                       justify="flex-start"
@@ -800,7 +799,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                       zeroMinWidth={false}
                     >
                       <div
-                        className="MuiGrid-container-5 MuiGrid-item-6 MuiGrid-grid-xs-12-45 MuiGrid-grid-sm-6-53"
+                        className="MuiGrid-item-6 MuiGrid-grid-xs-12-45 MuiGrid-grid-sm-6-53"
                       >
                         <WithStyles(Grid)
                           alignItems="center"

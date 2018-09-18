@@ -43,16 +43,7 @@ export class MyTrendingPublications extends PureComponent {
         }
     }
 
-    rainbowClass = () => {
-        let totalCount = 0;
-        this.props.trendingPublicationsList.map((key) => {
-            totalCount = totalCount + key.values.length;
-        });
-        return totalCount;
-    };
-
     render() {
-        console.log(this.rainbowClass());
         const txt = locale.components.myTrendingPublications;
         if (this.props.loadingTrendingPublications) {
             return (
