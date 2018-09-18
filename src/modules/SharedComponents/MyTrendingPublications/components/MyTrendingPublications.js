@@ -5,13 +5,31 @@ import {locale} from 'locale';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core';
 
-export default class MyTrendingPublications extends PureComponent {
+const styles = {
+    pubCounts: {
+        // color: theme.palette.accent.main,
+        '& .citationMetrics': {
+            '& .count': {
+                fontSize: '1.75rem'
+            },
+            '& .difference': {
+                fontSize: '1rem',
+            }
+        }
+    }
+};
+
+export class MyTrendingPublications extends PureComponent {
     static propTypes = {
         trendingPublicationsList: PropTypes.array,
         loadingTrendingPublications: PropTypes.bool,
         actions: PropTypes.object,
-        accountAuthorDetailsLoading: PropTypes.bool
+        accountAuthorDetailsLoading: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -27,36 +45,46 @@ export default class MyTrendingPublications extends PureComponent {
 
     render() {
         const txt = locale.components.myTrendingPublications;
-
         if (this.props.loadingTrendingPublications) {
             return (
-                <div className="isLoading is-centered">
-                    <InlineLoader message={txt.loading}/>
-                </div>
+                <Grid container alignItems={'center'}>
+                    <Grid item>
+                        <InlineLoader message={txt.loading}/>
+                    </Grid>
+                </Grid>
             );
         }
 
         return (
-            <div  className="trendingPubs">
-                <div className="is-pulled-right">
-                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
-                </div>
-                {
-                    this.props.trendingPublicationsList.map(({key, values}, metricIndex) => (
-                        <div key={'metrics_' + metricIndex} className="trendingPubsSection">
-                            <h2 className="trendingPubsSource">
-                                <div className={`fez-icon ${key} xxlarge`}/>
-                                {txt.metrics[key].title}
-                            </h2>
-                            <div className="is-hidden-mobile subTitle">{txt.metrics[key].subtitle}</div>
-                            <PublicationsList
-                                publicationsList={values}
-                                showMetrics
-                            />
-                        </div>
-                    ))
-                }
-            </div>
+            <Grid container spacing={24} id={'myTrendingPublications'}>
+                <Grid item xs={12}>
+                    {
+                        this.props.trendingPublicationsList.map(({key, values}, metricIndex) => (
+                            <Grid container key={metricIndex} spacing={24}>
+                                <Grid item xs>
+                                    <Typography variant={'title'}>
+                                        <div className={`fez-icon ${key} xxlarge`}/>
+                                        {txt.metrics[key].title}
+                                    </Typography>
+                                    <Typography variant={'subheading'}>{txt.metrics[key].subtitle}</Typography>
+                                </Grid>
+                                <Grid item>
+                                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
+                                </Grid>
+                                <Grid item xs={12} className={this.props.classes.pubCounts}>
+                                    <PublicationsList
+                                        publicationsList={values}
+                                        showMetrics
+                                    />
+                                </Grid>
+                            </Grid>
+                        ))
+                    }
+                </Grid>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(MyTrendingPublications);
+

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
@@ -28,9 +29,9 @@ export default class Masquerade extends Component {
         window.location.href = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(window.location.href)}`;
     };
 
-    _usernameChanged = (event, newValue) => {
+    _usernameChanged = (event) => {
         this.setState({
-            userName: newValue
+            userName: event.target.value
         });
     };
 
@@ -38,31 +39,30 @@ export default class Masquerade extends Component {
         const txt = locale.pages.masquerade;
 
         return (
-            <StandardPage title={txt.title}>
+            <StandardPage>
                 <StandardCard title={txt.title} help={txt.help}>
                     <Typography>{txt.description}</Typography>
-                    <TextField
-                        fullWidth
-                        id="userName"
-                        label={txt.labels.hint}
-                        placeholder={txt.labels.hint}
-                        value={this.state.userName}
-                        onChange={this._usernameChanged}
-                        onKeyPress={this._masqueradeAs}
-                    />
+                    <Grid container spacing={24} alignItems={'flex-end'} style={{marginTop: 12}}>
+                        <Grid item xs>
+                            <TextField
+                                fullWidth
+                                id="userName"
+                                label={txt.labels.hint}
+                                value={this.state.userName}
+                                onChange={this._usernameChanged}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
+                                fullWidth
+                                color="primary"
+                                children={txt.labels.submit}
+                                disabled={this.state.loading}
+                                onClick={this._masqueradeAs}/>
+                        </Grid>
+                    </Grid>
                 </StandardCard>
-                <div className="columns action-buttons">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow-desktop">
-                        <Button
-                            variant={'raised'}
-                            fullWidth
-                            color="primary"
-                            children={txt.labels.submit}
-                            disabled={this.state.loading}
-                            onClick={this._masqueradeAs}/>
-                    </div>
-                </div>
             </StandardPage>
         );
     }

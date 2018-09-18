@@ -61,11 +61,9 @@ describe('Component FileUploadRowHeader', () => {
         };
 
         const wrapper = setup({...props}, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
-
         wrapper.find('FileUploadRowHeader').instance()._showConfirmation();
         wrapper.update();
-
+        console.log(toJson(wrapper.find('FileUploadRowHeader')));
         expect(toJson(wrapper)).toMatchSnapshot();
     })
 });

@@ -57,7 +57,7 @@ describe('Component NewsFeed', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it.skip('should call action to load news feed', () => {
+    it('should call action to load news feed', () => {
         const loadFn = jest.fn();
         const wrapper = setup({actions: { loadNewsFeed: loadFn}});
         wrapper.instance().componentDidMount();

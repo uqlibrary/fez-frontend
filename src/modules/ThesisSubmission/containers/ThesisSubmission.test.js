@@ -9,11 +9,11 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('ThesisSubmission container', () => {
-    it.skip('should mount', () => {
+    it('should mount', () => {
         const wrapper = setup({}, false);
     });
 
-    it.skip('should read the local storage', () => {
+    it('should read the local storage', () => {
         const wrapper = setup({}, false);
         expect(localStorage.getItem).toHaveBeenLastCalledWith('form');
     });

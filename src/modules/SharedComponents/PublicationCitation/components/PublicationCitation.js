@@ -46,10 +46,10 @@ const styles = theme => ({
     },
     citationTitle: {
         [theme.breakpoints.up('sm')]: {
-            fontSize: '1.5rem !important'
+            fontSize: '1.5rem'
         },
         [theme.breakpoints.down('xs')]: {
-            fontSize: '1.25rem !important'
+            fontSize: '1.25rem'
         },
         marginBottom: 6,
         marginRight: 12
@@ -207,27 +207,37 @@ export class PublicationCitation extends PureComponent {
                             }
                             {
                                 this.props.showMetrics &&
-                                <Grid item xs={'auto'} className={'citationMetrics'}>
+                                <Grid item xs={12} sm={'auto'} className={'citationMetrics'}>
                                     <ExternalLink
                                         href={recordValue.citation_url}
                                         title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
                                         aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
                                         openInNewIcon={false}>
-                                        {
-                                            this.props.showSourceCountIcon &&
-                                            <React.Fragment>
-                                                <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                <Typography variant={'title'}>{recordValue.count}</Typography>
-                                            </React.Fragment>
-                                        }
-                                        {!this.props.showSourceCountIcon && !this.props.hideCountTotal && recordValue.count}
-                                        {
-                                            !this.props.hideCountDiff &&
-                                            <Typography variant={'title'} color={'inherit'}
-                                                title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
-                                                +{Math.round(recordValue.difference)}
-                                            </Typography>
-                                        }
+                                        <Grid container>
+                                            {
+                                                this.props.showSourceCountIcon &&
+                                                <Grid item>
+                                                    <span className={`fez-icon ${recordValue.source} xxxlarge`} />
+                                                    <Typography variant={'title'}>{recordValue.count}</Typography>
+                                                </Grid>
+                                            }
+                                            {
+                                                !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
+                                                <Grid item>
+                                                    <Typography variant={'title'} color={'inherit'} className={'count'}>
+                                                        {Math.round(recordValue.count)}
+                                                    </Typography>
+                                                </Grid>
+                                            }
+                                            {
+                                                !this.props.hideCountDiff &&
+                                                <Grid item>
+                                                    <Typography variant={'title'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
+                                                        +{Math.round(recordValue.difference)}
+                                                    </Typography>
+                                                </Grid>
+                                            }
+                                        </Grid>
                                     </ExternalLink>
                                 </Grid>
                             }

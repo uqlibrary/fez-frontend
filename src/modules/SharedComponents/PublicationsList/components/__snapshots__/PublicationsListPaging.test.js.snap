@@ -17,6 +17,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     >
       <WithStyles(Button)
         disabled={false}
+        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -58,6 +59,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -71,6 +73,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="7"
           onClick={[Function]}
           size="small"
@@ -83,6 +86,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="8"
           onClick={[Function]}
           size="small"
@@ -95,6 +99,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="9"
           onClick={[Function]}
           size="small"
@@ -107,6 +112,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="primary"
           disabled={true}
+          id="pageButton"
           key="10"
           onClick={[Function]}
           size="small"
@@ -119,6 +125,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="11"
           onClick={[Function]}
           size="small"
@@ -131,6 +138,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="12"
           onClick={[Function]}
           size="small"
@@ -143,6 +151,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="13"
           onClick={[Function]}
           size="small"
@@ -156,6 +165,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="50"
           onClick={[Function]}
           size="small"
@@ -211,6 +221,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     >
       <WithStyles(Button)
         disabled={false}
+        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="flat"
@@ -240,6 +251,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     >
       <WithStyles(Button)
         disabled={true}
+        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -281,6 +293,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           className=""
           color="primary"
           disabled={true}
+          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -293,6 +306,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="2"
           onClick={[Function]}
           size="small"
@@ -305,6 +319,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="3"
           onClick={[Function]}
           size="small"
@@ -360,6 +375,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     >
       <WithStyles(Button)
         disabled={false}
+        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="flat"
@@ -383,6 +399,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
     >
       <WithStyles(Button)
         disabled={false}
+        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -424,6 +441,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -436,6 +454,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="2"
           onClick={[Function]}
           size="small"
@@ -448,6 +467,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           className=""
           color="primary"
           disabled={true}
+          id="pageButton"
           key="3"
           onClick={[Function]}
           size="small"
@@ -503,6 +523,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
     >
       <WithStyles(Button)
         disabled={true}
+        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="flat"
@@ -526,6 +547,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
     >
       <WithStyles(Button)
         disabled={false}
+        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -567,6 +589,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -579,6 +602,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           className=""
           color="primary"
           disabled={true}
+          id="pageButton"
           key="2"
           onClick={[Function]}
           size="small"
@@ -591,6 +615,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           className=""
           color="default"
           disabled={false}
+          id="pageButton"
           key="3"
           onClick={[Function]}
           size="small"
@@ -646,6 +671,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
     >
       <WithStyles(Button)
         disabled={false}
+        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="flat"

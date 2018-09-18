@@ -39,20 +39,24 @@ class Cards extends Component {
         const {classes, title, help, children, darkHeader} = this.props;
         return (
             <Card className={classes.card}>
-                {title &&
-                    <Grid container spacing={24}>
-                        <Grid item xs className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
-                            <Typography variant={'title'} color={'inherit'}>{title}</Typography>
-                        </Grid>
-                    </Grid>
-                }
-                <CardContent>
-                    <Grid container spacing={24}>
-                        {help && help.text &&
+                <Grid container spacing={24}>
+                    {
+                        title ?
+                            <Grid item xs className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
+                                <Typography variant={'title'} color={'inherit'}>{title}</Typography>
+                            </Grid>
+                            :
+                            <Grid item xs />
+                    }
+                    {
+                        help && help.text &&
                         <Grid item>
                             <HelpIcon {...help}/>
                         </Grid>
-                        }
+                    }
+                </Grid>
+                <CardContent>
+                    <Grid container spacing={24}>
                         <Grid item xs={12} className={classes.cardContent}>
                             {children}
                         </Grid>
