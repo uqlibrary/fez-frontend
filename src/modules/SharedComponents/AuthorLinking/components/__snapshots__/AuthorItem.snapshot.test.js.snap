@@ -9,6 +9,7 @@ exports[`AuthorItem renders  should be disabled 1`] = `
 >
   <WithStyles(Grid)
     container={true}
+    direction="row"
   >
     <WithStyles(Grid)
       item={true}
@@ -51,6 +52,7 @@ exports[`AuthorItem renders  should be linked 1`] = `
 >
   <WithStyles(Grid)
     container={true}
+    direction="row"
   >
     <WithStyles(Grid)
       item={true}
@@ -91,6 +93,7 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
 >
   <WithStyles(Grid)
     container={true}
+    direction="row"
   >
     <WithStyles(Grid)
       item={true}
@@ -133,6 +136,7 @@ exports[`AuthorItem renders  should be selected 1`] = `
 >
   <WithStyles(Grid)
     container={true}
+    direction="row"
   >
     <WithStyles(Grid)
       item={true}
@@ -174,6 +178,7 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
 >
   <WithStyles(Grid)
     container={true}
+    direction="row"
   >
     <WithStyles(Grid)
       item={true}
@@ -215,6 +220,7 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
 >
   <WithStyles(Grid)
     container={true}
+    direction="row"
   >
     <WithStyles(Grid)
       item={true}
