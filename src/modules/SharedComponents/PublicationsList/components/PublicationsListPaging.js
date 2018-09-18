@@ -63,6 +63,7 @@ export class PublicationsListPaging extends Component {
             <Button
                 variant={'flat'}
                 key={key}
+                id={'pageButton'}
                 size={'small'}
                 className={classNames(this.props.classes.pageButton, isCurrentPage && this.props.classes.pageButton)}
                 onClick={() => {this.pageChanged(key);}}
@@ -107,6 +108,7 @@ export class PublicationsListPaging extends Component {
                                     <Button
                                         style={{paddingLeft: 4}}
                                         variant={'flat'}
+                                        id={'pagingPrevious'}
                                         className={classes.nextPrevButtons}
                                         onClick={() => {
                                             this.pageChanged(currentPage - 1);
@@ -144,6 +146,7 @@ export class PublicationsListPaging extends Component {
                             currentPage <= totalPages &&
                             <Grid item>
                                 <Button
+                                    id={'pagingNext'}
                                     variant={'flat'}
                                     size={'small'}
                                     className={classes.nextPrevButtons}

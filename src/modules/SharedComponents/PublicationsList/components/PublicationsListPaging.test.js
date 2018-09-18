@@ -164,7 +164,7 @@ describe('PublicationsListPaging renders ', () => {
         expect(testFunction).toBeCalled();
     });
 
-    it.skip('component with non-empty paging data, next page clicked', () => {
+    it('component with non-empty paging data, next page clicked', () => {
         const data = {
             from: 1,
             to: 20,
@@ -175,13 +175,13 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
 
-        const nextPage = wrapper.find('FlatButton.pagingNext');
+        const nextPage = wrapper.find('#pagingNext');
         expect(nextPage.length).toBe(1);
         nextPage.props().onClick();
         expect(testFunction).toBeCalled();
     });
 
-    it.skip('component with non-empty paging data, previous page clicked', () => {
+    it('component with non-empty paging data, previous page clicked', () => {
         const data = {
             from: 21,
             to: 40,
@@ -192,13 +192,13 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
 
-        const page = wrapper.find('FlatButton.pagingPrevious');
+        const page = wrapper.find('#pagingPrevious');
         expect(page.length).toBe(1);
         page.props().onClick();
         expect(testFunction).toBeCalled();
     });
 
-    it.skip('component with non-empty paging data, page number is clicked', () => {
+    it('component with non-empty paging data, page number is clicked', () => {
         const data = {
             from: 1,
             to: 20,
@@ -208,7 +208,7 @@ describe('PublicationsListPaging renders ', () => {
         };
         const testFunction = jest.fn();
         const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
-        const pages = wrapper.find('.publicationsListPaging .page');
+        const pages = wrapper.find('#pageButton');
         pages.at(1).props().onClick();
         expect(testFunction).toBeCalled();
     });

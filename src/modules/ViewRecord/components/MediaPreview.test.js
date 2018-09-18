@@ -30,7 +30,7 @@ describe('Media Preview Component ', () => {
         expect(wrapper.find('RaisedButton').length).toEqual(4);
     });
 
-    it.skip('should call open new window on touch tap', () => {
+    it('should call open new window on touch tap', () => {
         const open = jest.fn();
         global.open = open;
         const wrapper = setup({}, false);

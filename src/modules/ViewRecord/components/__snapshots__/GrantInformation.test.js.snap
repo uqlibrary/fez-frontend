@@ -38,7 +38,6 @@ exports[`Grant Information Component  should not break if grant text is not in t
           <b>
             Grant agency
           </b>
-           (Grant ID)
         </TableRowColumn>
         <TableRowColumn
           className="data"
@@ -47,7 +46,6 @@ exports[`Grant Information Component  should not break if grant text is not in t
           <b>
             National Health and Medical Research Council
           </b>
-           (569645 | 1022263)
           <span
             className="grantText"
           />

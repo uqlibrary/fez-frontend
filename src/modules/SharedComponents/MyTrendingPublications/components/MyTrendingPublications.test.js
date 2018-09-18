@@ -1,9 +1,12 @@
 import {trendingPublications} from 'mock/data/testing/trendingPublications';
-import MyTrendingPublications from './MyTrendingPublications';
+import {MyTrendingPublications} from './MyTrendingPublications';
 import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
+import mui1theme from 'config';
 
 function setup(testProps, isShallow = true){
     const props = {
+        classes: {},
+        theme: mui1theme,
         actions: {
             searchTrendingPublications: jest.fn()
         },

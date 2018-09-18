@@ -98,7 +98,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
         <div
           className="publicationTabContent"
         >
-          <Connect(MyTrendingPublications) />
+          <Connect(WithStyles(MyTrendingPublications)) />
         </div>
       </Tab>
     </Tabs>
@@ -675,7 +675,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
         <div
           className="publicationTabContent"
         >
-          <Connect(MyTrendingPublications) />
+          <Connect(WithStyles(MyTrendingPublications)) />
         </div>
       </Tab>
     </Tabs>

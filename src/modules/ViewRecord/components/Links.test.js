@@ -103,14 +103,14 @@ describe('Component Links ', () => {
         // expect(wrapper.find('.noOaIcon').length).toEqual(3);
     });
 
-    it.skip('should render list of 3 not OA links and DOI link with OA Embargo date set for OPEN_ACCESS_ID_DOI', () => {
+    it('should render list of 3 not OA links and DOI link with OA Embargo date set for OPEN_ACCESS_ID_DOI', () => {
         const wrapper = setup({publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI)}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(3);
         expect(wrapper.find('.openAccessEmbargoed').length).toEqual(1);
     });
 
-    it.skip('should render 3 not OA links and DOI and PMC links with OA for OPEN_ACCESS_ID_DOI', () => {
+    it('should render 3 not OA links and DOI and PMC links with OA for OPEN_ACCESS_ID_DOI', () => {
         const pmcProps = {
             ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_DOI),
             "fez_record_search_key_pubmed_central_id": {
@@ -127,7 +127,7 @@ describe('Component Links ', () => {
         expect(wrapper.find('.openAccess').length).toEqual(2);
     });
 
-    it.skip('should render 3 not OA links and PMC link with OA for OPEN_ACCESS_ID_PMC', () => {
+    it('should render 3 not OA links and PMC link with OA for OPEN_ACCESS_ID_PMC', () => {
         const pmcProps = {
             ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_PMC),
             "fez_record_search_key_pubmed_central_id": {
@@ -144,7 +144,7 @@ describe('Component Links ', () => {
         expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 
-    it.skip('should render 3 not OA links and PMC with OA and DOI link no OA for OPEN_ACCESS_ID_PMC', () => {
+    it('should render 3 not OA links and PMC with OA and DOI link no OA for OPEN_ACCESS_ID_PMC', () => {
         const pmcProps = {
             ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_PMC),
             "fez_record_search_key_pubmed_central_id": {

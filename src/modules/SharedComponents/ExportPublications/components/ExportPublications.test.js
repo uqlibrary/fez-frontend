@@ -33,7 +33,7 @@ describe('Export Publications renders', () => {
         // expect(mockOnChange.mock.calls.length).toBe(1);
     });
 
-    it.skip('component with all fields disabled', () => {
+    it('component with all fields disabled', () => {
         const wrapper = setup({disabled: true});
         wrapper.find('SelectField').forEach(option => {
             expect(option.props().disabled).toEqual(true);
