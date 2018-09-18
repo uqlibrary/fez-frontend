@@ -26,6 +26,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
     </WithStyles(Typography)>
     <WithStyles(Grid)
       container={true}
+      spacing={24}
     >
       <WithStyles(Grid)
         item={true}
@@ -43,6 +44,8 @@ exports[`Component Masquerade Should render form as expected 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
