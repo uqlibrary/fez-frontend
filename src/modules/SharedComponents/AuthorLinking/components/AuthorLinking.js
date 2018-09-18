@@ -2,14 +2,15 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
-import {Grid, Typography, FormControlLabel, Checkbox, withStyles} from '@material-ui/core';
+import {Grid, Typography, FormControlLabel, Checkbox, withStyles, withWidth} from '@material-ui/core';
 
 const styles = (theme) => ({
     infiniteContainer: {
         border: '1px solid',
         borderColor: theme.palette.secondary.light,
         margin: '16px 0px',
-        padding: '8px 0px'
+        padding: '8px 0px',
+        width: '100%'
     },
     root: {
         alignItems: 'flex-start',
@@ -40,7 +41,8 @@ export class AuthorLinking extends PureComponent {
         onChange: PropTypes.func,
         disabled: PropTypes.bool,
         className: PropTypes.string,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        width: PropTypes.string
     };
 
     static contextTypes = {
@@ -131,7 +133,15 @@ export class AuthorLinking extends PureComponent {
         }
 
         const rows = [];
-        const itemsPerRow = 3;
+        let itemsPerRow;
+        if (this.props.width === 'xs') {
+            itemsPerRow = 1;
+        } else if (this.props.width === 'sm') {
+            itemsPerRow = 2;
+        } else {
+            itemsPerRow = 3;
+        }
+
         if (authors.length > 0) {
             for (let i = 0; i < authors.length; i += itemsPerRow) {
                 rows.push(<Grid container key={i}>
@@ -246,4 +256,4 @@ export class AuthorLinking extends PureComponent {
     }
 }
 
-export default withStyles(styles)(AuthorLinking);
+export default withStyles(styles)(withWidth()(AuthorLinking));
