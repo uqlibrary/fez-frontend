@@ -57,7 +57,7 @@ export class MyLatestPublications extends PureComponent {
         }
 
         return (
-            <div className="latestPubs">
+            <React.Fragment>
                 <PublicationsList
                     publicationsList={this.props.latestPublicationsList}
                     showDefaultActions/>
@@ -74,7 +74,7 @@ export class MyLatestPublications extends PureComponent {
                         </Button>
                     </Grid>
                 </Grid>
-            </div>
+            </React.Fragment>
         );
     }
 }

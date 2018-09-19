@@ -90,7 +90,16 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1248,7 +1257,16 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",
@@ -1638,7 +1656,16 @@ exports[`DigilibImageCitation renders  component with empty publication 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1953,7 +1980,16 @@ exports[`DigilibImageCitation renders  component with empty publication 1`] = `
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",

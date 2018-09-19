@@ -11,7 +11,6 @@ import {withStyles} from '@material-ui/core';
 
 const styles = {
     pubCounts: {
-        // color: theme.palette.accent.main,
         '& .citationMetrics': {
             '& .count': {
                 fontSize: '1.75rem'

@@ -90,7 +90,16 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -483,7 +492,16 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -896,7 +914,16 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1343,7 +1370,16 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1782,7 +1818,16 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -2215,7 +2260,16 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -2698,7 +2752,16 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -3133,7 +3196,16 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -3920,7 +3992,16 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -4287,7 +4368,16 @@ exports[`AuthorsCitationView test  should set class on component with no authors
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",

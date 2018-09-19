@@ -1,10 +1,8 @@
-// Rainbow count difference values
-.publicationsList {
-
+#topCitedPublications {
   @for $i from 1 through 20 {
     div:nth-of-type(#{$i}) {
       .citationMetrics, .citationMetrics a {
-        color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
+        color: adjust-hue(hsl(0, 100%, 40%), ($i/20)*70) !important;
       }
     }
   }

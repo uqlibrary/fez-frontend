@@ -3,15 +3,18 @@ import PropTypes from 'prop-types';
 import {HelpIcon} from '../../HelpDrawer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import {withStyles} from '@material-ui/core/styles';
 
-const styles = theme => ({
+const styles = {
     title: {
-        paddingBottom: 6,
-        marginBotton: 6,
-        borderBottom: `1px solid ${theme.hexToRGBA(theme.palette.primary.main, 0.2)}`
+        minWidth: 1,
+    },
+    divider: {
+        marginTop: 6,
+        marginBottom: 6
     }
-});
+};
 
 class RighthandCard extends React.Component {
     static propTypes ={
@@ -33,6 +36,7 @@ class RighthandCard extends React.Component {
                     {title &&
                     <Typography variant={'title'} color={'primary'}>{title}</Typography>}
                 </Grid>
+                <Divider classname={classes.divider}/>
                 {help && help.text &&
                 <Grid item>
                     <HelpIcon {...help}/>

@@ -2,6 +2,7 @@
 
 exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
 <WithStyles(FormControl)
+  error={false}
   fullWidth={true}
 >
   <WithStyles(InputLabel)>
@@ -10,7 +11,6 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
   <WithStyles(Select)
     autoWidth={false}
     disabled={true}
-    error={false}
     multiple={false}
     onChange={[Function]}
     value=""
@@ -72,6 +72,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
 
 exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
 <WithStyles(FormControl)
+  error={false}
   fullWidth={true}
 >
   <WithStyles(InputLabel)>
@@ -79,7 +80,6 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     autoWidth={false}
-    error={false}
     multiple={false}
     onChange={[Function]}
     value=""
@@ -89,6 +89,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
 
 exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
 <WithStyles(FormControl)
+  error={false}
   fullWidth={true}
 >
   <WithStyles(InputLabel)>
@@ -96,7 +97,6 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     autoWidth={false}
-    error={false}
     multiple={false}
     onChange={[Function]}
     value=""

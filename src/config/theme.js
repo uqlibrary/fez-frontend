@@ -79,6 +79,16 @@ export const mui1theme = createMuiTheme({
             fontWeight: 300
         }
     },
+    overrides: {
+        MuiFormLabel: {
+            root: {
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                width: '100%',
+                textOverflow: 'ellipsis'
+            }
+        }
+    },
     // Converts a color hex code to RGBA when referenced from a component
     hexToRGBA: (hex, alpha) => {
         const r = parseInt(hex.slice(1, 3), 16);

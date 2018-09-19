@@ -5,6 +5,14 @@ import {Grid, Typography} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+const styles = theme => ({
+    MUITextLabel: theme.overrides.MuiFormLabel,
+    remindToAdd: {
+        marginTop: 8,
+        color: '#f06f0d'
+    }
+});
+
 export class FreeTextForm extends Component {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
@@ -108,11 +116,4 @@ export class FreeTextForm extends Component {
     }
 }
 
-const styles = () => ({
-    remindToAdd: {
-        marginTop: 8,
-        color: '#f06f0d'
-    }
-});
-
-export default withStyles(styles)(FreeTextForm);
+export default withStyles(styles, {withTheme: true})(FreeTextForm);

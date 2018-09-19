@@ -668,7 +668,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1439,7 +1448,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -2114,7 +2132,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -2725,7 +2752,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -3352,7 +3388,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -3963,7 +4008,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -4574,7 +4628,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -5294,7 +5357,16 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     "minHeight": 56,
                                   },
                                 },
-                                "overrides": Object {},
+                                "overrides": Object {
+                                  "MuiFormLabel": Object {
+                                    "root": Object {
+                                      "overflow": "hidden",
+                                      "textOverflow": "ellipsis",
+                                      "whiteSpace": "nowrap",
+                                      "width": "100%",
+                                    },
+                                  },
+                                },
                                 "palette": Object {
                                   "accent": Object {
                                     "dark": "#005EA5",
@@ -6048,7 +6120,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -6823,7 +6904,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -7830,7 +7920,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -8441,7 +8540,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -9068,7 +9176,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -9679,7 +9796,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -10290,7 +10416,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "minHeight": 56,
                                 },
                               },
-                              "overrides": Object {},
+                              "overrides": Object {
+                                "MuiFormLabel": Object {
+                                  "root": Object {
+                                    "overflow": "hidden",
+                                    "textOverflow": "ellipsis",
+                                    "whiteSpace": "nowrap",
+                                    "width": "100%",
+                                  },
+                                },
+                              },
                               "palette": Object {
                                 "accent": Object {
                                   "dark": "#005EA5",
@@ -11010,7 +11145,16 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     "minHeight": 56,
                                   },
                                 },
-                                "overrides": Object {},
+                                "overrides": Object {
+                                  "MuiFormLabel": Object {
+                                    "root": Object {
+                                      "overflow": "hidden",
+                                      "textOverflow": "ellipsis",
+                                      "whiteSpace": "nowrap",
+                                      "width": "100%",
+                                    },
+                                  },
+                                },
                                 "palette": Object {
                                   "accent": Object {
                                     "dark": "#005EA5",

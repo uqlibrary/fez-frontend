@@ -90,7 +90,16 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -454,7 +463,16 @@ exports[`DoiCitationView test  should render component with empty span 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",

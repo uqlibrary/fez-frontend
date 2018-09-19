@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import {Link} from 'react-router-dom';
 import {locale} from 'locale';
 import {routes, publicationTypes} from 'config';
@@ -39,10 +40,9 @@ import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 
 const styles = theme => ({
-    citation: {
+    divider: {
         marginBottom: 12,
-        paddingBottom: 12,
-        borderBottom: '1px solid ' + theme.palette.secondary.light
+        marginTop: 12,
     },
     citationTitle: {
         [theme.breakpoints.up('sm')]: {
@@ -194,52 +194,52 @@ export class PublicationCitation extends PureComponent {
         const recordValue = this.props.showMetrics && this.props.publication.metricData;
         return (
             <React.Fragment>
-                <Grid container spacing={0} className={classes.citation}>
+                <Grid container spacing={0}>
                     <Grid item xs>
-                        <Grid container spacing={0} alignItems={'flex-start'}>
+                        <Grid container spacing={0}>
                             {
                                 !this.props.hideTitle ?
-                                    <Grid item xs>
-                                        <Typography variant={'title'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
+                                    <Grid item xs style={{minWidth: 1}}>
+                                        <Typography variant={'title'} component={'p'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
                                     :
                                     <Grid item xs />
                             }
                             {
                                 this.props.showMetrics &&
-                                <Grid item xs={12} sm={'auto'} className={'citationMetrics'}>
-                                    <ExternalLink
-                                        href={recordValue.citation_url}
-                                        title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
-                                        aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
-                                        openInNewIcon={false}>
-                                        <Grid container>
-                                            {
-                                                this.props.showSourceCountIcon &&
-                                                <Grid item>
-                                                    <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                    <Typography variant={'title'}>{recordValue.count}</Typography>
-                                                </Grid>
-                                            }
-                                            {
-                                                !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
-                                                <Grid item>
-                                                    <Typography variant={'title'} color={'inherit'} className={'count'}>
-                                                        {Math.round(recordValue.count)}
-                                                    </Typography>
-                                                </Grid>
-                                            }
-                                            {
-                                                !this.props.hideCountDiff &&
-                                                <Grid item>
-                                                    <Typography variant={'title'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
-                                                        +{Math.round(recordValue.difference)}
-                                                    </Typography>
-                                                </Grid>
-                                            }
-                                        </Grid>
-                                    </ExternalLink>
-                                </Grid>
+                                    <Grid item xs={12} sm={'auto'} className={'citationMetrics'}>
+                                        <ExternalLink
+                                            href={recordValue.citation_url}
+                                            title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
+                                            aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
+                                            openInNewIcon={false}>
+                                            <Grid container>
+                                                {
+                                                    this.props.showSourceCountIcon &&
+                                                    <Grid item>
+                                                        <span className={`fez-icon ${recordValue.source} xxxlarge`} />
+                                                        <Typography variant={'title'}>{recordValue.count}</Typography>
+                                                    </Grid>
+                                                }
+                                                {
+                                                    !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
+                                                    <Grid item>
+                                                        <Typography variant={'title'} color={'inherit'} className={'count'}>
+                                                            {Math.round(recordValue.count)}
+                                                        </Typography>
+                                                    </Grid>
+                                                }
+                                                {
+                                                    !this.props.hideCountDiff &&
+                                                    <Grid item>
+                                                        <Typography variant={'title'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
+                                                            +{Math.round(recordValue.difference)}
+                                                        </Typography>
+                                                    </Grid>
+                                                }
+                                            </Grid>
+                                        </ExternalLink>
+                                    </Grid>
                             }
                             <Grid item xs={12} className={classes.citationText}>
                                 {this.renderCitation(this.props.publication.rek_display_type)}
@@ -248,24 +248,25 @@ export class PublicationCitation extends PureComponent {
                                 <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
                             </Grid>
                             {this.props.showSources && this.props.publication.sources &&
-                                <Grid item xs={12} style={{border: '1px solid blue'}}>
-                                    {this.renderSources()}
+                                <Grid item xs={12}>
+                                    <Typography variant={'caption'}>{this.renderSources()}</Typography>
                                 </Grid>
                             }
                         </Grid>
                     </Grid>
-                    {
-                        (this.props.showDefaultActions || this.props.customActions) &&
-                        <Grid container>
-                            <Hidden xsDown>
-                                <Grid item xs />
-                            </Hidden>
-                            {
-                                this.renderActions(this.props.showDefaultActions ? this.defaultActions : this.props.customActions)
-                            }
-                        </Grid>
-                    }
                 </Grid>
+                {
+                    (this.props.showDefaultActions || this.props.customActions) &&
+                    <Grid container>
+                        <Hidden xsDown>
+                            <Grid item xs />
+                        </Hidden>
+                        {
+                            this.renderActions(this.props.showDefaultActions ? this.defaultActions : this.props.customActions)
+                        }
+                    </Grid>
+                }
+                <Divider className={classes.divider} />
             </React.Fragment>
         );
     }
