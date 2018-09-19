@@ -213,7 +213,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -225,6 +225,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -250,11 +255,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -823,7 +823,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -835,6 +835,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -860,11 +865,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -1298,7 +1298,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -1310,6 +1310,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -1335,11 +1340,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -1740,7 +1740,7 @@ exports[`Application component should render app for account with fez author wit
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -1752,6 +1752,11 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -1777,11 +1782,6 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -2328,7 +2328,7 @@ exports[`Application component should render app for account with fez author wit
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -2340,6 +2340,11 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -2365,11 +2370,6 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -2908,42 +2908,13 @@ exports[`Application component should render app for account with fez author wit
         spacing={8}
         wrap="nowrap"
       >
-        <WithStyles(Grid)
-          item={true}
-          zeroMinWidth={true}
-        >
-          <WithStyles(Tooltip)
-            TransitionComponent={[Function]}
-            placement="bottom-end"
-            title="Main navigation"
-          >
-            <WithStyles(IconButton)
-              aria-label="Click to open the main navigation"
-              onClick={[Function]}
-              style={
-                Object {
-                  "marginLeft": "-12px",
-                  "marginRight": "12px",
-                }
-              }
-            >
-              <pure(MenuIcon)
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
-          smDown={true}
+          smDown={false}
           smUp={false}
           xlDown={false}
           xlUp={false}
@@ -2952,6 +2923,11 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -2977,11 +2953,6 @@ exports[`Application component should render app for account with fez author wit
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -3441,7 +3412,7 @@ exports[`Application component should render application with routing for the us
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -3453,6 +3424,11 @@ exports[`Application component should render application with routing for the us
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -3478,11 +3454,6 @@ exports[`Application component should render application with routing for the us
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -3725,7 +3696,7 @@ exports[`Application component should render for anon user 1`] = `
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
           smDown={true}
@@ -3737,6 +3708,11 @@ exports[`Application component should render for anon user 1`] = `
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -3762,11 +3738,6 @@ exports[`Application component should render for anon user 1`] = `
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a
@@ -4004,42 +3975,13 @@ exports[`Application component should render thesis submission for HDR without m
         spacing={8}
         wrap="nowrap"
       >
-        <WithStyles(Grid)
-          item={true}
-          zeroMinWidth={true}
-        >
-          <WithStyles(Tooltip)
-            TransitionComponent={[Function]}
-            placement="bottom-end"
-            title="Main navigation"
-          >
-            <WithStyles(IconButton)
-              aria-label="Click to open the main navigation"
-              onClick={[Function]}
-              style={
-                Object {
-                  "marginLeft": "-12px",
-                  "marginRight": "12px",
-                }
-              }
-            >
-              <pure(MenuIcon)
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
         <Hidden
           implementation="js"
           lgDown={false}
-          lgUp={true}
+          lgUp={false}
           mdDown={false}
           mdUp={false}
-          smDown={true}
+          smDown={false}
           smUp={false}
           xlDown={false}
           xlUp={false}
@@ -4048,6 +3990,11 @@ exports[`Application component should render thesis submission for HDR without m
         >
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "paddingLeft": 0,
+              }
+            }
           >
             <img
               aria-label="University of Queensland"
@@ -4073,11 +4020,6 @@ exports[`Application component should render thesis submission for HDR without m
         >
           <WithStyles(Typography)
             noWrap={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
             variant="title"
           >
             <a

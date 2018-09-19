@@ -219,7 +219,7 @@ export class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
-        const titleStyle = this.state.docked ? {paddingLeft: 284} : {paddingLeft: 0};
+        const titleStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 284} : {paddingLeft: 0};
         return (
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
@@ -235,7 +235,7 @@ export class App extends PureComponent {
                             justify="flex-start">
                             {/* Menu/Close Button */}
                             {
-                                !this.state.docked &&
+                                !this.state.docked && !isThesisSubmissionPage &&
                                 <Grid item zeroMinWidth>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
@@ -250,14 +250,14 @@ export class App extends PureComponent {
                                 </Grid>
                             }
                             {/* Logo */}
-                            <Hidden smDown lgUp>
-                                <Grid item>
+                            <Hidden smDown={!isThesisSubmissionPage}>
+                                <Grid item style={titleStyle}>
                                     <img id="logo" src={logo} style={{width: 66, height: 66}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
                                 </Grid>
                             </Hidden>
                             {/* Title */}
                             <Grid item style={{flexGrow: 1}}>
-                                <Typography variant="title" noWrap style={titleStyle} className={classes.titleLink}>
+                                <Typography variant="title" noWrap className={classes.titleLink}>
                                     {locale.global.appTitle}
                                 </Typography>
                             </Grid>
