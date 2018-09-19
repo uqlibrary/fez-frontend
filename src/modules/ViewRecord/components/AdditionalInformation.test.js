@@ -1,9 +1,13 @@
 import * as records from 'mock/data/testing/records';
-import AdditionalInformation from "./AdditionalInformation";
+import {AdditionalInformation} from "./AdditionalInformation";
 
 function setup(testProps, isShallow = true){
     const props = {
-        classes: {},
+        classes: {
+            header: 'header',
+            data: 'data',
+            gridRow: 'gridRow'
+        },
         publication: testProps.publication || records.journalArticle,
         ...testProps
     };
