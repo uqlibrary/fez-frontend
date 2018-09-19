@@ -8,7 +8,7 @@ const styles = (theme) => ({
         marginRight: theme.spacing.unit
     },
     buttonBase: {
-        justifyContent: 'left'
+        justifyContent: 'flex-start'
     },
     authorOrder: {
         marginLeft: theme.spacing.unit * 6,
@@ -71,7 +71,7 @@ export class AuthorItem extends PureComponent {
 
         return (
             <Grid item xs={12} sm={6} md={4}>
-                <Grid container direction="row">
+                <Grid container>
                     <Grid item xs={12}>
                         <Button
                             onClick={(!linked && !selected) ? this._selectAuthor : undefined}
