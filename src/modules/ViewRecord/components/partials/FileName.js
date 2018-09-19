@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import AudioPlayer from './AudioPlayer';
-import {Grid, Hidden} from '@material-ui/core';
+import {Grid, Hidden, Typography} from '@material-ui/core';
 
 export default class FileName extends PureComponent {
     static propTypes = {
@@ -46,22 +46,26 @@ export default class FileName extends PureComponent {
                 <Grid item>
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&
-                        <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
-                            {fileName}
-                        </ExternalLink>
+                        <Typography variant="body2">
+                            <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
+                                {fileName}
+                            </ExternalLink>
+                        </Typography>
                     }
                     {
                         allowDownload && this.canShowPreview(mimeType) &&
-                        <a
-                            onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                            onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                            className={'fileName'}>
-                            {fileName}
-                        </a>
+                        <Typography variant="body2">
+                            <a
+                                onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
+                                onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
+                                className={'fileName'}>
+                                {fileName}
+                            </a>
+                        </Typography>
                     }
                     {
                         !allowDownload &&
-                        fileName
+                        <Typography variant="body2">{fileName}</Typography>
                     }
                 </Grid>
                 <Hidden xsDown>

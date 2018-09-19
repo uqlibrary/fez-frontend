@@ -1,11 +1,12 @@
 import {journalArticle} from 'mock/data/testing/records';
-import files from "./Files";
+import {Files as files} from "./Files";
 
 function setup(testProps, isShallow = true){
     const props = {
         publication: journalArticle,
         hideCulturalSensitivityStatement: false,
         setHideCulturalSensitivityStatement: jest.fn(),
+        classes: {header: 'header'},
         ...testProps
     };
     return getElement(files, props, isShallow);

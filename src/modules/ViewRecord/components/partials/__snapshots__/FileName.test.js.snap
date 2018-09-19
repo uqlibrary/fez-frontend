@@ -590,25 +590,84 @@ exports[`File Name Component  should display file name link 1`] = `
                     <div
                       className="MuiGrid-item-02"
                     >
-                      <ExternalLink
-                        className="fileName"
-                        href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
-                        openInNewIcon={true}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        title="test.jpg"
+                      <WithStyles(Typography)
+                        variant="body2"
                       >
-                        <a
-                          className="fileName externalLink showIcon"
-                          href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
-                          rel="noopener noreferrer"
-                          tabIndex="0"
-                          target="_blank"
-                          title="test.jpg"
+                        <Typography
+                          align="inherit"
+                          classes={
+                            Object {
+                              "alignCenter": "MuiTypography-alignCenter-0111",
+                              "alignJustify": "MuiTypography-alignJustify-0113",
+                              "alignLeft": "MuiTypography-alignLeft-0110",
+                              "alignRight": "MuiTypography-alignRight-0112",
+                              "body1": "MuiTypography-body1-0107",
+                              "body2": "MuiTypography-body2-0106",
+                              "button": "MuiTypography-button-0109",
+                              "caption": "MuiTypography-caption-0108",
+                              "colorError": "MuiTypography-colorError-0122",
+                              "colorInherit": "MuiTypography-colorInherit-0117",
+                              "colorPrimary": "MuiTypography-colorPrimary-0118",
+                              "colorSecondary": "MuiTypography-colorSecondary-0119",
+                              "colorTextPrimary": "MuiTypography-colorTextPrimary-0120",
+                              "colorTextSecondary": "MuiTypography-colorTextSecondary-0121",
+                              "display1": "MuiTypography-display1-0102",
+                              "display2": "MuiTypography-display2-0101",
+                              "display3": "MuiTypography-display3-0100",
+                              "display4": "MuiTypography-display4-099",
+                              "gutterBottom": "MuiTypography-gutterBottom-0115",
+                              "headline": "MuiTypography-headline-0103",
+                              "noWrap": "MuiTypography-noWrap-0114",
+                              "paragraph": "MuiTypography-paragraph-0116",
+                              "root": "MuiTypography-root-098",
+                              "subheading": "MuiTypography-subheading-0105",
+                              "title": "MuiTypography-title-0104",
+                            }
+                          }
+                          color="default"
+                          gutterBottom={false}
+                          headlineMapping={
+                            Object {
+                              "body1": "p",
+                              "body2": "aside",
+                              "display1": "h1",
+                              "display2": "h1",
+                              "display3": "h1",
+                              "display4": "h1",
+                              "headline": "h1",
+                              "subheading": "h3",
+                              "title": "h2",
+                            }
+                          }
+                          noWrap={false}
+                          paragraph={false}
+                          variant="body2"
                         >
-                          test.jpg
-                        </a>
-                      </ExternalLink>
+                          <aside
+                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          >
+                            <ExternalLink
+                              className="fileName"
+                              href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
+                              openInNewIcon={true}
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              title="test.jpg"
+                            >
+                              <a
+                                className="fileName externalLink showIcon"
+                                href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
+                                rel="noopener noreferrer"
+                                tabIndex="0"
+                                target="_blank"
+                                title="test.jpg"
+                              >
+                                test.jpg
+                              </a>
+                            </ExternalLink>
+                          </aside>
+                        </Typography>
+                      </WithStyles(Typography)>
                     </div>
                   </Grid>
                 </WithStyles(Grid)>
@@ -1676,25 +1735,84 @@ exports[`File Name Component  should render audio player 1`] = `
                     <div
                       className="MuiGrid-item-02"
                     >
-                      <ExternalLink
-                        className="fileName"
-                        href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
-                        openInNewIcon={true}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        title="test.mp3"
+                      <WithStyles(Typography)
+                        variant="body2"
                       >
-                        <a
-                          className="fileName externalLink showIcon"
-                          href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
-                          rel="noopener noreferrer"
-                          tabIndex="0"
-                          target="_blank"
-                          title="test.mp3"
+                        <Typography
+                          align="inherit"
+                          classes={
+                            Object {
+                              "alignCenter": "MuiTypography-alignCenter-0111",
+                              "alignJustify": "MuiTypography-alignJustify-0113",
+                              "alignLeft": "MuiTypography-alignLeft-0110",
+                              "alignRight": "MuiTypography-alignRight-0112",
+                              "body1": "MuiTypography-body1-0107",
+                              "body2": "MuiTypography-body2-0106",
+                              "button": "MuiTypography-button-0109",
+                              "caption": "MuiTypography-caption-0108",
+                              "colorError": "MuiTypography-colorError-0122",
+                              "colorInherit": "MuiTypography-colorInherit-0117",
+                              "colorPrimary": "MuiTypography-colorPrimary-0118",
+                              "colorSecondary": "MuiTypography-colorSecondary-0119",
+                              "colorTextPrimary": "MuiTypography-colorTextPrimary-0120",
+                              "colorTextSecondary": "MuiTypography-colorTextSecondary-0121",
+                              "display1": "MuiTypography-display1-0102",
+                              "display2": "MuiTypography-display2-0101",
+                              "display3": "MuiTypography-display3-0100",
+                              "display4": "MuiTypography-display4-099",
+                              "gutterBottom": "MuiTypography-gutterBottom-0115",
+                              "headline": "MuiTypography-headline-0103",
+                              "noWrap": "MuiTypography-noWrap-0114",
+                              "paragraph": "MuiTypography-paragraph-0116",
+                              "root": "MuiTypography-root-098",
+                              "subheading": "MuiTypography-subheading-0105",
+                              "title": "MuiTypography-title-0104",
+                            }
+                          }
+                          color="default"
+                          gutterBottom={false}
+                          headlineMapping={
+                            Object {
+                              "body1": "p",
+                              "body2": "aside",
+                              "display1": "h1",
+                              "display2": "h1",
+                              "display3": "h1",
+                              "display4": "h1",
+                              "headline": "h1",
+                              "subheading": "h3",
+                              "title": "h2",
+                            }
+                          }
+                          noWrap={false}
+                          paragraph={false}
+                          variant="body2"
                         >
-                          test.mp3
-                        </a>
-                      </ExternalLink>
+                          <aside
+                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          >
+                            <ExternalLink
+                              className="fileName"
+                              href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
+                              openInNewIcon={true}
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              title="test.mp3"
+                            >
+                              <a
+                                className="fileName externalLink showIcon"
+                                href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
+                                rel="noopener noreferrer"
+                                tabIndex="0"
+                                target="_blank"
+                                title="test.mp3"
+                              >
+                                test.mp3
+                              </a>
+                            </ExternalLink>
+                          </aside>
+                        </Typography>
+                      </WithStyles(Typography)>
                     </div>
                   </Grid>
                 </WithStyles(Grid)>
@@ -2912,7 +3030,66 @@ exports[`File Name Component  should render component and display file name only
                     <div
                       className="MuiGrid-item-02"
                     >
-                      UQ676287_OA.pdf
+                      <WithStyles(Typography)
+                        variant="body2"
+                      >
+                        <Typography
+                          align="inherit"
+                          classes={
+                            Object {
+                              "alignCenter": "MuiTypography-alignCenter-0111",
+                              "alignJustify": "MuiTypography-alignJustify-0113",
+                              "alignLeft": "MuiTypography-alignLeft-0110",
+                              "alignRight": "MuiTypography-alignRight-0112",
+                              "body1": "MuiTypography-body1-0107",
+                              "body2": "MuiTypography-body2-0106",
+                              "button": "MuiTypography-button-0109",
+                              "caption": "MuiTypography-caption-0108",
+                              "colorError": "MuiTypography-colorError-0122",
+                              "colorInherit": "MuiTypography-colorInherit-0117",
+                              "colorPrimary": "MuiTypography-colorPrimary-0118",
+                              "colorSecondary": "MuiTypography-colorSecondary-0119",
+                              "colorTextPrimary": "MuiTypography-colorTextPrimary-0120",
+                              "colorTextSecondary": "MuiTypography-colorTextSecondary-0121",
+                              "display1": "MuiTypography-display1-0102",
+                              "display2": "MuiTypography-display2-0101",
+                              "display3": "MuiTypography-display3-0100",
+                              "display4": "MuiTypography-display4-099",
+                              "gutterBottom": "MuiTypography-gutterBottom-0115",
+                              "headline": "MuiTypography-headline-0103",
+                              "noWrap": "MuiTypography-noWrap-0114",
+                              "paragraph": "MuiTypography-paragraph-0116",
+                              "root": "MuiTypography-root-098",
+                              "subheading": "MuiTypography-subheading-0105",
+                              "title": "MuiTypography-title-0104",
+                            }
+                          }
+                          color="default"
+                          gutterBottom={false}
+                          headlineMapping={
+                            Object {
+                              "body1": "p",
+                              "body2": "aside",
+                              "display1": "h1",
+                              "display2": "h1",
+                              "display3": "h1",
+                              "display4": "h1",
+                              "headline": "h1",
+                              "subheading": "h3",
+                              "title": "h2",
+                            }
+                          }
+                          noWrap={false}
+                          paragraph={false}
+                          variant="body2"
+                        >
+                          <aside
+                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          >
+                            UQ676287_OA.pdf
+                          </aside>
+                        </Typography>
+                      </WithStyles(Typography)>
                     </div>
                   </Grid>
                 </WithStyles(Grid)>
@@ -3980,13 +4157,72 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                     <div
                       className="MuiGrid-item-02"
                     >
-                      <a
-                        className="fileName"
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
+                      <WithStyles(Typography)
+                        variant="body2"
                       >
-                        test.jpg
-                      </a>
+                        <Typography
+                          align="inherit"
+                          classes={
+                            Object {
+                              "alignCenter": "MuiTypography-alignCenter-0111",
+                              "alignJustify": "MuiTypography-alignJustify-0113",
+                              "alignLeft": "MuiTypography-alignLeft-0110",
+                              "alignRight": "MuiTypography-alignRight-0112",
+                              "body1": "MuiTypography-body1-0107",
+                              "body2": "MuiTypography-body2-0106",
+                              "button": "MuiTypography-button-0109",
+                              "caption": "MuiTypography-caption-0108",
+                              "colorError": "MuiTypography-colorError-0122",
+                              "colorInherit": "MuiTypography-colorInherit-0117",
+                              "colorPrimary": "MuiTypography-colorPrimary-0118",
+                              "colorSecondary": "MuiTypography-colorSecondary-0119",
+                              "colorTextPrimary": "MuiTypography-colorTextPrimary-0120",
+                              "colorTextSecondary": "MuiTypography-colorTextSecondary-0121",
+                              "display1": "MuiTypography-display1-0102",
+                              "display2": "MuiTypography-display2-0101",
+                              "display3": "MuiTypography-display3-0100",
+                              "display4": "MuiTypography-display4-099",
+                              "gutterBottom": "MuiTypography-gutterBottom-0115",
+                              "headline": "MuiTypography-headline-0103",
+                              "noWrap": "MuiTypography-noWrap-0114",
+                              "paragraph": "MuiTypography-paragraph-0116",
+                              "root": "MuiTypography-root-098",
+                              "subheading": "MuiTypography-subheading-0105",
+                              "title": "MuiTypography-title-0104",
+                            }
+                          }
+                          color="default"
+                          gutterBottom={false}
+                          headlineMapping={
+                            Object {
+                              "body1": "p",
+                              "body2": "aside",
+                              "display1": "h1",
+                              "display2": "h1",
+                              "display3": "h1",
+                              "display4": "h1",
+                              "headline": "h1",
+                              "subheading": "h3",
+                              "title": "h2",
+                            }
+                          }
+                          noWrap={false}
+                          paragraph={false}
+                          variant="body2"
+                        >
+                          <aside
+                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          >
+                            <a
+                              className="fileName"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                            >
+                              test.jpg
+                            </a>
+                          </aside>
+                        </Typography>
+                      </WithStyles(Typography)>
                     </div>
                   </Grid>
                 </WithStyles(Grid)>
@@ -5054,13 +5290,72 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                     <div
                       className="MuiGrid-item-02"
                     >
-                      <a
-                        className="fileName"
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
+                      <WithStyles(Typography)
+                        variant="body2"
                       >
-                        test.jpg
-                      </a>
+                        <Typography
+                          align="inherit"
+                          classes={
+                            Object {
+                              "alignCenter": "MuiTypography-alignCenter-0111",
+                              "alignJustify": "MuiTypography-alignJustify-0113",
+                              "alignLeft": "MuiTypography-alignLeft-0110",
+                              "alignRight": "MuiTypography-alignRight-0112",
+                              "body1": "MuiTypography-body1-0107",
+                              "body2": "MuiTypography-body2-0106",
+                              "button": "MuiTypography-button-0109",
+                              "caption": "MuiTypography-caption-0108",
+                              "colorError": "MuiTypography-colorError-0122",
+                              "colorInherit": "MuiTypography-colorInherit-0117",
+                              "colorPrimary": "MuiTypography-colorPrimary-0118",
+                              "colorSecondary": "MuiTypography-colorSecondary-0119",
+                              "colorTextPrimary": "MuiTypography-colorTextPrimary-0120",
+                              "colorTextSecondary": "MuiTypography-colorTextSecondary-0121",
+                              "display1": "MuiTypography-display1-0102",
+                              "display2": "MuiTypography-display2-0101",
+                              "display3": "MuiTypography-display3-0100",
+                              "display4": "MuiTypography-display4-099",
+                              "gutterBottom": "MuiTypography-gutterBottom-0115",
+                              "headline": "MuiTypography-headline-0103",
+                              "noWrap": "MuiTypography-noWrap-0114",
+                              "paragraph": "MuiTypography-paragraph-0116",
+                              "root": "MuiTypography-root-098",
+                              "subheading": "MuiTypography-subheading-0105",
+                              "title": "MuiTypography-title-0104",
+                            }
+                          }
+                          color="default"
+                          gutterBottom={false}
+                          headlineMapping={
+                            Object {
+                              "body1": "p",
+                              "body2": "aside",
+                              "display1": "h1",
+                              "display2": "h1",
+                              "display3": "h1",
+                              "display4": "h1",
+                              "headline": "h1",
+                              "subheading": "h3",
+                              "title": "h2",
+                            }
+                          }
+                          noWrap={false}
+                          paragraph={false}
+                          variant="body2"
+                        >
+                          <aside
+                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          >
+                            <a
+                              className="fileName"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                            >
+                              test.jpg
+                            </a>
+                          </aside>
+                        </Typography>
+                      </WithStyles(Typography)>
                     </div>
                   </Grid>
                 </WithStyles(Grid)>
