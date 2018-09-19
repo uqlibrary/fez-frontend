@@ -90,7 +90,7 @@ export default class ThesisSubmission extends Component {
                         <Grid item>
                             <Button
                                 variant={'raised'}
-                                color={'secondary'}
+                                color={'primary'}
                                 fullWidth
                                 children={formLocale.thesisSubmission.afterSubmit}
                                 onClick={this.afterSubmit}/>

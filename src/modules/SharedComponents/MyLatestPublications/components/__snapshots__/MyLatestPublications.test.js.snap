@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component MyLatestPublications should render latest publications 1`] = `
-<div
-  className="latestPubs"
->
+<React.Fragment>
   <PublicationsList
     hideCountDiff={false}
     publicationsList={
@@ -3503,7 +3501,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component MyLatestPublications should render loading indicator 1`] = `

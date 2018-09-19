@@ -210,67 +210,77 @@ exports[`Application component should render alert if user is not fez author 1`]
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -820,67 +830,77 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -1295,67 +1315,77 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -1737,67 +1767,77 @@ exports[`Application component should render app for account with fez author wit
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -2325,67 +2365,77 @@ exports[`Application component should render app for account with fez author wit
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -2908,67 +2958,77 @@ exports[`Application component should render app for account with fez author wit
         spacing={8}
         wrap="nowrap"
       >
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -3409,67 +3469,77 @@ exports[`Application component should render application with routing for the us
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -3693,67 +3763,77 @@ exports[`Application component should render for anon user 1`] = `
             </WithStyles(IconButton)>
           </WithStyles(Tooltip)>
         </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -3975,67 +4055,77 @@ exports[`Application component should render thesis submission for HDR without m
         spacing={8}
         wrap="nowrap"
       >
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "paddingLeft": 0,
-              }
-            }
-          >
-            <img
-              aria-label="University of Queensland"
-              id="logo"
-              onError={[Function]}
-              src=""
-              style={
-                Object {
-                  "height": 66,
-                  "width": 66,
-                }
-              }
-            />
-          </WithStyles(Grid)>
-        </Hidden>
         <WithStyles(Grid)
           item={true}
           style={
             Object {
-              "flexGrow": 1,
+              "paddingLeft": 0,
             }
           }
+          wrap="nowrap"
+          xs={true}
         >
-          <WithStyles(Typography)
-            noWrap={true}
-            variant="title"
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
           >
-            <a
-              className="appTitle"
-              href="/"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-              title="Click to return to the eSpace home page"
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
             >
-              UQ eSpace 
-              eSpace
-            </a>
-          </WithStyles(Typography)>
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}

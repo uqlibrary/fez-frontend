@@ -11,15 +11,20 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -833,77 +838,78 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <WithStyles(Grid)
-      container={true}
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={true}
-        />
-      </Hidden>
       <WithStyles(Grid)
         item={true}
-        key="action_key_0"
-        sm="auto"
-        xs={12}
+        xs={true}
+      />
+    </Hidden>
+    <WithStyles(Grid)
+      item={true}
+      key="action_key_0"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        className="publicationAction buttonOrder0"
+        color="primary"
+        fullWidth={true}
+        onClick={[Function]}
+        variant="flat"
       >
-        <WithStyles(Button)
-          className="publicationAction buttonOrder0"
-          color="primary"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="flat"
-        >
-          Claim now
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        key="action_key_1"
-        sm="auto"
-        xs={12}
+        Claim now
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      key="action_key_1"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        className="publicationAction buttonOrder1"
+        color="primary"
+        fullWidth={true}
+        onClick={[Function]}
+        variant="flat"
       >
-        <WithStyles(Button)
-          className="publicationAction buttonOrder1"
-          color="primary"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="flat"
-        >
-          Not mine
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        key="action_key_2"
-        sm="auto"
-        xs={12}
+        Not mine
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      key="action_key_2"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        className="publicationAction buttonOrder2"
+        color="primary"
+        fullWidth={true}
+        onClick={[Function]}
+        variant="flat"
       >
-        <WithStyles(Button)
-          className="publicationAction buttonOrder2"
-          color="primary"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="flat"
-        >
-          View stats
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        View stats
+      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -918,15 +924,20 @@ exports[`PublicationCitation  should render component with default actions 1`] =
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -1740,45 +1751,46 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <WithStyles(Grid)
-      container={true}
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={true}
-        />
-      </Hidden>
       <WithStyles(Grid)
         item={true}
-        key="action_key_0"
-        sm="auto"
-        xs={12}
+        xs={true}
+      />
+    </Hidden>
+    <WithStyles(Grid)
+      item={true}
+      key="action_key_0"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        className="publicationAction buttonOrder0"
+        color="primary"
+        fullWidth={true}
+        onClick={[Function]}
+        variant="flat"
       >
-        <WithStyles(Button)
-          className="publicationAction buttonOrder0"
-          color="primary"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="flat"
-        >
-          Request Correction
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        Request Correction
+      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -1793,15 +1805,20 @@ exports[`PublicationCitation  should render component with default item 1`] = `
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -2616,6 +2633,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -2630,15 +2648,20 @@ exports[`PublicationCitation  should render component with default list hiding t
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -3453,6 +3476,7 @@ exports[`PublicationCitation  should render component with default list hiding t
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -3467,15 +3491,20 @@ exports[`PublicationCitation  should render component with default list hiding t
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -4290,6 +4319,7 @@ exports[`PublicationCitation  should render component with default list hiding t
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -4304,15 +4334,20 @@ exports[`PublicationCitation  should render component with publication from mult
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -5138,31 +5173,31 @@ exports[`PublicationCitation  should render component with publication from mult
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          style={
-            Object {
-              "border": "1px solid blue",
-            }
-          }
           xs={12}
         >
-          <React.Fragment>
-            Found in: 
-            <ExternalLink
-              aria-label="Link to eSpace will open in a new window."
-              className="publicationSource"
-              href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
-              key="source_0"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              eSpace
-            </ExternalLink>
-          </React.Fragment>
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            <React.Fragment>
+              Found in: 
+              <ExternalLink
+                aria-label="Link to eSpace will open in a new window."
+                className="publicationSource"
+                href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
+                key="source_0"
+                openInNewIcon={true}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                eSpace
+              </ExternalLink>
+            </React.Fragment>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -5177,7 +5212,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
@@ -6000,31 +6034,31 @@ exports[`PublicationCitation  should render component without a title 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          style={
-            Object {
-              "border": "1px solid blue",
-            }
-          }
           xs={12}
         >
-          <React.Fragment>
-            Found in: 
-            <ExternalLink
-              aria-label="Link to eSpace will open in a new window."
-              className="publicationSource"
-              href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
-              key="source_0"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              eSpace
-            </ExternalLink>
-          </React.Fragment>
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            <React.Fragment>
+              Found in: 
+              <ExternalLink
+                aria-label="Link to eSpace will open in a new window."
+                className="publicationSource"
+                href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
+                key="source_0"
+                openInNewIcon={true}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                eSpace
+              </ExternalLink>
+            </React.Fragment>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
 
@@ -6039,15 +6073,20 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       xs={true}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
         container={true}
         spacing={0}
       >
         <WithStyles(Grid)
           item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
           xs={true}
         >
           <WithStyles(Typography)
+            component="p"
             variant="title"
           >
             <Link
@@ -6919,5 +6958,6 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
+  <WithStyles(Divider) />
 </React.Fragment>
 `;
