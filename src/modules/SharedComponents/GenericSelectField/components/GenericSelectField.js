@@ -120,7 +120,7 @@ export class GenericSelectField extends Component {
         };
 
         return (
-            <FormControl fullWidth>
+            <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
                 {
                     this.props.locale.label && !this.props.hideLabel &&
                     <InputLabel>{this.props.locale.label}</InputLabel>
@@ -132,7 +132,6 @@ export class GenericSelectField extends Component {
                     disabled={this.props.disabled || this.props.itemsLoading}
                     aria-label={this.props.ariaLabel}
                     autoWidth={this.props.autoWidth}
-                    error={!!this.props.error}
                     multiple={this.props.multiple}
                 >
                     {renderMenuItems}

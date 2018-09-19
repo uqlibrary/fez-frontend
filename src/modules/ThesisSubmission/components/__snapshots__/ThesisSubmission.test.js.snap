@@ -103,9 +103,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           item={true}
           xs={12}
         >
-          <label
-            htmlFor="thesisTitle"
-          />
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Thesis title
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -146,7 +148,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           xs={12}
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
             itemsList={
@@ -162,6 +163,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               }
             }
             name="rek_genre_type"
+            required={true}
             validate={
               Array [
                 [Function],
@@ -174,12 +176,12 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           xs={12}
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
             floatingLabelText="Enrolling unit"
             hintText="Enrolling unit, eg. School of Business"
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+            required={true}
             validate={
               Array [
                 [Function],
@@ -191,9 +193,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           item={true}
           xs={12}
         >
-          <label
-            htmlFor="thesisAbstract"
-          />
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Abstract
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -211,7 +215,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       title="Supervisors"
     >
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -272,6 +275,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           }
         }
         name="supervisors"
+        required={true}
         validate={
           Array [
             [Function],
@@ -282,11 +286,10 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
     <StandardCard
       title="Field of research"
     >
-      <div>
+      <WithStyles(Typography)>
         Select up to 3 Field of Research (FoR) codes at the 4 digit level
-      </div>
+      </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         distinctOnly={true}
@@ -326,6 +329,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         }
         maxCount={3}
         name="fieldOfResearch"
+        required={true}
         validate={
           Array [
             [Function],
@@ -336,11 +340,10 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
     <StandardCard
       title="Keywords"
     >
-      <div>
+      <WithStyles(Typography)>
         Add up to 10 keywords that describe the content of the thesis
-      </div>
+      </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -382,6 +385,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         }
         maxCount={10}
         name="fez_record_search_key_keywords"
+        required={true}
         searchKey={
           Object {
             "order": "rek_keywords_order",
@@ -451,14 +455,19 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         }
       />
     </StandardCard>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Grid)
+        item={true}
+        sm={true}
+        xs={false}
       />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -468,9 +477,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         >
           Cancel
         </WithStyles(Button)>
-      </div>
-      <div
-        className="column is-narrow-desktop"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -480,8 +491,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         >
           Deposit your thesis
         </WithStyles(Button)>
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </StandardPage>
 `;
@@ -557,9 +568,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           item={true}
           xs={12}
         >
-          <label
-            htmlFor="thesisTitle"
-          />
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Thesis title
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -600,7 +613,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           xs={12}
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
             itemsList={
@@ -616,6 +628,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               }
             }
             name="rek_genre_type"
+            required={true}
             validate={
               Array [
                 [Function],
@@ -628,12 +641,12 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           xs={12}
         >
           <Field
-            className="requiredField"
             component={[Function]}
             disabled={false}
             floatingLabelText="Enrolling unit"
             hintText="Enrolling unit, eg. School of Business"
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+            required={true}
             validate={
               Array [
                 [Function],
@@ -645,9 +658,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           item={true}
           xs={12}
         >
-          <label
-            htmlFor="thesisAbstract"
-          />
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Abstract
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -665,7 +680,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       title="Supervisors"
     >
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -726,6 +740,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           }
         }
         name="supervisors"
+        required={true}
         validate={
           Array [
             [Function],
@@ -736,11 +751,10 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
     <StandardCard
       title="Field of research"
     >
-      <div>
+      <WithStyles(Typography)>
         Select up to 3 Field of Research (FoR) codes at the 4 digit level
-      </div>
+      </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         distinctOnly={true}
@@ -780,6 +794,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         }
         maxCount={3}
         name="fieldOfResearch"
+        required={true}
         validate={
           Array [
             [Function],
@@ -790,11 +805,10 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
     <StandardCard
       title="Keywords"
     >
-      <div>
+      <WithStyles(Typography)>
         Add up to 10 keywords that describe the content of the thesis
-      </div>
+      </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -836,6 +850,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         }
         maxCount={10}
         name="fez_record_search_key_keywords"
+        required={true}
         searchKey={
           Object {
             "order": "rek_keywords_order",
@@ -905,14 +920,19 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         }
       />
     </StandardCard>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Grid)
+        item={true}
+        sm={true}
+        xs={false}
       />
-      <div
-        className="column is-narrow-desktop"
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -922,9 +942,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         >
           Cancel
         </WithStyles(Button)>
-      </div>
-      <div
-        className="column is-narrow-desktop"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -934,8 +956,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         >
           Deposit your thesis
         </WithStyles(Button)>
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </StandardPage>
 `;

@@ -90,7 +90,16 @@ exports[`File Name Component  should display file name link 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -465,7 +474,16 @@ exports[`File Name Component  should render audio player 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -993,7 +1011,16 @@ exports[`File Name Component  should render component and display file name only
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1350,7 +1377,16 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1713,7 +1749,16 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",

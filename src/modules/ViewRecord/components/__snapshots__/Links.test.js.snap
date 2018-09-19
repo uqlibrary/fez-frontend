@@ -92,7 +92,16 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -372,7 +381,16 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                   "minHeight": 56,
                 },
               },
-              "overrides": Object {},
+              "overrides": Object {
+                "MuiFormLabel": Object {
+                  "root": Object {
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                    "width": "100%",
+                  },
+                },
+              },
               "palette": Object {
                 "accent": Object {
                   "dark": "#005EA5",
@@ -739,7 +757,16 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",
@@ -3331,7 +3358,16 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -3611,7 +3647,16 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                   "minHeight": 56,
                 },
               },
-              "overrides": Object {},
+              "overrides": Object {
+                "MuiFormLabel": Object {
+                  "root": Object {
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                    "width": "100%",
+                  },
+                },
+              },
               "palette": Object {
                 "accent": Object {
                   "dark": "#005EA5",
@@ -3972,7 +4017,16 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",
@@ -5904,7 +5958,16 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -6184,7 +6247,16 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                   "minHeight": 56,
                 },
               },
-              "overrides": Object {},
+              "overrides": Object {
+                "MuiFormLabel": Object {
+                  "root": Object {
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                    "width": "100%",
+                  },
+                },
+              },
               "palette": Object {
                 "accent": Object {
                   "dark": "#005EA5",
@@ -6551,7 +6623,16 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",
@@ -8656,7 +8737,16 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -8936,7 +9026,16 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                   "minHeight": 56,
                 },
               },
-              "overrides": Object {},
+              "overrides": Object {
+                "MuiFormLabel": Object {
+                  "root": Object {
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                    "width": "100%",
+                  },
+                },
+              },
               "palette": Object {
                 "accent": Object {
                   "dark": "#005EA5",
@@ -9297,7 +9396,16 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",

@@ -90,7 +90,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -1038,7 +1047,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",
@@ -1487,7 +1505,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -2450,7 +2477,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",
@@ -2899,7 +2935,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -3214,7 +3259,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                         "minHeight": 56,
                       },
                     },
-                    "overrides": Object {},
+                    "overrides": Object {
+                      "MuiFormLabel": Object {
+                        "root": Object {
+                          "overflow": "hidden",
+                          "textOverflow": "ellipsis",
+                          "whiteSpace": "nowrap",
+                          "width": "100%",
+                        },
+                      },
+                    },
                     "palette": Object {
                       "accent": Object {
                         "dark": "#005EA5",

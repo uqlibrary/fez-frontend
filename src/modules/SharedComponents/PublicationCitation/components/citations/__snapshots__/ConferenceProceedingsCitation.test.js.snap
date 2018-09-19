@@ -90,7 +90,16 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -2060,7 +2069,16 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "minHeight": 56,
                         },
                       },
-                      "overrides": Object {},
+                      "overrides": Object {
+                        "MuiFormLabel": Object {
+                          "root": Object {
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                            "width": "100%",
+                          },
+                        },
+                      },
                       "palette": Object {
                         "accent": Object {
                           "dark": "#005EA5",
@@ -2542,7 +2560,16 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -4524,7 +4551,16 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "minHeight": 56,
                         },
                       },
-                      "overrides": Object {},
+                      "overrides": Object {
+                        "MuiFormLabel": Object {
+                          "root": Object {
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                            "width": "100%",
+                          },
+                        },
+                      },
                       "palette": Object {
                         "accent": Object {
                           "dark": "#005EA5",
@@ -5006,7 +5042,16 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiFormLabel": Object {
+                "root": Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                },
+              },
+            },
             "palette": Object {
               "accent": Object {
                 "dark": "#005EA5",
@@ -5348,7 +5393,16 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                           "minHeight": 56,
                         },
                       },
-                      "overrides": Object {},
+                      "overrides": Object {
+                        "MuiFormLabel": Object {
+                          "root": Object {
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                            "width": "100%",
+                          },
+                        },
+                      },
                       "palette": Object {
                         "accent": Object {
                           "dark": "#005EA5",

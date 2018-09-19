@@ -8,7 +8,13 @@ const mapStateToProps = (state, props) => {
         selectedValue: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || thesisSubtypes,
         itemsLoading: false,
-        hideLabel: true
+        hideLabel: props.hideLabel || false,
+        label: props.label,
+        placeholder: props.placeholder,
+        required: props.required,
+        itemsLoadingHint: props.loadingHint || 'Loading..',
+        errorText: props.meta.error,
+        error: !!props.meta.error
     };
 };
 
