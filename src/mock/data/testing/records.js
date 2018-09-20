@@ -2158,6 +2158,7 @@ export const workingPaper = {
     "fez_record_search_key_corresponding_name": [],
     "fez_record_search_key_corresponding_organisation": [],
     "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_doi": {"rek_doi_id": null, "rek_doi_pid": "UQ:176145", "rek_doi": "10.1242\/jcs.196651"},
     "fez_record_search_key_end_page": {
         "rek_end_page_id": 5502160,
         "rek_end_page_pid": "UQ:176145",
