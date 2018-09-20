@@ -11,22 +11,30 @@ exports[`Related publications Component  should not render data with empty looku
     <li
       key="fez_record_search_key_has_related_datasets-0"
     >
-      <Link
-        replace={false}
-        to="/view/UQ:313292"
+      <WithStyles(Typography)
+        variant="body1"
       >
-        Toxicity characterization of urban stormwater with bioanalytical tools
-      </Link>
+        <Link
+          replace={false}
+          to="/view/UQ:313292"
+        >
+          Toxicity characterization of urban stormwater with bioanalytical tools
+        </Link>
+      </WithStyles(Typography)>
     </li>
     <li
       key="fez_record_search_key_has_related_datasets-1"
     >
-      <Link
-        replace={false}
-        to="/view/UQ:313292"
+      <WithStyles(Typography)
+        variant="body1"
       >
-        dataset 2
-      </Link>
+        <Link
+          replace={false}
+          to="/view/UQ:313292"
+        >
+          dataset 2
+        </Link>
+      </WithStyles(Typography)>
     </li>
   </ul>
 </StandardCard>
@@ -43,22 +51,30 @@ exports[`Related publications Component  should render component 1`] = `
     <li
       key="fez_record_search_key_has_related_datasets-0"
     >
-      <Link
-        replace={false}
-        to="/view/UQ:313292"
+      <WithStyles(Typography)
+        variant="body1"
       >
-        Toxicity characterization of urban stormwater with bioanalytical tools
-      </Link>
+        <Link
+          replace={false}
+          to="/view/UQ:313292"
+        >
+          Toxicity characterization of urban stormwater with bioanalytical tools
+        </Link>
+      </WithStyles(Typography)>
     </li>
     <li
       key="fez_record_search_key_has_related_datasets-1"
     >
-      <Link
-        replace={false}
-        to="/view/UQ:313292"
+      <WithStyles(Typography)
+        variant="body1"
       >
-        dataset 2
-      </Link>
+        <Link
+          replace={false}
+          to="/view/UQ:313292"
+        >
+          dataset 2
+        </Link>
+      </WithStyles(Typography)>
     </li>
   </ul>
 </StandardCard>
