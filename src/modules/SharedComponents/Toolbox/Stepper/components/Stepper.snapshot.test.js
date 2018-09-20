@@ -1,8 +1,11 @@
-import Stepper from './Stepper';
+import {CustomStepper} from './Stepper';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
-    return getElement(Stepper, props, isShallow);
+    const props = {
+        classes: {},
+        ...testProps
+    };
+    return getElement(CustomStepper, props, isShallow);
 }
 
 describe('Add record stepper tests', () => {

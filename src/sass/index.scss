@@ -1,8 +1,14 @@
+
+// Bulma includes
+@import "~bulma/sass/utilities/all";
+@import "~bulma/sass/grid/columns";
+@import "~bulma/sass/base/helpers";
+
 // Breakpoint override for bulma
 $tablet: 720px;
 $desktop: 1024px;
 // Import the main toolbox styles
-@import './toolbox/index';
+//@import './toolbox/index';
 // Frontend specific variables override toolbox defaults if defined
 @import "./variables";
 // Various fixes and hacks to make MUI work
@@ -50,10 +56,10 @@ a {
   margin: 24px auto;
   width: 90%;
   padding: 0;
-  @include mobile {
-    margin: 0 auto 24px auto;
-    padding: 0 10px 24px 10px;
-  }
+  //@include mobile {
+  //  margin: 0 auto 24px auto;
+  //  padding: 0 10px 24px 10px;
+  //}
 }
 
 // The container which houses content
