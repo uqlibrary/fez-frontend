@@ -1,36 +1,38 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import {Grid, Typography, Hidden, withStyles} from '@material-ui/core';
 
 import locale from 'locale/viewRecord';
 import {openAccessConfig} from 'config';
 
-export default class Links extends PureComponent {
+const styles = (theme) => ({
+    header: {
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+        fontSize: '0.8rem'
+    }
+});
+
+export class Links extends PureComponent {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
 
-    renderLinkRow = (item) => {
-        return (
-            <TableRow key={`link-${item.index}`}>
-                <TableRowColumn className="link">
-                    {item.link}
-                </TableRowColumn>
-                <TableRowColumn className="description is-hidden-mobile" title={item.description}>
-                    {item.description}
-                </TableRowColumn>
-                <TableRowColumn className="oa align-right">
-                    <OpenAccessIcon {...item.openAccessStatus} />
-                </TableRowColumn>
-            </TableRow>
-        );
-    };
+    LinkRow = ({link, description, openAccessStatus}) => (
+        <div style={{padding: 16}}>
+            <Grid container spacing={32} className={this.props.classes.header}>
+                <Grid item sm={6}><Typography variant="body1">{link}</Typography></Grid>
+                <Grid item sm={4}><Typography variant="body1">{description}</Typography></Grid>
+                <Grid item sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
+            </Grid>
+        </div>
+    );
 
     getDOILink = (doi, openAccessStatus) => {
         return {
@@ -120,41 +122,45 @@ export default class Links extends PureComponent {
 
         return (
             <StandardCard title={txt.title}>
-                <div className="viewRecordLinks">
-                    <Table selectable={false} className="links horizontal">
-                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
-                            <TableRow>
-                                <TableHeaderColumn className="link">{txt.headerTitles.link}</TableHeaderColumn>
-                                <TableHeaderColumn className="description is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
-                                <TableHeaderColumn className="oa align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody displayRowCheckbox={false} className="data">
-                            {
-                                // if record has a PubMedCentral Id - display link, should be always OA
-                                !!pubmedCentralId &&
-                                this.renderLinkRow(this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus))
-                            }
-                            {
-                                // if record has a DOI - display a link, should be OA or OA with a date
-                                !!doi &&
-                                this.renderLinkRow(this.getDOILink(doi, doiOpenAccessStatus))
-                            }
-                            {
-                                // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
-                                openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                                this.renderLinkRow(this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus))
-                            }
-                            {
-                                hasLinks &&
-                                record.fez_record_search_key_link.map((item, index) => (
-                                    this.renderLinkRow(this.getPublicationLink(item, index))
-                                ))
-                            }
-                        </TableBody>
-                    </Table>
+                <div style={{padding: 8}}>
+                    <Hidden xsDown>
+                        <div style={{padding: 16}}>
+                            <Grid container direction="row" alignItems="center" spacing={32} className={this.props.classes.header}>
+                                <Grid item sm={6}><Typography variant="caption" gutterBottom>{txt.headerTitles.link}</Typography></Grid>
+                                <Grid item sm={4}>
+                                    <Typography variant="caption" gutterBottom>{txt.headerTitles.description}</Typography>
+                                </Grid>
+                                <Grid item sm={2}>
+                                    <Typography variant="caption" gutterBottom>{txt.headerTitles.oaStatus}</Typography>
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </Hidden>
+                    {
+                        // if record has a PubMedCentral Id - display link, should be always OA
+                        !!pubmedCentralId &&
+                        <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
+                    }
+                    {
+                        // if record has a DOI - display a link, should be OA or OA with a date
+                        !!doi &&
+                        <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />
+                    }
+                    {
+                        // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
+                        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+                        <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
+                    }
+                    {
+                        hasLinks &&
+                        record.fez_record_search_key_link.map((item, index) => (
+                            <this.LinkRow {...this.getPublicationLink(item, index)} key={index}/>
+                        ))
+                    }
                 </div>
             </StandardCard>
         );
     }
 }
+
+export default withStyles(styles)(Links);

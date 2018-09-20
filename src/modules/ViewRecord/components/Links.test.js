@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Links from './Links';
+import {Links} from './Links';
 import {recordLinks} from 'mock/data/testing/records';
 import {openAccessConfig, mui1theme} from 'config';
 import {calculateOpenAccess} from 'middleware/publicationEnhancer';
