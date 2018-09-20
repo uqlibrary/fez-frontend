@@ -48,6 +48,9 @@ const styles = theme => ({
                 textDecoration: 'underline'
             }
         }
+    },
+    nowrap: {
+        whiteSpace: 'nowrap'
     }
 });
 
@@ -248,7 +251,7 @@ export class App extends PureComponent {
                                     </Tooltip>
                                 </Grid>
                             }
-                            <Grid item xs style={titleStyle} wrap={'nowrap'}>
+                            <Grid item xs style={titleStyle} className={classes.nowrap}>
                                 <Grid container spacing={16} alignItems={'center'} justify={'center'}>
                                     <Hidden smDown>
                                         <Grid item xs={'auto'}>

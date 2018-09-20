@@ -36,7 +36,7 @@ class RighthandCard extends React.Component {
                     {title &&
                     <Typography variant={'title'} color={'primary'}>{title}</Typography>}
                 </Grid>
-                <Divider classname={classes.divider}/>
+                <Divider className={classes.divider}/>
                 {help && help.text &&
                 <Grid item>
                     <HelpIcon {...help}/>
