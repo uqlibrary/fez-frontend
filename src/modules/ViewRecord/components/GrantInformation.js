@@ -1,32 +1,87 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import {Grid, Typography, withStyles} from '@material-ui/core';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
-export default class GrantInformation extends Component {
+const styles = (theme) => ({
+    body2: {
+        fontWeight: 400,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '0.975rem',
+        },
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '0.775rem',
+            marginLeft: 16,
+            fontWeight: 500,
+            lineHeight: '1.715em'
+        }
+    },
+    body1: {
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '0.975rem'
+        },
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '0.775rem'
+        },
+        lineHeight: '1.715em',
+        marginLeft: 4
+    },
+    data: {
+        fontSize: '0.8rem'
+    },
+    gridRow: {
+        padding: 8,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+        marginTop: 8
+    }
+});
+export class GrantInformation extends PureComponent {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
 
-    constructor(props) {
-        super(props);
-    }
+    GrantInformationCell = ({grantAgency, grantId, className}) => {
+        return (
+            <Grid container display="row" alignItems="center">
+                <Grid item>
+                    <Typography variant="body2" classes={{body2: this.props.classes.body2}} className={className}>
+                        {grantAgency}
+                    </Typography>
+                </Grid>
+                {
+                    !!grantId &&
+                    <Grid item>
+                        <Typography variant="body1" classes={{body1: this.props.classes.body1}} className={className}>
+                            {` (${grantId})`}
+                        </Typography>
+                    </Grid>
+                }
+            </Grid>
+        );
+    };
 
     renderGrantDetail = (grantAgency, grantId, grantText, order) => {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
-            <TableRow className="row" key={order}>
-                <TableRowColumn className="header is-hidden-mobile">
-                    <b>{txt.fez_record_search_key_grant_agency}</b>
-                    {grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && ` (${txt.fez_record_search_key_grant_id})`}
-                </TableRowColumn>
-                <TableRowColumn className="data">
-                    <b>{grantAgency.rek_grant_agency}</b>
-                    {grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && ` (${grantId.rek_grant_id})`}
-                    <span className="grantText">{grantText && grantText.rek_grant_text}</span>
-                </TableRowColumn>
-            </TableRow>
+            <Grid container key={order} spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
+                <Grid item xs={12} sm={3}>
+                    <this.GrantInformationCell
+                        grantAgency={txt.fez_record_search_key_grant_agency}
+                        grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && txt.fez_record_search_key_grant_id}
+                        className="header"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                    <this.GrantInformationCell
+                        grantAgency={grantAgency.rek_grant_agency}
+                        grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id}
+                        className={this.props.classes.data}
+                    />
+                    <Typography variant="body1">{grantText && grantText.rek_grant_text}</Typography>
+                </Grid>
+            </Grid>
         );
     }
 
@@ -61,16 +116,20 @@ export default class GrantInformation extends Component {
 
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
-                {
-                    fundingText &&
-                    <p className="singleGrantText">{fundingText}</p>
-                }
-                <Table selectable={false} className="grantInformation vertical">
-                    <TableBody displayRowCheckbox={false}>
+                <Grid id="grantInformation" container direction="row">
+                    <Grid item xs={12} className={this.props.classes.gridRow}>
+                        {
+                            fundingText &&
+                            <Typography variant="body1">{fundingText}</Typography>
+                        }
+                    </Grid>
+                    <Grid item xs={12}>
                         {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication, !fundingText)}
-                    </TableBody>
-                </Table>
+                    </Grid>
+                </Grid>
             </StandardCard>
         );
     }
 }
+
+export default withStyles(styles)(GrantInformation);

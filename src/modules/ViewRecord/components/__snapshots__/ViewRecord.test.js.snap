@@ -33,7 +33,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
   <WithStyles(AdditionalInformation)
     publication={Object {}}
   />
-  <GrantInformation
+  <WithStyles(GrantInformation)
     publication={Object {}}
   />
   <PublicationDetails
@@ -2066,7 +2066,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
       }
     }
   />
-  <GrantInformation
+  <WithStyles(GrantInformation)
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -5251,7 +5251,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
       }
     }
   />
-  <GrantInformation
+  <WithStyles(GrantInformation)
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
