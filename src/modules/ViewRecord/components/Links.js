@@ -27,9 +27,9 @@ export class Links extends PureComponent {
     LinkRow = ({link, description, openAccessStatus}) => (
         <div style={{padding: 16}}>
             <Grid container spacing={32} className={this.props.classes.header}>
-                <Grid item sm={6}><Typography variant="body1">{link}</Typography></Grid>
-                <Grid item sm={4}><Typography variant="body1">{description}</Typography></Grid>
-                <Grid item sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
+                <Grid item xs={12} sm={6}><Typography variant="body1" noWrap>{link}</Typography></Grid>
+                <Grid item xs={10} sm={4}><Typography variant="body1">{description}</Typography></Grid>
+                <Grid item xs={2} sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
             </Grid>
         </div>
     );

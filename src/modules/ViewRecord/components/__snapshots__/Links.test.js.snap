@@ -2821,6 +2821,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -2937,13 +2938,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -2992,12 +2994,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <PubmedCentralLink
                                                                       pubmedCentralId="PMC5179926"
@@ -3033,6 +3035,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -3149,11 +3152,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -3221,6 +3224,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -3337,11 +3341,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -3515,6 +3519,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -3631,13 +3636,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -3686,12 +3692,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <DoiCitationView
                                                                       doi="10.1016/j.pnsc.2012.12.004"
@@ -3727,6 +3733,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -3843,11 +3850,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -3915,6 +3922,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -4031,11 +4039,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -4211,6 +4219,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -4327,13 +4336,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -4382,12 +4392,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -4417,6 +4427,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -4533,11 +4544,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -4605,6 +4616,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -4721,11 +4733,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -4897,6 +4909,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -5013,13 +5026,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -5068,12 +5082,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -5103,6 +5117,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -5219,11 +5234,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -5291,6 +5306,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -5407,11 +5423,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -5583,6 +5599,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -5699,13 +5716,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -5754,12 +5772,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -5789,6 +5807,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -5905,11 +5924,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -5977,6 +5996,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -6093,11 +6113,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -9265,6 +9285,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -9381,13 +9402,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -9436,12 +9458,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <PubmedCentralLink
                                                                       pubmedCentralId="PMC5179926"
@@ -9477,6 +9499,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -9593,11 +9616,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -9665,6 +9688,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -9781,11 +9805,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -9961,6 +9985,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -10077,13 +10102,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -10132,12 +10158,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -10167,6 +10193,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -10283,11 +10310,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -10355,6 +10382,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -10471,11 +10499,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -10647,6 +10675,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -10763,13 +10792,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -10818,12 +10848,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -10853,6 +10883,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -10969,11 +11000,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -11041,6 +11072,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -11157,11 +11189,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -11333,6 +11365,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -11449,13 +11482,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -11504,12 +11538,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -11539,6 +11573,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -11655,11 +11690,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -11727,6 +11762,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -11843,11 +11879,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -14710,6 +14746,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -14826,13 +14863,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -14881,12 +14919,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <PubmedCentralLink
                                                                       pubmedCentralId="PMC5179926"
@@ -14922,6 +14960,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -15038,11 +15077,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -15110,6 +15149,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -15226,11 +15266,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -15398,6 +15438,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -15514,13 +15555,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -15569,12 +15611,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <DoiCitationView
                                                                       doi="10.1016/j.pnsc.2012.12.004"
@@ -15610,6 +15652,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -15726,11 +15769,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -15798,6 +15841,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -15914,11 +15958,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -16090,6 +16134,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -16206,13 +16251,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -16261,12 +16307,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -16296,6 +16342,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -16412,11 +16459,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -16484,6 +16531,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -16600,11 +16648,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -16776,6 +16824,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -16892,13 +16941,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -16947,12 +16997,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -16982,6 +17032,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -17098,11 +17149,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -17170,6 +17221,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -17286,11 +17338,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -17462,6 +17514,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -17578,13 +17631,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -17633,12 +17687,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -17668,6 +17722,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -17784,11 +17839,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -17856,6 +17911,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -17972,11 +18028,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -20833,6 +20889,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -20949,13 +21006,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -21004,12 +21062,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <DoiCitationView
                                                                       doi="10.1016/j.pnsc.2012.12.004"
@@ -21045,6 +21103,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -21161,11 +21220,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -21233,6 +21292,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -21349,11 +21409,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate="24th December 2020"
@@ -21529,6 +21589,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -21645,13 +21706,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -21700,12 +21762,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -21735,6 +21797,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -21851,11 +21914,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -21923,6 +21986,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -22039,11 +22103,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -22215,6 +22279,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -22331,13 +22396,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -22386,12 +22452,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -22421,6 +22487,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -22537,11 +22604,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -22609,6 +22676,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -22725,11 +22793,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
@@ -22901,6 +22969,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={6}
+                                                          xs={12}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -23017,13 +23086,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={12}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-6-081"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-12-073 MuiGrid-grid-sm-6-081"
                                                             >
                                                               <WithStyles(Typography)
+                                                                noWrap={true}
                                                                 variant="body1"
                                                               >
                                                                 <Typography
@@ -23072,12 +23142,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                       "title": "h2",
                                                                     }
                                                                   }
-                                                                  noWrap={false}
+                                                                  noWrap={true}
                                                                   paragraph={false}
                                                                   variant="body1"
                                                                 >
                                                                   <p
-                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139"
+                                                                    className="MuiTypography-root-0130 MuiTypography-body1-0139 MuiTypography-noWrap-0146"
                                                                   >
                                                                     <ExternalLink
                                                                       className=""
@@ -23107,6 +23177,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={4}
+                                                          xs={10}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -23223,11 +23294,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={10}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-4-079"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-10-071 MuiGrid-grid-sm-4-079"
                                                             >
                                                               <WithStyles(Typography)
                                                                 variant="body1"
@@ -23295,6 +23366,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <WithStyles(Grid)
                                                           item={true}
                                                           sm={2}
+                                                          xs={2}
                                                         >
                                                           <Grid
                                                             alignContent="stretch"
@@ -23411,11 +23483,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             spacing={0}
                                                             wrap="wrap"
                                                             xl={false}
-                                                            xs={false}
+                                                            xs={2}
                                                             zeroMinWidth={false}
                                                           >
                                                             <div
-                                                              className="MuiGrid-item-034 MuiGrid-grid-sm-2-077"
+                                                              className="MuiGrid-item-034 MuiGrid-grid-xs-2-063 MuiGrid-grid-sm-2-077"
                                                             >
                                                               <OpenAccessIcon
                                                                 embargoDate={null}
