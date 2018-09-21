@@ -2329,36 +2329,40 @@ export default {
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_doi',
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_publisher',
                     order: 12
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_contributor',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_start_page',
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_end_page',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_total_pages',
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_language',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 18
+                },
+                {
+                    field: 'fez_record_search_key_keywords',
+                    order: 19
                 }
             ],
             footer: [

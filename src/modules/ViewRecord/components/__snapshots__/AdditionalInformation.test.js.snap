@@ -30907,6 +30907,11 @@ exports[`Additional Information Component  should render component with working 
                 "fez_record_search_key_corresponding_name": Array [],
                 "fez_record_search_key_corresponding_organisation": Array [],
                 "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1242/jcs.196651",
+                  "rek_doi_id": null,
+                  "rek_doi_pid": "UQ:176145",
+                },
                 "fez_record_search_key_end_page": Object {
                   "rek_end_page": "23",
                   "rek_end_page_id": 5502160,
@@ -31226,6 +31231,15 @@ exports[`Additional Information Component  should render component with working 
         }
         heading="Publication date"
         key="additional-info-Publication date"
+      />
+      <ViewRecordTableRow
+        data={
+          <DoiCitationView
+            doi="10.1242/jcs.196651"
+          />
+        }
+        heading="DOI"
+        key="additional-info-DOI"
       />
       <ViewRecordTableRow
         data={
