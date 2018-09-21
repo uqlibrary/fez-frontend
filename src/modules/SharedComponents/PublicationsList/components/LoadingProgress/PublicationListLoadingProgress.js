@@ -1,57 +1,65 @@
 import React, {PureComponent} from 'react';
 import {PropTypes} from 'prop-types';
-import LinearProgress from 'material-ui/LinearProgress';
-import CircularProgress from 'material-ui/CircularProgress';
+import {Grid, Typography, Hidden, CircularProgress, LinearProgress} from '@material-ui/core';
 import locale from 'locale/pages';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class PublicationListLoadingProgress extends PureComponent {
+const styles = theme => ({
+    copy: {
+        fontSize: theme.typography.caption.fontSize
+    }
+});
+
+export class PublicationListLoadingProgress extends PureComponent {
     static propTypes = {
         loadingPublicationSources: PropTypes.object.isRequired,
-        mobile: PropTypes.bool
-    }
+        classes: PropTypes.object
+    };
 
     render() {
         const txt = locale.pages.addRecord.step2.searchResults.searchDashboard;
-        const {loadingPublicationSources, mobile} = this.props;
+        const {loadingPublicationSources, classes} = this.props;
 
         return (
-            <div>
-                {
-                    !mobile &&
-                    <div className="searchDashboardDesktop">
-                        <div className="body-2">
-                            {txt.repositories.map((item, index) => (
-                                <div key={index} className="searchDashboardList">
-                                    {item.title}
-                                    <span className="is-pulled-right">
-                                        {
-                                            loadingPublicationSources && loadingPublicationSources[item.id]
-                                                ? (<div>{loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}</div>)
-                                                : (<CircularProgress
-                                                    size={14}
-                                                    thickness={2}
-                                                    aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}/>)
-                                        }
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                }
-                {
-                    mobile &&
-                    <div className="searchDashboardMobile">
-                        <LinearProgress
-                            className="searchDashboardBar"
-                            mode="determinate"
-                            value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                            aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                        />
-                    </div>
-                }
-            </div>
+            <React.Fragment>
+                <Hidden xsDown>
+                    {txt.repositories.map((item, index) => (
+                        <Grid container spacing={8} key={index}>
+                            <Grid item xs>
+                                <Typography variant={'body2'} className={classes.copy}>{item.title}</Typography>
+                            </Grid>
+                            {
+                                loadingPublicationSources && loadingPublicationSources[item.id]
+                                    ? (
+                                        <Grid item>
+                                            <Typography className={classes.copy} noWrap>{loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}</Typography>
+                                        </Grid>
+                                    )
+                                    : (
+                                        <Grid item>
+                                            <CircularProgress
+                                                size={10}
+                                                thickness={2}
+                                                aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}/>
+                                        </Grid>
+                                    )
+                            }
+                        </Grid>
+                    ))}
+                </Hidden>
+                <Hidden smUp>
+                    <LinearProgress
+                        variant="determinate"
+                        value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                        aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                    />
+                </Hidden>
+            </React.Fragment>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(PublicationListLoadingProgress);
+

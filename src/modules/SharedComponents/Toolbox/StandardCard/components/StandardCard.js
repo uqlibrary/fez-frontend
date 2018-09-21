@@ -44,6 +44,7 @@ class Cards extends Component {
         darkHeader: PropTypes.bool,
         fullHeight: PropTypes.bool,
         noPadding: PropTypes.bool,
+        noHeader: PropTypes.bool,
         children: PropTypes.any,
         classes: PropTypes.object,
         help: PropTypes.object,
@@ -57,22 +58,25 @@ class Cards extends Component {
         const fullHeight = !!this.props.fullHeight ? {height: '100%'} : null;
         return (
             <Card className={classes.card} style={{...customBG, ...customTitle, ...fullHeight}}>
-                <Grid container spacing={24}>
-                    {
-                        title ?
-                            <Grid item xs className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
-                                <Typography variant={'title'} color={'inherit'}>{title}</Typography>
-                            </Grid>
-                            :
-                            <Grid item xs/>
-                    }
-                    {
-                        help && help.text &&
+                {
+                    !this.props.noHeader &&
+                    <Grid container spacing={24}>
+                        {
+                            title ?
+                                <Grid item xs className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
+                                    <Typography variant={'title'} color={'inherit'}>{title}</Typography>
+                                </Grid>
+                                :
+                                <Grid item xs/>
+                        }
+                        {
+                            help && help.text &&
                             <Grid item>
                                 <HelpIcon {...help}/>
                             </Grid>
-                    }
-                </Grid>
+                        }
+                    </Grid>
+                }
                 <CardContent classes={this.props.noPadding ? {root: classes.noPadding} : {}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12} className={classes.cardContent}>

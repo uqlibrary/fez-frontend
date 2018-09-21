@@ -120,81 +120,89 @@ export default class RecordsSearchResults extends PureComponent {
         ];
 
         return (
-            <Grid container spacing={16}>
-                <Hidden smUp>
-                    <Grid item xs>
-                        <PublicationListLoadingProgress
-                            mobile
-                            loadingPublicationSources={this.props.loadingPublicationSources} />
-                    </Grid>
-                </Hidden>
-                <Grid item sm={8} md={9}>
-                    {
-                        this.props.searchLoading &&
-                        <InlineLoader message={searchResultsTxt.loadingMessage}/>
-                    }
-                    {
-                        this.props.publicationsList.length > 0 &&
-                        <StandardCard {...searchResultsTxt.searchResults}>
-                            <div>
-                                {
-                                    searchResultsTxt.searchResults.resultsText
-                                        .replace('[noOfResults]', this.props.publicationsList.length)
-                                        .replace('[searchQuery]', this.props.rawSearchQuery)
-                                }
-                            </div>
-                            <div>
-                                {searchResultsTxt.searchResults.text}
-                            </div>
-                            <PublicationsList
-                                publicationsList={this.props.publicationsList}
-                                customActions={actions}
-                                publicationsListSubset={unclaimablePublicationsList}
-                                subsetCustomActions={unclaimable}
-                                showSources />
-                        </StandardCard>
-                    }
-                    {
-                        !this.props.searchLoading && this.props.publicationsList.length === 0 &&
-                        <StandardCard {...searchResultsTxt.noResultsFound}>
-                            {searchResultsTxt.noResultsFound.text}
-                        </StandardCard>
-                    }
-                    {
-                        !this.props.searchLoading &&
-                        <Grid container spacing={8}>
-                            <Grid item xs />
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    fullWidth
-                                    variant="contained"
-                                    onClick={this._cancelWorkflow}
-                                >
-                                    {searchResultsTxt.cancel}
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    fullWidth
-                                    variant="contained"
-                                    color="secondary"
-                                    onClick={this._showNewRecordForm}
-                                    ref={(node) => {this.showNewRecordButton = node;}}
-                                >
-                                    {searchResultsTxt.submit}
-                                </Button>
-                            </Grid>
+            <React.Fragment>
+                <Grid container spacing={24}>
+                    <Hidden smUp>
+                        <Grid item xs>
+                            <PublicationListLoadingProgress
+                                mobile
+                                loadingPublicationSources={this.props.loadingPublicationSources} />
                         </Grid>
-                    }
-                </Grid>
-                <Hidden xsDown>
-                    <Grid item sm={4} md={3}>
-                        <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
-                            <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
-                        </StandardRighthandCard>
+                    </Hidden>
+                    <Grid item sm={8} md={9}>
+                        {
+                            this.props.searchLoading &&
+                            <InlineLoader message={searchResultsTxt.loadingMessage}/>
+                        }
+                        {
+                            this.props.publicationsList.length > 0 &&
+                            <Grid item sm={12}>
+                                <StandardCard {...searchResultsTxt.searchResults}>
+                                    <div>
+                                        {
+                                            searchResultsTxt.searchResults.resultsText
+                                                .replace('[noOfResults]', this.props.publicationsList.length)
+                                                .replace('[searchQuery]', this.props.rawSearchQuery)
+                                        }
+                                    </div>
+                                    <div>
+                                        {searchResultsTxt.searchResults.text}
+                                    </div>
+                                    <PublicationsList
+                                        publicationsList={this.props.publicationsList}
+                                        customActions={actions}
+                                        publicationsListSubset={unclaimablePublicationsList}
+                                        subsetCustomActions={unclaimable}
+                                        showSources />
+                                </StandardCard>
+                            </Grid>
+                        }
+                        {
+                            !this.props.searchLoading && this.props.publicationsList.length === 0 &&
+                            <Grid item sm={12}>
+                                <StandardCard {...searchResultsTxt.noResultsFound}>
+                                    {searchResultsTxt.noResultsFound.text}
+                                </StandardCard>
+                            </Grid>
+                        }
+                        {
+                            !this.props.searchLoading &&
+                            <Grid item sm={12}>
+                                <Grid container spacing={16} style={{marginTop: 12}}>
+                                    <Grid item xs />
+                                    <Grid item xs={12} sm="auto">
+                                        <Button
+                                            fullWidth
+                                            variant="raised"
+                                            onClick={this._cancelWorkflow}
+                                        >
+                                            {searchResultsTxt.cancel}
+                                        </Button>
+                                    </Grid>
+                                    <Grid item xs={12} sm="auto">
+                                        <Button
+                                            fullWidth
+                                            variant="raised"
+                                            color="primary"
+                                            onClick={this._showNewRecordForm}
+                                            ref={(node) => {this.showNewRecordButton = node;}}
+                                        >
+                                            {searchResultsTxt.submit}
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        }
                     </Grid>
-                </Hidden>
-            </Grid>
+                    <Hidden xsDown>
+                        <Grid item sm={4} md={3}>
+                            <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
+                                <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                            </StandardRighthandCard>
+                        </Grid>
+                    </Hidden>
+                </Grid>
+            </React.Fragment>
         );
     }
 }

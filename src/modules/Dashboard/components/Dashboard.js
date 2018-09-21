@@ -131,7 +131,7 @@ export class Dashboard extends PureComponent {
         const publicationStats = !loading && this.props.publicationsStats
         && (this.props.publicationsStats.thomson_citation_count_i.count > 0 || this.props.publicationsStats.scopus_citation_count_i.count > 0)
             ? (
-                <StandardCard noPadding fullHeight >
+                <StandardCard noPadding noHeader fullHeight >
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;

@@ -12,7 +12,7 @@ const styles = {
     },
     divider: {
         marginTop: 6,
-        marginBottom: 6
+        marginBottom: 12
     }
 };
 
@@ -36,12 +36,14 @@ class RighthandCard extends React.Component {
                     {title &&
                     <Typography variant={'title'} color={'primary'}>{title}</Typography>}
                 </Grid>
-                <Divider className={classes.divider}/>
                 {help && help.text &&
                 <Grid item>
                     <HelpIcon {...help}/>
                 </Grid>
                 }
+                <Grid item xs={12}>
+                    <Divider className={classes.divider} />
+                </Grid>
                 <Grid item xs={12}>
                     {children}
                 </Grid>
