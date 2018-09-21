@@ -30,7 +30,7 @@ export default {
             // },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace publications indexed in:',
+            publicationStatsTitle1: 'eSpace publications',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
