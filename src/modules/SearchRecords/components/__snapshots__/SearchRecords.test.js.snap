@@ -4,28 +4,44 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <WithStyles(Alert)
-    message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
-    title="Error"
-    type="error_outline"
-  />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Alert)
+        message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
+        pushToTop={true}
+        title="Error"
+        type="error_outline"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -33,27 +49,33 @@ exports[`SearchRecords page renders loading screen while export publications loa
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
-  />
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -61,27 +83,32 @@ exports[`SearchRecords page should render loading screen while export publicatio
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
   >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
       md={9}
@@ -153,39 +180,40 @@ exports[`SearchRecords page should render loading screen while loading publicati
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={true}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
-    justify="center"
+    spacing={24}
   >
     <WithStyles(Grid)
       item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={true}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <WithStyles(InlineLoader)
         message="Searching for publications..."
       />
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
     <WithStyles(Grid)
       item={true}
       md={9}
@@ -257,39 +285,41 @@ exports[`SearchRecords page should render loading screen while loading search re
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={true}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
-    justify="center"
+    spacing={24}
   >
     <WithStyles(Grid)
       item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={true}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <WithStyles(InlineLoader)
         message="Searching for publications..."
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  />
 </StandardPage>
 `;
 
@@ -297,27 +327,32 @@ exports[`SearchRecords page should render no results 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
   >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
     >
@@ -342,27 +377,33 @@ exports[`SearchRecords page should render placeholders 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
-  />
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -370,26 +411,31 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "showOpenAccessOnly": true,
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
   >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "showOpenAccessOnly": true,
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
     >
@@ -414,28 +460,33 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {
-            "Display type": 179,
-          },
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
   >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {
+                "Display type": 179,
+              },
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
     >
@@ -460,31 +511,36 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "ranges": Object {
-            "Year published": Object {
-              "from": 2015,
-              "to": 2018,
-            },
-          },
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
   >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "ranges": Object {
+                "Year published": Object {
+                  "from": 2015,
+                  "to": 2018,
+                },
+              },
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
     >
@@ -509,27 +565,32 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
-  >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
   <WithStyles(Grid)
     container={true}
     spacing={24}
   >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
     >

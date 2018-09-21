@@ -21,13 +21,13 @@ const classNames = require('classnames');
 
 const styles = theme => ({
     wrapper: {
-        marginBottom: 24,
+        marginBottom: 12,
         paddingRight: 24
     },
     pushToTop: {
         marginTop: -18,
         paddingRight: 24,
-        marginBottom: 24
+        marginBottom: -18
     },
     common: {
         margin: '18px 0',

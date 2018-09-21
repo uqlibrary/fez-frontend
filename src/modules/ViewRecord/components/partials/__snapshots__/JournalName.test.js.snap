@@ -77,6 +77,15 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -429,6 +438,15 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -1890,6 +1908,15 @@ exports[`Journal Name Component test  should render without era journal listed 1
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -3327,6 +3354,15 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],

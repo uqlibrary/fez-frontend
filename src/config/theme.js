@@ -89,6 +89,15 @@ export const mui1theme = createMuiTheme({
             }
         }
     },
+    graphs: {
+        color1: '#d72865',
+        color2: '#1e7d94',
+        color3: '#49075E',
+        color4: '#468fcc',
+        color5: '#f28620',
+        color6: '#333333',
+        color7: '#595959'
+    },
     // Converts a color hex code to RGBA when referenced from a component
     hexToRGBA: (hex, alpha) => {
         const r = parseInt(hex.slice(1, 3), 16);

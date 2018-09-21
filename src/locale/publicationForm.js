@@ -299,7 +299,7 @@ export default {
             help: {
                 title: 'Audio document information',
                 text: (
-                    <div>
+                    <React.Fragment>
                         <p><b>Place of publication:</b> Provide the geographical location for the
                             publisher
                             or producer of the work, i.e. city, country</p>
@@ -307,7 +307,7 @@ export default {
                             available.
                             For online recordings or broadcasts, provide the date first publicly presented or
                             released. </p>
-                    </div>
+                    </React.Fragment>
                 ),
                 buttonLabel: 'OK'
             },

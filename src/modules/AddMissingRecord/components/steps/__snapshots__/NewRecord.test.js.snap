@@ -3,20 +3,28 @@
 exports[`Add new record should not render publication form if author is not loaded  1`] = `<span />`;
 
 exports[`Add new record should render stepper and a publication form 1`] = `
-<div>
+<React.Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "Add another missing record",
         "confirmButtonLabel": "Go to my research",
-        "confirmationMessage": <div>
-          <p>
-            Your record has been saved.
-            <br />
-            <br />
-            Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
-          </p>
-        </div>,
+        "confirmationMessage": <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <p>
+              Your record has been saved.
+              <br />
+              <br />
+              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+            </p>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>,
         "confirmationTitle": "Your record has been submitted",
         "fileFailConfirmationAlert": Object {
           "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -50,7 +58,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onFormCancel={[Function]}
     onFormSubmitSuccess={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `
@@ -61,14 +69,22 @@ exports[`Add new record should render the confirm dialog with an alert for faile
     Object {
       "cancelButtonLabel": "Add another missing record",
       "confirmButtonLabel": "Go to my research",
-      "confirmationMessage": <div>
-        <p>
-          Your record has been saved.
-          <br />
-          <br />
-          Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
-        </p>
-      </div>,
+      "confirmationMessage": <WithStyles(Grid)
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <p>
+            Your record has been saved.
+            <br />
+            <br />
+            Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+          </p>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>,
       "confirmationTitle": "Your record has been submitted",
       "fileFailConfirmationAlert": Object {
         "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -110,6 +126,15 @@ exports[`Add new record should render the confirm dialog with an alert for faile
         "width": [Function],
       },
       "direction": "ltr",
+      "graphs": Object {
+        "color1": "#d72865",
+        "color2": "#1e7d94",
+        "color3": "#49075E",
+        "color4": "#468fcc",
+        "color5": "#f28620",
+        "color6": "#333333",
+        "color7": "#595959",
+      },
       "hexToRGBA": [Function],
       "mixins": Object {
         "gutters": [Function],

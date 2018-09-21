@@ -133,6 +133,15 @@ exports[`AutoSuggestField component should render autosuggest field and call act
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -1151,6 +1160,15 @@ exports[`AutoSuggestField component should render with className set 1`] = `
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -2169,6 +2187,15 @@ exports[`AutoSuggestField component should render with disabled flag set to true
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],

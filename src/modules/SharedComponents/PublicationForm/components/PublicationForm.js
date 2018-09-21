@@ -77,39 +77,50 @@ export default class PublicationForm extends Component {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <form onSubmit={this._handleDefaultSubmit}>
-                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
-                <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
-                    <Field
-                        component={SelectField}
-                        disabled={this.props.submitting}
-                        name="rek_display_type"
-                        value={this.props.formValues.get('rek_display_type')}
-                        label={txt.publicationType.inputLabelText}
-                        required
-                        placeholder={txt.publicationType.hintText}>
-                        {publicationTypeItems}
-                    </Field>
-                </StandardCard>
-                {
-                    this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))
-                }
-                {
-                    this.props.formValues.get('rek_display_type') > 0 &&
-                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field
-                            name="files"
-                            component={ FileUploadField }
-                            disabled={this.props.submitting}
-                            requireOpenAccessStatus
-                            validate={[validation.validFileUpload]} />
-                    </StandardCard>
-                }
-                {
-                    alertProps &&
-                    <Alert {...alertProps} />
-                }
-                <Grid container justify="flex-end" spacing={16}>
-                    <Grid item xs={12} sm={6} md={3}>
+                <Grid container spacing={24}>
+                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
+                            <Field
+                                component={SelectField}
+                                disabled={this.props.submitting}
+                                name="rek_display_type"
+                                value={this.props.formValues.get('rek_display_type')}
+                                label={txt.publicationType.inputLabelText}
+                                required
+                                placeholder={txt.publicationType.hintText}>
+                                {publicationTypeItems}
+                            </Field>
+                        </StandardCard>
+                    </Grid>
+                    {
+                        this.props.formValues.get('rek_display_type') > 0 &&
+                        <React.Fragment>
+                            <Grid item xs={12}>
+                                {this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))}
+                            </Grid>
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                    <Field
+                                        name="files"
+                                        component={ FileUploadField }
+                                        disabled={this.props.submitting}
+                                        requireOpenAccessStatus
+                                        validate={[validation.validFileUpload]} />
+                                </StandardCard>
+                            </Grid>
+                        </React.Fragment>
+                    }
+                    {
+                        alertProps &&
+                        <Grid item xs={12}>
+                            <Alert pushToTop {...alertProps} />
+                        </Grid>
+                    }
+                </Grid>
+                <Grid container spacing={24}>
+                    <Grid item xs />
+                    <Grid item xs={12} sm={'auto'}>
                         <Button
                             variant="raised"
                             color="secondary"
@@ -120,8 +131,9 @@ export default class PublicationForm extends Component {
                     </Grid>
                     {
                         this.props.formValues.get('rek_display_type') > 0 &&
-                        <Grid item xs={12} sm={6} md={3}>
+                        <Grid item xs={12} sm={'auto'}>
                             <Button
+                                style={{whiteSpace: 'nowrap'}}
                                 variant="raised"
                                 color="primary"
                                 fullWidth

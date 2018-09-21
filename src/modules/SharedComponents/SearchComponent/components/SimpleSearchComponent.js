@@ -173,7 +173,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             <Search className={classes.searchIconPrefix}/>
                                         </Grid>
                                     }
-                                    <Grid item style={{flexGrow: 1}}>
+                                    <Grid item xs>
                                         <TextField
                                             type="search"
                                             fullWidth
@@ -212,7 +212,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                         </Grid>
                                                     </Hidden>
                                                 }
-                                                <Grid item style={{flexGrow: 1}} zeroMinWidth>
+                                                <Grid item xs zeroMinWidth>
                                                     <TextField
                                                         className={classes.mobileSearchInput}
                                                         type="search"
@@ -236,7 +236,7 @@ export class SimpleSearchComponent extends PureComponent {
                         <React.Fragment>
                             {/* NOT in header */}
                             <Grid container spacing={16}>
-                                <Grid item style={{flexGrow: 1}}>
+                                <Grid item xs>
                                     <TextField
                                         type="search"
                                         fullWidth

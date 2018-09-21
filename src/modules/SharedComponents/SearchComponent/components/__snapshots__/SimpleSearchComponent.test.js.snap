@@ -9,11 +9,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
     >
       <WithStyles(Grid)
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
+        xs={true}
       >
         <TextField
           aria-label="Enter your search query to search eSpace and then press Enter"
@@ -74,11 +70,7 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
     >
       <WithStyles(Grid)
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
+        xs={true}
       >
         <TextField
           aria-label="Enter your search query to search eSpace and then press Enter"
@@ -139,11 +131,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
     >
       <WithStyles(Grid)
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
+        xs={true}
       >
         <TextField
           aria-label="Enter your search query to search eSpace and then press Enter"
@@ -221,11 +209,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
       >
         <WithStyles(Grid)
           item={true}
-          style={
-            Object {
-              "flexGrow": 1,
-            }
-          }
+          xs={true}
         >
           <TextField
             InputProps={
@@ -292,11 +276,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
     >
       <WithStyles(Grid)
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
+        xs={true}
       >
         <TextField
           aria-label="Enter your search query to search eSpace and then press Enter"

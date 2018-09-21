@@ -10,20 +10,31 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     card: {
-        marginBottom: 24
+        // marginBottom: 24
     },
     cardHeaderPurple: {
         margin: '12px 12px 0 12px',
-        textIndent: 12,
         color: theme.palette.white.main,
-        backgroundColor: theme.palette.primary.main
+        backgroundColor: theme.palette.primary.main,
+        '& h2': {
+            paddingLeft: 12
+        },
     },
     cardHeader: {
         margin: '24px 12px 0 12px',
-        textIndent: 12,
+        '& h2': {
+            paddingLeft: 12
+        },
     },
     cardContent: {
         fontWeight: theme.typography.fontWeightRegular
+    },
+    noPadding: {
+        padding: 0,
+    },
+    fullHeight: {
+        border: '10px solid red',
+        height: '100%'
     }
 });
 
@@ -31,14 +42,21 @@ class Cards extends Component {
     static propTypes = {
         title: PropTypes.any,
         darkHeader: PropTypes.bool,
+        fullHeight: PropTypes.bool,
+        noPadding: PropTypes.bool,
         children: PropTypes.any,
         classes: PropTypes.object,
-        help: PropTypes.object
+        help: PropTypes.object,
+        customBackgroundColor: PropTypes.any,
+        customTitleColor: PropTypes.any
     };
     render() {
         const {classes, title, help, children, darkHeader} = this.props;
+        const customBG = !!this.props.customBackgroundColor ? {backgroundColor: this.props.customBackgroundColor} : null;
+        const customTitle = !!this.props.customTitleColor ? {color: this.props.customTitleColor} : null;
+        const fullHeight = !!this.props.fullHeight ? {height: '100%'} : null;
         return (
-            <Card className={classes.card}>
+            <Card className={classes.card} style={{...customBG, ...customTitle, ...fullHeight}}>
                 <Grid container spacing={24}>
                     {
                         title ?
@@ -46,16 +64,16 @@ class Cards extends Component {
                                 <Typography variant={'title'} color={'inherit'}>{title}</Typography>
                             </Grid>
                             :
-                            <Grid item xs />
+                            <Grid item xs/>
                     }
                     {
                         help && help.text &&
-                        <Grid item>
-                            <HelpIcon {...help}/>
-                        </Grid>
+                            <Grid item>
+                                <HelpIcon {...help}/>
+                            </Grid>
                     }
                 </Grid>
-                <CardContent>
+                <CardContent classes={this.props.noPadding ? {root: classes.noPadding} : {}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12} className={classes.cardContent}>
                             {children}

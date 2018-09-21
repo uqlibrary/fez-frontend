@@ -225,126 +225,124 @@ class SearchRecords extends PureComponent {
         const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
         return (
             <StandardPage className="page-search-records">
-                <StandardCard className="searchComponent">
-                    <SearchComponent
-                        className="search-body"
-                        showAdvancedSearchButton activeFacets={this.state.activeFacets}
-                        facetsChanged={this.facetsChanged}
-                        searchLoading={this.props.searchLoading}
-                        clearSearchQuery={this.props.actions.clearSearchQuery}
-                        updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
-                    />
-                </StandardCard>
-                {
-                    // first time loading search results
-                    !hasSearchParams && this.props.searchLoading &&
-                    <Grid container justify={'center'}>
-                        <Grid item>
+                <Grid container spacing={24}>
+                    <Grid item xs={12}>
+                        <StandardCard className="searchComponent">
+                            <SearchComponent
+                                className="search-body"
+                                showAdvancedSearchButton activeFacets={this.state.activeFacets}
+                                facetsChanged={this.facetsChanged}
+                                searchLoading={this.props.searchLoading}
+                                clearSearchQuery={this.props.actions.clearSearchQuery}
+                                updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
+                            />
+                        </StandardCard>
+                    </Grid>
+                    {
+                        // first time loading search results
+                        !hasSearchParams && this.props.searchLoading &&
+                        <Grid item xs={12}>
                             <InlineLoader message={txt.loadingMessage}/>
                         </Grid>
-                    </Grid>
-                }
-                {
-                    this.props.searchLoadingError &&
-                    <Alert {...alertProps} />
-                }
-                {
-                    !this.props.searchLoadingError &&
-                    <Grid container spacing={24}>
-                        {
-                            // no results to display
-                            hasSearchParams &&
-                            !this.props.searchLoading &&
-                            this.props.publicationsList.length === 0 &&
-                            <Grid item>
-                                <StandardCard {...txt.noResultsFound}>
-                                    {txt.noResultsFound.text}
-                                </StandardCard>
-                            </Grid>
-                        }
-                        {
-                            // results to display or loading if user is filtering/paging
-                            (
-                                (hasSearchParams && this.props.searchLoading) ||
-                                (!!this.props.publicationsList && this.props.publicationsList.length > 0)
-                            ) &&
-                            <Grid item xs sm md={9}>
-                                <StandardCard>
-                                    <Grid container spacing={16}>
-                                        <Grid item xs={12}>
-                                            {
-                                                pagingData && pagingData.to && pagingData.from && pagingData.total ?
-                                                    <span>
-                                                        {txt.recordCount
-                                                            .replace('[recordsTotal]', pagingData.total)
-                                                            .replace('[recordsFrom]', pagingData.from)
-                                                            .replace('[recordsTo]', pagingData.to)}
-                                                    </span>
-                                                    :
-                                                    <span>{txt.loadingPagingMessage}</span>
-                                            }
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListSorting
-                                                sortBy={this.state.sortBy}
-                                                sortDirection={this.state.sortDirection}
-                                                pageSize={this.state.pageSize}
-                                                pagingData={pagingData}
-                                                canUseExport={this.props.canUseExport}
-                                                onSortByChanged={this.sortByChanged}
-                                                onPageSizeChanged={this.pageSizeChanged}
-                                                onExportPublications={this.handleExportPublications}
-                                                disabled={isLoadingOrExporting} />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListPaging
-                                                loading={isLoadingOrExporting}
-                                                pagingData={pagingData}
-                                                onPageChanged={this.pageChanged}
-                                                disabled={isLoadingOrExporting} />
+                    }
+                    {
+                        this.props.searchLoadingError &&
+                        <Grid item xs={12}>
+                            <Alert pushToTop {...alertProps} />
+                        </Grid>
+                    }
+                    {
+                        // no results to display
+                        hasSearchParams && !this.props.searchLoading &&
+                        this.props.publicationsList.length === 0 &&
+                        <Grid item>
+                            <StandardCard {...txt.noResultsFound}>
+                                {txt.noResultsFound.text}
+                            </StandardCard>
+                        </Grid>
+                    }
+                    {
+                        // results to display or loading if user is filtering/paging
+                        (
+                            (hasSearchParams && this.props.searchLoading) ||
+                            (!!this.props.publicationsList && this.props.publicationsList.length > 0)
+                        ) &&
+                        <Grid item xs sm md={9}>
+                            <StandardCard>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12}>
+                                        {
+                                            pagingData && pagingData.to && pagingData.from && pagingData.total ?
+                                                <span>
+                                                    {txt.recordCount
+                                                        .replace('[recordsTotal]', pagingData.total)
+                                                        .replace('[recordsFrom]', pagingData.from)
+                                                        .replace('[recordsTo]', pagingData.to)}
+                                                </span>
+                                                :
+                                                <span>{txt.loadingPagingMessage}</span>
+                                        }
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListSorting
+                                            sortBy={this.state.sortBy}
+                                            sortDirection={this.state.sortDirection}
+                                            pageSize={this.state.pageSize}
+                                            pagingData={pagingData}
+                                            canUseExport={this.props.canUseExport}
+                                            onSortByChanged={this.sortByChanged}
+                                            onPageSizeChanged={this.pageSizeChanged}
+                                            onExportPublications={this.handleExportPublications}
+                                            disabled={isLoadingOrExporting} />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListPaging
+                                            loading={isLoadingOrExporting}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={isLoadingOrExporting} />
+                                    </Grid>
+                                </Grid>
+                                {
+                                    isLoadingOrExporting &&
+                                    <Grid container justify={'center'}>
+                                        <Grid item>
+                                            <InlineLoader message={this.props.searchLoading ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/>
                                         </Grid>
                                     </Grid>
-                                    {
-                                        isLoadingOrExporting &&
-                                        <Grid container justify={'center'}>
-                                            <Grid item>
-                                                <InlineLoader message={this.props.searchLoading ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/>
-                                            </Grid>
-                                        </Grid>
-                                    }
-                                    {
-                                        !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                        <PublicationsList publicationsList={this.props.publicationsList} />
-                                    }
-                                    <PublicationsListPaging
-                                        loading={isLoadingOrExporting}
-                                        pagingData={pagingData}
-                                        onPageChanged={this.pageChanged}
-                                        disabled={isLoadingOrExporting} />
-                                </StandardCard>
-                            </Grid>
-                        }
-                        {
-                            this.props.publicationsListFacets
-                            && Object.keys(this.props.publicationsListFacets).length !== 0 &&
-                                <Hidden smDown>
-                                    <Grid item md={3}>
-                                        <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                            <FacetsFilter
-                                                facetsData={this.props.publicationsListFacets}
-                                                onFacetsChanged={this.facetsChanged}
-                                                activeFacets={this.state.activeFacets}
-                                                disabled={isLoadingOrExporting}
-                                                excludeFacetsList={this.state.advancedSearchFields}
-                                                renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                                lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                                showOpenAccessFilter/>
-                                        </StandardRighthandCard>
-                                    </Grid>
-                                </Hidden>
-                        }
-                    </Grid>
-                }
+                                }
+                                {
+                                    !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    <PublicationsList publicationsList={this.props.publicationsList} />
+                                }
+                                <PublicationsListPaging
+                                    loading={isLoadingOrExporting}
+                                    pagingData={pagingData}
+                                    onPageChanged={this.pageChanged}
+                                    disabled={isLoadingOrExporting} />
+                            </StandardCard>
+                        </Grid>
+                    }
+                    {
+                        this.props.publicationsListFacets
+                        && Object.keys(this.props.publicationsListFacets).length !== 0 &&
+                            <Hidden smDown>
+                                <Grid item md={3}>
+                                    <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                        <FacetsFilter
+                                            facetsData={this.props.publicationsListFacets}
+                                            onFacetsChanged={this.facetsChanged}
+                                            activeFacets={this.state.activeFacets}
+                                            disabled={isLoadingOrExporting}
+                                            excludeFacetsList={this.state.advancedSearchFields}
+                                            renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                            lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                            showOpenAccessFilter/>
+                                    </StandardRighthandCard>
+                                </Grid>
+                            </Hidden>
+                    }
+                </Grid>
             </StandardPage>
         );
     }

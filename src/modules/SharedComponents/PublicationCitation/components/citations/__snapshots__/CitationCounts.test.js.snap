@@ -77,6 +77,15 @@ exports[`CitationCounts should not render View full statistics link on public pa
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -623,6 +632,15 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -1975,6 +1993,15 @@ exports[`CitationCounts should render component with all metrics 1`] = `
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],
@@ -2540,6 +2567,15 @@ exports[`CitationCounts should render component with no metrics 1`] = `
               "width": [Function],
             },
             "direction": "ltr",
+            "graphs": Object {
+              "color1": "#d72865",
+              "color2": "#1e7d94",
+              "color3": "#49075E",
+              "color4": "#468fcc",
+              "color5": "#f28620",
+              "color6": "#333333",
+              "color7": "#595959",
+            },
             "hexToRGBA": [Function],
             "mixins": Object {
               "gutters": [Function],

@@ -9,6 +9,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 // forms & custom components
 import {validation, routes} from 'config';
 import locale from 'locale/pages';
+import Grid from '@material-ui/core/Grid';
 
 export default class NewRecord extends PureComponent {
     static propTypes = {
@@ -59,13 +60,15 @@ export default class NewRecord extends PureComponent {
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
         saveConfirmationLocale.confirmationMessage = (
-            <div>
-                {this.props.newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
-                {saveConfirmationLocale.recordSuccessConfirmationMessage}
-            </div>
+            <Grid container spacing={24}>
+                <Grid item xs={12}>
+                    {this.props.newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                    {saveConfirmationLocale.recordSuccessConfirmationMessage}
+                </Grid>
+            </Grid>
         );
         return (
-            <div>
+            <React.Fragment>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToMyResearch}
@@ -77,7 +80,7 @@ export default class NewRecord extends PureComponent {
                     onFormCancel={this._restartWorkflow}
                     initialValues={initialValues}
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

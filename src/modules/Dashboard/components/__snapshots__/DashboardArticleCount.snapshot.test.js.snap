@@ -1,35 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Article Count test Render the authors article counts as expected for a UQ researcher) 1`] = `
-<div
-  className="authorCounter is-centered"
+<WithStyles(Grid)
+  container={true}
+  direction="column"
 >
-  <div>
-    <div
-      className="noOfArticles"
+  <React.Fragment>
+    <WithStyles(Grid)
+      item={true}
     >
       313
-    </div>
-    <div
-      className="articlesFrom"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
     >
       eSpace articles from
-    </div>
-    <div
-      className="dateRange"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
     >
       1970
       <span>
          to 
       </span>
       2054
-    </div>
-  </div>
-</div>
+    </WithStyles(Grid)>
+  </React.Fragment>
+</WithStyles(Grid)>
 `;
 
 exports[`Dashboard Article Count test should not render anything if any data is missing 1`] = `
-<div
-  className="authorCounter is-centered"
+<WithStyles(Grid)
+  container={true}
+  direction="column"
 />
 `;
