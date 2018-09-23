@@ -8,18 +8,15 @@ exports[`Audio Player Component  should pause audio 1`] = `
       type="audio/mp3"
     />
   </audio>
-  <IconButton
+  <WithStyles(IconButton)
     aria-label="Click to pause audio file UQ676287_OA.pdf"
-    className="audioButton pause"
-    disableTouchRipple={false}
-    disabled={false}
-    iconStyle={Object {}}
     onClick={[Function]}
-    tooltipPosition="bottom-center"
     touch={true}
   >
-    <AvPause />
-  </IconButton>
+    <pure(PauseIcon)
+      className="pause"
+    />
+  </WithStyles(IconButton)>
 </div>
 `;
 
@@ -385,141 +382,162 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 type="audio/mp3"
               />
             </audio>
-            <IconButton
+            <WithStyles(IconButton)
               aria-label="Click to pause audio file UQ676287_OA.pdf"
-              className="audioButton pause"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
               onClick={[Function]}
-              tooltipPosition="bottom-center"
               touch={true}
             >
-              <EnhancedButton
+              <IconButton
                 aria-label="Click to pause audio file UQ676287_OA.pdf"
-                centerRipple={true}
-                className="audioButton pause"
-                containerElement="button"
-                disableTouchRipple={false}
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onKeyboardFocus={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseOut={[Function]}
-                onTouchStart={[Function]}
-                style={
+                classes={
                   Object {
-                    "boxSizing": "border-box",
-                    "fontSize": 0,
-                    "height": 48,
-                    "overflow": "visible",
-                    "padding": 12,
-                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    "width": 48,
+                    "colorInherit": "MuiIconButton-colorInherit-02",
+                    "colorPrimary": "MuiIconButton-colorPrimary-03",
+                    "colorSecondary": "MuiIconButton-colorSecondary-04",
+                    "disabled": "MuiIconButton-disabled-05",
+                    "label": "MuiIconButton-label-06",
+                    "root": "MuiIconButton-root-01",
                   }
                 }
-                tabIndex={0}
-                type="button"
+                color="default"
+                disabled={false}
+                onClick={[Function]}
+                touch={true}
               >
-                <button
+                <WithStyles(ButtonBase)
                   aria-label="Click to pause audio file UQ676287_OA.pdf"
-                  className="audioButton pause"
+                  centerRipple={true}
+                  className="MuiIconButton-root-01"
                   disabled={false}
-                  onBlur={[Function]}
+                  focusRipple={true}
                   onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseOut={[Function]}
-                  onTouchStart={[Function]}
-                  style={
-                    Object {
-                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                      "background": "none",
-                      "border": 10,
-                      "boxSizing": "border-box",
-                      "cursor": "pointer",
-                      "display": "inline-block",
-                      "fontFamily": "Roboto, sans-serif",
-                      "fontSize": 0,
-                      "fontWeight": "inherit",
-                      "height": 48,
-                      "margin": 0,
-                      "muiPrepared": true,
-                      "outline": "none",
-                      "overflow": "visible",
-                      "padding": 12,
-                      "position": "relative",
-                      "textDecoration": "none",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "verticalAlign": null,
-                      "width": 48,
-                    }
-                  }
-                  tabIndex={0}
-                  type="button"
+                  touch={true}
                 >
-                  <TouchRipple
-                    abortOnScroll={true}
+                  <ButtonBase
+                    aria-label="Click to pause audio file UQ676287_OA.pdf"
                     centerRipple={true}
-                    key="touchRipple"
+                    className="MuiIconButton-root-01"
+                    classes={
+                      Object {
+                        "disabled": "MuiButtonBase-disabled-08",
+                        "focusVisible": "MuiButtonBase-focusVisible-09",
+                        "root": "MuiButtonBase-root-07",
+                      }
+                    }
+                    component="button"
+                    disableRipple={false}
+                    disableTouchRipple={false}
+                    disabled={false}
+                    focusRipple={true}
+                    onClick={[Function]}
+                    tabIndex="0"
+                    touch={true}
+                    type="button"
                   >
-                    <div
+                    <button
+                      aria-label="Click to pause audio file UQ676287_OA.pdf"
+                      className="MuiButtonBase-root-07 MuiIconButton-root-01"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
                       onMouseDown={[Function]}
                       onMouseLeave={[Function]}
                       onMouseUp={[Function]}
                       onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
                       onTouchStart={[Function]}
+                      tabIndex="0"
+                      touch={true}
+                      type="button"
                     >
-                      <AvPause
-                        key=".0"
-                        style={Object {}}
+                      <span
+                        className="MuiIconButton-label-06"
                       >
-                        <AvPause
-                          style={Object {}}
+                        <pure(PauseIcon)
+                          className="pause"
                         >
-                          <SvgIcon
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={Object {}}
-                            viewBox="0 0 24 24"
+                          <PauseIcon
+                            className="pause"
                           >
-                            <svg
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              style={
-                                Object {
-                                  "color": "rgba(0, 0, 0, 0.87)",
-                                  "display": "inline-block",
-                                  "fill": "currentColor",
-                                  "height": 24,
-                                  "muiPrepared": true,
-                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                  "userSelect": "none",
-                                  "width": 24,
-                                }
-                              }
-                              viewBox="0 0 24 24"
+                            <WithStyles(SvgIcon)
+                              className="pause"
                             >
-                              <path
-                                d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"
-                              />
-                            </svg>
-                          </SvgIcon>
-                        </AvPause>
-                      </AvPause>
-                    </div>
-                  </TouchRipple>
-                </button>
-              </EnhancedButton>
-            </IconButton>
+                              <SvgIcon
+                                className="pause"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction-013",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled-015",
+                                    "colorError": "MuiSvgIcon-colorError-014",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary-011",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary-012",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-016",
+                                    "root": "MuiSvgIcon-root-010",
+                                  }
+                                }
+                                color="inherit"
+                                component="svg"
+                                fontSize="default"
+                                viewBox="0 0 24 24"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="MuiSvgIcon-root-010 pause"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"
+                                  />
+                                  <path
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                  />
+                                </svg>
+                              </SvgIcon>
+                            </WithStyles(SvgIcon)>
+                          </PauseIcon>
+                        </pure(PauseIcon)>
+                      </span>
+                      <WithStyles(TouchRipple)
+                        center={true}
+                        innerRef={[Function]}
+                      >
+                        <TouchRipple
+                          center={true}
+                          classes={
+                            Object {
+                              "child": "MuiTouchRipple-child-021",
+                              "childLeaving": "MuiTouchRipple-childLeaving-022",
+                              "childPulsate": "MuiTouchRipple-childPulsate-023",
+                              "ripple": "MuiTouchRipple-ripple-018",
+                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-020",
+                              "rippleVisible": "MuiTouchRipple-rippleVisible-019",
+                              "root": "MuiTouchRipple-root-017",
+                            }
+                          }
+                        >
+                          <TransitionGroup
+                            childFactory={[Function]}
+                            className="MuiTouchRipple-root-017"
+                            component="span"
+                            enter={true}
+                            exit={true}
+                          >
+                            <span
+                              className="MuiTouchRipple-root-017"
+                            />
+                          </TransitionGroup>
+                        </TouchRipple>
+                      </WithStyles(TouchRipple)>
+                    </button>
+                  </ButtonBase>
+                </WithStyles(ButtonBase)>
+              </IconButton>
+            </WithStyles(IconButton)>
           </div>
         </Component>
       </MuiThemeProvider>
@@ -890,141 +908,162 @@ exports[`Audio Player Component  should play audio 1`] = `
                 type="audio/mp3"
               />
             </audio>
-            <IconButton
+            <WithStyles(IconButton)
               aria-label="Click to play audio file UQ676287_OA.pdf"
-              className="audioButton play"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
               onClick={[Function]}
-              tooltipPosition="bottom-center"
               touch={true}
             >
-              <EnhancedButton
+              <IconButton
                 aria-label="Click to play audio file UQ676287_OA.pdf"
-                centerRipple={true}
-                className="audioButton play"
-                containerElement="button"
-                disableTouchRipple={false}
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onKeyboardFocus={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseOut={[Function]}
-                onTouchStart={[Function]}
-                style={
+                classes={
                   Object {
-                    "boxSizing": "border-box",
-                    "fontSize": 0,
-                    "height": 48,
-                    "overflow": "visible",
-                    "padding": 12,
-                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    "width": 48,
+                    "colorInherit": "MuiIconButton-colorInherit-02",
+                    "colorPrimary": "MuiIconButton-colorPrimary-03",
+                    "colorSecondary": "MuiIconButton-colorSecondary-04",
+                    "disabled": "MuiIconButton-disabled-05",
+                    "label": "MuiIconButton-label-06",
+                    "root": "MuiIconButton-root-01",
                   }
                 }
-                tabIndex={0}
-                type="button"
+                color="default"
+                disabled={false}
+                onClick={[Function]}
+                touch={true}
               >
-                <button
+                <WithStyles(ButtonBase)
                   aria-label="Click to play audio file UQ676287_OA.pdf"
-                  className="audioButton play"
+                  centerRipple={true}
+                  className="MuiIconButton-root-01"
                   disabled={false}
-                  onBlur={[Function]}
+                  focusRipple={true}
                   onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseOut={[Function]}
-                  onTouchStart={[Function]}
-                  style={
-                    Object {
-                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                      "background": "none",
-                      "border": 10,
-                      "boxSizing": "border-box",
-                      "cursor": "pointer",
-                      "display": "inline-block",
-                      "fontFamily": "Roboto, sans-serif",
-                      "fontSize": 0,
-                      "fontWeight": "inherit",
-                      "height": 48,
-                      "margin": 0,
-                      "muiPrepared": true,
-                      "outline": "none",
-                      "overflow": "visible",
-                      "padding": 12,
-                      "position": "relative",
-                      "textDecoration": "none",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "verticalAlign": null,
-                      "width": 48,
-                    }
-                  }
-                  tabIndex={0}
-                  type="button"
+                  touch={true}
                 >
-                  <TouchRipple
-                    abortOnScroll={true}
+                  <ButtonBase
+                    aria-label="Click to play audio file UQ676287_OA.pdf"
                     centerRipple={true}
-                    key="touchRipple"
+                    className="MuiIconButton-root-01"
+                    classes={
+                      Object {
+                        "disabled": "MuiButtonBase-disabled-08",
+                        "focusVisible": "MuiButtonBase-focusVisible-09",
+                        "root": "MuiButtonBase-root-07",
+                      }
+                    }
+                    component="button"
+                    disableRipple={false}
+                    disableTouchRipple={false}
+                    disabled={false}
+                    focusRipple={true}
+                    onClick={[Function]}
+                    tabIndex="0"
+                    touch={true}
+                    type="button"
                   >
-                    <div
+                    <button
+                      aria-label="Click to play audio file UQ676287_OA.pdf"
+                      className="MuiButtonBase-root-07 MuiIconButton-root-01"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
                       onMouseDown={[Function]}
                       onMouseLeave={[Function]}
                       onMouseUp={[Function]}
                       onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
                       onTouchStart={[Function]}
+                      tabIndex="0"
+                      touch={true}
+                      type="button"
                     >
-                      <AvPlayArrow
-                        key=".0"
-                        style={Object {}}
+                      <span
+                        className="MuiIconButton-label-06"
                       >
-                        <AvPlayArrow
-                          style={Object {}}
+                        <pure(PlayArrowIcon)
+                          className="play"
                         >
-                          <SvgIcon
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={Object {}}
-                            viewBox="0 0 24 24"
+                          <PlayArrowIcon
+                            className="play"
                           >
-                            <svg
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              style={
-                                Object {
-                                  "color": "rgba(0, 0, 0, 0.87)",
-                                  "display": "inline-block",
-                                  "fill": "currentColor",
-                                  "height": 24,
-                                  "muiPrepared": true,
-                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                  "userSelect": "none",
-                                  "width": 24,
-                                }
-                              }
-                              viewBox="0 0 24 24"
+                            <WithStyles(SvgIcon)
+                              className="play"
                             >
-                              <path
-                                d="M8 5v14l11-7z"
-                              />
-                            </svg>
-                          </SvgIcon>
-                        </AvPlayArrow>
-                      </AvPlayArrow>
-                    </div>
-                  </TouchRipple>
-                </button>
-              </EnhancedButton>
-            </IconButton>
+                              <SvgIcon
+                                className="play"
+                                classes={
+                                  Object {
+                                    "colorAction": "MuiSvgIcon-colorAction-013",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled-015",
+                                    "colorError": "MuiSvgIcon-colorError-014",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary-011",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary-012",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-016",
+                                    "root": "MuiSvgIcon-root-010",
+                                  }
+                                }
+                                color="inherit"
+                                component="svg"
+                                fontSize="default"
+                                viewBox="0 0 24 24"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="MuiSvgIcon-root-010 play"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M8 5v14l11-7z"
+                                  />
+                                  <path
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                  />
+                                </svg>
+                              </SvgIcon>
+                            </WithStyles(SvgIcon)>
+                          </PlayArrowIcon>
+                        </pure(PlayArrowIcon)>
+                      </span>
+                      <WithStyles(TouchRipple)
+                        center={true}
+                        innerRef={[Function]}
+                      >
+                        <TouchRipple
+                          center={true}
+                          classes={
+                            Object {
+                              "child": "MuiTouchRipple-child-021",
+                              "childLeaving": "MuiTouchRipple-childLeaving-022",
+                              "childPulsate": "MuiTouchRipple-childPulsate-023",
+                              "ripple": "MuiTouchRipple-ripple-018",
+                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-020",
+                              "rippleVisible": "MuiTouchRipple-rippleVisible-019",
+                              "root": "MuiTouchRipple-root-017",
+                            }
+                          }
+                        >
+                          <TransitionGroup
+                            childFactory={[Function]}
+                            className="MuiTouchRipple-root-017"
+                            component="span"
+                            enter={true}
+                            exit={true}
+                          >
+                            <span
+                              className="MuiTouchRipple-root-017"
+                            />
+                          </TransitionGroup>
+                        </TouchRipple>
+                      </WithStyles(TouchRipple)>
+                    </button>
+                  </ButtonBase>
+                </WithStyles(ButtonBase)>
+              </IconButton>
+            </WithStyles(IconButton)>
           </div>
         </AudioPlayer>
       </MuiThemeProvider>
@@ -1041,18 +1080,15 @@ exports[`Audio Player Component  should render component 1`] = `
       type="audio/mp3"
     />
   </audio>
-  <IconButton
+  <WithStyles(IconButton)
     aria-label="Click to play audio file UQ676287_OA.pdf"
-    className="audioButton play"
-    disableTouchRipple={false}
-    disabled={false}
-    iconStyle={Object {}}
     onClick={[Function]}
-    tooltipPosition="bottom-center"
     touch={true}
   >
-    <AvPlayArrow />
-  </IconButton>
+    <pure(PlayArrowIcon)
+      className="play"
+    />
+  </WithStyles(IconButton)>
 </div>
 `;
 
@@ -1064,18 +1100,15 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
       type="audio/mp3"
     />
   </audio>
-  <IconButton
+  <WithStyles(IconButton)
     aria-label="Click to play audio file UQ676287_OA.pdf"
-    className="audioButton play"
-    disableTouchRipple={false}
-    disabled={false}
-    iconStyle={Object {}}
     onClick={[Function]}
-    tooltipPosition="bottom-center"
     touch={true}
   >
-    <AvPlayArrow />
-  </IconButton>
+    <pure(PlayArrowIcon)
+      className="play"
+    />
+  </WithStyles(IconButton)>
 </div>
 `;
 
@@ -1087,17 +1120,14 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
       type="audio/mp3"
     />
   </audio>
-  <IconButton
+  <WithStyles(IconButton)
     aria-label="Click to pause audio file UQ676287_OA.pdf"
-    className="audioButton pause"
-    disableTouchRipple={false}
-    disabled={false}
-    iconStyle={Object {}}
     onClick={[Function]}
-    tooltipPosition="bottom-center"
     touch={true}
   >
-    <AvPause />
-  </IconButton>
+    <pure(PauseIcon)
+      className="pause"
+    />
+  </WithStyles(IconButton)>
 </div>
 `;

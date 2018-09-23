@@ -1,31 +1,51 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {viewRecordsConfig, routes} from 'config';
-import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView} from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
-import ViewRecordTableRow from './ViewRecordTableRow';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import {Link} from 'react-router-dom';
 import {GOOGLE_MAPS_API_URL} from 'config/general';
+import {Grid, Typography, withStyles} from '@material-ui/core';
 
-
-export default class AdditionalInformation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired
-    };
-
-    constructor(props) {
-        super(props);
+const styles = (theme) => ({
+    header: {
+        fontWeight: 400,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '0.975rem',
+        },
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '0.775rem',
+            marginLeft: 16,
+            fontWeight: 500
+        }
+    },
+    data: {
+        fontSize: '0.8rem'
+    },
+    gridRow: {
+        padding: 8,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+        marginTop: 8
     }
+});
+
+export class AdditionalInformation extends PureComponent {
+    static propTypes = {
+        publication: PropTypes.object.isRequired,
+        classes: PropTypes.object
+    };
 
     renderRow = (heading, data) => {
         return (
-            <ViewRecordTableRow heading={heading} data={data} key={`additional-info-${heading}`}/>
+            <Grid container key={`additional-info-${heading}`} spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
+                <Grid item xs={12} sm={3}><Typography variant="body2" classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
+                <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
+            </Grid>
         );
     }
 
@@ -266,14 +286,16 @@ export default class AdditionalInformation extends Component {
 
         return (
             <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
-                <Table selectable={false} className="additionalInformation vertical">
-                    <TableBody displayRowCheckbox={false}>
+                <Grid container direction="row">
+                    <Grid item xs={12}>
                         {
                             this.renderColumns()
                         }
-                    </TableBody>
-                </Table>
+                    </Grid>
+                </Grid>
             </StandardCard>
         );
     }
 }
+
+export default withStyles(styles)(AdditionalInformation);
