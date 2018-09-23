@@ -27,7 +27,13 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -66,7 +72,13 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -88,7 +100,13 @@ exports[`SearchComponent should display simple search with query string 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -110,7 +128,13 @@ exports[`SearchComponent should display simple search with query string 2`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -132,7 +156,13 @@ exports[`SearchComponent should handle simple search text change 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -177,7 +207,13 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -217,7 +253,13 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -239,7 +281,13 @@ exports[`SearchComponent should render default view 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -274,7 +322,13 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -296,7 +350,13 @@ exports[`SearchComponent should render simple search even if it says is advanced
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -318,7 +378,13 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -358,7 +424,13 @@ exports[`SearchComponent should reset advanced search 1`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -396,7 +468,13 @@ exports[`SearchComponent should reset advanced search 2`] = `
       }
     }
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -431,7 +509,13 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -466,7 +550,13 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -501,7 +591,13 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -536,7 +632,13 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -558,7 +660,13 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -598,7 +706,13 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
       }
     }
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -633,7 +747,13 @@ exports[`SearchComponent should update advanced search row on search text change
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}
@@ -668,7 +788,13 @@ exports[`SearchComponent should update advanced search row on search text change
     updateYearRangeFilter={[Function]}
     yearFilter={Object {}}
   />
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message=""
     open={false}

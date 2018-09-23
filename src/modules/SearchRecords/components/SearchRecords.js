@@ -255,7 +255,7 @@ class SearchRecords extends PureComponent {
                         // no results to display
                         hasSearchParams && !this.props.searchLoading &&
                         this.props.publicationsList.length === 0 &&
-                        <Grid item>
+                        <Grid item xs={12}>
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
                             </StandardCard>

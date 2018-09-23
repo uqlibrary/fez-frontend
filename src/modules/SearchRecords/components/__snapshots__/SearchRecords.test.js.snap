@@ -355,6 +355,7 @@ exports[`SearchRecords page should render no results 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
+      xs={12}
     >
       <StandardCard
         text={
@@ -438,6 +439,7 @@ exports[`SearchRecords page should show available filters or selected filters if
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
+      xs={12}
     >
       <StandardCard
         text={
@@ -489,6 +491,7 @@ exports[`SearchRecords page should show available filters or selected filters if
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
+      xs={12}
     >
       <StandardCard
         text={
@@ -543,6 +546,7 @@ exports[`SearchRecords page should show available filters or selected filters if
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
+      xs={12}
     >
       <StandardCard
         text={
@@ -593,6 +597,7 @@ exports[`SearchRecords page should show available filters or selected filters if
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
+      xs={12}
     >
       <StandardCard
         text={
