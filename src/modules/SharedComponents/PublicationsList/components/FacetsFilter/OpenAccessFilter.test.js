@@ -6,6 +6,7 @@ function setup(testProps, isShallow = true) {
         isActive: true,
         open: null,
         locale: {displayTitle: 'Open access status'},
+        onToggle: jest.fn(),
         ...testProps
     };
     return getElement(OpenAccessFilter, props, isShallow);
