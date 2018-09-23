@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {pathConfig} from 'config/routes';
-import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
-import Pause from 'material-ui/svg-icons/av/pause';
-import IconButton from 'material-ui/IconButton';
+import {PlayArrow, Pause} from '@material-ui/icons';
+import {IconButton} from '@material-ui/core';
 import locale from 'locale/global';
 
 export default class AudioPlayer extends Component {
@@ -48,10 +47,9 @@ export default class AudioPlayer extends Component {
                 <IconButton
                     touch
                     onClick={isPlaying ? this.audioPlayerPause : this.audioPlayerPlay}
-                    className={`audioButton ${isPlaying ? 'pause' : 'play'}`}
                     aria-label={(isPlaying ? controls.pauseAudio : controls.playAudio).replace('[fileName]', fileName)}
                 >
-                    {isPlaying ? <Pause/> : <PlayArrow/>}
+                    {isPlaying ? <Pause className="pause"/> : <PlayArrow className="play"/>}
                 </IconButton>
             </div>
         );

@@ -2285,141 +2285,162 @@ exports[`File Name Component  should render audio player 1`] = `
                                         type="audio/mp3"
                                       />
                                     </audio>
-                                    <IconButton
+                                    <WithStyles(IconButton)
                                       aria-label="Click to play audio file test.mp3"
-                                      className="audioButton play"
-                                      disableTouchRipple={false}
-                                      disabled={false}
-                                      iconStyle={Object {}}
                                       onClick={[Function]}
-                                      tooltipPosition="bottom-center"
                                       touch={true}
                                     >
-                                      <EnhancedButton
+                                      <IconButton
                                         aria-label="Click to play audio file test.mp3"
-                                        centerRipple={true}
-                                        className="audioButton play"
-                                        containerElement="button"
-                                        disableTouchRipple={false}
-                                        disabled={false}
-                                        onBlur={[Function]}
-                                        onClick={[Function]}
-                                        onFocus={[Function]}
-                                        onKeyDown={[Function]}
-                                        onKeyUp={[Function]}
-                                        onKeyboardFocus={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        onMouseOut={[Function]}
-                                        onTouchStart={[Function]}
-                                        style={
+                                        classes={
                                           Object {
-                                            "boxSizing": "border-box",
-                                            "fontSize": 0,
-                                            "height": 48,
-                                            "overflow": "visible",
-                                            "padding": 12,
-                                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                            "width": 48,
+                                            "colorInherit": "MuiIconButton-colorInherit-0124",
+                                            "colorPrimary": "MuiIconButton-colorPrimary-0125",
+                                            "colorSecondary": "MuiIconButton-colorSecondary-0126",
+                                            "disabled": "MuiIconButton-disabled-0127",
+                                            "label": "MuiIconButton-label-0128",
+                                            "root": "MuiIconButton-root-0123",
                                           }
                                         }
-                                        tabIndex={0}
-                                        type="button"
+                                        color="default"
+                                        disabled={false}
+                                        onClick={[Function]}
+                                        touch={true}
                                       >
-                                        <button
+                                        <WithStyles(ButtonBase)
                                           aria-label="Click to play audio file test.mp3"
-                                          className="audioButton play"
+                                          centerRipple={true}
+                                          className="MuiIconButton-root-0123"
                                           disabled={false}
-                                          onBlur={[Function]}
+                                          focusRipple={true}
                                           onClick={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          onKeyUp={[Function]}
-                                          onMouseEnter={[Function]}
-                                          onMouseLeave={[Function]}
-                                          onMouseOut={[Function]}
-                                          onTouchStart={[Function]}
-                                          style={
-                                            Object {
-                                              "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                                              "background": "none",
-                                              "border": 10,
-                                              "boxSizing": "border-box",
-                                              "cursor": "pointer",
-                                              "display": "inline-block",
-                                              "fontFamily": "Roboto, sans-serif",
-                                              "fontSize": 0,
-                                              "fontWeight": "inherit",
-                                              "height": 48,
-                                              "margin": 0,
-                                              "muiPrepared": true,
-                                              "outline": "none",
-                                              "overflow": "visible",
-                                              "padding": 12,
-                                              "position": "relative",
-                                              "textDecoration": "none",
-                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                              "verticalAlign": null,
-                                              "width": 48,
-                                            }
-                                          }
-                                          tabIndex={0}
-                                          type="button"
+                                          touch={true}
                                         >
-                                          <TouchRipple
-                                            abortOnScroll={true}
+                                          <ButtonBase
+                                            aria-label="Click to play audio file test.mp3"
                                             centerRipple={true}
-                                            key="touchRipple"
+                                            className="MuiIconButton-root-0123"
+                                            classes={
+                                              Object {
+                                                "disabled": "MuiButtonBase-disabled-0130",
+                                                "focusVisible": "MuiButtonBase-focusVisible-0131",
+                                                "root": "MuiButtonBase-root-0129",
+                                              }
+                                            }
+                                            component="button"
+                                            disableRipple={false}
+                                            disableTouchRipple={false}
+                                            disabled={false}
+                                            focusRipple={true}
+                                            onClick={[Function]}
+                                            tabIndex="0"
+                                            touch={true}
+                                            type="button"
                                           >
-                                            <div
+                                            <button
+                                              aria-label="Click to play audio file test.mp3"
+                                              className="MuiButtonBase-root-0129 MuiIconButton-root-0123"
+                                              disabled={false}
+                                              onBlur={[Function]}
+                                              onClick={[Function]}
+                                              onFocus={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyUp={[Function]}
                                               onMouseDown={[Function]}
                                               onMouseLeave={[Function]}
                                               onMouseUp={[Function]}
                                               onTouchEnd={[Function]}
+                                              onTouchMove={[Function]}
                                               onTouchStart={[Function]}
+                                              tabIndex="0"
+                                              touch={true}
+                                              type="button"
                                             >
-                                              <AvPlayArrow
-                                                key=".0"
-                                                style={Object {}}
+                                              <span
+                                                className="MuiIconButton-label-0128"
                                               >
-                                                <AvPlayArrow
-                                                  style={Object {}}
+                                                <pure(PlayArrowIcon)
+                                                  className="play"
                                                 >
-                                                  <SvgIcon
-                                                    onMouseEnter={[Function]}
-                                                    onMouseLeave={[Function]}
-                                                    style={Object {}}
-                                                    viewBox="0 0 24 24"
+                                                  <PlayArrowIcon
+                                                    className="play"
                                                   >
-                                                    <svg
-                                                      onMouseEnter={[Function]}
-                                                      onMouseLeave={[Function]}
-                                                      style={
-                                                        Object {
-                                                          "color": "rgba(0, 0, 0, 0.87)",
-                                                          "display": "inline-block",
-                                                          "fill": "currentColor",
-                                                          "height": 24,
-                                                          "muiPrepared": true,
-                                                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                          "userSelect": "none",
-                                                          "width": 24,
-                                                        }
-                                                      }
-                                                      viewBox="0 0 24 24"
+                                                    <WithStyles(SvgIcon)
+                                                      className="play"
                                                     >
-                                                      <path
-                                                        d="M8 5v14l11-7z"
-                                                      />
-                                                    </svg>
-                                                  </SvgIcon>
-                                                </AvPlayArrow>
-                                              </AvPlayArrow>
-                                            </div>
-                                          </TouchRipple>
-                                        </button>
-                                      </EnhancedButton>
-                                    </IconButton>
+                                                      <SvgIcon
+                                                        className="play"
+                                                        classes={
+                                                          Object {
+                                                            "colorAction": "MuiSvgIcon-colorAction-0135",
+                                                            "colorDisabled": "MuiSvgIcon-colorDisabled-0137",
+                                                            "colorError": "MuiSvgIcon-colorError-0136",
+                                                            "colorPrimary": "MuiSvgIcon-colorPrimary-0133",
+                                                            "colorSecondary": "MuiSvgIcon-colorSecondary-0134",
+                                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-0138",
+                                                            "root": "MuiSvgIcon-root-0132",
+                                                          }
+                                                        }
+                                                        color="inherit"
+                                                        component="svg"
+                                                        fontSize="default"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden="true"
+                                                          className="MuiSvgIcon-root-0132 play"
+                                                          focusable="false"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <path
+                                                            d="M8 5v14l11-7z"
+                                                          />
+                                                          <path
+                                                            d="M0 0h24v24H0z"
+                                                            fill="none"
+                                                          />
+                                                        </svg>
+                                                      </SvgIcon>
+                                                    </WithStyles(SvgIcon)>
+                                                  </PlayArrowIcon>
+                                                </pure(PlayArrowIcon)>
+                                              </span>
+                                              <WithStyles(TouchRipple)
+                                                center={true}
+                                                innerRef={[Function]}
+                                              >
+                                                <TouchRipple
+                                                  center={true}
+                                                  classes={
+                                                    Object {
+                                                      "child": "MuiTouchRipple-child-0143",
+                                                      "childLeaving": "MuiTouchRipple-childLeaving-0144",
+                                                      "childPulsate": "MuiTouchRipple-childPulsate-0145",
+                                                      "ripple": "MuiTouchRipple-ripple-0140",
+                                                      "ripplePulsate": "MuiTouchRipple-ripplePulsate-0142",
+                                                      "rippleVisible": "MuiTouchRipple-rippleVisible-0141",
+                                                      "root": "MuiTouchRipple-root-0139",
+                                                    }
+                                                  }
+                                                >
+                                                  <TransitionGroup
+                                                    childFactory={[Function]}
+                                                    className="MuiTouchRipple-root-0139"
+                                                    component="span"
+                                                    enter={true}
+                                                    exit={true}
+                                                  >
+                                                    <span
+                                                      className="MuiTouchRipple-root-0139"
+                                                    />
+                                                  </TransitionGroup>
+                                                </TouchRipple>
+                                              </WithStyles(TouchRipple)>
+                                            </button>
+                                          </ButtonBase>
+                                        </WithStyles(ButtonBase)>
+                                      </IconButton>
+                                    </WithStyles(IconButton)>
                                   </div>
                                 </AudioPlayer>
                               </div>
