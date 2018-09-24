@@ -2,8 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import {Grid} from '@material-ui/core';
+import {Grid, Button} from '@material-ui/core';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -130,12 +129,15 @@ export class ContributorForm extends PureComponent {
                         </Grid>
                     }
                     <Grid item xs={12} sm={3} md={2}>
-                        <RaisedButton
+                        <Button
+                            variant="contained"
                             fullWidth
-                            primary
-                            label={this.props.locale.addButton}
+                            color="primary"
                             disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                            onClick={this._addContributor} />
+                            onClick={this._addContributor}
+                        >
+                            {this.props.locale.addButton}
+                        </Button>
                     </Grid>
                 </Grid>
             </div>
