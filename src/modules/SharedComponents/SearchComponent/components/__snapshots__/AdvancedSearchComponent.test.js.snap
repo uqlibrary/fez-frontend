@@ -40,7 +40,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -314,7 +314,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -588,7 +588,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -850,7 +850,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1124,7 +1124,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1388,7 +1388,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1652,7 +1652,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           onClick={[Function]}
           tooltip="Show advanced search"
         >
-          <HardwareKeyboardArrowDown />
+          <pure(KeyboardArrowDownIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1743,7 +1743,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <HardwareKeyboardArrowUp />
+          <pure(KeyboardArrowUpIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
