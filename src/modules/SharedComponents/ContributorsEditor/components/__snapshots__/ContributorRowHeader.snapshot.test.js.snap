@@ -43,12 +43,12 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
-      classes={
+      secondary="Name as published"
+      secondaryTypographyProps={
         Object {
-          "secondary": "text",
+          "variant": "caption",
         }
       }
-      secondary="Name as published"
     />
     <Hidden
       implementation="js"
@@ -64,12 +64,12 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemText)
-        classes={
+        secondary="UQ identifier"
+        secondaryTypographyProps={
           Object {
-            "secondary": "text",
+            "variant": "caption",
           }
         }
-        secondary="UQ identifier"
       />
     </Hidden>
     <Hidden
@@ -88,10 +88,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       <WithStyles(ListItemText)
         classes={
           Object {
-            "secondary": "right text paddingRight24",
+            "secondary": "right paddingRight24",
           }
         }
         secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
       />
     </Hidden>
     <WithStyles(ListItemSecondaryAction)
@@ -155,12 +160,12 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
-      classes={
+      secondary="Name as published"
+      secondaryTypographyProps={
         Object {
-          "secondary": "text",
+          "variant": "caption",
         }
       }
-      secondary="Name as published"
     />
     <Hidden
       implementation="js"
@@ -178,10 +183,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       <WithStyles(ListItemText)
         classes={
           Object {
-            "secondary": "right text paddingRight24",
+            "secondary": "right paddingRight24",
           }
         }
         secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
       />
     </Hidden>
     <WithStyles(ListItemSecondaryAction)
@@ -245,12 +255,12 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
-      classes={
+      secondary="Name as published"
+      secondaryTypographyProps={
         Object {
-          "secondary": "text",
+          "variant": "caption",
         }
       }
-      secondary="Name as published"
     />
     <Hidden
       implementation="js"
@@ -268,10 +278,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       <WithStyles(ListItemText)
         classes={
           Object {
-            "secondary": "right text paddingRight24",
+            "secondary": "right paddingRight24",
           }
         }
         secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
       />
     </Hidden>
     <WithStyles(ListItemSecondaryAction)

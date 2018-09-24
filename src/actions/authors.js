@@ -10,22 +10,15 @@ import {getAuthorIdentifierOrcidPatchRequest} from './transformers';
  * @param {function} filterBy function to filter/transform results from api list, eg users with org ids only
  * @returns {action}
  */
-export function searchAuthors(query, filterBy) {
+export function searchAuthors(query) {
     return dispatch => {
         dispatch({type: actions.AUTHORS_LOADING});
 
         return get(AUTHORS_SEARCH_API({query: query}))
             .then(response => {
-                const data = response.data.map((item) => {
-                    item.displayName = item.aut_title + ' ' + item.aut_display_name +
-                        (item.aut_org_username ? ' (' + item.aut_org_username + ')' : '') +
-                        (item.aut_student_username ? ' (' + item.aut_student_username + ')' : '');
-                    return item;
-                });
-
                 dispatch({
                     type: actions.AUTHORS_LOADED,
-                    payload: filterBy ? data.filter(filterBy) : data
+                    payload: response.data
                 });
             })
             .catch(error => {
