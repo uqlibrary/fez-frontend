@@ -601,9 +601,7 @@ export default {
             },
             linkOrcid: {
                 title: 'I already have an ORCID iD',
-                description: (
-                    <div>This option enables you to link your existing ORCID iD to UQ.</div>
-                ),
+                description: 'This option enables you to link your existing ORCID iD to UQ.',
                 labels: {
                     submit: 'Link your existing ORCID iD'
                 }
@@ -611,12 +609,12 @@ export default {
             createOrcid: {
                 title: 'I need an ORCID iD',
                 description: (
-                    <div>
+                    <React.Fragment>
                         <p>This option enables you to create a new ORCID iD and link it with UQ.</p>
                         <p>Use this option if you are unsure if you already have an ORCID iD. It will detect matches to
                             your name and email from the ORCID registry and prompt you to log in to avoid creating a new
                             ORCID iD.</p>
-                    </div>
+                    </React.Fragment>
                 ),
                 labels: {
                     submit: 'Create a new ORCID iD',
