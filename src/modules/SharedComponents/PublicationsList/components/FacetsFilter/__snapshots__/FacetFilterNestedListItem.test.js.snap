@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Facet filter nested list item  should render active filter view 1`] = `
+<FacetsFilterNestedListItem
+  classes={
+    Object {
+      "inset": "FacetsFilterNestedListItem-inset-02 inset",
+      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-01 listItemGutters",
+      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-03 selectedFacet",
+    }
+  }
+  disabled={false}
+  index={0}
+  isActive={true}
+  onFacetClick={[MockFunction]}
+  primaryText="Test filter"
+/>
+`;
+
+exports[`Facet filter nested list item  should render default filter view 1`] = `
+<FacetsFilterNestedListItem
+  classes={
+    Object {
+      "inset": "FacetsFilterNestedListItem-inset-02 inset",
+      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-01 listItemGutters",
+      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-03 selectedFacet",
+    }
+  }
+  disabled={false}
+  index={0}
+  isActive={false}
+  onFacetClick={[MockFunction]}
+  primaryText="Test filter"
+/>
+`;
+
+exports[`Facet filter nested list item  should render disabled filter view 1`] = `
+<FacetsFilterNestedListItem
+  classes={
+    Object {
+      "inset": "FacetsFilterNestedListItem-inset-02 inset",
+      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-01 listItemGutters",
+      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-03 selectedFacet",
+    }
+  }
+  disabled={true}
+  index={0}
+  isActive={true}
+  onFacetClick={[MockFunction]}
+  primaryText="Test filter"
+/>
+`;

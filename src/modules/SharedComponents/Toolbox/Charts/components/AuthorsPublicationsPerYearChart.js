@@ -25,7 +25,8 @@ class AuthorsPublicationsPerYearChart extends React.Component {
                 },
                 chart: {
                     type: 'column',
-                    height: 320
+                    height: 320,
+                    backgroundColor: 'transparent'
                 },
                 plotOptions: {
                     column: {

@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import AudioPlayer from './AudioPlayer';
+import {Grid, Hidden, Typography} from '@material-ui/core';
 
 export default class FileName extends PureComponent {
     static propTypes = {
@@ -41,35 +42,41 @@ export default class FileName extends PureComponent {
         const {pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl} = this.props;
 
         return (
-            <div className="columns is-gapless is-mobile fileDetails is-vcentered">
-                <div className="column fileInfo is-vcentered">
+            <Grid container alignItems="center">
+                <Grid item>
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&
-                        <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
-                            {fileName}
-                        </ExternalLink>
+                        <Typography variant="body2">
+                            <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
+                                {fileName}
+                            </ExternalLink>
+                        </Typography>
                     }
                     {
                         allowDownload && this.canShowPreview(mimeType) &&
-                        <a
-                            onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                            onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                            className={'fileName'}>
-                            {fileName}
-                        </a>
+                        <Typography variant="body2">
+                            <a
+                                onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
+                                onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
+                                className={'fileName'}>
+                                {fileName}
+                            </a>
+                        </Typography>
                     }
                     {
                         !allowDownload &&
-                        fileName
+                        <Typography variant="body2">{fileName}</Typography>
                     }
-                </div>
-                {
-                    allowDownload && this.isAudio(this.props.mimeType) &&
-                    <div className="column is-narrow audioWrapper is-hidden-mobile is-vcentered">
-                        <AudioPlayer pid={pid} fileName={fileName} mimeType={mimeType} />
-                    </div>
-                }
-            </div>
+                </Grid>
+                <Hidden xsDown>
+                    <Grid item sm>
+                        {
+                            allowDownload && this.isAudio(this.props.mimeType) &&
+                            <AudioPlayer pid={pid} fileName={fileName} mimeType={mimeType} />
+                        }
+                    </Grid>
+                </Hidden>
+            </Grid>
         );
     }
 }

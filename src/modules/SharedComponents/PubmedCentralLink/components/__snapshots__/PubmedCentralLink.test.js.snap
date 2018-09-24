@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PubmedCentralLink test  should render component with empty span 1`] = `
-<span
+<div
   className="pubmedCentralLinkUrl empty"
 />
 `;

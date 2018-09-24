@@ -150,87 +150,99 @@ export default class FixRecord extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
-                    <StandardCard title={txt.subTitle} help={txt.help}>
-                        <PublicationCitation publication={this.props.recordToFix}/>
-                        <Field
-                            component={SelectField}
-                            disabled={this.props.submitting}
-                            name="fixAction"
-                            label={txt.fieldLabels.action}
-                            validate={[validation.required]}
-                            onChange={this._actionSelected}
-                            required >
-                            {fixOptions}
-                        </Field>
-                    </StandardCard>
-                    {
-                        this.state.selectedRecordAction === 'fix' &&
-                        <React.Fragment>
-                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
-                            <ConfirmDialogBox
-                                onRef={this._setSuccessConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                onCancelAction={this._navigateToDashboard}
-                                locale={saveConfirmationLocale}
-                            />
-                            <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                <Grid container spacing={16}>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={TextField}
-                                            disabled={this.props.submitting}
-                                            name="comments"
-                                            type="text"
-                                            fullWidth
-                                            multiline
-                                            rows={3}
-                                            label={txtFixForm.comments.fieldLabels.comments}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={TextField}
-                                            disabled={this.props.submitting}
-                                            name="rek_link"
-                                            type="text"
-                                            fullWidth
-                                            label={txtFixForm.comments.fieldLabels.url}
-                                            validate={[validation.url]}
-                                        />
-                                    </Grid>
-                                </Grid>
-                            </StandardCard>
-                            <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
-                                {txtFixForm.fileUpload.description}
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.subTitle} help={txt.help}>
+                                <PublicationCitation publication={this.props.recordToFix}/>
                                 <Field
-                                    name="files"
-                                    component={FileUploadField}
+                                    component={SelectField}
                                     disabled={this.props.submitting}
-                                    requireOpenAccessStatus
-                                    validate={[validation.validFileUpload]}
-                                />
+                                    name="fixAction"
+                                    label={txt.fieldLabels.action}
+                                    validate={[validation.required]}
+                                    onChange={this._actionSelected}
+                                    required >
+                                    {fixOptions}
+                                </Field>
                             </StandardCard>
-                        </React.Fragment>
-                    }
+                        </Grid>
+                        {
+                            this.state.selectedRecordAction === 'fix' &&
+                            <React.Fragment>
+                                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
+                                <ConfirmDialogBox
+                                    onRef={this._setSuccessConfirmation}
+                                    onAction={this._navigateToMyResearch}
+                                    onCancelAction={this._navigateToDashboard}
+                                    locale={saveConfirmationLocale}
+                                />
+                                <Grid item xs={12}>
+                                    <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
+                                        <Grid container spacing={16}>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={TextField}
+                                                    disabled={this.props.submitting}
+                                                    name="comments"
+                                                    type="text"
+                                                    fullWidth
+                                                    multiline
+                                                    rows={3}
+                                                    label={txtFixForm.comments.fieldLabels.comments}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={TextField}
+                                                    disabled={this.props.submitting}
+                                                    name="rek_link"
+                                                    type="text"
+                                                    fullWidth
+                                                    label={txtFixForm.comments.fieldLabels.url}
+                                                    validate={[validation.url]}
+                                                />
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
+                                        {txtFixForm.fileUpload.description}
+                                        <Field
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={this.props.submitting}
+                                            requireOpenAccessStatus
+                                            validate={[validation.validFileUpload]}
+                                        />
+                                    </StandardCard>
+                                </Grid>
+                            </React.Fragment>
+                        }
+                        {
+                            this.state.selectedRecordAction === 'unclaim' &&
+                            <Grid item xs={12}>
+                                <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
+                                    <Alert {...txtUnclaimForm.alert}/>
+                                    {txtUnclaimForm.description}
+                                    <ConfirmDialogBox
+                                        onRef={this._setSuccessConfirmation}
+                                        onAction={this._navigateToMyResearch}
+                                        onCancelAction={this._cancelFix}
+                                        locale={txtUnclaimForm.successWorkflowConfirmation}/>
+                                </StandardCard>
+                            </Grid>
+                        }
 
-                    {
-                        this.state.selectedRecordAction === 'unclaim' &&
-                        <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
-                            <Alert {...txtUnclaimForm.alert}/>
-                            {txtUnclaimForm.description}
-                            <ConfirmDialogBox
-                                onRef={this._setSuccessConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                onCancelAction={this._cancelFix}
-                                locale={txtUnclaimForm.successWorkflowConfirmation}/>
-                        </StandardCard>
-                    }
-
-                    {
-                        alertProps && <Alert {...alertProps} />
-                    }
-
-                    <Grid container spacing={16} justify={'flex-end'} alignItems={'flex-end'}>
+                        {
+                            alertProps &&
+                            <Grid item xs={12}>
+                                <Alert pushToTop {...alertProps} />
+                            </Grid>
+                        }
+                    </Grid>
+                    <Grid container spacing={24}>
+                        <Grid item xs />
                         <Grid item>
                             <Button
                                 variant={'raised'}

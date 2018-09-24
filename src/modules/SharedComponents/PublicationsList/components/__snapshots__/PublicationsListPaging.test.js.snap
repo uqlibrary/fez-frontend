@@ -8,227 +8,229 @@ exports[`PublicationsListPaging renders  component renders as empty due to curre
 
 exports[`PublicationsListPaging renders  component with ellipsis paging results 1`] = `
 <div>
-  <div
-    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
+  <WithStyles(Grid)
+    container={true}
+    spacing={0}
   >
-    <div
-      className="column is-narrow is-pulled-left"
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingPrevious"
+      <WithStyles(Button)
         disabled={false}
-        fullWidth={false}
-        icon={<NavigationChevronLeft />}
-        label="Previous"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="pagingPrevious"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
+        style={
+          Object {
+            "paddingLeft": 4,
+          }
+        }
+        variant="flat"
+      >
+        <pure(ChevronLeftIcon) />
+        Previous
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <FlatButton
-        aria-label="Click to select page 1 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="1"
-        label={1}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      ...
-      <FlatButton
-        aria-label="Click to select page 7 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="7"
-        label={7}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 8 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="8"
-        label={8}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 9 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="9"
-        label={9}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 10 of 50 result pages"
-        className="page selectedPage"
-        disabled={true}
-        fullWidth={false}
-        key="10"
-        label={10}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 11 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="11"
-        label={11}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 12 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="12"
-        label={12}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 13 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="13"
-        label={13}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      ...
-      <FlatButton
-        aria-label="Click to select page 50 of 50 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="50"
-        label={50}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          aria-label="Click to select page 1 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="1"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          1
+        </WithStyles(Button)>
+        ...
+        <WithStyles(Button)
+          aria-label="Click to select page 7 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="7"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          7
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 8 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="8"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          8
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 9 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="9"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          9
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 10 of 50 result pages"
+          className=""
+          color="primary"
+          disabled={true}
+          id="pageButton"
+          key="10"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          10
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 11 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="11"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          11
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 12 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="12"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          12
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 13 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="13"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          13
+        </WithStyles(Button)>
+        ...
+        <WithStyles(Button)
+          aria-label="Click to select page 50 of 50 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="50"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          50
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <FlatButton
-        className="pagingTotals"
-        disabled={false}
-        fullWidth={false}
-        label="Page 10 of 50"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow is-pulled-right"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+      >
+        <WithStyles(Button)
+          style={
+            Object {
+              "margin": "0 auto",
+            }
+          }
+          variant="flat"
+        >
+          Page 10 of 50
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingNext"
+      <WithStyles(Button)
         disabled={false}
-        fullWidth={false}
-        icon={<NavigationChevronRight />}
-        label="Next"
-        labelPosition="before"
-        labelStyle={Object {}}
+        id="pagingNext"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+        size="small"
+        variant="flat"
+      >
+        Next
+        <pure(ChevronRightIcon) />
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
@@ -240,366 +242,444 @@ exports[`PublicationsListPaging renders  component with empty paging data 1`] = 
 
 exports[`PublicationsListPaging renders  component with non-empty paging data, first page 1`] = `
 <div>
-  <div
-    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
+  <WithStyles(Grid)
+    container={true}
+    spacing={0}
   >
-    <div
-      className="column is-narrow is-pulled-left"
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingPrevious"
+      <WithStyles(Button)
         disabled={true}
-        fullWidth={false}
-        icon={<NavigationChevronLeft />}
-        label="Previous"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="pagingPrevious"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
+        style={
+          Object {
+            "paddingLeft": 4,
+          }
+        }
+        variant="flat"
+      >
+        <pure(ChevronLeftIcon) />
+        Previous
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <FlatButton
-        aria-label="Click to select page 1 of 3 result pages"
-        className="page selectedPage"
-        disabled={true}
-        fullWidth={false}
-        key="1"
-        label={1}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 2 of 3 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="2"
-        label={2}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 3 of 3 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="3"
-        label={3}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          aria-label="Click to select page 1 of 3 result pages"
+          className=""
+          color="primary"
+          disabled={true}
+          id="pageButton"
+          key="1"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          1
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 2 of 3 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="2"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          2
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 3 of 3 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="3"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          3
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <FlatButton
-        className="pagingTotals"
-        disabled={false}
-        fullWidth={false}
-        label="Page 1 of 3"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow is-pulled-right"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+      >
+        <WithStyles(Button)
+          style={
+            Object {
+              "margin": "0 auto",
+            }
+          }
+          variant="flat"
+        >
+          Page 1 of 3
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingNext"
+      <WithStyles(Button)
         disabled={false}
-        fullWidth={false}
-        icon={<NavigationChevronRight />}
-        label="Next"
-        labelPosition="before"
-        labelStyle={Object {}}
+        id="pagingNext"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+        size="small"
+        variant="flat"
+      >
+        Next
+        <pure(ChevronRightIcon) />
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`PublicationsListPaging renders  component with non-empty paging data, last page 1`] = `
 <div>
-  <div
-    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
+  <WithStyles(Grid)
+    container={true}
+    spacing={0}
   >
-    <div
-      className="column is-narrow is-pulled-left"
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingPrevious"
+      <WithStyles(Button)
         disabled={false}
-        fullWidth={false}
-        icon={<NavigationChevronLeft />}
-        label="Previous"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="pagingPrevious"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
+        style={
+          Object {
+            "paddingLeft": 4,
+          }
+        }
+        variant="flat"
+      >
+        <pure(ChevronLeftIcon) />
+        Previous
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <FlatButton
-        aria-label="Click to select page 1 of 3 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="1"
-        label={1}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 2 of 3 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="2"
-        label={2}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 3 of 3 result pages"
-        className="page selectedPage"
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          aria-label="Click to select page 1 of 3 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="1"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          1
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 2 of 3 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="2"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          2
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 3 of 3 result pages"
+          className=""
+          color="primary"
+          disabled={true}
+          id="pageButton"
+          key="3"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          3
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+      >
+        <WithStyles(Button)
+          style={
+            Object {
+              "margin": "0 auto",
+            }
+          }
+          variant="flat"
+        >
+          Page 3 of 3
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(Button)
         disabled={true}
-        fullWidth={false}
-        key="3"
-        label={3}
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="pagingNext"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
-    >
-      <FlatButton
-        className="pagingTotals"
-        disabled={false}
-        fullWidth={false}
-        label="Page 3 of 3"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow is-pulled-right"
-    >
-      <FlatButton
-        className="pagingNext"
-        disabled={true}
-        fullWidth={false}
-        icon={<NavigationChevronRight />}
-        label="Next"
-        labelPosition="before"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+        size="small"
+        variant="flat"
+      >
+        Next
+        <pure(ChevronRightIcon) />
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`PublicationsListPaging renders  component with non-empty paging data, second page 1`] = `
 <div>
-  <div
-    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
+  <WithStyles(Grid)
+    container={true}
+    spacing={0}
   >
-    <div
-      className="column is-narrow is-pulled-left"
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingPrevious"
+      <WithStyles(Button)
         disabled={false}
-        fullWidth={false}
-        icon={<NavigationChevronLeft />}
-        label="Previous"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="pagingPrevious"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
+        style={
+          Object {
+            "paddingLeft": 4,
+          }
+        }
+        variant="flat"
+      >
+        <pure(ChevronLeftIcon) />
+        Previous
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <FlatButton
-        aria-label="Click to select page 1 of 3 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="1"
-        label={1}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 2 of 3 result pages"
-        className="page selectedPage"
-        disabled={true}
-        fullWidth={false}
-        key="2"
-        label={2}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-      <FlatButton
-        aria-label="Click to select page 3 of 3 result pages"
-        className="page"
-        disabled={false}
-        fullWidth={false}
-        key="3"
-        label={3}
-        labelPosition="after"
-        labelStyle={Object {}}
-        onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          aria-label="Click to select page 1 of 3 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="1"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          1
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 2 of 3 result pages"
+          className=""
+          color="primary"
+          disabled={true}
+          id="pageButton"
+          key="2"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          2
+        </WithStyles(Button)>
+        <WithStyles(Button)
+          aria-label="Click to select page 3 of 3 result pages"
+          className=""
+          color="default"
+          disabled={false}
+          id="pageButton"
+          key="3"
+          onClick={[Function]}
+          size="small"
+          variant="flat"
+        >
+          3
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <FlatButton
-        className="pagingTotals"
-        disabled={false}
-        fullWidth={false}
-        label="Page 2 of 3"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow is-pulled-right"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+      >
+        <WithStyles(Button)
+          style={
+            Object {
+              "margin": "0 auto",
+            }
+          }
+          variant="flat"
+        >
+          Page 2 of 3
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <WithStyles(Grid)
+      item={true}
     >
-      <FlatButton
-        className="pagingNext"
+      <WithStyles(Button)
         disabled={false}
-        fullWidth={false}
-        icon={<NavigationChevronRight />}
-        label="Next"
-        labelPosition="before"
-        labelStyle={Object {}}
+        id="pagingNext"
         onClick={[Function]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+        size="small"
+        variant="flat"
+      >
+        Next
+        <pure(ChevronRightIcon) />
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;

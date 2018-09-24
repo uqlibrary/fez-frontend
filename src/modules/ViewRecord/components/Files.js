@@ -4,24 +4,27 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-
+import {Grid, Hidden, Typography, withStyles} from '@material-ui/core';
 import moment from 'moment';
-import AvVolumeUp from 'material-ui/svg-icons/av/volume-up';
-import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
-import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
-import Image from 'material-ui/svg-icons/image/image';
-import AvVideocam from 'material-ui/svg-icons/av/videocam';
+import {VolumeUp, PictureAsPdf, InsertDriveFile, Image, Videocam} from '@material-ui/icons';
 import {openAccessConfig, viewRecordsConfig, routes} from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
 
-export default class Files extends Component {
+const styles = (theme) => ({
+    header: {
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    }
+});
+
+export class Files extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
-        setHideCulturalSensitivityStatement: PropTypes.func
+        setHideCulturalSensitivityStatement: PropTypes.func,
+        classes: PropTypes.object
     };
 
     constructor(props) {
@@ -50,13 +53,13 @@ export default class Files extends Component {
                 <Thumbnail {...thumbnailProps} />
             );
         } else if (mimeType.indexOf('audio') >= 0) {
-            return <AvVolumeUp />;
+            return <VolumeUp />;
         } else if (mimeType.indexOf('pdf') >= 0) {
             return <PictureAsPdf />;
         } else if (mimeType.indexOf('image') >= 0) {
             return <Image />;
         } else if (mimeType.indexOf('video') >= 0) {
-            return <AvVideocam />;
+            return <Videocam />;
         } else {
             return <InsertDriveFile />;
         }
@@ -186,45 +189,49 @@ export default class Files extends Component {
                             message={locale.viewRecord.fireFoxAlert.message}
                         />
                     }
-                    <div className="files" ref="files">
-                        <div className="header columns is-gapless is-vcentered is-mobile">
-                            <div className="column filetype fileIcon is-narrow is-vcentered" />
-                            <div className="column filename is-3-desktop is-4-tablet is-vcentered">
-                                {locale.viewRecord.sections.files.fileName}
-                            </div>
-                            <div className="column description is-hidden-mobile is-vcentered">
-                                {locale.viewRecord.sections.files.description}
-                            </div>
-                            <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
-                                {locale.viewRecord.sections.files.size}
-                            </div>
-                            <div className="column oa align-right is-2 is-vcentered is-hidden-mobile" />
-                        </div>
-                        {
-                            fileData.map((item, index) => (
-                                <div className="data columns is-gapless is-vcentered is-mobile" key={`file-${index}`}>
-                                    <div className="column filetype fileIcon is-narrow is-vcentered">
-                                        {item.icon}
-                                    </div>
-                                    <div className="column filename is-3-desktop is-4-tablet is-vcentered">
-                                        <FileName
-                                            {...item}
-                                            onFileSelect={this.showPreview}
-                                        />
-                                    </div>
-                                    <div className="column description is-hidden-mobile is-vcentered">
-                                        {item.description}
-                                    </div>
-                                    <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
-                                        {item.calculatedSize}
-                                    </div>
-                                    <div className="column oa is-2 is-hidden-mobile is-vcentered">
-                                        <OpenAccessIcon {...item.openAccessStatus} />
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
+                        <Grid item xs={1}>&nbsp;</Grid>
+                        <Grid item sm={4} md={3}>
+                            <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.fileName}</Typography>
+                        </Grid>
+                        <Hidden xsDown>
+                            <Grid item sm={5}>
+                                <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.description}</Typography>
+                            </Grid>
+                        </Hidden>
+                        <Hidden smDown>
+                            <Grid item md={1}>
+                                <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.size}</Typography>
+                            </Grid>
+                        </Hidden>
+                        <Hidden xsDown>
+                            <Grid item sm={2}/>
+                        </Hidden>
+                    </Grid>
+                    {
+                        fileData.map((item, index) => (
+                            <Grid container direction="row" alignItems="center" key={`file-${index}`} spacing={16}>
+                                <Grid item xs={1}>
+                                    {item.icon}
+                                </Grid>
+                                <Grid item sm={4} md={3}>
+                                    <FileName
+                                        {...item}
+                                        onFileSelect={this.showPreview}
+                                    />
+                                </Grid>
+                                <Hidden xsDown>
+                                    <Grid item sm={5}><Typography caption="body2" noWrap>{item.description}</Typography></Grid>
+                                </Hidden>
+                                <Hidden smDown>
+                                    <Grid item md={1}><Typography caption="body2">{item.calculatedSize}</Typography></Grid>
+                                </Hidden>
+                                <Hidden xsDown>
+                                    <Grid item sm={2}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
+                                </Hidden>
+                            </Grid>
+                        ))
+                    }
                 </StandardCard>
                 {
                     this.state.preview.mediaUrl && this.state.preview.mimeType &&
@@ -239,3 +246,5 @@ export default class Files extends Component {
         );
     }
 }
+
+export default withStyles(styles)(Files);

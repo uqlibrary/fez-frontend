@@ -75,13 +75,13 @@ describe('Component ContributorRow ', () => {
         };
         const wrapper = setup({contributor, index: 0, canMoveUp: true, onMoveUp: testFunction}, false);
 
-        const button = wrapper.find('KeyboardArrowUp');
+        const button = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(button.length).toBe(1);
 
-        const buttonDown = wrapper.find('KeyboardArrowDown');
+        const buttonDown = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(buttonDown.length).toBe(0);
 
-        wrapper.find('KeyboardArrowUp').simulate('click');
+        wrapper.find('pure(KeyboardArrowUpIcon)').simulate('click');
         expect(testFunction).toBeCalled();
     });
 
@@ -89,13 +89,13 @@ describe('Component ContributorRow ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({index: 0, canMoveDown: true, onMoveDown: testFunction}, false);
 
-        const button = wrapper.find('KeyboardArrowDown');
+        const button = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
 
-        wrapper.find('KeyboardArrowDown').simulate('click');
+        wrapper.find('pure(KeyboardArrowDownIcon)').simulate('click');
         expect(testFunction).toBeCalled;
 
-        const buttonUp = wrapper.find('KeyboardArrowUp');
+        const buttonUp = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(buttonUp.length).toBe(0);
         testFunction.mockReset();
     });
@@ -110,9 +110,9 @@ describe('Component ContributorRow ', () => {
     it('a row with index and contributor set calls delete function', () => {
         const testFunction = jest.fn();
         const wrapper = setup({index: 0, onDelete: testFunction}, false);
-        const button = wrapper.find('Delete');
+        const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
-        wrapper.find('Delete').simulate('click');
+        wrapper.find('pure(DeleteIcon)').simulate('click');
         expect(testFunction).toBeCalled;
     });
 

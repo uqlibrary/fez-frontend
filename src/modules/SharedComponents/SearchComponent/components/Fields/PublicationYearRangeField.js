@@ -2,15 +2,24 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import InputLabel from '@material-ui/core/InputLabel';
 import locale from 'locale/components';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class PublicationYearRangeField extends PureComponent {
+const styles = theme => ({
+    title: {
+        ...theme.typography.caption
+    }
+});
+
+export class PublicationYearRangeField extends PureComponent {
     static propTypes = {
         yearFilter: PropTypes.object,
         updateYearRangeFilter: PropTypes.func.isRequired,
         className: PropTypes.string,
         disabled: PropTypes.bool,
-        invalid: PropTypes.bool
+        invalid: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -42,47 +51,54 @@ export default class PublicationYearRangeField extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range;
+        const {classes} = this.props;
         return (
-            <Grid container wrap={'nowrap'} alignContent={'center'} justify={'center'}>
-                <Grid item zeroMinWidth style={{flexGrow: 1}}>
-                    <TextField
-                        fullWidth
-                        id={'to'}
-                        value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
-                        InputLabelProps={{shrink: true}}
-                        label={txt.title}
-                        onChange={this.setValue('from')}
-                        error={!!this.props.invalid}
-                        helperText={this.props.invalid && txt.invalidText}
-                        placeholder={txt.fromHint}
-                        aria-label={txt.fromAria}
-                        disabled={this.props.disabled}
-                    />
+            <React.Fragment>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <InputLabel shrink className={classes.title}>{txt.title}</InputLabel>
+                    </Grid>
                 </Grid>
-                <Grid item xs={'auto'}>
-                    <TextField
-                        style={{width: 24}}
-                        value={' to '}
-                        disabled
-                        label={' '}
-                        InputProps={{disableUnderline: true}}
-                    />
+                <Grid container>
+                    <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                        <TextField
+                            fullWidth
+                            id={'to'}
+                            value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
+                            onChange={this.setValue('from')}
+                            error={!!this.props.invalid}
+                            helperText={this.props.invalid && txt.invalidText}
+                            placeholder={txt.fromHint}
+                            aria-label={txt.fromAria}
+                            disabled={this.props.disabled}
+                        />
+                    </Grid>
+                    <Grid item xs={'auto'}>
+                        <TextField
+                            style={{width: 24}}
+                            value={' to '}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                    <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                        <TextField
+                            fullWidth
+                            id={'from'}
+                            InputLabelProps={{shrink: true}}
+                            value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
+                            onChange={this.setValue('to')}
+                            error={!!this.props.invalid}
+                            placeholder={txt.toHint}
+                            aria-label={txt.toAria}
+                            disabled={this.props.disabled}
+                        />
+                    </Grid>
                 </Grid>
-                <Grid item zeroMinWidth style={{flexGrow: 1}}>
-                    <TextField
-                        fullWidth
-                        id={'from'}
-                        InputLabelProps={{shrink: true}}
-                        value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
-                        label={' '}
-                        onChange={this.setValue('to')}
-                        error={!!this.props.invalid}
-                        placeholder={txt.toHint}
-                        aria-label={txt.toAria}
-                        disabled={this.props.disabled}
-                    />
-                </Grid>
-            </Grid>
+            </React.Fragment>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(PublicationYearRangeField);
+

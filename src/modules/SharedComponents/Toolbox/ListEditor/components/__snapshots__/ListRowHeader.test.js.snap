@@ -9,8 +9,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -63,7 +62,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
           disabled={true}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
@@ -80,8 +79,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -134,7 +132,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>

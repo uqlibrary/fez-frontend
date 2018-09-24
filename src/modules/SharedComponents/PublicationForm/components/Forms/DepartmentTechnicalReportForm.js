@@ -27,122 +27,126 @@ export default class DepartmentTechnicalReportForm extends Component {
     render() {
         const txt = formLocale.departmentTechnicalReport;
         return (
-            <React.Fragment>
-                <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <Grid container spacing={16}>
-                        <Grid item xs={12}>
-                            <Field
-                                component={TextField}
-                                autoFocus
-                                disabled={this.props.submitting}
-                                name="rek_title"
-                                required
-                                type="text"
-                                fullWidth
-                                multiline
-                                rows={1}
-                                {...txt.information.fieldLabels.documentTitle}
-                                validate={[validation.required]}
-                            />
+            <Grid container spacing={24}>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.information.title} help={txt.information.help}>
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    autoFocus
+                                    disabled={this.props.submitting}
+                                    name="rek_title"
+                                    required
+                                    type="text"
+                                    fullWidth
+                                    multiline
+                                    rows={1}
+                                    {...txt.information.fieldLabels.documentTitle}
+                                    validate={[validation.required]}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={OrgUnitNameField}
+                                    name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                                    disabled={this.props.submitting}
+                                    {...txt.information.fieldLabels.orgUnitName}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={OrgNameField}
+                                    name="fez_record_search_key_org_name.rek_org_name"
+                                    disabled={this.props.submitting}
+                                    {...txt.information.fieldLabels.orgName}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={SeriesField}
+                                    name="fez_record_search_key_series.rek_series"
+                                    disabled={this.props.submitting}
+                                    {...txt.information.fieldLabels.series}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={ReportNumberField}
+                                    name="fez_record_search_key_report_number.rek_report_number"
+                                    disabled={this.props.submitting}
+                                    {...txt.information.fieldLabels.reportNumber}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={PartialDateField}
+                                    disabled={this.props.submitting}
+                                    name="rek_date"
+                                    allowPartial
+                                    className="requiredHintField"
+                                    validate={[validation.required]}
+                                    floatingTitle={txt.information.fieldLabels.date.title}
+                                    floatingTitleRequired
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="rek_description"
+                                    type="text"
+                                    fullWidth
+                                    multiline
+                                    rows={3}
+                                    {...txt.information.fieldLabels.abstract}
+                                />
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Field
-                                component={OrgUnitNameField}
-                                name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                                disabled={this.props.submitting}
-                                {...txt.information.fieldLabels.orgUnitName}
-                            />
+                    </StandardCard>
+                </Grid>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                        <Typography>{txt.authors.description}</Typography>
+                        <Field
+                            component={ContributorsEditorField}
+                            name="authors"
+                            locale={txt.authors.field}
+                            showContributorAssignment
+                            className="requiredField"
+                            validate={[validation.authorRequired]}
+                            disabled={this.props.submitting}/>
+                    </StandardCard>
+                </Grid>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.other.title} help={txt.other.help}>
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="comments"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    multiline
+                                    {...txt.other.fieldLabels.notes}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_link"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    {...txt.other.fieldLabels.url}
+                                    validate={[validation.url]}
+                                />
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Field
-                                component={OrgNameField}
-                                name="fez_record_search_key_org_name.rek_org_name"
-                                disabled={this.props.submitting}
-                                {...txt.information.fieldLabels.orgName}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Field
-                                component={SeriesField}
-                                name="fez_record_search_key_series.rek_series"
-                                disabled={this.props.submitting}
-                                {...txt.information.fieldLabels.series}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Field
-                                component={ReportNumberField}
-                                name="fez_record_search_key_report_number.rek_report_number"
-                                disabled={this.props.submitting}
-                                {...txt.information.fieldLabels.reportNumber}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Field
-                                component={PartialDateField}
-                                disabled={this.props.submitting}
-                                name="rek_date"
-                                allowPartial
-                                className="requiredHintField"
-                                validate={[validation.required]}
-                                floatingTitle={txt.information.fieldLabels.date.title}
-                                floatingTitleRequired
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
-                                name="rek_description"
-                                type="text"
-                                fullWidth
-                                multiline
-                                rows={3}
-                                {...txt.information.fieldLabels.abstract}
-                            />
-                        </Grid>
-                    </Grid>
-                </StandardCard>
-
-                <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <Typography>{txt.authors.description}</Typography>
-                    <Field
-                        component={ContributorsEditorField}
-                        name="authors"
-                        locale={txt.authors.field}
-                        showContributorAssignment
-                        className="requiredField"
-                        validate={[validation.authorRequired]}
-                        disabled={this.props.submitting}/>
-                </StandardCard>
-
-                <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <Grid container spacing={16}>
-                        <Grid item xs={12}>
-                            <Field
-                                component={TextField}
-                                name="comments"
-                                type="text"
-                                disabled={this.props.submitting}
-                                fullWidth
-                                multiline
-                                {...txt.other.fieldLabels.notes}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Field
-                                component={TextField}
-                                name="rek_link"
-                                type="text"
-                                disabled={this.props.submitting}
-                                fullWidth
-                                {...txt.other.fieldLabels.url}
-                                validate={[validation.url]}
-                            />
-                        </Grid>
-                    </Grid>
-                </StandardCard>
-            </React.Fragment>
+                    </StandardCard>
+                </Grid>
+            </Grid>
         );
     }
 }

@@ -10,6 +10,7 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
   }
 >
   <WithStyles(Grid)
+    alignItems="baseline"
     container={true}
     display="row"
     spacing={16}
@@ -24,9 +25,10 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
     >
       <TextField
         disabled={false}
-        error={null}
+        error={false}
         fullWidth={true}
         helperText={null}
+        inputRef={[Function]}
         label="Item name"
         onChange={[Function]}
         onKeyPress={[Function]}
@@ -65,6 +67,7 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
   }
 >
   <WithStyles(Grid)
+    alignItems="baseline"
     container={true}
     display="row"
     spacing={16}
@@ -79,9 +82,10 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
     >
       <TextField
         disabled={true}
-        error={null}
+        error={false}
         fullWidth={true}
         helperText={null}
+        inputRef={[Function]}
         label="Item name"
         onChange={[Function]}
         onKeyPress={[Function]}
@@ -120,6 +124,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
   }
 >
   <WithStyles(Grid)
+    alignItems="baseline"
     container={true}
     display="row"
     spacing={16}
@@ -134,9 +139,10 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
     >
       <TextField
         disabled={false}
-        error={null}
+        error={false}
         fullWidth={true}
         helperText={null}
+        inputRef={[Function]}
         onChange={[Function]}
         onKeyPress={[Function]}
         required={false}

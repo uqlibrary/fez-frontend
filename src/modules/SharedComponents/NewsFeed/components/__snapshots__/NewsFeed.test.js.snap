@@ -6,122 +6,158 @@ exports[`Component NewsFeed should not render anything while loading 1`] = `""`;
 
 exports[`Component NewsFeed should render news feed 1`] = `
 <StandardCard
-  className="newsFeed primaryHeader"
+  darkHeader={true}
   title="Latest news"
 >
-  <div
-    className="newsItemContainer"
+  <WithStyles(Grid)
+    container={true}
     key="newsItem-0"
+    spacing={16}
   >
-    <div
-      className="dateContainer"
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
     >
-      <div
-        className="date"
-        item-icon=""
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        container={true}
+        direction="column"
+        justify="center"
+        spacing={0}
       >
-        <span
+        <WithStyles(Grid)
           className="day"
+          item={true}
         >
           15
-        </span>
-        <span
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
           className="month"
+          item={true}
         >
           Dec
-        </span>
-        <span
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
           className="year"
+          item={true}
         >
           2018
-        </span>
-      </div>
-    </div>
-    <p
-      className="newsItemText"
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     >
-      <b>
-        Outage
-      </b>
-       
-      There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
-    </p>
-  </div>
-  <div
-    className="newsItemContainer"
+      <WithStyles(Typography)>
+        <b>
+          Outage
+        </b>
+         
+        There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
     key="newsItem-1"
+    spacing={16}
   >
-    <div
-      className="dateContainer"
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
     >
-      <div
-        className="date"
-        item-icon=""
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        container={true}
+        direction="column"
+        justify="center"
+        spacing={0}
       >
-        <span
+        <WithStyles(Grid)
           className="day"
+          item={true}
         >
           15
-        </span>
-        <span
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
           className="month"
+          item={true}
         >
           Dec
-        </span>
-        <span
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
           className="year"
+          item={true}
         >
           2017
-        </span>
-      </div>
-    </div>
-    <p
-      className="newsItemText"
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     >
-      <b>
-        Statistics
-      </b>
-       
-      The file download and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.
-    </p>
-  </div>
-  <div
-    className="newsItemContainer"
+      <WithStyles(Typography)>
+        <b>
+          Statistics
+        </b>
+         
+        The file download and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
     key="newsItem-2"
+    spacing={16}
   >
-    <div
-      className="dateContainer"
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
     >
-      <div
-        className="date"
-        item-icon=""
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        container={true}
+        direction="column"
+        justify="center"
+        spacing={0}
       >
-        <span
+        <WithStyles(Grid)
           className="day"
+          item={true}
         >
           15
-        </span>
-        <span
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
           className="month"
+          item={true}
         >
           Dec
-        </span>
-        <span
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
           className="year"
+          item={true}
         >
           2016
-        </span>
-      </div>
-    </div>
-    <p
-      className="newsItemText"
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     >
-      <b>
-        PREFS - Account Preferences
-      </b>
-       
-      When you set 'Remember search parameters' to 'Yes' via the PREFS tab, date filters applied to searches will now be remembered between searches
-    </p>
-  </div>
+      <WithStyles(Typography)>
+        <b>
+          PREFS - Account Preferences
+        </b>
+         
+        When you set 'Remember search parameters' to 'Yes' via the PREFS tab, date filters applied to searches will now be remembered between searches
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardCard>
 `;

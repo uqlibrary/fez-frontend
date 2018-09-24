@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Orcid  should display error if ORCID url redirect STATE response is invalid 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Link ORCID ID to UQ eSpace"
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "Cancel",
@@ -23,17 +22,13 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     }
     onRef={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
     orcidStateError="Invalid authorisation state response from ORCID. "
-    showLoader={false}
     title="Error"
     type="error_outline"
   />
   <StandardCard
-    className=""
     title="I already have an ORCID iD"
   >
     <div>
@@ -63,7 +58,6 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     </div>
   </StandardCard>
   <StandardCard
-    className=""
     title="I need an ORCID iD"
   >
     <div>
@@ -97,15 +91,14 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
       </div>
     </div>
   </StandardCard>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component Orcid  should display error if author update failed 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Link ORCID ID to UQ eSpace"
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "Cancel",
@@ -123,17 +116,13 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     }
     onRef={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
     orcidStateError="Invalid authorisation state response from ORCID. "
-    showLoader={false}
     title="Error"
     type="error_outline"
   />
   <StandardCard
-    className=""
     title="I already have an ORCID iD"
   >
     <div>
@@ -163,7 +152,6 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     </div>
   </StandardCard>
   <StandardCard
-    className=""
     title="I need an ORCID iD"
   >
     <div>
@@ -197,15 +185,14 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
       </div>
     </div>
   </StandardCard>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component Orcid  should render form uf account/author is set 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="Link ORCID ID to UQ eSpace"
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "Cancel",
@@ -224,7 +211,6 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     onRef={[Function]}
   />
   <StandardCard
-    className=""
     title="I already have an ORCID iD"
   >
     <div>
@@ -254,7 +240,6 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     </div>
   </StandardCard>
   <StandardCard
-    className=""
     title="I need an ORCID iD"
   >
     <div>
@@ -288,7 +273,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
       </div>
     </div>
   </StandardCard>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`Component Orcid  should render nothing if account is set, but author is null 1`] = `<div />`;

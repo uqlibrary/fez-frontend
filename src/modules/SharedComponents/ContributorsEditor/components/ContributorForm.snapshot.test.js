@@ -35,7 +35,7 @@ describe('Component ContributorForm', () => {
         const testFunction = jest.fn();
         const wrapper = setup({ showIdentifierLookup: true, actions: { searchAuthors: testFunction } });
         expect(wrapper.state.nameAsPublished).toBeFalsy();
-        wrapper.instance()._onNameChanged({}, 'J. Smith');
+        wrapper.instance()._onNameChanged({target: {value: 'J. Smith'}});
         expect(wrapper.state().nameAsPublished).toEqual('J. Smith');
     });
 

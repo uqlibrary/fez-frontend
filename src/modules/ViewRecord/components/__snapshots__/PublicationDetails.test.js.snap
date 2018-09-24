@@ -4,36 +4,35 @@ exports[`Publication Details Component  should not render component with empty p
 
 exports[`Publication Details Component  should render component 1`] = `
 <StandardCard
-  className=""
   title="Publication details"
 >
-  <Table
-    allRowsSelected={false}
-    className="publicationDetails vertical"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
+  <WithStyles(Grid)
+    container={true}
+    direction="row"
   >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <ViewRecordTableRow
+      <Component
         data="Journal Article"
         heading="Publication type"
       />
-      <ViewRecordTableRow
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <Component
         data="Article (original research)"
         heading="Sub-type"
       />
-      <ViewRecordTableRow
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <Component
         data={
           <ul>
             <li>
@@ -64,71 +63,54 @@ exports[`Publication Details Component  should render component 1`] = `
         }
         heading="Collections"
       />
-    </TableBody>
-  </Table>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardCard>
 `;
 
 exports[`Publication Details Component  should render with publication without collection data 1`] = `
 <StandardCard
-  className=""
   title="Publication details"
 >
-  <Table
-    allRowsSelected={false}
-    className="publicationDetails vertical"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
+  <WithStyles(Grid)
+    container={true}
+    direction="row"
   >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <ViewRecordTableRow
+      <Component
         data="Journal Article"
         heading="Publication type"
       />
-    </TableBody>
-  </Table>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardCard>
 `;
 
 exports[`Publication Details Component  should render with publication without subtype data 1`] = `
 <StandardCard
-  className=""
   title="Publication details"
 >
-  <Table
-    allRowsSelected={false}
-    className="publicationDetails vertical"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
+  <WithStyles(Grid)
+    container={true}
+    direction="row"
   >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <ViewRecordTableRow
+      <Component
         data="Journal Article"
         heading="Publication type"
       />
-      <ViewRecordTableRow
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <Component
         data={
           <ul>
             <li>
@@ -159,7 +141,7 @@ exports[`Publication Details Component  should render with publication without s
         }
         heading="Collections"
       />
-    </TableBody>
-  </Table>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardCard>
 `;

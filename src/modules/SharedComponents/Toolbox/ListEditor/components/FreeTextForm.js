@@ -5,6 +5,14 @@ import {Grid, Typography} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+const styles = theme => ({
+    MUITextLabel: theme.overrides.MuiFormLabel,
+    remindToAdd: {
+        marginTop: 8,
+        color: '#f06f0d'
+    }
+});
+
 export class FreeTextForm extends Component {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
@@ -31,6 +39,7 @@ export class FreeTextForm extends Component {
         this.state = {
             itemName: ''
         };
+        this.textField = null;
     }
 
     addItem = (event) => {
@@ -50,7 +59,7 @@ export class FreeTextForm extends Component {
         });
 
         // move focus to name as published text field after item was added
-        if (this.refs.itemName) this.refs.itemName.focus();
+        if (this.textField) this.textField.focus();
     };
 
     onNameChanged = (event) => {
@@ -60,28 +69,26 @@ export class FreeTextForm extends Component {
     };
 
     render() {
-        const {classes, locale, errorText} = this.props;
+        const {classes, locale, errorText, disabled} = this.props;
         const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
 
         return (
             <div style={{flexGrow: 1, padding: 8}}>
-                <Grid container spacing={16} display="row">
+                <Grid container spacing={16} display="row" alignItems="baseline">
                     <Grid item style={{flexGrow: 1}}>
                         <TextField
                             fullWidth
-                            ref="itemName"
+                            inputRef={(node) => {this.textField = node;}}
                             label={inputFieldLabel}
                             placeholder={inputFieldHint}
                             value={this.state.itemName}
                             onChange={this.onNameChanged}
                             onKeyPress={this.addItem}
-                            error={this.props.isValid(this.state.itemName) || errorText
+                            error={!!this.props.isValid(this.state.itemName)}
+                            helperText={this.props.isValid(this.state.itemName) || errorText
                                 ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
                                 : null}
-                            helperText={this.props.isValid(this.state.itemName) || this.props.errorText
-                                ? `${this.props.errorText || ''} ${this.props.isValid(this.state.itemName)}`
-                                : null}
-                            disabled={this.props.disabled}
+                            disabled={disabled}
                         />
                         {
                             this.props.remindToAdd &&
@@ -99,7 +106,7 @@ export class FreeTextForm extends Component {
                             color={'primary'}
                             variant={'raised'}
                             children={addButtonLabel}
-                            disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                            disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
                             onClick={this.addItem}
                         />
                     </Grid>
@@ -109,10 +116,4 @@ export class FreeTextForm extends Component {
     }
 }
 
-const styles = () => ({
-    remindToAdd: {
-        color: '#f06f0d'
-    }
-});
-
-export default withStyles(styles)(FreeTextForm);
+export default withStyles(styles, {withTheme: true})(FreeTextForm);

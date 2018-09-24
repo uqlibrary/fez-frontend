@@ -19,7 +19,7 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import * as pages from './pages';
 
 // MUI1
-import {Tooltip, Fade, AppBar, Toolbar, Typography, IconButton, Grid, Hidden} from '@material-ui/core';
+import {Tooltip, Fade, AppBar, Toolbar, IconButton, Grid, Typography, Hidden} from '@material-ui/core';
 import {Menu} from '@material-ui/icons';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -40,6 +40,17 @@ const styles = theme => ({
         padding: 0,
         maxHeight: '100%',
         height: '100%'
+    },
+    titleLink: {
+        '& a': {
+            textDecoration: 'none',
+            '&:hover': {
+                textDecoration: 'underline'
+            }
+        }
+    },
+    nowrap: {
+        whiteSpace: 'nowrap'
     }
 });
 
@@ -65,7 +76,7 @@ export class App extends PureComponent {
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1200px)'),
+            mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
         };
     }
@@ -175,8 +186,7 @@ export class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 280} : {};
-        const titleStyle = this.state.docked ? {paddingLeft: 200} : {paddingLeft: 0};
+        const containerStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 260} : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
@@ -212,6 +222,7 @@ export class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+        const titleStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 284} : {paddingLeft: 0};
         return (
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
@@ -225,9 +236,9 @@ export class App extends PureComponent {
                             direction="row"
                             wrap="nowrap"
                             justify="flex-start">
-                            {/* Menu/Close Button */}
-                            {!this.state.docked &&
-                                <Grid item xs={'auto'} zeroMinWidth>
+                            {
+                                !this.state.docked && !isThesisSubmissionPage &&
+                                <Grid item zeroMinWidth>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
                                         TransitionComponent={Fade}>
@@ -240,17 +251,19 @@ export class App extends PureComponent {
                                     </Tooltip>
                                 </Grid>
                             }
-                            {/* Logo */}
-                            <Hidden smDown lgUp>
-                                <Grid item>
-                                    <img id="logo" src={logo} style={{width: 66, height: 66}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
+                            <Grid item xs style={titleStyle} className={classes.nowrap}>
+                                <Grid container spacing={16} alignItems={'center'} justify={'center'}>
+                                    <Hidden smDown>
+                                        <Grid item xs={'auto'}>
+                                            <img id="logo" src={logo} style={{height: 66, width: 60}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
+                                        </Grid>
+                                    </Hidden>
+                                    <Grid item xs>
+                                        <Typography variant="title" noWrap className={classes.titleLink}>
+                                            {locale.global.appTitle}
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
-                            </Hidden>
-                            {/* Title */}
-                            <Grid item style={{flexGrow: 1}}>
-                                <Typography variant="title" noWrap style={titleStyle}>
-                                    {locale.global.appTitle}
-                                </Typography>
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&

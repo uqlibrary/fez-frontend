@@ -14,7 +14,8 @@ import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {api} from 'config';
+import {api, mui1theme} from 'config';
+import {MuiThemeProvider} from '@material-ui/core';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -87,19 +88,23 @@ const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
 
 // get a mounted or shallow element
 const getElement = (component, props, isShallow = true) => {
-    if (isShallow) return shallow(React.createElement(component, props));
+    if (isShallow) return shallow(
+        React.createElement(component, props)
+    );
     return mount(
         <Provider store={setupStoreForMount().store}>
             <MemoryRouter initialEntries={[ { pathname: '/', key: 'testKey' } ]}>
-                {React.createElement(component, props)}
+                <MuiThemeProvider theme={mui1theme}>
+                    {React.createElement(component, props)}
+                </MuiThemeProvider>
             </MemoryRouter>
         </Provider>,
         {
             context: {
-                muiTheme: getMuiTheme()
+                muiTheme: {...getMuiTheme()},
             },
             childContextTypes: {
-                muiTheme: PropTypes.object.isRequired
+                muiTheme: PropTypes.object.isRequired,
             }
         });
 };

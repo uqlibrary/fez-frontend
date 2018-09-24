@@ -1,76 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot tests for StandardCard component renders StandardCard with title and help button 1`] = `
-<Card
-  className=" standard-card"
-  expandable={false}
-  expanded={null}
-  initiallyExpanded={false}
->
-  <CardHeader
-    avatar={null}
-    className="card-header"
-  >
-    <div
-      className="columns is-gapless is-mobile"
-    >
-      <div
-        className="column"
-      >
-        <h2
-          className="cardTitle"
-        >
-          card title
-        </h2>
-      </div>
-      <div
-        className="column is-narrow is-helpicon"
-      >
-        <Connect(WithStyles(HelpIcon))
-          buttonLabel="OK"
-          text="help text"
-          title="help"
-        />
-      </div>
-    </div>
-  </CardHeader>
-  <CardText
-    className="body-1"
-  >
-    <div />
-  </CardText>
-</Card>
+<WithStyles(Cards)
+  help={
+    Object {
+      "buttonLabel": "OK",
+      "text": "help text",
+      "title": "help",
+    }
+  }
+  title="card title"
+/>
 `;
 
 exports[`Snapshot tests for StandardCard component renders StandardCard with title and no help icon 1`] = `
-<Card
-  className=" standard-card"
-  expandable={false}
-  expanded={null}
-  initiallyExpanded={false}
->
-  <CardHeader
-    avatar={null}
-    className="card-header"
-  >
-    <div
-      className="columns is-gapless is-mobile"
-    >
-      <div
-        className="column"
-      >
-        <h2
-          className="cardTitle"
-        >
-          card title
-        </h2>
-      </div>
-    </div>
-  </CardHeader>
-  <CardText
-    className="body-1"
-  >
-    <div />
-  </CardText>
-</Card>
+<WithStyles(Cards)
+  title="card title"
+/>
 `;

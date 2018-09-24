@@ -1,4 +1,4 @@
-import AuthorLinking from './AuthorLinking';
+import {AuthorLinking} from './AuthorLinking';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -7,6 +7,12 @@ function setup(testProps, isShallow = true) {
         authorList: testProps.authorList || [],
         linkedAuthorIdList: testProps.linkedAuthorIdList,
         disabled: testProps.disabled || false,
+        classes: {
+            root: 'root',
+            label: 'label',
+            checkboxRoot: 'checkboxRoot',
+            checkboxChecked: 'checkboxChecked',
+        },
         ...testProps
     };
     return getElement(AuthorLinking, props, isShallow);

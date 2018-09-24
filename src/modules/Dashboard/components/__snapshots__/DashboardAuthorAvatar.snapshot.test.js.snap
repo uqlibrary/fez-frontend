@@ -1,20 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
-<div
-  className="authorAvatar"
->
-  <Avatar
-    aria-label="Photograph of  Professor undefined undefined"
-    backgroundColor="transparent"
-    size={150}
-    style={
-      Object {
-        "backgroundImage": "url(\\"https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_14.jpg\\"), url()",
-        "backgroundSize": "cover, cover",
-      }
+<WithStyles(Avatar)
+  aria-label="Photograph of  Professor undefined undefined"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "backgroundImage": "url(\\"https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_14.jpg\\"), url()",
+      "backgroundSize": "cover, cover",
+      "height": 125,
+      "margin": 8,
+      "width": 125,
     }
-    title="Professor undefined undefined"
-  />
-</div>
+  }
+  title="Professor undefined undefined"
+/>
 `;

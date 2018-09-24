@@ -6,35 +6,46 @@ import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
+import {Grid, withStyles, Card, Hidden} from '@material-ui/core';
+
+const background = require('../../../../public/images/dashboard_cover.jpg');
+
+const styles = {
+    wrapper: {
+        backgroundImage: 'url(' + background + ')',
+        backgroundSize: 'cover',
+        padding: 16
+    }
+};
 
 class DashboardAuthorProfile extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
         authorDetails: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
 
     render() {
         const txt = locale.pages.dashboard.header;
-        const {author, authorDetails, history} = this.props;
-
+        const {author, authorDetails, history, classes} = this.props;
         if (!authorDetails) {
-            return <div />;
+            return <div className="AuthorProfile empty" />;
         }
 
         return (
-            <div className="imageCover">
-                {
-                    txt.help &&
-                    <div className="is-pulled-right">
-                        <HelpIcon {...txt.help} />
-                    </div>
-                }
-                <div className="columns userDetails is-gapless">
+            <Card className={classes.wrapper}>
+                <Grid container spacing={24} alignContent={'center'} alignItems={'center'} justify={'center'}>
+                    {
+                        txt.help &&
+                        <div className="is-pulled-right">
+                            <HelpIcon {...txt.help} />
+                        </div>
+                    }
                     {/* Profile avatar */}
                     {
                         authorDetails.image_exists === 1 &&
-                        <div className="column is-narrow authorAvatar">
+                        <Grid item xs={'auto'}>
                             <DashboardAuthorAvatar
                                 values={{
                                     uqr_id: authorDetails.uqr_id || author.aut_id || '',
@@ -42,45 +53,53 @@ class DashboardAuthorProfile extends PureComponent {
                                     givenName: author.aut_fname || '',
                                     familyName: author.aut_lname || ''
                                 }}/>
-                        </div>
+                        </Grid>
                     }
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
-                    <div className="column authorDetails">
-                        <DashboardAuthorDetails
-                            {...{
-                                title: author.aut_title || '',
-                                givenName: author.aut_fname || '',
-                                familyName: author.aut_lname || '',
-                                orgUnits: authorDetails.org_units,
-                                positions: authorDetails.positions
-                            }}
-                        />
-                        <DashboardResearcherIds
-                            values={{
-                                publons: parseInt(author.aut_publons_id, 10) === 1 ? author.aut_orcid_id : author.aut_publons_id,
-                                researcher: author.aut_researcher_id,
-                                scopus: author.aut_scopus_id,
-                                google_scholar: author.aut_google_scholar_id,
-                                orcid: author.aut_orcid_id
-                            }}
-                            authenticated={{
-                                publons: Boolean(author.aut_publons_id),
-                                researcher: Boolean(author.aut_researcher_id),
-                                scopus: Boolean(author.aut_is_scopus_id_authenticated),
-                                google_scholar: Boolean(author.aut_google_scholar_id),
-                                orcid: Boolean(author.aut_orcid_id)
-                            }}
-                            history={history}
-                        />
-                    </div>
+                    <Grid item xs>
+                        <Grid container>
+                            <Grid item>
+                                <DashboardAuthorDetails
+                                    {...{
+                                        title: author.aut_title || '',
+                                        givenName: author.aut_fname || '',
+                                        familyName: author.aut_lname || '',
+                                        orgUnits: authorDetails.org_units,
+                                        positions: authorDetails.positions
+                                    }}
+                                />
+                            </Grid>
+                            <Grid item>
+                                <DashboardResearcherIds
+                                    values={{
+                                        publons: parseInt(author.aut_publons_id, 10) === 1 ? author.aut_orcid_id : author.aut_publons_id,
+                                        researcher: author.aut_researcher_id,
+                                        scopus: author.aut_scopus_id,
+                                        google_scholar: author.aut_google_scholar_id,
+                                        orcid: author.aut_orcid_id
+                                    }}
+                                    authenticated={{
+                                        publons: Boolean(author.aut_publons_id),
+                                        researcher: Boolean(author.aut_researcher_id),
+                                        scopus: Boolean(author.aut_is_scopus_id_authenticated),
+                                        google_scholar: Boolean(author.aut_google_scholar_id),
+                                        orcid: Boolean(author.aut_orcid_id)
+                                    }}
+                                    history={history}
+                                />
+                            </Grid>
+                        </Grid>
+                    </Grid>
                     {/* Publication count */}
-                    <div className="column is-narrow is-hidden-tablet-only authorCount">
-                        <DashboardArticleCount />
-                    </div>
-                </div>
-            </div>
+                    <Hidden smDown>
+                        <Grid item xs={'auto'}>
+                            <DashboardArticleCount />
+                        </Grid>
+                    </Hidden>
+                </Grid>
+            </Card>
         );
     }
 }
 
-export default DashboardAuthorProfile;
+export default withStyles(styles, { withTheme: true })(DashboardAuthorProfile);

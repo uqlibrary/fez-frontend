@@ -1,14 +1,41 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-import Divider from 'material-ui/Divider';
-import IconButton from 'material-ui/IconButton';
-import Close from 'material-ui/svg-icons/navigation/close';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
 import {locale} from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
-export default class AdvancedSearchRow extends PureComponent {
+import Close from '@material-ui/icons/Close';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
+
+const styles = {
+    autoWidth: {
+        flexGrow: 1,
+        width: 1
+    },
+    advancedSearchRowDeleteButton: {
+        margin: -6,
+        opacity: 0.33,
+        '&:hover': {
+            opacity: 1
+        }
+    },
+    advancedSearchCombiner: {
+        marginTop: 6
+    },
+    mobileRowSpacer: {
+        margin: '12px -18px',
+    }
+};
+
+export class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
         searchField: PropTypes.string,
@@ -21,13 +48,15 @@ export default class AdvancedSearchRow extends PureComponent {
         disabledFields: PropTypes.array,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,
+        classes: PropTypes.object
     };
 
     _handleTextChange = (value, label = '') => {
         this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value, label});
     };
 
-    _handleSearchFieldChange = (event, index, searchField) => {
+    _handleSearchFieldChange = (event) => {
+        const searchField = event.target.value;
         this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: '', label: ''});
     };
 
@@ -55,68 +84,85 @@ export default class AdvancedSearchRow extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
+        const {classes} = this.props;
         return (
-            <div className="columns is-gapless is-multiline is-mobile advancedSearchRow">
-                <div className="column is-4-tablet">
-                    <SelectField
-                        value={this.props.searchField}
-                        onChange={this._handleSearchFieldChange}
-                        errorText={this.selectFieldValidation()}
-                        aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
-                        menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
-                        fullWidth
-                    >
-                        {
-                            Object.keys(txt.fieldTypes)
-                                .filter(item => txt.fieldTypes[item].type !== null)
-                                .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
-                                .map((item, index) => {
-                                    if(txt.fieldTypes[item].type === 'divider') {
-                                        return <Divider key={index} />;
+            <React.Fragment>
+                <Grid container spacing={16}>
+                    <Grid item xs={12} md={6}>
+                        {/* Select and combiner */}
+                        <Grid container spacing={16}>
+                            <Grid item className={classes.autoWidth} style={{minWidth: 200}}>
+                                <FormControl fullWidth>
+                                    <Select
+                                        value={this.props.searchField}
+                                        onChange={this._handleSearchFieldChange}
+                                        error={!!this.selectFieldValidation()}
+                                        aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
+                                    >
+                                        {
+                                            Object.keys(txt.fieldTypes)
+                                                .filter(item => txt.fieldTypes[item].type !== null)
+                                                .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
+                                                .map((item, index) => {
+                                                    if(txt.fieldTypes[item].type === 'divider') {
+                                                        return <Divider key={index} />;
+                                                    }
+                                                    return  (
+                                                        <MenuItem
+                                                            style={{display: 'block'}}
+                                                            key={item}
+                                                            value={item}
+                                                            children={txt.fieldTypes[item].title}
+                                                            disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
+                                                        />
+                                                    );
+                                                })
+                                        }
+                                    </Select>
+                                    <FormHelperText error={!!this.selectFieldValidation()}>{this.selectFieldValidation()}</FormHelperText>
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={'auto'}>
+                                <Typography className={classes.advancedSearchCombiner}>{txt.fieldTypes[this.props.searchField].combiner}</Typography>
+                            </Grid>
+                        </Grid>
+                        {/* Select and combiner */}
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Grid container spacing={16}>
+                            <Grid item className={classes.autoWidth} zeroMinWidth>
+                                <AdvancedSearchRowInput
+                                    {...this.props}
+                                    onChange={this._handleTextChange}
+                                    inputField={txt.fieldTypes[this.props.searchField]}
+                                >
+                                    {
+                                        this.renderInputComponentAndProps()
                                     }
-                                    return  (
-                                        <MenuItem
-                                            key={item}
-                                            value={item}
-                                            primaryText={txt.fieldTypes[item].title}
-                                            disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
-                                        />
-                                    );
-                                })
-                        }
-                    </SelectField>
-                </div>
-                {
-                    txt.fieldTypes[this.props.searchField].combiner ?
-                        <div className="column is-narrow combiner">
-                            <span>{txt.fieldTypes[this.props.searchField].combiner}</span>
-                        </div>
-                        : <div className="column is-narrow spacer" />
-                }
-                <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
-                    <AdvancedSearchRowInput
-                        {...this.props}
-                        onChange={this._handleTextChange}
-                        inputField={txt.fieldTypes[this.props.searchField]}
-                    >
-                        {
-                            this.renderInputComponentAndProps()
-                        }
-                    </AdvancedSearchRowInput>
-                </div>
-                {
-                    this.props.rowIndex !== 0 &&
-                    <div className="column is-1-mobile is-narrow-tablet">
-                        <IconButton
-                            aria-label={txt.deleteAria}
-                            className="deleteFieldButton"
-                            onClick={this._deleteRow}
-                        >
-                            <Close/>
-                        </IconButton>
-                    </div>
-                }
-            </div>
+                                </AdvancedSearchRowInput>
+                            </Grid>
+                            {
+                                this.props.rowIndex !== 0 &&
+                        <Grid item className={classes.advancedSearchRowDeleteButton}>
+                            <IconButton
+                                style={{float: 'right'}}
+                                aria-label={txt.deleteAria}
+                                className="deleteFieldButton"
+                                onClick={this._deleteRow}
+                            >
+                                <Close/>
+                            </IconButton>
+                        </Grid>
+                            }
+                            <Hidden mdUp>
+                                <Grid item xs={12}><Divider className={classes.mobileRowSpacer}/></Grid>
+                            </Hidden>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </React.Fragment>
         );
     }
 }
+export default withStyles(styles, {withTheme: true})(AdvancedSearchRow);
+

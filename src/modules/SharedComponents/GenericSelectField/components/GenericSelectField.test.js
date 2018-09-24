@@ -1,7 +1,8 @@
-import GenericSelectField from './GenericSelectField';
+import {GenericSelectField} from './GenericSelectField';
 
 function setup(testProps, isShallow = true){
     const props = {
+        classes: {},
         ...testProps
     };
     return getElement(GenericSelectField, props, isShallow);

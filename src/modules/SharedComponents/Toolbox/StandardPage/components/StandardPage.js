@@ -2,13 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import jss from 'jss';
-import nested from 'jss-nested';
-jss.use(nested());
-
+import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
     layoutCard: {
-        // border: '5px dashed red',
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',
@@ -17,12 +13,20 @@ const styles = theme => ({
             margin: '0 auto 24px auto'
         },
     },
+    layoutTitle: {
+        maxWidth: 1200,
+        width: '90%',
+        margin: '12px auto',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 auto 12px auto'
+        }
+    }
 });
 
-class StandardPage extends Component {
+class Page extends Component {
     static propTypes = {
         title: PropTypes.any,
-        className: PropTypes.string,
         children: PropTypes.any,
         classes: PropTypes.object
     };
@@ -32,7 +36,7 @@ class StandardPage extends Component {
         return (
             <Grid container>
                 {title &&
-                <h1 className="pageTitle">{title}</h1>
+                <Typography variant={'title'} className={classes.layoutTitle}>{title}</Typography>
                 }
                 <Grid item className={classes.layoutCard}>
                     {children}
@@ -42,4 +46,6 @@ class StandardPage extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(StandardPage);
+const StyledPage = withStyles(styles, {withTheme: true})(Page);
+const StandardPage = (props) => <StyledPage {...props}/>;
+export default StandardPage;

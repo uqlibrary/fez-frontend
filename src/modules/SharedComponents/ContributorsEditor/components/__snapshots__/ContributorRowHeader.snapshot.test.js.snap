@@ -2,8 +2,7 @@
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
 <React.Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -40,7 +39,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemIcon)>
-        <pure(People) />
+        <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -109,7 +108,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
@@ -119,8 +118,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
 <React.Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -153,7 +151,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemIcon)>
-        <pure(People) />
+        <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -200,7 +198,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           disabled={true}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
@@ -210,8 +208,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
 <React.Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -244,7 +241,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemIcon)>
-        <pure(People) />
+        <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(ListItemText)
@@ -291,7 +288,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForever) />
+          <pure(DeleteForeverIcon) />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>

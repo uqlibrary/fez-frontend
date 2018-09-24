@@ -8,6 +8,7 @@ function setup(testProps, isShallow = true){
             validation: [],
             hint: 'Field hint'
         },
+        classes: {},
         ...testProps
     };
 
@@ -28,7 +29,6 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render given children with component and props', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            console.log(InputComponent.defaultProps);
             expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
                 "aria-label": undefined,

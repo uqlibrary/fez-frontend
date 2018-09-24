@@ -6,13 +6,38 @@ import {locale} from 'locale';
 const moment = require('moment');
 const dompurify = require('dompurify');
 import ReactHtmlParser from 'react-html-parser';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class NewsFeed extends PureComponent {
+const styles = theme => ({
+    newsItem: {
+        marginTop: 6,
+        color: theme.palette.primary.main,
+        '& .day': {
+            fontSize: '1.7rem',
+            fontWeight: theme.typography.fontWeightMedium,
+            marginBottom: -4
+        },
+        '& .month': {
+            textTransform: 'uppercase',
+            ontWeight: theme.typography.fontWeightMedium,
+            fontSize: '1.1rem'
+        },
+        '& .year': {
+            fontSize: '0.9rem',
+            ontWeight: theme.typography.fontWeightMedium
+        }
+    }
+});
+
+export class NewsFeed extends PureComponent {
     static propTypes = {
         newsFeedList: PropTypes.array,
         loadingNewsFeedList: PropTypes.bool,
         showNewsCount: PropTypes.number,
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -28,6 +53,7 @@ export default class NewsFeed extends PureComponent {
     }
 
     render() {
+        const {classes} = this.props;
         const txt = locale.components.newsFeed;
 
         if (this.props.loadingNewsFeedList || this.props.newsFeedList.length === 0) {
@@ -43,24 +69,28 @@ export default class NewsFeed extends PureComponent {
             );
 
         return (
-            <StandardCard title={txt.title} className={'newsFeed primaryHeader'}>
+            <StandardCard title={txt.title} darkHeader>
                 {
                     !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
-                        <div key={`newsItem-${index}`} className="newsItemContainer">
-                            <div className="dateContainer">
-                                <div className="date" item-icon="">
-                                    <span className="day">{moment(newsItem.nws_updated_date).format('D')}</span>
-                                    <span className="month">{moment(newsItem.nws_updated_date).format('MMM')}</span>
-                                    <span className="year">{moment(newsItem.nws_updated_date).format('YYYY')}</span>
-                                </div>
-                            </div>
-                            <p className="newsItemText">
-                                <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
-                            </p>
-                        </div>
+                        <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
+                            <Grid item xs={'auto'}>
+                                <Grid container direction={'column'} alignItems={'center'} justify={'center'} alignContent={'center'} spacing={0}>
+                                    <Grid item className="day">{moment(newsItem.nws_updated_date).format('D')}</Grid>
+                                    <Grid item className="month">{moment(newsItem.nws_updated_date).format('MMM')}</Grid>
+                                    <Grid item className="year">{moment(newsItem.nws_updated_date).format('YYYY')}</Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs>
+                                <Typography>
+                                    <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
+                                </Typography>
+                            </Grid>
+                        </Grid>
                     ))
                 }
             </StandardCard>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(NewsFeed);

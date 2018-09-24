@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`myDatasets test renders active filters 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -11,7 +11,6 @@ exports[`myDatasets test renders active filters 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results. You may be able to 
@@ -39,11 +38,11 @@ exports[`myDatasets test renders active filters 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders list of publications no facets 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -52,89 +51,117 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
-        <span>
-          Add to this list by 
-          <a
-            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-            target="_blank"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
           >
-            adding a missing dataset
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 2,
-              "total": 2,
-            }
-          }
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 2,
-              "total": 2,
-            }
-          }
-        />
-        <PublicationsList
-          hideCountDiff={false}
-          publicationsList={
-            Array [
-              1,
-              2,
-              3,
-            ]
-          }
-          publicationsListSubset={Array []}
-          showDefaultActions={true}
-          showMetrics={false}
-          showSourceCountIcon={false}
-          showSources={false}
-          subsetCustomActions={Array []}
-        />
-        <PublicationsListPaging
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 2,
-              "total": 2,
-            }
-          }
-        />
+            <span>
+              Add to this list by 
+              <a
+                href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+                target="_blank"
+              >
+                adding a missing dataset
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 2,
+                  "total": 2,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 2,
+                  "total": 2,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={true}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              subsetCustomActions={Array []}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 2,
+                  "total": 2,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders list of publications with facets 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -143,81 +170,109 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
+      <StandardCard>
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
-        <span>
-          Add to this list by 
-          <a
-            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-            target="_blank"
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
           >
-            adding a missing dataset
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 2,
-              "total": 2,
-            }
-          }
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 2,
-              "total": 2,
-            }
-          }
-        />
-        <PublicationsList
-          hideCountDiff={false}
-          publicationsList={
-            Array [
-              1,
-              2,
-              3,
-            ]
-          }
-          publicationsListSubset={Array []}
-          showDefaultActions={true}
-          showMetrics={false}
-          showSourceCountIcon={false}
-          showSources={false}
-          subsetCustomActions={Array []}
-        />
-        <PublicationsListPaging
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "current_page": 1,
-              "from": 1,
-              "per_page": 20,
-              "to": 2,
-              "total": 2,
-            }
-          }
-        />
+            <span>
+              Add to this list by 
+              <a
+                href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+                target="_blank"
+              >
+                adding a missing dataset
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 2,
+                  "total": 2,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 2,
+                  "total": 2,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={true}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              subsetCustomActions={Array []}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 2,
+                  "total": 2,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
     <div
@@ -312,13 +367,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
       </StandardRighthandCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders loading screen while loading account data 1`] = `""`;
 
 exports[`myDatasets test renders loading screen while loading publications  1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -331,11 +386,11 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
   <div
     className="columns"
   />
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders loading screen while loading publications while filtering 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -344,58 +399,86 @@ exports[`myDatasets test renders loading screen while loading publications while
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-      >
-        <span>
-          Add to this list by 
-          <a
-            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-            target="_blank"
-          >
-            adding a missing dataset
-          </a>
-          .
-        </span>
-        <PublicationsListSorting
-          canUseExport={true}
-          disabled={true}
-          initPageLength={20}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          pagingData={Object {}}
-          sortBy="published_date"
-          sortDirection="Desc"
-        />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-          pagingData={Object {}}
-        />
-        <div
-          className="is-centered"
+      <StandardCard>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <WithStyles(InlineLoader)
-            message="Retrieving your datasets..."
-          />
-        </div>
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-          pagingData={Object {}}
-        />
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+                target="_blank"
+              >
+                adding a missing dataset
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              canUseExport={true}
+              disabled={true}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={Object {}}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <div
+              className="is-centered"
+            >
+              <WithStyles(InlineLoader)
+                message="Retrieving your datasets..."
+              />
+            </div>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;
 
 exports[`myDatasets test renders no results 1`] = `
-<WithStyles(StandardPage)
+<StandardPage
   title="My research data"
 >
   <div
@@ -405,7 +488,6 @@ exports[`myDatasets test renders no results 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
         text={
           <div>
             We were unable to find any results. You may be able to 
@@ -433,5 +515,5 @@ exports[`myDatasets test renders no results 1`] = `
       </StandardCard>
     </div>
   </div>
-</WithStyles(StandardPage)>
+</StandardPage>
 `;

@@ -9,7 +9,7 @@ exports[`HelpIcon snapshots tests renders help icon 1`] = `
   <WithStyles(IconButton)
     onClick={[Function]}
   >
-    <pure(HelpOutline) />
+    <pure(HelpOutlineIcon) />
   </WithStyles(IconButton)>
 </WithStyles(Tooltip)>
 `;

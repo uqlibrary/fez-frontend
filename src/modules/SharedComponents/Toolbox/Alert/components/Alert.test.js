@@ -1,80 +1,72 @@
-jest.dontMock('./Alert');
+import {Alert} from './Alert';
 
-import {mount} from 'enzyme';
-import React from 'react';
-import Alert from './Alert';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
-function setup({title, message, type, allowDismiss, dismissAction, action, actionButtonLabel, showLoader}){
+function setup(testProps, isShallow = true) {
     const props = {
-        title: title || 'Title',
-        message: message || 'Message',
-        type: type || 'warning',
-        allowDismiss: allowDismiss || true,
-        dismissAction: dismissAction || jest.fn(),
-        action: action || jest.fn(),
-        actionButtonLabel: actionButtonLabel || 'button',
-        showLoader: showLoader || false
+        classes: {},
+        theme: {},
+        title: testProps.title || 'Title',
+        message: testProps.message || 'Message',
+        type: testProps.type || 'warning',
+        allowDismiss: testProps.allowDismiss || true,
+        dismissAction: testProps.dismissAction || jest.fn(),
+        action: testProps.action || jest.fn(),
+        actionButtonLabel: testProps.actionButtonLabel || 'button',
+        showLoader: testProps.showLoader || false,
+        ...testProps,
     };
-    return mount(<Alert {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(Alert, props, isShallow);
 }
 
-beforeAll(() => {
-
-});
-
 describe('Alert component functionality test ', () => {
+
+    it('matches snapshot', () => {
+        const wrapper = setup({});
+        expect(wrapper).toMatchSnapshot();
+    });
+
     it('fires the action when clicking on the message text', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: alertFunc, actionButtonLabel: 'button'});
-        wrapper.find('div.alertText').simulate('click');
+        wrapper.find('WithStyles(Button)').simulate('click');
         expect(alertFunc).toHaveBeenCalled();
     });
 
     it('does not fire any action when clicking on the message text with no action assigned', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: null, actionButtonLabel: null});
-        wrapper.find('div.alertText').simulate('click');
+        wrapper.find('WithStyles(Grid)#text').simulate('click');
         expect(alertFunc).not.toHaveBeenCalled();
     });
 
     it('fires the action when clicking on the iconButton', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: alertFunc, actionButtonLabel: 'button'});
-        wrapper.find('div.alertIcon').simulate('click');
+        wrapper.find('WithStyles(Grid)#icon').simulate('click');
         expect(alertFunc).toHaveBeenCalled();
     });
 
     it('does not fire the action when clicking on the iconButton with no action assigned', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: null, actionButtonLabel: null});
-        wrapper.find('div.alertIcon').simulate('click');
+        wrapper.find('WithStyles(Grid)#icon').simulate('click');
         expect(alertFunc).not.toHaveBeenCalled();
     });
 
     it('fires the action when clicking on the action button', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: alertFunc, actionButtonLabel: 'button'});
-        expect(wrapper.find('button.alertAction').exists()).toBeTruthy();
-        expect(wrapper.find('button.alertAction')).toHaveLength(1);
-        wrapper.find('button.alertAction').simulate('click');
+        expect(wrapper.find('WithStyles(Button)#alertButton').exists()).toBeTruthy();
+        expect(wrapper.find('WithStyles(Button)#alertButton')).toHaveLength(1);
+        wrapper.find('WithStyles(Button)#alertButton').simulate('click');
         expect(alertFunc).toHaveBeenCalled();
     });
 
     it('fires the dismissAction when clicking on the dismiss button', () => {
         const dismissFunc = jest.fn();
         const wrapper = setup({dismissAction: dismissFunc, allowDismiss: true});
-        expect(wrapper.find('button.alertDismissButton').exists()).toBeTruthy();
-        expect(wrapper.find('button.alertDismissButton')).toHaveLength(2);
-        wrapper.find('button.alertDismissButton').at(0).simulate('click');
+        expect(wrapper.find('IconButton#dismiss').exists()).toBeTruthy();
+        expect(wrapper.find('IconButton#dismiss')).toHaveLength(2);
+        wrapper.find('IconButton#dismiss').at(0).simulate('click');
         expect(dismissFunc).toHaveBeenCalled();
     });
 

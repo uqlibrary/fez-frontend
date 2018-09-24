@@ -6,12 +6,9 @@ import {Field} from 'redux-form/immutable';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-
-import RaisedButton from 'material-ui/RaisedButton';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
@@ -23,6 +20,10 @@ import locale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {thesisSubmissionSubtypes} from 'config/general';
+
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
@@ -84,16 +85,17 @@ export default class ThesisSubmission extends Component {
                     <StandardCard>
                         {formLocale.thesisSubmission.afterSubmitText}
                     </StandardCard>
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
+                    <Grid container>
+                        <Grid item xs/>
+                        <Grid item>
+                            <Button
+                                variant={'raised'}
+                                color={'primary'}
                                 fullWidth
-                                label={formLocale.thesisSubmission.afterSubmit}
+                                children={formLocale.thesisSubmission.afterSubmit}
                                 onClick={this.afterSubmit}/>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </StandardPage>
             );
         }
@@ -111,7 +113,6 @@ export default class ThesisSubmission extends Component {
             }});
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
-                <p>{formLocale.thesisSubmission.text}</p>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
@@ -124,19 +125,17 @@ export default class ThesisSubmission extends Component {
                     />
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <div className="columns" style={{marginTop: '6px'}}>
-                            <div className="column requiredField">
-                                <label htmlFor="thesisTitle">{txt.information.fieldLabels.documentTitle.floatingLabelText}</label>
+                        <Grid container spacing={24}>
+                            <Grid item xs={12}>
+                                <Typography variant={'caption'} children={txt.information.fieldLabels.documentTitle.placeholder}/>
                                 <Field
                                     component={RichEditorField}
                                     name="thesisTitle"
                                     disabled={this.props.submitting}
                                     height={50}
                                     validate={[validation.required]}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column is-half">
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -147,8 +146,8 @@ export default class ThesisSubmission extends Component {
                                     {...txt.information.fieldLabels.author}
                                     required
                                     validate={[validation.required]}/>
-                            </div>
-                            <div className="column ">
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={ThesisSubtypeField}
                                     itemsList={thesisSubmissionSubtypes}
@@ -156,38 +155,35 @@ export default class ThesisSubmission extends Component {
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
                                     locale={txt.information.fieldLabels.thesisType}
-                                    className="requiredField"/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
+                                    required
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
                                 <Field
                                     component={OrgUnitNameField}
                                     name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
-                                    className="requiredField"
+                                    required
                                     {...txt.information.fieldLabels.orgUnitName}
                                 />
-                            </div>
-                        </div>
-                        <div className="columns" style={{marginTop: '6px'}}>
-                            <div className="column requiredField">
-                                <label htmlFor="thesisAbstract">{txt.optional.fieldLabels.abstract.floatingLabelText}</label>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography variant={'caption'} children={txt.optional.fieldLabels.abstract.label}/>
                                 <Field
                                     component={RichEditorField}
                                     disabled={this.props.submitting}
                                     name="thesisAbstract"
                                     validate={[validation.required]}/>
-                            </div>
-                        </div>
+                            </Grid>
+                        </Grid>
                     </StandardCard>
 
 
                     <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                         <Field
                             component={ContributorsEditorField}
-                            className="requiredField"
+                            required
                             name="supervisors"
                             validate={[validation.supervisorRequired]}
                             locale={txtSupervisors.field}
@@ -196,11 +192,11 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
                     <StandardCard title={txtFoR.title} help={txtFoR.help}>
-                        <div>{txtFoR.text}</div>
+                        <Typography>{txtFoR.text}</Typography>
                         <Field
                             component={FilteredFieldOfResearchListField}
                             name="fieldOfResearch"
-                            className="requiredField"
+                            required
                             validate={[validation.forRequired]}
                             hideReorder
                             distinctOnly
@@ -210,11 +206,11 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
                     <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
-                        <div>{txt.keywords.description}</div>
+                        <Typography>{txt.keywords.description}</Typography>
                         <Field
                             component={ListEditorField}
                             name="fez_record_search_key_keywords"
-                            className="requiredField"
+                            required
                             maxCount={10}
                             validate={[validation.requiredList]}
                             searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
@@ -237,24 +233,26 @@ export default class ThesisSubmission extends Component {
                         <Alert {...alertProps} />
                     }
 
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
+                    <Grid container spacing={16}>
+                        <Grid item xs={false} sm />
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
                                 fullWidth
-                                label={formLocale.thesisSubmission.cancel}
+                                children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this.cancelSubmit}/>
-                        </div>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
+                        </Grid>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
+                                color={'primary'}
                                 fullWidth
-                                label={formLocale.thesisSubmission.submit}
+                                children={formLocale.thesisSubmission.submit}
                                 onClick={this.deposit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </form>
             </StandardPage>
         );

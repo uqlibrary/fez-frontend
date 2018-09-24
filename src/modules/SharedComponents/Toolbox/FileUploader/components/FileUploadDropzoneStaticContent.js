@@ -12,7 +12,7 @@ const FileUploadDropzoneStaticContent = ({locale, classes}) => (
             </Typography>
             {locale.fileUploadRestrictions}
         </Grid>
-        <Grid item container xs={12} sm={6}>
+        <Grid item xs={12} sm={6}>
             <Grid container direction="column" alignItems="center" justify="center" className={classes.instructions}>
                 <Grid item>
                     <CloudUpload className={classes.cloudIcon}/>

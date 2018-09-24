@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
@@ -14,14 +14,14 @@ export class ContributorsEditor extends PureComponent {
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
-        className: PropTypes.string,
         disabled: PropTypes.bool,
         meta: PropTypes.object,
         author: PropTypes.object,
         onChange: PropTypes.func,
         locale: PropTypes.object,
         input: PropTypes.object,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -153,8 +153,21 @@ export class ContributorsEditor extends PureComponent {
                 onContributorAssigned={this.assignContributor} />
         ));
 
+        let error = null;
+        if (this.props.meta && this.props.meta.error) {
+            error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {
+                        key: index
+                    });
+                } else {
+                    return child;
+                }
+            });
+        }
+
         return (
-            <div className={this.props.className}>
+            <div>
                 {
                     errorMessage &&
                     <Alert
@@ -168,27 +181,32 @@ export class ContributorsEditor extends PureComponent {
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     disabled={disabled}
                     showContributorAssignment={showContributorAssignment}
+                    required={this.props.required}
                 />
                 {
                     contributors.length > 0 &&
-                    <List>
-                        <ContributorRowHeader
-                            onDeleteAll={this.deleteAllContributors}
-                            {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
-                            showIdentifierLookup={showIdentifierLookup}
-                            disabled={disabled}
-                            showContributorAssignment={showContributorAssignment}
-                            isInfinite={contributors.length > 3}
-                        />
-                    </List>
+                    <Fragment>
+                        <List>
+                            <ContributorRowHeader
+                                onDeleteAll={this.deleteAllContributors}
+                                {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
+                                showIdentifierLookup={showIdentifierLookup}
+                                disabled={disabled}
+                                showContributorAssignment={showContributorAssignment}
+                                isInfinite={contributors.length > 3}
+                            />
+                        </List>
+                        <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
+                            {renderContributorsRows}
+                        </List>
+                    </Fragment>
                 }
-                <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
-                    {renderContributorsRows}
-                </List>
                 {
                     this.props.meta && this.props.meta.error &&
                     <Typography color="error" variant="caption">
-                        {this.props.meta.error}
+                        {
+                            error || this.props.meta.error
+                        }
                     </Typography>
                 }
             </div>

@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true) {
         onMoveDown: jest.fn(),
         onDelete: jest.fn(),
         disabled: false,
-        classes: {center: {}, right: {}},
+        classes: {center: 'center', right: 'right'},
         ...testProps,
     };
     return getElement(ListRow, props, isShallow);
@@ -30,10 +30,10 @@ describe('ListRow renders ', () => {
     it('a row with index and item set calls move up function', () => {
         const testFunction = jest.fn();
         const wrapper = setup({canMoveUp: true, onMoveUp: testFunction}, false);
-        const button = wrapper.find('KeyboardArrowUp');
+        const button = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(button.length).toBe(1);
 
-        const buttonDown = wrapper.find('KeyboardArrowDown');
+        const buttonDown = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(buttonDown.length).toBe(0);
     });
 
@@ -42,10 +42,10 @@ describe('ListRow renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({index: 0, canMoveDown: true, onMoveDown: testFunction}, false);
 
-        const button = wrapper.find('KeyboardArrowDown');
+        const button = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
 
-        const buttonUp = wrapper.find('KeyboardArrowUp');
+        const buttonUp = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(buttonUp.length).toBe(0);
     });
 
@@ -53,7 +53,7 @@ describe('ListRow renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({index: 0, onDelete: testFunction}, false);
 
-        const button = wrapper.find('Delete');
+        const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
     });
 });

@@ -1,18 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorLinkingField should render as expected 1`] = `
-<AuthorLinking
-  authorList={Array []}
-  disabled={false}
+<WithStyles(WithTheme(WithWidth(AuthorLinking)))
   input={
     Object {
       "onChange": [Function],
-    }
-  }
-  linkedAuthorIdList={Array []}
-  locale={
-    Object {
-      "confirmation": "I confirm and understand that I am claiming this publication under the above name, and confirm this is me",
     }
   }
   onChange={[Function]}
