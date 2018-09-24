@@ -9,7 +9,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
 import {routes, general} from 'config';
-import Grid from '@material-ui/core/Grid';
+import {Grid, Hidden} from '@material-ui/core';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -164,25 +164,27 @@ export default class MyRecords extends PureComponent {
 
         return (
             <StandardPage title={txt.pageTitle}>
-                {
-                    // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
-                    !this.state.hasPublications && this.props.loadingPublicationsList &&
-                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
-                }
-                <div className="columns">
+                <Grid container spacing={16}>
+                    {
+                        // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
+                        !this.state.hasPublications && this.props.loadingPublicationsList &&
+                        <Grid item xs={12}>
+                            <InlineLoader message={txt.loadingMessage}/>
+                        </Grid>
+                    }
                     {
                         // no results to display
                         !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length === 0 &&
-                        <div className="column">
+                        <Grid item xs={12}>
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
                             </StandardCard>
-                        </div>
+                        </Grid>
                     }
                     {
                         // results to display or loading if user is filtering/paging
                         this.state.hasPublications && (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) &&
-                        <div className="column">
+                        <Grid item xs={12} md={9}>
                             <StandardCard>
                                 {
                                     pagingData && pagingData.to && pagingData.from && pagingData.total &&
@@ -238,7 +240,7 @@ export default class MyRecords extends PureComponent {
                                     </Grid>
                                 </Grid>
                             </StandardCard>
-                        </div>
+                        </Grid>
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
@@ -246,22 +248,24 @@ export default class MyRecords extends PureComponent {
                         || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
-                        <div className="column is-3 is-hidden-mobile">
-                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                <FacetsFilter
-                                    facetsData={this.props.publicationsListFacets}
-                                    onFacetsChanged={this.facetsChanged}
-                                    activeFacets={this.state.activeFacets}
-                                    disabled={isLoadingOrExporting}
-                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                    isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                    showOpenAccessFilter/>
-                            </StandardRighthandCard>
-                        </div>
+                            <Hidden smDown>
+                                <Grid item md={3}>
+                                    <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                        <FacetsFilter
+                                            facetsData={this.props.publicationsListFacets}
+                                            onFacetsChanged={this.facetsChanged}
+                                            activeFacets={this.state.activeFacets}
+                                            disabled={isLoadingOrExporting}
+                                            excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                            isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
+                                            renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                            lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                            showOpenAccessFilter/>
+                                    </StandardRighthandCard>
+                                </Grid>
+                            </Hidden>
                     }
-                </div>
+                </Grid>
             </StandardPage>
         );
     }
