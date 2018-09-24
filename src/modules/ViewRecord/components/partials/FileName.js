@@ -42,7 +42,7 @@ export default class FileName extends PureComponent {
         const {pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl} = this.props;
 
         return (
-            <Grid container alignItems="center">
+            <Grid container alignItems="center" wrap={'nowrap'}>
                 <Grid item>
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&

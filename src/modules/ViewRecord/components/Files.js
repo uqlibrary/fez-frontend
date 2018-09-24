@@ -16,6 +16,13 @@ import Thumbnail from './partials/Thumbnail';
 const styles = (theme) => ({
     header: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    },
+    dataWrapper: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+    },
+    fileIcon: {
+        opacity: 0.5,
     }
 });
 
@@ -53,15 +60,15 @@ export class Files extends Component {
                 <Thumbnail {...thumbnailProps} />
             );
         } else if (mimeType.indexOf('audio') >= 0) {
-            return <VolumeUp />;
+            return <VolumeUp className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('pdf') >= 0) {
-            return <PictureAsPdf />;
+            return <PictureAsPdf className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('image') >= 0) {
-            return <Image />;
+            return <Image className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('video') >= 0) {
-            return <Videocam />;
+            return <Videocam className={this.props.classes.fileIcon} color={'secondary'} />;
         } else {
-            return <InsertDriveFile />;
+            return <InsertDriveFile className={this.props.classes.fileIcon} color={'secondary'} />;
         }
     }
 
@@ -205,29 +212,29 @@ export class Files extends Component {
                             </Grid>
                         </Hidden>
                         <Hidden xsDown>
-                            <Grid item sm={2}/>
+                            <Grid item sm={'auto'}/>
                         </Hidden>
                     </Grid>
                     {
                         fileData.map((item, index) => (
-                            <Grid container direction="row" alignItems="center" key={`file-${index}`} spacing={16}>
+                            <Grid container direction="row" alignItems="center" key={`file-${index}`} spacing={16} wrap={'nowrap'} style={{marginTop: 6}}>
                                 <Grid item xs={1}>
                                     {item.icon}
                                 </Grid>
-                                <Grid item sm={4} md={3}>
+                                <Grid item sm={4} md={3} className={this.props.classes.dataWrapper}>
                                     <FileName
                                         {...item}
                                         onFileSelect={this.showPreview}
                                     />
                                 </Grid>
                                 <Hidden xsDown>
-                                    <Grid item sm={5}><Typography caption="body2" noWrap>{item.description}</Typography></Grid>
+                                    <Grid item sm={5} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.description}</Typography></Grid>
                                 </Hidden>
                                 <Hidden smDown>
-                                    <Grid item md={1}><Typography caption="body2">{item.calculatedSize}</Typography></Grid>
+                                    <Grid item md={1} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.calculatedSize}</Typography></Grid>
                                 </Hidden>
                                 <Hidden xsDown>
-                                    <Grid item sm={2}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
+                                    <Grid item sm={'auto'}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
                                 </Hidden>
                             </Grid>
                         ))
