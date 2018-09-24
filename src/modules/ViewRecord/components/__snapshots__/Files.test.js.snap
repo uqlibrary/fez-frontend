@@ -229,7 +229,12 @@ exports[`Files Component  should not render cultural message 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -477,7 +482,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -616,7 +626,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -755,7 +770,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -894,7 +914,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -1033,7 +1058,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -1161,7 +1191,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -1403,7 +1438,12 @@ exports[`Files Component  should render component 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -1651,7 +1691,12 @@ exports[`Files Component  should render cultural message 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          sm="auto"
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
         >
           <OpenAccessIcon
             embargoDate={null}

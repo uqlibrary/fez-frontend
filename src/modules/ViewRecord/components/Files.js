@@ -234,7 +234,7 @@ export class Files extends Component {
                                     <Grid item md={1} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.calculatedSize}</Typography></Grid>
                                 </Hidden>
                                 <Hidden xsDown>
-                                    <Grid item sm={'auto'}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
+                                    <Grid item sm style={{textAlign: 'right'}}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
                                 </Hidden>
                             </Grid>
                         ))
