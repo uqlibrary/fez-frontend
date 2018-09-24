@@ -71,10 +71,10 @@ const styles = theme => {
             flexGrow: 1,
         },
         ListItemTextPrimary: {
-            fontWeight: 500,
+            fontWeight: 400,
         },
         ListItemTextSecondary: {
-            fontWeight: 500,
+            fontWeight: 400,
         },
         mainMenuFooter: {
             paddingLeft: '12px',
