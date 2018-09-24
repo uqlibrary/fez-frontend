@@ -12,6 +12,7 @@ exports[`OpenAccessFilter  should render empty component 1`] = `
       primaryText={undefined}
     />
   }
+  onToggle={[MockFunction]}
   open={null}
 />
 `;
@@ -28,6 +29,7 @@ exports[`OpenAccessFilter  should render selected component 1`] = `
       primaryText={undefined}
     />
   }
+  onToggle={[MockFunction]}
   open={null}
 />
 `;
