@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Card, CardText} from 'material-ui/Card';
+import {Grid} from '@material-ui/core';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import InlineLoader from './InlineLoader';
 
 export default function ContentLoader({message}) {
     return (
-        <Card className="layout-card">
-            <CardText className="column layout-fill align-center justify-center">
-                <InlineLoader message={message} />
-            </CardText>
-        </Card>
+        <StandardPage>
+            <Grid container={16}>
+                <Grid item xs={12}>
+                    <InlineLoader message={message} />
+                </Grid>
+            </Grid>
+        </StandardPage>
     );
 }
 
