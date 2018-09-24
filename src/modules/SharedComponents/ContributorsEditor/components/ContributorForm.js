@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import AutoComplete from 'material-ui/AutoComplete';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {Grid, Button} from '@material-ui/core';
+import {UqIdField} from 'modules/SharedComponents/LookupFields';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -63,15 +63,12 @@ export class ContributorForm extends PureComponent {
         });
     }
 
-    _onUQIdentifierSelected = (selectedItem, index) => {
-        // items has to be selected from the list
-        if (index === -1) return;
-
+    _onUQIdentifierSelected = (selectedItem) => {
         this.setState({
             contributor: selectedItem
+        }, () => {
+            this._addContributor();
         });
-
-        this._addContributor();
     }
 
     _onUQIdentifierChanged = (newValue) => {
@@ -85,7 +82,6 @@ export class ContributorForm extends PureComponent {
     };
 
     render() {
-        const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
         const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
         return (
             <div style={{flexGrow: 1, padding: 8}}>
@@ -109,22 +105,11 @@ export class ContributorForm extends PureComponent {
                     {
                         this.props.showIdentifierLookup &&
                         <Grid item xs={12} sm={12} md={5}>
-                            <AutoComplete
+                            <UqIdField
                                 disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                                listStyle={{maxHeight: 200, overflow: 'auto'}}
-                                filter={() => true}
+                                onChange={this._onUQIdentifierSelected}
                                 ref="identifierField"
                                 id="identifierField"
-                                floatingLabelText={this.props.locale.identifierLabel}
-                                hintText={this.props.locale.identifierLabel}
-                                dataSource={this.props.authorsList}
-                                dataSourceConfig={autoCompleteDataFormat}
-                                openOnFocus
-                                fullWidth
-                                animated={false}
-                                searchText={this.state.uqIdentifier}
-                                onUpdateInput={this._onUQIdentifierChanged}
-                                onNewRequest={this._onUQIdentifierSelected}
                             />
                         </Grid>
                     }

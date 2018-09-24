@@ -45,46 +45,10 @@ exports[`Component ContributorForm should render display name field and identifi
       sm={12}
       xs={12}
     >
-      <AutoComplete
-        anchorOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "bottom",
-          }
-        }
-        animated={false}
-        dataSource={Array []}
-        dataSourceConfig={
-          Object {
-            "text": "displayName",
-            "value": "aut_id",
-          }
-        }
-        disableFocusRipple={true}
+      <Connect(WithStyles(AutoCompleteAsyncField))
         disabled={true}
-        filter={[Function]}
-        floatingLabelText="UQ identifier (if available)"
-        fullWidth={true}
-        hintText="UQ identifier (if available)"
         id="identifierField"
-        listStyle={
-          Object {
-            "maxHeight": 200,
-            "overflow": "auto",
-          }
-        }
-        menuCloseDelay={300}
-        onNewRequest={[Function]}
-        onUpdateInput={[Function]}
-        open={false}
-        openOnFocus={true}
-        searchText=""
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
+        onChange={[Function]}
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
