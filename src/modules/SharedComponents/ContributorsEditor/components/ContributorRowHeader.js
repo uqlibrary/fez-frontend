@@ -64,15 +64,15 @@ export class ContributorRowHeader extends PureComponent {
                             <People/>
                         </ListItemIcon>
                     </Hidden>
-                    <ListItemText secondary={nameColumn} classes={{secondary: classes.text}}/>
+                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                     {
                         showIdentifierLookup &&
                         <Hidden xsDown>
-                            <ListItemText secondary={identifierColumn} classes={{secondary: classes.text}}/>
+                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                         </Hidden>
                     }
                     <Hidden xsDown>
-                        <ListItemText secondary={reorderColumn} classes={{secondary: `${classes.right} ${classes.text} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
+                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
                     </Hidden>
                     <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
                         <Tooltip title={deleteAll}>
@@ -97,9 +97,6 @@ const styles = () => ({
     header: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
         marginTop: 8
-    },
-    text: {
-        fontSize: 12
     },
     paddingRight24: {
         paddingRight: 24

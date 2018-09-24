@@ -8,3 +8,4 @@ export {ReportNumberField} from './containers/ReportNumberField';
 export {FieldOfResearchField} from './containers/FieldOfResearchField';
 export {FieldOfResearchListField} from './containers/FieldOfResearchListField';
 export {FilteredFieldOfResearchListField} from './containers/FieldOfResearchListField';
+export {UqIdField} from './containers/UqIdField';
