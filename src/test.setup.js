@@ -9,7 +9,6 @@ import 'babel-polyfill';
 
 import {Provider} from 'react-redux';
 import Immutable from 'immutable';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
@@ -98,15 +97,7 @@ const getElement = (component, props, isShallow = true) => {
                     {React.createElement(component, props)}
                 </MuiThemeProvider>
             </MemoryRouter>
-        </Provider>,
-        {
-            context: {
-                muiTheme: {...getMuiTheme()},
-            },
-            childContextTypes: {
-                muiTheme: PropTypes.object.isRequired,
-            }
-        });
+        </Provider>);
 };
 
 // React Enzyme adapter
