@@ -105,6 +105,7 @@ export default class BookForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             name="authors"
+                            showIdentifierLookup
                             locale={txt.authors.field}
                             showContributorAssignment={!editorSelected}
                             required

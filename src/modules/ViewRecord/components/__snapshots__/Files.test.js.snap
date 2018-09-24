@@ -107,6 +107,11 @@ exports[`Files Component  should not render cultural message 1`] = `
       direction="row"
       key="file-0"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -350,6 +355,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       direction="row"
       key="file-0"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -484,6 +494,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       direction="row"
       key="file-1"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -618,6 +633,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       direction="row"
       key="file-2"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -752,6 +772,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       direction="row"
       key="file-3"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -886,6 +911,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       direction="row"
       key="file-4"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -1020,6 +1050,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       direction="row"
       key="file-5"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -1246,6 +1281,11 @@ exports[`Files Component  should render component 1`] = `
       direction="row"
       key="file-0"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
@@ -1489,6 +1529,11 @@ exports[`Files Component  should render cultural message 1`] = `
       direction="row"
       key="file-0"
       spacing={16}
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
       wrap="nowrap"
     >
       <WithStyles(Grid)
