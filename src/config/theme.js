@@ -60,12 +60,7 @@ export const mui1theme = createMuiTheme({
                 width: '100%',
                 textOverflow: 'ellipsis'
             }
-        },
-        // MuiCard: {
-        //     root: {
-        //         overflow: 'unset'
-        //     }
-        // }
+        }
     },
     graphs: {
         color1: '#d72865',
