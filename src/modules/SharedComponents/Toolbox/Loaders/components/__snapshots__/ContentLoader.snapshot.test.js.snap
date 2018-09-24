@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentLoader snapshots tests renders loader 1`] = `
-<Card
-  className="layout-card"
-  expandable={false}
-  expanded={null}
-  initiallyExpanded={false}
->
-  <CardText
-    className="column layout-fill align-center justify-center"
+<StandardPage>
+  <WithStyles(Grid)
+    container={16}
   >
-    <WithStyles(InlineLoader)
-      message="Waiting to load..."
-    />
-  </CardText>
-</Card>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InlineLoader)
+        message="Waiting to load..."
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
 `;

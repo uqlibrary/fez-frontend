@@ -90,21 +90,16 @@ ShallowWrapper {
                 className={undefined}
                 item={true}
               >
-                <IconButton
+                <WithStyles(IconButton)
                   aria-label="Click to dismiss this alert"
-                  disableTouchRipple={false}
-                  disabled={false}
-                  iconStyle={Object {}}
                   id="dismiss"
                   onClick={[MockFunction]}
                   title="Click to dismiss this alert"
-                  tooltipPosition="bottom-center"
-                  touch={false}
                 >
                   <pure(CloseIcon)
                     className="dismiss"
                   />
-                </IconButton>
+                </WithStyles(IconButton)>
               </WithStyles(Grid)>
             </Hidden>
           </WithStyles(Grid)>
@@ -142,21 +137,16 @@ ShallowWrapper {
             className={undefined}
             item={true}
           >
-            <IconButton
+            <WithStyles(IconButton)
               aria-label="Click to dismiss this alert"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
               id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
-              tooltipPosition="bottom-center"
-              touch={false}
             >
               <pure(CloseIcon)
                 className="dismiss"
               />
-            </IconButton>
+            </WithStyles(IconButton)>
           </WithStyles(Grid)>
         </Hidden>
       </WithStyles(Grid)>,
@@ -224,21 +214,16 @@ ShallowWrapper {
                   className={undefined}
                   item={true}
                 >
-                  <IconButton
+                  <WithStyles(IconButton)
                     aria-label="Click to dismiss this alert"
-                    disableTouchRipple={false}
-                    disabled={false}
-                    iconStyle={Object {}}
                     id="dismiss"
                     onClick={[MockFunction]}
                     title="Click to dismiss this alert"
-                    tooltipPosition="bottom-center"
-                    touch={false}
                   >
                     <pure(CloseIcon)
                       className="dismiss"
                     />
-                  </IconButton>
+                  </WithStyles(IconButton)>
                 </WithStyles(Grid)>
               </Hidden>
             </WithStyles(Grid)>
@@ -276,21 +261,16 @@ ShallowWrapper {
               className={undefined}
               item={true}
             >
-              <IconButton
+              <WithStyles(IconButton)
                 aria-label="Click to dismiss this alert"
-                disableTouchRipple={false}
-                disabled={false}
-                iconStyle={Object {}}
                 id="dismiss"
                 onClick={[MockFunction]}
                 title="Click to dismiss this alert"
-                tooltipPosition="bottom-center"
-                touch={false}
               >
                 <pure(CloseIcon)
                   className="dismiss"
                 />
-              </IconButton>
+              </WithStyles(IconButton)>
             </WithStyles(Grid)>
           </Hidden>,
         ],
@@ -353,21 +333,16 @@ ShallowWrapper {
                   className={undefined}
                   item={true}
                 >
-                  <IconButton
+                  <WithStyles(IconButton)
                     aria-label="Click to dismiss this alert"
-                    disableTouchRipple={false}
-                    disabled={false}
-                    iconStyle={Object {}}
                     id="dismiss"
                     onClick={[MockFunction]}
                     title="Click to dismiss this alert"
-                    tooltipPosition="bottom-center"
-                    touch={false}
                   >
                     <pure(CloseIcon)
                       className="dismiss"
                     />
-                  </IconButton>
+                  </WithStyles(IconButton)>
                 </WithStyles(Grid)>
               </Hidden>
             </WithStyles(Grid)>,
@@ -426,21 +401,16 @@ ShallowWrapper {
                     className={undefined}
                     item={true}
                   >
-                    <IconButton
+                    <WithStyles(IconButton)
                       aria-label="Click to dismiss this alert"
-                      disableTouchRipple={false}
-                      disabled={false}
-                      iconStyle={Object {}}
                       id="dismiss"
                       onClick={[MockFunction]}
                       title="Click to dismiss this alert"
-                      tooltipPosition="bottom-center"
-                      touch={false}
                     >
                       <pure(CloseIcon)
                         className="dismiss"
                       />
-                    </IconButton>
+                    </WithStyles(IconButton)>
                   </WithStyles(Grid)>
                 </Hidden>,
               ],
@@ -521,21 +491,16 @@ ShallowWrapper {
                     className={undefined}
                     item={true}
                   >
-                    <IconButton
+                    <WithStyles(IconButton)
                       aria-label="Click to dismiss this alert"
-                      disableTouchRipple={false}
-                      disabled={false}
-                      iconStyle={Object {}}
                       id="dismiss"
                       onClick={[MockFunction]}
                       title="Click to dismiss this alert"
-                      tooltipPosition="bottom-center"
-                      touch={false}
                     >
                       <pure(CloseIcon)
                         className="dismiss"
                       />
-                    </IconButton>
+                    </WithStyles(IconButton)>
                   </WithStyles(Grid)>,
                   "implementation": "js",
                   "lgDown": false,
@@ -555,21 +520,16 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <IconButton
+                    "children": <WithStyles(IconButton)
                       aria-label="Click to dismiss this alert"
-                      disableTouchRipple={false}
-                      disabled={false}
-                      iconStyle={Object {}}
                       id="dismiss"
                       onClick={[MockFunction]}
                       title="Click to dismiss this alert"
-                      tooltipPosition="bottom-center"
-                      touch={false}
                     >
                       <pure(CloseIcon)
                         className="dismiss"
                       />
-                    </IconButton>,
+                    </WithStyles(IconButton)>,
                     "className": undefined,
                     "item": true,
                   },
@@ -583,14 +543,9 @@ ShallowWrapper {
                       "children": <pure(CloseIcon)
                         className="dismiss"
                       />,
-                      "disableTouchRipple": false,
-                      "disabled": false,
-                      "iconStyle": Object {},
                       "id": "dismiss",
                       "onClick": [MockFunction],
                       "title": "Click to dismiss this alert",
-                      "tooltipPosition": "bottom-center",
-                      "touch": false,
                     },
                     "ref": null,
                     "rendered": Object {
@@ -662,21 +617,16 @@ ShallowWrapper {
               className={undefined}
               item={true}
             >
-              <IconButton
+              <WithStyles(IconButton)
                 aria-label="Click to dismiss this alert"
-                disableTouchRipple={false}
-                disabled={false}
-                iconStyle={Object {}}
                 id="dismiss"
                 onClick={[MockFunction]}
                 title="Click to dismiss this alert"
-                tooltipPosition="bottom-center"
-                touch={false}
               >
                 <pure(CloseIcon)
                   className="dismiss"
                 />
-              </IconButton>
+              </WithStyles(IconButton)>
             </WithStyles(Grid)>,
             "implementation": "js",
             "lgDown": false,
@@ -696,21 +646,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <IconButton
+              "children": <WithStyles(IconButton)
                 aria-label="Click to dismiss this alert"
-                disableTouchRipple={false}
-                disabled={false}
-                iconStyle={Object {}}
                 id="dismiss"
                 onClick={[MockFunction]}
                 title="Click to dismiss this alert"
-                tooltipPosition="bottom-center"
-                touch={false}
               >
                 <pure(CloseIcon)
                   className="dismiss"
                 />
-              </IconButton>,
+              </WithStyles(IconButton)>,
               "className": undefined,
               "item": true,
             },
@@ -724,14 +669,9 @@ ShallowWrapper {
                 "children": <pure(CloseIcon)
                   className="dismiss"
                 />,
-                "disableTouchRipple": false,
-                "disabled": false,
-                "iconStyle": Object {},
                 "id": "dismiss",
                 "onClick": [MockFunction],
                 "title": "Click to dismiss this alert",
-                "tooltipPosition": "bottom-center",
-                "touch": false,
               },
               "ref": null,
               "rendered": Object {
@@ -823,21 +763,16 @@ ShallowWrapper {
                   className={undefined}
                   item={true}
                 >
-                  <IconButton
+                  <WithStyles(IconButton)
                     aria-label="Click to dismiss this alert"
-                    disableTouchRipple={false}
-                    disabled={false}
-                    iconStyle={Object {}}
                     id="dismiss"
                     onClick={[MockFunction]}
                     title="Click to dismiss this alert"
-                    tooltipPosition="bottom-center"
-                    touch={false}
                   >
                     <pure(CloseIcon)
                       className="dismiss"
                     />
-                  </IconButton>
+                  </WithStyles(IconButton)>
                 </WithStyles(Grid)>
               </Hidden>
             </WithStyles(Grid)>
@@ -875,21 +810,16 @@ ShallowWrapper {
               className={undefined}
               item={true}
             >
-              <IconButton
+              <WithStyles(IconButton)
                 aria-label="Click to dismiss this alert"
-                disableTouchRipple={false}
-                disabled={false}
-                iconStyle={Object {}}
                 id="dismiss"
                 onClick={[MockFunction]}
                 title="Click to dismiss this alert"
-                tooltipPosition="bottom-center"
-                touch={false}
               >
                 <pure(CloseIcon)
                   className="dismiss"
                 />
-              </IconButton>
+              </WithStyles(IconButton)>
             </WithStyles(Grid)>
           </Hidden>
         </WithStyles(Grid)>,
@@ -957,21 +887,16 @@ ShallowWrapper {
                     className={undefined}
                     item={true}
                   >
-                    <IconButton
+                    <WithStyles(IconButton)
                       aria-label="Click to dismiss this alert"
-                      disableTouchRipple={false}
-                      disabled={false}
-                      iconStyle={Object {}}
                       id="dismiss"
                       onClick={[MockFunction]}
                       title="Click to dismiss this alert"
-                      tooltipPosition="bottom-center"
-                      touch={false}
                     >
                       <pure(CloseIcon)
                         className="dismiss"
                       />
-                    </IconButton>
+                    </WithStyles(IconButton)>
                   </WithStyles(Grid)>
                 </Hidden>
               </WithStyles(Grid)>
@@ -1009,21 +934,16 @@ ShallowWrapper {
                 className={undefined}
                 item={true}
               >
-                <IconButton
+                <WithStyles(IconButton)
                   aria-label="Click to dismiss this alert"
-                  disableTouchRipple={false}
-                  disabled={false}
-                  iconStyle={Object {}}
                   id="dismiss"
                   onClick={[MockFunction]}
                   title="Click to dismiss this alert"
-                  tooltipPosition="bottom-center"
-                  touch={false}
                 >
                   <pure(CloseIcon)
                     className="dismiss"
                   />
-                </IconButton>
+                </WithStyles(IconButton)>
               </WithStyles(Grid)>
             </Hidden>,
           ],
@@ -1086,21 +1006,16 @@ ShallowWrapper {
                     className={undefined}
                     item={true}
                   >
-                    <IconButton
+                    <WithStyles(IconButton)
                       aria-label="Click to dismiss this alert"
-                      disableTouchRipple={false}
-                      disabled={false}
-                      iconStyle={Object {}}
                       id="dismiss"
                       onClick={[MockFunction]}
                       title="Click to dismiss this alert"
-                      tooltipPosition="bottom-center"
-                      touch={false}
                     >
                       <pure(CloseIcon)
                         className="dismiss"
                       />
-                    </IconButton>
+                    </WithStyles(IconButton)>
                   </WithStyles(Grid)>
                 </Hidden>
               </WithStyles(Grid)>,
@@ -1159,21 +1074,16 @@ ShallowWrapper {
                       className={undefined}
                       item={true}
                     >
-                      <IconButton
+                      <WithStyles(IconButton)
                         aria-label="Click to dismiss this alert"
-                        disableTouchRipple={false}
-                        disabled={false}
-                        iconStyle={Object {}}
                         id="dismiss"
                         onClick={[MockFunction]}
                         title="Click to dismiss this alert"
-                        tooltipPosition="bottom-center"
-                        touch={false}
                       >
                         <pure(CloseIcon)
                           className="dismiss"
                         />
-                      </IconButton>
+                      </WithStyles(IconButton)>
                     </WithStyles(Grid)>
                   </Hidden>,
                 ],
@@ -1254,21 +1164,16 @@ ShallowWrapper {
                       className={undefined}
                       item={true}
                     >
-                      <IconButton
+                      <WithStyles(IconButton)
                         aria-label="Click to dismiss this alert"
-                        disableTouchRipple={false}
-                        disabled={false}
-                        iconStyle={Object {}}
                         id="dismiss"
                         onClick={[MockFunction]}
                         title="Click to dismiss this alert"
-                        tooltipPosition="bottom-center"
-                        touch={false}
                       >
                         <pure(CloseIcon)
                           className="dismiss"
                         />
-                      </IconButton>
+                      </WithStyles(IconButton)>
                     </WithStyles(Grid)>,
                     "implementation": "js",
                     "lgDown": false,
@@ -1288,21 +1193,16 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "children": <IconButton
+                      "children": <WithStyles(IconButton)
                         aria-label="Click to dismiss this alert"
-                        disableTouchRipple={false}
-                        disabled={false}
-                        iconStyle={Object {}}
                         id="dismiss"
                         onClick={[MockFunction]}
                         title="Click to dismiss this alert"
-                        tooltipPosition="bottom-center"
-                        touch={false}
                       >
                         <pure(CloseIcon)
                           className="dismiss"
                         />
-                      </IconButton>,
+                      </WithStyles(IconButton)>,
                       "className": undefined,
                       "item": true,
                     },
@@ -1316,14 +1216,9 @@ ShallowWrapper {
                         "children": <pure(CloseIcon)
                           className="dismiss"
                         />,
-                        "disableTouchRipple": false,
-                        "disabled": false,
-                        "iconStyle": Object {},
                         "id": "dismiss",
                         "onClick": [MockFunction],
                         "title": "Click to dismiss this alert",
-                        "tooltipPosition": "bottom-center",
-                        "touch": false,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -1395,21 +1290,16 @@ ShallowWrapper {
                 className={undefined}
                 item={true}
               >
-                <IconButton
+                <WithStyles(IconButton)
                   aria-label="Click to dismiss this alert"
-                  disableTouchRipple={false}
-                  disabled={false}
-                  iconStyle={Object {}}
                   id="dismiss"
                   onClick={[MockFunction]}
                   title="Click to dismiss this alert"
-                  tooltipPosition="bottom-center"
-                  touch={false}
                 >
                   <pure(CloseIcon)
                     className="dismiss"
                   />
-                </IconButton>
+                </WithStyles(IconButton)>
               </WithStyles(Grid)>,
               "implementation": "js",
               "lgDown": false,
@@ -1429,21 +1319,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": <IconButton
+                "children": <WithStyles(IconButton)
                   aria-label="Click to dismiss this alert"
-                  disableTouchRipple={false}
-                  disabled={false}
-                  iconStyle={Object {}}
                   id="dismiss"
                   onClick={[MockFunction]}
                   title="Click to dismiss this alert"
-                  tooltipPosition="bottom-center"
-                  touch={false}
                 >
                   <pure(CloseIcon)
                     className="dismiss"
                   />
-                </IconButton>,
+                </WithStyles(IconButton)>,
                 "className": undefined,
                 "item": true,
               },
@@ -1457,14 +1342,9 @@ ShallowWrapper {
                   "children": <pure(CloseIcon)
                     className="dismiss"
                   />,
-                  "disableTouchRipple": false,
-                  "disabled": false,
-                  "iconStyle": Object {},
                   "id": "dismiss",
                   "onClick": [MockFunction],
                   "title": "Click to dismiss this alert",
-                  "tooltipPosition": "bottom-center",
-                  "touch": false,
                 },
                 "ref": null,
                 "rendered": Object {

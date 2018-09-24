@@ -22,75 +22,133 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     }
     onRef={[Function]}
   />
-  <WithStyles(Alert)
-    message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
-    orcidStateError="Invalid authorisation state response from ORCID. "
-    title="Error"
-    type="error_outline"
-  />
-  <StandardCard
-    title="I already have an ORCID iD"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div>
-      <div>
-        This option enables you to link your existing ORCID iD to UQ.
-      </div>
-    </div>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Alert)
+        message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
+        orcidStateError="Invalid authorisation state response from ORCID. "
+        title="Error"
+        type="error_outline"
       />
-      <div
-        className="column is-narrow-desktop"
-      >
-        <RaisedButton
-          disabled={false}
-          fullWidth={true}
-          label="Link your existing ORCID iD"
-          labelPosition="after"
-          onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </StandardCard>
-  <StandardCard
-    title="I need an ORCID iD"
-  >
-    <div>
-      <div>
-        <p>
-          This option enables you to create a new ORCID iD and link it with UQ.
-        </p>
-        <p>
-          Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-        </p>
-      </div>
-    </div>
-    <div
-      className="columns action-buttons"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <StandardCard
+        title="I already have an ORCID iD"
       >
-        <RaisedButton
-          disabled={false}
-          fullWidth={true}
-          label="Create a new ORCID iD"
-          labelPosition="after"
-          onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </StandardCard>
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          This option enables you to link your existing ORCID iD to UQ.
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="raised"
+            >
+              Link your existing ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
+    >
+      <StandardCard
+        title="I need an ORCID iD"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          <React.Fragment>
+            <p>
+              This option enables you to create a new ORCID iD and link it with UQ.
+            </p>
+            <p>
+              Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+            </p>
+          </React.Fragment>
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="raised"
+            >
+              Create a new ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -116,75 +174,133 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     }
     onRef={[Function]}
   />
-  <WithStyles(Alert)
-    message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
-    orcidStateError="Invalid authorisation state response from ORCID. "
-    title="Error"
-    type="error_outline"
-  />
-  <StandardCard
-    title="I already have an ORCID iD"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div>
-      <div>
-        This option enables you to link your existing ORCID iD to UQ.
-      </div>
-    </div>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
     >
-      <div
-        className="column is-hidden-mobile"
+      <WithStyles(Alert)
+        message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
+        orcidStateError="Invalid authorisation state response from ORCID. "
+        title="Error"
+        type="error_outline"
       />
-      <div
-        className="column is-narrow-desktop"
-      >
-        <RaisedButton
-          disabled={false}
-          fullWidth={true}
-          label="Link your existing ORCID iD"
-          labelPosition="after"
-          onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </StandardCard>
-  <StandardCard
-    title="I need an ORCID iD"
-  >
-    <div>
-      <div>
-        <p>
-          This option enables you to create a new ORCID iD and link it with UQ.
-        </p>
-        <p>
-          Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-        </p>
-      </div>
-    </div>
-    <div
-      className="columns action-buttons"
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <StandardCard
+        title="I already have an ORCID iD"
       >
-        <RaisedButton
-          disabled={false}
-          fullWidth={true}
-          label="Create a new ORCID iD"
-          labelPosition="after"
-          onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </StandardCard>
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          This option enables you to link your existing ORCID iD to UQ.
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="raised"
+            >
+              Link your existing ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
+    >
+      <StandardCard
+        title="I need an ORCID iD"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          <React.Fragment>
+            <p>
+              This option enables you to create a new ORCID iD and link it with UQ.
+            </p>
+            <p>
+              Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+            </p>
+          </React.Fragment>
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="raised"
+            >
+              Create a new ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -210,69 +326,126 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     }
     onRef={[Function]}
   />
-  <StandardCard
-    title="I already have an ORCID iD"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div>
-      <div>
-        This option enables you to link your existing ORCID iD to UQ.
-      </div>
-    </div>
-    <div
-      className="columns action-buttons"
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
+    />
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <StandardCard
+        title="I already have an ORCID iD"
       >
-        <RaisedButton
-          disabled={false}
-          fullWidth={true}
-          label="Link your existing ORCID iD"
-          labelPosition="after"
-          onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </StandardCard>
-  <StandardCard
-    title="I need an ORCID iD"
-  >
-    <div>
-      <div>
-        <p>
-          This option enables you to create a new ORCID iD and link it with UQ.
-        </p>
-        <p>
-          Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-        </p>
-      </div>
-    </div>
-    <div
-      className="columns action-buttons"
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          This option enables you to link your existing ORCID iD to UQ.
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="raised"
+            >
+              Link your existing ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="12"
     >
-      <div
-        className="column is-hidden-mobile"
-      />
-      <div
-        className="column is-narrow-desktop"
+      <StandardCard
+        title="I need an ORCID iD"
       >
-        <RaisedButton
-          disabled={false}
-          fullWidth={true}
-          label="Create a new ORCID iD"
-          labelPosition="after"
-          onClick={[Function]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
-  </StandardCard>
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          <React.Fragment>
+            <p>
+              This option enables you to create a new ORCID iD and link it with UQ.
+            </p>
+            <p>
+              Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+            </p>
+          </React.Fragment>
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="raised"
+            >
+              Create a new ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 

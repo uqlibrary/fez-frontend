@@ -160,21 +160,16 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           <WithStyles(Grid)
             item={true}
           >
-            <IconButton
+            <WithStyles(IconButton)
               aria-label="Click to dismiss this alert"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
               id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
-              tooltipPosition="bottom-center"
-              touch={false}
             >
               <pure(CloseIcon)
                 className="dismiss"
               />
-            </IconButton>
+            </WithStyles(IconButton)>
           </WithStyles(Grid)>
         </Hidden>
       </WithStyles(Grid)>
@@ -195,21 +190,16 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       <WithStyles(Grid)
         item={true}
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Click to dismiss this alert"
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
           id="dismiss"
           onClick={[MockFunction]}
           title="Click to dismiss this alert"
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(CloseIcon)
             className="dismiss"
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
@@ -273,21 +263,16 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           <WithStyles(Grid)
             item={true}
           >
-            <IconButton
+            <WithStyles(IconButton)
               aria-label="Click to dismiss this alert"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
               id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
-              tooltipPosition="bottom-center"
-              touch={false}
             >
               <pure(CloseIcon)
                 className="dismiss"
               />
-            </IconButton>
+            </WithStyles(IconButton)>
           </WithStyles(Grid)>
         </Hidden>
       </WithStyles(Grid)>
@@ -323,21 +308,16 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       <WithStyles(Grid)
         item={true}
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Click to dismiss this alert"
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
           id="dismiss"
           onClick={[MockFunction]}
           title="Click to dismiss this alert"
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(CloseIcon)
             className="dismiss"
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
@@ -403,21 +383,16 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           <WithStyles(Grid)
             item={true}
           >
-            <IconButton
+            <WithStyles(IconButton)
               aria-label="Click to dismiss this alert"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
               id="dismiss"
               onClick={[MockFunction]}
               title="Click to dismiss this alert"
-              tooltipPosition="bottom-center"
-              touch={false}
             >
               <pure(CloseIcon)
                 className="dismiss"
               />
-            </IconButton>
+            </WithStyles(IconButton)>
           </WithStyles(Grid)>
         </Hidden>
       </WithStyles(Grid)>
@@ -453,21 +428,16 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       <WithStyles(Grid)
         item={true}
       >
-        <IconButton
+        <WithStyles(IconButton)
           aria-label="Click to dismiss this alert"
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
           id="dismiss"
           onClick={[MockFunction]}
           title="Click to dismiss this alert"
-          tooltipPosition="bottom-center"
-          touch={false}
         >
           <pure(CloseIcon)
             className="dismiss"
           />
-        </IconButton>
+        </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
