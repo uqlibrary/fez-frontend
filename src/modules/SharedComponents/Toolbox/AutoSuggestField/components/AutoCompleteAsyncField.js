@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import { withStyles } from '@material-ui/core/styles';
-import {Paper, TextField, MenuItem, ListItemText} from '@material-ui/core';
+import {Paper, TextField, MenuItem, ListItemText, Popper, Fade} from '@material-ui/core';
 
-const styles = theme => ({
+const styles = () => ({
     root: {
         flexGrow: 1,
     },
@@ -13,11 +13,7 @@ const styles = theme => ({
         position: 'relative',
     },
     paper: {
-        position: 'absolute',
-        zIndex: 1,
-        marginTop: theme.spacing.unit,
         left: 0,
-        right: 0,
         height: 250,
         overflowY: 'scroll'
     },
@@ -70,11 +66,11 @@ export class AutoCompleteAsyncField extends Component {
         this.props.onChange(value);
     };
 
-    renderInput = ({ inputProps, classes, ref, ...other }) => {
+    renderInput = ({ inputProps, classes, ...other }) => {
         return (
             <TextField
                 InputProps={{
-                    inputRef: ref,
+                    inputRef: node => {this.textInputRef = node;},
                     classes: {
                         root: classes.inputRoot,
                     },
@@ -156,37 +152,47 @@ export class AutoCompleteAsyncField extends Component {
                         : () => {}
                     }
                 >
-                    {({ getInputProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex }) => (
-                        <div className={classes.container}>
-                            {this.renderInput({
-                                fullWidth: true,
-                                classes,
-                                inputProps: getInputProps({
-                                    onChange: this.getSuggestions(inputValue)
-                                }),
-                                error: error,
-                                helperText: error && errorText || '',
-                                placeholder: hintText,
-                                label: floatingLabelText,
-                                value: inputValue,
-                                disabled: disabled,
-                                required: required
-                            })}
-                            {isOpen && itemsList.length > 0 ? (
-                                <Paper className={classes.paper} square>
-                                    {itemsList.slice(0, maxResults).map((suggestion, index) =>
-                                        this.renderSuggestion({
-                                            suggestion,
-                                            index,
-                                            itemProps: getItemProps({ item: suggestion }),
-                                            highlightedIndex,
-                                            selectedItem,
-                                        })
-                                    )}
-                                </Paper>
-                            ) : null}
-                        </div>
-                    )}
+                    {
+                        ({ getInputProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex }) => {
+                            return (
+                                <div className={classes.container}>
+                                    {this.renderInput({
+                                        fullWidth: true,
+                                        classes,
+                                        inputProps: getInputProps({
+                                            onChange: this.getSuggestions(inputValue)
+                                        }),
+                                        error: error,
+                                        helperText: error && errorText || '',
+                                        placeholder: hintText,
+                                        label: floatingLabelText,
+                                        value: inputValue,
+                                        disabled: disabled,
+                                        required: required
+                                    })}
+                                    {isOpen && itemsList.length > 0 ? (
+                                        <Popper id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start" transition>
+                                            {({TransitionProps}) => (
+                                                <Fade {...TransitionProps} timeout={350}>
+                                                    <Paper className={classes.paper} square>
+                                                        {itemsList.slice(0, maxResults).map((suggestion, index) => {
+                                                            return this.renderSuggestion({
+                                                                suggestion,
+                                                                index,
+                                                                itemProps: getItemProps({ item: suggestion }),
+                                                                highlightedIndex,
+                                                                selectedItem,
+                                                            });
+                                                        })}
+                                                    </Paper>
+                                                </Fade>
+                                            )}
+                                        </Popper>
+                                    ) : null}
+                                </div>
+                            );
+                        }
+                    }
                 </Downshift>
             </div>
         );
