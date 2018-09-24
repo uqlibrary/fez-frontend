@@ -13,7 +13,6 @@ const styles = () => ({
         position: 'relative',
     },
     paper: {
-        left: 0,
         height: 250,
         overflowY: 'scroll'
     },
