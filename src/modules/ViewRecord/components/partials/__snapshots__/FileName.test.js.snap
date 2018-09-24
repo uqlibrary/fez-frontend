@@ -2360,7 +2360,6 @@ exports[`File Name Component  should render audio player 1`] = `
                                     <WithStyles(IconButton)
                                       aria-label="Click to play audio file test.mp3"
                                       onClick={[Function]}
-                                      touch={true}
                                     >
                                       <IconButton
                                         aria-label="Click to play audio file test.mp3"
@@ -2377,7 +2376,6 @@ exports[`File Name Component  should render audio player 1`] = `
                                         color="default"
                                         disabled={false}
                                         onClick={[Function]}
-                                        touch={true}
                                       >
                                         <WithStyles(ButtonBase)
                                           aria-label="Click to play audio file test.mp3"
@@ -2386,7 +2384,6 @@ exports[`File Name Component  should render audio player 1`] = `
                                           disabled={false}
                                           focusRipple={true}
                                           onClick={[Function]}
-                                          touch={true}
                                         >
                                           <ButtonBase
                                             aria-label="Click to play audio file test.mp3"
@@ -2406,7 +2403,6 @@ exports[`File Name Component  should render audio player 1`] = `
                                             focusRipple={true}
                                             onClick={[Function]}
                                             tabIndex="0"
-                                            touch={true}
                                             type="button"
                                           >
                                             <button
@@ -2425,7 +2421,6 @@ exports[`File Name Component  should render audio player 1`] = `
                                               onTouchMove={[Function]}
                                               onTouchStart={[Function]}
                                               tabIndex="0"
-                                              touch={true}
                                               type="button"
                                             >
                                               <span

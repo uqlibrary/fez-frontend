@@ -1,7 +1,20 @@
 import React, {PureComponent} from 'react';
 import locale from 'locale/components';
+import {Grid, Hidden, withStyles} from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-export default class ShareThis extends PureComponent {
+const styles = {
+    addThis: {
+        marginTop: 8,
+        marginBottom: 8
+    }
+};
+
+export class ShareThis extends PureComponent {
+    static propTypes = {
+        classes: PropTypes.object
+    };
+
     componentDidMount() {
         if (!document.getElementById('shareThisScript')) {
             // add the script to the body if it hasn't already happened
@@ -74,12 +87,15 @@ export default class ShareThis extends PureComponent {
     }
 
     render() {
+        const {classes} = this.props;
         const {shareThis} = locale.components;
 
         return (
-            <div className="shareThis columns is-gapless is-clearfix is-marginless">
-                <div className="column is-hidden-mobile" />
-                <div className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
+            <Grid container spacing={16} className={classes.addThis}>
+                <Hidden xsDown>
+                    <Grid item xs />
+                </Hidden>
+                <Grid item className="a2a_kit a2a_kit_size_20 a2a_default_style">
                     <a className="a2a_button_facebook" title={shareThis.facebook.linkTitle} />
                     <a className="a2a_button_mendeley" title={shareThis.mendeley.linkTitle} />
                     <a className="a2a_button_twitter" title={shareThis.twitter.linkTitle} />
@@ -88,8 +104,10 @@ export default class ShareThis extends PureComponent {
                     <a className="a2a_button_reddit" title={shareThis.reddit.linkTitle} />
                     <a className="a2a_button_email" title={shareThis.email.linkTitle} />
                     <a className="a2a_button_print" title={shareThis.print.linkTitle} />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(ShareThis);
