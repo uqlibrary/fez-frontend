@@ -11,7 +11,12 @@ exports[`Audio Player Component  should pause audio 1`] = `
   <WithStyles(IconButton)
     aria-label="Click to pause audio file UQ676287_OA.pdf"
     onClick={[Function]}
-    touch={true}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
   >
     <pure(PauseIcon)
       className="pause"
@@ -385,7 +390,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
             <WithStyles(IconButton)
               aria-label="Click to pause audio file UQ676287_OA.pdf"
               onClick={[Function]}
-              touch={true}
+              style={
+                Object {
+                  "marginBottom": -10,
+                  "marginTop": -10,
+                }
+              }
             >
               <IconButton
                 aria-label="Click to pause audio file UQ676287_OA.pdf"
@@ -402,7 +412,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 color="default"
                 disabled={false}
                 onClick={[Function]}
-                touch={true}
+                style={
+                  Object {
+                    "marginBottom": -10,
+                    "marginTop": -10,
+                  }
+                }
               >
                 <WithStyles(ButtonBase)
                   aria-label="Click to pause audio file UQ676287_OA.pdf"
@@ -411,7 +426,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
                   disabled={false}
                   focusRipple={true}
                   onClick={[Function]}
-                  touch={true}
+                  style={
+                    Object {
+                      "marginBottom": -10,
+                      "marginTop": -10,
+                    }
+                  }
                 >
                   <ButtonBase
                     aria-label="Click to pause audio file UQ676287_OA.pdf"
@@ -430,8 +450,13 @@ exports[`Audio Player Component  should pause audio 2`] = `
                     disabled={false}
                     focusRipple={true}
                     onClick={[Function]}
+                    style={
+                      Object {
+                        "marginBottom": -10,
+                        "marginTop": -10,
+                      }
+                    }
                     tabIndex="0"
-                    touch={true}
                     type="button"
                   >
                     <button
@@ -449,8 +474,13 @@ exports[`Audio Player Component  should pause audio 2`] = `
                       onTouchEnd={[Function]}
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
+                      style={
+                        Object {
+                          "marginBottom": -10,
+                          "marginTop": -10,
+                        }
+                      }
                       tabIndex="0"
-                      touch={true}
                       type="button"
                     >
                       <span
@@ -911,7 +941,12 @@ exports[`Audio Player Component  should play audio 1`] = `
             <WithStyles(IconButton)
               aria-label="Click to play audio file UQ676287_OA.pdf"
               onClick={[Function]}
-              touch={true}
+              style={
+                Object {
+                  "marginBottom": -10,
+                  "marginTop": -10,
+                }
+              }
             >
               <IconButton
                 aria-label="Click to play audio file UQ676287_OA.pdf"
@@ -928,7 +963,12 @@ exports[`Audio Player Component  should play audio 1`] = `
                 color="default"
                 disabled={false}
                 onClick={[Function]}
-                touch={true}
+                style={
+                  Object {
+                    "marginBottom": -10,
+                    "marginTop": -10,
+                  }
+                }
               >
                 <WithStyles(ButtonBase)
                   aria-label="Click to play audio file UQ676287_OA.pdf"
@@ -937,7 +977,12 @@ exports[`Audio Player Component  should play audio 1`] = `
                   disabled={false}
                   focusRipple={true}
                   onClick={[Function]}
-                  touch={true}
+                  style={
+                    Object {
+                      "marginBottom": -10,
+                      "marginTop": -10,
+                    }
+                  }
                 >
                   <ButtonBase
                     aria-label="Click to play audio file UQ676287_OA.pdf"
@@ -956,8 +1001,13 @@ exports[`Audio Player Component  should play audio 1`] = `
                     disabled={false}
                     focusRipple={true}
                     onClick={[Function]}
+                    style={
+                      Object {
+                        "marginBottom": -10,
+                        "marginTop": -10,
+                      }
+                    }
                     tabIndex="0"
-                    touch={true}
                     type="button"
                   >
                     <button
@@ -975,8 +1025,13 @@ exports[`Audio Player Component  should play audio 1`] = `
                       onTouchEnd={[Function]}
                       onTouchMove={[Function]}
                       onTouchStart={[Function]}
+                      style={
+                        Object {
+                          "marginBottom": -10,
+                          "marginTop": -10,
+                        }
+                      }
                       tabIndex="0"
-                      touch={true}
                       type="button"
                     >
                       <span
@@ -1083,7 +1138,12 @@ exports[`Audio Player Component  should render component 1`] = `
   <WithStyles(IconButton)
     aria-label="Click to play audio file UQ676287_OA.pdf"
     onClick={[Function]}
-    touch={true}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
   >
     <pure(PlayArrowIcon)
       className="play"
@@ -1103,7 +1163,12 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
   <WithStyles(IconButton)
     aria-label="Click to play audio file UQ676287_OA.pdf"
     onClick={[Function]}
-    touch={true}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
   >
     <pure(PlayArrowIcon)
       className="play"
@@ -1123,7 +1188,12 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
   <WithStyles(IconButton)
     aria-label="Click to pause audio file UQ676287_OA.pdf"
     onClick={[Function]}
-    touch={true}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
   >
     <pure(PauseIcon)
       className="pause"

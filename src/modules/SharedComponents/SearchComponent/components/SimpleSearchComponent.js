@@ -235,7 +235,7 @@ export class SimpleSearchComponent extends PureComponent {
                         :
                         <React.Fragment>
                             {/* NOT in header */}
-                            <Grid container spacing={16}>
+                            <Grid container spacing={16} alignItems={'center'}>
                                 <Grid item xs>
                                     <TextField
                                         type="search"

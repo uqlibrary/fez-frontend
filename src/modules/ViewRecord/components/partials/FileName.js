@@ -2,7 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import AudioPlayer from './AudioPlayer';
-import {Grid, Hidden, Typography} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
 
 export default class FileName extends PureComponent {
     static propTypes = {
@@ -42,7 +44,7 @@ export default class FileName extends PureComponent {
         const {pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl} = this.props;
 
         return (
-            <Grid container alignItems="center">
+            <Grid container alignItems="center" wrap="nowrap">
                 <Grid item>
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&

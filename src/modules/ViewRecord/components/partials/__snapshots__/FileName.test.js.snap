@@ -362,6 +362,7 @@ exports[`File Name Component  should display file name link 1`] = `
           <WithStyles(Grid)
             alignItems="center"
             container={true}
+            wrap="nowrap"
           >
             <Grid
               alignContent="stretch"
@@ -476,13 +477,13 @@ exports[`File Name Component  should display file name link 1`] = `
               md={false}
               sm={false}
               spacing={0}
-              wrap="wrap"
+              wrap="nowrap"
               xl={false}
               xs={false}
               zeroMinWidth={false}
             >
               <div
-                className="MuiGrid-container-01 MuiGrid-align-items-xs-center-09"
+                className="MuiGrid-container-01 MuiGrid-wrap-xs-nowrap-07 MuiGrid-align-items-xs-center-09"
               >
                 <WithStyles(Grid)
                   item={true}
@@ -1543,6 +1544,7 @@ exports[`File Name Component  should render audio player 1`] = `
           <WithStyles(Grid)
             alignItems="center"
             container={true}
+            wrap="nowrap"
           >
             <Grid
               alignContent="stretch"
@@ -1657,13 +1659,13 @@ exports[`File Name Component  should render audio player 1`] = `
               md={false}
               sm={false}
               spacing={0}
-              wrap="wrap"
+              wrap="nowrap"
               xl={false}
               xs={false}
               zeroMinWidth={false}
             >
               <div
-                className="MuiGrid-container-01 MuiGrid-align-items-xs-center-09"
+                className="MuiGrid-container-01 MuiGrid-wrap-xs-nowrap-07 MuiGrid-align-items-xs-center-09"
               >
                 <WithStyles(Grid)
                   item={true}
@@ -2360,7 +2362,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                     <WithStyles(IconButton)
                                       aria-label="Click to play audio file test.mp3"
                                       onClick={[Function]}
-                                      touch={true}
+                                      style={
+                                        Object {
+                                          "marginBottom": -10,
+                                          "marginTop": -10,
+                                        }
+                                      }
                                     >
                                       <IconButton
                                         aria-label="Click to play audio file test.mp3"
@@ -2377,7 +2384,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                         color="default"
                                         disabled={false}
                                         onClick={[Function]}
-                                        touch={true}
+                                        style={
+                                          Object {
+                                            "marginBottom": -10,
+                                            "marginTop": -10,
+                                          }
+                                        }
                                       >
                                         <WithStyles(ButtonBase)
                                           aria-label="Click to play audio file test.mp3"
@@ -2386,7 +2398,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                           disabled={false}
                                           focusRipple={true}
                                           onClick={[Function]}
-                                          touch={true}
+                                          style={
+                                            Object {
+                                              "marginBottom": -10,
+                                              "marginTop": -10,
+                                            }
+                                          }
                                         >
                                           <ButtonBase
                                             aria-label="Click to play audio file test.mp3"
@@ -2405,8 +2422,13 @@ exports[`File Name Component  should render audio player 1`] = `
                                             disabled={false}
                                             focusRipple={true}
                                             onClick={[Function]}
+                                            style={
+                                              Object {
+                                                "marginBottom": -10,
+                                                "marginTop": -10,
+                                              }
+                                            }
                                             tabIndex="0"
-                                            touch={true}
                                             type="button"
                                           >
                                             <button
@@ -2424,8 +2446,13 @@ exports[`File Name Component  should render audio player 1`] = `
                                               onTouchEnd={[Function]}
                                               onTouchMove={[Function]}
                                               onTouchStart={[Function]}
+                                              style={
+                                                Object {
+                                                  "marginBottom": -10,
+                                                  "marginTop": -10,
+                                                }
+                                              }
                                               tabIndex="0"
-                                              touch={true}
                                               type="button"
                                             >
                                               <span
@@ -2895,6 +2922,7 @@ exports[`File Name Component  should render component and display file name only
           <WithStyles(Grid)
             alignItems="center"
             container={true}
+            wrap="nowrap"
           >
             <Grid
               alignContent="stretch"
@@ -3009,13 +3037,13 @@ exports[`File Name Component  should render component and display file name only
               md={false}
               sm={false}
               spacing={0}
-              wrap="wrap"
+              wrap="nowrap"
               xl={false}
               xs={false}
               zeroMinWidth={false}
             >
               <div
-                className="MuiGrid-container-01 MuiGrid-align-items-xs-center-09"
+                className="MuiGrid-container-01 MuiGrid-wrap-xs-nowrap-07 MuiGrid-align-items-xs-center-09"
               >
                 <WithStyles(Grid)
                   item={true}
@@ -4058,6 +4086,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
           <WithStyles(Grid)
             alignItems="center"
             container={true}
+            wrap="nowrap"
           >
             <Grid
               alignContent="stretch"
@@ -4172,13 +4201,13 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
               md={false}
               sm={false}
               spacing={0}
-              wrap="wrap"
+              wrap="nowrap"
               xl={false}
               xs={false}
               zeroMinWidth={false}
             >
               <div
-                className="MuiGrid-container-01 MuiGrid-align-items-xs-center-09"
+                className="MuiGrid-container-01 MuiGrid-wrap-xs-nowrap-07 MuiGrid-align-items-xs-center-09"
               >
                 <WithStyles(Grid)
                   item={true}
@@ -5227,6 +5256,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
           <WithStyles(Grid)
             alignItems="center"
             container={true}
+            wrap="nowrap"
           >
             <Grid
               alignContent="stretch"
@@ -5341,13 +5371,13 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
               md={false}
               sm={false}
               spacing={0}
-              wrap="wrap"
+              wrap="nowrap"
               xl={false}
               xs={false}
               zeroMinWidth={false}
             >
               <div
-                className="MuiGrid-container-01 MuiGrid-align-items-xs-center-09"
+                className="MuiGrid-container-01 MuiGrid-wrap-xs-nowrap-07 MuiGrid-align-items-xs-center-09"
               >
                 <WithStyles(Grid)
                   item={true}

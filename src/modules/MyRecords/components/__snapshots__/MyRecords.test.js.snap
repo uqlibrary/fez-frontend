@@ -4,11 +4,13 @@ exports[`MyRecords test renders active filters 1`] = `
 <StandardPage
   title="My research"
 >
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
         text={
@@ -44,54 +46,69 @@ exports[`MyRecords test renders active filters 1`] = `
           </a>
         </div>
       </StandardCard>
-    </div>
-    <div
-      className="column is-3 is-hidden-mobile"
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <StandardRighthandCard
-        title="Refine results"
+      <WithStyles(Grid)
+        item={true}
+        md={3}
       >
-        <FacetsFilter
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {
-                "Year": Object {
-                  "from": 2000,
-                  "to": 2010,
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {
+                  "Year": Object {
+                    "from": 2000,
+                    "to": 2010,
+                  },
                 },
-              },
+              }
             }
-          }
-          disabled={false}
-          excludeFacetsList={
-            Array [
-              "Scopus document type",
-              "Genre",
-              "Year published",
-            ]
-          }
-          facetsData={Object {}}
-          isMyDataSetPage={false}
-          lookupFacetsList={
-            Object {
-              "Author": "Author (lookup)",
-              "Collection": "Collection (lookup)",
-              "Subject": "Subject (lookup)",
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+              ]
             }
-          }
-          onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-              "Subtype": "Publication subtype",
+            facetsData={Object {}}
+            isMyDataSetPage={false}
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
             }
-          }
-          showOpenAccessFilter={true}
-        />
-      </StandardRighthandCard>
-    </div>
-  </div>
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Publication type",
+                "Subtype": "Publication subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -99,11 +116,14 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
 <StandardPage
   title="My research"
 >
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
     >
       <StandardCard>
         <span>
@@ -219,8 +239,8 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -228,11 +248,14 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
 <StandardPage
   title="My research"
 >
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
     >
       <StandardCard>
         <span>
@@ -348,104 +371,119 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </div>
-    <div
-      className="column is-3 is-hidden-mobile"
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <StandardRighthandCard
-        title="Refine results"
+      <WithStyles(Grid)
+        item={true}
+        md={3}
       >
-        <FacetsFilter
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {},
+              }
             }
-          }
-          disabled={false}
-          excludeFacetsList={
-            Array [
-              "Scopus document type",
-              "Genre",
-              "Year published",
-            ]
-          }
-          facetsData={
-            Object {
-              "Display type": Object {
-                "buckets": Array [
-                  Object {
-                    "doc_count": 95,
-                    "key": 179,
-                  },
-                  Object {
-                    "doc_count": 34,
-                    "key": 130,
-                  },
-                  Object {
-                    "doc_count": 2,
-                    "key": 177,
-                  },
-                  Object {
-                    "doc_count": 2,
-                    "key": 183,
-                  },
-                  Object {
-                    "doc_count": 1,
-                    "key": 174,
-                  },
-                ],
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 3,
-              },
-              "Keywords": Object {
-                "buckets": Array [
-                  Object {
-                    "doc_count": 15,
-                    "key": "Brca1",
-                  },
-                  Object {
-                    "doc_count": 15,
-                    "key": "Oncology",
-                  },
-                  Object {
-                    "doc_count": 13,
-                    "key": "Breast cancer",
-                  },
-                  Object {
-                    "doc_count": 12,
-                    "key": "Genetics & Heredity",
-                  },
-                  Object {
-                    "doc_count": 10,
-                    "key": "Biochemistry & Molecular Biology",
-                  },
-                ],
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 641,
-              },
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+              ]
             }
-          }
-          isMyDataSetPage={false}
-          lookupFacetsList={
-            Object {
-              "Author": "Author (lookup)",
-              "Collection": "Collection (lookup)",
-              "Subject": "Subject (lookup)",
+            facetsData={
+              Object {
+                "Display type": Object {
+                  "buckets": Array [
+                    Object {
+                      "doc_count": 95,
+                      "key": 179,
+                    },
+                    Object {
+                      "doc_count": 34,
+                      "key": 130,
+                    },
+                    Object {
+                      "doc_count": 2,
+                      "key": 177,
+                    },
+                    Object {
+                      "doc_count": 2,
+                      "key": 183,
+                    },
+                    Object {
+                      "doc_count": 1,
+                      "key": 174,
+                    },
+                  ],
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 3,
+                },
+                "Keywords": Object {
+                  "buckets": Array [
+                    Object {
+                      "doc_count": 15,
+                      "key": "Brca1",
+                    },
+                    Object {
+                      "doc_count": 15,
+                      "key": "Oncology",
+                    },
+                    Object {
+                      "doc_count": 13,
+                      "key": "Breast cancer",
+                    },
+                    Object {
+                      "doc_count": 12,
+                      "key": "Genetics & Heredity",
+                    },
+                    Object {
+                      "doc_count": 10,
+                      "key": "Biochemistry & Molecular Biology",
+                    },
+                  ],
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 641,
+                },
+              }
             }
-          }
-          onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-              "Subtype": "Publication subtype",
+            isMyDataSetPage={false}
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
             }
-          }
-          showOpenAccessFilter={true}
-        />
-      </StandardRighthandCard>
-    </div>
-  </div>
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Publication type",
+                "Subtype": "Publication subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -453,11 +491,14 @@ exports[`MyRecords test renders loading screen while export publications loading
 <StandardPage
   title="My research"
 >
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
     >
       <StandardCard>
         <WithStyles(Grid)
@@ -537,8 +578,8 @@ exports[`MyRecords test renders loading screen while export publications loading
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -548,16 +589,19 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
 <StandardPage
   title="My research"
 >
-  <div
-    className="is-centered"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <WithStyles(InlineLoader)
-      message="Searching for your publications..."
-    />
-  </div>
-  <div
-    className="columns"
-  />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InlineLoader)
+        message="Searching for your publications..."
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -565,11 +609,14 @@ exports[`MyRecords test renders loading screen while loading publications while 
 <StandardPage
   title="My research"
 >
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
     >
       <StandardCard>
         <WithStyles(Grid)
@@ -649,8 +696,8 @@ exports[`MyRecords test renders loading screen while loading publications while 
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -658,11 +705,13 @@ exports[`MyRecords test renders no results 1`] = `
 <StandardPage
   title="My research"
 >
-  <div
-    className="columns"
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
         text={
@@ -698,7 +747,7 @@ exports[`MyRecords test renders no results 1`] = `
           </a>
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;

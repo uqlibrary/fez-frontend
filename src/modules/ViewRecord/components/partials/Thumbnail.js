@@ -7,7 +7,7 @@ import locale from 'locale/pages';
 
 const styles = () => ({
     brokenImage: {
-        color: 'black'
+        opacity: 0.5,
     }
 });
 
@@ -52,7 +52,7 @@ class Thumbnail extends PureComponent {
                     <ExternalLink href={mediaUrl} title={fileName}  openInNewIcon={false}>
                         <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
                     </ExternalLink>
-                    : <BrokenImage />
+                    : <BrokenImage color={'secondary'} />
             );
         }
 
@@ -65,7 +65,7 @@ class Thumbnail extends PureComponent {
                 {
                     !this.state.thumbnailError ?
                         <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
-                        : <BrokenImage className={this.props.classes.brokenImage}/>
+                        : <BrokenImage color={'secondary'} className={this.props.classes.brokenImage}/>
                 }
             </a>
         );

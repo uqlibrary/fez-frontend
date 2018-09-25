@@ -46,7 +46,7 @@ export default class AudioPlayer extends Component {
                     <source src={pathConfig.file.url(pid, fileName)} type={mimeType} />
                 </audio>
                 <IconButton
-                    touch
+                    style={{marginTop: -10, marginBottom: -10}}
                     onClick={isPlaying ? this.audioPlayerPause : this.audioPlayerPlay}
                     aria-label={(isPlaying ? controls.pauseAudio : controls.playAudio).replace('[fileName]', fileName)}
                 >
