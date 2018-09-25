@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import locale from 'locale/components';
-import {Grid, Hidden, withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import PropTypes from 'prop-types';
 
 const styles = {
