@@ -57,8 +57,8 @@ class DashboardAuthorProfile extends PureComponent {
                     }
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <Grid item xs>
-                        <Grid container wrap={'nowrap'}>
-                            <Grid item>
+                        <Grid container>
+                            <Grid item xs={12}>
                                 <DashboardAuthorDetails
                                     {...{
                                         title: author.aut_title || '',
@@ -69,7 +69,7 @@ class DashboardAuthorProfile extends PureComponent {
                                     }}
                                 />
                             </Grid>
-                            <Grid item>
+                            <Grid item xs={12}>
                                 <DashboardResearcherIds
                                     values={{
                                         publons: parseInt(author.aut_publons_id, 10) === 1 ? author.aut_orcid_id : author.aut_publons_id,
