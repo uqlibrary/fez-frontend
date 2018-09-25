@@ -4,7 +4,7 @@ import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
-import {Typography} from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 
 export default class RelatedPublications extends PureComponent {
     static propTypes = {

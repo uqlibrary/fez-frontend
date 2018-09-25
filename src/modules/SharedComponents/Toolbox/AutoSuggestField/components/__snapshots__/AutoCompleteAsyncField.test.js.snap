@@ -442,7 +442,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                         "root": "inputRoot",
                       },
                       "id": "downshift-1-input",
-                      "inputRef": undefined,
+                      "inputRef": [Function],
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
@@ -491,6 +491,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                           }
                           fullWidth={true}
                           id="downshift-1-input"
+                          inputRef={[Function]}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyDown={[Function]}
@@ -523,6 +524,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                             fullWidth={true}
                             id="downshift-1-input"
                             inputComponent="input"
+                            inputRef={[Function]}
                             multiline={false}
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -984,7 +986,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                         "root": "inputRoot",
                       },
                       "id": "downshift-2-input",
-                      "inputRef": undefined,
+                      "inputRef": [Function],
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
@@ -1033,6 +1035,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                           }
                           fullWidth={true}
                           id="downshift-2-input"
+                          inputRef={[Function]}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyDown={[Function]}
@@ -1065,6 +1068,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                             fullWidth={true}
                             id="downshift-2-input"
                             inputComponent="input"
+                            inputRef={[Function]}
                             multiline={false}
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -1527,7 +1531,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                         "root": "inputRoot",
                       },
                       "id": "downshift-0-input",
-                      "inputRef": undefined,
+                      "inputRef": [Function],
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
@@ -1578,6 +1582,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                           }
                           fullWidth={true}
                           id="downshift-0-input"
+                          inputRef={[Function]}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyDown={[Function]}
@@ -1610,6 +1615,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                             fullWidth={true}
                             id="downshift-0-input"
                             inputComponent="input"
+                            inputRef={[Function]}
                             multiline={false}
                             onBlur={[Function]}
                             onChange={[Function]}

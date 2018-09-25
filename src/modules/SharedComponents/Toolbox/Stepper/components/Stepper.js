@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import {withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     stepper: {

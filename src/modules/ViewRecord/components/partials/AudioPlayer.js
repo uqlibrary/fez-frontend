@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {pathConfig} from 'config/routes';
-import {PlayArrow, Pause} from '@material-ui/icons';
-import {IconButton} from '@material-ui/core';
+import PlayArrow from '@material-ui/icons/PlayArrow';
+import Pause from '@material-ui/icons/Pause';
+import IconButton from '@material-ui/core/IconButton';
 import locale from 'locale/global';
 
 export default class AudioPlayer extends Component {

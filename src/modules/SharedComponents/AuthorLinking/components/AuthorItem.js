@@ -1,7 +1,12 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {Button, Grid, Typography, withStyles} from '@material-ui/core';
-import {RadioButtonUnchecked, RadioButtonChecked, Link} from '@material-ui/icons';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
+import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
+import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
+import Link from '@material-ui/icons/Link';
 
 const styles = (theme) => ({
     authorLinkIcon: {

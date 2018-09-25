@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
-import {Grid} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 
 export default class FileUploadDropzone extends PureComponent {

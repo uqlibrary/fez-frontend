@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Grid, Typography} from '@material-ui/core';
-import {CloudUpload} from '@material-ui/icons';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import CloudUpload from '@material-ui/icons/CloudUpload';
 import {withStyles} from '@material-ui/core/styles';
 
 const FileUploadDropzoneStaticContent = ({locale, classes}) => (

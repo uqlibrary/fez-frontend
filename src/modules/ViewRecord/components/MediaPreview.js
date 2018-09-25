@@ -2,7 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Grid, Hidden, Button} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Button from '@material-ui/core/Button';
 
 export default class MediaPreview extends PureComponent {
     static propTypes = {

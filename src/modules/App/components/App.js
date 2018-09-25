@@ -19,8 +19,15 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import * as pages from './pages';
 
 // MUI1
-import {Tooltip, Fade, AppBar, Toolbar, IconButton, Grid, Typography, Hidden} from '@material-ui/core';
-import {Menu} from '@material-ui/icons';
+import Tooltip from '@material-ui/core/Tooltip';
+import Fade from '@material-ui/core/Fade';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
+import Menu from '@material-ui/icons/Menu';
 import {withStyles} from '@material-ui/core/styles';
 
 const logo = require('../../../images/uq-logo-white-minimal.svg');

@@ -8,7 +8,8 @@ import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
 import {Alert} from '../../Alert';
-import {Grid, Typography} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import * as config from '../config';
 
 const moment = require('moment');

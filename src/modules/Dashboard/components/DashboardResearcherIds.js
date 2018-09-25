@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
 import {pathConfig} from 'config/routes';
-import {Grid, withStyles, Typography} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme =>({
     researcherIDlink: {

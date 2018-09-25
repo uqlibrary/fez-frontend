@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {Grid, Button} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import {UqIdField} from 'modules/SharedComponents/LookupFields';
 
 import {connect} from 'react-redux';
