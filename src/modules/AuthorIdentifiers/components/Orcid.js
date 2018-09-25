@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import {createHash} from 'crypto';
 import {parse} from 'querystring';
 
-import {Button, Grid, Hidden, Typography} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';

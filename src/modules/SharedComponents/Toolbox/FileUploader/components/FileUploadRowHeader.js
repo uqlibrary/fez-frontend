@@ -2,7 +2,11 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
 
-import {Grid, Typography, Hidden, IconButton, Tooltip} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import {withStyles} from '@material-ui/core/styles';
 

@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import {FormControlLabel, Typography, Checkbox} from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
 export class FileUploadTermsAndConditions extends PureComponent {
     static propTypes = {

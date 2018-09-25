@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
-import {BrokenImage} from '@material-ui/icons';
-import {withStyles} from '@material-ui/core';
+import BrokenImage from '@material-ui/icons/BrokenImage';
+import {withStyles} from '@material-ui/core/styles';
 import locale from 'locale/pages';
 
 const styles = () => ({

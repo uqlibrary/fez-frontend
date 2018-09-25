@@ -9,7 +9,8 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
 import {routes, general} from 'config';
-import {Grid, Hidden} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {

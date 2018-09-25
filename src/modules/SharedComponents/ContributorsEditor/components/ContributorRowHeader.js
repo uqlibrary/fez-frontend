@@ -1,8 +1,15 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {IconButton, Tooltip, Hidden, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction} from '@material-ui/core';
-import {DeleteForever, People} from '@material-ui/icons';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import Hidden from '@material-ui/core/Hidden';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import DeleteForever from '@material-ui/icons/DeleteForever';
+import People from '@material-ui/icons/People';
 import {withStyles} from '@material-ui/core/styles';
 
 export class ContributorRowHeader extends PureComponent {

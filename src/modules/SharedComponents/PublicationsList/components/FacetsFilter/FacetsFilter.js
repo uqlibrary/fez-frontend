@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import {List, Button, Grid} from '@material-ui/core';
+import List from '@material-ui/core/List';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 import {publicationTypes, general} from 'config';
 import {locale} from 'locale';

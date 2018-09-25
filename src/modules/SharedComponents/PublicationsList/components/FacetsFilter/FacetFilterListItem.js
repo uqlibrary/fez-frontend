@@ -1,8 +1,12 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 
-import {ListItem, ListItemText, Collapse, withStyles} from '@material-ui/core';
-import {ExpandLess, ExpandMore} from '@material-ui/icons';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Collapse from '@material-ui/core/Collapse';
+import {withStyles} from '@material-ui/core/styles';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 
 const styles = (theme) => ({
     listItemGutters: {

@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {Grid, Hidden, Button} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Button from '@material-ui/core/Button';
 
 // forms & custom components
 import Async from 'modules/SharedComponents/Async';

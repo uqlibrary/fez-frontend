@@ -84,7 +84,6 @@
     "jss-global": "^3.0.0",
     "jss-nested": "^6.0.1",
     "load-script": "^1.0.0",
-    "material-ui": "0.20.1",
     "material-ui-pickers": "^1.0.0-rc.13",
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",

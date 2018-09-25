@@ -4,7 +4,8 @@ import {locale} from 'locale';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
-import {Grid, Hidden} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class CitationCounts extends PureComponent {
     static propTypes = {

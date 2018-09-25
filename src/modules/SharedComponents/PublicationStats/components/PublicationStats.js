@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Grid, Typography, Divider} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import {locale} from 'locale';
 import {withStyles} from '@material-ui/core/styles';
 

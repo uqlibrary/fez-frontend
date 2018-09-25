@@ -7,7 +7,8 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {List, Typography} from '@material-ui/core';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
 
 export class ContributorsEditor extends PureComponent {

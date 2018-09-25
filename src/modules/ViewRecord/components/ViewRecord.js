@@ -15,7 +15,7 @@ import Links from './Links';
 import {ShareThisErrorBoundary} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
-import {Grid} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {

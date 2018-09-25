@@ -2,8 +2,20 @@ import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
-import {Grid, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction, Tooltip, Typography, IconButton, Hidden} from '@material-ui/core';
-import {Person, PersonOutlined, Delete, KeyboardArrowDown, KeyboardArrowUp} from '@material-ui/icons';
+import Grid from '@material-ui/core/Grid';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Hidden from '@material-ui/core/Hidden';
+import Person from '@material-ui/icons/Person';
+import PersonOutlined from '@material-ui/icons/PersonOutlined';
+import Delete from '@material-ui/icons/Delete';
+import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export class ContributorRow extends PureComponent {
