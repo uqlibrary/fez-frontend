@@ -1305,6 +1305,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                 >
                                   <WithStyles(Grid)
                                     container={true}
+                                    wrap="nowrap"
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -1419,13 +1420,13 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                       md={false}
                                       sm={false}
                                       spacing={0}
-                                      wrap="wrap"
+                                      wrap="nowrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-030"
+                                        className="MuiGrid-container-030 MuiGrid-wrap-xs-nowrap-036"
                                       >
                                         <WithStyles(Grid)
                                           item={true}
@@ -6400,6 +6401,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                 >
                                   <WithStyles(Grid)
                                     container={true}
+                                    wrap="nowrap"
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -6514,13 +6516,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                       md={false}
                                       sm={false}
                                       spacing={0}
-                                      wrap="wrap"
+                                      wrap="nowrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-030"
+                                        className="MuiGrid-container-030 MuiGrid-wrap-xs-nowrap-036"
                                       >
                                         <WithStyles(Grid)
                                           item={true}
@@ -11495,6 +11497,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                 >
                                   <WithStyles(Grid)
                                     container={true}
+                                    wrap="nowrap"
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -11609,13 +11612,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                       md={false}
                                       sm={false}
                                       spacing={0}
-                                      wrap="wrap"
+                                      wrap="nowrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-030"
+                                        className="MuiGrid-container-030 MuiGrid-wrap-xs-nowrap-036"
                                       >
                                         <WithStyles(Grid)
                                           item={true}
@@ -16590,6 +16593,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                 >
                                   <WithStyles(Grid)
                                     container={true}
+                                    wrap="nowrap"
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -16704,13 +16708,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                       md={false}
                                       sm={false}
                                       spacing={0}
-                                      wrap="wrap"
+                                      wrap="nowrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-030"
+                                        className="MuiGrid-container-030 MuiGrid-wrap-xs-nowrap-036"
                                       >
                                         <WithStyles(Grid)
                                           item={true}
@@ -21685,6 +21689,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                 >
                                   <WithStyles(Grid)
                                     container={true}
+                                    wrap="nowrap"
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -21799,13 +21804,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                       md={false}
                                       sm={false}
                                       spacing={0}
-                                      wrap="wrap"
+                                      wrap="nowrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-030"
+                                        className="MuiGrid-container-030 MuiGrid-wrap-xs-nowrap-036"
                                       >
                                         <WithStyles(Grid)
                                           item={true}

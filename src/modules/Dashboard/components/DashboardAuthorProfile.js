@@ -57,7 +57,7 @@ class DashboardAuthorProfile extends PureComponent {
                     }
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <Grid item xs>
-                        <Grid container>
+                        <Grid container wrap={'nowrap'}>
                             <Grid item>
                                 <DashboardAuthorDetails
                                     {...{
