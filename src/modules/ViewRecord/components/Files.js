@@ -4,9 +4,18 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {Grid, Hidden, Typography, withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
+
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
+
 import moment from 'moment';
-import {VolumeUp, PictureAsPdf, InsertDriveFile, Image, Videocam} from '@material-ui/icons';
+import VolumeUp from '@material-ui/icons/VolumeUp';
+import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
+import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
+import Image from '@material-ui/icons/Image';
+import Videocam from '@material-ui/icons/Videocam';
 import {openAccessConfig, viewRecordsConfig, routes} from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';

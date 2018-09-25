@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/pages';
 import Grid from '@material-ui/core/Grid';
-import {withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     noOfArticles: {

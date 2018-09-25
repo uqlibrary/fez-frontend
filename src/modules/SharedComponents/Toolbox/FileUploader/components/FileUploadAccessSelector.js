@@ -1,6 +1,10 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {Input, MenuItem, FormHelperText, FormControl, Select} from '@material-ui/core';
+import Input from '@material-ui/core/Input';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import {OPEN_ACCESS_ID, CLOSED_ACCESS_ID} from '../config';
 import {withStyles} from '@material-ui/core/styles';
 

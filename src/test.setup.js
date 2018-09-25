@@ -14,7 +14,7 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import {api, mui1theme} from 'config';
-import {MuiThemeProvider} from '@material-ui/core';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];

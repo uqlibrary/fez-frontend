@@ -2,7 +2,12 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
-import {Grid, Typography, FormControlLabel, Checkbox, withStyles, withWidth} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import withWidth from '@material-ui/core/withWidth';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = (theme) => ({
     infiniteContainer: {

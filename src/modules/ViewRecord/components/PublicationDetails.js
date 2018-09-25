@@ -4,7 +4,9 @@ import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
-import {Grid, Typography, withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
     header: {

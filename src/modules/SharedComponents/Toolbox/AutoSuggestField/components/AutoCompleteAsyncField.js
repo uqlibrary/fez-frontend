@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
-import { withStyles } from '@material-ui/core/styles';
-import {Paper, TextField, MenuItem, ListItemText, Popper, Fade} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Popper from '@material-ui/core/Popper';
+import Fade from '@material-ui/core/Fade';
 
 const styles = () => ({
     root: {

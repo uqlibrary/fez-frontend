@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router';
 import PropTypes from 'prop-types';
 // MUI1
 import {mui1theme} from 'config';
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 
 // Top level "pages"

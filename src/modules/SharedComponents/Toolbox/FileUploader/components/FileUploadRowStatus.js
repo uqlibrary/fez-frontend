@@ -1,8 +1,13 @@
 import React, { PureComponent, Fragment } from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Tooltip, CircularProgress, IconButton, Typography} from '@material-ui/core';
-import {Delete, Done} from '@material-ui/icons';
+import Tooltip from '@material-ui/core/Tooltip';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+
+import Delete from '@material-ui/icons/Delete';
+import Done from '@material-ui/icons/Done';
 
 export class FileUploadRowStatus extends PureComponent {
     static propTypes = {

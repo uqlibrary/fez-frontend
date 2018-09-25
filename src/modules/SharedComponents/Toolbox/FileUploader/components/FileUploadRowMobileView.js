@@ -7,8 +7,15 @@ import FileUploadRowStatus from './FileUploadRowStatus';
 
 import * as config from '../config';
 
-import {Typography, List, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction} from '@material-ui/core';
-import {Attachment, CalendarTodayOutlined, LockOutlined} from '@material-ui/icons';
+import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import Attachment from '@material-ui/icons/Attachment';
+import CalendarTodayOutlined from '@material-ui/icons/CalendarTodayOutlined';
+import LockOutlined from '@material-ui/icons/LockOutlined';
 import {withStyles} from '@material-ui/core/styles';
 
 export class FileUploadRowMobileView extends PureComponent {

@@ -1,8 +1,11 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import {ListItem, ListItemText, ListItemIcon, withStyles} from '@material-ui/core';
-import {Clear} from '@material-ui/icons';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import {withStyles} from '@material-ui/core/styles';
+import Clear from '@material-ui/icons/Clear';
 
 
 const styles = (theme) => ({

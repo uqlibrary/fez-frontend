@@ -6,7 +6,9 @@ import {locale} from 'locale';
 
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import {Grid, Button, withStyles} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = (theme) => ({
     blueButton: {

@@ -7,7 +7,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = {
     pubCounts: {

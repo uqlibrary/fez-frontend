@@ -6,7 +6,11 @@ import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
-import {Grid, Typography, Hidden, withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
+
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
 
 import locale from 'locale/viewRecord';
 import {openAccessConfig} from 'config';
