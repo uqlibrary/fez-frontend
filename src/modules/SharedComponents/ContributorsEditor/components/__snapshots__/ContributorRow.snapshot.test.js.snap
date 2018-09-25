@@ -27,8 +27,11 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -132,8 +135,11 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -237,8 +243,11 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -342,8 +351,11 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -447,8 +459,11 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -586,8 +601,11 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -691,8 +709,11 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -796,8 +817,11 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
       }
     }
+    tabIndex={0}
   >
     <Hidden
       implementation="js"

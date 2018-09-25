@@ -226,7 +226,6 @@ exports[`BookForm renders  component 1`] = `
         name="authors"
         required={true}
         showContributorAssignment={true}
-        showIdentifierLookup={true}
       />
     </StandardCard>
   </WithStyles(Grid)>

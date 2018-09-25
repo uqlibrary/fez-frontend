@@ -18,6 +18,40 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
+const styles = (theme) => ({
+    listItem: {
+        padding: '0 16px'
+    },
+    rowSelected: {
+        backgroundColor: theme.palette.accent.light
+    },
+    selected: {
+        color: 'white !important'
+    },
+    hideIcon: {
+        display: 'none'
+    },
+    primary: {
+        fontSize: 14,
+        fontWeight: 400
+    },
+    identifierName: {
+        fontSize: 11,
+        fontWeight: 400,
+        marginTop: 8,
+        '&:before': {
+            content: '"UQ Id: "'
+        }
+    },
+    identifierSubtitle: {
+        fontSize: 11,
+        fontWeight: 300,
+        '&:before': {
+            content: '"UQ Username: "'
+        }
+    }
+});
+
 export class ContributorRow extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
@@ -159,9 +193,10 @@ export class ContributorRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
-                    style={{cursor: 'pointer'}}
+                    style={{cursor: 'pointer', width: '98%', margin: '0 1%'}}
                     divider
                     classes={{root: contributor.selected ? classes.rowSelected : ''}}
+                    tabIndex={0}
                     onClick={disableAssignment ? this._onContributorAssigned : () => {}}
                     onKeyDown={disableAssignment ? this._onContributorAssignedKeyboard : () => {}}
                     aria-label={ariaLabel}
@@ -214,39 +249,5 @@ export class ContributorRow extends PureComponent {
         );
     }
 }
-
-const styles = (theme) => ({
-    listItem: {
-        padding: '0 16px'
-    },
-    rowSelected: {
-        backgroundColor: theme.palette.accent.light
-    },
-    selected: {
-        color: 'white !important'
-    },
-    hideIcon: {
-        display: 'none'
-    },
-    primary: {
-        fontSize: 14,
-        fontWeight: 400
-    },
-    identifierName: {
-        fontSize: 11,
-        fontWeight: 400,
-        marginTop: 8,
-        '&:before': {
-            content: '"UQ Id: "'
-        }
-    },
-    identifierSubtitle: {
-        fontSize: 11,
-        fontWeight: 300,
-        '&:before': {
-            content: '"UQ Username: "'
-        }
-    }
-});
 
 export default withStyles(styles)(withWidth()(ContributorRow));

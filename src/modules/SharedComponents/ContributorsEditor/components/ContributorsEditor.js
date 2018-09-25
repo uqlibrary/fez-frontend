@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, {PureComponent} from 'react';
 import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
@@ -10,6 +10,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -186,21 +187,25 @@ export class ContributorsEditor extends PureComponent {
                 />
                 {
                     contributors.length > 0 &&
-                    <Fragment>
-                        <List>
-                            <ContributorRowHeader
-                                onDeleteAll={this.deleteAllContributors}
-                                {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
-                                showIdentifierLookup={showIdentifierLookup}
-                                disabled={disabled}
-                                showContributorAssignment={showContributorAssignment}
-                                isInfinite={contributors.length > 3}
-                            />
-                        </List>
-                        <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
-                            {renderContributorsRows}
-                        </List>
-                    </Fragment>
+                    <Grid container spacing={8}>
+                        <Grid item xs={12}>
+                            <List>
+                                <ContributorRowHeader
+                                    onDeleteAll={this.deleteAllContributors}
+                                    {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
+                                    showIdentifierLookup={showIdentifierLookup}
+                                    disabled={disabled}
+                                    showContributorAssignment={showContributorAssignment}
+                                    isInfinite={contributors.length > 3}
+                                />
+                            </List>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
+                                {renderContributorsRows}
+                            </List>
+                        </Grid>
+                    </Grid>
                 }
                 {
                     this.props.meta && this.props.meta.error &&
@@ -223,6 +228,8 @@ const mapStateToProps = (state) => {
 
 const styles = () => ({
     list: {
+        width: '98%',
+        margin: '0 1%',
         maxHeight: 200,
         overflow: 'hidden',
         marginBottom: 8
