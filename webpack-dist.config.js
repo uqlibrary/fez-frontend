@@ -66,7 +66,8 @@ const webpackConfig = {
     // The entry file. All your app roots from here.
     entry: {
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'redux-form', 'moment', '@material-ui/core']
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form', 'immutable', '@material-ui/core'],
+        forms: ['redux-form', 'immutable']
     },
     // Where you want the output to go
     output: {
