@@ -161,7 +161,7 @@ const styles = theme => ({
     },
     info: {
         color: theme.palette.white.main,
-        backgroundColor: theme.palette.accent.light,
+        backgroundColor: theme.palette.accent.main,
         '& .spinner': {
             color: theme.palette.accent.dark
         },
@@ -178,7 +178,7 @@ const styles = theme => ({
     },
     info_outline: {
         color: theme.palette.white.main,
-        backgroundColor: theme.palette.accent.light,
+        backgroundColor: theme.palette.accent.main,
         '& .spinner': {
             color: theme.palette.accent.dark
         },

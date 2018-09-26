@@ -122,7 +122,7 @@ export default class PublicationForm extends Component {
                     <Grid item xs />
                     <Grid item xs={12} sm={'auto'}>
                         <Button
-                            variant="raised"
+                            // variant="flat"
                             color="secondary"
                             fullWidth
                             children={txt.cancel}

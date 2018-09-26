@@ -761,9 +761,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -1550,9 +1550,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -2243,9 +2243,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -2872,9 +2872,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -3517,9 +3517,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -4146,9 +4146,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -4775,9 +4775,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -5513,9 +5513,9 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "tonalOffset": 0.2,
                                   "type": "light",
                                   "warning": Object {
-                                    "dark": "#994708",
+                                    "dark": "#542400",
                                     "light": "#ff9a57",
-                                    "main": "#f06f0d",
+                                    "main": "#bf5000",
                                   },
                                   "white": Object {
                                     "main": "#FFFFFF",
@@ -6285,9 +6285,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -7078,9 +7078,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -8103,9 +8103,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -8732,9 +8732,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -9377,9 +9377,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -10006,9 +10006,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -10635,9 +10635,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 "tonalOffset": 0.2,
                                 "type": "light",
                                 "warning": Object {
-                                  "dark": "#994708",
+                                  "dark": "#542400",
                                   "light": "#ff9a57",
-                                  "main": "#f06f0d",
+                                  "main": "#bf5000",
                                 },
                                 "white": Object {
                                   "main": "#FFFFFF",
@@ -11373,9 +11373,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "tonalOffset": 0.2,
                                   "type": "light",
                                   "warning": Object {
-                                    "dark": "#994708",
+                                    "dark": "#542400",
                                     "light": "#ff9a57",
-                                    "main": "#f06f0d",
+                                    "main": "#bf5000",
                                   },
                                   "white": Object {
                                     "main": "#FFFFFF",

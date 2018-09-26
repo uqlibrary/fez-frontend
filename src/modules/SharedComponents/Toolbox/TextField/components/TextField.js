@@ -13,10 +13,12 @@ const TextFieldWrapper = props => {
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const error = filteredProps.errorText;
     delete filteredProps.errorText;
+    console.log(props);
 
     return (
         <Fragment>
             <TextField {...filteredProps}
+                id={props.label || 'This is a test'}
                 helperText={error}
                 error={!!error}
                 InputLabelProps={filteredProps.floatinglabelfixed ? {shrink: true} : null}

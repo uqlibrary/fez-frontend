@@ -185,9 +185,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -483,9 +483,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                 "tonalOffset": 0.2,
                 "type": "light",
                 "warning": Object {
-                  "dark": "#994708",
+                  "dark": "#542400",
                   "light": "#ff9a57",
-                  "main": "#f06f0d",
+                  "main": "#bf5000",
                 },
                 "white": Object {
                   "main": "#FFFFFF",
@@ -870,9 +870,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -1853,9 +1853,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           "tonalOffset": 0.2,
                                                           "type": "light",
                                                           "warning": Object {
-                                                            "dark": "#994708",
+                                                            "dark": "#542400",
                                                             "light": "#ff9a57",
-                                                            "main": "#f06f0d",
+                                                            "main": "#bf5000",
                                                           },
                                                           "white": Object {
                                                             "main": "#FFFFFF",
@@ -6736,9 +6736,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -7034,9 +7034,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                 "tonalOffset": 0.2,
                 "type": "light",
                 "warning": Object {
-                  "dark": "#994708",
+                  "dark": "#542400",
                   "light": "#ff9a57",
-                  "main": "#f06f0d",
+                  "main": "#bf5000",
                 },
                 "white": Object {
                   "main": "#FFFFFF",
@@ -7415,9 +7415,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -8398,9 +8398,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           "tonalOffset": 0.2,
                                                           "type": "light",
                                                           "warning": Object {
-                                                            "dark": "#994708",
+                                                            "dark": "#542400",
                                                             "light": "#ff9a57",
-                                                            "main": "#f06f0d",
+                                                            "main": "#bf5000",
                                                           },
                                                           "white": Object {
                                                             "main": "#FFFFFF",
@@ -12272,9 +12272,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -12570,9 +12570,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                 "tonalOffset": 0.2,
                 "type": "light",
                 "warning": Object {
-                  "dark": "#994708",
+                  "dark": "#542400",
                   "light": "#ff9a57",
-                  "main": "#f06f0d",
+                  "main": "#bf5000",
                 },
                 "white": Object {
                   "main": "#FFFFFF",
@@ -12957,9 +12957,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -13940,9 +13940,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           "tonalOffset": 0.2,
                                                           "type": "light",
                                                           "warning": Object {
-                                                            "dark": "#994708",
+                                                            "dark": "#542400",
                                                             "light": "#ff9a57",
-                                                            "main": "#f06f0d",
+                                                            "main": "#bf5000",
                                                           },
                                                           "white": Object {
                                                             "main": "#FFFFFF",
@@ -18502,9 +18502,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -18800,9 +18800,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                 "tonalOffset": 0.2,
                 "type": "light",
                 "warning": Object {
-                  "dark": "#994708",
+                  "dark": "#542400",
                   "light": "#ff9a57",
-                  "main": "#f06f0d",
+                  "main": "#bf5000",
                 },
                 "white": Object {
                   "main": "#FFFFFF",
@@ -19181,9 +19181,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -20164,9 +20164,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                           "tonalOffset": 0.2,
                                                           "type": "light",
                                                           "warning": Object {
-                                                            "dark": "#994708",
+                                                            "dark": "#542400",
                                                             "light": "#ff9a57",
-                                                            "main": "#f06f0d",
+                                                            "main": "#bf5000",
                                                           },
                                                           "white": Object {
                                                             "main": "#FFFFFF",

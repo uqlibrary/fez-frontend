@@ -123,116 +123,123 @@ export default class ThesisSubmission extends Component {
                         onAction={this.props.handleSubmit}
                         locale={formLocale.thesisSubmission.depositConfirmation}
                     />
-
-                    <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={24}>
-                            <Grid item xs={12}>
-                                <Typography variant={'caption'} children={txt.information.fieldLabels.documentTitle.placeholder}/>
-                                <Field
-                                    component={RichEditorField}
-                                    name="thesisTitle"
-                                    disabled={this.props.submitting}
-                                    height={50}
-                                    validate={[validation.required]}/>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="currentAuthor.0.nameAsPublished"
-                                    type="text"
-                                    fullWidth
-                                    rows={1}
-                                    {...txt.information.fieldLabels.author}
-                                    required
-                                    validate={[validation.required]}/>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={ThesisSubtypeField}
-                                    itemsList={thesisSubmissionSubtypes}
-                                    name="rek_genre_type"
-                                    disabled={this.props.submitting}
-                                    validate={[validation.required]}
-                                    locale={txt.information.fieldLabels.thesisType}
-                                    required
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={OrgUnitNameField}
-                                    name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                                    disabled={this.props.submitting}
-                                    validate={[validation.required]}
-                                    required
-                                    {...txt.information.fieldLabels.orgUnitName}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Typography variant={'caption'} children={txt.optional.fieldLabels.abstract.label}/>
-                                <Field
-                                    component={RichEditorField}
-                                    disabled={this.props.submitting}
-                                    name="thesisAbstract"
-                                    validate={[validation.required]}/>
-                            </Grid>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.information.title} help={txt.information.help}>
+                                <Grid container spacing={24}>
+                                    <Grid item xs={12}>
+                                        <Typography variant={'caption'} children={txt.information.fieldLabels.documentTitle.placeholder}/>
+                                        <Field
+                                            component={RichEditorField}
+                                            name="thesisTitle"
+                                            disabled={this.props.submitting}
+                                            height={50}
+                                            validate={[validation.required]}/>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <Field
+                                            component={TextField}
+                                            disabled={this.props.submitting}
+                                            name="currentAuthor.0.nameAsPublished"
+                                            type="text"
+                                            fullWidth
+                                            rows={1}
+                                            {...txt.information.fieldLabels.author}
+                                            required
+                                            validate={[validation.required]}/>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <Field
+                                            component={ThesisSubtypeField}
+                                            itemsList={thesisSubmissionSubtypes}
+                                            name="rek_genre_type"
+                                            disabled={this.props.submitting}
+                                            validate={[validation.required]}
+                                            locale={txt.information.fieldLabels.thesisType}
+                                            required
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={OrgUnitNameField}
+                                            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                                            disabled={this.props.submitting}
+                                            validate={[validation.required]}
+                                            required
+                                            {...txt.information.fieldLabels.orgUnitName}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Typography variant={'caption'} children={txt.optional.fieldLabels.abstract.label}/>
+                                        <Field
+                                            component={RichEditorField}
+                                            disabled={this.props.submitting}
+                                            name="thesisAbstract"
+                                            validate={[validation.required]}/>
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
                         </Grid>
-                    </StandardCard>
+                        <Grid item xs={12}>
+                            <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    required
+                                    name="supervisors"
+                                    validate={[validation.supervisorRequired]}
+                                    locale={txtSupervisors.field}
+                                    disabled={this.props.submitting}
+                                />
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={txtFoR.title} help={txtFoR.help}>
+                                <Typography>{txtFoR.text}</Typography>
+                                <Field
+                                    component={FilteredFieldOfResearchListField}
+                                    name="fieldOfResearch"
+                                    required
+                                    validate={[validation.forRequired]}
+                                    hideReorder
+                                    distinctOnly
+                                    maxCount={3}
+                                    disabled={this.props.submitting}
+                                    locale={txtFoR.field}/>
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
+                                <Typography>{txt.keywords.description}</Typography>
+                                <Field
+                                    component={ListEditorField}
+                                    name="fez_record_search_key_keywords"
+                                    required
+                                    maxCount={10}
+                                    validate={[validation.requiredList]}
+                                    searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
+                                    locale={locale.components.keywordsForm.field}
+                                    disabled={this.props.submitting}/>
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
+                                <Field
+                                    name="files"
+                                    component={FileUploadField}
+                                    disabled={this.props.submitting}
+                                    locale={formLocale.thesisSubmission.fileUpload.locale}
+                                    defaultQuickTemplateId={this.props.fileAccessId}
+                                    validate={[validation.fileUploadRequired]}/>
+                            </StandardCard>
+                        </Grid>
 
-
-                    <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
-                        <Field
-                            component={ContributorsEditorField}
-                            required
-                            name="supervisors"
-                            validate={[validation.supervisorRequired]}
-                            locale={txtSupervisors.field}
-                            disabled={this.props.submitting}
-                        />
-                    </StandardCard>
-
-                    <StandardCard title={txtFoR.title} help={txtFoR.help}>
-                        <Typography>{txtFoR.text}</Typography>
-                        <Field
-                            component={FilteredFieldOfResearchListField}
-                            name="fieldOfResearch"
-                            required
-                            validate={[validation.forRequired]}
-                            hideReorder
-                            distinctOnly
-                            maxCount={3}
-                            disabled={this.props.submitting}
-                            locale={txtFoR.field}/>
-                    </StandardCard>
-
-                    <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
-                        <Typography>{txt.keywords.description}</Typography>
-                        <Field
-                            component={ListEditorField}
-                            name="fez_record_search_key_keywords"
-                            required
-                            maxCount={10}
-                            validate={[validation.requiredList]}
-                            searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
-                            locale={locale.components.keywordsForm.field}
-                            disabled={this.props.submitting}/>
-                    </StandardCard>
-
-                    <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
-                        <Field
-                            name="files"
-                            component={FileUploadField}
-                            disabled={this.props.submitting}
-                            locale={formLocale.thesisSubmission.fileUpload.locale}
-                            defaultQuickTemplateId={this.props.fileAccessId}
-                            validate={[validation.fileUploadRequired]}/>
-                    </StandardCard>
-
-                    {
-                        alertProps &&
-                        <Alert {...alertProps} />
-                    }
-
+                        {
+                            alertProps &&
+                            <Grid item xs={12}>
+                                <Alert {...alertProps} />
+                            </Grid>
+                        }
+                    </Grid>
                     <Grid container spacing={16}>
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm={'auto'}>

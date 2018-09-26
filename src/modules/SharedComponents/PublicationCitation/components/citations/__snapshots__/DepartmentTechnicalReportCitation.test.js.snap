@@ -183,9 +183,9 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -1149,9 +1149,9 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -1616,9 +1616,9 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -2597,9 +2597,9 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -3064,9 +3064,9 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -3397,9 +3397,9 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
