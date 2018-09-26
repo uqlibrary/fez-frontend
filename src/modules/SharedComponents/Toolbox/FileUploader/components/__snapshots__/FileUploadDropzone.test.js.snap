@@ -659,7 +659,6 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                           </InputLabel>
                         </WithStyles(InputLabel)>
                         <t
-                          aria-label="Click here to select files, or drag files into this area to upload"
                           disableClick={false}
                           disablePreview={true}
                           disabled={false}
@@ -681,7 +680,6 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                         >
                           <div
                             aria-disabled={false}
-                            aria-label="Click here to select files, or drag files into this area to upload"
                             className=""
                             onClick={[Function]}
                             onDragEnter={[Function]}
@@ -1641,7 +1639,6 @@ exports[`Component FileUploadDropzone should render component with default props
         Month
       </WithStyles(InputLabel)>
       <t
-        aria-label="Click here to select files, or drag files into this area to upload"
         disableClick={false}
         disablePreview={true}
         disabled={false}
@@ -2330,7 +2327,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                           </InputLabel>
                         </WithStyles(InputLabel)>
                         <t
-                          aria-label="Click here to select files, or drag files into this area to upload"
                           disableClick={true}
                           disablePreview={true}
                           disabled={true}
@@ -2352,7 +2348,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                         >
                           <div
                             aria-disabled={true}
-                            aria-label="Click here to select files, or drag files into this area to upload"
                             className=""
                             onClick={null}
                             onDragEnter={null}
