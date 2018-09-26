@@ -711,7 +711,6 @@ export default {
                 }
             }
         },
-
         fieldOfResearchForm: {
             title: 'Field of research',
             text: 'Select up to 3 Field of Research (FoR) codes at the 4 digit level',
@@ -1063,6 +1062,9 @@ export default {
             reddit: {linkTitle: 'Share this link via Reddit'},
             email: {linkTitle: 'Share this link via Email'},
             print: {linkTitle: 'Print this record'},
+        },
+        fileUploader: {
+            label: 'Click here to select files, or drag files into this area to upload'
         }
     }
 };

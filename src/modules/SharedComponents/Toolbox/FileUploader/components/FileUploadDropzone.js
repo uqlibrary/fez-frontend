@@ -3,8 +3,18 @@ import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
+import {withStyles} from '@material-ui/core/styles';
+import {locale as componentLocale} from 'locale';
 
-export default class FileUploadDropzone extends PureComponent {
+const styles = (theme) => ({
+    dropzone: {
+        '&:focus': {
+            outline: `${theme.palette.secondary.main} solid 2px !important`
+        }
+    }
+});
+
+export class FileUploadDropzone extends PureComponent {
     static propTypes = {
         onDrop: PropTypes.func.isRequired,
         maxSize: PropTypes.number.isRequired,
@@ -12,7 +22,8 @@ export default class FileUploadDropzone extends PureComponent {
         fileNameRestrictions: PropTypes.instanceOf(RegExp).isRequired,
         filesInQueue: PropTypes.array,
         fileUploadLimit: PropTypes.number,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -152,13 +163,14 @@ export default class FileUploadDropzone extends PureComponent {
     };
 
     render() {
-        const {maxSize, disabled, locale} = this.props;
+        const {maxSize, disabled, locale, classes} = this.props;
         return (
             <Grid container>
                 <Grid item xs={12}>
-                    <div tabIndex="0" onKeyPress={this._onKeyPress}>
+                    <div tabIndex="0" onKeyPress={this._onKeyPress} className={classes.dropzone}>
                         <Dropzone
                             ref={(ref) => {this.dropzoneRef = ref;}}
+                            aria-label={componentLocale.components.fileUploader.label}
                             maxSize={maxSize}
                             onDrop={this._onDrop}
                             style={{padding: '0px'}}
@@ -174,3 +186,5 @@ export default class FileUploadDropzone extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(FileUploadDropzone);
