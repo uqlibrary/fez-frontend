@@ -194,9 +194,9 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -635,9 +635,9 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   "tonalOffset": 0.2,
                   "type": "light",
                   "warning": Object {
-                    "dark": "#994708",
+                    "dark": "#542400",
                     "light": "#ff9a57",
-                    "main": "#f06f0d",
+                    "main": "#bf5000",
                   },
                   "white": Object {
                     "main": "#FFFFFF",
@@ -1727,9 +1727,9 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -2847,9 +2847,9 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -4323,9 +4323,9 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                         "tonalOffset": 0.2,
                                         "type": "light",
                                         "warning": Object {
-                                          "dark": "#994708",
+                                          "dark": "#542400",
                                           "light": "#ff9a57",
-                                          "main": "#f06f0d",
+                                          "main": "#bf5000",
                                         },
                                         "white": Object {
                                           "main": "#FFFFFF",
@@ -4776,9 +4776,9 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -5291,9 +5291,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -5732,9 +5732,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                   "tonalOffset": 0.2,
                   "type": "light",
                   "warning": Object {
-                    "dark": "#994708",
+                    "dark": "#542400",
                     "light": "#ff9a57",
-                    "main": "#f06f0d",
+                    "main": "#bf5000",
                   },
                   "white": Object {
                     "main": "#FFFFFF",
@@ -6824,9 +6824,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -7944,9 +7944,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -9420,9 +9420,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                         "tonalOffset": 0.2,
                                         "type": "light",
                                         "warning": Object {
-                                          "dark": "#994708",
+                                          "dark": "#542400",
                                           "light": "#ff9a57",
-                                          "main": "#f06f0d",
+                                          "main": "#bf5000",
                                         },
                                         "white": Object {
                                           "main": "#FFFFFF",
@@ -9873,9 +9873,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -10388,9 +10388,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -10829,9 +10829,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                   "tonalOffset": 0.2,
                   "type": "light",
                   "warning": Object {
-                    "dark": "#994708",
+                    "dark": "#542400",
                     "light": "#ff9a57",
-                    "main": "#f06f0d",
+                    "main": "#bf5000",
                   },
                   "white": Object {
                     "main": "#FFFFFF",
@@ -11921,9 +11921,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -13041,9 +13041,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -14517,9 +14517,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                         "tonalOffset": 0.2,
                                         "type": "light",
                                         "warning": Object {
-                                          "dark": "#994708",
+                                          "dark": "#542400",
                                           "light": "#ff9a57",
-                                          "main": "#f06f0d",
+                                          "main": "#bf5000",
                                         },
                                         "white": Object {
                                           "main": "#FFFFFF",
@@ -14970,9 +14970,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -15485,9 +15485,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -15926,9 +15926,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                   "tonalOffset": 0.2,
                   "type": "light",
                   "warning": Object {
-                    "dark": "#994708",
+                    "dark": "#542400",
                     "light": "#ff9a57",
-                    "main": "#f06f0d",
+                    "main": "#bf5000",
                   },
                   "white": Object {
                     "main": "#FFFFFF",
@@ -17018,9 +17018,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -18138,9 +18138,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -19614,9 +19614,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                         "tonalOffset": 0.2,
                                         "type": "light",
                                         "warning": Object {
-                                          "dark": "#994708",
+                                          "dark": "#542400",
                                           "light": "#ff9a57",
-                                          "main": "#f06f0d",
+                                          "main": "#bf5000",
                                         },
                                         "white": Object {
                                           "main": "#FFFFFF",
@@ -20067,9 +20067,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -20582,9 +20582,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -21023,9 +21023,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                   "tonalOffset": 0.2,
                   "type": "light",
                   "warning": Object {
-                    "dark": "#994708",
+                    "dark": "#542400",
                     "light": "#ff9a57",
-                    "main": "#f06f0d",
+                    "main": "#bf5000",
                   },
                   "white": Object {
                     "main": "#FFFFFF",
@@ -22115,9 +22115,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -23235,9 +23235,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -24711,9 +24711,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                         "tonalOffset": 0.2,
                                         "type": "light",
                                         "warning": Object {
-                                          "dark": "#994708",
+                                          "dark": "#542400",
                                           "light": "#ff9a57",
-                                          "main": "#f06f0d",
+                                          "main": "#bf5000",
                                         },
                                         "white": Object {
                                           "main": "#FFFFFF",
@@ -25164,9 +25164,9 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",

@@ -220,7 +220,6 @@ exports[`Component PublicationForm should render component initialised with just
         disabled={false}
         fullWidth={true}
         onClick={[MockFunction]}
-        variant="raised"
       >
         Abandon and search again
       </WithStyles(Button)>
@@ -486,7 +485,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         disabled={false}
         fullWidth={true}
         onClick={[MockFunction]}
-        variant="raised"
       >
         Abandon and search again
       </WithStyles(Button)>
@@ -770,7 +768,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
         disabled={false}
         fullWidth={true}
         onClick={[MockFunction]}
-        variant="raised"
       >
         Abandon and search again
       </WithStyles(Button)>
@@ -1055,7 +1052,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         disabled={false}
         fullWidth={true}
         onClick={[MockFunction]}
-        variant="raised"
       >
         Abandon and search again
       </WithStyles(Button)>
@@ -1339,7 +1335,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         disabled={false}
         fullWidth={true}
         onClick={[MockFunction]}
-        variant="raised"
       >
         Abandon and search again
       </WithStyles(Button)>
@@ -1599,7 +1594,6 @@ exports[`Component PublicationForm should render component with all fields disab
         disabled={true}
         fullWidth={true}
         onClick={[MockFunction]}
-        variant="raised"
       >
         Abandon and search again
       </WithStyles(Button)>

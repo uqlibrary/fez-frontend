@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
+import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
@@ -16,10 +17,17 @@ const moment = require('moment');
 const styles = theme => ({
     fakeTitle: {
         color: theme.palette.secondary.main,
-        opacity: 0.66,
         fontSize: 12,
         marginBottom: -100,
         marginTop: 0
+    },
+    hideLabel: {
+        position: 'absolute',
+        left: -10000,
+        top: 'auto',
+        width: 1,
+        height: 1,
+        overflow: 'hidden'
     }
 });
 
@@ -142,8 +150,10 @@ export class PartialDateForm extends Component {
                     <Typography variant="subheading" classes={{subheading: classes.fakeTitle}}>{this.props.floatingTitle}</Typography>
                 </Grid>
                 <Grid item xs={4}>
+                    <InputLabel htmlFor="day" className={this.props.classes.hideLabel}>Day</InputLabel>
                     <TextField
                         name="day"
+                        id="day"
                         type="text"
                         maxLength="2"
                         fullWidth
@@ -153,6 +163,7 @@ export class PartialDateForm extends Component {
                         onChange={this._onDateChanged('day')}
                         onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
                         placeholder={locale.dayLabel}
+                        inputProps={{label: 'day'}}
                     />
                     {
                         isError &&
@@ -160,9 +171,11 @@ export class PartialDateForm extends Component {
                     }
                 </Grid>
                 <Grid item xs={4}>
+                    <InputLabel htmlFor="month" className={this.props.classes.hideLabel}>Month</InputLabel>
                     <Select
                         style={{width: '100%'}}
                         name="month"
+                        id="month"
                         error={isError}
                         disabled={this.props.disabled}
                         value={this.state.month || -1}
@@ -173,8 +186,10 @@ export class PartialDateForm extends Component {
                     </Select>
                 </Grid>
                 <Grid item xs={4}>
+                    <InputLabel htmlFor="year" className={this.props.classes.hideLabel}>Year</InputLabel>
                     <TextField
                         name="year"
+                        id="year"
                         type="text"
                         fullWidth
                         maxLength="4"
@@ -184,6 +199,7 @@ export class PartialDateForm extends Component {
                         onKeyPress={this._isNumber}
                         onChange={this._onDateChanged('year')}
                         onBlur={this._onDateChanged('year')}
+                        inputProps={{label: 'year'}}
                     />
                 </Grid>
             </Grid>

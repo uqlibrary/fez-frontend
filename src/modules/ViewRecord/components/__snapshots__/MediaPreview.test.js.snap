@@ -183,9 +183,9 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -506,9 +506,9 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -1482,9 +1482,9 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -2510,9 +2510,9 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -2959,9 +2959,9 @@ exports[`Media Preview Component  should render component with image 1`] = `
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -3282,9 +3282,9 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -4258,9 +4258,9 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -5291,9 +5291,9 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -5690,9 +5690,9 @@ exports[`Media Preview Component  should render component with video 1`] = `
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -6013,9 +6013,9 @@ exports[`Media Preview Component  should render component with video 1`] = `
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -6989,9 +6989,9 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",
@@ -8025,9 +8025,9 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                                         "tonalOffset": 0.2,
                                                         "type": "light",
                                                         "warning": Object {
-                                                          "dark": "#994708",
+                                                          "dark": "#542400",
                                                           "light": "#ff9a57",
-                                                          "main": "#f06f0d",
+                                                          "main": "#bf5000",
                                                         },
                                                         "white": Object {
                                                           "main": "#FFFFFF",

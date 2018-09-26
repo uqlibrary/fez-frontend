@@ -183,9 +183,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -2779,9 +2779,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -3295,9 +3295,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -5891,9 +5891,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -6403,9 +6403,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -8999,9 +8999,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -9511,9 +9511,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -11999,9 +11999,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -12445,9 +12445,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -15041,9 +15041,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -15553,9 +15553,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -18134,9 +18134,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -18632,9 +18632,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -21213,9 +21213,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",
@@ -21725,9 +21725,9 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -22059,9 +22059,9 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
                       "tonalOffset": 0.2,
                       "type": "light",
                       "warning": Object {
-                        "dark": "#994708",
+                        "dark": "#542400",
                         "light": "#ff9a57",
-                        "main": "#f06f0d",
+                        "main": "#bf5000",
                       },
                       "white": Object {
                         "main": "#FFFFFF",

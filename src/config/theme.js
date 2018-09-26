@@ -25,8 +25,8 @@ export const mui1theme = createMuiTheme({
         },
         warning: {
             light: '#ff9a57',
-            main: '#f06f0d',
-            dark: '#994708',
+            main: '#bf5000',
+            dark: '#542400',
         },
         success: {
             light: '#00a700',

@@ -183,9 +183,9 @@ exports[`CitationCounts should not render View full statistics link on public pa
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -1076,9 +1076,9 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             "tonalOffset": 0.2,
                             "type": "light",
                             "warning": Object {
-                              "dark": "#994708",
+                              "dark": "#542400",
                               "light": "#ff9a57",
-                              "main": "#f06f0d",
+                              "main": "#bf5000",
                             },
                             "white": Object {
                               "main": "#FFFFFF",
@@ -1589,9 +1589,9 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -3288,9 +3288,9 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             "tonalOffset": 0.2,
                             "type": "light",
                             "warning": Object {
-                              "dark": "#994708",
+                              "dark": "#542400",
                               "light": "#ff9a57",
-                              "main": "#f06f0d",
+                              "main": "#bf5000",
                             },
                             "white": Object {
                               "main": "#FFFFFF",
@@ -3801,9 +3801,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -4713,9 +4713,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             "tonalOffset": 0.2,
                             "type": "light",
                             "warning": Object {
-                              "dark": "#994708",
+                              "dark": "#542400",
                               "light": "#ff9a57",
-                              "main": "#f06f0d",
+                              "main": "#bf5000",
                             },
                             "white": Object {
                               "main": "#FFFFFF",
@@ -5226,9 +5226,9 @@ exports[`CitationCounts should render component with no metrics 1`] = `
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
-                "dark": "#994708",
+                "dark": "#542400",
                 "light": "#ff9a57",
-                "main": "#f06f0d",
+                "main": "#bf5000",
               },
               "white": Object {
                 "main": "#FFFFFF",
@@ -5947,9 +5947,9 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                             "tonalOffset": 0.2,
                             "type": "light",
                             "warning": Object {
-                              "dark": "#994708",
+                              "dark": "#542400",
                               "light": "#ff9a57",
-                              "main": "#f06f0d",
+                              "main": "#bf5000",
                             },
                             "white": Object {
                               "main": "#FFFFFF",
