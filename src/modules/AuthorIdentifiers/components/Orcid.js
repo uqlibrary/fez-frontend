@@ -196,7 +196,7 @@ export default class Orcid extends Component {
                     onRef={this._setAuthoriseConfirmation}
                     locale={txt.grantAccessConfirmation} />
                 <Grid container spacing={24}>
-                    <Grid item xs={'12'}>
+                    <Grid item xs={12}>
                         {
                             this.getAlert({
                                 submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
@@ -206,9 +206,9 @@ export default class Orcid extends Component {
                             })
                         }
                     </Grid>
-                    <Grid item xs={'12'}>
+                    <Grid item xs={12}>
                         <StandardCard title={txt.linkOrcid.title}>
-                            <Typography gutterBottom>{txt.linkOrcid.description}</Typography>
+                            <Typography component={'span'} gutterBottom>{txt.linkOrcid.description}</Typography>
                             <Grid container spacing={16}>
                                 <Hidden xsDown>
                                     <Grid item xs />
@@ -226,9 +226,9 @@ export default class Orcid extends Component {
                             </Grid>
                         </StandardCard>
                     </Grid>
-                    <Grid item xs={'12'}>
+                    <Grid item xs={12}>
                         <StandardCard title={txt.createOrcid.title}>
-                            <Typography gutterBottom>{txt.createOrcid.description}</Typography>
+                            <Typography component={'span'} gutterBottom>{txt.createOrcid.description}</Typography>
                             <Grid container spacing={16}>
                                 <Hidden xsDown>
                                     <Grid item xs />

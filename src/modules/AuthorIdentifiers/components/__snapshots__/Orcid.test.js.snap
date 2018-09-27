@@ -28,7 +28,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
   >
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <WithStyles(Alert)
         message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
@@ -39,12 +39,13 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <StandardCard
         title="I already have an ORCID iD"
       >
         <WithStyles(Typography)
+          component="span"
           gutterBottom={true}
         >
           This option enables you to link your existing ORCID iD to UQ.
@@ -91,12 +92,13 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <StandardCard
         title="I need an ORCID iD"
       >
         <WithStyles(Typography)
+          component="span"
           gutterBottom={true}
         >
           <React.Fragment>
@@ -180,7 +182,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
   >
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <WithStyles(Alert)
         message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
@@ -191,12 +193,13 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <StandardCard
         title="I already have an ORCID iD"
       >
         <WithStyles(Typography)
+          component="span"
           gutterBottom={true}
         >
           This option enables you to link your existing ORCID iD to UQ.
@@ -243,12 +246,13 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <StandardCard
         title="I need an ORCID iD"
       >
         <WithStyles(Typography)
+          component="span"
           gutterBottom={true}
         >
           <React.Fragment>
@@ -332,16 +336,17 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
   >
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     />
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <StandardCard
         title="I already have an ORCID iD"
       >
         <WithStyles(Typography)
+          component="span"
           gutterBottom={true}
         >
           This option enables you to link your existing ORCID iD to UQ.
@@ -388,12 +393,13 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      xs="12"
+      xs={12}
     >
       <StandardCard
         title="I need an ORCID iD"
       >
         <WithStyles(Typography)
+          component="span"
           gutterBottom={true}
         >
           <React.Fragment>

@@ -9,6 +9,9 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme =>({
     researcherIDlink: {
+        '&:hover': {
+            cursor: 'pointer'
+        },
         '& .error': {
             '-webkit-filter': 'grayscale(1)',
             filter: 'grayscale(1)'
@@ -60,7 +63,7 @@ export class DashboardResearcherIds extends React.Component {
             }
         };
         const navigateToRoute = (event, item) => {
-            history.push(link.notLinkedUrl[item]);
+            this.props.history.push(link.notLinkedUrl[item]);
         };
         return (
             <Grid container spacing={8} alignItems={'center'} style={{marginTop: 12}}>
@@ -82,10 +85,11 @@ export class DashboardResearcherIds extends React.Component {
                         {/* Internal URL's - will be non-linked ID's only */}
                         {!values[item] && link.notLinkedUrl[item].indexOf('http') === -1 &&
                         <a tabIndex="0" onClick={(event) => navigateToRoute(event, item)}
+                            className={classes.researcherIDlink}
                             onKeyPress={(event) => navigateToRoute(event, item)}
                             title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
                             <div title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
-                                className={'fez-icon ' + item + ' dashboard ' + (values[item] && authenticated[item] ? 'ok' : 'error')}/>
+                                className={'fez-icon ' + item + ' dashboard ' + (values[item] && authenticated[item] ? ' ok' : ' error')}/>
                         </a>
                         }
                     </Grid>)
