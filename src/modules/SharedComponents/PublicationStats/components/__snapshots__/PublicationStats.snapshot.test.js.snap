@@ -2,13 +2,7 @@
 
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
-  >
+  <div>
     <WithStyles(Grid)
       container={true}
       spacing={16}
@@ -259,13 +253,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
 
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
-  >
+  <div>
     <WithStyles(Grid)
       container={true}
       spacing={16}
@@ -516,13 +504,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
 
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
-  >
+  <div>
     <WithStyles(Grid)
       container={true}
       spacing={16}
@@ -773,13 +755,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
 
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
-  >
+  <div>
     <WithStyles(Grid)
       container={true}
       spacing={16}
@@ -1036,13 +1012,7 @@ exports[`PublicationStats component should render an empty component 1`] = `
 
 exports[`PublicationStats component should render statistics with table and data 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
-  >
+  <div>
     <WithStyles(Grid)
       container={true}
       spacing={16}
