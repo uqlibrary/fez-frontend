@@ -6,8 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
+import {Popper} from 'react-popper';
 
 const styles = () => ({
     root: {
@@ -19,7 +18,9 @@ const styles = () => ({
     },
     paper: {
         height: 250,
-        overflowY: 'scroll'
+        overflowY: 'scroll',
+        position: 'fixed',
+        zIndex: 9999
     },
     inputRoot: {
         flexWrap: 'wrap',
@@ -175,21 +176,19 @@ export class AutoCompleteAsyncField extends Component {
                                         required: required
                                     })}
                                     {isOpen && itemsList.length > 0 ? (
-                                        <Popper id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start" transition>
-                                            {({TransitionProps}) => (
-                                                <Fade {...TransitionProps} timeout={350}>
-                                                    <Paper className={classes.paper} square>
-                                                        {itemsList.slice(0, maxResults).map((suggestion, index) => {
-                                                            return this.renderSuggestion({
-                                                                suggestion,
-                                                                index,
-                                                                itemProps: getItemProps({ item: suggestion }),
-                                                                highlightedIndex,
-                                                                selectedItem,
-                                                            });
-                                                        })}
-                                                    </Paper>
-                                                </Fade>
+                                        <Popper id="downshift-popper" open target={this.textInputRef} placement="bottom-start">
+                                            {() => (
+                                                <Paper className={classes.paper} square>
+                                                    {itemsList.slice(0, maxResults).map((suggestion, index) => {
+                                                        return this.renderSuggestion({
+                                                            suggestion,
+                                                            index,
+                                                            itemProps: getItemProps({ item: suggestion }),
+                                                            highlightedIndex,
+                                                            selectedItem,
+                                                        });
+                                                    })}
+                                                </Paper>
                                             )}
                                         </Popper>
                                     ) : null}
