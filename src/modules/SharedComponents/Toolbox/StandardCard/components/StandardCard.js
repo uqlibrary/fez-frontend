@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import CardHeader from '@material-ui/core/CardHeader';
 import {HelpIcon} from '../../HelpDrawer';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -13,29 +12,13 @@ const styles = theme => ({
         overflow: 'unset',
         fontWeight: theme.typography.fontWeightRegular
     },
-    cardContentPadding: {
-        padding: 24
-    },
     cardContentNoPadding: {
         padding: 0
-    },
-    cardHeader: {
-        padding: 24,
-        paddingBottom: 0
     },
     cardHeaderPurple: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.primary.main,
-        padding: 12,
         borderRadius: '4px 4px 0px 0px',
-        '& h2': {
-            paddingLeft: 12
-        }
-    },
-    cardContent: {
-    },
-    noPadding: {
-        padding: 0,
     },
     fullHeight: {
         border: '10px solid red',
@@ -65,31 +48,23 @@ class Cards extends Component {
             <Card className={classes.card} style={{...customBG, ...customTitle, ...fullHeight}}>
                 {
                     !this.props.noHeader &&
-                    <div className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
-                        <Grid container spacing={24}>
-                            {
-                                title ?
-                                    <Grid item xs>
-                                        <Typography variant={'title'} color={'inherit'}>{title}</Typography>
-                                    </Grid>
-                                    :
-                                    <Grid item xs/>
-                            }
-                            {
-                                help && help.text &&
-                                <Grid item>
-                                    <HelpIcon {...help}/>
-                                </Grid>
-                            }
-                        </Grid>
-                    </div>
+                    <CardHeader
+                        title={title}
+                        titleTypographyProps={{
+                            variant: 'title',
+                            color: 'inherit'
+                        }}
+                        action={
+                            !!help && !!help.text &&
+                            <HelpIcon {...help} />
+                        }
+                        classes={{
+                            root: darkHeader && classes.cardHeaderPurple || ''
+                        }}
+                    />
                 }
-                <CardContent className={this.props.noPadding ? classes.cardContentNoPadding : classes.cardContentPadding}>
-                    <Grid container>
-                        <Grid item xs={12} className={classes.cardContent}>
-                            {children}
-                        </Grid>
-                    </Grid>
+                <CardContent className={this.props.noPadding && classes.cardContentNoPadding || ''}>
+                    {children}
                 </CardContent>
             </Card>
         );

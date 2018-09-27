@@ -14,9 +14,7 @@ const styles = (theme) => ({
         },
         [theme.breakpoints.up('sm')]: {
             fontSize: '0.775rem',
-            marginLeft: 16,
-            fontWeight: 500,
-            lineHeight: '1.715em'
+            fontWeight: 500
         }
     },
     body1: {
@@ -25,17 +23,13 @@ const styles = (theme) => ({
         },
         [theme.breakpoints.up('sm')]: {
             fontSize: '0.775rem'
-        },
-        lineHeight: '1.715em',
-        marginLeft: 4
+        }
     },
     data: {
         fontSize: '0.8rem'
     },
     gridRow: {
-        padding: 8,
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        marginTop: 8
     }
 });
 export class GrantInformation extends PureComponent {
@@ -67,23 +61,25 @@ export class GrantInformation extends PureComponent {
     renderGrantDetail = (grantAgency, grantId, grantText, order) => {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
-            <Grid container key={order} spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
-                <Grid item xs={12} sm={3}>
-                    <this.GrantInformationCell
-                        grantAgency={txt.fez_record_search_key_grant_agency}
-                        grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && txt.fez_record_search_key_grant_id}
-                        className="header"
-                    />
+            <div style={{padding: 16}}>
+                <Grid container spacing={32} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
+                    <Grid item xs={12} sm={3}>
+                        <this.GrantInformationCell
+                            grantAgency={txt.fez_record_search_key_grant_agency}
+                            grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && txt.fez_record_search_key_grant_id}
+                            className="header"
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                        <this.GrantInformationCell
+                            grantAgency={grantAgency.rek_grant_agency}
+                            grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id}
+                            className={this.props.classes.data}
+                        />
+                        <Typography variant="body1">{grantText && grantText.rek_grant_text}</Typography>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                    <this.GrantInformationCell
-                        grantAgency={grantAgency.rek_grant_agency}
-                        grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id}
-                        className={this.props.classes.data}
-                    />
-                    <Typography variant="body1">{grantText && grantText.rek_grant_text}</Typography>
-                </Grid>
-            </Grid>
+            </div>
         );
     }
 
@@ -118,17 +114,14 @@ export class GrantInformation extends PureComponent {
 
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
-                <Grid id="grantInformation" container direction="row">
-                    <Grid item xs={12} className={this.props.classes.gridRow}>
-                        {
-                            fundingText &&
-                            <Typography variant="body1">{fundingText}</Typography>
-                        }
-                    </Grid>
-                    <Grid item xs={12}>
-                        {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication, !fundingText)}
-                    </Grid>
-                </Grid>
+                {
+                    fundingText &&
+                    <Typography id="grantInformation" variant="body1" gutterBottom>{fundingText}</Typography>
+                }
+                {
+                    this.props.publication.fez_record_search_key_grant_agency &&
+                    this.renderGrants(this.props.publication, !fundingText)
+                }
             </StandardCard>
         );
     }

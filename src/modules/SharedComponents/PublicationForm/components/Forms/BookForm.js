@@ -37,7 +37,7 @@ export default class BookForm extends Component {
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16} >
+                        <Grid container spacing={16}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

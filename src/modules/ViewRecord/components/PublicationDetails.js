@@ -16,7 +16,6 @@ const styles = (theme) => ({
         },
         [theme.breakpoints.up('sm')]: {
             fontSize: '0.775rem',
-            marginLeft: 16,
             fontWeight: 500
         }
     },
@@ -24,9 +23,7 @@ const styles = (theme) => ({
         fontSize: '0.8rem'
     },
     gridRow: {
-        padding: 8,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        marginTop: 8
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
     }
 });
 
@@ -37,12 +34,14 @@ export class PublicationDetails extends PureComponent {
     };
 
     ViewRecordRow = ({heading, data}) => (
-        <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
-            <Grid item xs={12} sm={3}>
-                <Typography variant="body2" classes={{root: this.props.classes.header}}>{heading}</Typography>
+        <div style={{padding: 16}}>
+            <Grid container spacing={32} className={this.props.classes.gridRow} alignItems="flex-start">
+                <Grid item xs={12} sm={3}>
+                    <Typography variant="body2" classes={{root: this.props.classes.header}}>{heading}</Typography>
+                </Grid>
+                <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
             </Grid>
-            <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
-        </Grid>
+        </div>
     );
 
     render() {
@@ -52,47 +51,39 @@ export class PublicationDetails extends PureComponent {
 
         return (
             <StandardCard title={locale.viewRecord.sections.publicationDetails}>
-                <Grid container direction="row">
-                    {
-                        this.props.publication.rek_display_type_lookup &&
-                        <Grid item xs={12}>
-                            <this.ViewRecordRow
-                                heading={locale.viewRecord.headings.default.publicationDetails.rek_display_type}
-                                data={this.props.publication.rek_display_type_lookup}
-                            />
-                        </Grid>
-                    }
-                    {
-                        this.props.publication.rek_subtype &&
-                        <Grid item xs={12}>
-                            <this.ViewRecordRow
-                                heading={locale.viewRecord.headings.default.publicationDetails.rek_subtype}
-                                data={this.props.publication.rek_subtype}
-                            />
-                        </Grid>
-                    }
-                    {
-                        this.props.publication.fez_record_search_key_ismemberof &&
-                        this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
-                        <Grid item xs={12}>
-                            <this.ViewRecordRow
-                                heading={locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof}
-                                data={(
-                                    <ul>
-                                        {
-                                            this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
-                                                collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
-                                                <li key={`collection-${index}`}>
-                                                    <Link to={pathConfig.list.collection(collection.rek_ismemberof, collection.rek_ismemberof_lookup)}>{collection.rek_ismemberof_lookup}</Link>
-                                                </li>
-                                            ))
-                                        }
-                                    </ul>
-                                )}
-                            />
-                        </Grid>
-                    }
-                </Grid>
+                {
+                    this.props.publication.rek_display_type_lookup &&
+                        <this.ViewRecordRow
+                            heading={locale.viewRecord.headings.default.publicationDetails.rek_display_type}
+                            data={this.props.publication.rek_display_type_lookup}
+                        />
+                }
+                {
+                    this.props.publication.rek_subtype &&
+                        <this.ViewRecordRow
+                            heading={locale.viewRecord.headings.default.publicationDetails.rek_subtype}
+                            data={this.props.publication.rek_subtype}
+                        />
+                }
+                {
+                    this.props.publication.fez_record_search_key_ismemberof &&
+                    this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
+                        <this.ViewRecordRow
+                            heading={locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof}
+                            data={(
+                                <ul>
+                                    {
+                                        this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
+                                            collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
+                                            <li key={`collection-${index}`}>
+                                                <Link to={pathConfig.list.collection(collection.rek_ismemberof, collection.rek_ismemberof_lookup)}>{collection.rek_ismemberof_lookup}</Link>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            )}
+                        />
+                }
             </StandardCard>
         );
     }

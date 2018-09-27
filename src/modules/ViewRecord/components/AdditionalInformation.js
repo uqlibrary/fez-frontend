@@ -22,7 +22,6 @@ const styles = (theme) => ({
         },
         [theme.breakpoints.up('sm')]: {
             fontSize: '0.775rem',
-            marginLeft: 16,
             fontWeight: 500
         }
     },
@@ -30,9 +29,7 @@ const styles = (theme) => ({
         fontSize: '0.8rem'
     },
     gridRow: {
-        padding: 8,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        marginTop: 8
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
     }
 });
 
@@ -44,10 +41,12 @@ export class AdditionalInformation extends PureComponent {
 
     renderRow = (heading, data) => {
         return (
-            <Grid container key={`additional-info-${heading}`} spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
-                <Grid item xs={12} sm={3}><Typography variant="body2" classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
-                <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
-            </Grid>
+            <div style={{padding: 16}}>
+                <Grid container spacing={32} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
+                    <Grid item xs={12} sm={3}><Typography variant="body1" classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
+                    <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
+                </Grid>
+            </div>
         );
     }
 
@@ -288,13 +287,9 @@ export class AdditionalInformation extends PureComponent {
 
         return (
             <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
-                <Grid container direction="row">
-                    <Grid item xs={12}>
-                        {
-                            this.renderColumns()
-                        }
-                    </Grid>
-                </Grid>
+                {
+                    this.renderColumns()
+                }
             </StandardCard>
         );
     }

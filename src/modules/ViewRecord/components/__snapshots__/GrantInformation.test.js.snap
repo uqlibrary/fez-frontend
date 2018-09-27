@@ -4,124 +4,132 @@ exports[`Grant Information Component  should not break if grant text is not in t
 <StandardCard
   title="Grant information"
 >
-  <WithStyles(Grid)
-    container={true}
-    direction="row"
-    id="grantInformation"
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
   >
     <WithStyles(Grid)
+      alignItems="flex-start"
       className="gridRow"
-      item={true}
-      xs={12}
-    />
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
+      container={true}
+      key="1"
+      spacing={32}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="1"
-        spacing={16}
+        item={true}
+        sm={3}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Health and Medical Research Council"
-            grantId={false}
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId={false}
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="2"
-        spacing={16}
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        <Component
           className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="Cancer Council Queensland"
-            grantId="1042819"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="3"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Breast Cancer Foundation"
-            grantId="CG-12-07 | CG-10-04"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+          grantAgency="National Health and Medical Research Council"
+          grantId={false}
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="2"
+      spacing={32}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId="Grant ID"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="Cancer Council Queensland"
+          grantId="1042819"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="3"
+      spacing={32}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId="Grant ID"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Breast Cancer Foundation"
+          grantId="CG-12-07 | CG-10-04"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
 </StandardCard>
 `;
 
@@ -129,130 +137,139 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
 <StandardCard
   title="Grant information"
 >
-  <WithStyles(Grid)
-    container={true}
-    direction="row"
+  <WithStyles(Typography)
+    gutterBottom={true}
     id="grantInformation"
+    variant="body1"
+  >
+    We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+  </WithStyles(Typography)>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
   >
     <WithStyles(Grid)
+      alignItems="flex-start"
       className="gridRow"
-      item={true}
-      xs={12}
+      container={true}
+      key="1"
+      spacing={32}
     >
-      <WithStyles(Typography)
-        variant="body1"
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
       >
-        We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
-      </WithStyles(Typography)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Health and Medical Research Council"
+          grantId={false}
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
     <WithStyles(Grid)
-      item={true}
-      xs={12}
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="2"
+      spacing={32}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="1"
-        spacing={16}
+        item={true}
+        sm={3}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Health and Medical Research Council"
-            grantId={false}
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId={false}
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="2"
-        spacing={16}
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        <Component
           className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="Cancer Council Queensland"
-            grantId={false}
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="3"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Breast Cancer Foundation"
-            grantId={false}
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+          grantAgency="Cancer Council Queensland"
+          grantId={false}
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="3"
+      spacing={32}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Breast Cancer Foundation"
+          grantId={false}
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
 </StandardCard>
 `;
 
@@ -262,130 +279,139 @@ exports[`Grant Information Component  should render component 1`] = `
 <StandardCard
   title="Grant information"
 >
-  <WithStyles(Grid)
-    container={true}
-    direction="row"
+  <WithStyles(Typography)
+    gutterBottom={true}
     id="grantInformation"
+    variant="body1"
+  >
+    We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+  </WithStyles(Typography)>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
   >
     <WithStyles(Grid)
+      alignItems="flex-start"
       className="gridRow"
-      item={true}
-      xs={12}
+      container={true}
+      key="1"
+      spacing={32}
     >
-      <WithStyles(Typography)
-        variant="body1"
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
       >
-        We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
-      </WithStyles(Typography)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId="Grant ID"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Health and Medical Research Council"
+          grantId="569645 | 1022263"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
     <WithStyles(Grid)
-      item={true}
-      xs={12}
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="2"
+      spacing={32}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="1"
-        spacing={16}
+        item={true}
+        sm={3}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Health and Medical Research Council"
-            grantId="569645 | 1022263"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId="Grant ID"
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="2"
-        spacing={16}
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        <Component
           className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="Cancer Council Queensland"
-            grantId="1042819"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="3"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Breast Cancer Foundation"
-            grantId="CG-12-07 | CG-10-04"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+          grantAgency="Cancer Council Queensland"
+          grantId="1042819"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="3"
+      spacing={32}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+          grantId="Grant ID"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Breast Cancer Foundation"
+          grantId="CG-12-07 | CG-10-04"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
 </StandardCard>
 `;
 
@@ -393,123 +419,132 @@ exports[`Grant Information Component  should render with publication without gra
 <StandardCard
   title="Grant information"
 >
-  <WithStyles(Grid)
-    container={true}
-    direction="row"
+  <WithStyles(Typography)
+    gutterBottom={true}
     id="grantInformation"
+    variant="body1"
+  >
+    We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+  </WithStyles(Typography)>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
   >
     <WithStyles(Grid)
+      alignItems="flex-start"
       className="gridRow"
-      item={true}
-      xs={12}
+      container={true}
+      key="1"
+      spacing={32}
     >
-      <WithStyles(Typography)
-        variant="body1"
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
       >
-        We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
-      </WithStyles(Typography)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Health and Medical Research Council"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
     <WithStyles(Grid)
-      item={true}
-      xs={12}
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="2"
+      spacing={32}
     >
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="1"
-        spacing={16}
+        item={true}
+        sm={3}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Health and Medical Research Council"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="2"
-        spacing={16}
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        <Component
           className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="Cancer Council Queensland"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="3"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgency="Grant agency"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            className="data"
-            grantAgency="National Breast Cancer Foundation"
-          />
-          <WithStyles(Typography)
-            variant="body1"
-          />
-        </WithStyles(Grid)>
+          grantAgency="Cancer Council Queensland"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-  </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      key="3"
+      spacing={32}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <Component
+          className="header"
+          grantAgency="Grant agency"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <Component
+          className="data"
+          grantAgency="National Breast Cancer Foundation"
+        />
+        <WithStyles(Typography)
+          variant="body1"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
 </StandardCard>
 `;

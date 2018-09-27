@@ -205,47 +205,51 @@ export class Files extends Component {
                             message={locale.viewRecord.fireFoxAlert.message}
                         />
                     }
-                    <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
-                        <Grid item xs={1}>&nbsp;</Grid>
-                        <Grid item sm={4} md={3}>
-                            <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.fileName}</Typography>
+                    <div style={{padding: 8}}>
+                        <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
+                            <Grid item xs={1}>&nbsp;</Grid>
+                            <Grid item sm={4} md={3}>
+                                <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.fileName}</Typography>
+                            </Grid>
+                            <Hidden xsDown>
+                                <Grid item sm={5}>
+                                    <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.description}</Typography>
+                                </Grid>
+                            </Hidden>
+                            <Hidden smDown>
+                                <Grid item md={1}>
+                                    <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.size}</Typography>
+                                </Grid>
+                            </Hidden>
+                            <Hidden xsDown>
+                                <Grid item sm={'auto'}/>
+                            </Hidden>
                         </Grid>
-                        <Hidden xsDown>
-                            <Grid item sm={5}>
-                                <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.description}</Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden smDown>
-                            <Grid item md={1}>
-                                <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.size}</Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden xsDown>
-                            <Grid item sm={'auto'}/>
-                        </Hidden>
-                    </Grid>
+                    </div>
                     {
                         fileData.map((item, index) => (
-                            <Grid container direction="row" alignItems="center" key={`file-${index}`} spacing={16} wrap={'nowrap'} style={{marginTop: 6}}>
-                                <Grid item xs={1}>
-                                    {item.icon}
+                            <div style={{padding: 8}}>
+                                <Grid container direction="row" alignItems="center" key={`file-${index}`} spacing={16} wrap={'nowrap'} style={{marginTop: 6}}>
+                                    <Grid item xs={1}>
+                                        {item.icon}
+                                    </Grid>
+                                    <Grid item sm={4} md={3} className={this.props.classes.dataWrapper}>
+                                        <FileName
+                                            {...item}
+                                            onFileSelect={this.showPreview}
+                                        />
+                                    </Grid>
+                                    <Hidden xsDown>
+                                        <Grid item sm={5} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.description}</Typography></Grid>
+                                    </Hidden>
+                                    <Hidden smDown>
+                                        <Grid item md={1} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.calculatedSize}</Typography></Grid>
+                                    </Hidden>
+                                    <Hidden xsDown>
+                                        <Grid item sm style={{textAlign: 'right'}}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
+                                    </Hidden>
                                 </Grid>
-                                <Grid item sm={4} md={3} className={this.props.classes.dataWrapper}>
-                                    <FileName
-                                        {...item}
-                                        onFileSelect={this.showPreview}
-                                    />
-                                </Grid>
-                                <Hidden xsDown>
-                                    <Grid item sm={5} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.description}</Typography></Grid>
-                                </Hidden>
-                                <Hidden smDown>
-                                    <Grid item md={1} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.calculatedSize}</Typography></Grid>
-                                </Hidden>
-                                <Hidden xsDown>
-                                    <Grid item sm style={{textAlign: 'right'}}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
-                                </Hidden>
-                            </Grid>
+                            </div>
                         ))
                     }
                 </StandardCard>

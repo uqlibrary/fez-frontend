@@ -7,244 +7,260 @@ exports[`Files Component  should not render cultural message 1`] = `
   <StandardCard
     title="Files"
   >
-    <WithStyles(Grid)
-      alignItems="center"
-      className="header"
-      container={true}
-      direction="row"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-         
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={5}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Description
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Size
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-        />
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-0"
-      spacing={16}
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
       >
-        <WithStyles(Thumbnail)
-          fileName="web_image.jpg"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-          mimeType="image/jpeg"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-          thumbnailFileName="thumbnail_image.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-        />
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+          />
+        </Hidden>
       </WithStyles(Grid)>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
       <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="95.49 KB"
-          description="testing image description"
-          fileName="image.jpg"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="web_image.jpg"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-          mimeType="image/jpeg"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453695,
-            }
-          }
-          pid="UQ:676287"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-          thumbnailFileName="thumbnail_image.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            testing image description
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            95.49 KB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453695}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
   </StandardCard>
 </section>
 `;
@@ -260,953 +276,1009 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       title="FireFox Users"
       type="help_outline"
     />
-    <WithStyles(Grid)
-      alignItems="center"
-      className="header"
-      container={true}
-      direction="row"
-      spacing={16}
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-         
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
         >
           <WithStyles(Typography)
             gutterBottom={true}
             variant="caption"
           >
-            Description
+            File name
           </WithStyles(Typography)>
         </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
           >
-            Size
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-        />
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-0"
-      spacing={16}
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Thumbnail)
-          fileName="CH7409_movie_1.mov"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
-          mimeType="video/quicktime"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="2.86 MB"
-          description="Movie 1"
-          fileName="CH7409_movie_1.mov"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="CH7409_movie_1.mov"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
-              mimeType="video/quicktime"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
-              thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
-          mimeType="video/quicktime"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453697,
-            }
-          }
-          pid="UQ:185044"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            Movie 1
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            2.86 MB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453697}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="CH7409_movie_1.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-1"
-      spacing={16}
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="2.86 MB"
+            description="Movie 1"
+            fileName="CH7409_movie_1.mov"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="CH7409_movie_1.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_1.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              Movie 1
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              2.86 MB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453697}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Thumbnail)
-          fileName="CH7409_movie_2.mov"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
-          mimeType="video/quicktime"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="2.62 MB"
-          description="Movie 2"
-          fileName="CH7409_movie_2.mov"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="CH7409_movie_2.mov"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
-              mimeType="video/quicktime"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
-              thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
-          mimeType="video/quicktime"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453697,
-            }
-          }
-          pid="UQ:185044"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            Movie 2
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            2.62 MB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453697}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="CH7409_movie_2.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-2"
-      spacing={16}
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="2.62 MB"
+            description="Movie 2"
+            fileName="CH7409_movie_2.mov"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="CH7409_movie_2.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_2.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              Movie 2
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              2.62 MB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453697}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Thumbnail)
-          fileName="CH7409_movie_3.mov"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
-          mimeType="video/quicktime"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="2.86 MB"
-          description="Movie 3"
-          fileName="CH7409_movie_3.mov"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="CH7409_movie_3.mov"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
-              mimeType="video/quicktime"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
-              thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-2"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
-          mimeType="video/quicktime"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453697,
-            }
-          }
-          pid="UQ:185044"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            Movie 3
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            2.86 MB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453697}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="CH7409_movie_3.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-3"
-      spacing={16}
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="2.86 MB"
+            description="Movie 3"
+            fileName="CH7409_movie_3.mov"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="CH7409_movie_3.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_3.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              Movie 3
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              2.86 MB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453697}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Thumbnail)
-          fileName="CH7409_movie_4.mov"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
-          mimeType="video/quicktime"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="4.29 MB"
-          description="Movie 4"
-          fileName="CH7409_movie_4.mov"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="CH7409_movie_4.mov"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
-              mimeType="video/quicktime"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
-              thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-3"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
-          mimeType="video/quicktime"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453697,
-            }
-          }
-          pid="UQ:185044"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            Movie 4
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            4.29 MB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453697}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="CH7409_movie_4.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-4"
-      spacing={16}
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="4.29 MB"
+            description="Movie 4"
+            fileName="CH7409_movie_4.mov"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="CH7409_movie_4.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_4.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              Movie 4
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              4.29 MB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453697}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Thumbnail)
-          fileName="CH7409_movie_5.mov"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
-          mimeType="video/quicktime"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="1.12 MB"
-          description="Movie 5"
-          fileName="CH7409_movie_5.mov"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="CH7409_movie_5.mov"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
-              mimeType="video/quicktime"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
-              thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-4"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
-          mimeType="video/quicktime"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453697,
-            }
-          }
-          pid="UQ:185044"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
-          thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            Movie 5
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            1.12 MB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453697}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="CH7409_movie_5.mov"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            mimeType="video/quicktime"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-5"
-      spacing={16}
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="1.12 MB"
+            description="Movie 5"
+            fileName="CH7409_movie_5.mov"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="CH7409_movie_5.mov"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+                mimeType="video/quicktime"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+                thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            mimeType="video/quicktime"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/CH7409_movie_5.mov"
+            thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              Movie 5
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              1.12 MB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453697}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-        <pure(PictureAsPdfIcon)
-          color="secondary"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="6.67 MB"
-          description="Technical report PDF file"
-          fileName="ch7409_report.pdf"
-          icon={
-            <pure(PictureAsPdfIcon)
-              className={undefined}
-              color="secondary"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-5"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/ch7409_report.pdf"
-          mimeType="application/pdf"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453697,
-            }
-          }
-          pid="UQ:185044"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/ch7409_report.pdf"
-          thumbnailFileName={false}
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            Technical report PDF file
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            6.67 MB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453697}
-            showEmbargoText={false}
+          <pure(PictureAsPdfIcon)
+            color="secondary"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="6.67 MB"
+            description="Technical report PDF file"
+            fileName="ch7409_report.pdf"
+            icon={
+              <pure(PictureAsPdfIcon)
+                className={undefined}
+                color="secondary"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/ch7409_report.pdf"
+            mimeType="application/pdf"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453697,
+              }
+            }
+            pid="UQ:185044"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:185044/ch7409_report.pdf"
+            thumbnailFileName={false}
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              Technical report PDF file
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              6.67 MB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453697}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
   </StandardCard>
 </section>
 `;
@@ -1216,244 +1288,260 @@ exports[`Files Component  should render component 1`] = `
   <StandardCard
     title="Files"
   >
-    <WithStyles(Grid)
-      alignItems="center"
-      className="header"
-      container={true}
-      direction="row"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-         
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={5}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Description
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Size
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-        />
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-0"
-      spacing={16}
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
       >
-        <WithStyles(Thumbnail)
-          fileName="web_image.jpg"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-          mimeType="image/jpeg"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-          thumbnailFileName="thumbnail_image.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-        />
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+          />
+        </Hidden>
       </WithStyles(Grid)>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
       <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="95.49 KB"
-          description="testing image description"
-          fileName="image.jpg"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="web_image.jpg"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-          mimeType="image/jpeg"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453695,
-            }
-          }
-          pid="UQ:676287"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-          thumbnailFileName="thumbnail_image.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            testing image description
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            95.49 KB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453695}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
   </StandardCard>
 </section>
 `;
@@ -1469,244 +1557,260 @@ exports[`Files Component  should render cultural message 1`] = `
       message="hello"
       type="info"
     />
-    <WithStyles(Grid)
-      alignItems="center"
-      className="header"
-      container={true}
-      direction="row"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={1}
-      >
-         
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={5}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Description
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Size
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-        />
-      </Hidden>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      key="file-0"
-      spacing={16}
+    <div
       style={
         Object {
-          "marginTop": 6,
+          "padding": 8,
         }
       }
-      wrap="nowrap"
     >
       <WithStyles(Grid)
-        item={true}
-        xs={1}
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
       >
-        <WithStyles(Thumbnail)
-          fileName="web_image.jpg"
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-          mimeType="image/jpeg"
-          onClick={[Function]}
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-          thumbnailFileName="thumbnail_image.jpg"
-          thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-        />
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+          />
+        </Hidden>
       </WithStyles(Grid)>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
       <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <FileName
-          allowDownload={true}
-          calculatedSize="95.49 KB"
-          description="testing image description"
-          fileName="image.jpg"
-          icon={
-            <WithStyles(Thumbnail)
-              fileName="web_image.jpg"
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-            />
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 6,
           }
-          mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-          mimeType="image/jpeg"
-          onFileSelect={[Function]}
-          openAccessStatus={
-            Object {
-              "embargoDate": null,
-              "isOpenAccess": true,
-              "openAccessStatusId": 453695,
-            }
-          }
-          pid="UQ:676287"
-          previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-          thumbnailFileName="thumbnail_image.jpg"
-        />
-      </WithStyles(Grid)>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+        }
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          sm={5}
+          xs={1}
         >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            testing image description
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          md={1}
-        >
-          <WithStyles(Typography)
-            caption="body2"
-            noWrap={true}
-          >
-            95.49 KB
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={true}
-          style={
-            Object {
-              "textAlign": "right",
-            }
-          }
-        >
-          <OpenAccessIcon
-            embargoDate={null}
-            isOpenAccess={true}
-            openAccessStatusId={453695}
-            showEmbargoText={false}
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
           />
         </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={3}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={5}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={1}
+          >
+            <WithStyles(Typography)
+              caption="body2"
+              noWrap={true}
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
   </StandardCard>
 </section>
 `;
