@@ -8,10 +8,7 @@ const styles = theme => ({
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',
-        padding: 0,
-        [theme.breakpoints.down('sm')]: {
-            margin: '0 auto 24px auto'
-        },
+        padding: 0
     },
     layoutTitle: {
         maxWidth: 1200,
