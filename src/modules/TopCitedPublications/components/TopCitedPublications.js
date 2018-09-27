@@ -105,13 +105,12 @@ export class TopCitedPublications extends PureComponent {
                         {/* Content */}
                         {reorderedItems.map(({key, values}) => (
                             values && values.length >= 1 && (this.state.TopCitedTab === key) &&
-                                <Grid container alignItems={'flex-end'} key={key} spacing={0}>
-                                    <Grid item>
+                                <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} spacing={0} style={{marginTop: 18}}>
+                                    <Grid item xs>
                                         <Typography key={key} variant={'title'}><div key={key} className={`fez-icon ${key} xxlarge`}/> {txt[key].heading}</Typography>
                                     </Grid>
-                                    <Grid item xs />
-                                    <Grid item>
-                                        <HelpIcon style={{marginBottom: -24}} {...locale.components.trendingPublicationHelp}/>
+                                    <Grid item xs={'auto'} style={{marginTop: -12}}>
+                                        <HelpIcon {...locale.components.trendingPublicationHelp}/>
                                     </Grid>
                                     <Grid item xs={12} style={{paddingTop: 24}} id={'topCitedPublications'}>
                                         <PublicationsList
