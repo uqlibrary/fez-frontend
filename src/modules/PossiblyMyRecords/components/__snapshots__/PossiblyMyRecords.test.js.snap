@@ -157,7 +157,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       xs={12}
     >
       <StandardCard
-        title="Possibly your publications"
+        noHeader={true}
       >
         <React.Fragment>
           <WithStyles(Grid)

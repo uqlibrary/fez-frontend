@@ -212,7 +212,7 @@ export default class PossiblyMyRecords extends PureComponent {
                         // results to display or loading if user is filtering/paging
                         this.state.hasPublications && (this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length > 0) &&
                         <Grid item xs={12} md={9}>
-                            <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
+                            <StandardCard noHeader>
                                 {
                                     this.props.loadingPossiblePublicationsList &&
                                     <Grid container>

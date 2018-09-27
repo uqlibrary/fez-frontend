@@ -85,7 +85,7 @@ export class TopCitedPublications extends PureComponent {
         return (
             <React.Fragment>
                 {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0 ?
-                    <StandardCard>
+                    <StandardCard noHeader>
                         <Tabs
                             className={classes.tabs}
                             classes={{indicator: classes.tabIndicator}}

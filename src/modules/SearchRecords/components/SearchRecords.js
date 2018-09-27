@@ -227,7 +227,7 @@ class SearchRecords extends PureComponent {
             <StandardPage className="page-search-records">
                 <Grid container spacing={24}>
                     <Grid item xs={12}>
-                        <StandardCard className="searchComponent">
+                        <StandardCard className="searchComponent" noHeader>
                             <SearchComponent
                                 className="search-body"
                                 showAdvancedSearchButton activeFacets={this.state.activeFacets}

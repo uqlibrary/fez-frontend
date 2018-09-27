@@ -125,7 +125,9 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <span>
           Displaying records 1 to 20 of 147 total records. 
         </span>
@@ -257,7 +259,9 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <span>
           Displaying records 1 to 20 of 147 total records. 
         </span>
@@ -500,7 +504,9 @@ exports[`MyRecords test renders loading screen while export publications loading
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -618,7 +624,9 @@ exports[`MyRecords test renders loading screen while loading publications while 
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Grid)
           container={true}
           spacing={16}

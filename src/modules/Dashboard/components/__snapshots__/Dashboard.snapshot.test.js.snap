@@ -82,7 +82,9 @@ exports[`Dashboard test does render latest and trending publications tabs correc
       item={true}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Tabs)
           centered={true}
           classes={
@@ -221,7 +223,9 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
       item={true}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Tabs)
           centered={true}
           classes={
@@ -753,7 +757,9 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
       item={true}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Tabs)
           centered={true}
           classes={

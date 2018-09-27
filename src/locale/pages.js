@@ -255,7 +255,7 @@ export default {
                 // }
             },
             searchResults: {
-                title: 'Possibly your publications',
+                // title: 'Possibly your publications',
                 text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
                 // help: {
                 //     title: 'Possibly your publications',

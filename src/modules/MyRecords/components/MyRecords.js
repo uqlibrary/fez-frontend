@@ -186,7 +186,7 @@ export default class MyRecords extends PureComponent {
                         // results to display or loading if user is filtering/paging
                         this.state.hasPublications && (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) &&
                         <Grid item xs={12} md={9}>
-                            <StandardCard>
+                            <StandardCard noHeader>
                                 {
                                     pagingData && pagingData.to && pagingData.from && pagingData.total &&
                                         <span>

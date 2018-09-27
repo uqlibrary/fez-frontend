@@ -232,7 +232,7 @@ export class Dashboard extends PureComponent {
                     {
                         !loading && userHasPublications && (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) &&
                         <Grid item xs={12}>
-                            <StandardCard>
+                            <StandardCard noHeader>
                                 <Tabs className={classes.tabs}
                                     classes={{indicator: classes.tabIndicator}}
                                     value={this.state.dashboardPubsTabs}

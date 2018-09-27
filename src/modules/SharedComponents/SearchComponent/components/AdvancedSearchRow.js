@@ -143,16 +143,16 @@ export class AdvancedSearchRow extends PureComponent {
                             </Grid>
                             {
                                 this.props.rowIndex !== 0 &&
-                        <Grid item className={classes.advancedSearchRowDeleteButton}>
-                            <IconButton
-                                style={{float: 'right'}}
-                                aria-label={txt.deleteAria}
-                                className="deleteFieldButton"
-                                onClick={this._deleteRow}
-                            >
-                                <Close/>
-                            </IconButton>
-                        </Grid>
+                                <Grid item className={classes.advancedSearchRowDeleteButton}>
+                                    <IconButton
+                                        style={{float: 'right'}}
+                                        aria-label={txt.deleteAria}
+                                        className="deleteFieldButton"
+                                        onClick={this._deleteRow}
+                                    >
+                                        <Close/>
+                                    </IconButton>
+                                </Grid>
                             }
                             <Hidden mdUp>
                                 <Grid item xs={12}><Divider className={classes.mobileRowSpacer}/></Grid>

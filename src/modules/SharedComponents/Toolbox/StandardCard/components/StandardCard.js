@@ -10,21 +10,19 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     card: {
-        // marginBottom: 24
-    },
-    cardHeaderPurple: {
-        margin: '12px 12px 0 12px',
-        color: theme.palette.white.main,
-        backgroundColor: theme.palette.primary.main,
-        '& h2': {
-            paddingLeft: 12
-        },
+        overflow: 'unset'
     },
     cardHeader: {
-        margin: '24px 12px 0 12px',
+        padding: 24,
+        paddingBottom: 0
+    },
+    cardHeaderPurple: {
+        color: theme.palette.white.main,
+        backgroundColor: theme.palette.primary.main,
+        padding: 12,
         '& h2': {
             paddingLeft: 12
-        },
+        }
     },
     cardContent: {
         fontWeight: theme.typography.fontWeightRegular
@@ -60,25 +58,27 @@ class Cards extends Component {
             <Card className={classes.card} style={{...customBG, ...customTitle, ...fullHeight}}>
                 {
                     !this.props.noHeader &&
-                    <Grid container spacing={24}>
-                        {
-                            title ?
-                                <Grid item xs className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
-                                    <Typography variant={'title'} color={'inherit'}>{title}</Typography>
+                    <div className={darkHeader && classes.cardHeaderPurple || classes.cardHeader}>
+                        <Grid container spacing={24}>
+                            {
+                                title ?
+                                    <Grid item xs>
+                                        <Typography variant={'title'} color={'inherit'}>{title}</Typography>
+                                    </Grid>
+                                    :
+                                    <Grid item xs/>
+                            }
+                            {
+                                help && help.text &&
+                                <Grid item>
+                                    <HelpIcon {...help}/>
                                 </Grid>
-                                :
-                                <Grid item xs/>
-                        }
-                        {
-                            help && help.text &&
-                            <Grid item>
-                                <HelpIcon {...help}/>
-                            </Grid>
-                        }
-                    </Grid>
+                            }
+                        </Grid>
+                    </div>
                 }
-                <CardContent classes={this.props.noPadding ? {root: classes.noPadding} : {}}>
-                    <Grid container spacing={24}>
+                <CardContent>
+                    <Grid container spacing={this.props.noPadding ? 0 : 24}>
                         <Grid item xs={12} className={classes.cardContent}>
                             {children}
                         </Grid>

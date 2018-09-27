@@ -24,7 +24,9 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
 
 exports[`Component TopCitedPublications should render top cited publications 1`] = `
 <React.Fragment>
-  <StandardCard>
+  <StandardCard
+    noHeader={true}
+  >
     <WithStyles(Tabs)
       centered={true}
       classes={

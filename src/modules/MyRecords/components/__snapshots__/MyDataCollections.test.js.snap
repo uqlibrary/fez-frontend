@@ -56,7 +56,9 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
@@ -178,7 +180,9 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
@@ -428,7 +432,9 @@ exports[`myDatasets test renders loading screen while loading publications while
       md={9}
       xs={12}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Grid)
           container={true}
           spacing={16}
