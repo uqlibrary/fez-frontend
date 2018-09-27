@@ -37,108 +37,105 @@ export class PublicationStats extends Component {
         return (
             <React.Fragment>
                 {/* Header */}
-                <div style={{margin: -16}}>
-                    <Grid container spacing={16} className={classes.header} >
-                        <Grid item xs={6}>
-                            <Typography  color={'inherit'}>{txt.publicationStatsTitle1}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'center'}}>
-                            <Typography  color={'inherit'}>{txt.publicationStatsTitle2}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'right'}}>
-                            <Typography  color={'inherit'}>{txt.publicationStatsTitle3}</Typography>
-                        </Grid>
+                <Grid container className={classes.header} >
+                    <Grid item xs={6}>
+                        <Typography  color={'inherit'} gutterBottom>{txt.publicationStatsTitle1}</Typography>
                     </Grid>
-                    {/* Header */}
-
-                    {/* Total pubs */}
-                    <Grid container spacing={16} className={classes.data} >
-                        <Grid item xs={6}>
-                            <Typography >{txt.publicationStatsRowTitle4}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'center'}}>
-                            <Typography >{pubStats.thomson_citation_count_i.count}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'right'}}>
-                            <Typography  >{pubStats.scopus_citation_count_i.count}</Typography>
-                        </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography  color={'inherit'} gutterBottom>{txt.publicationStatsTitle2}</Typography>
                     </Grid>
-                    <Divider />
-                    {/* Total pubs */}
-
-                    {/* Range */}
-                    <Grid container spacing={16} className={classes.data} >
-                        <Grid item xs={6}>
-                            <Typography >{txt.publicationStatsRowTitle5}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'center'}}>
-                            <Typography >{pubStats.thomson_citation_count_i.years}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'right'}}>
-                            <Typography  >{pubStats.scopus_citation_count_i.years}</Typography>
-                        </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  color={'inherit'} gutterBottom>{txt.publicationStatsTitle3}</Typography>
                     </Grid>
-                    <Divider />
-                    {/* Range */}
+                </Grid>
+                {/* Header */}
 
-                    {/* hindex */}
-                    <Grid container spacing={16} className={classes.data} >
-                        <Grid item xs={6}>
-                            <Typography >{txt.publicationStatsRowTitle1}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'center'}}>
-                            <Typography >
-                                {
-                                    !pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === ''
-                                    || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0'
-                                        ? txt.publicationStatsNA
-                                        : pubStats.thomson_citation_count_i.hindex.toFixed(0)
-                                }
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'right'}}>
-                            <Typography  >
-                                {
-                                    !pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === ''
-                                    || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0'
-                                        ? txt.publicationStatsNA
-                                        : pubStats.scopus_citation_count_i.hindex.toFixed(0)
-                                }
-                            </Typography>
-                        </Grid>
+                {/* Total pubs */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle4}</Typography>
                     </Grid>
-                    <Divider />
-                    {/* hindex */}
-
-                    {/* Average */}
-                    <Grid container spacing={16} className={classes.data} >
-                        <Grid item xs={6}>
-                            <Typography >{txt.publicationStatsRowTitle2}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'center'}}>
-                            <Typography >{pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'right'}}>
-                            <Typography  >{pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}</Typography>
-                        </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.count}</Typography>
                     </Grid>
-                    <Divider />
-                    {/* Average */}
-
-                    {/* Total citations */}
-                    <Grid container spacing={16} className={classes.data} >
-                        <Grid item xs={6}>
-                            <Typography >{txt.publicationStatsRowTitle3}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'center'}}>
-                            <Typography >{pubStats.thomson_citation_count_i.sum}</Typography>
-                        </Grid>
-                        <Grid item xs={3} style={{textAlign: 'right'}}>
-                            <Typography  >{pubStats.scopus_citation_count_i.sum}</Typography>
-                        </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.count}</Typography>
                     </Grid>
+                </Grid>
+                <Divider />
+                {/* Total pubs */}
 
-                </div>
+                {/* Range */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle5}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.years}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.years}</Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* Range */}
+
+                {/* hindex */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle1}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >
+                            {
+                                !pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === ''
+                                || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0'
+                                    ? txt.publicationStatsNA
+                                    : pubStats.thomson_citation_count_i.hindex.toFixed(0)
+                            }
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >
+                            {
+                                !pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === ''
+                                || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0'
+                                    ? txt.publicationStatsNA
+                                    : pubStats.scopus_citation_count_i.hindex.toFixed(0)
+                            }
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* hindex */}
+
+                {/* Average */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle2}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}</Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* Average */}
+
+                {/* Total citations */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle3}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.sum}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.sum}</Typography>
+                    </Grid>
+                </Grid>
                 {/* Total citations */}
 
             </React.Fragment>

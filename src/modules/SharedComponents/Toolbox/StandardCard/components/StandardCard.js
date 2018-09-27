@@ -10,7 +10,14 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     card: {
-        overflow: 'unset'
+        overflow: 'unset',
+        fontWeight: theme.typography.fontWeightRegular
+    },
+    cardContentPadding: {
+        padding: 24
+    },
+    cardContentNoPadding: {
+        padding: 0
     },
     cardHeader: {
         padding: 24,
@@ -26,7 +33,6 @@ const styles = theme => ({
         }
     },
     cardContent: {
-        fontWeight: theme.typography.fontWeightRegular
     },
     noPadding: {
         padding: 0,
@@ -78,8 +84,8 @@ class Cards extends Component {
                         </Grid>
                     </div>
                 }
-                <CardContent>
-                    <Grid container spacing={this.props.noPadding ? 0 : 24}>
+                <CardContent className={this.props.noPadding ? classes.cardContentNoPadding : classes.cardContentPadding}>
+                    <Grid container>
                         <Grid item xs={12} className={classes.cardContent}>
                             {children}
                         </Grid>

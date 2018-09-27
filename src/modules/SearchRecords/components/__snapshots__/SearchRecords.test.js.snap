@@ -118,7 +118,9 @@ exports[`SearchRecords page should render loading screen while export publicatio
       sm={true}
       xs={true}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Grid)
           container={true}
           spacing={16}
@@ -224,7 +226,9 @@ exports[`SearchRecords page should render loading screen while loading publicati
       sm={true}
       xs={true}
     >
-      <StandardCard>
+      <StandardCard
+        noHeader={true}
+      >
         <WithStyles(Grid)
           container={true}
           spacing={16}

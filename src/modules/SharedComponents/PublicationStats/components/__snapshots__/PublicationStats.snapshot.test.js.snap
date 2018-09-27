@@ -2,1029 +2,1005 @@
 
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
+  <WithStyles(Grid)
+    container={true}
   >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          eSpace publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Web of science
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Scopus
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        eSpace publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Total publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          301
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          210
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Web of science
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Publication range
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Scopus
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          h-index
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        Total publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Average citation count per publication
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          24.5
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          25.2
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        301
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Total citations
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          7374
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          5297
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        210
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-  </div>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Publication range
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        h-index
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Average citation count per publication
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Total citations
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        7374
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        5297
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
+  <WithStyles(Grid)
+    container={true}
   >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          eSpace publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Web of science
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Scopus
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        eSpace publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Total publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          301
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          210
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Web of science
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Publication range
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Scopus
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          h-index
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        Total publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Average citation count per publication
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          24.5
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          25.2
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        301
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Total citations
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          7374
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          5297
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        210
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-  </div>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Publication range
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        h-index
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Average citation count per publication
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Total citations
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        7374
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        5297
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
+  <WithStyles(Grid)
+    container={true}
   >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          eSpace publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Web of science
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Scopus
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        eSpace publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Total publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          301
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          210
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Web of science
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Publication range
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Scopus
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          h-index
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        Total publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Average citation count per publication
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          24.5
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          25.2
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        301
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Total citations
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          7374
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          5297
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        210
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-  </div>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Publication range
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        h-index
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Average citation count per publication
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Total citations
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        7374
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        5297
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
+  <WithStyles(Grid)
+    container={true}
   >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          eSpace publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Web of science
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Scopus
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        eSpace publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Total publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          301
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          210
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Web of science
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Publication range
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Scopus
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          h-index
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        Total publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Average citation count per publication
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          24.5
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          25.2
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        301
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Total citations
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          7374
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          5297
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        210
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-  </div>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Publication range
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        h-index
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Average citation count per publication
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Total citations
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        7374
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        5297
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
@@ -1036,257 +1012,251 @@ exports[`PublicationStats component should render an empty component 1`] = `
 
 exports[`PublicationStats component should render statistics with table and data 1`] = `
 <React.Fragment>
-  <div
-    style={
-      Object {
-        "margin": -16,
-      }
-    }
+  <WithStyles(Grid)
+    container={true}
   >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          eSpace publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Web of science
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)
-          color="inherit"
-        >
-          Scopus
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        eSpace publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Total publications
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          301
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          210
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Web of science
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <WithStyles(Typography)>
-          Publication range
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          1992-2017
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+        Scopus
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      xs={6}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          h-index
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          N/A
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        Total publications
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Average citation count per publication
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          24.5
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          25.2
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        301
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <WithStyles(Divider) />
     <WithStyles(Grid)
-      container={true}
-      spacing={16}
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
-      >
-        <WithStyles(Typography)>
-          Total citations
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          7374
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "textAlign": "right",
-          }
-        }
-        xs={3}
-      >
-        <WithStyles(Typography)>
-          5297
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
+      <WithStyles(Typography)>
+        210
+      </WithStyles(Typography)>
     </WithStyles(Grid)>
-  </div>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Publication range
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        h-index
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Average citation count per publication
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
+        Total citations
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        7374
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        5297
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;

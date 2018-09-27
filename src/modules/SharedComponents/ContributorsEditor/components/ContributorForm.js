@@ -85,7 +85,7 @@ export class ContributorForm extends PureComponent {
     render() {
         const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
+            <div style={{flexGrow: 1}}>
                 {description}
                 <Grid container spacing={16} alignItems="baseline">
                     <Grid item xs={12} sm={this.props.showIdentifierLookup ? 12 : 9} md={this.props.showIdentifierLookup ? 5 : 10}>

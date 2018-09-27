@@ -268,7 +268,7 @@ class SearchRecords extends PureComponent {
                             (!!this.props.publicationsList && this.props.publicationsList.length > 0)
                         ) &&
                         <Grid item xs sm md={9}>
-                            <StandardCard>
+                            <StandardCard noHeader>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12}>
                                         {
