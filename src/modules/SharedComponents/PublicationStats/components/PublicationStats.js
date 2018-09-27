@@ -16,7 +16,8 @@ const styles = theme => ({
                 fontSize: '1.1rem',
                 fontWeight: theme.typography.fontWeightRegular
             }
-        }
+        },
+        borderRadius: '4px 4px 0px 0px'
     },
     data: {
         padding: '24px',

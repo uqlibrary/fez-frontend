@@ -30,6 +30,7 @@ const styles = theme => ({
         marginTop: -16,
         marginRight: -24,
         backgroundColor: theme.palette.primary.main,
+        borderRadius: '4px 4px 0px 0px'
     },
     tab: {
         color: theme.palette.white.main

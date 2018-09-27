@@ -20,6 +20,7 @@ const styles = theme => ({
         color: theme.palette.white.main,
         backgroundColor: theme.palette.primary.main,
         padding: 12,
+        borderRadius: '4px 4px 0px 0px',
         '& h2': {
             paddingLeft: 12
         }
