@@ -21,14 +21,6 @@ const styles = theme => ({
     },
     data: {
         padding: '24px',
-    },
-    expandMargin: {
-        [theme.breakpoints.up('sm')]: {
-            margin: -16
-        },
-        [theme.breakpoints.down('xs')]: {
-            margin: '-16px -8px'
-        }
     }
 });
 
@@ -45,7 +37,7 @@ export class PublicationStats extends Component {
         return (
             <React.Fragment>
                 {/* Header */}
-                <div className={classes.expandMargin}>
+                <div style={{margin: -16}}>
                     <Grid container spacing={16} className={classes.header} >
                         <Grid item xs={6}>
                             <Typography  color={'inherit'}>{txt.publicationStatsTitle1}</Typography>

@@ -14,18 +14,11 @@ import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
 const styles = theme => ({
     tabs: {
+        marginLeft: -24,
+        marginTop: -16,
+        marginRight: -24,
         backgroundColor: theme.palette.primary.main,
-        borderRadius: '4px 4px 0px 0px',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: -24,
-            marginTop: -16,
-            marginRight: -24
-        },
-        [theme.breakpoints.down('xs')]: {
-            marginLeft: -16,
-            marginTop: -16,
-            marginRight: -16
-        }
+        borderRadius: '4px 4px 0px 0px'
     },
     tab: {
         color: theme.palette.white.main
