@@ -38,7 +38,7 @@ exports[`Publication Details Component  should render component 1`] = `
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D=UQ%3A3825&searchMode=advanced"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5B%5D=UQ%3A3825&searchMode=advanced"
               >
                 School of Chemistry and Molecular Biosciences
               </Link>
@@ -46,7 +46,7 @@ exports[`Publication Details Component  should render component 1`] = `
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D=UQ%3A218311&searchMode=advanced"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5B%5D=UQ%3A218311&searchMode=advanced"
               >
                 HERDC Pre-Audit
               </Link>
@@ -54,7 +54,7 @@ exports[`Publication Details Component  should render component 1`] = `
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D=UQ%3A171723&searchMode=advanced"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5B%5D=UQ%3A171723&searchMode=advanced"
               >
                 UQ Centre for Clinical Research Publications
               </Link>
@@ -116,7 +116,7 @@ exports[`Publication Details Component  should render with publication without s
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D=UQ%3A3825&searchMode=advanced"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5B%5D=UQ%3A3825&searchMode=advanced"
               >
                 School of Chemistry and Molecular Biosciences
               </Link>
@@ -124,7 +124,7 @@ exports[`Publication Details Component  should render with publication without s
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D=UQ%3A218311&searchMode=advanced"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5B%5D=UQ%3A218311&searchMode=advanced"
               >
                 HERDC Pre-Audit
               </Link>
@@ -132,7 +132,7 @@ exports[`Publication Details Component  should render with publication without s
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D=UQ%3A171723&searchMode=advanced"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5B%5D=UQ%3A171723&searchMode=advanced"
               >
                 UQ Centre for Clinical Research Publications
               </Link>

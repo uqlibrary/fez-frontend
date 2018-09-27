@@ -91,7 +91,7 @@ export const pathConfig = {
             }
         }),
         bookTitle: (bookTitle) => getSearchUrl({searchQuery: {'rek_book_title': bookTitle}}),
-        collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': collectionId}}),
+        collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': [collectionId]}}),
         contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': contributor}}),
         conferenceName: (conferenceName) => getSearchUrl({searchQuery: {'rek_conference_name': conferenceName}}),
         orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: {'rek_org_unit_name': orgUnitName}}),
