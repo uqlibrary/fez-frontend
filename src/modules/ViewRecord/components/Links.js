@@ -126,42 +126,40 @@ export class Links extends PureComponent {
 
         return (
             <StandardCard title={txt.title}>
-                <div style={{padding: 8}}>
-                    <Hidden xsDown>
-                        <div style={{padding: 16}}>
-                            <Grid container direction="row" alignItems="center" spacing={32} className={this.props.classes.header}>
-                                <Grid item sm={6}><Typography variant="caption" gutterBottom>{txt.headerTitles.link}</Typography></Grid>
-                                <Grid item sm={4}>
-                                    <Typography variant="caption" gutterBottom>{txt.headerTitles.description}</Typography>
-                                </Grid>
-                                <Grid item sm={2}>
-                                    <Typography variant="caption" gutterBottom>{txt.headerTitles.oaStatus}</Typography>
-                                </Grid>
+                <Hidden xsDown>
+                    <div style={{padding: 16}}>
+                        <Grid container direction="row" alignItems="center" spacing={32} className={this.props.classes.header}>
+                            <Grid item sm={6}><Typography variant="caption" gutterBottom>{txt.headerTitles.link}</Typography></Grid>
+                            <Grid item sm={4}>
+                                <Typography variant="caption" gutterBottom>{txt.headerTitles.description}</Typography>
                             </Grid>
-                        </div>
-                    </Hidden>
-                    {
-                        // if record has a PubMedCentral Id - display link, should be always OA
-                        !!pubmedCentralId &&
-                        <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
-                    }
-                    {
-                        // if record has a DOI - display a link, should be OA or OA with a date
-                        !!doi &&
-                        <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />
-                    }
-                    {
-                        // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
-                        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                        <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
-                    }
-                    {
-                        hasLinks &&
-                        record.fez_record_search_key_link.map((item, index) => (
-                            <this.LinkRow {...this.getPublicationLink(item, index)} key={index}/>
-                        ))
-                    }
-                </div>
+                            <Grid item sm={2}>
+                                <Typography variant="caption" gutterBottom>{txt.headerTitles.oaStatus}</Typography>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </Hidden>
+                {
+                    // if record has a PubMedCentral Id - display link, should be always OA
+                    !!pubmedCentralId &&
+                    <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
+                }
+                {
+                    // if record has a DOI - display a link, should be OA or OA with a date
+                    !!doi &&
+                    <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />
+                }
+                {
+                    // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
+                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+                    <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
+                }
+                {
+                    hasLinks &&
+                    record.fez_record_search_key_link.map((item, index) => (
+                        <this.LinkRow {...this.getPublicationLink(item, index)} key={index}/>
+                    ))
+                }
             </StandardCard>
         );
     }
