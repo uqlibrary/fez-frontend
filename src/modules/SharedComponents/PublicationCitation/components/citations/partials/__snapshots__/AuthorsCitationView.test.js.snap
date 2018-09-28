@@ -402,7 +402,7 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
                 Pedroso, Marcelo Monteiro
               </span>
             </CitationView>
-
+             
           </span>
         </AuthorsCitationView>
       </MuiThemeProvider>
@@ -829,11 +829,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
               <span
                 className="citationAuthor"
               >
-                 and
+                 and 
                 Smith, J
               </span>
             </CitationView>
-
+             
           </span>
         </AuthorsCitationView>
       </MuiThemeProvider>
@@ -1252,10 +1252,10 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             <Link
               key="citationAuthor_1"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
             >
               <a
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -1276,10 +1276,10 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             <Link
               key="citationAuthor_2"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
             >
               <a
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -1292,13 +1292,13 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                   <span
                     className="citationAuthor"
                   >
-                    ,
+                    , 
                     Smith, J
                   </span>
                 </CitationView>
               </a>
             </Link>
-
+             
           </span>
         </AuthorsCitationView>
       </MuiThemeProvider>
@@ -1706,11 +1706,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               className="authorNameLink"
               key="citationAuthor_1"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
             >
               <a
                 className="authorNameLink"
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -1732,11 +1732,11 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               className="authorNameLink"
               key="citationAuthor_2"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
             >
               <a
                 className="authorNameLink"
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=0&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -1749,13 +1749,13 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                   <span
                     className="citationAuthor"
                   >
-                    ,
+                    , 
                     Smith, J
                   </span>
                 </CitationView>
               </a>
             </Link>
-
+             
           </span>
         </AuthorsCitationView>
       </MuiThemeProvider>
@@ -2176,7 +2176,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
                 className="citationAuthor"
               >
                 Pedroso, Marcelo Monteiro
-                ,
+                , 
               </span>
             </CitationView>
             <CitationView
@@ -2202,11 +2202,11 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
               <span
                 className="citationAuthor"
               >
-                 and
+                 and 
                 Andersen, J
               </span>
             </CitationView>
-
+             
           </span>
         </AuthorsCitationView>
       </MuiThemeProvider>
@@ -2636,10 +2636,10 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             <Link
               key="citationAuthor_1"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
             >
               <a
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Pedroso%2C+Marcelo+Monteiro&searchQueryParams%5Brek_author_id%5D=1&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -2653,7 +2653,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                     className="citationAuthor"
                   >
                     Pedroso, Marcelo Monteiro
-                    ,
+                    , 
                   </span>
                 </CitationView>
               </a>
@@ -2661,10 +2661,10 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             <Link
               key="citationAuthor_2"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
             >
               <a
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=2&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -2685,10 +2685,10 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             <Link
               key="citationAuthor_3"
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
             >
               <a
-                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Smith%2C+J&searchQueryParams%5Brek_author_id%5D=3&searchMode=advanced"
+                href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
                 onClick={[Function]}
               >
                 <CitationView
@@ -2701,13 +2701,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                   <span
                     className="citationAuthor"
                   >
-                    ,
+                    , 
                     Smith, J
                   </span>
                 </CitationView>
               </a>
             </Link>
-
+             
           </span>
         </AuthorsCitationView>
       </MuiThemeProvider>
@@ -3118,7 +3118,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
           <span
             className=""
           >
-            Authored by:
+            Authored by: 
             <CitationView
               className="citationAuthor"
               key="citationAuthor_1"
@@ -3130,7 +3130,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 className="citationAuthor"
               >
                 Pedroso, Marcelo Monteiro
-                ,
+                , 
               </span>
             </CitationView>
             <CitationView
@@ -3156,7 +3156,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               <span
                 className="citationAuthor"
               >
-                 and
+                 and 
                 Andersen, J
               </span>
             </CitationView>
@@ -3571,7 +3571,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
           <span
             className=""
           >
-            Authored by:
+            Authored by: 
             <CitationView
               className="citationAuthor"
               key="citationAuthor_1"
@@ -3583,7 +3583,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 className="citationAuthor"
               >
                 Smith, J
-                ,
+                , 
               </span>
             </CitationView>
             <CitationView
@@ -3609,7 +3609,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               <span
                 className="citationAuthor"
               >
-                 and
+                 and 
                 Pedroso, Marcelo Monteiro
               </span>
             </CitationView>
@@ -3626,7 +3626,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors (8 in
 <span
   className=""
 >
-  Authored by:
+  Authored by: 
   <CitationView
     className="citationAuthor"
     key="citationAuthor_1"
@@ -3705,7 +3705,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
 <span
   className=""
 >
-  Authored by:
+  Authored by: 
   <CitationView
     className="citationAuthor"
     key="citationAuthor_1"
@@ -3795,7 +3795,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
 <span
   className=""
 >
-  Authored by:
+  Authored by: 
   <CitationView
     className="citationAuthor"
     key="citationAuthor_1"
@@ -3899,7 +3899,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
 <span
   className=""
 >
-  Authored by:
+  Authored by: 
   <CitationView
     className="citationAuthor"
     key="citationAuthor_1"

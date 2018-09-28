@@ -434,6 +434,11 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
               "fez_record_search_key_corresponding_name": Array [],
               "fez_record_search_key_corresponding_organisation": Array [],
               "fez_record_search_key_datastream_policy": null,
+              "fez_record_search_key_doi": Object {
+                "rek_doi": "10.1242/jcs.196651",
+                "rek_doi_id": null,
+                "rek_doi_pid": "UQ:176145",
+              },
               "fez_record_search_key_end_page": Object {
                 "rek_end_page": "23",
                 "rek_end_page_id": 5502160,
@@ -766,6 +771,11 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                   "fez_record_search_key_corresponding_name": Array [],
                   "fez_record_search_key_corresponding_organisation": Array [],
                   "fez_record_search_key_datastream_policy": null,
+                  "fez_record_search_key_doi": Object {
+                    "rek_doi": "10.1242/jcs.196651",
+                    "rek_doi_id": null,
+                    "rek_doi_pid": "UQ:176145",
+                  },
                   "fez_record_search_key_end_page": Object {
                     "rek_end_page": "23",
                     "rek_end_page_id": 5502160,
@@ -1110,6 +1120,11 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     "fez_record_search_key_corresponding_name": Array [],
                     "fez_record_search_key_corresponding_organisation": Array [],
                     "fez_record_search_key_datastream_policy": null,
+                    "fez_record_search_key_doi": Object {
+                      "rek_doi": "10.1242/jcs.196651",
+                      "rek_doi_id": null,
+                      "rek_doi_pid": "UQ:176145",
+                    },
                     "fez_record_search_key_end_page": Object {
                       "rek_end_page": "23",
                       "rek_end_page_id": 5502160,
@@ -1688,11 +1703,11 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     <span
                       className="citationAuthor"
                     >
-                       and
+                       and 
                       Tisdell, Clem
                     </span>
                   </CitationView>
-
+                   
                 </span>
               </AuthorsCitationView>
             </WithStyles(AuthorsCitationView)>
@@ -1720,7 +1735,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
               <span
                 className="citationTitle"
               >
-
+                 
                 Education, Employment and Social Inclusion within the European Union
                 .
               </span>
@@ -1734,7 +1749,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
               <span
                 className="citationSource"
               >
-
+                 
                 Working papers on Social Economics, Policy and Development
                 .
               </span>
@@ -1748,7 +1763,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
               <span
                 className="citationReportNumber"
               >
-
+                 
                 46
                 .
               </span>
@@ -1762,9 +1777,9 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
               <span
                 className="citationOrgUnit"
               >
-
+                 
                 School of Economics
-                ,
+                , 
               </span>
             </CitationView>
             <CitationView
@@ -1776,17 +1791,35 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
               <span
                 className="citationOrgName"
               >
-
+                 
                 The University of Queensland
                 .
               </span>
             </CitationView>
             <DoiCitationView
-              doi={null}
+              doi="10.1242/jcs.196651"
             >
-              <span
-                className="citationDOI empty"
-              />
+              <ExternalLink
+                aria-label="Open this DOI in an new window"
+                className="citationDoiLink"
+                href="https://doi.org/10.1242/jcs.196651"
+                openInNewIcon={true}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Open this DOI in an new window"
+              >
+                <a
+                  aria-label="Open this DOI in an new window"
+                  className="citationDoiLink externalLink showIcon"
+                  href="https://doi.org/10.1242/jcs.196651"
+                  rel="noopener noreferrer"
+                  tabIndex="0"
+                  target="_blank"
+                  title="Open this DOI in an new window"
+                >
+                  https://doi.org/10.1242/jcs.196651
+                </a>
+              </ExternalLink>
             </DoiCitationView>
           </div>
         </WorkingPaperCitation>
@@ -3493,11 +3526,11 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                     <span
                       className="citationAuthor"
                     >
-                       and
+                       and 
                       Tisdell, Clem
                     </span>
                   </CitationView>
-
+                   
                 </span>
               </AuthorsCitationView>
             </WithStyles(AuthorsCitationView)>
@@ -3525,7 +3558,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
               <span
                 className="citationTitle"
               >
-
+                 
                 Education, Employment and Social Inclusion within the European Union
                 .
               </span>
@@ -3539,7 +3572,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
               <span
                 className="citationSource"
               >
-
+                 
                 Working papers on Social Economics, Policy and Development
                 .
               </span>
@@ -3553,7 +3586,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
               <span
                 className="citationReportNumber"
               >
-
+                 
                 46
                 .
               </span>
@@ -3567,9 +3600,9 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
               <span
                 className="citationOrgUnit"
               >
-
+                 
                 School of Economics
-                ,
+                , 
               </span>
             </CitationView>
             <CitationView
@@ -3581,7 +3614,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
               <span
                 className="citationOrgName"
               >
-
+                 
                 The University of Queensland
                 .
               </span>

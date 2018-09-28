@@ -499,7 +499,7 @@ exports[`Additional Information Component  should render component with audio do
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
         >
           Centre for Subtropical Design, Queensland University of Technology
         </Link>
@@ -636,7 +636,7 @@ exports[`Additional Information Component  should render component with audio do
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=undefined&searchMode=advanced"
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -831,12 +831,7 @@ exports[`Additional Information Component  should render component with audio do
           <li
             key="rek_alternate_genre-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D="
-            >
-              Conversation
-            </Link>
+            Conversation
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -884,32 +879,17 @@ exports[`Additional Information Component  should render component with audio do
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D="
-            >
-              310199
-            </Link>
+            310199
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D="
-            >
-              450019
-            </Link>
+            450019
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D="
-            >
-              450776
-            </Link>
+            450776
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -1426,7 +1406,7 @@ exports[`Additional Information Component  should render component with book 1`]
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Psychology+Press&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Psychology+Press&searchMode=advanced"
         >
           Psychology Press
         </Link>
@@ -1557,7 +1537,7 @@ exports[`Additional Information Component  should render component with book 1`]
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Clinical+Psychology%3A+A+Modular+Course&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Clinical+Psychology%3A+A+Modular+Course&searchMode=advanced"
         >
           Clinical Psychology: A Modular Course
         </Link>
@@ -2552,7 +2532,7 @@ exports[`Additional Information Component  should render component with book cha
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_book_title%5D=Non-coding+RNA+and+the+Reproductive+System&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_book_title%5D%5Bvalue%5D=Non-coding+RNA+and+the+Reproductive+System&searchMode=advanced"
         >
           Non-coding RNA and the Reproductive System
         </Link>
@@ -2637,7 +2617,7 @@ exports[`Additional Information Component  should render component with book cha
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Springer+New+York&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Springer+New+York&searchMode=advanced"
         >
           Springer New York
         </Link>
@@ -2809,7 +2789,7 @@ exports[`Additional Information Component  should render component with book cha
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Advances+in+Experimental+Medicine+and+Biology&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Advances+in+Experimental+Medicine+and+Biology&searchMode=advanced"
         >
           Advances in Experimental Medicine and Biology
         </Link>
@@ -3705,22 +3685,12 @@ exports[`Additional Information Component  should render component with book cha
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239&searchQueryParams%5Ball%5D="
-            >
-              453239
-            </Link>
+            453239
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253&searchQueryParams%5Ball%5D="
-            >
-              453253
-            </Link>
+            453253
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -3770,7 +3740,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Breast+cancer%22"
             >
               Breast cancer
             </Link>
@@ -3780,7 +3750,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=EMT&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22EMT%22"
             >
               EMT
             </Link>
@@ -3790,7 +3760,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Epithelial+cell+differentiation&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Epithelial+cell+differentiation%22"
             >
               Epithelial cell differentiation
             </Link>
@@ -3800,7 +3770,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Epithelial-stromal+interactions&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Epithelial-stromal+interactions%22"
             >
               Epithelial-stromal interactions
             </Link>
@@ -3810,7 +3780,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hormonal+regulation&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hormonal+regulation%22"
             >
               Hormonal regulation
             </Link>
@@ -3820,7 +3790,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signalling+pathways&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Signalling+pathways%22"
             >
               Signalling pathways
             </Link>
@@ -4683,7 +4653,7 @@ exports[`Additional Information Component  should render component with conferen
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D%5Bvalue%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014&searchMode=advanced"
         >
           Australasian Professional Society on Alcohol and other Drugs Conference 2014
         </Link>
@@ -5574,7 +5544,7 @@ exports[`Additional Information Component  should render component with conferen
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Wiley-Blackwell+Publishing&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Wiley-Blackwell+Publishing&searchMode=advanced"
         >
           Wiley-Blackwell Publishing
         </Link>
@@ -6511,7 +6481,7 @@ exports[`Additional Information Component  should render component with conferen
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D%5Bvalue%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC&searchMode=advanced"
         >
           International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
         </Link>
@@ -6764,7 +6734,7 @@ exports[`Additional Information Component  should render component with conferen
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland&searchMode=advanced"
         >
           Department of Civil Engineering at The University of Queensland
         </Link>
@@ -7073,42 +7043,22 @@ exports[`Additional Information Component  should render component with conferen
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000&searchQueryParams%5Ball%5D="
-            >
-              290000
-            </Link>
+            290000
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800&searchQueryParams%5Ball%5D="
-            >
-              290800
-            </Link>
+            290800
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802&searchQueryParams%5Ball%5D="
-            >
-              290802
-            </Link>
+            290802
           </li>
           <li
             key="rek_subject-3"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104&searchQueryParams%5Ball%5D="
-            >
-              291104
-            </Link>
+            291104
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -7158,7 +7108,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sewers&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Sewers%22"
             >
               Sewers
             </Link>
@@ -7168,7 +7118,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Measurements&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Measurements%22"
             >
               Measurements
             </Link>
@@ -7178,7 +7128,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hydraulics&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hydraulics%22"
             >
               Hydraulics
             </Link>
@@ -7188,7 +7138,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Open+channel+flows&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Open+channel+flows%22"
             >
               Open channel flows
             </Link>
@@ -7198,7 +7148,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sediments&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Sediments%22"
             >
               Sediments
             </Link>
@@ -7208,7 +7158,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Turbidity&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Turbidity%22"
             >
               Turbidity
             </Link>
@@ -7218,7 +7168,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hydrodynamics&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hydrodynamics%22"
             >
               Hydrodynamics
             </Link>
@@ -7228,7 +7178,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sedimentation&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Sedimentation%22"
             >
               Sedimentation
             </Link>
@@ -7238,7 +7188,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=design&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22design%22"
             >
               design
             </Link>
@@ -7248,7 +7198,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=operation&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22operation%22"
             >
               operation
             </Link>
@@ -7258,7 +7208,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rehabilitation&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22rehabilitation%22"
             >
               rehabilitation
             </Link>
@@ -7268,7 +7218,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=urban+environment&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22urban+environment%22"
             >
               urban environment
             </Link>
@@ -8004,7 +7954,7 @@ exports[`Additional Information Component  should render component with creative
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=School+of+Architecture%2C+The+University+of+Queensland&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=School+of+Architecture%2C+The+University+of+Queensland&searchMode=advanced"
         >
           School of Architecture, The University of Queensland
         </Link>
@@ -8139,22 +8089,12 @@ exports[`Additional Information Component  should render component with creative
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D="
-            >
-              452674
-            </Link>
+            452674
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D="
-            >
-              452677
-            </Link>
+            452677
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -8252,7 +8192,7 @@ exports[`Additional Information Component  should render component with creative
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Original+Creative+Works+-+Design%2FArchitectural+work%22"
             >
               Original Creative Works - Design/Architectural work
             </Link>
@@ -8430,7 +8370,7 @@ exports[`Additional Information Component  should render component with data col
         <br
           key="2"
         />
-        ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes.
+        ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. 
         <br
           key="4"
         />
@@ -10330,22 +10270,12 @@ exports[`Additional Information Component  should render component with data col
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D="
-            >
-              452086
-            </Link>
+            452086
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D="
-            >
-              452109
-            </Link>
+            452109
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -10834,7 +10764,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Isolates&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Isolates%22"
             >
               Isolates
             </Link>
@@ -10844,7 +10774,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Single+cells&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Single+cells%22"
             >
               Single cells
             </Link>
@@ -10854,7 +10784,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Metagenomic+data&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Metagenomic+data%22"
             >
               Metagenomic data
             </Link>
@@ -10864,7 +10794,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Genome+quality&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Genome+quality%22"
             >
               Genome quality
             </Link>
@@ -10874,7 +10804,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=CheckM&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22CheckM%22"
             >
               CheckM
             </Link>
@@ -10991,12 +10921,7 @@ exports[`Additional Information Component  should render component with data col
           <li
             key="rek_seo_code-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D="
-            >
-              970106 Expanding Knowledge in the Biological Sciences
-            </Link>
+            970106 Expanding Knowledge in the Biological Sciences
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -11080,7 +11005,7 @@ exports[`Additional Information Component  should render component with data col
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
         >
           Cold Spring Harbor Laboratory Press
         </Link>
@@ -11324,7 +11249,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Figure S3.
         </strong>
-         Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model.
+         Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. 
         <br
           key="28"
         />
@@ -11334,9 +11259,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="30"
         >
-          Supplemental Figure S4.
+          Supplemental Figure S4. 
         </strong>
-        Maximum-likelihood genome tree inferred from 5656 reference genomes.
+        Maximum-likelihood genome tree inferred from 5656 reference genomes. 
         <br
           key="32"
         />
@@ -11346,7 +11271,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="34"
         >
-          Supplemental Figure S5.
+          Supplemental Figure S5. 
         </strong>
         Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.
         <br
@@ -11358,9 +11283,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="38"
         >
-          Supplemental Figure S6.
+          Supplemental Figure S6. 
         </strong>
-        Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model.
+        Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. 
         <br
           key="40"
         />
@@ -11370,7 +11295,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="42"
         >
-          Supplemental Figure S7.
+          Supplemental Figure S7. 
         </strong>
         Error in completeness and contamination estimates on simulated genomes from different phyla.
         <br
@@ -11382,9 +11307,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="46"
         >
-          Supplemental Figure S8.
+          Supplemental Figure S8. 
         </strong>
-        Bias in completeness and contamination estimates when modelled as a binomial distribution.
+        Bias in completeness and contamination estimates when modelled as a binomial distribution. 
         <br
           key="48"
         />
@@ -11394,7 +11319,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="50"
         >
-          Supplemental Figure S9.
+          Supplemental Figure S9. 
         </strong>
         GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.
         <br
@@ -11406,7 +11331,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="54"
         >
-          Supplemental Figure S10.
+          Supplemental Figure S10. 
         </strong>
         Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.
         <br
@@ -11430,7 +11355,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="62"
         >
-          Supplemental Figure S12.
+          Supplemental Figure S12. 
         </strong>
         Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.
         <br
@@ -11456,7 +11381,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Figure S14.
         </strong>
-         Refining a marker set for lineage-specific gene loss and duplication.
+         Refining a marker set for lineage-specific gene loss and duplication. 
         <br
           key="72"
         />
@@ -11482,9 +11407,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="78"
         >
-          Supplemental Table S2.
+          Supplemental Table S2. 
         </strong>
-        Number of marker genes and marker sets for taxonomic groups with ≥ 20 reference genomes.
+        Number of marker genes and marker sets for taxonomic groups with ≥ 20 reference genomes. 
         <br
           key="80"
         />
@@ -11494,9 +11419,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="82"
         >
-          Supplemental Table S3.
+          Supplemental Table S3. 
         </strong>
-        Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
+        Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). 
         <br
           key="84"
         />
@@ -11509,7 +11434,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="87"
         >
-          Supplemental Table S4.
+          Supplemental Table S4. 
         </strong>
         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
         <br
@@ -11523,7 +11448,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Table S5.
         </strong>
-         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
+         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). 
         <br
           key="93"
         />
@@ -11533,9 +11458,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="95"
         >
-          Supplemental Table S6.
+          Supplemental Table S6. 
         </strong>
-        Phylogenetically informative marker genes used to infer the reference genome tree
+        Phylogenetically informative marker genes used to infer the reference genome tree 
         <br
           key="97"
         />
@@ -11549,7 +11474,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="101"
         >
-          Supplemental Table S7.
+          Supplemental Table S7. 
         </strong>
         Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.
         <br
@@ -11561,7 +11486,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="105"
         >
-          Supplemental Table S8.
+          Supplemental Table S8. 
         </strong>
         Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
         <br
@@ -11575,7 +11500,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Table S9.
         </strong>
-         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
+         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). 
         <br
           key="111"
         />
@@ -11585,7 +11510,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="113"
         >
-          Supplemental Table S10.
+          Supplemental Table S10. 
         </strong>
         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
         <br
@@ -11600,9 +11525,9 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="118"
         >
-          Supplemental Table S11.
+          Supplemental Table S11. 
         </strong>
-        Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms).
+        Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). 
         <br
           key="120"
         />
@@ -11614,7 +11539,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Table S12.
         </strong>
-         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).
+         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). 
         <br
           key="124"
         />
@@ -11641,7 +11566,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Table S14. T
         </strong>
-        axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty.
+        axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. 
         <br
           key="133"
         />
@@ -11651,7 +11576,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="135"
         >
-          Supplemental Table S15.
+          Supplemental Table S15. 
         </strong>
         Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.
         <br
@@ -11663,7 +11588,7 @@ exports[`Additional Information Component  should render component with data col
         <strong
           key="139"
         >
-          Supplemental Table S16.
+          Supplemental Table S16. 
         </strong>
         Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.
         <br
@@ -11693,7 +11618,7 @@ exports[`Additional Information Component  should render component with data col
         >
           Supplemental Table S18
         </strong>
-        . Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background.
+        . Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. 
         <br
           key="151"
         />
@@ -13213,32 +13138,17 @@ exports[`Additional Information Component  should render component with data col
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D="
-            >
-              0602 Ecology
-            </Link>
+            0602 Ecology
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D="
-            >
-              040699 Physical Geography and Environmental Geoscience not elsewhere classified
-            </Link>
+            040699 Physical Geography and Environmental Geoscience not elsewhere classified
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management&searchQueryParams%5Ball%5D="
-            >
-              0502 Environmental Science and Management
-            </Link>
+            0502 Environmental Science and Management
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -13519,7 +13429,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Habitat+Mapping&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Habitat+Mapping%22"
             >
               Habitat Mapping
             </Link>
@@ -13529,7 +13439,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Remote+Sensing&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Remote+Sensing%22"
             >
               Remote Sensing
             </Link>
@@ -13539,7 +13449,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Kubulau&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Kubulau%22"
             >
               Kubulau
             </Link>
@@ -13549,7 +13459,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Environmental+Management&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Environmental+Management%22"
             >
               Environmental Management
             </Link>
@@ -13702,7 +13612,7 @@ exports[`Additional Information Component  should render component with data col
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Pangaea&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Pangaea&searchMode=advanced"
         >
           Pangaea
         </Link>
@@ -15228,42 +15138,22 @@ exports[`Additional Information Component  should render component with design d
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000&searchQueryParams%5Ball%5D="
-            >
-              310000
-            </Link>
+            310000
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025&searchQueryParams%5Ball%5D="
-            >
-              450025
-            </Link>
+            450025
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D="
-            >
-              452674
-            </Link>
+            452674
           </li>
           <li
             key="rek_subject-3"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675&searchQueryParams%5Ball%5D="
-            >
-              452675
-            </Link>
+            452675
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -15313,7 +15203,7 @@ exports[`Additional Information Component  should render component with design d
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Architecture&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Architecture%22"
             >
               Architecture
             </Link>
@@ -15323,7 +15213,7 @@ exports[`Additional Information Component  should render component with design d
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Landscape+design&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Landscape+design%22"
             >
               Landscape design
             </Link>
@@ -15333,7 +15223,7 @@ exports[`Additional Information Component  should render component with design d
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Restoration&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Restoration%22"
             >
               Restoration
             </Link>
@@ -15343,7 +15233,7 @@ exports[`Additional Information Component  should render component with design d
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Interior+and+Environmental+Design&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Interior+and+Environmental+Design%22"
             >
               Interior and Environmental Design
             </Link>
@@ -15353,7 +15243,7 @@ exports[`Additional Information Component  should render component with design d
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Original+Creative+Works+-+Design%2FArchitectural+work%22"
             >
               Original Creative Works - Design/Architectural work
             </Link>
@@ -15624,7 +15514,7 @@ exports[`Additional Information Component  should render component with digilib 
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=The+University+of+Queensland+Library&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=The+University+of+Queensland+Library&searchMode=advanced"
         >
           The University of Queensland Library
         </Link>
@@ -16447,7 +16337,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Partial+Differential+Equations+(PDEs)&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Partial+Differential+Equations+(PDEs)%22"
             >
               Partial Differential Equations (PDEs)
             </Link>
@@ -16457,7 +16347,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Parabolic&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Parabolic%22"
             >
               Parabolic
             </Link>
@@ -16467,7 +16357,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hyperbolic&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hyperbolic%22"
             >
               Hyperbolic
             </Link>
@@ -16477,7 +16367,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+difference&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Finite+difference%22"
             >
               Finite difference
             </Link>
@@ -16487,7 +16377,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Spectral+method&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Spectral+method%22"
             >
               Spectral method
             </Link>
@@ -16497,7 +16387,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+element+method&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Finite+element+method%22"
             >
               Finite element method
             </Link>
@@ -16507,7 +16397,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Iterative+methods&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Iterative+methods%22"
             >
               Iterative methods
             </Link>
@@ -16517,7 +16407,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Nonlinear+Partial+Differential+Equations&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Nonlinear+Partial+Differential+Equations%22"
             >
               Nonlinear Partial Differential Equations
             </Link>
@@ -16614,12 +16504,7 @@ exports[`Additional Information Component  should render component with generic 
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D="
-            >
-              451825
-            </Link>
+            451825
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -18596,7 +18481,7 @@ exports[`Additional Information Component  should render component with journal 
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler&searchMode=advanced"
         >
           Betriebswirtschaftlicher Verlag T. Gabler
         </Link>
@@ -18693,12 +18578,7 @@ exports[`Additional Information Component  should render component with journal 
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815&searchQueryParams%5Ball%5D="
-            >
-              452815
-            </Link>
+            452815
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -18748,7 +18628,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Knowledge&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Knowledge%22"
             >
               Knowledge
             </Link>
@@ -18758,7 +18638,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Multinational+corporations&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Multinational+corporations%22"
             >
               Multinational corporations
             </Link>
@@ -21524,7 +21404,7 @@ exports[`Additional Information Component  should render component with journal 
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
         >
           Company of Biologists
         </Link>
@@ -21623,7 +21503,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Akt%22"
             >
               Akt
             </Link>
@@ -21633,7 +21513,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Breast+cancer%22"
             >
               Breast cancer
             </Link>
@@ -21643,7 +21523,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Ca2%2B%22"
             >
               Ca2+
             </Link>
@@ -21653,7 +21533,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hypoxia%22"
             >
               Hypoxia
             </Link>
@@ -21663,7 +21543,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22PTEN%22"
             >
               PTEN
             </Link>
@@ -21673,7 +21553,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Signal+transduction%22"
             >
               Signal transduction
             </Link>
@@ -21683,7 +21563,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22TRPC1%22"
             >
               TRPC1
             </Link>
@@ -22948,7 +22828,7 @@ exports[`Additional Information Component  should render component with manuscri
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2&searchMode=advanced"
         >
           Father Edward Leo Hayes Collection, UQFL2
         </Link>
@@ -23207,7 +23087,7 @@ exports[`Additional Information Component  should render component with manuscri
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives%22"
             >
               Hayes, Edward Leo, 1889-1967 -- Archives
             </Link>
@@ -23217,7 +23097,7 @@ exports[`Additional Information Component  should render component with manuscri
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts%22"
             >
               Hayes, Edward Leo, 1889-1967 -- Manuscripts
             </Link>
@@ -23227,7 +23107,7 @@ exports[`Additional Information Component  should render component with manuscri
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Astley%2C+Thea%2C+1925-2004+--+Correspondence%22"
             >
               Astley, Thea, 1925-2004 -- Correspondence
             </Link>
@@ -23237,7 +23117,7 @@ exports[`Additional Information Component  should render component with manuscri
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Grano%2C+Paul%2C+1894-1975+--+Correspondence%22"
             >
               Grano, Paul, 1894-1975 -- Correspondence
             </Link>
@@ -23247,7 +23127,7 @@ exports[`Additional Information Component  should render component with manuscri
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Authors%2C+Australian+--+20th+century&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Authors%2C+Australian+--+20th+century%22"
             >
               Authors, Australian -- 20th century
             </Link>
@@ -23332,7 +23212,7 @@ exports[`Additional Information Component  should render component with manuscri
         sm={9}
         xs={12}
       >
-        Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia.
+        Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia. 
         <br
           key="1"
         />
@@ -23737,7 +23617,7 @@ exports[`Additional Information Component  should render component with patent 1
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=GC+Corporation&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=GC+Corporation&searchMode=advanced"
         >
           GC Corporation
         </Link>
@@ -23914,32 +23794,17 @@ exports[`Additional Information Component  should render component with patent 1
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802&searchQueryParams%5Ball%5D="
-            >
-              270802
-            </Link>
+            270802
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300&searchQueryParams%5Ball%5D="
-            >
-              270300
-            </Link>
+            270300
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D="
-            >
-              320800
-            </Link>
+            320800
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -24086,7 +23951,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Algorithmic+complexity&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Algorithmic+complexity%22"
             >
               Algorithmic complexity
             </Link>
@@ -24096,7 +23961,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cross-entropy&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22cross-entropy%22"
             >
               cross-entropy
             </Link>
@@ -24106,7 +23971,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=GI%2FG%2F1+queue&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22GI%2FG%2F1+queue%22"
             >
               GI/G/1 queue
             </Link>
@@ -24116,7 +23981,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=importance+sampling&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22importance+sampling%22"
             >
               importance sampling
             </Link>
@@ -24126,7 +23991,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=maximum+likelihood&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22maximum+likelihood%22"
             >
               maximum likelihood
             </Link>
@@ -24136,7 +24001,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pareto+distribution&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Pareto+distribution%22"
             >
               Pareto distribution
             </Link>
@@ -24146,7 +24011,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pollaczek-Khintchine+formula&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Pollaczek-Khintchine+formula%22"
             >
               Pollaczek-Khintchine formula
             </Link>
@@ -24156,7 +24021,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=random+walk&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22random+walk%22"
             >
               random walk
             </Link>
@@ -24166,7 +24031,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rare+event&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22rare+event%22"
             >
               rare event
             </Link>
@@ -24176,7 +24041,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=subexponential+distribution&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22subexponential+distribution%22"
             >
               subexponential distribution
             </Link>
@@ -24186,7 +24051,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Weibull+distribution&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Weibull+distribution%22"
             >
               Weibull distribution
             </Link>
@@ -24283,32 +24148,17 @@ exports[`Additional Information Component  should render component with preprint
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210&searchQueryParams%5Ball%5D="
-            >
-              280210
-            </Link>
+            280210
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203&searchQueryParams%5Ball%5D="
-            >
-              230203
-            </Link>
+            230203
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117&searchQueryParams%5Ball%5D="
-            >
-              230117
-            </Link>
+            230117
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -24770,7 +24620,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Algorithmic+complexity&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Algorithmic+complexity%22"
             >
               Algorithmic complexity
             </Link>
@@ -24780,7 +24630,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cross-entropy&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22cross-entropy%22"
             >
               cross-entropy
             </Link>
@@ -24790,7 +24640,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=GI%2FG%2F1+queue&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22GI%2FG%2F1+queue%22"
             >
               GI/G/1 queue
             </Link>
@@ -24800,7 +24650,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=importance+sampling&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22importance+sampling%22"
             >
               importance sampling
             </Link>
@@ -24810,7 +24660,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=maximum+likelihood&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22maximum+likelihood%22"
             >
               maximum likelihood
             </Link>
@@ -24820,7 +24670,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pareto+distribution&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Pareto+distribution%22"
             >
               Pareto distribution
             </Link>
@@ -24830,7 +24680,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pollaczek-Khintchine+formula&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Pollaczek-Khintchine+formula%22"
             >
               Pollaczek-Khintchine formula
             </Link>
@@ -24840,7 +24690,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=random+walk&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22random+walk%22"
             >
               random walk
             </Link>
@@ -24850,7 +24700,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rare+event&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22rare+event%22"
             >
               rare event
             </Link>
@@ -24860,7 +24710,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=subexponential+distribution&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22subexponential+distribution%22"
             >
               subexponential distribution
             </Link>
@@ -24870,7 +24720,7 @@ exports[`Additional Information Component  should render component with preprint
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Weibull+distribution&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Weibull+distribution%22"
             >
               Weibull distribution
             </Link>
@@ -25665,7 +25515,7 @@ exports[`Additional Information Component  should render component with proceedi
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D%5Bvalue%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous&searchMode=advanced"
         >
           17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous
         </Link>
@@ -26533,7 +26383,7 @@ exports[`Additional Information Component  should render component with proceedi
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Pergamon&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Pergamon&searchMode=advanced"
         >
           Pergamon
         </Link>
@@ -26711,12 +26561,7 @@ exports[`Additional Information Component  should render component with proceedi
         sm={9}
         xs={12}
       >
-        <Link
-          replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Ball%5D="
-        >
-          Not yet assessed
-        </Link>
+        Not yet assessed
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </div>
@@ -27065,7 +26910,7 @@ exports[`Additional Information Component  should render component with proceedi
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Trafficking&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Trafficking%22"
             >
               Trafficking
             </Link>
@@ -27075,7 +26920,7 @@ exports[`Additional Information Component  should render component with proceedi
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Bacterial+toxins&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Bacterial+toxins%22"
             >
               Bacterial toxins
             </Link>
@@ -27085,7 +26930,7 @@ exports[`Additional Information Component  should render component with proceedi
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Neurons&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Neurons%22"
             >
               Neurons
             </Link>
@@ -27538,7 +27383,7 @@ exports[`Additional Information Component  should render component with referenc
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Routledge&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Routledge&searchMode=advanced"
         >
           Routledge
         </Link>
@@ -28176,42 +28021,22 @@ exports[`Additional Information Component  should render component with referenc
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian&searchQueryParams%5Ball%5D="
-            >
-              430102 History - Asian
-            </Link>
+            430102 History - Asian
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese&searchQueryParams%5Ball%5D="
-            >
-              420212 Japanese
-            </Link>
+            420212 Japanese
           </li>
           <li
             key="rek_subject-2"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature&searchQueryParams%5Ball%5D="
-            >
-              751001 Languages and literature
-            </Link>
+            751001 Languages and literature
           </li>
           <li
             key="rek_subject-3"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M&searchQueryParams%5Ball%5D="
-            >
-              M
-            </Link>
+            M
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -28261,7 +28086,7 @@ exports[`Additional Information Component  should render component with referenc
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Japanese+culture&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Japanese+culture%22"
             >
               Japanese culture
             </Link>
@@ -28271,7 +28096,7 @@ exports[`Additional Information Component  should render component with referenc
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Popular+culture+-+Japan+-+Encyclopedias&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Popular+culture+-+Japan+-+Encyclopedias%22"
             >
               Popular culture - Japan - Encyclopedias
             </Link>
@@ -28281,7 +28106,7 @@ exports[`Additional Information Component  should render component with referenc
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Japan+-+Civilization+-+1945-+-+Encyclopedia%22"
             >
               Japan - Civilization - 1945- - Encyclopedia
             </Link>
@@ -28832,7 +28657,7 @@ exports[`Additional Information Component  should render component with research
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=UQ&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=UQ&searchMode=advanced"
         >
           UQ
         </Link>
@@ -28995,7 +28820,7 @@ exports[`Additional Information Component  should render component with research
         sm={9}
         xs={12}
       >
-        asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f
+        asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </div>
@@ -29405,7 +29230,7 @@ exports[`Additional Information Component  should render component with thesis 1
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D%5Bvalue%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
         >
           School of Natural and Rural Systems
         </Link>
@@ -29676,12 +29501,7 @@ exports[`Additional Information Component  should render component with thesis 1
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D="
-            >
-              300000
-            </Link>
+            300000
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -29731,7 +29551,7 @@ exports[`Additional Information Component  should render component with thesis 1
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business%22"
             >
               Sustainable development; graziers; farmers; agriculture; land management; business
             </Link>
@@ -30283,7 +30103,7 @@ exports[`Additional Information Component  should render component with video do
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=SEG+Special+Publication+Video+Series&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=SEG+Special+Publication+Video+Series&searchMode=advanced"
         >
           SEG Special Publication Video Series
         </Link>
@@ -30500,12 +30320,7 @@ exports[`Additional Information Component  should render component with video do
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D="
-            >
-              451986
-            </Link>
+            451986
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -30680,6 +30495,11 @@ exports[`Additional Information Component  should render component with working 
               "fez_record_search_key_corresponding_name": Array [],
               "fez_record_search_key_corresponding_organisation": Array [],
               "fez_record_search_key_datastream_policy": null,
+              "fez_record_search_key_doi": Object {
+                "rek_doi": "10.1242/jcs.196651",
+                "rek_doi_id": null,
+                "rek_doi_pid": "UQ:176145",
+              },
               "fez_record_search_key_end_page": Object {
                 "rek_end_page": "23",
                 "rek_end_page_id": 5502160,
@@ -31007,7 +30827,7 @@ exports[`Additional Information Component  should render component with working 
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Economics&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D%5Bvalue%5D=School+of+Economics&searchMode=advanced"
         >
           School of Economics
         </Link>
@@ -31130,7 +30950,7 @@ exports[`Additional Information Component  should render component with working 
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development&searchMode=advanced"
         >
           Working papers on Social Economics, Policy and Development
         </Link>
@@ -31234,6 +31054,49 @@ exports[`Additional Information Component  should render component with working 
       alignItems="flex-start"
       className="gridRow"
       container={true}
+      key="additional-info-DOI"
+      spacing={32}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "header",
+            }
+          }
+          variant="body1"
+        >
+          DOI
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <DoiCitationView
+          doi="10.1242/jcs.196651"
+          key="additional-information-doi"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
       key="additional-info-Publisher"
       spacing={32}
     >
@@ -31261,7 +31124,7 @@ exports[`Additional Information Component  should render component with working 
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=School+of+Economics&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=School+of+Economics&searchMode=advanced"
         >
           School of Economics
         </Link>
@@ -31478,22 +31341,12 @@ exports[`Additional Information Component  should render component with working 
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775&searchQueryParams%5Ball%5D="
-            >
-              452775
-            </Link>
+            452775
           </li>
           <li
             key="rek_subject-1"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784&searchQueryParams%5Ball%5D="
-            >
-              452784
-            </Link>
+            452784
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -31543,7 +31396,7 @@ exports[`Additional Information Component  should render component with working 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=European+Union&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22European+Union%22"
             >
               European Union
             </Link>
@@ -31553,7 +31406,7 @@ exports[`Additional Information Component  should render component with working 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Education&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Education%22"
             >
               Education
             </Link>
@@ -31563,7 +31416,7 @@ exports[`Additional Information Component  should render component with working 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Employment&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Employment%22"
             >
               Employment
             </Link>
@@ -31573,7 +31426,7 @@ exports[`Additional Information Component  should render component with working 
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Social+inclusion&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Social+inclusion%22"
             >
               Social inclusion
             </Link>
@@ -32069,7 +31922,7 @@ exports[`Additional Information Component  should render oa status value link in
       >
         <Link
           replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
+          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D%5Bvalue%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
         >
           School of Natural and Rural Systems
         </Link>
@@ -32238,12 +32091,7 @@ exports[`Additional Information Component  should render oa status value link in
         sm={9}
         xs={12}
       >
-        <Link
-          replace={false}
-          to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Ball%5D="
-        >
-          File (Author Post-print)
-        </Link>
+        File (Author Post-print)
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </div>
@@ -32347,12 +32195,7 @@ exports[`Additional Information Component  should render oa status value link in
           <li
             key="rek_subject-0"
           >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D="
-            >
-              300000
-            </Link>
+            300000
           </li>
         </ul>
       </WithStyles(Grid)>
@@ -32402,7 +32245,7 @@ exports[`Additional Information Component  should render oa status value link in
           >
             <Link
               replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business&searchQueryParams%5Ball%5D="
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business%22"
             >
               Sustainable development; graziers; farmers; agriculture; land management; business
             </Link>
