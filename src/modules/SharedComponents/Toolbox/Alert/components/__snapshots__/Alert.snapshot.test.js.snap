@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert snapshots test renders Alert of error type 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
   <WithStyles(Grid)
     alignContent="center"
     alignItems="flex-start"
@@ -46,7 +52,13 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render action button 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
   <WithStyles(Grid)
     alignContent="center"
     alignItems="flex-start"
@@ -108,7 +120,13 @@ exports[`Alert snapshots test renders Alert of error type should render action b
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render dismiss icon button 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
   <WithStyles(Grid)
     alignContent="center"
     alignItems="flex-start"
@@ -207,7 +225,13 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render dismiss icon button and action button 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
   <WithStyles(Grid)
     alignContent="center"
     alignItems="flex-start"
@@ -325,7 +349,13 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render dismiss icon button and action button and spinner 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
   <WithStyles(Grid)
     alignContent="center"
     alignItems="flex-start"

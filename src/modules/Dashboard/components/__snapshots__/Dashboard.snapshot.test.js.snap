@@ -72,7 +72,6 @@ exports[`Dashboard test does render latest and trending publications tabs correc
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -213,7 +212,6 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -338,7 +336,6 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -747,7 +744,6 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -945,7 +941,6 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -1096,7 +1091,6 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -1187,7 +1181,6 @@ exports[`Dashboard test renders dashboard header only 1`] = `
           action={[Function]}
           actionButtonLabel="Add a publication"
           message="We found nothing new for you to claim, but you may add a publication any time."
-          pushToTop={true}
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -1270,7 +1263,6 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
           actionButtonLabel="Claim your publications now"
           allowDismiss={true}
           message="We have found 5 record(s) that could possibly be your work."
-          pushToTop={true}
           title="Claim now!"
           type="info_outline"
         />

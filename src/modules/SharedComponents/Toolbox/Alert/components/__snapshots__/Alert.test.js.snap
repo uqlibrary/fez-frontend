@@ -150,7 +150,9 @@ ShallowWrapper {
           </WithStyles(Grid)>
         </Hidden>
       </WithStyles(Grid)>,
-      "className": undefined,
+      "style": Object {
+        "padding": 12,
+      },
     },
     "ref": null,
     "rendered": Object {
@@ -823,7 +825,9 @@ ShallowWrapper {
             </WithStyles(Grid)>
           </Hidden>
         </WithStyles(Grid)>,
-        "className": undefined,
+        "style": Object {
+          "padding": 12,
+        },
       },
       "ref": null,
       "rendered": Object {
