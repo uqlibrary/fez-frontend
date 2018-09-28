@@ -19,6 +19,7 @@ const styles = theme => ({
         color: theme.palette.white.main,
         backgroundColor: theme.palette.primary.main,
         borderRadius: '4px 4px 0px 0px',
+        padding: '12px 24px',
     },
     fullHeight: {
         border: '10px solid red',
