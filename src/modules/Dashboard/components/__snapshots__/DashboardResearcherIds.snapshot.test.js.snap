@@ -17,7 +17,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   >
     <ExternalLink
       className=""
-      href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
+      href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
       openInNewIcon={false}
       rel="noopener noreferrer"
       target="_blank"

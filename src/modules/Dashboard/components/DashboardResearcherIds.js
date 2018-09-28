@@ -54,10 +54,10 @@ export class DashboardResearcherIds extends React.Component {
                 orcid: 'https://orcid.org/'
             },
             notLinkedUrl: {
-                publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
-                scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
-                researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
-                google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
+                publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
+                scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
+                researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid',
+                google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile',
                 // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
                 orcid: pathConfig.authorIdentifiers.orcid.link
             }

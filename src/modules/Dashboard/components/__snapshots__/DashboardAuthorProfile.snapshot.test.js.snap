@@ -3291,7 +3291,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                                             >
                                                               <ExternalLink
                                                                 className="DashboardResearcherIds-researcherIDlink-0156"
-                                                                href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
+                                                                href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
                                                                 openInNewIcon={false}
                                                                 rel="noopener noreferrer"
                                                                 target="_blank"
@@ -3299,7 +3299,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                                                               >
                                                                 <a
                                                                   className="DashboardResearcherIds-researcherIDlink-0156 externalLinkfalse"
-                                                                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
+                                                                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
