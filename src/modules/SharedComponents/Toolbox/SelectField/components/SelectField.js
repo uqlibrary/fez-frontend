@@ -1,38 +1,42 @@
 import React from 'react';
-import SelectField from 'material-ui/SelectField';
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
+
 import PropTypes from 'prop-types';
-
-
 import propFilter from '../../helpers/_filterProps';
 import {HelpIcon} from '../../HelpDrawer';
 
 const SelectFieldWrapper = props => {
-    const filteredProps = propFilter(props, SelectField.propTypes);
-    filteredProps.onChange = (event, index, value) => props.input.onChange(value);
+    const filteredProps = propFilter(props, Select.propTypes);
+    filteredProps.onChange = (event) => props.input.onChange(event.target.value);
     filteredProps.onBlur = () => props.input.onBlur(props.input.value);
+    const error = !!filteredProps.errorText || !!filteredProps.error;
+    const helperText = filteredProps.errorText || filteredProps.error || null;
+    delete filteredProps.errorText;
     return (
-        <div style={{position: 'relative', width: '100%'}}>
-            <SelectField {...filteredProps} className={`${props.className} mui-long-labels-fix`} />
+        <React.Fragment>
+            <FormControl error={error} style={{width: '100%'}}>
+                <InputLabel>{filteredProps.label}</InputLabel>
+                <Select {...filteredProps} autoWidth />
+                {
+                    helperText &&
+                    <FormHelperText>{helperText}</FormHelperText>
+                }
+            </FormControl>
             {props.help && props.help.text && <HelpIcon {...props.help} />}
-        </div>
+        </React.Fragment>
     );
 };
 
 SelectFieldWrapper.propTypes = {
-    ...SelectField.propTypes,
+    ...Select.propTypes,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,
         buttonLabel: PropTypes.string
     })
-};
-
-SelectFieldWrapper.defaultProps = {
-    // TODO: investigate why disabling animation throws errors
-    // disable animation to keep focus on the input element
-    // dropDownMenuProps: {animated: false},
-    maxHeight: 250,
-    className: ''
 };
 
 export default SelectFieldWrapper;

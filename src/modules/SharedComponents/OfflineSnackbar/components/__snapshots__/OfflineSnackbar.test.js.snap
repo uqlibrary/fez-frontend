@@ -1,58 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component OfflineSnackbar renderMessage returns expected message 1`] = `
-<div
-  className="columns is-gapless connectionStatus is-mobile online"
+<WithStyles(Grid)
+  alignContent="center"
+  alignItems="center"
+  container={true}
+  justify="center"
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    item={true}
+    xs={true}
   />
-  <div
-    className="column is-narrow"
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "marginRight": 24,
+      }
+    }
   >
     icon
-  </div>
-  <div
-    className="column is-narrow"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
   >
     message
-  </div>
-  <div
-    className="column"
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={true}
   />
-</div>
+</WithStyles(Grid)>
 `;
 
 exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
 <div
   className="offlineSnackbar"
 >
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message={
-      <div
-        className="columns is-gapless connectionStatus is-mobile online"
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        container={true}
+        justify="center"
       >
-        <div
-          className="column"
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
         />
-        <div
-          className="column is-narrow"
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "marginRight": 24,
+            }
+          }
         >
-          <ActionCheckCircle />
-        </div>
-        <div
-          className="column is-narrow"
+          <pure(LinkIcon)
+            className={undefined}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
         >
           Your connection is back online
-        </div>
-        <div
-          className="column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
         />
-      </div>
+      </WithStyles(Grid)>
     }
-    onActionClick={[Function]}
-    onRequestClose={[Function]}
+    onClose={[Function]}
     open={true}
   />
 </div>
@@ -62,32 +89,49 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
 <div
   className="offlineSnackbar"
 >
-  <Snackbar
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
     autoHideDuration={5000}
     message={
-      <div
-        className="columns is-gapless connectionStatus is-mobile online"
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        container={true}
+        justify="center"
       >
-        <div
-          className="column"
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
         />
-        <div
-          className="column is-narrow"
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "marginRight": 24,
+            }
+          }
         >
-          <ActionCheckCircle />
-        </div>
-        <div
-          className="column is-narrow"
+          <pure(LinkIcon)
+            className={undefined}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
         >
           Your connection is back online
-        </div>
-        <div
-          className="column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
         />
-      </div>
+      </WithStyles(Grid)>
     }
-    onActionClick={[Function]}
-    onRequestClose={[Function]}
+    onClose={[Function]}
     open={false}
   />
 </div>
@@ -97,32 +141,49 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
 <div
   className="offlineSnackbar"
 >
-  <Snackbar
-    autoHideDuration={0}
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={null}
     message={
-      <div
-        className="columns is-gapless connectionStatus is-mobile offline"
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        container={true}
+        justify="center"
       >
-        <div
-          className="column"
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
         />
-        <div
-          className="column is-narrow"
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "marginRight": 24,
+            }
+          }
         >
-          <AlertError />
-        </div>
-        <div
-          className="column is-narrow"
+          <pure(LinkOffIcon)
+            className={undefined}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
         >
           Your connection is offline
-        </div>
-        <div
-          className="column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
         />
-      </div>
+      </WithStyles(Grid)>
     }
-    onActionClick={[Function]}
-    onRequestClose={[Function]}
+    onClose={[Function]}
     open={true}
   />
 </div>

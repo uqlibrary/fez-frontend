@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {FieldOfResearchVocabId} from 'config/general';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
@@ -12,11 +12,13 @@ const mapStateToProps = (state, props) => {
         category: FieldOfResearchVocabId,
         onChange: props.input.onChange,
         errorText: props.meta ? props.meta.error : props.errorText,
+        error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        dataSourceConfig: { text: 'value', value: 'key'},
         selectedValue: props.input ? {value: props.input.value} : null,
         maxResults: props.maxResults,
+        async: true,
+        itemToString: (item) => !!item && String(item.value) || '',
         filter: props.filter || null
     };
 };
@@ -26,11 +28,13 @@ const filterFoRmapStateToProps = (state, props) => {
         category: FieldOfResearchVocabId,
         onChange: props.input.onChange,
         errorText: props.meta ? props.meta.error : props.errorText,
+        error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        dataSourceConfig: { text: 'value', value: 'key'},
         selectedValue: props.input ? props.input.value : null,
         maxResults: 20,
+        async: true,
+        itemToString: (item) => !!item && String(item.value) || '',
         filter: (searchText, key) => {
             if (searchText === '') return false;
             const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRegExp(searchText)}.*`, 'gi');
@@ -45,6 +49,6 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const FieldOfResearchField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
-export const FilteredFieldOfResearchField = connect(filterFoRmapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const FieldOfResearchField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+export const FilteredFieldOfResearchField = connect(filterFoRmapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
 

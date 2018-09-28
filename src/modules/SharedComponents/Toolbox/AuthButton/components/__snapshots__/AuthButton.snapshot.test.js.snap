@@ -4,17 +4,21 @@ exports[`AuthButton snapshots test renders logged in user status 1`] = `
 <div
   className="auth-button-wrapper"
 >
-  <IconButton
-    className="log-out-button"
-    disableTouchRipple={false}
-    disabled={false}
-    iconStyle={Object {}}
-    tooltip="Log out"
-    tooltipPosition="bottom-left"
-    touch={false}
+  <WithStyles(Tooltip)
+    TransitionComponent={[Function]}
+    TransitionProps={
+      Object {
+        "timeout": 300,
+      }
+    }
+    placement="bottom-start"
   >
-    <SocialPerson />
-  </IconButton>
+    <WithStyles(IconButton)
+      className="log-out-button"
+    >
+      <pure(PersonIcon) />
+    </WithStyles(IconButton)>
+  </WithStyles(Tooltip)>
 </div>
 `;
 
@@ -22,16 +26,20 @@ exports[`AuthButton snapshots test renders logged out status 1`] = `
 <div
   className="auth-button-wrapper"
 >
-  <IconButton
-    className="log-in-button"
-    disableTouchRipple={false}
-    disabled={false}
-    iconStyle={Object {}}
-    tooltip="Log in"
-    tooltipPosition="bottom-left"
-    touch={false}
+  <WithStyles(Tooltip)
+    TransitionComponent={[Function]}
+    TransitionProps={
+      Object {
+        "timeout": 300,
+      }
+    }
+    placement="bottom-start"
   >
-    <SocialPersonOutline />
-  </IconButton>
+    <WithStyles(IconButton)
+      className="log-in-button"
+    >
+      <pure(PersonOutlineIcon) />
+    </WithStyles(IconButton)>
+  </WithStyles(Tooltip)>
 </div>
 `;

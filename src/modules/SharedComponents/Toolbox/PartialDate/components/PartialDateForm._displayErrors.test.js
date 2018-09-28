@@ -1,6 +1,9 @@
-import PartialDateForm from './PartialDateForm';
+import {PartialDateForm} from './PartialDateForm';
 
 const validationMessages = {
+    classes:{
+        fakeTitle: {}
+    },
     validationMessage: {
         day: 'Invalid day',
         month: 'Invalid month',
@@ -12,9 +15,7 @@ const partialAllowedDateForm = new PartialDateForm({ allowPartial: true, locale:
 const partialNotAllowedDateForm = new PartialDateForm({ allowPartial: false, locale: validationMessages });
 
 describe('PartialDateForm unit tests', () => {
-    /**
-     * Test _displayErrors with allowPartial: true
-     */
+
     it('should not display validation error if year is present and allowed partial', () => {
         partialAllowedDateForm._displayErrors({ day: null, month: null, year: 2015 }, true);
         expect(partialAllowedDateForm.errors).toMatchObject({});
@@ -40,9 +41,6 @@ describe('PartialDateForm unit tests', () => {
         expect(partialAllowedDateForm.errors).toMatchObject({ year: 'Invalid year' });
     });
 
-    /**
-     * Test _displayErrors with allowPartial: false
-     */
     it('should not display any validation message on year present if not allowed partial', () => {
         partialNotAllowedDateForm._displayErrors({ day: null, month: null, year: 2015 }, false);
         expect(partialNotAllowedDateForm.errors).toMatchObject({});

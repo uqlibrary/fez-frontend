@@ -2,51 +2,62 @@
 
 exports[`PublicationSearchForm renders  component 1`] = `
 <StandardCard
-  className=""
   title="Search for your publication"
 >
-  <div>
-    Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
-  </div>
   <form
     onSubmit={[MockFunction]}
   >
-    <div
-      className="columns"
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      spacing={16}
     >
-      <div
-        className="column"
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={true}
+        xs={12}
       >
         <Field
-          autoComplete="off"
           autoFocus={true}
-          className="requiredField"
+          color="primary"
           component={[Function]}
-          floatingLabelText="Enter DOI, Pubmed Id or Title"
           fullWidth={true}
+          label="Enter DOI, Pubmed Id or Title"
           name="searchQuery"
+          required={true}
           validate={
             Array [
               [Function],
             ]
           }
         />
-      </div>
-      <div
-        className="column is-narrow"
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        <RaisedButton
-          className="is-mui-spacing-button"
+        <WithStyles(Button)
+          color="primary"
           disabled={false}
           fullWidth={true}
-          label="Search"
-          labelPosition="after"
           onClick={[MockFunction]}
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </div>
+          variant="raised"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
 </StandardCard>
 `;

@@ -1,22 +1,6 @@
 // Importing module styles
-@import '../modules/Dashboard/components/Dashboard';
-@import '../modules/SharedComponents/MyTrendingPublications/components/MyTrendingPublications';
-@import '../modules/SharedComponents/PublicationCitation/components/PublicationCitation';
-@import '../modules/SharedComponents/PublicationStats/components/PublicationStats';
-@import '../modules/SharedComponents/PublicationsList/components/PublicationList';
-@import '../modules/SharedComponents/PublicationsList/components/PublicationListPaging';
-@import '../modules/SharedComponents/PublicationsList/components/PublicationListSorting';
-@import '../modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress';
-@import '../modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetsFilter';
-@import '../modules/SharedComponents/AuthorLinking/components/AuthorLinking';
 @import '../modules/SharedComponents/ContributorsEditor/components/ContributorEditor';
-@import '../modules/SharedComponents/PublicationCitation/components/citations/partials/AuthorsCitationView';
 @import '../modules/SharedComponents/ShareThis/components/ShareThis';
-@import '../modules/ViewRecord/components/ViewRecord';
-@import '../modules/TopCitedPublications/components/TopCitedPublications';
-@import '../modules/SharedComponents/OfflineSnackbar/components/OfflineSnackbar';
 @import '../modules/SharedComponents/ExternalLink/components/ExternalLink';
-@import '../modules/SharedComponents/NewsFeed/components/NewsFeed';
-@import '../modules/SharedComponents/SearchComponent/components/SearchComponent';
-@import '../modules/SearchRecords/components/SearchRecords';
-@import '../modules/SharedComponents/Toolbox/HelpDrawer/components/HelpIcon';
+@import '../modules/SharedComponents/MyTrendingPublications/components/MyTrendingPublications';
+@import '../modules/TopCitedPublications/components/TopCitedPublications';

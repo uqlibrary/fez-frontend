@@ -88,9 +88,7 @@ describe('Component FixRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        expect(wrapper.find('MenuItem').length).toEqual(2);
-        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').length).toEqual(1);
+        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
     });
 
     it('should render fix record form', () => {
@@ -98,7 +96,6 @@ describe('Component FixRecord', () => {
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(4);
-        expect(wrapper.find('RaisedButton').length).toEqual(2);
     });
 
     it('should set action for form', () => {
@@ -111,7 +108,6 @@ describe('Component FixRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'unclaim'});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('RaisedButton').length).toEqual(2);
         expect(wrapper.find('Field').length).toEqual(1);
     });
 

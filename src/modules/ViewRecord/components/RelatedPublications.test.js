@@ -3,16 +3,17 @@ import RelatedPublications from "./RelatedPublications";
 
 function setup(testProps, isShallow = true){
     const props = {
-        ...testProps,
+        classes: {},
         publication: testProps.publication || dataCollection,
-        title: testProps.title || ''
+        title: testProps.title || '',
+        ...testProps
     };
     return getElement(RelatedPublications, props, isShallow);
 }
 
 describe('Related publications Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.relatedPublications li').length).toEqual(2);
     });

@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import {createHash} from 'crypto';
 import {parse} from 'querystring';
 
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -192,47 +195,58 @@ export default class Orcid extends Component {
                 <ConfirmDialogBox
                     onRef={this._setAuthoriseConfirmation}
                     locale={txt.grantAccessConfirmation} />
-
-                {
-                    this.getAlert({
-                        submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
-                        error: !isValidOrcidState ? locale.pages.orcidLink.errorAlert.orcidStateError : this.props.accountAuthorError,
-                        submitting: this.props.accountAuthorSaving,
-                        alertLocale: txt
-                    })
-                }
-
-                <StandardCard title={txt.linkOrcid.title}>
-                    <div>{txt.linkOrcid.description}</div>
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
-                                fullWidth
-                                disabled={this.props.accountAuthorSaving}
-                                label={txt.linkOrcid.labels.submit}
-                                onClick={this._showAuthoriseConfirmation}
-                            />
-                        </div>
-                    </div>
-                </StandardCard>
-
-                <StandardCard title={txt.createOrcid.title}>
-                    <div>{txt.createOrcid.description}</div>
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
-                                fullWidth
-                                disabled={this.props.accountAuthorSaving}
-                                label={txt.createOrcid.labels.submit}
-                                onClick={this._showAuthoriseConfirmation.bind(this, false)}
-                            />
-                        </div>
-                    </div>
-                </StandardCard>
+                <Grid container spacing={24}>
+                    <Grid item xs={12}>
+                        {
+                            this.getAlert({
+                                submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
+                                error: !isValidOrcidState ? locale.pages.orcidLink.errorAlert.orcidStateError : this.props.accountAuthorError,
+                                submitting: this.props.accountAuthorSaving,
+                                alertLocale: txt
+                            })
+                        }
+                    </Grid>
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.linkOrcid.title}>
+                            <Typography component={'span'} gutterBottom>{txt.linkOrcid.description}</Typography>
+                            <Grid container spacing={16}>
+                                <Hidden xsDown>
+                                    <Grid item xs />
+                                </Hidden>
+                                <Grid item xs={12} sm={'auto'}>
+                                    <Button
+                                        variant={'raised'}
+                                        color={'primary'}
+                                        fullWidth
+                                        disabled={this.props.accountAuthorSaving}
+                                        children={txt.linkOrcid.labels.submit}
+                                        onClick={this._showAuthoriseConfirmation}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.createOrcid.title}>
+                            <Typography component={'span'} gutterBottom>{txt.createOrcid.description}</Typography>
+                            <Grid container spacing={16}>
+                                <Hidden xsDown>
+                                    <Grid item xs />
+                                </Hidden>
+                                <Grid item xs={12} sm={'auto'}>
+                                    <Button
+                                        variant={'raised'}
+                                        color={'primary'}
+                                        fullWidth
+                                        disabled={this.props.accountAuthorSaving}
+                                        children={txt.createOrcid.labels.submit}
+                                        onClick={this._showAuthoriseConfirmation.bind(this, false)}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                </Grid>
             </StandardPage>
         );
     }

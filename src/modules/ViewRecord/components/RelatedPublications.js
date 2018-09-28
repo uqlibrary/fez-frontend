@@ -4,6 +4,7 @@ import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 
 export default class RelatedPublications extends PureComponent {
     static propTypes = {
@@ -39,7 +40,9 @@ export default class RelatedPublications extends PureComponent {
                 {
                     showPublicationTitle &&
                     <li key={'current'}>
-                        {publication.rek_title}<b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
+                        <Typography variant="body1">
+                            {publication.rek_title}<b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
+                        </Typography>
                     </li>
                 }
                 {
@@ -58,9 +61,11 @@ export default class RelatedPublications extends PureComponent {
             )).map((item, index)=> {
                 return (
                     <li key={`${searchKey.key}-${index}`}>
-                        {
-                            this.renderTitle(item, searchKey)
-                        }
+                        <Typography variant="body1">
+                            {
+                                this.renderTitle(item, searchKey)
+                            }
+                        </Typography>
                     </li>
                 );
             })

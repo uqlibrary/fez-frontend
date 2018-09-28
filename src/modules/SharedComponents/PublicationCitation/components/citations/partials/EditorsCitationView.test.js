@@ -2,6 +2,7 @@ import EditorsCitationView from './EditorsCitationView';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         ...testProps,
         publication: testProps.publication || {},
     };

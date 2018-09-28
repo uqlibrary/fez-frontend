@@ -1,9 +1,12 @@
-import DashboardResearcherIds from './DashboardResearcherIds';
+import {DashboardResearcherIds} from './DashboardResearcherIds';
 import {currentAuthor} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
-    const props = {...testProps};
+    const props = {
+        classes: {},
+        ...testProps
+    };
     return getElement(DashboardResearcherIds, props, isShallow);
 }
 

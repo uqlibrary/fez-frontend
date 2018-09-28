@@ -1,1328 +1,963 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdvancedSearchRow should render default view 1`] = `
-<div
-  className="columns is-gapless is-multiline is-mobile advancedSearchRow"
->
-  <div
-    className="column is-4-tablet"
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <SelectField
-      aria-label="Click to select a field to search from the list - Select a field currently selected"
-      autoWidth={false}
-      disabled={false}
-      errorText="Please select a field to search"
-      fullWidth={true}
-      menuItemStyle={
-        Object {
-          "lineHeight": "24px",
-          "paddingBottom": "4px",
-          "paddingTop": "4px",
-          "whiteSpace": "normal",
-        }
-      }
-      multiple={false}
-      onChange={[Function]}
-      value="0"
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      xs={12}
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "minWidth": 200,
+            }
           }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Select a field"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="0"
-      />
-      <Divider
-        inset={false}
-        key="1"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="all"
-        primaryText="Any field"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="all"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_title"
-        primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author"
-        primaryText="Author Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author_id"
-        primaryText="Author ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor"
-        primaryText="Editor/Contributor"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor_id"
-        primaryText="Contributor ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_ismemberof"
-        primaryText="Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_series"
-        primaryText="Series"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_series"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_journal_name"
-        primaryText="Journal name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_journal_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_conference_name"
-        primaryText="Conference Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_conference_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book title for chapters"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_publisher"
-        primaryText="Publisher"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_publisher"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_genre_type"
-        primaryText="Thesis type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_genre_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_org_unit_name"
-        primaryText="School, Centre or Institute"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_org_unit_name"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow spacer"
-  />
-  <div
-    className="column input is-12-mobile"
-  >
-    <AdvancedSearchRowInput
-      disabledFields={Array []}
-      inputField={
-        Object {
-          "ariaLabel": "Select a field to search on",
-          "combiner": null,
-          "hint": "Select a field to search on",
-          "map": "",
-          "order": 0,
-          "title": "Select a field",
-          "type": "TextField",
-          "validation": Array [],
-        }
-      }
-      onChange={[Function]}
-      onSearchRowChange={[MockFunction]}
-      onSearchRowDelete={[MockFunction]}
-      rowIndex={0}
-      searchField="0"
-      value=""
-    />
-  </div>
-</div>
+        >
+          <WithStyles(FormControl)
+            fullWidth={true}
+          >
+            <WithStyles(Select)
+              aria-label="Click to select a field to search from the list - Select a field currently selected"
+              error={true}
+              onChange={[Function]}
+              value="0"
+            >
+              <WithStyles(MenuItem)
+                disabled={true}
+                key="0"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="0"
+              >
+                Select a field
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="1"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="all"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="all"
+              >
+                Any field
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_title"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_title"
+              >
+                Title
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_book_title"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_book_title"
+              >
+                Book title for chapters
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_author"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_author"
+              >
+                Author Name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_author_id"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_author_id"
+              >
+                Author ID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_contributor"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_contributor"
+              >
+                Editor/Contributor
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_contributor_id"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_contributor_id"
+              >
+                Contributor ID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_ismemberof"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_ismemberof"
+              >
+                Collection
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_doi"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_doi"
+              >
+                DOI
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_pid"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_pid"
+              >
+                PID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_series"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_series"
+              >
+                Series
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_journal_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_journal_name"
+              >
+                Journal name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_conference_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_conference_name"
+              >
+                Conference Name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_publisher"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_publisher"
+              >
+                Publisher
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_genre_type"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_genre_type"
+              >
+                Thesis type
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_org_unit_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_org_unit_name"
+              >
+                School, Centre or Institute
+              </WithStyles(MenuItem)>
+            </WithStyles(Select)>
+            <WithStyles(FormHelperText)
+              error={true}
+            >
+              Please select a field to search
+            </WithStyles(FormHelperText)>
+          </WithStyles(FormControl)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography) />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          zeroMinWidth={true}
+        >
+          <AdvancedSearchRowInput
+            classes={Object {}}
+            disabledFields={Array []}
+            inputField={
+              Object {
+                "ariaLabel": "Select a field to search on",
+                "combiner": null,
+                "hint": "Select a field to search on",
+                "map": "",
+                "order": 0,
+                "title": "Select a field",
+                "type": "TextField",
+                "validation": Array [],
+              }
+            }
+            onChange={[Function]}
+            onSearchRowChange={[MockFunction]}
+            onSearchRowDelete={[MockFunction]}
+            rowIndex={0}
+            searchField="0"
+            value=""
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={true}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Divider) />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;
 
 exports[`AdvancedSearchRow should render search field row with given disabled options 1`] = `
-<div
-  className="columns is-gapless is-multiline is-mobile advancedSearchRow"
->
-  <div
-    className="column is-4-tablet"
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <SelectField
-      aria-label="Click to select a field to search from the list - Any field currently selected"
-      autoWidth={false}
-      disabled={false}
-      errorText={null}
-      fullWidth={true}
-      menuItemStyle={
-        Object {
-          "lineHeight": "24px",
-          "paddingBottom": "4px",
-          "paddingTop": "4px",
-          "whiteSpace": "normal",
-        }
-      }
-      multiple={false}
-      onChange={[Function]}
-      value="all"
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      xs={12}
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "minWidth": 200,
+            }
           }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Select a field"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="0"
-      />
-      <Divider
-        inset={false}
-        key="1"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
-        key="all"
-        primaryText="Any field"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="all"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_title"
-        primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author"
-        primaryText="Author Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author_id"
-        primaryText="Author ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor"
-        primaryText="Editor/Contributor"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor_id"
-        primaryText="Contributor ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_ismemberof"
-        primaryText="Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_series"
-        primaryText="Series"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_series"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_journal_name"
-        primaryText="Journal name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_journal_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_conference_name"
-        primaryText="Conference Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_conference_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book title for chapters"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_publisher"
-        primaryText="Publisher"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_publisher"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_genre_type"
-        primaryText="Thesis type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_genre_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_org_unit_name"
-        primaryText="School, Centre or Institute"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_org_unit_name"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow combiner"
-  >
-    <span>
-      contains
-    </span>
-  </div>
-  <div
-    className="column input is-12-mobile"
-  >
-    <AdvancedSearchRowInput
-      disabledFields={
-        Array [
-          "all",
-          0,
-        ]
-      }
-      inputField={
-        Object {
-          "ariaLabel": "Type a value to search all fields for",
-          "captionValue": "anything",
-          "combiner": "contains",
-          "hint": "Add some text to search all fields with",
-          "map": "",
-          "order": 1,
-          "title": "Any field",
-          "type": "TextField",
-          "validation": Array [
-            "maxLength500",
-          ],
-        }
-      }
-      onChange={[Function]}
-      onSearchRowChange={[MockFunction]}
-      onSearchRowDelete={[MockFunction]}
-      rowIndex={0}
-      searchField="all"
-      value="i feel lucky"
-    />
-  </div>
-</div>
+        >
+          <WithStyles(FormControl)
+            fullWidth={true}
+          >
+            <WithStyles(Select)
+              aria-label="Click to select a field to search from the list - Any field currently selected"
+              error={false}
+              onChange={[Function]}
+              value="all"
+            >
+              <WithStyles(MenuItem)
+                disabled={true}
+                key="0"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="0"
+              >
+                Select a field
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="1"
+              />
+              <WithStyles(MenuItem)
+                disabled={true}
+                key="all"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="all"
+              >
+                Any field
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_title"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_title"
+              >
+                Title
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_book_title"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_book_title"
+              >
+                Book title for chapters
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_author"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_author"
+              >
+                Author Name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_author_id"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_author_id"
+              >
+                Author ID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_contributor"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_contributor"
+              >
+                Editor/Contributor
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_contributor_id"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_contributor_id"
+              >
+                Contributor ID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_ismemberof"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_ismemberof"
+              >
+                Collection
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_doi"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_doi"
+              >
+                DOI
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_pid"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_pid"
+              >
+                PID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_series"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_series"
+              >
+                Series
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_journal_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_journal_name"
+              >
+                Journal name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_conference_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_conference_name"
+              >
+                Conference Name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_publisher"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_publisher"
+              >
+                Publisher
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_genre_type"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_genre_type"
+              >
+                Thesis type
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_org_unit_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_org_unit_name"
+              >
+                School, Centre or Institute
+              </WithStyles(MenuItem)>
+            </WithStyles(Select)>
+            <WithStyles(FormHelperText)
+              error={false}
+            />
+          </WithStyles(FormControl)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography)>
+            contains
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          zeroMinWidth={true}
+        >
+          <AdvancedSearchRowInput
+            classes={Object {}}
+            disabledFields={
+              Array [
+                "all",
+                0,
+              ]
+            }
+            inputField={
+              Object {
+                "ariaLabel": "Type a value to search all fields for",
+                "captionValue": "anything",
+                "combiner": "contains",
+                "hint": "Add some text to search all fields with",
+                "map": "",
+                "order": 1,
+                "title": "Any field",
+                "type": "TextField",
+                "validation": Array [
+                  "maxLength500",
+                ],
+              }
+            }
+            onChange={[Function]}
+            onSearchRowChange={[MockFunction]}
+            onSearchRowDelete={[MockFunction]}
+            rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={true}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Divider) />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;
 
 exports[`AdvancedSearchRow should render search field row with select field and search text 1`] = `
-<div
-  className="columns is-gapless is-multiline is-mobile advancedSearchRow"
->
-  <div
-    className="column is-4-tablet"
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <SelectField
-      aria-label="Click to select a field to search from the list - Any field currently selected"
-      autoWidth={false}
-      disabled={false}
-      errorText={null}
-      fullWidth={true}
-      menuItemStyle={
-        Object {
-          "lineHeight": "24px",
-          "paddingBottom": "4px",
-          "paddingTop": "4px",
-          "whiteSpace": "normal",
-        }
-      }
-      multiple={false}
-      onChange={[Function]}
-      value="all"
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      xs={12}
     >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "minWidth": 200,
+            }
           }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
-        key="0"
-        primaryText="Select a field"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="0"
-      />
-      <Divider
-        inset={false}
-        key="1"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="all"
-        primaryText="Any field"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="all"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_title"
-        primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author"
-        primaryText="Author Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author_id"
-        primaryText="Author ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor"
-        primaryText="Editor/Contributor"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor_id"
-        primaryText="Contributor ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_ismemberof"
-        primaryText="Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_series"
-        primaryText="Series"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_series"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_journal_name"
-        primaryText="Journal name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_journal_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_conference_name"
-        primaryText="Conference Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_conference_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book title for chapters"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_publisher"
-        primaryText="Publisher"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_publisher"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_genre_type"
-        primaryText="Thesis type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_genre_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_org_unit_name"
-        primaryText="School, Centre or Institute"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_org_unit_name"
-      />
-    </SelectField>
-  </div>
-  <div
-    className="column is-narrow combiner"
-  >
-    <span>
-      contains
-    </span>
-  </div>
-  <div
-    className="column input is-12-mobile"
-  >
-    <AdvancedSearchRowInput
-      disabledFields={Array []}
-      inputField={
-        Object {
-          "ariaLabel": "Type a value to search all fields for",
-          "captionValue": "anything",
-          "combiner": "contains",
-          "hint": "Add some text to search all fields with",
-          "map": "",
-          "order": 1,
-          "title": "Any field",
-          "type": "TextField",
-          "validation": Array [
-            "maxLength500",
-          ],
-        }
-      }
-      onChange={[Function]}
-      onSearchRowChange={[MockFunction]}
-      onSearchRowDelete={[MockFunction]}
-      rowIndex={0}
-      searchField="all"
-      value="i feel lucky"
-    />
-  </div>
-</div>
+        >
+          <WithStyles(FormControl)
+            fullWidth={true}
+          >
+            <WithStyles(Select)
+              aria-label="Click to select a field to search from the list - Any field currently selected"
+              error={false}
+              onChange={[Function]}
+              value="all"
+            >
+              <WithStyles(MenuItem)
+                disabled={true}
+                key="0"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="0"
+              >
+                Select a field
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="1"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="all"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="all"
+              >
+                Any field
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_title"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_title"
+              >
+                Title
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_book_title"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_book_title"
+              >
+                Book title for chapters
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_author"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_author"
+              >
+                Author Name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_author_id"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_author_id"
+              >
+                Author ID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_contributor"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_contributor"
+              >
+                Editor/Contributor
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_contributor_id"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_contributor_id"
+              >
+                Contributor ID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_ismemberof"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_ismemberof"
+              >
+                Collection
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_doi"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_doi"
+              >
+                DOI
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_pid"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_pid"
+              >
+                PID
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_series"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_series"
+              >
+                Series
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_journal_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_journal_name"
+              >
+                Journal name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_conference_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_conference_name"
+              >
+                Conference Name
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_publisher"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_publisher"
+              >
+                Publisher
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_genre_type"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_genre_type"
+              >
+                Thesis type
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="rek_org_unit_name"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                value="rek_org_unit_name"
+              >
+                School, Centre or Institute
+              </WithStyles(MenuItem)>
+            </WithStyles(Select)>
+            <WithStyles(FormHelperText)
+              error={false}
+            />
+          </WithStyles(FormControl)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography)>
+            contains
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          zeroMinWidth={true}
+        >
+          <AdvancedSearchRowInput
+            classes={Object {}}
+            disabledFields={Array []}
+            inputField={
+              Object {
+                "ariaLabel": "Type a value to search all fields for",
+                "captionValue": "anything",
+                "combiner": "contains",
+                "hint": "Add some text to search all fields with",
+                "map": "",
+                "order": 1,
+                "title": "Any field",
+                "type": "TextField",
+                "validation": Array [
+                  "maxLength500",
+                ],
+              }
+            }
+            onChange={[Function]}
+            onSearchRowChange={[MockFunction]}
+            onSearchRowDelete={[MockFunction]}
+            rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={true}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Divider) />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;

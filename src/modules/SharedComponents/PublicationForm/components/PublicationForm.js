@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
-import MenuItem from 'material-ui/MenuItem';
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
+import MenuItem from '@material-ui/core/MenuItem';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
@@ -64,72 +65,84 @@ export default class PublicationForm extends Component {
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
             }).map((item, index) => {
-                return <MenuItem value={item.id} primaryText={item.name} key={'fav_' + index} disabled={!item.formComponent}/>;
+                return <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>{item.name}</MenuItem>;
             })),
             ...[<Divider key="div_0"/>],
             ...this.publicationTypes.filter((item) => {
                 return item.hasFormComponent;
             }).map((item, index) => {
-                return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
+                return <MenuItem value={item.id} key={index} disabled={!item.formComponent}>{item.name}</MenuItem>;
             })
         ];
-
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <form onSubmit={this._handleDefaultSubmit}>
-                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
-
-                <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
-                    <Field
-                        component={SelectField}
-                        disabled={this.props.submitting}
-                        name="rek_display_type"
-                        {...this.context.selectFieldMobileOverrides}
-                        floatingLabelText={txt.publicationType.inputLabelText}
-                        floatingLabelFixed
-                        className="requiredField"
-                        hintText={txt.publicationType.hintText}>
-                        {publicationTypeItems}
-                    </Field>
-                </StandardCard>
-                {
-                    this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))
-                }
-                {
-                    this.props.formValues.get('rek_display_type') > 0 &&
-                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field
-                            name="files"
-                            component={ FileUploadField }
-                            disabled={this.props.submitting}
-                            requireOpenAccessStatus
-                            validate={[validation.validFileUpload]} />
-                    </StandardCard>
-                }
-                {
-                    alertProps &&
-                    <Alert {...alertProps} />
-                }
-                <div className="columns action-buttons">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow-desktop">
-                        <RaisedButton
+                <Grid container spacing={24}>
+                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
+                            <Field
+                                component={SelectField}
+                                disabled={this.props.submitting}
+                                name="rek_display_type"
+                                value={this.props.formValues.get('rek_display_type')}
+                                label={txt.publicationType.inputLabelText}
+                                required
+                                placeholder={txt.publicationType.hintText}>
+                                {publicationTypeItems}
+                            </Field>
+                        </StandardCard>
+                    </Grid>
+                    {
+                        this.props.formValues.get('rek_display_type') > 0 &&
+                        <React.Fragment>
+                            <Grid item xs={12}>
+                                {this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))}
+                            </Grid>
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                    <Field
+                                        name="files"
+                                        component={ FileUploadField }
+                                        disabled={this.props.submitting}
+                                        requireOpenAccessStatus
+                                        validate={[validation.validFileUpload]} />
+                                </StandardCard>
+                            </Grid>
+                        </React.Fragment>
+                    }
+                    {
+                        alertProps &&
+                        <Grid item xs={12}>
+                            <Alert pushToTop {...alertProps} />
+                        </Grid>
+                    }
+                </Grid>
+                <Grid container spacing={24}>
+                    <Grid item xs />
+                    <Grid item xs={12} sm={'auto'}>
+                        <Button
+                            // variant="flat"
+                            color="secondary"
                             fullWidth
-                            label={txt.cancel}
+                            children={txt.cancel}
                             disabled={this.props.submitting}
                             onClick={this.props.onFormCancel} />
-                    </div>
-                    {this.props.formValues.get('rek_display_type') > 0 &&
-                    <div className="column is-narrow-desktop">
-                        <RaisedButton
-                            secondary
-                            fullWidth
-                            label={txt.submit}
-                            onClick={this.props.handleSubmit}
-                            disabled={this.props.submitting || this.props.disableSubmit}/>
-                    </div>
+                    </Grid>
+                    {
+                        this.props.formValues.get('rek_display_type') > 0 &&
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                style={{whiteSpace: 'nowrap'}}
+                                variant="raised"
+                                color="primary"
+                                fullWidth
+                                children={txt.submit}
+                                onClick={this.props.handleSubmit}
+                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                        </Grid>
                     }
-                </div>
+                </Grid>
             </form>
         );
     }

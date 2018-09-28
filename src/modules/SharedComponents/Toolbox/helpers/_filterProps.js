@@ -4,6 +4,7 @@ export default function filterProps(props) {
     delete validProps.input;
     delete validProps.meta;
     delete validProps.help;
+    delete validProps.className;
 
     validProps.errorText = (props.forceError || (props.meta && props.meta.touched)) ? props.meta.error || props.meta.warn || undefined : undefined;
     return validProps;

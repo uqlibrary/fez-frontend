@@ -26,8 +26,10 @@ export default {
         appTitle: (
             <a href={`${pathConfig.index}`}
                 className="appTitle"
-                title="Click to return to the eSpace home page">
-                UQ eSpace {process.env.TITLE_SUFFIX || ''}
+                title="Click to return to the eSpace home page"
+                style={{color: '#FFFFFF'}}
+            >
+                UQ eSpace {process.env.TITLE_SUFFIX || 'eSpace'}
             </a>
         ),
         logo: {
@@ -161,7 +163,7 @@ export default {
             },
             offline: {
                 message: 'Your connection is offline',
-                autoHideDuration: 0
+                autoHideDuration: null
             }
         },
         audioPlayer: {

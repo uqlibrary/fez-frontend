@@ -1,7 +1,8 @@
-import NewsFeed from './NewsFeed';
+import {NewsFeed} from './NewsFeed';
 
 function setup(testProps, isShallow = true){
     const props = {
+        classes: {},
         actions: {
             loadNewsFeed: jest.fn()
         },

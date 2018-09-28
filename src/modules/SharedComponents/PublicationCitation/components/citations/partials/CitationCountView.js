@@ -17,17 +17,19 @@ export default class CitationCountView extends PureComponent {
     render() {
         const {source, count, link, title} = this.props;
         return (
-            <div className="citationCount">
+            <React.Fragment>
                 <ExternalLink
                     className={`${source}CitationCount`}
                     href={link}
                     aria-label={title}
                     title={title}
                     openInNewIcon={false}>
-                    <div className={`fez-icon ${source} large`}/>
+                    <span className={`fez-icon ${source} large`}/>
+                    &nbsp;
                     <span className="citationCountNumber">{count}</span>
+                    &nbsp;&nbsp;
                 </ExternalLink>
-            </div>
+            </React.Fragment>
         );
     }
 }

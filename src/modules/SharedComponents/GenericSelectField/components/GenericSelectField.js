@@ -1,15 +1,26 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from 'material-ui/MenuItem';
-import SelectField from 'material-ui/SelectField';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class GenericSelectField extends Component {
+const styles = theme => ({
+    selectedMenuItem: {
+        backgroundColor: `${theme.palette.accent.main} !important`,
+        color: theme.palette.white.main
+    }
+});
+
+export class GenericSelectField extends Component {
     static propTypes = {
         onChange: PropTypes.func,
-        locale: PropTypes.object,
         itemsList: PropTypes.array,
         itemsLoading: PropTypes.bool,
         loadItemsList: PropTypes.func,
+        itemsLoadingHint: PropTypes.string,
         selectedValue: PropTypes.any,
         parentItemsId: PropTypes.number,
         className: PropTypes.string,
@@ -20,11 +31,16 @@ export default class GenericSelectField extends Component {
         errorText: PropTypes.string,
         hintText: PropTypes.string,
         multiple: PropTypes.bool,
-        ariaLabel: PropTypes.string
-    };
+        required: PropTypes.bool,
+        error: PropTypes.any,
+        ariaLabel: PropTypes.string,
+        loadingHint: PropTypes.string,
+        label: PropTypes.string,
+        locale: PropTypes.object,
+        hideLabel: PropTypes.bool,
+        displayEmpty: PropTypes.bool,
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -46,56 +62,88 @@ export default class GenericSelectField extends Component {
         }
     }
 
-    _itemSelected = (event, index, value) => {
+    _itemSelected = (event) => {
+        let value = event.target.value;
+        if(value[0] === -1 && value.length > 1) {
+            value.shift();
+        } else if (value === [-1]) {
+            value = '';
+        }
         this.props.onChange(value);
     };
 
     getMenuItemProps = (item, selectedValue, multiple) => {
         if (multiple) {
             return {
-                checked: selectedValue.indexOf(item.value) > -1,
-                value: item.value,
-                primaryText: item.text || item.value
+                selected: selectedValue.indexOf(item.value || item) > -1,
+                value: item.value || item,
             };
         } else {
             return {
                 value: item.value || item,
-                primaryText: item.text || item.value || item
             };
         }
     };
 
     render() {
-        const renderMenuItems = this.props.itemsList.map((item, index) => {
-            return (<MenuItem
-                {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
-                className={this.props.menuItemClassName}
-                key={`select_field_${index}`}
-            />);
-        });
-        const loadingIndicationText = !!this.props.locale.label && `${this.props.locale.label} ${this.props.itemsLoading ? this.props.locale.loading : ''}` || null;
+        const {classes} = this.props;
+        const loadingIndicationText = this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
+        const renderMenuItems = [
+            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{loadingIndicationText}</MenuItem>,
+            ...this.props.itemsList.map((item, index) => {
+                return (
+                    <MenuItem
+                        classes={{selected: classes.selectedMenuItem}}
+                        style={{display: 'block'}}
+                        {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
+                        key={index + 1}
+                        aria-label={item.text || item.value || item}>
+                        {item.text || item.value || item}
+                    </MenuItem>
+                );
+            })
+        ];
+        const newValue = () => {
+            if(this.props.multiple) {
+                if(this.props.hideLabel) {
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [-1];
+                } else {
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [];
+                }
+            } else {
+                if(this.props.hideLabel) {
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
+                } else{
+                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '';
+                }
+            }
+        };
+
         return (
-            <SelectField
-                id="selectedValue"
-                name="selectedValue"
-                {...this.context.selectFieldMobileOverrides}
-                className={this.props.className}
-                value={this.props.itemsLoading ? null : this.props.selectedValue}
-                maxHeight={250}
-                onChange={this._itemSelected}
-                disabled={this.props.disabled || this.props.itemsLoading}
-                dropDownMenuProps={{animated: false}}
-                hintText={this.props.hintText}
-                floatingLabelText={loadingIndicationText}
-                aria-label={this.props.ariaLabel}
-                fullWidth={this.props.fullWidth}
-                autoWidth={this.props.autoWidth}
-                errorText={this.props.errorText}
-                multiple={this.props.multiple}
-                menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
-            >
-                {renderMenuItems}
-            </SelectField>
+            <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
+                {
+                    this.props.locale.label && !this.props.hideLabel &&
+                    <InputLabel>{this.props.locale.label}</InputLabel>
+                }
+                <Select
+                    value={newValue()}
+                    displayEmpty={this.props.displayEmpty}
+                    onChange={this._itemSelected}
+                    disabled={this.props.disabled || this.props.itemsLoading}
+                    aria-label={this.props.ariaLabel}
+                    autoWidth={this.props.autoWidth}
+                    multiple={this.props.multiple}
+                >
+                    {renderMenuItems}
+                </Select>
+                {
+                    !!this.props.error &&
+                    <FormHelperText error={!!this.props.error}>{this.props.errorText}</FormHelperText>
+                }
+            </FormControl>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(GenericSelectField);
+

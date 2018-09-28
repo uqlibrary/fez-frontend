@@ -147,7 +147,13 @@ mock
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)
-    .reply(200, mockData.authorsSearch)
+    .reply(config => {
+        if (config.params.rule === 'lookup') {
+            return [200, mockData.searchKeyList.author];
+        } else {
+            return [200, mockData.authorsSearch];
+        }
+    })
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)

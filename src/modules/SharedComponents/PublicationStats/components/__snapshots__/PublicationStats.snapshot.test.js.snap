@@ -1,735 +1,1007 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
-<Table
-  allRowsSelected={false}
-  className="publicationsStatsTable"
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={false}
->
-  <TableHeader
-    adjustForCheckbox={false}
-    className="publicationsStatsHeader"
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        eSpace publications indexed in:
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        eSpace publications
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <div
-          className="is-hidden-mobile"
-        >
-          Web of science
-        </div>
-        <div
-          className="is-hidden-tablet"
-        >
-          WOS
-        </div>
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        Web of science
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
         Scopus
-      </TableHeaderColumn>
-    </TableRow>
-  </TableHeader>
-  <TableBody
-    allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
-    multiSelectable={false}
-    preScanRows={true}
-    selectable={true}
-    style={Object {}}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Total publications
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         301
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         210
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Publication range
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         h-index
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        1
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Average citation count per publication
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        24.5
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        25.2
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Total citations
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         7374
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         5297
-      </TableRowColumn>
-    </TableRow>
-  </TableBody>
-</Table>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
-<Table
-  allRowsSelected={false}
-  className="publicationsStatsTable"
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={false}
->
-  <TableHeader
-    adjustForCheckbox={false}
-    className="publicationsStatsHeader"
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        eSpace publications indexed in:
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        eSpace publications
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <div
-          className="is-hidden-mobile"
-        >
-          Web of science
-        </div>
-        <div
-          className="is-hidden-tablet"
-        >
-          WOS
-        </div>
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        Web of science
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
         Scopus
-      </TableHeaderColumn>
-    </TableRow>
-  </TableHeader>
-  <TableBody
-    allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
-    multiSelectable={false}
-    preScanRows={true}
-    selectable={true}
-    style={Object {}}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Total publications
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         301
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         210
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Publication range
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         h-index
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Average citation count per publication
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        24.5
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        25.2
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Total citations
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         7374
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         5297
-      </TableRowColumn>
-    </TableRow>
-  </TableBody>
-</Table>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
-<Table
-  allRowsSelected={false}
-  className="publicationsStatsTable"
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={false}
->
-  <TableHeader
-    adjustForCheckbox={false}
-    className="publicationsStatsHeader"
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        eSpace publications indexed in:
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        eSpace publications
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <div
-          className="is-hidden-mobile"
-        >
-          Web of science
-        </div>
-        <div
-          className="is-hidden-tablet"
-        >
-          WOS
-        </div>
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        Web of science
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
         Scopus
-      </TableHeaderColumn>
-    </TableRow>
-  </TableHeader>
-  <TableBody
-    allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
-    multiSelectable={false}
-    preScanRows={true}
-    selectable={true}
-    style={Object {}}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Total publications
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         301
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         210
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Publication range
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         h-index
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Average citation count per publication
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        24.5
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        25.2
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Total citations
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         7374
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         5297
-      </TableRowColumn>
-    </TableRow>
-  </TableBody>
-</Table>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
-<Table
-  allRowsSelected={false}
-  className="publicationsStatsTable"
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={false}
->
-  <TableHeader
-    adjustForCheckbox={false}
-    className="publicationsStatsHeader"
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        eSpace publications indexed in:
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        eSpace publications
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <div
-          className="is-hidden-mobile"
-        >
-          Web of science
-        </div>
-        <div
-          className="is-hidden-tablet"
-        >
-          WOS
-        </div>
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        Web of science
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
         Scopus
-      </TableHeaderColumn>
-    </TableRow>
-  </TableHeader>
-  <TableBody
-    allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
-    multiSelectable={false}
-    preScanRows={true}
-    selectable={true}
-    style={Object {}}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Total publications
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         301
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         210
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Publication range
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         h-index
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Average citation count per publication
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        24.5
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        25.2
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Total citations
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         7374
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         5297
-      </TableRowColumn>
-    </TableRow>
-  </TableBody>
-</Table>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;
 
 exports[`PublicationStats component should render an empty component 1`] = `
@@ -739,184 +1011,252 @@ exports[`PublicationStats component should render an empty component 1`] = `
 `;
 
 exports[`PublicationStats component should render statistics with table and data 1`] = `
-<Table
-  allRowsSelected={false}
-  className="publicationsStatsTable"
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={false}
->
-  <TableHeader
-    adjustForCheckbox={false}
-    className="publicationsStatsHeader"
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        eSpace publications indexed in:
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        eSpace publications
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
-        <div
-          className="is-hidden-mobile"
-        >
-          Web of science
-        </div>
-        <div
-          className="is-hidden-tablet"
-        >
-          WOS
-        </div>
-      </TableHeaderColumn>
-      <TableHeaderColumn
-        className="publicationsStatsHeaderTitle"
+        Web of science
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        gutterBottom={true}
       >
         Scopus
-      </TableHeaderColumn>
-    </TableRow>
-  </TableHeader>
-  <TableBody
-    allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
-    multiSelectable={false}
-    preScanRows={true}
-    selectable={true}
-    style={Object {}}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Total publications
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         301
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         210
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
         Publication range
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        1992-2017
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        1992-2017
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         h-index
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        N/A
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        N/A
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Average citation count per publication
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        24.5
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        25.2
-      </TableRowColumn>
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
     >
-      <TableRowColumn
-        className="publicationsStatsRowTitle"
-        hoverable={false}
-      >
+      <WithStyles(Typography)>
+        24.5
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
+        25.2
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider) />
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={6}
+    >
+      <WithStyles(Typography)>
         Total citations
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         7374
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+      xs={3}
+    >
+      <WithStyles(Typography)>
         5297
-      </TableRowColumn>
-    </TableRow>
-  </TableBody>
-</Table>
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;

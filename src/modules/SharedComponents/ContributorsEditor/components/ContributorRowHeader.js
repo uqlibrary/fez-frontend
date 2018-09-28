@@ -1,17 +1,26 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import Hidden from '@material-ui/core/Hidden';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import DeleteForever from '@material-ui/icons/DeleteForever';
+import People from '@material-ui/icons/People';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class ContributorRowHeader extends PureComponent {
+export class ContributorRowHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        isInfinite: PropTypes.bool
+        isInfinite: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -40,37 +49,71 @@ export default class ContributorRowHeader extends PureComponent {
     };
 
     render() {
-        const {
-            nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
+        const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
+        const {classes, showIdentifierLookup, isInfinite} = this.props;
         return (
-            <div>
-                {this.props.showContributorAssignment && (<div><br/>{this.props.locale.descriptionStep2}</div>)}
-                <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
-                    <ConfirmDialogBox
-                        onRef={ref => (this.confirmationBox = ref)}
-                        onAction={this.props.onDeleteAll}
-                        locale={deleteAllConfirmation}/>
-                    <div className="column is-narrow iconSpacer is-hidden-mobile" />
-                    <div className="column description datalist-title">{nameColumn}</div>
+            <Fragment>
+                <ConfirmDialogBox
+                    onRef={ref => (this.confirmationBox = ref)}
+                    onAction={this.props.onDeleteAll}
+                    locale={deleteAllConfirmation}
+                />
+                {
+                    this.props.showContributorAssignment &&
+                    <Fragment>
+                        <br/>
+                        {this.props.locale.descriptionStep2}
+                    </Fragment>
+                }
+                <ListItem classes={{root: classes.header}}>
+                    <Hidden xsDown>
+                        <ListItemIcon>
+                            <People/>
+                        </ListItemIcon>
+                    </Hidden>
+                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                     {
-                        this.props.showIdentifierLookup &&
-                        <div className="column identifier datalist-title is-hidden-mobile">{identifierColumn}</div>
+                        showIdentifierLookup &&
+                        <Hidden xsDown>
+                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
+                        </Hidden>
                     }
-                    <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
-
-                    <div className="column is-narrow buttons datalist-buttons">
-                        <IconButton
-                            tooltip={deleteAll}
-                            tooltipPosition="top-left"
-                            onClick={this._showConfirmation}
-                            disabled={this.props.disabled}>
-                            <FontIcon className="material-icons">delete_forever</FontIcon>
-                        </IconButton>
-                    </div>
-                    <div className={`column is-narrow scrollbar-spacer${this.props.isInfinite ? '-infinite' : ''}`} />
-                </div>
-            </div>
+                    <Hidden xsDown>
+                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
+                    </Hidden>
+                    <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
+                        <Tooltip title={deleteAll}>
+                            <IconButton
+                                onClick={this._showConfirmation}
+                                disabled={this.props.disabled}
+                            >
+                                <DeleteForever/>
+                            </IconButton>
+                        </Tooltip>
+                    </ListItemSecondaryAction>
+                </ListItem>
+            </Fragment>
         );
     }
 }
 
+const styles = () => ({
+    right: {
+        textAlign: 'right'
+    },
+    header: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
+        marginTop: 8
+    },
+    paddingRight24: {
+        paddingRight: 24
+    },
+    paddingRight36: {
+        paddingRight: 36
+    },
+    paddingRight14: {
+        paddingRight: 14
+    }
+});
+
+export default withStyles(styles)(ContributorRowHeader);

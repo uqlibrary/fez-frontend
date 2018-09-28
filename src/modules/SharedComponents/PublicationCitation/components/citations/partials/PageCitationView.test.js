@@ -3,6 +3,7 @@ import {conferencePaper} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         ...testProps,
         publication: testProps.publication || {},
         searchKey: testProps.searchKey,

@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
@@ -10,9 +10,10 @@ const mapStateToProps = (state, props) => {
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
         onChange: (item) => props.input.onChange(item.value),
-        dataSourceConfig: { text: 'value', value: 'value'},
         async: true,
         errorText: props.meta ? props.meta.error : null,
+        error: !!props.meta && !!props.meta.error,
+        itemToString: (item) => !!item && String(item.value) || '',
         selectedValue: props.input ? {value: props.input.value} : null
     };
 };
@@ -23,5 +24,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const SeriesField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const SeriesField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
 

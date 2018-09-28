@@ -1,8 +1,10 @@
-import HelpIcon from './HelpIcon';
+import {HelpIcon} from './HelpIcon';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
+        classes: {},
+        theme: {palette:{white:{main: '#FFFFFF'}}},
         title: testProps.title || 'This is the title',
         text: testProps.text || 'This is some text',
         buttonLabel: testProps.buttonLabel || 'This is a button',

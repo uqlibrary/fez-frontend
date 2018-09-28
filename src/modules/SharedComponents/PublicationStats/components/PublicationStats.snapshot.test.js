@@ -1,9 +1,10 @@
 import {formattedData} from 'mock/data/testing/publicationStats';
-import PublicationStats from './PublicationStats';
+import {PublicationStats} from './PublicationStats';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
+        classes: {},
         ...testProps,
     };
     return getElement(PublicationStats, props, isShallow);

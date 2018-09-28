@@ -1,5 +1,5 @@
 import {publicationDetails} from 'mock/data/testing/records';
-import PublicationDetails from "./PublicationDetails";
+import {PublicationDetails} from "./PublicationDetails";
 
 function setup(testProps, isShallow = true){
     const props = {
