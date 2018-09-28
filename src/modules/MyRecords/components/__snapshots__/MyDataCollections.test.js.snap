@@ -15,7 +15,7 @@ exports[`myDatasets test renders active filters 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to
+            We were unable to find any results. You may be able to 
             <a
               href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
               target="_blank"
@@ -28,7 +28,7 @@ exports[`myDatasets test renders active filters 1`] = `
         title="No datasets found"
       >
         <div>
-          We were unable to find any results. You may be able to
+          We were unable to find any results. You may be able to 
           <a
             href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
             target="_blank"
@@ -60,7 +60,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records.
+          Displaying records 1 to 2 of 2 total records. 
         </span>
         <WithStyles(Grid)
           container={true}
@@ -71,9 +71,9 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
             xs={12}
           >
             <span>
-              Add to this list by
+              Add to this list by 
               <a
-                href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+                href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
                 target="_blank"
               >
                 adding a missing dataset
@@ -184,7 +184,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records.
+          Displaying records 1 to 2 of 2 total records. 
         </span>
         <WithStyles(Grid)
           container={true}
@@ -195,9 +195,9 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             xs={12}
           >
             <span>
-              Add to this list by
+              Add to this list by 
               <a
-                href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+                href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
                 target="_blank"
               >
                 adding a missing dataset
@@ -444,9 +444,9 @@ exports[`myDatasets test renders loading screen while loading publications while
             xs={12}
           >
             <span>
-              Add to this list by
+              Add to this list by 
               <a
-                href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+                href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
                 target="_blank"
               >
                 adding a missing dataset
@@ -527,7 +527,7 @@ exports[`myDatasets test renders no results 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to
+            We were unable to find any results. You may be able to 
             <a
               href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
               target="_blank"
@@ -540,7 +540,7 @@ exports[`myDatasets test renders no results 1`] = `
         title="No datasets found"
       >
         <div>
-          We were unable to find any results. You may be able to
+          We were unable to find any results. You may be able to 
           <a
             href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
             target="_blank"

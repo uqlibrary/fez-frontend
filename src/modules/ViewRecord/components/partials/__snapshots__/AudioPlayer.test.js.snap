@@ -383,7 +383,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
           <div>
             <audio>
               <source
-                src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
                 type="audio/mp3"
               />
             </audio>
@@ -934,7 +934,7 @@ exports[`Audio Player Component  should play audio 1`] = `
           <div>
             <audio>
               <source
-                src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
                 type="audio/mp3"
               />
             </audio>

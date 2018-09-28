@@ -2355,7 +2355,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                   <div>
                                     <audio>
                                       <source
-                                        src="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
+                                        src="http://localhost/view/UQ:676287/test.mp3"
                                         type="audio/mp3"
                                       />
                                     </audio>
