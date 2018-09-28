@@ -14,9 +14,12 @@ import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
 const styles = theme => ({
     tabs: {
-        marginLeft: -24,
-        marginTop: -16,
-        marginRight: -24,
+        [theme.breakpoints.up('sm')]: {
+            margin: '-16px -24px 0px -24px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '-16px -16px 0px -16px',
+        },
         backgroundColor: theme.palette.primary.main,
         borderRadius: '4px 4px 0px 0px'
     },
@@ -106,7 +109,7 @@ export class TopCitedPublications extends PureComponent {
                         {/* Content */}
                         {reorderedItems.map(({key, values}) => (
                             values && values.length >= 1 && (this.state.TopCitedTab === key) &&
-                                <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} spacing={0} style={{marginTop: 18}}>
+                                <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} style={{marginTop: 24}}>
                                     <Grid item xs>
                                         <Typography key={key} variant={'title'}><div key={key} className={`fez-icon ${key} xxlarge`}/> {txt[key].heading}</Typography>
                                     </Grid>

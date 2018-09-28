@@ -26,9 +26,12 @@ import {mui1theme as theme} from 'config';
 
 const styles = theme => ({
     tabs: {
-        marginLeft: -24,
-        marginTop: -24,
-        marginRight: -24,
+        [theme.breakpoints.up('sm')]: {
+            margin: '-16px -24px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: -16
+        },
         backgroundColor: theme.palette.primary.main,
         borderRadius: '4px 4px 0px 0px'
     },
@@ -169,7 +172,6 @@ export class Dashboard extends PureComponent {
                                 && this.props.possiblyYourPublicationsCount > 0 ?
                                     <Grid item xs={12}>
                                         <Alert
-                                            pushToTop
                                             title={txt.possiblePublicationsLure.title}
                                             message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
                                             type={txt.possiblePublicationsLure.type}
@@ -184,7 +186,6 @@ export class Dashboard extends PureComponent {
                                     && !this.props.possiblyYourPublicationsCount &&
                                     <Grid item xs={12}>
                                         <Alert
-                                            pushToTop
                                             {...txt.nothingToClaimLure}
                                             action={this._addPublication}/>
                                     </Grid>

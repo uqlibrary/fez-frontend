@@ -20,17 +20,7 @@ import {withStyles} from '@material-ui/core/styles';
 const classNames = require('classnames');
 
 const styles = theme => ({
-    wrapper: {
-        marginBottom: 12,
-        paddingRight: 24
-    },
-    pushToTop: {
-        marginTop: -18,
-        paddingRight: 24,
-        marginBottom: -18
-    },
     common: {
-        margin: '18px 0',
         borderRadius: 5,
         boxShadow: theme.shadows[1]
     },
@@ -265,7 +255,7 @@ export class Alert extends PureComponent {
     render() {
         const {classes} = this.props;
         return (
-            <div className={this.props.pushToTop ? classes.pushToTop : classes.wrapper}>
+            <div style={{padding: 12}}>
                 <Grid container spacing={24} className={classNames(classes[this.props.type], classes.common)} justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
                     <Grid item xs={12} sm className={this.props.action && classes.linked}>
                         <Grid container justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
