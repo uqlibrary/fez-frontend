@@ -12,7 +12,7 @@ export default class WhatIsEspace extends PureComponent {
         const txt = locale.components.whatIsEspace;
         return (
             <StandardCard title={txt.title} darkHeader>
-                <Typography style={{paddingTop: 12}}>
+                <Typography>
                     {txt.text}
                     {
                         txt.readMoreLink.indexOf('http') === -1 &&

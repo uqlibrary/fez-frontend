@@ -12,12 +12,10 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     newsItem: {
-        marginTop: 6,
         color: theme.palette.primary.main,
         '& .day': {
             fontSize: '1.7rem',
-            fontWeight: theme.typography.fontWeightMedium,
-            marginBottom: -4
+            fontWeight: theme.typography.fontWeightMedium
         },
         '& .month': {
             textTransform: 'uppercase',
@@ -72,20 +70,22 @@ export class NewsFeed extends PureComponent {
             <StandardCard title={txt.title} darkHeader>
                 {
                     !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
-                        <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
-                            <Grid item xs={'auto'}>
-                                <Grid container direction={'column'} alignItems={'center'} justify={'center'} alignContent={'center'} spacing={0}>
-                                    <Grid item className="day">{moment(newsItem.nws_updated_date).format('D')}</Grid>
-                                    <Grid item className="month">{moment(newsItem.nws_updated_date).format('MMM')}</Grid>
-                                    <Grid item className="year">{moment(newsItem.nws_updated_date).format('YYYY')}</Grid>
+                        <div style={{padding: '8px 0px'}}>
+                            <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
+                                <Grid item xs={'auto'}>
+                                    <Grid container direction="column" alignItems="center" justify="center" alignContent="center" spacing={0}>
+                                        <Grid item className="day">{moment(newsItem.nws_updated_date).format('D')}</Grid>
+                                        <Grid item className="month">{moment(newsItem.nws_updated_date).format('MMM')}</Grid>
+                                        <Grid item className="year">{moment(newsItem.nws_updated_date).format('YYYY')}</Grid>
+                                    </Grid>
+                                </Grid>
+                                <Grid item xs>
+                                    <Typography>
+                                        <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
+                                    </Typography>
                                 </Grid>
                             </Grid>
-                            <Grid item xs>
-                                <Typography>
-                                    <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
-                                </Typography>
-                            </Grid>
-                        </Grid>
+                        </div>
                     ))
                 }
             </StandardCard>
