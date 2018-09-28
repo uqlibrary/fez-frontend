@@ -235,8 +235,8 @@ export class App extends PureComponent {
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar"
-                    color={'primary'}
-                    position={'fixed'}>
+                    color="primary"
+                    position="fixed">
                     <Toolbar style={{height: '70px'}}>
                         <Grid container spacing={8}
                             alignItems="center"
@@ -259,9 +259,9 @@ export class App extends PureComponent {
                                 </Grid>
                             }
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={16} alignItems={'center'} justify={'center'}>
+                                <Grid container spacing={16} alignItems="center" justify="center">
                                     <Hidden smDown>
-                                        <Grid item xs={'auto'}>
+                                        <Grid item xs="auto">
                                             <img id="logo" src={logo} style={{height: 66, width: 60}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
                                         </Grid>
                                     </Hidden>
@@ -278,7 +278,7 @@ export class App extends PureComponent {
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
-                            <Grid item xs={'auto'} zeroMinWidth>
+                            <Grid item xs="auto" zeroMinWidth>
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
@@ -316,7 +316,7 @@ export class App extends PureComponent {
                     />
                     {
                         userStatusAlert &&
-                        <Grid container alignContent={'center'} justify={'center'} alignItems={'center'} >
+                        <Grid container alignContent="center" justify="center" alignItems="center" >
                             <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />
                             </Grid>
