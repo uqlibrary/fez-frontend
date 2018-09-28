@@ -2289,48 +2289,53 @@ exports[`Meta Component  should render component with working paper 1`] = `
     name="citation_date"
   />
   <meta
+    content="10.1242/jcs.196651"
+    key="citation_doi-11"
+    name="citation_doi"
+  />
+  <meta
     content="1"
-    key="citation_firstpage-11"
+    key="citation_firstpage-12"
     name="citation_firstpage"
   />
   <meta
     content="23"
-    key="citation_lastpage-12"
+    key="citation_lastpage-13"
     name="citation_lastpage"
   />
   <meta
     content="School of Economics"
-    key="DC.Publisher-13"
+    key="DC.Publisher-14"
     name="DC.Publisher"
   />
   <meta
     content="School of Economics"
-    key="citation_publisher-14"
+    key="citation_publisher-15"
     name="citation_publisher"
   />
   <meta
     content="eng"
-    key="citation_language-15"
+    key="citation_language-16"
     name="citation_language"
   />
   <meta
     content="Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people."
-    key="DC.Description-16"
+    key="DC.Description-17"
     name="DC.Description"
   />
   <meta
     content="Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people."
-    key="citation_abstract-17"
+    key="citation_abstract-18"
     name="citation_abstract"
   />
   <meta
     content="European Union; Education; Employment; Social inclusion"
-    key="citation_keywords-18"
+    key="citation_keywords-19"
     name="citation_keywords"
   />
   <meta
     content="46"
-    key="citation_technical_report_number-19"
+    key="citation_technical_report_number-20"
     name="citation_technical_report_number"
   />
 </HelmetWrapper>
