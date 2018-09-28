@@ -1,8 +1,11 @@
-import Alert from '../components/Alert';
+import {Alert} from '../components/Alert';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
-    const props = {...testProps};
+    const props = {
+        classes: {},
+        ...testProps
+    };
     return getElement(Alert, props, isShallow);
 }
 

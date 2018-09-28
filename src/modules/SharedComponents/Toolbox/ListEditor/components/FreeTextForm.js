@@ -1,16 +1,28 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-export default class FreeTextForm extends Component {
+const styles = theme => ({
+    MUITextLabel: theme.overrides.MuiFormLabel,
+    remindToAdd: {
+        marginTop: 8,
+        color: '#f06f0d'
+    }
+});
+
+export class FreeTextForm extends Component {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
         isValid: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         errorText: PropTypes.string,
-        remindToAdd: PropTypes.bool
+        remindToAdd: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -28,6 +40,7 @@ export default class FreeTextForm extends Component {
         this.state = {
             itemName: ''
         };
+        this.textField = null;
     }
 
     addItem = (event) => {
@@ -47,53 +60,61 @@ export default class FreeTextForm extends Component {
         });
 
         // move focus to name as published text field after item was added
-        if (this.refs.itemName) this.refs.itemName.focus();
+        if (this.textField) this.textField.focus();
     };
 
-    onNameChanged = (event, newValue) => {
+    onNameChanged = (event) => {
         this.setState({
-            itemName: newValue
+            itemName: event.target.value
         });
     };
 
     render() {
+        const {classes, locale, errorText, disabled} = this.props;
+        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
+
         return (
-            <div className="columns">
-                <div className="column">
-                    <TextField
-                        fullWidth
-                        ref="itemName"
-                        floatingLabelText={this.props.locale.inputFieldLabel}
-                        hintText={this.props.locale.inputFieldHint}
-                        value={this.state.itemName}
-                        onChange={this.onNameChanged}
-                        onKeyPress={this.addItem}
-                        errorText={this.props.isValid(this.state.itemName) || this.props.errorText
-                            ? `${this.props.errorText || ''} ${this.props.isValid(this.state.itemName)}`
-                            : null}
-                        disabled={this.props.disabled}
-                        className="mui-long-labels-fix"
-                    />
-                    {
-                        this.props.remindToAdd &&
-                        this.props.locale.remindToAdd &&
-                        this.state.itemName.length !== 0 &&
-                        !this.props.isValid(this.state.itemName) &&
-                        <div className="validationWarningMessage">
-                            {this.props.locale.remindToAdd}
-                        </div>
-                    }
-                </div>
-                <div className="column is-narrow">
-                    <RaisedButton
-                        className="is-mui-spacing-button"
-                        fullWidth
-                        primary
-                        label={this.props.locale.addButtonLabel}
-                        disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
-                        onClick={this.addItem}/>
-                </div>
+            <div style={{flexGrow: 1, padding: 8}}>
+                <Grid container spacing={16} display="row" alignItems="baseline">
+                    <Grid item style={{flexGrow: 1}}>
+                        <TextField
+                            fullWidth
+                            inputRef={(node) => {this.textField = node;}}
+                            label={inputFieldLabel}
+                            placeholder={inputFieldHint}
+                            value={this.state.itemName}
+                            onChange={this.onNameChanged}
+                            onKeyPress={this.addItem}
+                            error={!!this.props.isValid(this.state.itemName)}
+                            helperText={this.props.isValid(this.state.itemName) || errorText
+                                ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
+                                : null}
+                            disabled={disabled}
+                        />
+                        {
+                            this.props.remindToAdd &&
+                            remindToAdd &&
+                            this.state.itemName.length !== 0 &&
+                            !this.props.isValid(this.state.itemName) &&
+                            <Typography variant="caption" className={classes.remindToAdd}>
+                                {remindToAdd}
+                            </Typography>
+                        }
+                    </Grid>
+                    <Grid item xs={12} sm={2}>
+                        <Button
+                            fullWidth
+                            color={'primary'}
+                            variant={'raised'}
+                            children={addButtonLabel}
+                            disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                            onClick={this.addItem}
+                        />
+                    </Grid>
+                </Grid>
             </div>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(FreeTextForm);

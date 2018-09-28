@@ -2,9 +2,11 @@ import OpenAccessFilter from './OpenAccessFilter';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        onChange: jest.fn() || testProps.onChange,
-        value: testProps.value || true,
-        open: null || testProps.open,
+        onChange: jest.fn(),
+        isActive: true,
+        open: null,
+        locale: {displayTitle: 'Open access status'},
+        onToggle: jest.fn(),
         ...testProps
     };
     return getElement(OpenAccessFilter, props, isShallow);
@@ -18,21 +20,14 @@ describe('OpenAccessFilter ', () => {
     });
 
     it('should render selected component', () => {
-        const wrapper = setup({value: true});
+        const wrapper = setup({isActive: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should call onChange if value has changed', () => {
         const propMethod = jest.fn();
-        const wrapper = setup({value: true, onChange: propMethod});
-        wrapper.instance().toggleFilter();
+        const wrapper = setup({isActive: true, onChange: propMethod});
+        wrapper.instance().updateFilter();
         expect(propMethod).toBeCalledWith(false);
-    });
-
-    it('should set state when component receives new props', () => {
-        const propMethod = jest.fn();
-        const wrapper = setup({value: true, onChange: propMethod});
-        wrapper.instance().componentWillReceiveProps({value: false});
-        expect(wrapper.instance().state.isActive).toEqual(false);
     });
 });

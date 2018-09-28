@@ -1,187 +1,312 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
-<div>
-  <div>
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <React.Fragment>
     <br />
     Step 2 - Select your name from the list below
-  </div>
-  <div
-    className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
+  </React.Fragment>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "header",
+      }
+    }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(PeopleIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      secondary="Name as published"
+      secondaryTypographyProps={
         Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all records?",
-          "confirmationTitle": "Delete all",
+          "variant": "caption",
         }
       }
-      onAction={[MockFunction]}
-      onRef={[Function]}
     />
-    <div
-      className="column is-narrow iconSpacer is-hidden-mobile"
-    />
-    <div
-      className="column description datalist-title"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      Name as published
-    </div>
-    <div
-      className="column identifier datalist-title is-hidden-mobile"
+      <WithStyles(ListItemText)
+        secondary="UQ identifier"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      UQ identifier
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile order datalist-title"
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "right paddingRight24",
+          }
+        }
+        secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+    </Hidden>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": "",
+        }
+      }
     >
-      Reorder records
-    </div>
-    <div
-      className="column is-narrow buttons datalist-buttons"
-    >
-      <IconButton
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltip="Remove all records"
-        tooltipPosition="top-left"
-        touch={false}
+      <WithStyles(Tooltip)
+        title="Remove all records"
       >
-        <FontIcon
-          className="material-icons"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
         >
-          delete_forever
-        </FontIcon>
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow scrollbar-spacer"
-    />
-  </div>
-</div>
+          <pure(DeleteForeverIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
-<div>
-  <div
-    className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "header",
+      }
+    }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(PeopleIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      secondary="Name as published"
+      secondaryTypographyProps={
         Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all records?",
-          "confirmationTitle": "Delete all",
+          "variant": "caption",
         }
       }
-      onAction={[MockFunction]}
-      onRef={[Function]}
     />
-    <div
-      className="column is-narrow iconSpacer is-hidden-mobile"
-    />
-    <div
-      className="column description datalist-title"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      Name as published
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile order datalist-title"
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "right paddingRight24",
+          }
+        }
+        secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+    </Hidden>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": "",
+        }
+      }
     >
-      Reorder records
-    </div>
-    <div
-      className="column is-narrow buttons datalist-buttons"
-    >
-      <IconButton
-        disableTouchRipple={false}
-        disabled={true}
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltip="Remove all records"
-        tooltipPosition="top-left"
-        touch={false}
+      <WithStyles(Tooltip)
+        title="Remove all records"
       >
-        <FontIcon
-          className="material-icons"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <WithStyles(IconButton)
+          disabled={true}
+          onClick={[Function]}
         >
-          delete_forever
-        </FontIcon>
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow scrollbar-spacer"
-    />
-  </div>
-</div>
+          <pure(DeleteForeverIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
-<div>
-  <div
-    className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "header",
+      }
+    }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(PeopleIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      secondary="Name as published"
+      secondaryTypographyProps={
         Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all records?",
-          "confirmationTitle": "Delete all",
+          "variant": "caption",
         }
       }
-      onAction={[MockFunction]}
-      onRef={[Function]}
     />
-    <div
-      className="column is-narrow iconSpacer is-hidden-mobile"
-    />
-    <div
-      className="column description datalist-title"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      Name as published
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile order datalist-title"
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "right paddingRight24",
+          }
+        }
+        secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+    </Hidden>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": "",
+        }
+      }
     >
-      Reorder records
-    </div>
-    <div
-      className="column is-narrow buttons datalist-buttons"
-    >
-      <IconButton
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltip="Remove all records"
-        tooltipPosition="top-left"
-        touch={false}
+      <WithStyles(Tooltip)
+        title="Remove all records"
       >
-        <FontIcon
-          className="material-icons"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
         >
-          delete_forever
-        </FontIcon>
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow scrollbar-spacer"
-    />
-  </div>
-</div>
+          <pure(DeleteForeverIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;

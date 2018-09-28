@@ -1,13 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRow  Row should be clickable when showContributorAssignment set to true 1`] = `
-<div
-  className="contributorsRow datalist datalist-row "
-  id={0}
-  key="0"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -19,121 +14,103 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="columns is-gapless is-mobile"
+  <WithStyles(ListItem)
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
   >
-    <div
-      className="column no-overflow"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        aria-label="Select this record (J. Smith) to assign it to you"
-        className="columns is-gapless contributorDetails"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
       >
-        <div
-          className="column is-narrow is-hidden-mobile"
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary ",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <FontIcon
-            className="authorIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            person_outline
-          </FontIcon>
-        </div>
-        <div
-          className="column datalist-text contributor"
+          J. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+          noWrap={true}
+          variant="caption"
         >
-          <div
-            className="contributorName no-overflow"
-          >
-            <div
-              className="columns is-gapless is-mobile"
-            >
-              <div
-                className="column is-narrow name"
-              >
-                J. Smith
-              </div>
-            </div>
-          </div>
-          <div
-            className="contributorSubtitle datalist-text-subtitle"
-          >
-            First  listed contributor
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <div
-        className="columns is-gapless contributorActions"
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
       >
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
         >
-          <div
-            style={
+          <pure(DeleteIcon)
+            classes={
               Object {
-                "height": "50px",
-                "width": "50px",
+                "root": "",
               }
             }
           />
-        </div>
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        >
-          <div
-            style={
-              Object {
-                "height": "50px",
-                "width": "50px",
-              }
-            }
-          />
-        </div>
-        <div
-          className="column is-narrow contributorDelete datalist-buttons"
-        >
-          <IconButton
-            aria-label="Remove this record"
-            className="contributorDelete"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Remove this record"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons deleteIcon"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              delete
-            </FontIcon>
-          </IconButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRow  Row should not be clickable when showContributorAssignment set to false 1`] = `
-<div
-  className="contributorsRow datalist datalist-row "
-  id={0}
-  key="0"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -145,109 +122,103 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="columns is-gapless is-mobile"
+  <WithStyles(ListItem)
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
   >
-    <div
-      className="column no-overflow"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        className="columns is-gapless contributorDetails is-mobile"
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
       >
-        <div
-          className="column is-narrow is-hidden-mobile"
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary ",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <FontIcon
-            className="authorIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            person_outline
-          </FontIcon>
-        </div>
-        <div
-          className="column datalist-text contributor"
+          J. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+          noWrap={true}
+          variant="caption"
         >
-          <div
-            className="contributorName no-overflow"
-          >
-            J. Smith
-          </div>
-          <div
-            className="contributorSubtitle datalist-text-subtitle"
-          >
-            First  listed contributor
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <div
-        className="columns is-gapless contributorActions"
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
       >
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
         >
-          <div
-            style={
+          <pure(DeleteIcon)
+            classes={
               Object {
-                "height": "50px",
-                "width": "50px",
+                "root": "",
               }
             }
           />
-        </div>
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        >
-          <div
-            style={
-              Object {
-                "height": "50px",
-                "width": "50px",
-              }
-            }
-          />
-        </div>
-        <div
-          className="column is-narrow contributorDelete datalist-buttons"
-        >
-          <IconButton
-            aria-label="Remove this record"
-            className="contributorDelete"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Remove this record"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons deleteIcon"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              delete
-            </FontIcon>
-          </IconButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button 1`] = `
-<div
-  className="contributorsRow datalist datalist-row "
-  id={0}
-  key="0"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -259,109 +230,211 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="columns is-gapless is-mobile"
+  <WithStyles(ListItem)
+    aria-label="Select this record (A. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
   >
-    <div
-      className="column no-overflow"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        className="columns is-gapless contributorDetails is-mobile"
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
       >
-        <div
-          className="column is-narrow is-hidden-mobile"
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary ",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <FontIcon
-            className="authorIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            person_outline
-          </FontIcon>
-        </div>
-        <div
-          className="column datalist-text contributor"
+          A. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+          noWrap={true}
+          variant="caption"
         >
-          <div
-            className="contributorName no-overflow"
-          >
-            A. Smith
-          </div>
-          <div
-            className="contributorSubtitle datalist-text-subtitle"
-          >
-            First  listed contributor
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <div
-        className="columns is-gapless contributorActions"
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
       >
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
         >
-          <div
-            style={
+          <pure(DeleteIcon)
+            classes={
               Object {
-                "height": "50px",
-                "width": "50px",
+                "root": "",
               }
             }
           />
-        </div>
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
+`;
+
+exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    aria-label="Select this record (A. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary ",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <div
-            style={
+          A. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
+      >
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon)
+            classes={
               Object {
-                "height": "50px",
-                "width": "50px",
+                "root": "",
               }
             }
           />
-        </div>
-        <div
-          className="column is-narrow contributorDelete datalist-buttons"
-        >
-          <IconButton
-            aria-label="Remove this record"
-            className="contributorDelete"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Remove this record"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons deleteIcon"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              delete
-            </FontIcon>
-          </IconButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
-<div
-  className="contributorsRow datalist datalist-row "
-  id={0}
-  key="0"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -373,143 +446,137 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="columns is-gapless is-mobile"
+  <WithStyles(ListItem)
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
   >
-    <div
-      className="column no-overflow"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        aria-label="Select this record (J. Smith) to assign it to you"
-        className="columns is-gapless contributorDetails"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
       >
-        <div
-          className="column is-narrow is-hidden-mobile"
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary ",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <FontIcon
-            className="authorIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            person_outline
-          </FontIcon>
-        </div>
-        <div
-          className="column datalist-text contributor"
+          J. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+          noWrap={true}
+          variant="caption"
         >
-          <div
-            className="contributorName no-overflow"
-          >
-            <div
-              className="columns is-gapless is-mobile"
-            >
-              <div
-                className="column is-narrow name"
-              >
-                J. Smith
-              </div>
-            </div>
-          </div>
-          <div
-            className="contributorSubtitle datalist-text-subtitle"
-          >
-            First  listed contributor
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <div
-        className="columns is-gapless contributorActions"
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Move record up the order"
       >
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        <WithStyles(IconButton)
+          aria-label="Move record up the order"
+          disabled={false}
+          onClick={[Function]}
         >
-          <IconButton
-            aria-label="Move record up the order"
-            className="reorderUp"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Move record up the order"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              keyboard_arrow_up
-            </FontIcon>
-          </IconButton>
-        </div>
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+          <pure(KeyboardArrowUpIcon)
+            classes={
+              Object {
+                "root": "",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <WithStyles(Tooltip)
+        title="Move record down the order"
+      >
+        <WithStyles(IconButton)
+          aria-label="Move record down the order"
+          disabled={false}
+          onClick={[Function]}
         >
-          <IconButton
-            aria-label="Move record down the order"
-            className="reorderDown"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Move record down the order"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              keyboard_arrow_down
-            </FontIcon>
-          </IconButton>
-        </div>
-        <div
-          className="column is-narrow contributorDelete datalist-buttons"
+          <pure(KeyboardArrowDownIcon)
+            classes={
+              Object {
+                "root": "",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
+      >
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
         >
-          <IconButton
-            aria-label="Remove this record"
-            className="contributorDelete"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Remove this record"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons deleteIcon"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              delete
-            </FontIcon>
-          </IconButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+          <pure(DeleteIcon)
+            classes={
+              Object {
+                "root": "",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected 1`] = `
-<div
-  className="contributorsRow datalist datalist-row selected"
-  id={0}
-  key="0"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -521,119 +588,211 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="columns is-gapless is-mobile"
+  <WithStyles(ListItem)
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
   >
-    <div
-      className="column no-overflow"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        className="columns is-gapless contributorDetails is-mobile"
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "selected",
+          }
+        }
       >
-        <div
-          className="column is-narrow is-hidden-mobile"
+        <pure(PersonIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary selected",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <FontIcon
-            className="authorIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            person_outline
-          </FontIcon>
-        </div>
-        <div
-          className="column datalist-text contributor"
+          J. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "selected",
+            }
+          }
+          noWrap={true}
+          variant="caption"
         >
-          <div
-            className="contributorName no-overflow"
-          />
-          <div
-            className="contributorSubtitle datalist-text-subtitle"
-          >
-            First  listed contributor
-          </div>
-        </div>
-        <div
-          className="column contributorIdentifier datalist-text is-hidden-mobile"
-        >
-          <div
-            className="identifierName"
-          >
-             
-          </div>
-          <div
-            className="identifierSubtitle datalist-text-subtitle"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <div
-        className="columns is-gapless contributorActions"
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
       >
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
         >
-          <div
-            style={
+          <pure(DeleteIcon)
+            classes={
               Object {
-                "height": "50px",
-                "width": "50px",
+                "root": "selected",
               }
             }
           />
-        </div>
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
+`;
+
+exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected for mobile view 1`] = `
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "selected",
+          }
+        }
+      >
+        <pure(PersonIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary selected",
+            }
+          }
+          noWrap={true}
+          variant="body1"
         >
-          <div
-            style={
+          J. Smith
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "selected",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
+      >
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon)
+            classes={
               Object {
-                "height": "50px",
-                "width": "50px",
+                "root": "selected",
               }
             }
           />
-        </div>
-        <div
-          className="column is-narrow contributorDelete datalist-buttons"
-        >
-          <IconButton
-            aria-label="Remove this record"
-            className="contributorDelete"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Remove this record"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons deleteIcon"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              delete
-            </FontIcon>
-          </IconButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
-<div
-  className="contributorsRow datalist datalist-row "
-  id={0}
-  key="0"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
+<React.Fragment>
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -645,111 +804,148 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     onAction={[Function]}
     onRef={[Function]}
   />
-  <div
-    className="columns is-gapless is-mobile"
+  <WithStyles(ListItem)
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": "0 1%",
+        "width": "98%",
+      }
+    }
+    tabIndex={0}
   >
-    <div
-      className="column no-overflow"
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div
-        className="columns is-gapless contributorDetails is-mobile"
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
       >
-        <div
-          className="column is-narrow is-hidden-mobile"
-        >
-          <FontIcon
-            className="authorIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            person_outline
-          </FontIcon>
-        </div>
-        <div
-          className="column datalist-text contributor"
-        >
-          <div
-            className="contributorName no-overflow"
-          >
-            J. Smith
-          </div>
-          <div
-            className="contributorSubtitle datalist-text-subtitle"
-          >
-            First  listed contributor
-          </div>
-        </div>
-        <div
-          className="column contributorIdentifier datalist-text is-hidden-mobile"
-        >
-          <div
-            className="identifierName"
-          >
-            Mr
-             
-            Christopher Christoff
-          </div>
-          <div
-            className="identifierSubtitle datalist-text-subtitle"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="column is-narrow"
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
+      }
+      container={true}
     >
-      <div
-        className="columns is-gapless contributorActions"
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
       >
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        >
-          <div
-            style={
-              Object {
-                "height": "50px",
-                "width": "50px",
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
               }
-            }
-          />
-        </div>
-        <div
-          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        >
-          <div
-            style={
-              Object {
-                "height": "50px",
-                "width": "50px",
-              }
-            }
-          />
-        </div>
-        <div
-          className="column is-narrow contributorDelete datalist-buttons"
-        >
-          <IconButton
-            aria-label="Remove this record"
-            className="contributorDelete"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Remove this record"
-            tooltipPosition="bottom-left"
-            touch={false}
-          >
-            <FontIcon
-              className="material-icons deleteIcon"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
+              noWrap={true}
+              variant="body1"
             >
-              delete
-            </FontIcon>
-          </IconButton>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+              J. Smith
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body1"
+            >
+              Mr Christopher Christoff
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " ",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              null
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
+      >
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon)
+            classes={
+              Object {
+                "root": "",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</React.Fragment>
 `;

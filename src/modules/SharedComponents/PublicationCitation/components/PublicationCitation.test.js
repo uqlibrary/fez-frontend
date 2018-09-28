@@ -1,15 +1,16 @@
-import PublicationCitation from './PublicationCitation';
+import {PublicationCitation} from './PublicationCitation';
 import {mockRecordToFix} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true){
     const props = {
-        ...testProps,
+        classes: {},
         publication: testProps.publication || mockRecordToFix,
         history: testProps.history || {push: jest.fn()},
         actions: testProps.actions || {
             setFixRecord: jest.fn(),
             setRecordToView: jest.fn()
-        }
+        },
+        ...testProps
     };
     return getElement(PublicationCitation, props, isShallow);
 }

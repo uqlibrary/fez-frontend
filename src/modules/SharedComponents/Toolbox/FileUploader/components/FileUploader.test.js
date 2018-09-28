@@ -185,7 +185,7 @@ describe('Component FileUploader', () => {
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._acceptTermsAndConditions({}, true);
+        wrapper.instance()._acceptTermsAndConditions(true);
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
 

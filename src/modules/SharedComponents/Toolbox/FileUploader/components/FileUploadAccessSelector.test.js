@@ -1,7 +1,12 @@
-import FileUploadAccessSelector from './FileUploadAccessSelector';
+import {FileUploadAccessSelector} from './FileUploadAccessSelector';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = {
+        classes: {
+            selector: ''
+        },
+        ...testProps
+    };
     return getElement(FileUploadAccessSelector, props, isShallow);
 }
 
@@ -12,7 +17,7 @@ describe('Component FileUploadAccessSelector', () => {
         const wrapper = setup({...props});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({}, 0, 2);
+        wrapper.instance()._onChange({target: {value: 2}});
         wrapper.update();
 
         expect(onChangeTestFn).toHaveBeenCalledWith(2);
@@ -24,7 +29,7 @@ describe('Component FileUploadAccessSelector', () => {
         const wrapper = setup({...props});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({}, 0, 2);
+        wrapper.instance()._onChange({target: {value: 2}});
         wrapper.update();
 
         expect(onChangeTestFn).toHaveBeenCalledWith(2);

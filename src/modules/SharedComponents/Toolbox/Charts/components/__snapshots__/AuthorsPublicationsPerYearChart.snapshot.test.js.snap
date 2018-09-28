@@ -5,6 +5,7 @@ exports[`AuthorsPublicationsPerYearChart  should render empty chart component 1`
   chartOptions={
     Object {
       "chart": Object {
+        "backgroundColor": "transparent",
         "height": 320,
         "type": "column",
       },

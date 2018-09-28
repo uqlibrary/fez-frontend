@@ -24,7 +24,6 @@ describe('BookForm renders ', () => {
 
     it('component with 6 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(5);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 

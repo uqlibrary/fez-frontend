@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 
-import RaisedButton from 'material-ui/RaisedButton';
-import MenuItem from 'material-ui/MenuItem';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import Grid from '@material-ui/core/Grid';
 
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
@@ -124,128 +125,145 @@ export default class FixRecord extends PureComponent {
 
         if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
-                <div className="is-centered">
+                <React.Fragment>
                     <InlineLoader message={txt.loadingMessage}/>
-                </div>
+                </React.Fragment>
             );
         }
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
             <MenuItem
                 value={item.action}
-                primaryText={item.title}
+                children={item.title}
                 key={`fix_record_action_${index}`} />
         ));
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
         saveConfirmationLocale.confirmationMessage = (
-            <div>
+            <React.Fragment>
                 {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
                 {saveConfirmationLocale.confirmationMessage}
-            </div>
+            </React.Fragment>
         );
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
-                    <StandardCard title={txt.subTitle} help={txt.help}>
-                        <PublicationCitation publication={this.props.recordToFix}/>
-
-                        <Field
-                            component={SelectField}
-                            disabled={this.props.submitting}
-                            name="fixAction"
-                            {...this.context.selectFieldMobileOverrides}
-                            floatingLabelText={txt.fieldLabels.action}
-                            validate={[validation.required]}
-                            onChange={this._actionSelected}
-                            className="requiredField">
-                            {fixOptions}
-                        </Field>
-                    </StandardCard>
-                    {
-                        this.state.selectedRecordAction === 'fix' &&
-                        <div>
-                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
-                            <ConfirmDialogBox
-                                onRef={this._setSuccessConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                onCancelAction={this._navigateToDashboard}
-                                locale={saveConfirmationLocale}
-                            />
-                            <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.subTitle} help={txt.help}>
+                                <PublicationCitation publication={this.props.recordToFix}/>
                                 <Field
-                                    component={TextField}
+                                    component={SelectField}
                                     disabled={this.props.submitting}
-                                    name="comments"
-                                    type="text"
-                                    fullWidth
-                                    multiLine
-                                    rows={1}
-                                    floatingLabelText={txtFixForm.comments.fieldLabels.comments}
-                                />
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="rek_link"
-                                    type="text"
-                                    fullWidth
-                                    floatingLabelText={txtFixForm.comments.fieldLabels.url}
-                                    validate={[validation.url]}
-                                />
+                                    name="fixAction"
+                                    label={txt.fieldLabels.action}
+                                    validate={[validation.required]}
+                                    onChange={this._actionSelected}
+                                    required >
+                                    {fixOptions}
+                                </Field>
                             </StandardCard>
-                            <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
-                                {txtFixForm.fileUpload.description}
-                                <Field
-                                    name="files"
-                                    component={FileUploadField}
-                                    disabled={this.props.submitting}
-                                    requireOpenAccessStatus
-                                    validate={[validation.validFileUpload]}
+                        </Grid>
+                        {
+                            this.state.selectedRecordAction === 'fix' &&
+                            <React.Fragment>
+                                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
+                                <ConfirmDialogBox
+                                    onRef={this._setSuccessConfirmation}
+                                    onAction={this._navigateToMyResearch}
+                                    onCancelAction={this._navigateToDashboard}
+                                    locale={saveConfirmationLocale}
                                 />
-                            </StandardCard>
-                        </div>
-                    }
+                                <Grid item xs={12}>
+                                    <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
+                                        <Grid container spacing={16}>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={TextField}
+                                                    disabled={this.props.submitting}
+                                                    name="comments"
+                                                    type="text"
+                                                    fullWidth
+                                                    multiline
+                                                    rows={3}
+                                                    label={txtFixForm.comments.fieldLabels.comments}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={TextField}
+                                                    disabled={this.props.submitting}
+                                                    name="rek_link"
+                                                    type="text"
+                                                    fullWidth
+                                                    label={txtFixForm.comments.fieldLabels.url}
+                                                    validate={[validation.url]}
+                                                />
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
+                                        {txtFixForm.fileUpload.description}
+                                        <Field
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={this.props.submitting}
+                                            requireOpenAccessStatus
+                                            validate={[validation.validFileUpload]}
+                                        />
+                                    </StandardCard>
+                                </Grid>
+                            </React.Fragment>
+                        }
+                        {
+                            this.state.selectedRecordAction === 'unclaim' &&
+                            <Grid item xs={12}>
+                                <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
+                                    <Alert {...txtUnclaimForm.alert}/>
+                                    {txtUnclaimForm.description}
+                                    <ConfirmDialogBox
+                                        onRef={this._setSuccessConfirmation}
+                                        onAction={this._navigateToMyResearch}
+                                        onCancelAction={this._cancelFix}
+                                        locale={txtUnclaimForm.successWorkflowConfirmation}/>
+                                </StandardCard>
+                            </Grid>
+                        }
 
-                    {
-                        this.state.selectedRecordAction === 'unclaim' &&
-                        <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
-                            <Alert {...txtUnclaimForm.alert}/>
-                            {txtUnclaimForm.description}
-                            <ConfirmDialogBox
-                                onRef={this._setSuccessConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                onCancelAction={this._cancelFix}
-                                locale={txtUnclaimForm.successWorkflowConfirmation}/>
-                        </StandardCard>
-                    }
-
-                    {
-                        alertProps && <Alert {...alertProps} />
-                    }
-
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
+                        {
+                            alertProps &&
+                            <Grid item xs={12}>
+                                <Alert pushToTop {...alertProps} />
+                            </Grid>
+                        }
+                    </Grid>
+                    <Grid container spacing={24}>
+                        <Grid item xs />
+                        <Grid item>
+                            <Button
+                                variant={'raised'}
                                 fullWidth
-                                label={txt.cancel}
+                                children={txt.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this._cancelFix}/>
-                        </div>
+                        </Grid>
                         {
                             this.state.selectedRecordAction &&
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    secondary
+                            <Grid item>
+                                <Button
+                                    variant={'raised'}
+                                    color={'primary'}
                                     fullWidth
-                                    label={txt.submit}
+                                    children={txt.submit}
                                     onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}/>
-                            </div>
+                            </Grid>
                         }
-                    </div>
+                    </Grid>
                 </form>
             </StandardPage>
         );

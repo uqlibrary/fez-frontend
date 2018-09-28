@@ -1,13 +1,37 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
+// MUI 1
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import {withStyles} from '@material-ui/core/styles';
 
 const moment = require('moment');
 
-class PartialDateForm extends Component {
+const styles = theme => ({
+    fakeTitle: {
+        color: theme.palette.secondary.main,
+        fontSize: 12,
+        marginBottom: -100,
+        marginTop: 0
+    },
+    hideLabel: {
+        position: 'absolute',
+        left: -10000,
+        top: 'auto',
+        width: 1,
+        height: 1,
+        overflow: 'hidden'
+    }
+});
+
+export class PartialDateForm extends Component {
     static propTypes = {
         locale: PropTypes.object,
         onChange: PropTypes.func,
@@ -17,7 +41,9 @@ class PartialDateForm extends Component {
         months: PropTypes.array,
         className: PropTypes.string,
         floatingTitle: PropTypes.string.isRequired,
-        floatingTitleRequired: PropTypes.bool
+        floatingTitleRequired: PropTypes.bool,
+        classes: PropTypes.object,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -112,64 +138,74 @@ class PartialDateForm extends Component {
     };
 
     render() {
-        const {locale, months, className} = this.props;
+        const {locale, months} = this.props;
         const renderMonths = months.map((month, index) =>
-            <MenuItem key={index} value={index} primaryText={month}/>
+            <MenuItem key={index} value={index + 1}>{month}</MenuItem>
         );
+        const {classes} = this.props;
+        const isError = !!this.errors.day || !!this.errors.month || !!this.errors.year;
         return (
-            <div className="columns is-multiline is-gapless-mobile">
-                <div className={this.props.floatingTitleRequired ? ('column is-12 dateTitle required') : ('column is-12 dateTitle')}>
-                    {this.props.floatingTitle}
-                </div>
-                <div className="column">
+            <Grid container spacing={16}>
+                <Grid item xs={12}>
+                    <Typography variant="subheading" classes={{subheading: classes.fakeTitle}}>{this.props.floatingTitle}</Typography>
+                </Grid>
+                <Grid item xs={4}>
+                    <InputLabel htmlFor="day" className={this.props.classes.hideLabel}>Day</InputLabel>
                     <TextField
                         name="day"
+                        id="day"
                         type="text"
                         maxLength="2"
-                        className={!this.props.allowPartial && className ? className : null}
                         fullWidth
                         disabled={this.props.disabled}
-                        errorText={this.errors.day}
+                        error={isError}
                         onKeyPress={this._isNumber}
                         onChange={this._onDateChanged('day')}
                         onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
-                        hintText={locale.dayLabel}
+                        placeholder={locale.dayLabel}
+                        inputProps={{label: 'day'}}
                     />
-                </div>
-                <div className="column">
-                    <SelectField
+                    {
+                        isError &&
+                        <FormHelperText error>Invalid date</FormHelperText>
+                    }
+                </Grid>
+                <Grid item xs={4}>
+                    <InputLabel htmlFor="month" className={this.props.classes.hideLabel}>Month</InputLabel>
+                    <Select
+                        style={{width: '100%'}}
                         name="month"
-                        dropDownMenuProps={{animated: false}}
-                        fullWidth
+                        id="month"
+                        error={isError}
                         disabled={this.props.disabled}
-                        value={this.state.month}
-                        className={!this.props.allowPartial && className ? className : null}
-                        hintText={locale.monthLabel}
-                        errorText={this.errors.month}
+                        value={this.state.month || -1}
+                        placeholder={locale.monthLabel}
                         onChange={this._onDateChanged('month')}>
-                        <MenuItem key={-1} value={-1} primaryText=""/>
+                        <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
                         {renderMonths}
-                    </SelectField>
-                </div>
-                <div className="column">
+                    </Select>
+                </Grid>
+                <Grid item xs={4}>
+                    <InputLabel htmlFor="year" className={this.props.classes.hideLabel}>Year</InputLabel>
                     <TextField
                         name="year"
+                        id="year"
                         type="text"
                         fullWidth
-                        className={className + ' mui-long-labels-fix'}
                         maxLength="4"
                         disabled={this.props.disabled}
-                        hintText={locale.yearLabel}
-                        errorText={this.errors.year}
+                        placeholder={locale.yearLabel}
+                        error={isError}
                         onKeyPress={this._isNumber}
                         onChange={this._onDateChanged('year')}
                         onBlur={this._onDateChanged('year')}
+                        inputProps={{label: 'year'}}
                     />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }
 
 
-export default PartialDateForm;
+export default withStyles(styles)(PartialDateForm);

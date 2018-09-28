@@ -1,9 +1,10 @@
-import DashboardArticleCount from './DashboardArticleCount';
+import {DashboardArticleCount} from './DashboardArticleCount';
 import {currentAuthorStats} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
+        classes: {},
         ...testProps,
     };
     return getElement(DashboardArticleCount, props, isShallow);

@@ -1,10 +1,58 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
+import {withStyles} from '@material-ui/core/styles';
+import withWidth from '@material-ui/core/withWidth';
+import Grid from '@material-ui/core/Grid';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Hidden from '@material-ui/core/Hidden';
+import Person from '@material-ui/icons/Person';
+import PersonOutlined from '@material-ui/icons/PersonOutlined';
+import Delete from '@material-ui/icons/Delete';
+import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-export default class ContributorRow extends PureComponent {
+const styles = (theme) => ({
+    listItem: {
+        padding: '0 16px'
+    },
+    rowSelected: {
+        backgroundColor: theme.palette.accent.light
+    },
+    selected: {
+        color: 'white !important'
+    },
+    hideIcon: {
+        display: 'none'
+    },
+    primary: {
+        fontSize: 14,
+        fontWeight: 400
+    },
+    identifierName: {
+        fontSize: 11,
+        fontWeight: 400,
+        marginTop: 8,
+        '&:before': {
+            content: '"UQ Id: "'
+        }
+    },
+    identifierSubtitle: {
+        fontSize: 11,
+        fontWeight: 300,
+        '&:before': {
+            content: '"UQ Username: "'
+        }
+    }
+});
+
+export class ContributorRow extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         contributor: PropTypes.object.isRequired,
@@ -18,7 +66,9 @@ export default class ContributorRow extends PureComponent {
         disabledContributorAssignment: PropTypes.bool,
         onContributorAssigned: PropTypes.func,
         locale: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        classes: PropTypes.object,
+        width: PropTypes.string
     };
 
     static defaultProps = {
@@ -79,115 +129,125 @@ export default class ContributorRow extends PureComponent {
         }
     };
 
+    getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
+        <ListItemText
+            disableTypography
+            primary={
+                <Typography noWrap variant="body1" classes={{ root: primaryClass }}>
+                    {primaryText}
+                </Typography>
+            }
+            secondary={
+                <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
+                    {secondaryText}
+                </Typography>}
+        />
+    );
+
+    getContributorRowText = (showIdentifierLookup, selectedClass) => {
+        const {index, contributor, classes, width} = this.props;
+        const {ordinalData, suffix} = this.props.locale;
+        const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
+
+        return showIdentifierLookup && !!contributor.aut_title
+            ? (<Grid container classes={{container: classes.listItem}}>
+                <Grid item xs={10} sm={5} md={5}>
+                    {this.getListItemTypoGraphy(
+                        contributor.nameAsPublished,
+                        contributorOrder,
+                        `${classes.primary} ${selectedClass}`,
+                        `${selectedClass}`
+                    )}
+                </Grid>
+                <Grid item xs={10} sm={5} md={5}>
+                    {this.getListItemTypoGraphy(
+                        `${contributor.aut_title} ${contributor.aut_display_name}`,
+                        `${contributor.aut_org_username || contributor.aut_student_username}`,
+                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                        `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                    )}
+                </Grid>
+            </Grid>)
+            : this.getListItemTypoGraphy(
+                contributor.nameAsPublished,
+                contributorOrder,
+                `${classes.primary} ${selectedClass}`,
+                `${selectedClass}`
+            );
+    };
+
     render() {
-        const {ordinalData, deleteRecordConfirmation} = this.props.locale;
-        const contributorOrder = (this.props.index < ordinalData.length ?
-            ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
-        const ariaLabel = this.props.locale.selectHint && this.props.locale.selectHint.indexOf('[name]') > -1 ? this.props.locale.selectHint.replace('[name]', this.props.contributor.nameAsPublished) : null;
+        const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
+        const {contributor, canMoveDown, canMoveUp, disabled, classes} = this.props;
+
+
+        const ariaLabel = selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', contributor.nameAsPublished) : null;
+        const disableAssignment = this.props.showContributorAssignment && !this.props.disabledContributorAssignment;
+        const selectedClass = contributor.selected ? classes.selected : '';
+
         return (
-            <div key={this.props.index} id={this.props.index} className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
+            <Fragment>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
-                    locale={deleteRecordConfirmation} />
-                <div className="columns is-gapless is-mobile">
-                    <div className="column no-overflow">
+                    locale={deleteRecordConfirmation}
+                />
+                <ListItem
+                    style={{cursor: 'pointer', width: '98%', margin: '0 1%'}}
+                    divider
+                    classes={{root: contributor.selected ? classes.rowSelected : ''}}
+                    tabIndex={0}
+                    onClick={disableAssignment ? this._onContributorAssigned : () => {}}
+                    onKeyDown={disableAssignment ? this._onContributorAssignedKeyboard : () => {}}
+                    aria-label={ariaLabel}
+                >
+                    <Hidden xsDown>
+                        <ListItemIcon classes={{root: selectedClass}}>
+                            {contributor.selected ? <Person/> : <PersonOutlined/>}
+                        </ListItemIcon>
+                    </Hidden>
+                    {
+                        this.getContributorRowText(this.props.showIdentifierLookup, selectedClass)
+                    }
+                    <ListItemSecondaryAction>
                         {
-                            this.props.showContributorAssignment && !this.props.disabledContributorAssignment ?
-                                <div className="columns is-gapless contributorDetails"
-                                    onClick={this._onContributorAssigned}
-                                    onKeyDown={this._onContributorAssignedKeyboard}
-                                    aria-label={ariaLabel}
-                                    tabIndex="0" >
-                                    <div className="column is-narrow is-hidden-mobile">
-                                        <FontIcon className="authorIcon material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
-                                    </div>
-                                    <div className="column datalist-text contributor">
-                                        <div className="contributorName no-overflow">
-                                            <div className="columns is-gapless is-mobile">
-                                                <div className="column is-narrow name">
-                                                    {this.props.contributor.nameAsPublished}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</div>
-                                    </div>
-                                    {
-                                        this.props.showIdentifierLookup &&
-                                        <div className="column contributorIdentifier datalist-text">
-                                            <div className="identifierName">{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</div>
-                                            <div className="identifierSubtitle datalist-text-subtitle">{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</div>
-                                        </div>
-                                    }
-                                </div>
-                                :
-                                <div className="columns is-gapless contributorDetails is-mobile">
-                                    <div className="column is-narrow is-hidden-mobile">
-                                        <FontIcon className="authorIcon material-icons">person_outline</FontIcon>
-                                    </div>
-                                    <div className="column datalist-text contributor">
-                                        <div className="contributorName no-overflow">{this.props.contributor.nameAsPublished}</div>
-                                        <div className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</div>
-                                    </div>
-                                    {
-                                        this.props.showIdentifierLookup &&
-                                        <div
-                                            className="column contributorIdentifier datalist-text is-hidden-mobile">
-                                            <div className="identifierName">{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</div>
-                                            <div className="identifierSubtitle datalist-text-subtitle">{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</div>
-                                        </div>
-                                    }
-                                </div>
-                        }
-                    </div>
-                    <div className="column is-narrow">
-                        <div className="columns is-gapless contributorActions">
-                            <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
-                                {this.props.canMoveUp ?
-                                    <IconButton
-                                        tooltip={this.props.locale.moveUpHint}
-                                        tooltipPosition="bottom-left"
-                                        onClick={this._onMoveUp}
-                                        className="reorderUp"
-                                        disabled={this.props.disabled}
-                                        aria-label={this.props.locale.moveUpHint}>
-                                        <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
-                                    </IconButton>
-                                    :
-                                    <div style={{width: '50px', height: '50px'}} />
-                                }
-                            </div>
-                            <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
-                                {this.props.canMoveDown ?
-                                    <IconButton
-                                        tooltip={this.props.locale.moveDownHint}
-                                        tooltipPosition="bottom-left"
-                                        onClick={this._onMoveDown}
-                                        className="reorderDown"
-                                        disabled={this.props.disabled}
-                                        aria-label={this.props.locale.moveDownHint}>
-                                        <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
-                                    </IconButton>
-                                    :
-                                    <div style={{width: '50px', height: '50px'}} />
-                                }
-                            </div>
-                            <div className="column is-narrow contributorDelete datalist-buttons">
+                            canMoveUp &&
+                            <Tooltip title={moveUpHint}>
                                 <IconButton
-                                    className="contributorDelete"
-                                    tooltip={this.props.locale.deleteHint}
-                                    tooltipPosition="bottom-left"
-                                    onClick={this._showConfirmation}
-                                    disabled={this.props.disabled}
-                                    aria-label={this.props.locale.deleteHint}>
-                                    <FontIcon className="material-icons deleteIcon">delete</FontIcon>
+                                    onClick={this._onMoveUp}
+                                    disabled={disabled}
+                                    aria-label={moveUpHint}
+                                >
+                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }}/>
                                 </IconButton>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </Tooltip>
+                        }
+                        {
+                            canMoveDown &&
+                            <Tooltip title={moveDownHint}>
+                                <IconButton
+                                    onClick={this._onMoveDown}
+                                    disabled={disabled}
+                                    aria-label={moveDownHint}
+                                >
+                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }}/>
+                                </IconButton>
+                            </Tooltip>
+                        }
+                        <Tooltip title={deleteHint}>
+                            <IconButton
+                                aria-label={deleteHint}
+                                onClick={this._showConfirmation}
+                                disabled={disabled}
+                            >
+                                <Delete classes={{ root: `${selectedClass}` }}/>
+                            </IconButton>
+                        </Tooltip>
+                    </ListItemSecondaryAction>
+                </ListItem>
+            </Fragment>
         );
     }
 }
 
+export default withStyles(styles)(withWidth()(ContributorRow));

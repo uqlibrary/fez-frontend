@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from 'material-ui/Avatar';
+import Avatar from '@material-ui/core/Avatar';
 import locale from 'locale/pages';
 
 const profileFallbackImage = require('../../../../public/images/avatar.svg');
@@ -8,17 +8,17 @@ const profileFallbackImage = require('../../../../public/images/avatar.svg');
 const DashboardAuthorAvatar = ({values}) => {
     const txt =  locale.pages.dashboard.header.dashboardAuthorAvatar;
     return (
-        <div className="authorAvatar">
-            <Avatar
-                size={150}
-                style={{
-                    backgroundImage: `url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg"), url(${profileFallbackImage})`,
-                    backgroundSize: 'cover, cover'
-                }}
-                backgroundColor="transparent"
-                aria-label={`${txt.ariaPrefix} ${values.title} ${values.givenName} ${values.familyName}`}
-                title={`${values.title} ${values.givenName} ${values.familyName}`} />
-        </div>
+        <Avatar
+            style={{
+                backgroundImage: `url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg"), url(${profileFallbackImage})`,
+                backgroundSize: 'cover, cover',
+                backgroundColor: 'transparent',
+                width: 125,
+                height: 125,
+                margin: 8
+            }}
+            aria-label={`${txt.ariaPrefix} ${values.title} ${values.givenName} ${values.familyName}`}
+            title={`${values.title} ${values.givenName} ${values.familyName}`} />
     );
 };
 

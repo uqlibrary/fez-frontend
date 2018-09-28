@@ -1,7 +1,11 @@
 import PartialDateField from './PartialDateField';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = {
+        classes:{
+            fakeTitle: {}
+        },
+        ...testProps};
     return getElement(PartialDateField, props, isShallow);
 }
 

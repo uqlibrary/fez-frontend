@@ -6,6 +6,9 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {connectRouter} from 'connected-react-router/immutable';
 import {AppContainer} from 'react-hot-loader';
+import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+// pick utils
+import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 
 // Internal
 import Root from './Root';
@@ -24,7 +27,9 @@ const render = () => {
         <AppErrorBoundary>
             <AppContainer>
                 <Provider store={store}>
-                    <Root history={history} />
+                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                        <Root history={history} />
+                    </MuiPickersUtilsProvider>
                 </Provider>
             </AppContainer>
         </AppErrorBoundary>,

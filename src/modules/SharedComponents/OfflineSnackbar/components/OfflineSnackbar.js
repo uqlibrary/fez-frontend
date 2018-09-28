@@ -1,10 +1,26 @@
 import React, {PureComponent} from 'react';
-import Snackbar from 'material-ui/Snackbar';
-import ActionCheckCircle from 'material-ui/svg-icons/action/check-circle';
-import AlertError from 'material-ui/svg-icons/alert/error';
+import PropTypes from 'prop-types';
+import Snackbar from '@material-ui/core/Snackbar';
+import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/icons/Link';
+import LinkOff from '@material-ui/icons/LinkOff';
 import {locale} from 'locale';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class OfflineSnackbar extends PureComponent {
+const styles = theme => ({
+    success: {
+        color: theme.palette.success.light,
+    },
+    error: {
+        color: theme.palette.error.light,
+    },
+});
+
+export class OfflineSnackbar extends PureComponent {
+    static propTypes = {
+        classes: PropTypes.object
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -29,12 +45,12 @@ export default class OfflineSnackbar extends PureComponent {
 
     renderMessage = (message, icon) => {
         return (
-            <div className={`columns is-gapless connectionStatus is-mobile ${this.state.online ? 'online' : 'offline'}`}>
-                <div className="column"/>
-                <div className="column is-narrow">{icon}</div>
-                <div className="column is-narrow">{message}</div>
-                <div className="column"/>
-            </div>
+            <Grid container alignItems={'center'} justify={'center'} alignContent={'center'}>
+                <Grid item xs />
+                <Grid item style={{marginRight: 24}}>{icon}</Grid>
+                <Grid item>{message}</Grid>
+                <Grid item xs />
+            </Grid>
         );
     };
 
@@ -46,19 +62,27 @@ export default class OfflineSnackbar extends PureComponent {
     };
 
     render() {
+        const {classes} = this.props;
         const txt = locale.global.offlineSnackbar;
         const snackbarProps = this.state.online ?
-            {...txt.online, message: this.renderMessage(txt.online.message, <ActionCheckCircle/>)} :
-            {...txt.offline, message: this.renderMessage(txt.offline.message, <AlertError/>)};
+            {...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success}/>)} :
+            {...txt.offline, message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error}/>)};
+
         return  (
             <div className="offlineSnackbar">
                 <Snackbar
-                    {...snackbarProps}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                    }}
                     open={this.state.open}
-                    onRequestClose={this.handleRequestClose}
-                    onActionClick={this.handleRequestClose}
+                    onClose={this.handleRequestClose}
+                    message={snackbarProps.message}
+                    autoHideDuration={snackbarProps.autoHideDuration}
                 />
             </div>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(OfflineSnackbar);

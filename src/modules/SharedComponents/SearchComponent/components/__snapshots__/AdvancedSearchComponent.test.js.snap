@@ -1,2621 +1,1968 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdvancedSearchComponent should render advanced search docTypes with checked values based on fixed invalid props 1`] = `
-<SelectField
-  aria-label="Select multiple publications types to search on"
-  autoWidth={false}
-  disabled={false}
-  floatingLabelFixed={true}
-  floatingLabelText="Publication type"
-  fullWidth={true}
-  hintText="Select document types"
-  menuItemStyle={
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
     Object {
-      "lineHeight": "24px",
-      "paddingBottom": "4px",
-      "paddingTop": "4px",
-      "whiteSpace": "normal",
+      "padding": 12,
     }
-  }
-  multiple={true}
-  onChange={[Function]}
-  value={
-    Array [
-      "179",
-      "202",
-    ]
   }
 >
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="1"
-    primaryText="Audio Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={263}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="2"
-    primaryText="Book"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={174}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="3"
-    primaryText="Book Chapter"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={177}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="4"
-    primaryText="Conference Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={130}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="5"
-    primaryText="Conference Proceedings"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={197}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="6"
-    primaryText="Creative Work"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={313}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="7"
-    primaryText="Data Collection"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={371}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="8"
-    primaryText="Department Technical Report"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={181}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="9"
-    primaryText="Design"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={316}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="10"
-    primaryText="Digilib Image"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={228}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="11"
-    primaryText="Generic Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={202}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="12"
-    primaryText="Image"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={238}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="13"
-    primaryText="Journal"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={294}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="14"
-    primaryText="Journal Article"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={179}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="15"
-    primaryText="Manuscript"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={374}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="16"
-    primaryText="Newspaper Article"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={191}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="17"
-    primaryText="Patent"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={185}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="18"
-    primaryText="Preprint"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={204}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="19"
-    primaryText="Research Report"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={275}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="20"
-    primaryText="Seminar Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={189}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="21"
-    primaryText="Thesis"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={187}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="22"
-    primaryText="Video Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={310}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="23"
-    primaryText="Working Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={183}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="24"
-    primaryText="Reference Entry"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={272}
-  />
-</SelectField>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": 1,
+          }
+        }
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "all",
+              ]
+            }
+            key="advanced-search-field-all"
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+                docTypes={
+                  Array [
+                    "179",
+                    "202",
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={true}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          docTypes={
+            Array [
+              "179",
+              "202",
+            ]
+          }
+          fieldRows={
+            Array [
+              Object {
+                "searchField": "all",
+                "value": "i feel lucky",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={true}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should render advanced search docTypes with checked values based on props 1`] = `
-<SelectField
-  aria-label="Select multiple publications types to search on"
-  autoWidth={false}
-  disabled={false}
-  floatingLabelFixed={true}
-  floatingLabelText="Publication type"
-  fullWidth={true}
-  hintText="Select document types"
-  menuItemStyle={
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
     Object {
-      "lineHeight": "24px",
-      "paddingBottom": "4px",
-      "paddingTop": "4px",
-      "whiteSpace": "normal",
+      "padding": 12,
     }
-  }
-  multiple={true}
-  onChange={[Function]}
-  value={
-    Array [
-      179,
-      202,
-    ]
   }
 >
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="1"
-    primaryText="Audio Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={263}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="2"
-    primaryText="Book"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={174}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="3"
-    primaryText="Book Chapter"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={177}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="4"
-    primaryText="Conference Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={130}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="5"
-    primaryText="Conference Proceedings"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={197}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="6"
-    primaryText="Creative Work"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={313}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="7"
-    primaryText="Data Collection"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={371}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="8"
-    primaryText="Department Technical Report"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={181}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="9"
-    primaryText="Design"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={316}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="10"
-    primaryText="Digilib Image"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={228}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={true}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="11"
-    primaryText="Generic Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={202}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="12"
-    primaryText="Image"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={238}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="13"
-    primaryText="Journal"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={294}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={true}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="14"
-    primaryText="Journal Article"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={179}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="15"
-    primaryText="Manuscript"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={374}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="16"
-    primaryText="Newspaper Article"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={191}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="17"
-    primaryText="Patent"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={185}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="18"
-    primaryText="Preprint"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={204}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="19"
-    primaryText="Research Report"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={275}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="20"
-    primaryText="Seminar Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={189}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="21"
-    primaryText="Thesis"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={187}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="22"
-    primaryText="Video Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={310}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="23"
-    primaryText="Working Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={183}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="24"
-    primaryText="Reference Entry"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={272}
-  />
-</SelectField>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": 1,
+          }
+        }
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "all",
+              ]
+            }
+            key="advanced-search-field-all"
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+                docTypes={
+                  Array [
+                    179,
+                    202,
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={true}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          docTypes={
+            Array [
+              179,
+              202,
+            ]
+          }
+          fieldRows={
+            Array [
+              Object {
+                "searchField": "all",
+                "value": "i feel lucky",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={true}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should render advanced search row based on props 1`] = `
-<div
-  className="searchComponent advanced-search"
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <form
-    id="advancedSearchForm"
-    onSubmit={[Function]}
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="advancedSearch"
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
     >
-      <div
-        className="columns is-gapless is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <h2>
-            Advanced search
-          </h2>
-        </div>
-        <div
-          className="column is-narrow"
-        >
-          <IconButton
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Hide advanced search"
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <HardwareKeyboardArrowUp />
-          </IconButton>
-        </div>
-      </div>
-      <React.Fragment>
-        <div
-          className="columns is-multiline is-mobile"
-        >
-          <div
-            className="column fields is-11-mobile is-11-tablet-only"
-          >
-            <AdvancedSearchRow
-              disabledFields={
-                Array [
-                  "all",
-                ]
-              }
-              key="advanced-search-field-all"
-              onSearchRowChange={[Function]}
-              onSearchRowDelete={[Function]}
-              rowIndex={0}
-              searchField="all"
-              value="i feel lucky"
-            />
-          </div>
-          <div
-            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
-          >
-            <div
-              className="columns is-gapless is-mobile is-multiline sidebar"
-            >
-              <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
-              >
-                <Checkbox
-                  aria-label="Check to search for publications with are only open access / full text"
-                  checked={true}
-                  className="advancedSearchOpenAccessCheckbox"
-                  disabled={false}
-                  label="Open access"
-                  labelPosition="right"
-                  onCheck={[Function]}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                  }
-                }
-              >
-                <DocumentTypeField
-                  className="advancedSearchPublicationType"
-                  disabled={false}
-                  value={Array []}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-              >
-                <PublicationYearRangeField
-                  className="advancedSearchYearFilter"
-                  disabled={false}
-                  updateYearRangeFilter={[MockFunction]}
-                  yearFilter={
-                    Object {
-                      "invalid": false,
-                    }
-                  }
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="columns is-gapless is-mobile is-multiline actionButtons"
-        >
-          <div
-            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to add another advanced search field"
-              disabled={false}
-              fullWidth={true}
-              label="Add another field"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={true}
-            />
-          </div>
-          <div
-            className="column is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to reset the advanced search"
-              disabled={false}
-              fullWidth={true}
-              label="Reset"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-12-mobile is-narrow-tablet"
-          >
-            <FlatButton
-              aria-label="Click to return to the simple search"
-              disabled={false}
-              fullWidth={true}
-              label="Simple search"
-              labelPosition="after"
-              labelStyle={Object {}}
-              onClick={[Function]}
-              onKeyboardFocus={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onTouchStart={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-hidden-mobile"
-          />
-          <div
-            className="column is-3-desktop is-4-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to search eSpace"
-              className="advancedSearchButton"
-              disabled={false}
-              fullWidth={true}
-              label="Search"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={true}
-              secondary={false}
-              type="submit"
-            />
-          </div>
-        </div>
-      </React.Fragment>
-      <AdvancedSearchCaption
-        className="advanced-search"
-        fieldRows={
-          Array [
-            Object {
-              "searchField": "all",
-              "value": "i feel lucky",
-            },
-          ]
-        }
-        isLoading={false}
-        isMinimised={false}
-        isOpenAccess={true}
-        onAdvancedSearchReset={[Function]}
-        onAdvancedSearchRowAdd={[Function]}
-        onAdvancedSearchRowChange={[MockFunction]}
-        onAdvancedSearchRowRemove={[Function]}
-        onSearch={[MockFunction]}
-        onToggleMinimise={[Function]}
-        onToggleOpenAccess={[Function]}
-        onToggleSearchMode={[Function]}
-        updateYearRangeFilter={[MockFunction]}
-        yearFilter={
+      <WithStyles(Grid)
+        item={true}
+        style={
           Object {
-            "invalid": false,
+            "flexGrow": 1,
+            "width": 1,
           }
         }
-      />
-    </div>
-  </form>
-</div>
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "all",
+              ]
+            }
+            key="advanced-search-field-all"
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={true}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          fieldRows={
+            Array [
+              Object {
+                "searchField": "all",
+                "value": "i feel lucky",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={true}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should render advanced search with no valid checked docTypes based on invalid props 1`] = `
-<SelectField
-  aria-label="Select multiple publications types to search on"
-  autoWidth={false}
-  disabled={false}
-  floatingLabelFixed={true}
-  floatingLabelText="Publication type"
-  fullWidth={true}
-  hintText="Select document types"
-  menuItemStyle={
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
     Object {
-      "lineHeight": "24px",
-      "paddingBottom": "4px",
-      "paddingTop": "4px",
-      "whiteSpace": "normal",
+      "padding": 12,
     }
-  }
-  multiple={true}
-  onChange={[Function]}
-  value={
-    Array [
-      "test",
-      202,
-    ]
   }
 >
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="1"
-    primaryText="Audio Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={263}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="2"
-    primaryText="Book"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={174}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="3"
-    primaryText="Book Chapter"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={177}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="4"
-    primaryText="Conference Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={130}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="5"
-    primaryText="Conference Proceedings"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={197}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="6"
-    primaryText="Creative Work"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={313}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="7"
-    primaryText="Data Collection"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={371}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="8"
-    primaryText="Department Technical Report"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={181}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="9"
-    primaryText="Design"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={316}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="10"
-    primaryText="Digilib Image"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={228}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={true}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="11"
-    primaryText="Generic Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={202}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="12"
-    primaryText="Image"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={238}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="13"
-    primaryText="Journal"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={294}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="14"
-    primaryText="Journal Article"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={179}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="15"
-    primaryText="Manuscript"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={374}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="16"
-    primaryText="Newspaper Article"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={191}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="17"
-    primaryText="Patent"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={185}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="18"
-    primaryText="Preprint"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={204}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="19"
-    primaryText="Research Report"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={275}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="20"
-    primaryText="Seminar Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={189}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="21"
-    primaryText="Thesis"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={187}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="22"
-    primaryText="Video Document"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={310}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="23"
-    primaryText="Working Paper"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={183}
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
-      }
-    }
-    checked={false}
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="24"
-    primaryText="Reference Entry"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
-      }
-    }
-    value={272}
-  />
-</SelectField>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": 1,
+          }
+        }
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "all",
+              ]
+            }
+            key="advanced-search-field-all"
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+                docTypes={
+                  Array [
+                    "test",
+                    202,
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={true}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          docTypes={
+            Array [
+              "test",
+              202,
+            ]
+          }
+          fieldRows={
+            Array [
+              Object {
+                "searchField": "all",
+                "value": "i feel lucky",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={true}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should render default view 1`] = `
-<div
-  className="searchComponent advanced-search"
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <form
-    id="advancedSearchForm"
-    onSubmit={[Function]}
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="advancedSearch"
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
     >
-      <div
-        className="columns is-gapless is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <h2>
-            Advanced search
-          </h2>
-        </div>
-        <div
-          className="column is-narrow"
-        >
-          <IconButton
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Hide advanced search"
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <HardwareKeyboardArrowUp />
-          </IconButton>
-        </div>
-      </div>
-      <React.Fragment>
-        <div
-          className="columns is-multiline is-mobile"
-        >
-          <div
-            className="column fields is-11-mobile is-11-tablet-only"
-          >
-            <AdvancedSearchRow
-              disabledFields={
-                Array [
-                  "0",
-                ]
-              }
-              key="advanced-search-field-0"
-              label=""
-              onSearchRowChange={[Function]}
-              onSearchRowDelete={[Function]}
-              rowIndex={0}
-              searchField="0"
-              value=""
-            />
-          </div>
-          <div
-            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
-          >
-            <div
-              className="columns is-gapless is-mobile is-multiline sidebar"
-            >
-              <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
-              >
-                <Checkbox
-                  aria-label="Check to search for publications with are only open access / full text"
-                  checked={false}
-                  className="advancedSearchOpenAccessCheckbox"
-                  disabled={false}
-                  label="Open access"
-                  labelPosition="right"
-                  onCheck={[Function]}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                  }
-                }
-              >
-                <DocumentTypeField
-                  className="advancedSearchPublicationType"
-                  disabled={false}
-                  value={Array []}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-              >
-                <PublicationYearRangeField
-                  className="advancedSearchYearFilter"
-                  disabled={false}
-                  updateYearRangeFilter={[MockFunction]}
-                  yearFilter={
-                    Object {
-                      "invalid": false,
-                    }
-                  }
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="columns is-gapless is-mobile is-multiline actionButtons"
-        >
-          <div
-            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to add another advanced search field"
-              disabled={true}
-              fullWidth={true}
-              label="Add another field"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={true}
-            />
-          </div>
-          <div
-            className="column is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to reset the advanced search"
-              disabled={false}
-              fullWidth={true}
-              label="Reset"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-12-mobile is-narrow-tablet"
-          >
-            <FlatButton
-              aria-label="Click to return to the simple search"
-              disabled={false}
-              fullWidth={true}
-              label="Simple search"
-              labelPosition="after"
-              labelStyle={Object {}}
-              onClick={[Function]}
-              onKeyboardFocus={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onTouchStart={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-hidden-mobile"
-          />
-          <div
-            className="column is-3-desktop is-4-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to search eSpace"
-              className="advancedSearchButton"
-              disabled={false}
-              fullWidth={true}
-              label="Search"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={true}
-              secondary={false}
-              type="submit"
-            />
-          </div>
-        </div>
-      </React.Fragment>
-      <AdvancedSearchCaption
-        className="advanced-search"
-        fieldRows={
-          Array [
-            Object {
-              "label": "",
-              "searchField": "0",
-              "value": "",
-            },
-          ]
-        }
-        isLoading={false}
-        isMinimised={false}
-        isOpenAccess={false}
-        onAdvancedSearchReset={[Function]}
-        onAdvancedSearchRowAdd={[Function]}
-        onAdvancedSearchRowChange={[MockFunction]}
-        onAdvancedSearchRowRemove={[Function]}
-        onSearch={[MockFunction]}
-        onToggleMinimise={[Function]}
-        onToggleOpenAccess={[Function]}
-        onToggleSearchMode={[Function]}
-        updateYearRangeFilter={[MockFunction]}
-        yearFilter={
+      <WithStyles(Grid)
+        item={true}
+        style={
           Object {
-            "invalid": false,
+            "flexGrow": 1,
+            "width": 1,
           }
         }
-      />
-    </div>
-  </form>
-</div>
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "0",
+              ]
+            }
+            key="advanced-search-field-0"
+            label=""
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="0"
+            value=""
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={false}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={true}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          fieldRows={
+            Array [
+              Object {
+                "label": "",
+                "searchField": "0",
+                "value": "",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={false}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should render default view with open access checked 1`] = `
-<div
-  className="searchComponent advanced-search"
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <form
-    id="advancedSearchForm"
-    onSubmit={[Function]}
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="advancedSearch"
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
     >
-      <div
-        className="columns is-gapless is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <h2>
-            Advanced search
-          </h2>
-        </div>
-        <div
-          className="column is-narrow"
-        >
-          <IconButton
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Hide advanced search"
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <HardwareKeyboardArrowUp />
-          </IconButton>
-        </div>
-      </div>
-      <React.Fragment>
-        <div
-          className="columns is-multiline is-mobile"
-        >
-          <div
-            className="column fields is-11-mobile is-11-tablet-only"
-          >
-            <AdvancedSearchRow
-              disabledFields={
-                Array [
-                  "0",
-                ]
-              }
-              key="advanced-search-field-0"
-              label=""
-              onSearchRowChange={[Function]}
-              onSearchRowDelete={[Function]}
-              rowIndex={0}
-              searchField="0"
-              value=""
-            />
-          </div>
-          <div
-            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
-          >
-            <div
-              className="columns is-gapless is-mobile is-multiline sidebar"
-            >
-              <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
-              >
-                <Checkbox
-                  aria-label="Check to search for publications with are only open access / full text"
-                  checked={true}
-                  className="advancedSearchOpenAccessCheckbox"
-                  disabled={false}
-                  label="Open access"
-                  labelPosition="right"
-                  onCheck={[Function]}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                  }
-                }
-              >
-                <DocumentTypeField
-                  className="advancedSearchPublicationType"
-                  disabled={false}
-                  value={Array []}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-              >
-                <PublicationYearRangeField
-                  className="advancedSearchYearFilter"
-                  disabled={false}
-                  updateYearRangeFilter={[MockFunction]}
-                  yearFilter={
-                    Object {
-                      "invalid": false,
-                    }
-                  }
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="columns is-gapless is-mobile is-multiline actionButtons"
-        >
-          <div
-            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to add another advanced search field"
-              disabled={true}
-              fullWidth={true}
-              label="Add another field"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={true}
-            />
-          </div>
-          <div
-            className="column is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to reset the advanced search"
-              disabled={false}
-              fullWidth={true}
-              label="Reset"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-12-mobile is-narrow-tablet"
-          >
-            <FlatButton
-              aria-label="Click to return to the simple search"
-              disabled={false}
-              fullWidth={true}
-              label="Simple search"
-              labelPosition="after"
-              labelStyle={Object {}}
-              onClick={[Function]}
-              onKeyboardFocus={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onTouchStart={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-hidden-mobile"
-          />
-          <div
-            className="column is-3-desktop is-4-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to search eSpace"
-              className="advancedSearchButton"
-              disabled={false}
-              fullWidth={true}
-              label="Search"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={true}
-              secondary={false}
-              type="submit"
-            />
-          </div>
-        </div>
-      </React.Fragment>
-      <AdvancedSearchCaption
-        className="advanced-search"
-        fieldRows={
-          Array [
-            Object {
-              "label": "",
-              "searchField": "0",
-              "value": "",
-            },
-          ]
-        }
-        isLoading={false}
-        isMinimised={false}
-        isOpenAccess={true}
-        onAdvancedSearchReset={[Function]}
-        onAdvancedSearchRowAdd={[Function]}
-        onAdvancedSearchRowChange={[MockFunction]}
-        onAdvancedSearchRowRemove={[Function]}
-        onSearch={[MockFunction]}
-        onToggleMinimise={[Function]}
-        onToggleOpenAccess={[Function]}
-        onToggleSearchMode={[Function]}
-        updateYearRangeFilter={[MockFunction]}
-        yearFilter={
+      <WithStyles(Grid)
+        item={true}
+        style={
           Object {
-            "invalid": false,
+            "flexGrow": 1,
+            "width": 1,
           }
         }
-      />
-    </div>
-  </form>
-</div>
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "0",
+              ]
+            }
+            key="advanced-search-field-0"
+            label=""
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="0"
+            value=""
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={true}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={true}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          fieldRows={
+            Array [
+              Object {
+                "label": "",
+                "searchField": "0",
+                "value": "",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={true}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should render minimised view 1`] = `
-<div
-  className="searchComponent advanced-search"
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <form
-    id="advancedSearchForm"
-    onSubmit={[Function]}
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="advancedSearch"
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
     >
-      <div
-        className="columns is-gapless is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <h2>
-            Advanced search
-          </h2>
-        </div>
-        <div
-          className="column is-narrow"
-        >
-          <IconButton
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Show advanced search"
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <HardwareKeyboardArrowDown />
-          </IconButton>
-        </div>
-      </div>
-      <AdvancedSearchCaption
-        className="advanced-search"
-        fieldRows={
-          Array [
-            Object {
-              "label": "",
-              "searchField": "0",
-              "value": "",
-            },
-          ]
-        }
-        isLoading={false}
-        isMinimised={true}
-        isOpenAccess={false}
-        onAdvancedSearchReset={[Function]}
-        onAdvancedSearchRowAdd={[Function]}
-        onAdvancedSearchRowChange={[MockFunction]}
-        onAdvancedSearchRowRemove={[Function]}
-        onSearch={[MockFunction]}
-        onToggleMinimise={[Function]}
-        onToggleOpenAccess={[Function]}
-        onToggleSearchMode={[Function]}
-        updateYearRangeFilter={[MockFunction]}
-        yearFilter={
+      <WithStyles(Grid)
+        item={true}
+        style={
           Object {
-            "invalid": false,
+            "flexGrow": 1,
+            "width": 1,
           }
         }
-      />
-    </div>
-  </form>
-</div>
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Show advanced search"
+        >
+          <pure(KeyboardArrowDownIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          fieldRows={
+            Array [
+              Object {
+                "label": "",
+                "searchField": "0",
+                "value": "",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={true}
+          isOpenAccess={false}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[Function]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;
 
 exports[`AdvancedSearchComponent should toggle minimised view for advanced search 1`] = `
-<div
-  className="searchComponent advanced-search"
+<form
+  id="advancedSearchForm"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <form
-    id="advancedSearchForm"
-    onSubmit={[Function]}
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <div
-      className="advancedSearch"
+    <WithStyles(Grid)
+      container={true}
+      spacing={40}
     >
-      <div
-        className="columns is-gapless is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <h2>
-            Advanced search
-          </h2>
-        </div>
-        <div
-          className="column is-narrow"
-        >
-          <IconButton
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltip="Hide advanced search"
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <HardwareKeyboardArrowUp />
-          </IconButton>
-        </div>
-      </div>
-      <React.Fragment>
-        <div
-          className="columns is-multiline is-mobile"
-        >
-          <div
-            className="column fields is-11-mobile is-11-tablet-only"
-          >
-            <AdvancedSearchRow
-              disabledFields={
-                Array [
-                  "0",
-                ]
-              }
-              key="advanced-search-field-0"
-              label=""
-              onSearchRowChange={[Function]}
-              onSearchRowDelete={[Function]}
-              rowIndex={0}
-              searchField="0"
-              value=""
-            />
-          </div>
-          <div
-            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
-          >
-            <div
-              className="columns is-gapless is-mobile is-multiline sidebar"
-            >
-              <div
-                className="column is-11-mobile is-narrow-tablet is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                    "minWidth": 166,
-                  }
-                }
-              >
-                <Checkbox
-                  aria-label="Check to search for publications with are only open access / full text"
-                  checked={false}
-                  className="advancedSearchOpenAccessCheckbox"
-                  disabled={false}
-                  label="Open access"
-                  labelPosition="right"
-                  onCheck={[Function]}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-                style={
-                  Object {
-                    "marginRight": 12,
-                  }
-                }
-              >
-                <DocumentTypeField
-                  className="advancedSearchPublicationType"
-                  disabled={false}
-                  value={Array []}
-                />
-              </div>
-              <div
-                className="column is-11-mobile is-12-desktop"
-              >
-                <PublicationYearRangeField
-                  className="advancedSearchYearFilter"
-                  disabled={false}
-                  updateYearRangeFilter={[MockFunction]}
-                  yearFilter={
-                    Object {
-                      "invalid": false,
-                    }
-                  }
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="columns is-gapless is-mobile is-multiline actionButtons"
-        >
-          <div
-            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to add another advanced search field"
-              disabled={true}
-              fullWidth={true}
-              label="Add another field"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={true}
-            />
-          </div>
-          <div
-            className="column is-narrow-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to reset the advanced search"
-              disabled={false}
-              fullWidth={true}
-              label="Reset"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-12-mobile is-narrow-tablet"
-          >
-            <FlatButton
-              aria-label="Click to return to the simple search"
-              disabled={false}
-              fullWidth={true}
-              label="Simple search"
-              labelPosition="after"
-              labelStyle={Object {}}
-              onClick={[Function]}
-              onKeyboardFocus={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onTouchStart={[Function]}
-              primary={false}
-              secondary={false}
-            />
-          </div>
-          <div
-            className="column is-hidden-mobile"
-          />
-          <div
-            className="column is-3-desktop is-4-tablet is-12-mobile"
-          >
-            <RaisedButton
-              aria-label="Click to search eSpace"
-              className="advancedSearchButton"
-              disabled={false}
-              fullWidth={true}
-              label="Search"
-              labelPosition="after"
-              onClick={[Function]}
-              primary={true}
-              secondary={false}
-              type="submit"
-            />
-          </div>
-        </div>
-      </React.Fragment>
-      <AdvancedSearchCaption
-        className="advanced-search"
-        fieldRows={
-          Array [
-            Object {
-              "label": "",
-              "searchField": "0",
-              "value": "",
-            },
-          ]
-        }
-        isLoading={false}
-        isMinimised={false}
-        isOpenAccess={false}
-        onAdvancedSearchReset={[Function]}
-        onAdvancedSearchRowAdd={[Function]}
-        onAdvancedSearchRowChange={[MockFunction]}
-        onAdvancedSearchRowRemove={[Function]}
-        onSearch={[MockFunction]}
-        onToggleMinimise={[MockFunction]}
-        onToggleOpenAccess={[Function]}
-        onToggleSearchMode={[Function]}
-        updateYearRangeFilter={[MockFunction]}
-        yearFilter={
+      <WithStyles(Grid)
+        item={true}
+        style={
           Object {
-            "invalid": false,
+            "flexGrow": 1,
+            "width": 1,
           }
         }
-      />
-    </div>
-  </form>
-</div>
+      >
+        <WithStyles(Typography)
+          variant="headline"
+        >
+          Advanced search
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          onClick={[Function]}
+          tooltip="Hide advanced search"
+        >
+          <pure(KeyboardArrowUpIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        container={true}
+      >
+        <WithStyles(Grid)
+          item={true}
+          md={8}
+          xs={12}
+        >
+          <WithStyles(AdvancedSearchRow)
+            disabledFields={
+              Array [
+                "0",
+              ]
+            }
+            key="advanced-search-field-0"
+            label=""
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchField="0"
+            value=""
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(DocumentTypeField)
+                disabled={false}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(PublicationYearRangeField)
+                disabled={false}
+                invalid={false}
+                updateYearRangeFilter={[MockFunction]}
+                yearFilter={
+                  Object {
+                    "invalid": false,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(FormControlLabel)
+                control={
+                  <WithStyles(Checkbox)
+                    aria-label="Check to search for publications with are only open access / full text"
+                    checked={false}
+                    disabled={false}
+                    onChange={[Function]}
+                  />
+                }
+                label="Open access"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to add another advanced search field"
+            classes={
+              Object {
+                "root": undefined,
+              }
+            }
+            disabled={true}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Add another field
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to reset the advanced search"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="raised"
+          >
+            Reset
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to return to the simple search"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Simple search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "flexGrow": 1,
+                "width": 1,
+              }
+            }
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
+          xs={12}
+        >
+          <WithStyles(Button)
+            aria-label="Click to search eSpace"
+            color="primary"
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            type="submit"
+            variant="raised"
+          >
+            Search
+          </WithStyles(Button)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "paddingTop": 24,
+          }
+        }
+      >
+        <AdvancedSearchCaption
+          className="advanced-search"
+          classes={Object {}}
+          fieldRows={
+            Array [
+              Object {
+                "label": "",
+                "searchField": "0",
+                "value": "",
+              },
+            ]
+          }
+          isLoading={false}
+          isMinimised={false}
+          isOpenAccess={false}
+          onAdvancedSearchReset={[Function]}
+          onAdvancedSearchRowAdd={[Function]}
+          onAdvancedSearchRowChange={[MockFunction]}
+          onAdvancedSearchRowRemove={[Function]}
+          onSearch={[MockFunction]}
+          onToggleMinimise={[MockFunction]}
+          onToggleOpenAccess={[Function]}
+          onToggleSearchMode={[Function]}
+          updateYearRangeFilter={[MockFunction]}
+          yearFilter={
+            Object {
+              "invalid": false,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
 `;

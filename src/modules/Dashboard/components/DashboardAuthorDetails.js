@@ -1,13 +1,23 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class DashboardAuthorDetails extends PureComponent {
+const styles = theme => ({
+    authorDetails: {
+        color: theme.palette.white.main
+    }
+});
+
+export class DashboardAuthorDetails extends PureComponent {
     static propTypes = {
         title: PropTypes.string,
         familyName: PropTypes.string,
         givenName: PropTypes.string,
         orgUnits: PropTypes.array,
-        positions: PropTypes.array
+        positions: PropTypes.array,
+        classes: PropTypes.object
     };
 
     constructor(props) {
@@ -34,29 +44,32 @@ export default class DashboardAuthorDetails extends PureComponent {
     }
 
     render() {
+        const {classes} = this.props;
         const areAllCasualPositions = this.areAllCasualPositions(this.props.positions);
-
         return (
-            <div className="authorDetails">
-                {/* Title and name */}
-                <div className="authorTitleName">
-                    {this.props.title}&nbsp;{this.props.givenName}&nbsp;{this.props.familyName}
-                </div>
+            <Grid container spacing={8}>
+                <Grid item xs={12}>
+                    <Typography variant={'title'} className={classes.authorDetails}>
+                        {this.props.title}&nbsp;{this.props.givenName}&nbsp;{this.props.familyName}
+                    </Typography>
+                </Grid>
                 {/* Author Name/Positions/OrgUnits */}
-                <div className="is-paddingless is-marginless is-narrow">
+                <Grid item xs={12}>
                     {
                         this.props.positions && this.props.positions.length > 0 && this.props.positions.map((item, index) => (
                             ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) &&
-                            <div key={index} className="authorPositionOrg">
-                                <strong>{item}</strong>
+                            <Typography key={index} variant={'caption'} component={'span'} className={classes.authorDetails}>
+                                <b>{item}</b>
                                 {
                                     this.props.orgUnits && this.props.orgUnits.length > 0 && this.props.orgUnits[index] &&
-                                    <span className="color-reverse">, {this.props.orgUnits[index]}</span>
+                                    `, ${this.props.orgUnits[index]}`
                                 }
-                            </div>))
+                            </Typography>))
                     }
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(DashboardAuthorDetails);

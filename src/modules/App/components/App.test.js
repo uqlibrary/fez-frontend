@@ -1,10 +1,12 @@
-import App from './App';
+import {App} from './App';
 import {accounts, authorDetails} from 'mock/data';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
+        classes: {},
+        theme: {palette:{white:{main: '#FFFFFF'}}},
         account: testProps.account || null,
         author: testProps.author || null,
         accountLoading: testProps.accountLoading || false,
@@ -48,6 +50,7 @@ describe('Application component', () => {
 
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup({});
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         wrapper.instance().redirectUserToLogin(true, true)();
 
         const currentUrl = window.btoa(window.location.href);
@@ -60,11 +63,13 @@ describe('Application component', () => {
 
     it('should render for anon user', () => {
         const wrapper = setup({location: {pathname: '/'}});
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while account is loading', () => {
         const wrapper = setup({accountLoading: true});
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -73,6 +78,7 @@ describe('Application component', () => {
             account: account,
             accountAuthorLoading: true
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -89,6 +95,7 @@ describe('Application component', () => {
             account: account,
             author: author
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -100,6 +107,7 @@ describe('Application component', () => {
                 aut_orcid_id: null
             }
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -114,6 +122,7 @@ describe('Application component', () => {
                 aut_orcid_id: null
             }
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -127,6 +136,7 @@ describe('Application component', () => {
                 aut_orcid_id: null
             }
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -143,6 +153,7 @@ describe('Application component', () => {
                 aut_orcid_id: null
             }
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -156,6 +167,7 @@ describe('Application component', () => {
                 aut_orcid_id: '1234-1234-1234'
             }
         });
+        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -212,7 +224,7 @@ describe('Application component', () => {
             actions: {
                 loadCurrentAccount: testMethod
             }
-        }, false);
+        });
         expect(testMethod).toHaveBeenCalledWith();
     });
 

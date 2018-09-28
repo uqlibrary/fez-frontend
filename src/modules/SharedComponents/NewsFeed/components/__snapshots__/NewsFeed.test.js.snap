@@ -6,122 +6,182 @@ exports[`Component NewsFeed should not render anything while loading 1`] = `""`;
 
 exports[`Component NewsFeed should render news feed 1`] = `
 <StandardCard
-  className="newsFeed primaryHeader"
+  darkHeader={true}
   title="Latest news"
 >
   <div
-    className="newsItemContainer"
-    key="newsItem-0"
+    style={
+      Object {
+        "padding": "8px 0px",
+      }
+    }
   >
-    <div
-      className="dateContainer"
+    <WithStyles(Grid)
+      container={true}
+      key="newsItem-0"
+      spacing={16}
     >
-      <div
-        className="date"
-        item-icon=""
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
       >
-        <span
-          className="day"
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          direction="column"
+          justify="center"
+          spacing={0}
         >
-          15
-        </span>
-        <span
-          className="month"
-        >
-          Dec
-        </span>
-        <span
-          className="year"
-        >
-          2018
-        </span>
-      </div>
-    </div>
-    <p
-      className="newsItemText"
-    >
-      <b>
-        Outage
-      </b>
-       
-      There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
-    </p>
+          <WithStyles(Grid)
+            className="day"
+            item={true}
+          >
+            15
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="month"
+            item={true}
+          >
+            Dec
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="year"
+            item={true}
+          >
+            2018
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      >
+        <WithStyles(Typography)>
+          <b>
+            Outage
+          </b>
+           
+          There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
-    className="newsItemContainer"
-    key="newsItem-1"
+    style={
+      Object {
+        "padding": "8px 0px",
+      }
+    }
   >
-    <div
-      className="dateContainer"
+    <WithStyles(Grid)
+      container={true}
+      key="newsItem-1"
+      spacing={16}
     >
-      <div
-        className="date"
-        item-icon=""
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
       >
-        <span
-          className="day"
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          direction="column"
+          justify="center"
+          spacing={0}
         >
-          15
-        </span>
-        <span
-          className="month"
-        >
-          Dec
-        </span>
-        <span
-          className="year"
-        >
-          2017
-        </span>
-      </div>
-    </div>
-    <p
-      className="newsItemText"
-    >
-      <b>
-        Statistics
-      </b>
-       
-      The file download and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.
-    </p>
+          <WithStyles(Grid)
+            className="day"
+            item={true}
+          >
+            15
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="month"
+            item={true}
+          >
+            Dec
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="year"
+            item={true}
+          >
+            2017
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      >
+        <WithStyles(Typography)>
+          <b>
+            Statistics
+          </b>
+           
+          The file download and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
-    className="newsItemContainer"
-    key="newsItem-2"
+    style={
+      Object {
+        "padding": "8px 0px",
+      }
+    }
   >
-    <div
-      className="dateContainer"
+    <WithStyles(Grid)
+      container={true}
+      key="newsItem-2"
+      spacing={16}
     >
-      <div
-        className="date"
-        item-icon=""
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
       >
-        <span
-          className="day"
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          direction="column"
+          justify="center"
+          spacing={0}
         >
-          15
-        </span>
-        <span
-          className="month"
-        >
-          Dec
-        </span>
-        <span
-          className="year"
-        >
-          2016
-        </span>
-      </div>
-    </div>
-    <p
-      className="newsItemText"
-    >
-      <b>
-        PREFS - Account Preferences
-      </b>
-       
-      When you set 'Remember search parameters' to 'Yes' via the PREFS tab, date filters applied to searches will now be remembered between searches
-    </p>
+          <WithStyles(Grid)
+            className="day"
+            item={true}
+          >
+            15
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="month"
+            item={true}
+          >
+            Dec
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="year"
+            item={true}
+          >
+            2016
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      >
+        <WithStyles(Typography)>
+          <b>
+            PREFS - Account Preferences
+          </b>
+           
+          When you set 'Remember search parameters' to 'Yes' via the PREFS tab, date filters applied to searches will now be remembered between searches
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
 </StandardCard>
 `;

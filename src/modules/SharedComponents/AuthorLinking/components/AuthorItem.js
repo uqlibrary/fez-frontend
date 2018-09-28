@@ -1,11 +1,27 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import FlatButton from 'material-ui/FlatButton';
-import Link from 'material-ui/svg-icons/content/link';
-import RadioButtonUnchecked from 'material-ui/svg-icons/toggle/radio-button-unchecked';
-import RadioButtonChecked from 'material-ui/svg-icons/toggle/radio-button-checked';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import {withStyles} from '@material-ui/core/styles';
+import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
+import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
+import Link from '@material-ui/icons/Link';
 
-export default class AuthorItem extends PureComponent {
+const styles = (theme) => ({
+    authorLinkIcon: {
+        marginRight: theme.spacing.unit
+    },
+    buttonBase: {
+        justifyContent: 'flex-start'
+    },
+    authorOrder: {
+        marginLeft: theme.spacing.unit * 6,
+        marginBottom: theme.spacing.unit * 2
+    }
+});
+
+export class AuthorItem extends PureComponent {
     static propTypes = {
         type: PropTypes.string,
         linked: PropTypes.bool,
@@ -14,7 +30,8 @@ export default class AuthorItem extends PureComponent {
         author: PropTypes.object,
         onAuthorSelected: PropTypes.func,
         locale: PropTypes.object,
-        index: PropTypes.number
+        index: PropTypes.number,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -23,10 +40,6 @@ export default class AuthorItem extends PureComponent {
             suffix: ' listed [type]'
         }
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     /**
      * On author selected
@@ -46,20 +59,12 @@ export default class AuthorItem extends PureComponent {
      */
     getAuthorItemStatusIcon = (linked, selected) => {
         if (!linked && !selected) {
-            return <RadioButtonUnchecked className="author-link-status" />;
+            return <RadioButtonUnchecked className={this.props.classes.authorLinkIcon} color="secondary" />;
         } else if (linked) {
-            return <Link className="author-link-status" />;
+            return <Link className={this.props.classes.authorLinkIcon} />;
         } else {
-            return <RadioButtonChecked className="author-link-status" />;
+            return <RadioButtonChecked className={this.props.classes.authorLinkIcon} color="primary"/>;
         }
-    };
-
-    getAuthorName = (author) => {
-        return (
-            <span className="author-link-name">
-                {author[`rek_${this.props.type}`]}
-            </span>
-        );
     };
 
     render() {
@@ -68,24 +73,28 @@ export default class AuthorItem extends PureComponent {
         const authorOrder = (index < ordinalData.length ? ordinalData[index] : (index + 1)) + ' ' + suffix.replace('[type]', this.props.type);
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;
-        const authorName = this.getAuthorName(author);
 
         return (
-            <div className="column is-one-third-desktop is-one-third-tablet is-full-mobile">
-                <div className="author-button">
-                    <FlatButton
-                        label={authorName}
-                        onClick={(!linked && !selected) ? this._selectAuthor : undefined}
-                        fullWidth
-                        icon={icon}
-                        primary={selected}
-                        disabled={disabled}
-                    />
-                    <div className="author-link-order">
-                        <span className="author-link-order-text">{authorOrder}</span>
-                    </div>
-                </div>
-            </div>
+            <Grid item xs={12} sm={6} md={4}>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Button
+                            onClick={(!linked && !selected) ? this._selectAuthor : undefined}
+                            fullWidth
+                            disabled={disabled}
+                            className={this.props.classes.buttonBase}
+                        >
+                            {icon}
+                            {author[`rek_${this.props.type}`]}
+                        </Button>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography variant="caption" className={this.props.classes.authorOrder}>{authorOrder}</Typography>
+                    </Grid>
+                </Grid>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles)(AuthorItem);

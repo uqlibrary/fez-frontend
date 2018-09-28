@@ -1,85 +1,146 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import {locale} from 'locale';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class PublicationStats extends Component {
+const styles = theme => ({
+    header: {
+        padding: '18px 24px 12px 24px',
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.common.white,
+        '& p': {
+            [theme.breakpoints.up('sm')]: {
+                fontSize: '1.1rem',
+                fontWeight: theme.typography.fontWeightRegular
+            }
+        },
+        borderRadius: '4px 4px 0px 0px'
+    },
+    data: {
+        padding: '24px',
+    }
+});
+
+export class PublicationStats extends Component {
     static propTypes = {
-        publicationsStats: PropTypes.object
+        publicationsStats: PropTypes.object,
+        classes: PropTypes.object
     }
     render() {
+        const {classes} = this.props;
         const txt = locale.components.publicationStats;
         const pubStats = this.props.publicationsStats;
         if (!pubStats) return (<span className="publicationsStats empty"/>);
         return (
-            <Table selectable={false} className="publicationsStatsTable">
-                <TableHeader displaySelectAll={false} adjustForCheckbox={false} className="publicationsStatsHeader">
-                    <TableRow>
-                        <TableHeaderColumn
-                            className="publicationsStatsHeaderTitle">{txt.publicationStatsTitle1}</TableHeaderColumn>
-                        <TableHeaderColumn className="publicationsStatsHeaderTitle">
-                            <div className="is-hidden-mobile">{txt.publicationStatsTitle2}</div>
-                            <div className="is-hidden-tablet">{txt.publicationStatsTitle2mobile}</div>
-                        </TableHeaderColumn>
-                        <TableHeaderColumn
-                            className="publicationsStatsHeaderTitle">{txt.publicationStatsTitle3}</TableHeaderColumn>
-                    </TableRow>
-                </TableHeader>
-                <TableBody displayRowCheckbox={false}>
-                    <TableRow>
-                        <TableRowColumn className="publicationsStatsRowTitle">
-                            {txt.publicationStatsRowTitle4}
-                        </TableRowColumn>
-                        <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
-                        <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
-                    </TableRow>
+            <React.Fragment>
+                {/* Header */}
+                <Grid container className={classes.header} >
+                    <Grid item xs={6}>
+                        <Typography  color={'inherit'} gutterBottom>{txt.publicationStatsTitle1}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography  color={'inherit'} gutterBottom>{txt.publicationStatsTitle2}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  color={'inherit'} gutterBottom>{txt.publicationStatsTitle3}</Typography>
+                    </Grid>
+                </Grid>
+                {/* Header */}
 
-                    <TableRow>
-                        <TableRowColumn className="publicationsStatsRowTitle">
-                            {txt.publicationStatsRowTitle5}
-                        </TableRowColumn>
-                        <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
-                        <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
-                    </TableRow>
+                {/* Total pubs */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle4}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.count}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.count}</Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* Total pubs */}
 
-                    <TableRow>
-                        <TableRowColumn
-                            className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle1}</TableRowColumn>
-                        <TableRowColumn>
+                {/* Range */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle5}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.years}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.years}</Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* Range */}
+
+                {/* hindex */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle1}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >
                             {
                                 !pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === ''
                                 || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0'
                                     ? txt.publicationStatsNA
                                     : pubStats.thomson_citation_count_i.hindex.toFixed(0)
                             }
-                        </TableRowColumn>
-                        <TableRowColumn>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >
                             {
                                 !pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === ''
                                 || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0'
                                     ? txt.publicationStatsNA
                                     : pubStats.scopus_citation_count_i.hindex.toFixed(0)
                             }
-                        </TableRowColumn>
-                    </TableRow>
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* hindex */}
 
-                    <TableRow>
-                        <TableRowColumn
-                            className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle2}</TableRowColumn>
-                        <TableRowColumn>{pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                        <TableRowColumn>{pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                    </TableRow>
+                {/* Average */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle2}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}</Typography>
+                    </Grid>
+                </Grid>
+                <Divider />
+                {/* Average */}
 
-                    <TableRow>
-                        <TableRowColumn className="publicationsStatsRowTitle">
-                            {txt.publicationStatsRowTitle3}
-                        </TableRowColumn>
-                        <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
-                        <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
-                    </TableRow>
+                {/* Total citations */}
+                <Grid container spacing={16} className={classes.data} >
+                    <Grid item xs={6}>
+                        <Typography >{txt.publicationStatsRowTitle3}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                        <Typography >{pubStats.thomson_citation_count_i.sum}</Typography>
+                    </Grid>
+                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                        <Typography  >{pubStats.scopus_citation_count_i.sum}</Typography>
+                    </Grid>
+                </Grid>
+                {/* Total citations */}
 
-                </TableBody>
-            </Table>
+            </React.Fragment>
         );
     }
 }
+
+export default withStyles(styles, { withTheme: true })(PublicationStats);

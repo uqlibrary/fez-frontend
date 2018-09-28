@@ -1,7 +1,10 @@
-import AuthorLinking from './AuthorLinking';
+import {AuthorLinking} from './AuthorLinking';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {
+            infiniteContainer: 'infiniteContainer'
+        },
         ...testProps
     };
 

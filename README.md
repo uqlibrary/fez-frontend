@@ -20,7 +20,7 @@ UQ's branding for Fez is UQ eSpace.
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design` - [Material UI](https://v0.material-ui.com/#/components/app-bar)
 - Build and dev tools: `Webpack`
-- Unit tests: `Jest`
+- Unit tests: `Jest` 
 - E2E tests: TBA
 - Styling: [Bulma](https://bulma.io/)
 

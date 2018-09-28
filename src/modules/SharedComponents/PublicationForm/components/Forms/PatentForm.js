@@ -11,6 +11,9 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 export default class PatentForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -24,111 +27,108 @@ export default class PatentForm extends Component {
     render() {
         const txt = formLocale.patent;
         return (
-            <div>
-                <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns" style={{marginTop: '-12px'}}>
-                        <div className="column">
-                            <Field
-                                component={TextField}
-                                autoFocus
-                                disabled={this.props.submitting}
-                                name="rek_title"
-                                className="requiredField"
-                                type="text"
-                                fullWidth
-                                multiLine
-                                rows={1}
-                                floatingLabelText={txt.information.fieldLabels.title}
-                                validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
-                            <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
-                                name="fez_record_search_key_patent_number.rek_patent_number"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.patentNumber}/>
-                        </div>
-                        <div className="column">
-                            <Field
-                                component={PartialDateField}
-                                disabled={this.props.submitting}
-                                name="rek_date"
-                                allowPartial
-                                className="requiredHintField"
-                                validate={[validation.required]}
-                                floatingTitle={txt.information.fieldLabels.date.title}
-                                floatingTitleRequired
-                            />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
-                            <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
-                                name="fez_record_search_key_country_of_issue.rek_country_of_issue"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.countryOfOrigin} />
-                        </div>
-                        <div className="column">
-                            <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
-                                name="fez_record_search_key_publisher.rek_publisher"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.patentOwner} />
-                        </div>
-                    </div>
-                </StandardCard>
-
-                <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
-                    <Field
-                        component={ContributorsEditorField}
-                        showContributorAssignment
-                        className="requiredField"
-                        name="authors"
-                        locale={txt.authors.field}
-                        disabled={this.props.submitting}
-                        validate={[validation.authorRequired]} />
-                </StandardCard>
-
-                <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <div className="columns">
-                        <div className="column">
-                            <Field
-                                component={TextField}
-                                name="comments"
-                                type="text"
-                                disabled={this.props.submitting}
-                                fullWidth
-                                multiLine
-                                rows={1}
-                                floatingLabelText={txt.other.fieldLabels.notes}/>
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
-                            <Field
-                                component={TextField}
-                                name="rek_link"
-                                type="text"
-                                disabled={this.props.submitting}
-                                fullWidth
-                                floatingLabelText={txt.other.fieldLabels.url}
-                                validate={[validation.url]}
-                            />
-                        </div>
-                    </div>
-                </StandardCard>
-            </div>
+            <Grid container spacing={24}>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.information.title} help={txt.information.help}>
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    autoFocus
+                                    disabled={this.props.submitting}
+                                    name="rek_title"
+                                    required
+                                    type="text"
+                                    fullWidth
+                                    multiline
+                                    rows={1}
+                                    label={txt.information.fieldLabels.title}
+                                    validate={[validation.required]} />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_patent_number.rek_patent_number"
+                                    type="text"
+                                    fullWidth
+                                    label={txt.information.fieldLabels.patentNumber}/>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={PartialDateField}
+                                    disabled={this.props.submitting}
+                                    name="rek_date"
+                                    allowPartial
+                                    className="requiredHintField"
+                                    validate={[validation.required]}
+                                    floatingTitle={txt.information.fieldLabels.date.title}
+                                    floatingTitleRequired
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_country_of_issue.rek_country_of_issue"
+                                    type="text"
+                                    fullWidth
+                                    label={txt.information.fieldLabels.countryOfOrigin} />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_publisher.rek_publisher"
+                                    type="text"
+                                    fullWidth
+                                    label={txt.information.fieldLabels.patentOwner} />
+                            </Grid>
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                        <Typography>{txt.authors.description}</Typography>
+                        <Field
+                            component={ContributorsEditorField}
+                            showContributorAssignment
+                            className="requiredField"
+                            name="authors"
+                            locale={txt.authors.field}
+                            disabled={this.props.submitting}
+                            validate={[validation.authorRequired]} />
+                    </StandardCard>
+                </Grid>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.other.title} help={txt.other.help}>
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="comments"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    multiline
+                                    rows={1}
+                                    label={txt.other.fieldLabels.notes}/>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_link"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    label={txt.other.fieldLabels.url}
+                                    validate={[validation.url]}
+                                />
+                            </Grid>
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+            </Grid>
         );
     }
 }

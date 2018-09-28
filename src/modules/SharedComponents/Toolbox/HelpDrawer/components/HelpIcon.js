@@ -1,33 +1,52 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import IconButton from 'material-ui/IconButton';
-import FontIcon from 'material-ui/FontIcon';
 
-const propTypes = {
-    title: PropTypes.string,
-    text: PropTypes.any.isRequired,
-    buttonLabel: PropTypes.string,
-    tooltip: PropTypes.string,
-    onClick: PropTypes.func,
-};
+// MUI 1
+import IconButton from '@material-ui/core/IconButton';
+import {withStyles} from '@material-ui/core/styles';
+import HelpOutline from '@material-ui/icons/HelpOutline';
+import Tooltip from '@material-ui/core/Tooltip';
+import Fade from '@material-ui/core/Fade';
 
-const defaultProps = {
-    tooltip: 'Click for more information'
-};
+const styles = theme => ({
+    helpIcon: {
+        color: theme.palette.secondary.main,
+        opacity: 0.66,
+        '&:hover': {
+            opacity: 0.87
+        }
+    }
+});
 
-const HelpIcon = ({title, text, buttonLabel, tooltip, onClick}) => {
-    const setDrawerContent = () => {
-        onClick(title, text, buttonLabel);
+export class HelpIcon extends Component {
+    static propTypes = {
+        title: PropTypes.string,
+        text: PropTypes.any.isRequired,
+        buttonLabel: PropTypes.string,
+        tooltip: PropTypes.string,
+        onClick: PropTypes.func,
+        classes: PropTypes.object
     };
 
-    return (
-        <IconButton tooltip={tooltip} tooltipPosition="bottom-left" onClick={setDrawerContent}>
-            <FontIcon className="material-icons helpIcon">help_outline</FontIcon>
-        </IconButton>
-    );
-};
+    static defaultProps = {
+        tooltip: 'Click for more information'
+    };
 
-HelpIcon.propTypes = propTypes;
-HelpIcon.defaultProps = defaultProps;
+    render() {
+        const {classes, title, text, buttonLabel, tooltip, onClick} = this.props;
+        const setDrawerContent = () => {
+            onClick(title, text, buttonLabel);
+        };
+        return (
+            <Tooltip title={tooltip}
+                placement="bottom-end"
+                TransitionComponent={Fade}>
+                <IconButton onClick={setDrawerContent}>
+                    <HelpOutline className={classes.helpIcon}/>
+                </IconButton>
+            </Tooltip>
+        );
+    }
+}
 
-export default HelpIcon;
+export default withStyles(styles, {withTheme: true})(HelpIcon);

@@ -1,73 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component PublicationYearRangeField should render as expected 1`] = `
-<div
-  className="columns is-gapless is-mobile "
->
-  <div
-    className="column"
+<React.Fragment>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TextField
-      aria-label="Enter a year to search from"
-      disabled={false}
-      errorText={null}
-      floatingLabelFixed={true}
-      floatingLabelText="Published year range"
-      fullWidth={true}
-      hintText="Year from"
-      id="to"
-      multiLine={false}
-      onChange={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-      value="1999"
-    />
-  </div>
-  <div
-    className="column is-narrow"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InputLabel)
+        shrink={true}
+      >
+        Published year range
+      </WithStyles(InputLabel)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
   >
-    <TextField
-      disabled={true}
-      floatingLabelFixed={true}
-      floatingLabelText=" "
-      fullWidth={false}
-      multiLine={false}
-      rows={1}
+    <WithStyles(Grid)
+      item={true}
       style={
         Object {
-          "width": 24,
+          "flexGrow": 1,
+          "width": 1,
         }
       }
-      type="text"
-      underlineDisabledStyle={
+      zeroMinWidth={true}
+    >
+      <TextField
+        aria-label="Enter a year to search from"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="to"
+        onChange={[Function]}
+        placeholder="Year from"
+        required={false}
+        select={false}
+        value="1999"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
+    >
+      <TextField
+        InputProps={
+          Object {
+            "disableUnderline": true,
+          }
+        }
+        disabled={true}
+        required={false}
+        select={false}
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+        value=" to "
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
         Object {
-          "display": "none",
+          "flexGrow": 1,
+          "width": 1,
         }
       }
-      underlineShow={true}
-      value=" to "
-    />
-  </div>
-  <div
-    className="column"
-  >
-    <TextField
-      aria-label="Enter a year to search to"
-      disabled={false}
-      errorText={null}
-      floatingLabelFixed={true}
-      floatingLabelText=" "
-      fullWidth={true}
-      hintText="Year to"
-      id="from"
-      multiLine={false}
-      onChange={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-      value="2001"
-    />
-  </div>
-</div>
+      zeroMinWidth={true}
+    >
+      <TextField
+        InputLabelProps={
+          Object {
+            "shrink": true,
+          }
+        }
+        aria-label="Enter a year to search to"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="from"
+        onChange={[Function]}
+        placeholder="Year to"
+        required={false}
+        select={false}
+        value="2001"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
 `;

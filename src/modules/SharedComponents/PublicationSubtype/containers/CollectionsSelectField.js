@@ -9,12 +9,12 @@ const mapStateToProps = (state, props) => {
     });
 
     return {
-        selectedValue: props.value,
+        selectedValue: props.value || [],
         itemsList: translatedItemList || [],
         itemsLoading: state.get('collectionsReducer').itemsLoading || false,
         itemsLoadingError: state.get('collectionsReducer').itemsLoadingError || false,
-        hintText: state.get('collectionsReducer').itemsLoading ? props.loadingHint : props.hintText,
-        errorText: state.get('collectionsReducer').itemsLoadingError ? props.errorHint : props.errorText,
+        itemsLoadingHint: props.loadingHint || 'Loading..',
+        hideLabel: true
     };
 };
 

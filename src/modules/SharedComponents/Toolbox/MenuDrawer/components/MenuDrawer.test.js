@@ -1,4 +1,4 @@
-import MenuDrawer from './MenuDrawer';
+import {MenuDrawer} from './MenuDrawer';
 
 const defaultMenuItems = [
     {
@@ -25,6 +25,7 @@ const defaultLocale = {
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
+        classes: {},
         menuItems: testProps.menuItems || defaultMenuItems,
         onToggleDrawer: testProps.onToggleDrawer || jest.fn(),
         history: testProps.history || {push: jest.fn()},

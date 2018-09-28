@@ -1,8 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import AutoComplete from 'material-ui/AutoComplete';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import {UqIdField} from 'modules/SharedComponents/LookupFields';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -17,7 +18,8 @@ export class ContributorForm extends PureComponent {
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool
+        showContributorAssignment: PropTypes.bool,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -54,26 +56,20 @@ export class ContributorForm extends PureComponent {
             uqIdentifier: '',
             contributor: {}
         });
-
-        // move focus to name as published text field after item was added
-        if (this.refs.nameAsPublishedField) this.refs.nameAsPublishedField.focus();
     }
 
-    _onNameChanged = (event, newValue) => {
+    _onNameChanged = (event) => {
         this.setState({
-            nameAsPublished: newValue
+            nameAsPublished: event.target.value
         });
     }
 
-    _onUQIdentifierSelected = (selectedItem, index) => {
-        // items has to be selected from the list
-        if (index === -1) return;
-
+    _onUQIdentifierSelected = (selectedItem) => {
         this.setState({
             contributor: selectedItem
+        }, () => {
+            this._addContributor();
         });
-
-        this._addContributor();
     }
 
     _onUQIdentifierChanged = (newValue) => {
@@ -87,58 +83,49 @@ export class ContributorForm extends PureComponent {
     };
 
     render() {
-        const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
         const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
         return (
-            <div className="contributorForm">
+            <div style={{flexGrow: 1}}>
                 {description}
-                <div className="columns">
-                    <div className="column contributor">
+                <Grid container spacing={16} alignItems="baseline">
+                    <Grid item xs={12} sm={this.props.showIdentifierLookup ? 12 : 9} md={this.props.showIdentifierLookup ? 5 : 10}>
                         <TextField
                             fullWidth
                             ref="nameAsPublishedField"
                             id="nameAsPublishedField"
-                            floatingLabelText={this.props.locale.nameAsPublishedLabel}
-                            hintText={this.props.locale.nameAsPublishedHint}
+                            label={this.props.locale.nameAsPublishedLabel}
+                            helperText={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyPress={this._addContributor}
                             disabled={this.props.disabled}
-                            className="mui-long-labels-fix"
+                            required={this.props.required}
+                            autoComplete="off"
                         />
-                    </div>
+                    </Grid>
                     {
                         this.props.showIdentifierLookup &&
-                        <div className="column identifier">
-                            <AutoComplete
+                        <Grid item xs={12} sm={12} md={5}>
+                            <UqIdField
                                 disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                                listStyle={{maxHeight: 200, overflow: 'auto'}}
-                                filter={() => true}
+                                onChange={this._onUQIdentifierSelected}
                                 ref="identifierField"
                                 id="identifierField"
-                                floatingLabelText={this.props.locale.identifierLabel}
-                                hintText={this.props.locale.identifierLabel}
-                                dataSource={this.props.authorsList}
-                                dataSourceConfig={autoCompleteDataFormat}
-                                openOnFocus
-                                fullWidth
-                                animated={false}
-                                searchText={this.state.uqIdentifier}
-                                onUpdateInput={this._onUQIdentifierChanged}
-                                onNewRequest={this._onUQIdentifierSelected}
                             />
-                        </div>
+                        </Grid>
                     }
-                    <div className="column is-narrow">
-                        <RaisedButton
-                            className="is-mui-spacing-button"
+                    <Grid item xs={12} sm={3} md={2}>
+                        <Button
+                            variant="contained"
                             fullWidth
-                            primary
-                            label={this.props.locale.addButton}
+                            color="primary"
                             disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                            onClick={this._addContributor} />
-                    </div>
-                </div>
+                            onClick={this._addContributor}
+                        >
+                            {this.props.locale.addButton}
+                        </Button>
+                    </Grid>
+                </Grid>
             </div>
         );
     }

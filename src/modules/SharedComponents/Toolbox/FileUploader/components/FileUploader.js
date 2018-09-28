@@ -1,14 +1,15 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {clearFileUpload} from '../actions';
 
-import Checkbox from 'material-ui/Checkbox';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
+import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
 import {Alert} from '../../Alert';
-
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import * as config from '../config';
 
 const moment = require('moment');
@@ -38,7 +39,7 @@ export class FileUploader extends PureComponent {
             errorTitle: 'Upload Errors',
             successTitle: 'Success',
             successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
-            fileUploadRestrictionHeading: (<h3>File upload restrictions</h3>),
+            fileUploadRestrictionHeading: 'File upload restrictions',
             fileUploadRestrictions: (
                 <div>
                     Please ensure your files:
@@ -157,7 +158,7 @@ export class FileUploader extends PureComponent {
      * @param value
      * @private
      */
-    _acceptTermsAndConditions = (event, value) => {
+    _acceptTermsAndConditions = (value) => {
         this.setState({isTermsAndConditionsAccepted: value});
     };
 
@@ -303,8 +304,8 @@ export class FileUploader extends PureComponent {
         });
 
         return (
-            <div>
-                <h4 className="sub-title">{instructionsDisplay}</h4>
+            <Fragment>
+                <Typography variant="body1" gutterBottom>{instructionsDisplay}</Typography>
                 <FileUploadDropzone
                     locale={this.props.locale}
                     maxSize={this.calculateMaxFileSize()}
@@ -312,7 +313,8 @@ export class FileUploader extends PureComponent {
                     filesInQueue={this.state.filesInQueue.map(file => file.name)}
                     fileNameRestrictions={fileNameRestrictions}
                     fileUploadLimit={fileUploadLimit}
-                    onDrop={this._handleDroppedFiles} />
+                    onDrop={this._handleDroppedFiles}
+                />
                 {
                     filesInQueue.length > 0 &&
                     <Alert title={successTitle} message={successMessage.replace('[numberOfFiles]', filesInQueue.length)} type="done" />
@@ -324,27 +326,33 @@ export class FileUploader extends PureComponent {
                 }
                 {
                     filesInQueue.length > 0 &&
-                    <div className="metadata-container">
-                        <FileUploadRowHeader
-                            onDeleteAll={this._deleteAllFiles}
-                            requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
-                            disabled={disabled} />
-
-                        {filesInQueueRow}
-
-                        {
-                            requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) &&
-                            <div className={`open-access-checkbox${!isTermsAndConditionsAccepted ? ' error-checkbox' : ''}`}>
-                                <Checkbox
-                                    label={accessTermsAndConditions}
-                                    onCheck={this._acceptTermsAndConditions}
-                                    checked={isTermsAndConditionsAccepted}
-                                    disabled={disabled} />
-                            </div>
-                        }
+                    <div style={{flexGrow: 1, padding: 8}}>
+                        <Grid container display="column" spacing={16}>
+                            <Grid item xs={12}>
+                                <FileUploadRowHeader
+                                    onDeleteAll={this._deleteAllFiles}
+                                    requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
+                                    disabled={disabled}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                {filesInQueueRow}
+                            </Grid>
+                            {
+                                requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) &&
+                                <Grid item xs={12}>
+                                    <FileUploadTermsAndConditions
+                                        onAcceptTermsAndConditions={this._acceptTermsAndConditions}
+                                        accessTermsAndConditions={accessTermsAndConditions}
+                                        isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
+                                        disabled={disabled}
+                                    />
+                                </Grid>
+                            }
+                        </Grid>
                     </div>
                 }
-            </div>
+            </Fragment>
         );
     }
 }

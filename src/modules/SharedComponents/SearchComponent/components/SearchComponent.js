@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import param from 'can-param';
 
-import Snackbar from 'material-ui/Snackbar';
+import Snackbar from '@material-ui/core/Snackbar';
 import {routes} from 'config';
 import {defaultQueryParams} from 'config/general';
 import {locale} from 'locale';
@@ -372,6 +372,10 @@ export default class SearchComponent extends PureComponent {
                     />
                 }
                 <Snackbar
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                    }}
                     open={this.state.snackbarOpen}
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}

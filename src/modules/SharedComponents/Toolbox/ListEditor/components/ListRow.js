@@ -1,10 +1,16 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
+import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
+import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+import Delete from '@material-ui/icons/Delete';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class ListRow extends Component {
+export class ListRow extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         item: PropTypes.any.isRequired,
@@ -15,7 +21,8 @@ export default class ListRow extends Component {
         onDelete: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        hideReorder: PropTypes.bool
+        hideReorder: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -31,10 +38,6 @@ export default class ListRow extends Component {
             }
         }
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     showConfirmation = () => {
         this.confirmationBox.showConfirmation();
@@ -53,48 +56,67 @@ export default class ListRow extends Component {
     }
 
     render() {
+        const {item, disabled, hideReorder, canMoveUp, canMoveDown, classes} = this.props;
+        const {moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation} = this.props.locale;
+
         return (
-            <div className="columns is-gapless is-mobile listRow datalist datalist-row">
+            <div style={{flexGrow: 1, padding: 8}}>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
-                    locale={this.props.locale.deleteRecordConfirmation}/>
-                <div className="column datalist-text">
+                    locale={deleteRecordConfirmation}
+                />
+                <Grid container alignItems="center" spacing={16} className={classes.row}>
+                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
+                        <Typography variant="body1">{item.value || item}</Typography>
+                    </Grid>
                     {
-                        this.props.item.value ? this.props.item.value : this.props.item
+                        !hideReorder &&
+                        <Grid item xs={5} sm={5} className={classes.center}>
+                            <Grid container justify="flex-end">
+                                {
+                                    canMoveUp &&
+                                    <Grid item>
+                                        <Tooltip title={moveUpHint}>
+                                            <IconButton onClick={this.onMoveUp} disabled={disabled}>
+                                                <KeyboardArrowUp/>
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Grid>
+                                }
+                                {
+                                    canMoveDown &&
+                                    <Grid item>
+                                        <Tooltip title={moveDownHint}>
+                                            <IconButton onClick={this.onMoveDown} disabled={disabled}>
+                                                <KeyboardArrowDown/>
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Grid>
+                                }
+                            </Grid>
+                        </Grid>
                     }
-                </div>
-                <div className="column is-narrow is-hidden-mobile listReorder datalist-buttons">
-                    {!this.props.hideReorder && this.props.canMoveUp &&
-                    <IconButton
-                        tooltip={this.props.locale.moveUpHint}
-                        onClick={this.onMoveUp}
-                        className="reorderUp"
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
-                    </IconButton>
-                    }
-                    {!this.props.hideReorder && this.props.canMoveDown &&
-                    <IconButton
-                        tooltip={this.props.locale.moveDownHint}
-                        onClick={this.onMoveDown}
-                        className="reorderDown"
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
-                    </IconButton>
-                    }
-                </div>
-                <div className="column is-narrow listDelete datalist-buttons">
-                    <IconButton
-                        className="itemDelete"
-                        tooltip={this.props.locale.deleteHint}
-                        onClick={this.showConfirmation}
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons deleteIcon">delete</FontIcon>
-                    </IconButton>
-                </div>
+                    <Grid item xs={2} sm={1} className={classes.center}>
+                        <Tooltip title={deleteHint}>
+                            <IconButton onClick={this.showConfirmation} disabled={disabled}>
+                                <Delete/>
+                            </IconButton>
+                        </Tooltip>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
 }
 
+const styles = () => ({
+    center: {
+        textAlign: 'center'
+    },
+    row: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+    }
+});
+
+export default withStyles(styles)(ListRow);

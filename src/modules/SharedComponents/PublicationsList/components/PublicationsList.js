@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 
@@ -48,9 +48,9 @@ export default class PublicationsList extends PureComponent {
         });
 
         return (
-            <div className="publicationsList">
+            <Fragment>
                 {publications}
-            </div>
+            </Fragment>
         );
     }
 }

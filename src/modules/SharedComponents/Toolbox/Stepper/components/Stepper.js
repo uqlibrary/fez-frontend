@@ -1,12 +1,22 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class CustomStepper extends Component {
+const styles = theme => ({
+    stepper: {
+        backgroundColor: theme.hexToRGBA('#F7F7F7', 0)
+    }
+});
+
+export class CustomStepper extends Component {
     static propTypes = {
         activeStep: PropTypes.number,
-        steps: PropTypes.array
-    }
+        steps: PropTypes.array,
+        classes: PropTypes.object
+    };
 
     shouldComponentUpdate(nextProps) {
         return nextProps.activeStep !== this.props.activeStep
@@ -14,25 +24,24 @@ export default class CustomStepper extends Component {
     }
 
     render() {
-        const {activeStep, steps} = this.props;
+        const {activeStep, steps, classes} = this.props;
         return (
-            <div className="Stepper">
-                <Stepper activeStep={activeStep} style={{padding: '0', margin: '-10px auto'}}>
-                    {
-                        steps.map((step, index) => {
-                            return (
-                                <Step key={`stepper_${index}`}>
-                                    <StepLabel
-                                        style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>
-                                        {step.label}
-                                    </StepLabel>
-                                </Step>
-                            );
-                        })
-                    }
-                </Stepper>
-            </div>
+            <Stepper activeStep={activeStep} className={classes.stepper}>
+                {
+                    steps.map((step, index) => {
+                        return (
+                            <Step key={`stepper_${index}`}>
+                                <StepLabel
+                                    style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>
+                                    {step.label}
+                                </StepLabel>
+                            </Step>
+                        );
+                    })
+                }
+            </Stepper>
         );
     }
 }
 
+export default withStyles(styles, {withTheme: true})(CustomStepper);
