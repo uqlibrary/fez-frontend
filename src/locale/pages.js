@@ -437,10 +437,10 @@ export default {
                 ),
                 buttonLabel: 'OK'
             },
-            description: (<div>
+            description: (<span>
                 <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here,
                 and changes you make will apply to their account!
-            </div>),
+            </span>),
             labels: {
                 submit: 'Masquerade',
                 hint: 'Username or student username'
