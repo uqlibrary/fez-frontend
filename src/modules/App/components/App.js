@@ -247,7 +247,7 @@ export class App extends PureComponent {
                             wrap="nowrap"
                             justify="flex-start">
                             {
-                                !this.state.docked && !isThesisSubmissionPage &&
+                                !this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage &&
                                 <Grid item zeroMinWidth>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
