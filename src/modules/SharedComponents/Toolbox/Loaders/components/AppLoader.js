@@ -10,7 +10,7 @@ const styles = theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.palette.primary.main,
+        ...theme.palette.primary.gradient.horizontal,
         width: '100%',
         height: '100%',
         textAlign: 'center !important'
