@@ -21,6 +21,9 @@ const styles = theme => ({
     },
     spaceBetween: {
         margin: '16px 0'
+    },
+    logo: {
+        width: 150
     }
 });
 
@@ -43,7 +46,7 @@ export class AppLoader extends React.Component {
                     <CircularProgress size={80} thickness={1} className={classes.white}/>
                 </Grid>
                 <Grid item  className={classes.spaceBetween}>
-                    {logoImage && <img src={logoImage} alt={logoText}/>}
+                    {logoImage && <img src={logoImage} alt={logoText} className={classes.logo}/>}
                 </Grid>
             </Grid>
         );
