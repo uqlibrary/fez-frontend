@@ -50,6 +50,7 @@ export default class Masquerade extends Component {
                                 label={txt.labels.hint}
                                 value={this.state.userName}
                                 onChange={this._usernameChanged}
+                                onKeyPress={this._masqueradeAs}
                             />
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>

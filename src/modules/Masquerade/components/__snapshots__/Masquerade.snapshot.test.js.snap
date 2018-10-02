@@ -41,6 +41,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
           id="userName"
           label="Username or student username"
           onChange={[Function]}
+          onKeyPress={[Function]}
           required={false}
           select={false}
           value=""
