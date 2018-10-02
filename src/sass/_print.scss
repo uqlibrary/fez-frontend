@@ -21,7 +21,7 @@
   }
   .content-container {
     page-break-inside: avoid !important;
-    .StandardCard, .StandardPage {
+    #StandardCard, .StandardPage {
       display: block !important;
     }
     display: block !important;
