@@ -15,12 +15,12 @@ exports[`Component Masquerade Should render form as expected 1`] = `
     title="Masquerade"
   >
     <WithStyles(Typography)>
-      <div>
+      <span>
         <strong>
           WARNING!!
         </strong>
          Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
-      </div>
+      </span>
     </WithStyles(Typography)>
     <WithStyles(Grid)
       alignItems="flex-end"
@@ -41,6 +41,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
           id="userName"
           label="Username or student username"
           onChange={[Function]}
+          onKeyPress={[Function]}
           required={false}
           select={false}
           value=""

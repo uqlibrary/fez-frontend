@@ -9,7 +9,13 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
             : [],
-        onChange: props.onChange,
+        onChange: (item) => {
+            if (!item.id) {
+                props.onChange({...item, id: item.value});
+            } else {
+                props.onChange(item);
+            }
+        },
         allowFreeText: true,
         async: true,
         selectedValue: !!props.label && {value: props.label} || !!props.value && {value: props.value} || '',
