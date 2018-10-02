@@ -10,6 +10,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
   title="Latest news"
 >
   <div
+    key="0"
     style={
       Object {
         "padding": "8px 0px",
@@ -68,6 +69,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
     </WithStyles(Grid)>
   </div>
   <div
+    key="1"
     style={
       Object {
         "padding": "8px 0px",
@@ -126,6 +128,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
     </WithStyles(Grid)>
   </div>
   <div
+    key="2"
     style={
       Object {
         "padding": "8px 0px",
