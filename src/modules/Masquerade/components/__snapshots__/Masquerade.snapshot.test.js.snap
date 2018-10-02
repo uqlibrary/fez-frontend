@@ -2,71 +2,67 @@
 
 exports[`Component Masquerade Should render form as expected 1`] = `
 <StandardPage>
-  <form
-    onSubmit={[Function]}
+  <StandardCard
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": <div>
+          Masquerade as another user...
+        </div>,
+        "title": "Masquerade",
+      }
+    }
+    title="Masquerade"
   >
-    <StandardCard
-      help={
+    <WithStyles(Typography)>
+      <span>
+        <strong>
+          WARNING!!
+        </strong>
+         Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      spacing={24}
+      style={
         Object {
-          "buttonLabel": "OK",
-          "text": <div>
-            Masquerade as another user...
-          </div>,
-          "title": "Masquerade",
+          "marginTop": 12,
         }
       }
-      title="Masquerade"
     >
-      <WithStyles(Typography)>
-        <span>
-          <strong>
-            WARNING!!
-          </strong>
-           Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
-        </span>
-      </WithStyles(Typography)>
       <WithStyles(Grid)
-        alignItems="flex-end"
-        container={true}
-        spacing={24}
-        style={
-          Object {
-            "marginTop": 12,
-          }
-        }
+        item={true}
+        xs={true}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={true}
-        >
-          <TextField
-            fullWidth={true}
-            id="userName"
-            label="Username or student username"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            required={false}
-            select={false}
-            value=""
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="raised"
-          >
-            Masquerade
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
+        <TextField
+          fullWidth={true}
+          id="userName"
+          label="Username or student username"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          required={false}
+          select={false}
+          value=""
+        />
       </WithStyles(Grid)>
-    </StandardCard>
-  </form>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="raised"
+        >
+          Masquerade
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </StandardCard>
 </StandardPage>
 `;

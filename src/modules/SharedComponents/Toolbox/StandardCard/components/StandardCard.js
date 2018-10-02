@@ -46,7 +46,7 @@ class Cards extends Component {
         const customTitle = !!this.props.customTitleColor ? {color: this.props.customTitleColor} : null;
         const fullHeight = !!this.props.fullHeight ? {height: '100%'} : null;
         return (
-            <Card id="StandardCard" className={classes.card} style={{...customBG, ...customTitle, ...fullHeight}}>
+            <Card className={`${classes.card} StandardCard`} style={{...customBG, ...customTitle, ...fullHeight}}>
                 {
                     !this.props.noHeader &&
                     <CardHeader

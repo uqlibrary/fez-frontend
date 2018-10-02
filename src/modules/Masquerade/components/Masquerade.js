@@ -39,32 +39,30 @@ export default class Masquerade extends Component {
 
         return (
             <StandardPage>
-                <form onSubmit={this._masqueradeAs}>
-                    <StandardCard title={txt.title} help={txt.help}>
-                        <Typography>{txt.description}</Typography>
-                        <Grid container spacing={24} alignItems={'flex-end'} style={{marginTop: 12}}>
-                            <Grid item xs>
-                                <TextField
-                                    fullWidth
-                                    id="userName"
-                                    label={txt.labels.hint}
-                                    value={this.state.userName}
-                                    onChange={this._usernameChanged}
-                                    onKeyPress={this._masqueradeAs}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={'auto'}>
-                                <Button
-                                    variant={'raised'}
-                                    fullWidth
-                                    color="primary"
-                                    children={txt.labels.submit}
-                                    disabled={this.state.loading}
-                                    onClick={this._masqueradeAs}/>
-                            </Grid>
+                <StandardCard title={txt.title} help={txt.help}>
+                    <Typography>{txt.description}</Typography>
+                    <Grid container spacing={24} alignItems={'flex-end'} style={{marginTop: 12}}>
+                        <Grid item xs>
+                            <TextField
+                                fullWidth
+                                id="userName"
+                                label={txt.labels.hint}
+                                value={this.state.userName}
+                                onChange={this._usernameChanged}
+                                onKeyPress={this._masqueradeAs}
+                            />
                         </Grid>
-                    </StandardCard>
-                </form>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
+                                fullWidth
+                                color="primary"
+                                children={txt.labels.submit}
+                                disabled={this.state.loading}
+                                onClick={this._masqueradeAs}/>
+                        </Grid>
+                    </Grid>
+                </StandardCard>
             </StandardPage>
         );
     }

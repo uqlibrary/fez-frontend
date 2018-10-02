@@ -1037,29 +1037,26 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                 title="Links"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
-                  id="StandardCard"
+                  className="Cards-card-01 StandardCard"
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className="Cards-card-01 StandardCard"
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
                       }
                     }
-                    id="StandardCard"
                     raised={false}
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
-                      id="StandardCard"
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -1093,13 +1090,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                         }
                         component="div"
                         elevation={1}
-                        id="StandardCard"
                         square={false}
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
-                          id="StandardCard"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)
@@ -7097,29 +7092,26 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                 title="Links"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
-                  id="StandardCard"
+                  className="Cards-card-01 StandardCard"
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className="Cards-card-01 StandardCard"
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
                       }
                     }
-                    id="StandardCard"
                     raised={false}
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
-                      id="StandardCard"
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -7153,13 +7145,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                         }
                         component="div"
                         elevation={1}
-                        id="StandardCard"
                         square={false}
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
-                          id="StandardCard"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)
@@ -12170,29 +12160,26 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                 title="Links"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
-                  id="StandardCard"
+                  className="Cards-card-01 StandardCard"
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className="Cards-card-01 StandardCard"
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
                       }
                     }
-                    id="StandardCard"
                     raised={false}
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
-                      id="StandardCard"
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -12226,13 +12213,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                         }
                         component="div"
                         elevation={1}
-                        id="StandardCard"
                         square={false}
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
-                          id="StandardCard"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)
@@ -17925,29 +17910,26 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                 title="Links"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
-                  id="StandardCard"
+                  className="Cards-card-01 StandardCard"
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className="Cards-card-01 StandardCard"
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
                       }
                     }
-                    id="StandardCard"
                     raised={false}
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
-                      id="StandardCard"
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -17981,13 +17963,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                         }
                         component="div"
                         elevation={1}
-                        id="StandardCard"
                         square={false}
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
-                          id="StandardCard"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)
