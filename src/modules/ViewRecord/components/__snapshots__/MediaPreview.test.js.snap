@@ -673,11 +673,21 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                 title="Image preview"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
+                  className={
+                    Array [
+                      "Cards-card-01",
+                      "StandardCard",
+                    ]
+                  }
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className={
+                      Array [
+                        "Cards-card-01",
+                        "StandardCard",
+                      ]
+                    }
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
@@ -687,12 +697,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -730,7 +740,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)
@@ -2983,11 +2993,21 @@ exports[`Media Preview Component  should render component with image 1`] = `
                 title="Image preview"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
+                  className={
+                    Array [
+                      "Cards-card-01",
+                      "StandardCard",
+                    ]
+                  }
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className={
+                      Array [
+                        "Cards-card-01",
+                        "StandardCard",
+                      ]
+                    }
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
@@ -2997,12 +3017,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -3040,7 +3060,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)
@@ -5248,11 +5268,21 @@ exports[`Media Preview Component  should render component with video 1`] = `
                 title="Video preview"
               >
                 <WithStyles(Card)
-                  className="Cards-card-01"
+                  className={
+                    Array [
+                      "Cards-card-01",
+                      "StandardCard",
+                    ]
+                  }
                   style={Object {}}
                 >
                   <Card
-                    className="Cards-card-01"
+                    className={
+                      Array [
+                        "Cards-card-01",
+                        "StandardCard",
+                      ]
+                    }
                     classes={
                       Object {
                         "root": "MuiCard-root-05",
@@ -5262,12 +5292,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
                     style={Object {}}
                   >
                     <WithStyles(Paper)
-                      className="MuiCard-root-05 Cards-card-01"
+                      className="MuiCard-root-05 Cards-card-01 StandardCard"
                       elevation={1}
                       style={Object {}}
                     >
                       <Paper
-                        className="MuiCard-root-05 Cards-card-01"
+                        className="MuiCard-root-05 Cards-card-01 StandardCard"
                         classes={
                           Object {
                             "elevation0": "MuiPaper-elevation0-08",
@@ -5305,7 +5335,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01"
+                          className="MuiPaper-root-06 MuiPaper-elevation1-09 MuiPaper-rounded-07 MuiCard-root-05 Cards-card-01 StandardCard"
                           style={Object {}}
                         >
                           <WithStyles(CardHeader)

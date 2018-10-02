@@ -31,7 +31,7 @@ class Page extends Component {
     render() {
         const {classes, title, children} = this.props;
         return (
-            <Grid container>
+            <Grid container className="StandardPage">
                 {title &&
                 <Typography variant={'title'} className={classes.layoutTitle}>{title}</Typography>
                 }

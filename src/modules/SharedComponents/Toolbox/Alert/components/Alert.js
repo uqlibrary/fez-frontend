@@ -255,7 +255,7 @@ export class Alert extends PureComponent {
     render() {
         const {classes} = this.props;
         return (
-            <div style={{padding: 12}}>
+            <div style={{padding: 12}} className="Alert">
                 <Grid container spacing={24} className={classNames(classes[this.props.type], classes.common)} justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
                     <Grid item xs={12} sm className={this.props.action && classes.linked}>
                         <Grid container justify={'center'} alignItems={'flex-start'} alignContent={'center'}>

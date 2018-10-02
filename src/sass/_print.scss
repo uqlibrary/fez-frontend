@@ -4,14 +4,27 @@
   margin: 0;
 }
 @media print {
-  .AppBar, div.possiblePublicationLure, div.authorCount, div.main-drawer, .alertWrapper {
+  .AppBar, div.possiblePublicationLure, div.authorCount, div.main-drawer, .Alert, .AddThis {
     display: none !important;
   }
   html, body {
+    width: 1280px !important;
     height: auto !important;
-    overflow: visible;
+    overflow: visible !important;
+    zoom: 0.965;
+    display: block !important;
+    @-moz-document url-prefix() {
+      div {
+        display: block !important;
+      }
+    }
   }
   .content-container {
+    page-break-inside: avoid !important;
+    .StandardCard, .StandardPage {
+      display: block !important;
+    }
+    display: block !important;
     padding: 0 !important;
     height: auto !important;
     overflow: visible !important;
