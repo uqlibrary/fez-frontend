@@ -6,11 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
+import {routes} from 'config';
 
 export default class Masquerade extends Component {
-    static propTypes = {
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -26,7 +24,8 @@ export default class Masquerade extends Component {
             loading: true
         });
 
-        window.location.href = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(window.location.href)}`;
+        const redirectUrl = `${window.location.protocol}//${window.location.hostname}${routes.pathConfig.dashboard}`;
+        window.location.href = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`;
     };
 
     _usernameChanged = (event) => {
