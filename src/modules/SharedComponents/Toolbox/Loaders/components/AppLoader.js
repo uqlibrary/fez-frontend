@@ -10,7 +10,7 @@ const styles = theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        ...theme.palette.primary.gradient.horizontal,
+        ...theme.palette.primary.gradient.diagonal,
         width: '100%',
         height: '100%',
         textAlign: 'center !important'
@@ -39,14 +39,14 @@ export class AppLoader extends React.Component {
         const {classes, title, logoImage, logoText} = this.props;
         return (
             <Grid container spacing={0} direction="column" justify="center" alignItems="center" className={classes.appLoader}>
-                <Grid item className={classes.spaceBetween}>
-                    <Typography variant={'title'} className={classes.white}>{title}</Typography>
-                </Grid>
                 <Grid item  className={classes.spaceBetween}>
                     <CircularProgress size={80} thickness={1} className={classes.white}/>
                 </Grid>
                 <Grid item  className={classes.spaceBetween}>
                     {logoImage && <img src={logoImage} alt={logoText} className={classes.logo}/>}
+                </Grid>
+                <Grid item className={classes.spaceBetween}>
+                    <Typography variant={'title'} className={classes.white}>{title}</Typography>
                 </Grid>
             </Grid>
         );

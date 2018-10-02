@@ -161,6 +161,10 @@ exports[`Journal Name Component test  should render closed access 1`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -533,6 +537,10 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -908,6 +916,10 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -1288,6 +1300,10 @@ exports[`Journal Name Component test  should render open access 1`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -1663,6 +1679,10 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",

@@ -177,6 +177,10 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -573,6 +577,10 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",

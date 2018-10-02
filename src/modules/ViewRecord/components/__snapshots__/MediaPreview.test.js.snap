@@ -161,6 +161,10 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -488,6 +492,10 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -1012,6 +1020,10 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -2046,6 +2058,10 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -2495,6 +2511,10 @@ exports[`Media Preview Component  should render component with image 1`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -2822,6 +2842,10 @@ exports[`Media Preview Component  should render component with image 1`] = `
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -3346,6 +3370,10 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -4385,6 +4413,10 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -4784,6 +4816,10 @@ exports[`Media Preview Component  should render component with video 1`] = `
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -5111,6 +5147,10 @@ exports[`Media Preview Component  should render component with video 1`] = `
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -5635,6 +5675,10 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -6677,6 +6721,10 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",

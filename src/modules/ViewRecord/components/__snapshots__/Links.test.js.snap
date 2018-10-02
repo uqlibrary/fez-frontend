@@ -163,6 +163,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -467,6 +471,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                   "contrastText": "#fff",
                   "dark": "#3b1a59",
                   "gradient": Object {
+                    "diagonal": Object {
+                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                    },
                     "horizontal": Object {
                       "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                       "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -858,6 +866,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -1382,6 +1394,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -6248,6 +6264,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -6552,6 +6572,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                   "contrastText": "#fff",
                   "dark": "#3b1a59",
                   "gradient": Object {
+                    "diagonal": Object {
+                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                    },
                     "horizontal": Object {
                       "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                       "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -6937,6 +6961,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -7461,6 +7489,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -11334,6 +11366,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -11638,6 +11674,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                   "contrastText": "#fff",
                   "dark": "#3b1a59",
                   "gradient": Object {
+                    "diagonal": Object {
+                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                    },
                     "horizontal": Object {
                       "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                       "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -12029,6 +12069,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -12553,6 +12597,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -17114,6 +17162,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
                 "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
                   "horizontal": Object {
                     "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                     "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -17418,6 +17470,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                   "contrastText": "#fff",
                   "dark": "#3b1a59",
                   "gradient": Object {
+                    "diagonal": Object {
+                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                    },
                     "horizontal": Object {
                       "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                       "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -17803,6 +17859,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                         "contrastText": "#fff",
                         "dark": "#3b1a59",
                         "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
                           "horizontal": Object {
                             "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                             "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
@@ -18327,6 +18387,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               "contrastText": "#fff",
                                               "dark": "#3b1a59",
                                               "gradient": Object {
+                                                "diagonal": Object {
+                                                  "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                                  "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                                },
                                                 "horizontal": Object {
                                                   "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
                                                   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
