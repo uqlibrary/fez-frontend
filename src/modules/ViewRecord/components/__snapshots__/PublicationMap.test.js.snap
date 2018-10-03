@@ -111,9 +111,9 @@ exports[`Publication's map coordinates should render component with a marker 1`]
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -484,9 +484,9 @@ exports[`Publication's map coordinates should render component with a selected a
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -857,9 +857,9 @@ exports[`Publication's map coordinates should render component with empty coordi
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",

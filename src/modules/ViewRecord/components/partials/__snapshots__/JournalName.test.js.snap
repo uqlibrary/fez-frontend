@@ -111,9 +111,9 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -482,9 +482,9 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1962,9 +1962,9 @@ exports[`Journal Name Component test  should render without era journal listed 1
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3418,9 +3418,9 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",

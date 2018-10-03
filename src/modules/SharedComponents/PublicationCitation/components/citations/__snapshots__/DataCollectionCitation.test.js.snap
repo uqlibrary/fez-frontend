@@ -111,9 +111,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2717,9 +2717,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3243,9 +3243,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5849,9 +5849,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -6371,9 +6371,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -8977,9 +8977,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -9499,9 +9499,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -11997,9 +11997,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -12453,9 +12453,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -15059,9 +15059,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -15581,9 +15581,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -18172,9 +18172,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -18680,9 +18680,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -21271,9 +21271,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -21793,9 +21793,9 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -22137,9 +22137,9 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",

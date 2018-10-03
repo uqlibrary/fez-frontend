@@ -111,9 +111,9 @@ exports[`Journal Name Component test  should render closed access 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -487,9 +487,9 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -866,9 +866,9 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1250,9 +1250,9 @@ exports[`Journal Name Component test  should render open access 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1629,9 +1629,9 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",

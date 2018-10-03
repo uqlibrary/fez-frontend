@@ -111,9 +111,9 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2109,9 +2109,9 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       },
                       "palette": Object {
                         "accent": Object {
-                          "dark": "#005EA5",
-                          "light": "#288BED",
-                          "main": "#2377CB",
+                          "dark": "#3872a8",
+                          "light": "#54acff",
+                          "main": "#4085C6",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -2619,9 +2619,9 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4629,9 +4629,9 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       },
                       "palette": Object {
                         "accent": Object {
-                          "dark": "#005EA5",
-                          "light": "#288BED",
-                          "main": "#2377CB",
+                          "dark": "#3872a8",
+                          "light": "#54acff",
+                          "main": "#4085C6",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -5139,9 +5139,9 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5509,9 +5509,9 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                       },
                       "palette": Object {
                         "accent": Object {
-                          "dark": "#005EA5",
-                          "light": "#288BED",
-                          "main": "#2377CB",
+                          "dark": "#3872a8",
+                          "light": "#54acff",
+                          "main": "#4085C6",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",

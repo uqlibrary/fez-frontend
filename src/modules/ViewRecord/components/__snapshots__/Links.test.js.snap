@@ -113,9 +113,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -421,9 +421,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               },
               "palette": Object {
                 "accent": Object {
-                  "dark": "#005EA5",
-                  "light": "#288BED",
-                  "main": "#2377CB",
+                  "dark": "#3872a8",
+                  "light": "#54acff",
+                  "main": "#4085C6",
                 },
                 "action": Object {
                   "active": "rgba(0, 0, 0, 0.54)",
@@ -816,9 +816,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1344,9 +1344,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           },
                                           "palette": Object {
                                             "accent": Object {
-                                              "dark": "#005EA5",
-                                              "light": "#288BED",
-                                              "main": "#2377CB",
+                                              "dark": "#3872a8",
+                                              "light": "#54acff",
+                                              "main": "#4085C6",
                                             },
                                             "action": Object {
                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -6214,9 +6214,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -6522,9 +6522,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               },
               "palette": Object {
                 "accent": Object {
-                  "dark": "#005EA5",
-                  "light": "#288BED",
-                  "main": "#2377CB",
+                  "dark": "#3872a8",
+                  "light": "#54acff",
+                  "main": "#4085C6",
                 },
                 "action": Object {
                   "active": "rgba(0, 0, 0, 0.54)",
@@ -6911,9 +6911,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -7439,9 +7439,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           },
                                           "palette": Object {
                                             "accent": Object {
-                                              "dark": "#005EA5",
-                                              "light": "#288BED",
-                                              "main": "#2377CB",
+                                              "dark": "#3872a8",
+                                              "light": "#54acff",
+                                              "main": "#4085C6",
                                             },
                                             "action": Object {
                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -11316,9 +11316,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -11624,9 +11624,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               },
               "palette": Object {
                 "accent": Object {
-                  "dark": "#005EA5",
-                  "light": "#288BED",
-                  "main": "#2377CB",
+                  "dark": "#3872a8",
+                  "light": "#54acff",
+                  "main": "#4085C6",
                 },
                 "action": Object {
                   "active": "rgba(0, 0, 0, 0.54)",
@@ -12019,9 +12019,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -12547,9 +12547,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           },
                                           "palette": Object {
                                             "accent": Object {
-                                              "dark": "#005EA5",
-                                              "light": "#288BED",
-                                              "main": "#2377CB",
+                                              "dark": "#3872a8",
+                                              "light": "#54acff",
+                                              "main": "#4085C6",
                                             },
                                             "action": Object {
                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -17112,9 +17112,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -17420,9 +17420,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               },
               "palette": Object {
                 "accent": Object {
-                  "dark": "#005EA5",
-                  "light": "#288BED",
-                  "main": "#2377CB",
+                  "dark": "#3872a8",
+                  "light": "#54acff",
+                  "main": "#4085C6",
                 },
                 "action": Object {
                   "active": "rgba(0, 0, 0, 0.54)",
@@ -17809,9 +17809,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -18337,9 +18337,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           },
                                           "palette": Object {
                                             "accent": Object {
-                                              "dark": "#005EA5",
-                                              "light": "#288BED",
-                                              "main": "#2377CB",
+                                              "dark": "#3872a8",
+                                              "light": "#54acff",
+                                              "main": "#4085C6",
                                             },
                                             "action": Object {
                                               "active": "rgba(0, 0, 0, 0.54)",
