@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
-    console.log('OrgNameField', props);
     const category = 'org_name';
     return {
         category: category,
