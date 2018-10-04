@@ -376,6 +376,7 @@ exports[`ThesisForm  should render component 1`] = `
             multiline={true}
             name="comments"
             placeholder="Provide any additional information"
+            title="Additional notes"
             type="text"
           />
         </WithStyles(Grid)>
