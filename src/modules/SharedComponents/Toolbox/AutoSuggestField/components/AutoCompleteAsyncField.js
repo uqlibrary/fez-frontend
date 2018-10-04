@@ -47,7 +47,8 @@ export class AutoCompleteAsyncField extends Component {
         async: PropTypes.bool,
         disabled: PropTypes.bool,
         maxResults: PropTypes.number,
-        required: PropTypes.bool
+        required: PropTypes.bool,
+        selectedValue: PropTypes.any
     };
 
     static defaultProps = {
@@ -145,10 +146,11 @@ export class AutoCompleteAsyncField extends Component {
     };
 
     render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, allowFreeText, required } = this.props;
+        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, allowFreeText, required, selectedValue } = this.props;
         return (
             <div className={classes.root}>
                 <Downshift
+                    defaultInputValue={selectedValue}
                     stateReducer={this.stateReducer}
                     onChange={this.handleSelected}
                     itemToString={itemToString}

@@ -9,6 +9,7 @@ export const Dashboard = () => (<Async load={import('modules/Dashboard/container
 export const Orcid = () => (<Async load={import('modules/AuthorIdentifiers/containers/Orcid')} />);
 export const GoogleScholar = () => (<Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />);
 export const ThesisSubmission = (componentProps) => (<Async load={import('modules/ThesisSubmission/containers/ThesisSubmission')} componentProps={componentProps} />);
+export const SbsSubmission = (componentProps) => (<Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />);
 export const ViewRecord = () => (<Async load={import('modules/ViewRecord/containers/ViewRecord')} />);
 
 // always load components

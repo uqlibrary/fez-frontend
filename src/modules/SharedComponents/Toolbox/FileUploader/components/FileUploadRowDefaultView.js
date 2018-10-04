@@ -41,7 +41,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         return (
             <div style={{flexGrow: 1, padding: 4}}>
                 <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
-                    <Grid item md={6} sm={5}>
+                    <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
                         <Typography variant="body1" gutterBottom noWrap>
                             {name} ({size})
                         </Typography>

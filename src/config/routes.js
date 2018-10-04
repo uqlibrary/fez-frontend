@@ -169,7 +169,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 {
                     path: pathConfig.sbsSubmission,
                     render: isHdrStudent
-                        ? () => components.ThesisSubmission({isHdrThesis: false})
+                        ? () => components.SbsSubmission({isHdrThesis: false})
                         : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
                     pageTitle: formLocale.thesisSubmission.sbsTitle
                 }
