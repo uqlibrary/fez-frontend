@@ -56,41 +56,43 @@ export class PublicationDetails extends PureComponent {
         }
 
         return (
-            <StandardCard title={locale.viewRecord.sections.publicationDetails}>
-                {
-                    this.props.publication.rek_display_type_lookup &&
-                        <this.ViewRecordRow
-                            heading={locale.viewRecord.headings.default.publicationDetails.rek_display_type}
-                            data={this.props.publication.rek_display_type_lookup}
-                        />
-                }
-                {
-                    this.props.publication.rek_subtype &&
-                        <this.ViewRecordRow
-                            heading={locale.viewRecord.headings.default.publicationDetails.rek_subtype}
-                            data={this.props.publication.rek_subtype}
-                        />
-                }
-                {
-                    this.props.publication.fez_record_search_key_ismemberof &&
-                    this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
-                        <this.ViewRecordRow
-                            heading={locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof}
-                            data={(
-                                <ul className={this.props.classes.ul}>
-                                    {
-                                        this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
-                                            collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
-                                            <li key={`collection-${index}`}>
-                                                <Link to={pathConfig.list.collection(collection.rek_ismemberof, collection.rek_ismemberof_lookup)}>{collection.rek_ismemberof_lookup}</Link>
-                                            </li>
-                                        ))
-                                    }
-                                </ul>
-                            )}
-                        />
-                }
-            </StandardCard>
+            <Grid item xs={12}>
+                <StandardCard title={locale.viewRecord.sections.publicationDetails}>
+                    {
+                        this.props.publication.rek_display_type_lookup &&
+                            <this.ViewRecordRow
+                                heading={locale.viewRecord.headings.default.publicationDetails.rek_display_type}
+                                data={this.props.publication.rek_display_type_lookup}
+                            />
+                    }
+                    {
+                        this.props.publication.rek_subtype &&
+                            <this.ViewRecordRow
+                                heading={locale.viewRecord.headings.default.publicationDetails.rek_subtype}
+                                data={this.props.publication.rek_subtype}
+                            />
+                    }
+                    {
+                        this.props.publication.fez_record_search_key_ismemberof &&
+                        this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
+                            <this.ViewRecordRow
+                                heading={locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof}
+                                data={(
+                                    <ul className={this.props.classes.ul}>
+                                        {
+                                            this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
+                                                collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
+                                                <li key={`collection-${index}`}>
+                                                    <Link to={pathConfig.list.collection(collection.rek_ismemberof, collection.rek_ismemberof_lookup)}>{collection.rek_ismemberof_lookup}</Link>
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                )}
+                            />
+                    }
+                </StandardCard>
+            </Grid>
         );
     }
 }

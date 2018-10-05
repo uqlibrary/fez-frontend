@@ -126,7 +126,13 @@ export default class AdvancedSearchRowInput extends PureComponent {
                 return {
                     ...lookupDefaultProps,
                     'label': null,
-                    'onChange': (item) => this.props.onChange(item.id, item.value)
+                    'onChange': (item) => {
+                        if (parseInt(item.id, 10) > 0) {
+                            this.props.onChange(item.id, item.value);
+                        } else {
+                            this.props.onChange(0, '');
+                        }
+                    }
                 };
             case 'SubTypeLookup':
                 return {

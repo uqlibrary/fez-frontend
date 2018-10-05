@@ -75,30 +75,16 @@ export default class ViewRecord extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container spacing={24}>
-                    <Grid item xs={12}>
-                        <Files
-                            publication={recordToView}
-                            hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
-                            setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Links publication={recordToView}/>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <RelatedPublications publication={recordToView} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <AdditionalInformation publication={recordToView} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <GrantInformation publication={recordToView} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <PublicationDetails publication={recordToView} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <AvailableVersions publication={recordToView} />
-                    </Grid>
+                    <Files
+                        publication={recordToView}
+                        hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
+                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
+                    <Links publication={recordToView}/>
+                    <RelatedPublications publication={recordToView} />
+                    <AdditionalInformation publication={recordToView} />
+                    <GrantInformation publication={recordToView} />
+                    <PublicationDetails publication={recordToView} />
+                    <AvailableVersions publication={recordToView} />
                 </Grid>
             </StandardPage>
         );

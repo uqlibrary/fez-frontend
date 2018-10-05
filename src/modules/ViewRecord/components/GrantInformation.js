@@ -114,16 +114,18 @@ export class GrantInformation extends PureComponent {
             this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text || null;
 
         return (
-            <StandardCard title={locale.viewRecord.sections.grantInformation}>
-                {
-                    fundingText &&
-                    <Typography id="grantInformation" variant="body1" gutterBottom classes={{body1: this.props.classes.data}}>{fundingText}</Typography>
-                }
-                {
-                    this.props.publication.fez_record_search_key_grant_agency &&
-                    this.renderGrants(this.props.publication, !fundingText)
-                }
-            </StandardCard>
+            <Grid item xs={12}>
+                <StandardCard title={locale.viewRecord.sections.grantInformation}>
+                    {
+                        fundingText &&
+                        <Typography id="grantInformation" variant="body1" gutterBottom classes={{body1: this.props.classes.data}}>{fundingText}</Typography>
+                    }
+                    {
+                        this.props.publication.fez_record_search_key_grant_agency &&
+                        this.renderGrants(this.props.publication, !fundingText)
+                    }
+                </StandardCard>
+            </Grid>
         );
     }
 }
