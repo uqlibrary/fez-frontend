@@ -1,101 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Related publications Component  should not render data with empty lookups 1`] = `
-<StandardCard
-  className="relatedPublications"
-  title=""
+<WithStyles(Grid)
+  item={true}
+  xs={12}
 >
-  <ul
-    className="list publicationList"
+  <StandardCard
+    className="relatedPublications"
+    title=""
   >
-    <li
-      key="fez_record_search_key_has_related_datasets-0"
+    <ul
+      className="list publicationList"
     >
-      <WithStyles(Typography)
-        classes={
-          Object {
-            "body1": "data",
-          }
-        }
-        variant="body1"
+      <li
+        key="fez_record_search_key_has_related_datasets-0"
       >
-        <Link
-          replace={false}
-          to="/view/UQ:313292"
-        >
-          Toxicity characterization of urban stormwater with bioanalytical tools
-        </Link>
-      </WithStyles(Typography)>
-    </li>
-    <li
-      key="fez_record_search_key_has_related_datasets-1"
-    >
-      <WithStyles(Typography)
-        classes={
-          Object {
-            "body1": "data",
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "body1": "data",
+            }
           }
-        }
-        variant="body1"
-      >
-        <Link
-          replace={false}
-          to="/view/UQ:313292"
+          variant="body1"
         >
-          dataset 2
-        </Link>
-      </WithStyles(Typography)>
-    </li>
-  </ul>
-</StandardCard>
+          <Link
+            replace={false}
+            to="/view/UQ:313292"
+          >
+            Toxicity characterization of urban stormwater with bioanalytical tools
+          </Link>
+        </WithStyles(Typography)>
+      </li>
+      <li
+        key="fez_record_search_key_has_related_datasets-1"
+      >
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "body1": "data",
+            }
+          }
+          variant="body1"
+        >
+          <Link
+            replace={false}
+            to="/view/UQ:313292"
+          >
+            dataset 2
+          </Link>
+        </WithStyles(Typography)>
+      </li>
+    </ul>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Related publications Component  should render component 1`] = `
-<StandardCard
-  className="relatedPublications"
-  title=""
+<WithStyles(Grid)
+  item={true}
+  xs={12}
 >
-  <ul
-    className="list publicationList"
+  <StandardCard
+    className="relatedPublications"
+    title=""
   >
-    <li
-      key="fez_record_search_key_has_related_datasets-0"
+    <ul
+      className="list publicationList"
     >
-      <WithStyles(Typography)
-        classes={
-          Object {
-            "body1": "data",
-          }
-        }
-        variant="body1"
+      <li
+        key="fez_record_search_key_has_related_datasets-0"
       >
-        <Link
-          replace={false}
-          to="/view/UQ:313292"
-        >
-          Toxicity characterization of urban stormwater with bioanalytical tools
-        </Link>
-      </WithStyles(Typography)>
-    </li>
-    <li
-      key="fez_record_search_key_has_related_datasets-1"
-    >
-      <WithStyles(Typography)
-        classes={
-          Object {
-            "body1": "data",
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "body1": "data",
+            }
           }
-        }
-        variant="body1"
-      >
-        <Link
-          replace={false}
-          to="/view/UQ:313292"
+          variant="body1"
         >
-          dataset 2
-        </Link>
-      </WithStyles(Typography)>
-    </li>
-  </ul>
-</StandardCard>
+          <Link
+            replace={false}
+            to="/view/UQ:313292"
+          >
+            Toxicity characterization of urban stormwater with bioanalytical tools
+          </Link>
+        </WithStyles(Typography)>
+      </li>
+      <li
+        key="fez_record_search_key_has_related_datasets-1"
+      >
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "body1": "data",
+            }
+          }
+          variant="body1"
+        >
+          <Link
+            replace={false}
+            to="/view/UQ:313292"
+          >
+            dataset 2
+          </Link>
+        </WithStyles(Typography)>
+      </li>
+    </ul>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
