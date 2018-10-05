@@ -32,6 +32,9 @@ const styles = (theme) => ({
     },
     fileIcon: {
         opacity: 0.5,
+    },
+    data: {
+        fontSize: '0.8rem'
     }
 });
 
@@ -229,7 +232,15 @@ export class Files extends Component {
                     {
                         fileData.map((item, index) => (
                             <div style={{padding: 8}}>
-                                <Grid container direction="row" alignItems="center" key={`file-${index}`} spacing={16} wrap={'nowrap'} style={{marginTop: 6}}>
+                                <Grid
+                                    container
+                                    direction="row"
+                                    alignItems="center"
+                                    key={`file-${index}`}
+                                    spacing={16}
+                                    wrap={'nowrap'}
+                                    className={this.props.classes.header}
+                                >
                                     <Grid item xs={1}>
                                         {item.icon}
                                     </Grid>
@@ -240,10 +251,14 @@ export class Files extends Component {
                                         />
                                     </Grid>
                                     <Hidden xsDown>
-                                        <Grid item sm={5} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.description}</Typography></Grid>
+                                        <Grid item sm={5} className={this.props.classes.dataWrapper}>
+                                            <Typography caption="body1" noWrap className={this.props.classes.data}>{item.description}</Typography>
+                                        </Grid>
                                     </Hidden>
                                     <Hidden smDown>
-                                        <Grid item md={1} className={this.props.classes.dataWrapper}><Typography caption="body2" noWrap>{item.calculatedSize}</Typography></Grid>
+                                        <Grid item md={1} className={this.props.classes.dataWrapper}>
+                                            <Typography caption="body1" noWrap className={this.props.classes.data}>{item.calculatedSize}</Typography>
+                                        </Grid>
                                     </Hidden>
                                     <Hidden xsDown>
                                         <Grid item sm style={{textAlign: 'right'}}><OpenAccessIcon {...item.openAccessStatus} /></Grid>

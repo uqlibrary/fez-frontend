@@ -138,6 +138,11 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
   title="Grant information"
 >
   <WithStyles(Typography)
+    classes={
+      Object {
+        "body1": "data",
+      }
+    }
     gutterBottom={true}
     id="grantInformation"
     variant="body1"
@@ -280,6 +285,11 @@ exports[`Grant Information Component  should render component 1`] = `
   title="Grant information"
 >
   <WithStyles(Typography)
+    classes={
+      Object {
+        "body1": "data",
+      }
+    }
     gutterBottom={true}
     id="grantInformation"
     variant="body1"
@@ -420,6 +430,11 @@ exports[`Grant Information Component  should render with publication without gra
   title="Grant information"
 >
   <WithStyles(Typography)
+    classes={
+      Object {
+        "body1": "data",
+      }
+    }
     gutterBottom={true}
     id="grantInformation"
     variant="body1"

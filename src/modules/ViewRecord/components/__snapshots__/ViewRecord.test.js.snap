@@ -48,19 +48,8 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
       item={true}
       xs={12}
     >
-      <RelatedPublications
-        childrenSearchKey={
-          Object {
-            "key": "fez_record_search_key_has_related_datasets",
-            "order": "rek_has_related_datasets_order",
-            "pid": "rek_has_related_datasets",
-            "title": "rek_has_related_datasets_lookup",
-          }
-        }
-        className="relatedPublications"
+      <WithStyles(RelatedPublications)
         publication={Object {}}
-        showPublicationTitle={false}
-        title="Related publications and datasets"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1351,16 +1340,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
       item={true}
       xs={12}
     >
-      <RelatedPublications
-        childrenSearchKey={
-          Object {
-            "key": "fez_record_search_key_has_related_datasets",
-            "order": "rek_has_related_datasets_order",
-            "pid": "rek_has_related_datasets",
-            "title": "rek_has_related_datasets_lookup",
-          }
-        }
-        className="relatedPublications"
+      <WithStyles(RelatedPublications)
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1754,8 +1734,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
             "rek_wok_doc_type_xsdmf_id": 12551,
           }
         }
-        showPublicationTitle={false}
-        title="Related publications and datasets"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -4590,16 +4568,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
       item={true}
       xs={12}
     >
-      <RelatedPublications
-        childrenSearchKey={
-          Object {
-            "key": "fez_record_search_key_has_related_datasets",
-            "order": "rek_has_related_datasets_order",
-            "pid": "rek_has_related_datasets",
-            "title": "rek_has_related_datasets_lookup",
-          }
-        }
-        className="relatedPublications"
+      <WithStyles(RelatedPublications)
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -4993,8 +4962,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
             "rek_wok_doc_type_xsdmf_id": 12551,
           }
         }
-        showPublicationTitle={false}
-        title="Related publications and datasets"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)

@@ -26,7 +26,8 @@ const styles = (theme) => ({
         }
     },
     data: {
-        fontSize: '0.8rem'
+        fontSize: '0.8rem',
+        lineHeight: '1.5rem'
     },
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
@@ -116,7 +117,7 @@ export class GrantInformation extends PureComponent {
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
                 {
                     fundingText &&
-                    <Typography id="grantInformation" variant="body1" gutterBottom>{fundingText}</Typography>
+                    <Typography id="grantInformation" variant="body1" gutterBottom classes={{body1: this.props.classes.data}}>{fundingText}</Typography>
                 }
                 {
                     this.props.publication.fez_record_search_key_grant_agency &&
