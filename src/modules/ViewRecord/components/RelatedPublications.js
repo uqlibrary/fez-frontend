@@ -5,6 +5,7 @@ import {pathConfig} from 'config/routes';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import {withStyles} from '@material-ui/core/styles';
 
 const styles = () => ({
@@ -97,11 +98,13 @@ export class RelatedPublications extends PureComponent {
         }
 
         return (
-            <StandardCard title={title} className="relatedPublications">
-                {
-                    this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)
-                }
-            </StandardCard>
+            <Grid item xs={12}>
+                <StandardCard title={title} className="relatedPublications">
+                    {
+                        this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)
+                    }
+                </StandardCard>
+            </Grid>
         );
     }
 }
