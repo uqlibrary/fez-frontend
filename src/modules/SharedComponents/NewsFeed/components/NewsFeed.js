@@ -70,7 +70,7 @@ export class NewsFeed extends PureComponent {
             <StandardCard title={txt.title} darkHeader>
                 {
                     !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
-                        <div style={{padding: '8px 0px'}}>
+                        <div style={{padding: '8px 0px'}} key={index}>
                             <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
                                 <Grid item xs={'auto'}>
                                     <Grid container direction="column" alignItems="center" justify="center" alignContent="center" spacing={0}>

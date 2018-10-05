@@ -2,12 +2,12 @@ import React from 'react';
 
 import {Links} from './Links';
 import {recordLinks} from 'mock/data/testing/records';
-import {openAccessConfig, mui1theme} from 'config';
+import {openAccessConfig} from 'config';
 import {calculateOpenAccess} from 'middleware/publicationEnhancer';
 
 function setup(testProps, isShallow = true){
     const props = {
-        classes: {...mui1theme},
+        classes: {header: 'header', link: 'link'},
         publication: testProps.publication || recordLinks,
     };
     return getElement(Links, props, isShallow);

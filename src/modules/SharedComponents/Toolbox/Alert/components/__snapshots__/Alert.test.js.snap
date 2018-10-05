@@ -150,6 +150,7 @@ ShallowWrapper {
           </WithStyles(Grid)>
         </Hidden>
       </WithStyles(Grid)>,
+      "className": "Alert",
       "style": Object {
         "padding": 12,
       },
@@ -825,6 +826,7 @@ ShallowWrapper {
             </WithStyles(Grid)>
           </Hidden>
         </WithStyles(Grid)>,
+        "className": "Alert",
         "style": Object {
           "padding": 12,
         },
