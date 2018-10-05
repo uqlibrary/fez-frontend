@@ -3,7 +3,10 @@
 exports[`Files Component  should not render component with no files 1`] = `""`;
 
 exports[`Files Component  should not render cultural message 1`] = `
-<section>
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
   <StandardCard
     title="Files"
   >
@@ -258,11 +261,14 @@ exports[`Files Component  should not render cultural message 1`] = `
       </WithStyles(Grid)>
     </div>
   </StandardCard>
-</section>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render alert for video files and firefox 1`] = `
-<section>
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
   <StandardCard
     title="Files"
   >
@@ -1252,11 +1258,14 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
   </StandardCard>
-</section>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render component 1`] = `
-<section>
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
   <StandardCard
     title="Files"
   >
@@ -1511,11 +1520,14 @@ exports[`Files Component  should render component 1`] = `
       </WithStyles(Grid)>
     </div>
   </StandardCard>
-</section>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render cultural message 1`] = `
-<section>
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
   <StandardCard
     title="Files"
   >
@@ -1776,7 +1788,7 @@ exports[`Files Component  should render cultural message 1`] = `
       </WithStyles(Grid)>
     </div>
   </StandardCard>
-</section>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render icon for mimeType 1`] = `

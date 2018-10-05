@@ -290,11 +290,13 @@ export class AdditionalInformation extends PureComponent {
         }
 
         return (
-            <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
-                {
-                    this.renderColumns()
-                }
-            </StandardCard>
+            <Grid item xs={12}>
+                <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
+                    {
+                        this.renderColumns()
+                    }
+                </StandardCard>
+            </Grid>
         );
     }
 }

@@ -193,7 +193,7 @@ export class Files extends Component {
             if(item.mimeType.indexOf('video') > -1) { hasVideo = true; }
         });
         return (
-            <section>
+            <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
                     {
                         !!publication.fez_record_search_key_advisory_statement && !this.props.hideCulturalSensitivityStatement &&
@@ -277,7 +277,7 @@ export class Files extends Component {
                         mimeType={this.state.preview.mimeType}
                         onClose={this.hidePreview}/>
                 }
-            </section>
+            </Grid>
         );
     }
 }
