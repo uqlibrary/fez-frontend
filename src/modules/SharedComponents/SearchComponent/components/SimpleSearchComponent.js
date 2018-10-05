@@ -57,7 +57,7 @@ const styles = theme => ({
             textOverflow: 'ellipsis',
             marginTop: 10,
             fontSize: 32,
-            lineHeight: 70,
+            lineHeight: 1.2,
             fontWeight: theme.typography.fontWeightNormal
         }
     }

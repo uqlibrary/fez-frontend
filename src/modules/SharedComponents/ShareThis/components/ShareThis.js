@@ -93,7 +93,7 @@ export class ShareThis extends PureComponent {
         const {shareThis} = locale.components;
 
         return (
-            <Grid container spacing={16} className={classes.addThis}>
+            <Grid container spacing={16} className={[classes.addThis, 'AddThis']}>
                 <Hidden xsDown>
                     <Grid item xs />
                 </Hidden>

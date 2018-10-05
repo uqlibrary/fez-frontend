@@ -51,15 +51,20 @@ export class FileUploadRowMobileView extends PureComponent {
         return (
             <List classes={{root: classes.root}}>
                 <ListItem classes={{root: classes.listItem}}>
-                    <ListItemIcon classes={{root: classes.listIcon}}><Attachment/></ListItemIcon>
-                    <ListItemText primary={`${name} (${size})`} secondary={filenameColumn} classes={{primary: classes.primaryText, secondary: classes.secondaryText}}/>
+                    <ListItemIcon><Attachment/></ListItemIcon>
+                    <ListItemText
+                        primary={`${name} (${size})`}
+                        secondary={filenameColumn}
+                        primaryTypographyProps={{variant: 'body2', noWrap: true}}
+                        secondaryTypographyProps={{variant: 'caption'}}
+                    />
                 </ListItem>
                 {
                     requireOpenAccessStatus &&
                     <Fragment>
                         <ListItem classes={{root: classes.listItem}}>
-                            <ListItemIcon classes={{root: classes.listIcon}}><LockOutlined/></ListItemIcon>
-                            <ListItemText secondary={fileAccessColumn} classes={{secondary: classes.secondaryText}}>
+                            <ListItemIcon><LockOutlined/></ListItemIcon>
+                            <ListItemText secondary={fileAccessColumn} secondaryTypographyProps={{variant: 'caption'}}>
                                 <FileUploadAccessSelector
                                     value={accessConditionId}
                                     onChange={this.props.onAccessConditionChange}
@@ -70,8 +75,12 @@ export class FileUploadRowMobileView extends PureComponent {
                             </ListItemText>
                         </ListItem>
                         <ListItem classes={{root: classes.listItem}}>
-                            <ListItemIcon classes={{root: classes.listIcon}}><CalendarTodayOutlined/></ListItemIcon>
-                            <ListItemText secondary={embargoDateColumn} classes={{primary: classes.primaryText, secondary: classes.secondaryText}}>
+                            <ListItemIcon><CalendarTodayOutlined/></ListItemIcon>
+                            <ListItemText
+                                secondary={embargoDateColumn}
+                                primaryTypographyProps={{variant: 'body2'}}
+                                secondaryTypographyProps={{variant: 'caption'}}
+                            >
                                 {
                                     requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
                                     <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
@@ -96,23 +105,13 @@ export class FileUploadRowMobileView extends PureComponent {
     }
 }
 
-const styles = () => ({
+const styles = (theme) => ({
     root: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
     },
     listItem: {
         paddingLeft: 0,
         paddingRight: 0
-    },
-    listIcon: {
-        marginRight: 0
-    },
-    primaryText: {
-        fontSize: '0.8rem',
-        fontWeight: 400
-    },
-    secondaryText: {
-        fontSize: '0.7rem'
     },
     secondaryAction: {
         textAlign: 'center'

@@ -118,15 +118,11 @@ exports[`Files Component  should not render cultural message 1`] = `
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-0"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -197,7 +193,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               testing image description
@@ -222,7 +218,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               95.49 KB
@@ -387,15 +383,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-0"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -466,7 +458,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               Movie 1
@@ -491,7 +483,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               2.86 MB
@@ -539,15 +531,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-1"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -618,7 +606,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               Movie 2
@@ -643,7 +631,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               2.62 MB
@@ -691,15 +679,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-2"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -770,7 +754,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               Movie 3
@@ -795,7 +779,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               2.86 MB
@@ -843,15 +827,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-3"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -922,7 +902,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               Movie 4
@@ -947,7 +927,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               4.29 MB
@@ -995,15 +975,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-4"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1074,7 +1050,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               Movie 5
@@ -1099,7 +1075,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               1.12 MB
@@ -1147,15 +1123,11 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-5"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1215,7 +1187,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               Technical report PDF file
@@ -1240,7 +1212,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               6.67 MB
@@ -1399,15 +1371,11 @@ exports[`Files Component  should render component 1`] = `
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-0"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1478,7 +1446,7 @@ exports[`Files Component  should render component 1`] = `
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               testing image description
@@ -1503,7 +1471,7 @@ exports[`Files Component  should render component 1`] = `
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               95.49 KB
@@ -1668,15 +1636,11 @@ exports[`Files Component  should render cultural message 1`] = `
     >
       <WithStyles(Grid)
         alignItems="center"
+        className="header"
         container={true}
         direction="row"
         key="file-0"
         spacing={16}
-        style={
-          Object {
-            "marginTop": 6,
-          }
-        }
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1747,7 +1711,7 @@ exports[`Files Component  should render cultural message 1`] = `
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               testing image description
@@ -1772,7 +1736,7 @@ exports[`Files Component  should render cultural message 1`] = `
             md={1}
           >
             <WithStyles(Typography)
-              caption="body2"
+              caption="body1"
               noWrap={true}
             >
               95.49 KB

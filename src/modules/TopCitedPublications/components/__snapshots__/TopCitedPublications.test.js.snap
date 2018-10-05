@@ -48,6 +48,15 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         value="altmetric"
       />
       <WithStyles(Tab)
+        key="scopus"
+        label={
+          <span>
+            Hot papers on Scopus
+          </span>
+        }
+        value="scopus"
+      />
+      <WithStyles(Tab)
         key="thomson"
         label={
           <span>

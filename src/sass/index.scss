@@ -52,3 +52,10 @@ a {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
+// Citation styles
+.citationContent {
+  .citationJournalName, .citationTitle, .citationNewspaper, .citationVolumeNumber {
+    font-style: italic;
+  }
+}

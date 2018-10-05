@@ -2698,7 +2698,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               Object {
                 "cancelButtonLabel": "Go to my dashboard",
                 "confirmButtonLabel": "Go to my research",
-                "confirmationMessage": "You have unclaimed record successfully",
+                "confirmationMessage": "You have unclaimed this record successfully",
                 "confirmationTitle": "Unclaim a record",
               }
             }

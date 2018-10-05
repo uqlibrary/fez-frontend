@@ -19,6 +19,9 @@ const styles = (theme) => ({
     header: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
         fontSize: '0.8rem'
+    },
+    link: {
+        fontSize: '0.8rem'
     }
 });
 
@@ -31,8 +34,8 @@ export class Links extends PureComponent {
     LinkRow = ({link, description, openAccessStatus}) => (
         <div style={{padding: 16}}>
             <Grid container spacing={32} className={this.props.classes.header}>
-                <Grid item xs={12} sm={6}><Typography variant="body1" noWrap>{link}</Typography></Grid>
-                <Grid item xs={10} sm={4}><Typography variant="body1">{description}</Typography></Grid>
+                <Grid item xs={12} sm={6}><Typography variant="body1" noWrap classes={{body1: this.props.classes.link}}>{link}</Typography></Grid>
+                <Grid item xs={10} sm={4}><Typography variant="body1" classes={{body1: this.props.classes.link}}>{description}</Typography></Grid>
                 <Grid item xs={2} sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
             </Grid>
         </div>

@@ -178,12 +178,10 @@ exports[`Application component should render alert if user is not fez author 1`]
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -284,7 +282,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -295,7 +292,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -797,12 +793,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -903,7 +897,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -914,7 +907,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -1281,12 +1273,10 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -1387,7 +1377,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -1398,7 +1387,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -1732,12 +1720,10 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -1838,7 +1824,6 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -1849,7 +1834,6 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -2329,12 +2313,10 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -2435,7 +2417,6 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -2446,7 +2427,6 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -2950,7 +2930,6 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -3027,7 +3006,6 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -3431,12 +3409,10 @@ exports[`Application component should render application with routing for the us
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -3537,7 +3513,6 @@ exports[`Application component should render application with routing for the us
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -3548,7 +3523,6 @@ exports[`Application component should render application with routing for the us
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -3724,12 +3698,10 @@ exports[`Application component should render for anon user 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
-          zeroMinWidth={true}
         >
           <WithStyles(Tooltip)
             TransitionComponent={[Function]}
@@ -3830,7 +3802,6 @@ exports[`Application component should render for anon user 1`] = `
         <WithStyles(Grid)
           item={true}
           md={4}
-          zeroMinWidth={true}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -3841,7 +3812,6 @@ exports[`Application component should render for anon user 1`] = `
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log in to eSpace"
@@ -4044,7 +4014,6 @@ exports[`Application component should render thesis submission for HDR without m
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -4121,7 +4090,6 @@ exports[`Application component should render thesis submission for HDR without m
         <WithStyles(Grid)
           item={true}
           xs="auto"
-          zeroMinWidth={true}
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"

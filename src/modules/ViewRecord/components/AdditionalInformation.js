@@ -26,10 +26,16 @@ const styles = (theme) => ({
         }
     },
     data: {
-        fontSize: '0.8rem'
+        fontSize: '0.8rem',
+        lineHeight: '1.5rem'
     },
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`
+    },
+    list: {
+        listStyleType: 'none',
+        padding: 0,
+        margin: 0
     }
 });
 
@@ -56,7 +62,7 @@ export class AdditionalInformation extends PureComponent {
 
     renderList = (list, subkey, getLink) => {
         return (
-            <ul key={subkey}>
+            <ul key={subkey} className={this.props.classes.list}>
                 {
                     list.map((item, index) => (
                         <li key={`${subkey}-${index}`}>

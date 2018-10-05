@@ -610,7 +610,12 @@ exports[`File Name Component  should display file name link 1`] = `
                       className="MuiGrid-item-02"
                     >
                       <WithStyles(Typography)
-                        variant="body2"
+                        style={
+                          Object {
+                            "fontSize": "0.8rem",
+                          }
+                        }
+                        variant="body1"
                       >
                         <Typography
                           align="inherit"
@@ -660,10 +665,20 @@ exports[`File Name Component  should display file name link 1`] = `
                           }
                           noWrap={false}
                           paragraph={false}
-                          variant="body2"
+                          style={
+                            Object {
+                              "fontSize": "0.8rem",
+                            }
+                          }
+                          variant="body1"
                         >
-                          <aside
-                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          <p
+                            className="MuiTypography-root-098 MuiTypography-body1-0107"
+                            style={
+                              Object {
+                                "fontSize": "0.8rem",
+                              }
+                            }
                           >
                             <ExternalLink
                               className="fileName"
@@ -684,7 +699,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                 test.jpg
                               </a>
                             </ExternalLink>
-                          </aside>
+                          </p>
                         </Typography>
                       </WithStyles(Typography)>
                     </div>
@@ -1792,7 +1807,12 @@ exports[`File Name Component  should render audio player 1`] = `
                       className="MuiGrid-item-02"
                     >
                       <WithStyles(Typography)
-                        variant="body2"
+                        style={
+                          Object {
+                            "fontSize": "0.8rem",
+                          }
+                        }
+                        variant="body1"
                       >
                         <Typography
                           align="inherit"
@@ -1842,10 +1862,20 @@ exports[`File Name Component  should render audio player 1`] = `
                           }
                           noWrap={false}
                           paragraph={false}
-                          variant="body2"
+                          style={
+                            Object {
+                              "fontSize": "0.8rem",
+                            }
+                          }
+                          variant="body1"
                         >
-                          <aside
-                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          <p
+                            className="MuiTypography-root-098 MuiTypography-body1-0107"
+                            style={
+                              Object {
+                                "fontSize": "0.8rem",
+                              }
+                            }
                           >
                             <ExternalLink
                               className="fileName"
@@ -1866,7 +1896,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                 test.mp3
                               </a>
                             </ExternalLink>
-                          </aside>
+                          </p>
                         </Typography>
                       </WithStyles(Typography)>
                     </div>
@@ -3170,7 +3200,12 @@ exports[`File Name Component  should render component and display file name only
                       className="MuiGrid-item-02"
                     >
                       <WithStyles(Typography)
-                        variant="body2"
+                        style={
+                          Object {
+                            "fontSize": "0.8rem",
+                          }
+                        }
+                        variant="body1"
                       >
                         <Typography
                           align="inherit"
@@ -3220,13 +3255,23 @@ exports[`File Name Component  should render component and display file name only
                           }
                           noWrap={false}
                           paragraph={false}
-                          variant="body2"
+                          style={
+                            Object {
+                              "fontSize": "0.8rem",
+                            }
+                          }
+                          variant="body1"
                         >
-                          <aside
-                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          <p
+                            className="MuiTypography-root-098 MuiTypography-body1-0107"
+                            style={
+                              Object {
+                                "fontSize": "0.8rem",
+                              }
+                            }
                           >
                             UQ676287_OA.pdf
-                          </aside>
+                          </p>
                         </Typography>
                       </WithStyles(Typography)>
                     </div>
@@ -4334,7 +4379,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                       className="MuiGrid-item-02"
                     >
                       <WithStyles(Typography)
-                        variant="body2"
+                        style={
+                          Object {
+                            "fontSize": "0.8rem",
+                          }
+                        }
+                        variant="body1"
                       >
                         <Typography
                           align="inherit"
@@ -4384,10 +4434,20 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                           }
                           noWrap={false}
                           paragraph={false}
-                          variant="body2"
+                          style={
+                            Object {
+                              "fontSize": "0.8rem",
+                            }
+                          }
+                          variant="body1"
                         >
-                          <aside
-                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          <p
+                            className="MuiTypography-root-098 MuiTypography-body1-0107"
+                            style={
+                              Object {
+                                "fontSize": "0.8rem",
+                              }
+                            }
                           >
                             <a
                               className="fileName"
@@ -4396,7 +4456,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                             >
                               test.jpg
                             </a>
-                          </aside>
+                          </p>
                         </Typography>
                       </WithStyles(Typography)>
                     </div>
@@ -5504,7 +5564,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                       className="MuiGrid-item-02"
                     >
                       <WithStyles(Typography)
-                        variant="body2"
+                        style={
+                          Object {
+                            "fontSize": "0.8rem",
+                          }
+                        }
+                        variant="body1"
                       >
                         <Typography
                           align="inherit"
@@ -5554,10 +5619,20 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                           }
                           noWrap={false}
                           paragraph={false}
-                          variant="body2"
+                          style={
+                            Object {
+                              "fontSize": "0.8rem",
+                            }
+                          }
+                          variant="body1"
                         >
-                          <aside
-                            className="MuiTypography-root-098 MuiTypography-body2-0106"
+                          <p
+                            className="MuiTypography-root-098 MuiTypography-body1-0107"
+                            style={
+                              Object {
+                                "fontSize": "0.8rem",
+                              }
+                            }
                           >
                             <a
                               className="fileName"
@@ -5566,7 +5641,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                             >
                               test.jpg
                             </a>
-                          </aside>
+                          </p>
                         </Typography>
                       </WithStyles(Typography)>
                     </div>
