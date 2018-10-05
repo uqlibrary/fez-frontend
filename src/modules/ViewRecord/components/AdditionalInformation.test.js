@@ -6,7 +6,8 @@ function setup(testProps, isShallow = true){
         classes: {
             header: 'header',
             data: 'data',
-            gridRow: 'gridRow'
+            gridRow: 'gridRow',
+            list: 'list'
         },
         publication: testProps.publication || records.journalArticle,
         ...testProps

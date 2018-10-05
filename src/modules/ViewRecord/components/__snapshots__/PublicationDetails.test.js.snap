@@ -16,7 +16,9 @@ exports[`Publication Details Component  should render component 1`] = `
   />
   <Component
     data={
-      <ul>
+      <ul
+        className="ul"
+      >
         <li>
           <Link
             replace={false}
@@ -69,7 +71,9 @@ exports[`Publication Details Component  should render with publication without s
   />
   <Component
     data={
-      <ul>
+      <ul
+        className="ul"
+      >
         <li>
           <Link
             replace={false}

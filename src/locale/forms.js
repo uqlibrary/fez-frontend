@@ -115,7 +115,7 @@ export default {
             // },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Unclaim a record',
-                confirmationMessage: 'You have unclaimed record successfully',
+                confirmationMessage: 'You have unclaimed this record successfully',
                 cancelButtonLabel: 'Go to my dashboard',
                 confirmButtonLabel: 'Go to my research'
             },

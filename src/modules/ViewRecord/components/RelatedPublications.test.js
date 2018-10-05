@@ -1,9 +1,9 @@
 import {dataCollection} from 'mock/data/testing/records';
-import RelatedPublications from "./RelatedPublications";
+import {RelatedPublications} from "./RelatedPublications";
 
 function setup(testProps, isShallow = true){
     const props = {
-        classes: {},
+        classes: {list: 'list', data: 'data'},
         publication: testProps.publication || dataCollection,
         title: testProps.title || '',
         ...testProps

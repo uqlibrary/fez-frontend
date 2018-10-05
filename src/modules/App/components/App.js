@@ -49,6 +49,7 @@ const styles = theme => ({
         height: '100%'
     },
     titleLink: {
+        color: theme.palette.common.white,
         '& a': {
             textDecoration: 'none',
             '&:hover': {
@@ -57,7 +58,9 @@ const styles = theme => ({
         }
     },
     nowrap: {
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
     }
 });
 
@@ -238,14 +241,14 @@ export class App extends PureComponent {
                     color="primary"
                     position="fixed">
                     <Toolbar style={{height: '70px'}}>
-                        <Grid container spacing={8}
+                        <Grid container
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
                             justify="flex-start">
                             {
                                 !this.state.docked && !isThesisSubmissionPage &&
-                                <Grid item zeroMinWidth>
+                                <Grid item>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
                                         TransitionComponent={Fade}>
@@ -274,11 +277,11 @@ export class App extends PureComponent {
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item md={4} zeroMinWidth>
+                                <Grid item md={4} >
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
-                            <Grid item xs="auto" zeroMinWidth>
+                            <Grid item xs="auto" >
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}

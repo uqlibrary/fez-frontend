@@ -15,24 +15,23 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": "listIcon",
-        }
-      }
-    >
+    <WithStyles(ListItemIcon)>
       <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
-      classes={
+      primary="test.pdf (100 MB)"
+      primaryTypographyProps={
         Object {
-          "primary": "primaryText",
-          "secondary": "secondaryText",
+          "noWrap": true,
+          "variant": "body2",
         }
       }
-      primary="test.pdf (100 MB)"
       secondary="File name"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
     />
   </WithStyles(ListItem)>
 </WithStyles(List)>
@@ -53,24 +52,23 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": "listIcon",
-        }
-      }
-    >
+    <WithStyles(ListItemIcon)>
       <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
-      classes={
+      primary="test.pdf (100 MB)"
+      primaryTypographyProps={
         Object {
-          "primary": "primaryText",
-          "secondary": "secondaryText",
+          "noWrap": true,
+          "variant": "body2",
         }
       }
-      primary="test.pdf (100 MB)"
       secondary="File name"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
     />
   </WithStyles(ListItem)>
   <React.Fragment>
@@ -81,22 +79,16 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "listIcon",
-          }
-        }
-      >
+      <WithStyles(ListItemIcon)>
         <pure(LockOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
-        classes={
+        secondary="File access"
+        secondaryTypographyProps={
           Object {
-            "secondary": "secondaryText",
+            "variant": "caption",
           }
         }
-        secondary="File access"
       >
         <WithStyles(FileUploadAccessSelector)
           autoFocus={false}
@@ -113,23 +105,21 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "listIcon",
-          }
-        }
-      >
+      <WithStyles(ListItemIcon)>
         <pure(CalendarTodayOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
-        classes={
+        primaryTypographyProps={
           Object {
-            "primary": "primaryText",
-            "secondary": "secondaryText",
+            "variant": "body2",
           }
         }
         secondary="Embargo date"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
       >
         <WithStyles(Typography)
           gutterBottom={true}
@@ -171,24 +161,23 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": "listIcon",
-        }
-      }
-    >
+    <WithStyles(ListItemIcon)>
       <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
-      classes={
+      primary="test.pdf (100 MB)"
+      primaryTypographyProps={
         Object {
-          "primary": "primaryText",
-          "secondary": "secondaryText",
+          "noWrap": true,
+          "variant": "body2",
         }
       }
-      primary="test.pdf (100 MB)"
       secondary="File name"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
     />
   </WithStyles(ListItem)>
   <React.Fragment>
@@ -199,22 +188,16 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "listIcon",
-          }
-        }
-      >
+      <WithStyles(ListItemIcon)>
         <pure(LockOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
-        classes={
+        secondary="File access"
+        secondaryTypographyProps={
           Object {
-            "secondary": "secondaryText",
+            "variant": "caption",
           }
         }
-        secondary="File access"
       >
         <WithStyles(FileUploadAccessSelector)
           autoFocus={false}
@@ -231,23 +214,21 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "listIcon",
-          }
-        }
-      >
+      <WithStyles(ListItemIcon)>
         <pure(CalendarTodayOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
-        classes={
+        primaryTypographyProps={
           Object {
-            "primary": "primaryText",
-            "secondary": "secondaryText",
+            "variant": "body2",
           }
         }
         secondary="Embargo date"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
       >
         <WithStyles(Typography)
           gutterBottom={true}
@@ -289,24 +270,23 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       }
     }
   >
-    <WithStyles(ListItemIcon)
-      classes={
-        Object {
-          "root": "listIcon",
-        }
-      }
-    >
+    <WithStyles(ListItemIcon)>
       <pure(AttachmentIcon) />
     </WithStyles(ListItemIcon)>
     <WithStyles(ListItemText)
-      classes={
+      primary="test.pdf (100 MB)"
+      primaryTypographyProps={
         Object {
-          "primary": "primaryText",
-          "secondary": "secondaryText",
+          "noWrap": true,
+          "variant": "body2",
         }
       }
-      primary="test.pdf (100 MB)"
       secondary="File name"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
     />
   </WithStyles(ListItem)>
   <React.Fragment>
@@ -317,22 +297,16 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         }
       }
     >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "listIcon",
-          }
-        }
-      >
+      <WithStyles(ListItemIcon)>
         <pure(LockOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
-        classes={
+        secondary="File access"
+        secondaryTypographyProps={
           Object {
-            "secondary": "secondaryText",
+            "variant": "caption",
           }
         }
-        secondary="File access"
       >
         <WithStyles(FileUploadAccessSelector)
           autoFocus={false}
@@ -349,23 +323,21 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         }
       }
     >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "listIcon",
-          }
-        }
-      >
+      <WithStyles(ListItemIcon)>
         <pure(CalendarTodayOutlinedIcon) />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
-        classes={
+        primaryTypographyProps={
           Object {
-            "primary": "primaryText",
-            "secondary": "secondaryText",
+            "variant": "body2",
           }
         }
         secondary="Embargo date"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
       >
         <WithStyles(FileUploadEmbargoDate)
           disabled={false}

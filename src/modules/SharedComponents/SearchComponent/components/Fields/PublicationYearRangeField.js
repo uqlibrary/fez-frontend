@@ -46,7 +46,7 @@ export class PublicationYearRangeField extends PureComponent {
     isValidText = values => {
         const from = values.from;
         const to = values.to;
-        return (from > to || !from || !to || from > 9999 || to > 9999);
+        return (from > to || from > 9999 || to > 9999);
     };
 
     render() {

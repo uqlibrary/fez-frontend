@@ -20,10 +20,16 @@ const styles = (theme) => ({
         }
     },
     data: {
-        fontSize: '0.8rem'
+        fontSize: '0.8rem',
+        lineHeight: '1.5rem'
     },
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`
+    },
+    ul: {
+        listStyleType: 'none',
+        padding: 0,
+        margin: 0
     }
 });
 
@@ -71,7 +77,7 @@ export class PublicationDetails extends PureComponent {
                         <this.ViewRecordRow
                             heading={locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof}
                             data={(
-                                <ul>
+                                <ul className={this.props.classes.ul}>
                                     {
                                         this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
                                             collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
