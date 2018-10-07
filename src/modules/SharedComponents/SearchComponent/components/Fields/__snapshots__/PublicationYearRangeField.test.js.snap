@@ -40,6 +40,7 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
         required={false}
         select={false}
         value="1999"
+        variant="standard"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -61,6 +62,7 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
           }
         }
         value=" to "
+        variant="standard"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -89,6 +91,7 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
         required={false}
         select={false}
         value="2001"
+        variant="standard"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>

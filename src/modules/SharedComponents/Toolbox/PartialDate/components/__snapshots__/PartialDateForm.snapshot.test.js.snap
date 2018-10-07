@@ -6,8 +6,8 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] =
   className=""
   classes={
     Object {
-      "fakeTitle": "PartialDateForm-fakeTitle-01",
-      "hideLabel": "PartialDateForm-hideLabel-02",
+      "fakeTitle": "PartialDateForm-fakeTitle-1",
+      "hideLabel": "PartialDateForm-hideLabel-2",
     }
   }
   dateFormat="YYYY-MM-DD"
@@ -54,8 +54,8 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`]
   className="requiredField"
   classes={
     Object {
-      "fakeTitle": "PartialDateForm-fakeTitle-01",
-      "hideLabel": "PartialDateForm-hideLabel-02",
+      "fakeTitle": "PartialDateForm-fakeTitle-1",
+      "hideLabel": "PartialDateForm-hideLabel-2",
     }
   }
   dateFormat="YYYY-MM-DD"
@@ -102,8 +102,8 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`]
   className="requiredField"
   classes={
     Object {
-      "fakeTitle": "PartialDateForm-fakeTitle-01",
-      "hideLabel": "PartialDateForm-hideLabel-02",
+      "fakeTitle": "PartialDateForm-fakeTitle-1",
+      "hideLabel": "PartialDateForm-hideLabel-2",
     }
   }
   dateFormat="YYYY-MM-DD"

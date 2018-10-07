@@ -4,7 +4,7 @@ exports[`Facet filter list item  should render collapsed filter 1`] = `
 <FacetsFilterListItem
   classes={
     Object {
-      "listItemGutters": "FacetsFilterListItem-listItemGutters-01 listItemGutters",
+      "listItemGutters": "FacetsFilterListItem-listItemGutters-1 listItemGutters",
     }
   }
   disabled={false}
@@ -19,7 +19,7 @@ exports[`Facet filter list item  should render disabled component 1`] = `
 <FacetsFilterListItem
   classes={
     Object {
-      "listItemGutters": "FacetsFilterListItem-listItemGutters-01 listItemGutters",
+      "listItemGutters": "FacetsFilterListItem-listItemGutters-1 listItemGutters",
     }
   }
   disabled={true}
@@ -34,7 +34,7 @@ exports[`Facet filter list item  should render empty component 1`] = `
 <FacetsFilterListItem
   classes={
     Object {
-      "listItemGutters": "FacetsFilterListItem-listItemGutters-01 listItemGutters",
+      "listItemGutters": "FacetsFilterListItem-listItemGutters-1 listItemGutters",
     }
   }
   disabled={false}

@@ -305,12 +305,28 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           "fontWeight": 300,
           "lineHeight": "1.46429em",
         },
+        "body1Next": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "1rem",
+          "fontWeight": 300,
+          "letterSpacing": "0.00938em",
+          "lineHeight": 1.5,
+        },
         "body2": Object {
           "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.875rem",
           "fontWeight": 400,
           "lineHeight": "1.71429em",
+        },
+        "body2Next": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "0.875rem",
+          "fontWeight": 300,
+          "letterSpacing": "0.01071em",
+          "lineHeight": 1.5,
         },
         "button": Object {
           "color": "rgba(0, 0, 0, 0.87)",
@@ -319,12 +335,29 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           "fontWeight": 400,
           "textTransform": "uppercase",
         },
+        "buttonNext": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "0.875rem",
+          "fontWeight": 400,
+          "letterSpacing": "0.02857em",
+          "lineHeight": 1.5,
+          "textTransform": "uppercase",
+        },
         "caption": Object {
           "color": "rgba(0, 0, 0, 0.54)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.75rem",
           "fontWeight": 300,
           "lineHeight": "1.375em",
+        },
+        "captionNext": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 300,
+          "letterSpacing": "0.03333em",
+          "lineHeight": 1.66,
         },
         "display1": Object {
           "color": "rgba(0, 0, 0, 0.54)",
@@ -364,12 +397,69 @@ exports[`Add new record should render the confirm dialog with an alert for faile
         "fontWeightLight": 200,
         "fontWeightMedium": 400,
         "fontWeightRegular": 300,
+        "h1": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "6rem",
+          "fontWeight": 200,
+          "letterSpacing": "-0.01562em",
+          "lineHeight": 1,
+        },
+        "h2": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "3.75rem",
+          "fontWeight": 200,
+          "letterSpacing": "-0.00833em",
+          "lineHeight": 1,
+        },
+        "h3": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "3rem",
+          "fontWeight": 300,
+          "letterSpacing": "0em",
+          "lineHeight": 1.04,
+        },
+        "h4": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "2.125rem",
+          "fontWeight": 300,
+          "letterSpacing": "0.00735em",
+          "lineHeight": 1.17,
+        },
+        "h5": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "1.5rem",
+          "fontWeight": 300,
+          "letterSpacing": "0em",
+          "lineHeight": 1.33,
+        },
+        "h6": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "1.25rem",
+          "fontWeight": 400,
+          "letterSpacing": "0.0075em",
+          "lineHeight": 1.6,
+        },
         "headline": Object {
           "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "1.5rem",
           "fontWeight": 300,
           "lineHeight": "1.35417em",
+        },
+        "overline": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 300,
+          "letterSpacing": "0.08333em",
+          "lineHeight": 2.66,
+          "textTransform": "uppercase",
         },
         "pxToRem": [Function],
         "round": [Function],
@@ -380,6 +470,23 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           "fontWeight": 300,
           "lineHeight": "1.5em",
         },
+        "subtitle1": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "1rem",
+          "fontWeight": 300,
+          "letterSpacing": "0.00938em",
+          "lineHeight": 1.75,
+        },
+        "subtitle2": Object {
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontSize": "0.875rem",
+          "fontWeight": 400,
+          "letterSpacing": "0.00714em",
+          "lineHeight": 1.57,
+        },
+        "suppressDeprecationWarnings": undefined,
         "title": Object {
           "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -387,6 +494,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           "fontWeight": 300,
           "lineHeight": "1.16667em",
         },
+        "useNextVariants": false,
       },
       "zIndex": Object {
         "appBar": 1100,
@@ -411,18 +519,18 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       TransitionComponent={[Function]}
       classes={
         Object {
-          "paper": "MuiDialog-paper-04",
-          "paperFullScreen": "MuiDialog-paperFullScreen-012",
-          "paperFullWidth": "MuiDialog-paperFullWidth-011",
-          "paperScrollBody": "MuiDialog-paperScrollBody-06",
-          "paperScrollPaper": "MuiDialog-paperScrollPaper-05",
-          "paperWidthLg": "MuiDialog-paperWidthLg-010",
-          "paperWidthMd": "MuiDialog-paperWidthMd-09",
-          "paperWidthSm": "MuiDialog-paperWidthSm-08",
-          "paperWidthXs": "MuiDialog-paperWidthXs-07",
-          "root": "MuiDialog-root-01",
-          "scrollBody": "MuiDialog-scrollBody-03",
-          "scrollPaper": "MuiDialog-scrollPaper-02",
+          "paper": "MuiDialog-paper-4",
+          "paperFullScreen": "MuiDialog-paperFullScreen-12",
+          "paperFullWidth": "MuiDialog-paperFullWidth-11",
+          "paperScrollBody": "MuiDialog-paperScrollBody-6",
+          "paperScrollPaper": "MuiDialog-paperScrollPaper-5",
+          "paperWidthLg": "MuiDialog-paperWidthLg-10",
+          "paperWidthMd": "MuiDialog-paperWidthMd-9",
+          "paperWidthSm": "MuiDialog-paperWidthSm-8",
+          "paperWidthXs": "MuiDialog-paperWidthXs-7",
+          "root": "MuiDialog-root-1",
+          "scrollBody": "MuiDialog-scrollBody-3",
+          "scrollPaper": "MuiDialog-scrollPaper-2",
         }
       }
       disableBackdropClick={false}
@@ -453,7 +561,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
             },
           }
         }
-        className="MuiDialog-root-01 MuiDialog-scrollPaper-02"
+        className="MuiDialog-root-1 MuiDialog-scrollPaper-2"
         disableBackdropClick={false}
         disableEscapeKeyDown={false}
         open={false}
@@ -474,11 +582,11 @@ exports[`Add new record should render the confirm dialog with an alert for faile
               },
             }
           }
-          className="MuiDialog-root-01 MuiDialog-scrollPaper-02"
+          className="MuiDialog-root-1 MuiDialog-scrollPaper-2"
           classes={
             Object {
-              "hidden": "MuiModal-hidden-014",
-              "root": "MuiModal-root-013",
+              "hidden": "MuiModal-hidden-14",
+              "root": "MuiModal-root-13",
             }
           }
           disableAutoFocus={false}

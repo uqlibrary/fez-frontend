@@ -4,9 +4,9 @@ exports[`Facet filter nested list item  should render active filter view 1`] = `
 <FacetsFilterNestedListItem
   classes={
     Object {
-      "inset": "FacetsFilterNestedListItem-inset-02 inset",
-      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-01 listItemGutters",
-      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-03 selectedFacet",
+      "inset": "FacetsFilterNestedListItem-inset-2 inset",
+      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-1 listItemGutters",
+      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-3 selectedFacet",
     }
   }
   disabled={false}
@@ -21,9 +21,9 @@ exports[`Facet filter nested list item  should render default filter view 1`] = 
 <FacetsFilterNestedListItem
   classes={
     Object {
-      "inset": "FacetsFilterNestedListItem-inset-02 inset",
-      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-01 listItemGutters",
-      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-03 selectedFacet",
+      "inset": "FacetsFilterNestedListItem-inset-2 inset",
+      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-1 listItemGutters",
+      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-3 selectedFacet",
     }
   }
   disabled={false}
@@ -38,9 +38,9 @@ exports[`Facet filter nested list item  should render disabled filter view 1`] =
 <FacetsFilterNestedListItem
   classes={
     Object {
-      "inset": "FacetsFilterNestedListItem-inset-02 inset",
-      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-01 listItemGutters",
-      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-03 selectedFacet",
+      "inset": "FacetsFilterNestedListItem-inset-2 inset",
+      "listItemGutters": "FacetsFilterNestedListItem-listItemGutters-1 listItemGutters",
+      "selectedFacet": "FacetsFilterNestedListItem-selectedFacet-3 selectedFacet",
     }
   }
   disabled={true}

@@ -45,6 +45,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
           required={false}
           select={false}
           value=""
+          variant="standard"
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)

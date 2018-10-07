@@ -25,6 +25,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
             select={false}
             type="search"
             value=""
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -89,6 +90,7 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
             select={false}
             type="search"
             value=""
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -153,6 +155,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
             select={false}
             type="search"
             value=""
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -238,6 +241,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
               select={false}
               type="search"
               value=""
+              variant="standard"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -303,6 +307,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
             select={false}
             type="search"
             value="i feel lucky"
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
