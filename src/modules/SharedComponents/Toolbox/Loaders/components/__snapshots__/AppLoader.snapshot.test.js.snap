@@ -27,26 +27,6 @@ exports[`Component AppLoader should render as expected 1`] = `
     }
     item={true}
   >
-    <WithStyles(Typography)
-      className={
-        Object {
-          "color": "white",
-          "fontWeight": 200,
-        }
-      }
-      variant="title"
-    >
-      Fez frontend
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    className={
-      Object {
-        "margin": "16px 0",
-      }
-    }
-    item={true}
-  >
     <WithStyles(CircularProgress)
       className={
         Object {
@@ -70,6 +50,26 @@ exports[`Component AppLoader should render as expected 1`] = `
       alt="Fez logo"
       src="http://image/image.svg"
     />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    className={
+      Object {
+        "margin": "16px 0",
+      }
+    }
+    item={true}
+  >
+    <WithStyles(Typography)
+      className={
+        Object {
+          "color": "white",
+          "fontWeight": 200,
+        }
+      }
+      variant="title"
+    >
+      Fez frontend
+    </WithStyles(Typography)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
 `;

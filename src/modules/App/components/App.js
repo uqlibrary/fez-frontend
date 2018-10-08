@@ -30,9 +30,13 @@ import Hidden from '@material-ui/core/Hidden';
 import Menu from '@material-ui/icons/Menu';
 import {withStyles} from '@material-ui/core/styles';
 
-const logo = require('../../../images/uq-logo-white-minimal.svg');
+const smallLogo = require('../../../images/uq-logo-white-minimal.svg');
+const largeLogo = require('../../../images/uq-logo-white-2018.svg');
 
 const styles = theme => ({
+    appBG: {
+        ...theme.palette.primary.main
+    },
     layoutCard: {
         maxWidth: '1200px',
         margin: '24px auto',
@@ -173,7 +177,7 @@ export class App extends PureComponent {
                     <Grid item xs={12}>
                         <AppLoader
                             title={locale.global.title}
-                            logoImage={locale.global.logo.image}
+                            logoImage={largeLogo}
                             logoText={locale.global.logo.label}/>
                     </Grid>
                 </Grid>
@@ -247,7 +251,7 @@ export class App extends PureComponent {
                             wrap="nowrap"
                             justify="flex-start">
                             {
-                                !this.state.docked && !isThesisSubmissionPage &&
+                                !this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage &&
                                 <Grid item>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
@@ -267,7 +271,7 @@ export class App extends PureComponent {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
                                         <Hidden xsDown>
                                             <Grid item xs="auto">
-                                                <img id="logo" src={logo} style={{height: 66, width: 60}}
+                                                <img id="logo" src={smallLogo} style={{height: 66, width: 60}}
                                                     aria-label={locale.global.logo.label} onError={this.hideBrokenImage}/>
                                             </Grid>
                                         </Hidden>
@@ -303,7 +307,7 @@ export class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={locale.global.logo.image}
+                        logoImage={largeLogo}
                         logoText={locale.global.logo.label}
                         logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}
