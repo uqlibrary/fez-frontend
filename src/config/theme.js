@@ -5,9 +5,19 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 export const mui1theme = createMuiTheme({
     palette: {
         primary: {
-            light: '#760d98',
-            main: '#49075E',
-            dark: '#370546',
+            light: '#962A8B',
+            main: '#51247A',
+            dark: '#3b1a59',
+            gradient: {
+                horizontal: {
+                    background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
+                    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", endColorstr="#962a8b",GradientType=1 )'
+                },
+                diagonal: {
+                    background: 'linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
+                    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", endColorstr="#962a8b",GradientType=1 )'
+                }
+            }
         },
         secondary: {
             light: '#f2f2f2',
@@ -15,9 +25,9 @@ export const mui1theme = createMuiTheme({
             dark: '#333333'
         },
         accent: {
-            light: '#288BED',
-            main: '#2377CB',
-            dark: '#005EA5'
+            light: '#54acff',
+            main: '#4085C6',
+            dark: '#3872a8'
         },
         white: {
             main: '#FFFFFF'

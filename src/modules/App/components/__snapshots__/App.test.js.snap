@@ -162,8 +162,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -315,7 +314,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -776,8 +775,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -929,7 +927,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -1255,8 +1253,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -1408,7 +1405,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -1701,8 +1698,7 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -1854,7 +1850,7 @@ exports[`Application component should render app for account with fez author wit
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -2293,8 +2289,7 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -2446,7 +2441,7 @@ exports[`Application component should render app for account with fez author wit
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -2909,8 +2904,7 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -3387,8 +3381,7 @@ exports[`Application component should render application with routing for the us
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -3540,7 +3533,7 @@ exports[`Application component should render application with routing for the us
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -3675,8 +3668,7 @@ exports[`Application component should render for anon user 1`] = `
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -3828,7 +3820,7 @@ exports[`Application component should render for anon user 1`] = `
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage=""
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -3933,7 +3925,7 @@ exports[`Application component should render loading screen while account is loa
     xs={12}
   >
     <WithStyles(AppLoader)
-      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoImage=""
       logoText="University of Queensland"
       title="UQ eSpace "
     />
@@ -3990,8 +3982,7 @@ exports[`Application component should render thesis submission for HDR without m
     }
   />
   <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
+    className="undefined AppBar"
     position="fixed"
   >
     <WithStyles(Toolbar)
