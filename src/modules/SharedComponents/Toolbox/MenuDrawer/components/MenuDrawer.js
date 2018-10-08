@@ -16,10 +16,6 @@ import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
 import {withStyles} from '@material-ui/core/styles';
 
-import jss from 'jss';
-import nested from 'jss-nested';
-jss.use(nested());
-
 const styles = theme => {
     return {
         paper: {

@@ -111,9 +111,9 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -159,9 +159,19 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               },
               "primary": Object {
                 "contrastText": "#fff",
-                "dark": "#370546",
-                "light": "#760d98",
-                "main": "#49075E",
+                "dark": "#3b1a59",
+                "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
+                  "horizontal": Object {
+                    "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
+                },
+                "light": "#962A8B",
+                "main": "#51247A",
               },
               "secondary": Object {
                 "contrastText": "#fff",
@@ -3738,9 +3748,9 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3786,9 +3796,19 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       },
                       "primary": Object {
                         "contrastText": "#fff",
-                        "dark": "#370546",
-                        "light": "#760d98",
-                        "main": "#49075E",
+                        "dark": "#3b1a59",
+                        "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
+                          "horizontal": Object {
+                            "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
+                        },
+                        "light": "#962A8B",
+                        "main": "#51247A",
                       },
                       "secondary": Object {
                         "contrastText": "#fff",
@@ -7678,9 +7698,9 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#005EA5",
-                "light": "#288BED",
-                "main": "#2377CB",
+                "dark": "#3872a8",
+                "light": "#54acff",
+                "main": "#4085C6",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -7726,9 +7746,19 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
               },
               "primary": Object {
                 "contrastText": "#fff",
-                "dark": "#370546",
-                "light": "#760d98",
-                "main": "#49075E",
+                "dark": "#3b1a59",
+                "gradient": Object {
+                  "diagonal": Object {
+                    "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
+                  "horizontal": Object {
+                    "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                    "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                  },
+                },
+                "light": "#962A8B",
+                "main": "#51247A",
               },
               "secondary": Object {
                 "contrastText": "#fff",
@@ -8119,9 +8149,9 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#005EA5",
-                        "light": "#288BED",
-                        "main": "#2377CB",
+                        "dark": "#3872a8",
+                        "light": "#54acff",
+                        "main": "#4085C6",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -8167,9 +8197,19 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
                       },
                       "primary": Object {
                         "contrastText": "#fff",
-                        "dark": "#370546",
-                        "light": "#760d98",
-                        "main": "#49075E",
+                        "dark": "#3b1a59",
+                        "gradient": Object {
+                          "diagonal": Object {
+                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
+                          "horizontal": Object {
+                            "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                          },
+                        },
+                        "light": "#962A8B",
+                        "main": "#51247A",
                       },
                       "secondary": Object {
                         "contrastText": "#fff",
