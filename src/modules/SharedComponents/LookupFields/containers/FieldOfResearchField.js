@@ -19,7 +19,9 @@ const mapStateToProps = (state, props) => {
         maxResults: props.maxResults,
         async: true,
         itemToString: (item) => !!item && String(item.value) || '',
-        filter: props.filter || null
+        filter: props.filter || ((searchText, key) => {
+            return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+        })
     };
 };
 
