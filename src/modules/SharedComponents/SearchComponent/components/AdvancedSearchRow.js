@@ -15,7 +15,7 @@ import {withStyles} from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-const styles = {
+const styles = (theme) => ({
     autoWidth: {
         flexGrow: 1,
         width: 1
@@ -32,8 +32,13 @@ const styles = {
     },
     mobileRowSpacer: {
         margin: '12px -18px',
+    },
+    mobileInputRow: {
+        [theme.breakpoints.down('sm')]: {
+            marginTop: -18
+        }
     }
-};
+});
 
 export class AdvancedSearchRow extends PureComponent {
     static propTypes = {
@@ -128,7 +133,7 @@ export class AdvancedSearchRow extends PureComponent {
                         </Grid>
                         {/* Select and combiner */}
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} className={classes.mobileInputRow}>
                         <Grid container spacing={16}>
                             <Grid item className={classes.autoWidth} zeroMinWidth>
                                 <AdvancedSearchRowInput

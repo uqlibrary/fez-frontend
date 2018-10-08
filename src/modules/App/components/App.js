@@ -263,11 +263,15 @@ export class App extends PureComponent {
                             }
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
                                 <Grid container spacing={16} alignItems="center" justify="center">
-                                    <Hidden smDown>
-                                        <Grid item xs="auto">
-                                            <img id="logo" src={logo} style={{height: 66, width: 60}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
-                                        </Grid>
-                                    </Hidden>
+                                    {
+                                        !this.state.docked && !this.state.menuDrawerOpen &&
+                                        <Hidden smDown>
+                                            <Grid item xs="auto">
+                                                <img id="logo" src={logo} style={{height: 66, width: 60}}
+                                                    aria-label={locale.global.logo.label} onError={this.hideBrokenImage}/>
+                                            </Grid>
+                                        </Hidden>
+                                    }
                                     <Grid item xs>
                                         <Typography variant="title" noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
