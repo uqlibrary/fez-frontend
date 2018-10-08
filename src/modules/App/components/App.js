@@ -241,7 +241,7 @@ export class App extends PureComponent {
                     color="primary"
                     position="fixed">
                     <Toolbar style={{height: '70px'}}>
-                        <Grid container
+                        <Grid container spacing={8}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
@@ -265,7 +265,7 @@ export class App extends PureComponent {
                                 <Grid container spacing={16} alignItems="center" justify="center">
                                     {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
-                                        <Hidden smDown>
+                                        <Hidden xsDown>
                                             <Grid item xs="auto">
                                                 <img id="logo" src={logo} style={{height: 66, width: 60}}
                                                     aria-label={locale.global.logo.label} onError={this.hideBrokenImage}/>
@@ -281,11 +281,11 @@ export class App extends PureComponent {
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item md={4} >
+                                <Grid item md={4}>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
-                            <Grid item xs="auto" >
+                            <Grid item>
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
