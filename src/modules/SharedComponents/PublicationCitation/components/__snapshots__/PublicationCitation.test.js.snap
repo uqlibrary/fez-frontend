@@ -841,6 +841,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
+    spacing={8}
   >
     <Hidden
       implementation="js"
@@ -1754,6 +1755,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
+    spacing={8}
   >
     <Hidden
       implementation="js"

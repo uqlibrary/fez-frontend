@@ -161,18 +161,82 @@ export class SimpleSearchComponent extends PureComponent {
         const {classes} = this.props;
         return (
             <React.Fragment>
-                {
-                    this.props.isInHeader ?
-                        <React.Fragment>
-                            {/* DESKTOP in header */}
-                            <Hidden xsDown>
-                                <Grid container spacing={16} alignItems={'center'} alignContent={'center'} justify={'center'} className={classes.inHeader}>
-                                    {
-                                        this.props.showPrefixIcon &&
-                                        <Grid item>
-                                            <Search className={classes.searchIconPrefix}/>
+                <form style={{margin: 8}}>
+                    {
+                        this.props.isInHeader ?
+                            <React.Fragment>
+                                {/* DESKTOP in header */}
+                                <Hidden xsDown>
+                                    <Grid container spacing={16} alignItems={'center'} alignContent={'center'} justify={'center'} className={classes.inHeader}>
+                                        {
+                                            this.props.showPrefixIcon &&
+                                            <Grid item>
+                                                <Search className={classes.searchIconPrefix}/>
+                                            </Grid>
+                                        }
+                                        <Grid item xs>
+                                            <TextField
+                                                type="search"
+                                                fullWidth
+                                                label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                                placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                                aria-label={txt.ariaInputLabel}
+                                                onChange={this._handleSearchTextChange}
+                                                onKeyPress={this._handleSearch}
+                                                value={this.props.searchText}
+                                                InputProps={{disableUnderline: true}}
+                                                error={this.searchTextValidationMessage(this.props.searchText)}/>
                                         </Grid>
+                                    </Grid>
+                                </Hidden>
+                                {/* MOBILE in header */}
+                                <Hidden smUp>
+                                    {
+                                        !this.state.showMobile ?
+                                            <Tooltip title={txt.searchBoxPlaceholder} placement="bottom-end" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                                                <IconButton
+                                                    onClick={this._handleToggleMobile}
+                                                    aria-label={txt.mobileSearchButtonAriaLabel}>
+                                                    <Search className={classes.searchIconMobile}/>
+                                                </IconButton>
+                                            </Tooltip>
+                                            :
+                                            <div className={classes.mobileHeader}>
+                                                <Grid container spacing={0} direction={'row'} wrap={'nowrap'} alignItems={'stretch'} justify={'center'}>
+                                                    {
+                                                        this.props.showMobileSearchButton && this.state.showMobile &&
+                                                        <Hidden smUp>
+                                                            <Grid item>
+                                                                <Button onClick={this._handleToggleMobile} className={classes.mobileBackArrowButton}>
+                                                                    <ArrowBack className={classes.mobileBackArrow}/>
+                                                                </Button>
+                                                            </Grid>
+                                                        </Hidden>
+                                                    }
+                                                    <Grid item xs zeroMinWidth>
+                                                        <TextField
+                                                            className={classes.mobileSearchInput}
+                                                            type="search"
+                                                            id="mobileSearchField"
+                                                            fullWidth
+                                                            label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                                            placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                                            aria-label={txt.ariaInputLabel}
+                                                            onChange={this._handleSearchTextChange}
+                                                            onKeyPress={this._handleSearch}
+                                                            value={this.props.searchText}
+                                                            InputProps={{disableUnderline: true}}
+                                                            error={this.searchTextValidationMessage(this.props.searchText)}/>
+                                                    </Grid>
+                                                </Grid>
+                                            </div>
                                     }
+                                </Hidden>
+                            </React.Fragment>
+                            :
+                            <React.Fragment>
+                                {/* NOT in header */}
+                                <Grid container spacing={16} alignItems={'center'}>
                                     <Grid item xs>
                                         <TextField
                                             type="search"
@@ -183,96 +247,34 @@ export class SimpleSearchComponent extends PureComponent {
                                             onChange={this._handleSearchTextChange}
                                             onKeyPress={this._handleSearch}
                                             value={this.props.searchText}
-                                            InputProps={{disableUnderline: true}}
-                                            error={this.searchTextValidationMessage(this.props.searchText)}/>
+                                            error={this.searchTextValidationMessage(this.props.searchText)}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={'auto'}>
+                                        <Button
+                                            children={txt.searchButtonText}
+                                            aria-label={txt.searchButtonAriaLabel}
+                                            variant={'raised'}
+                                            color={'primary'}
+                                            disabled={!!this.searchTextValidationMessage(this.props.searchText)}
+                                            onClick={this._handleSearch}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={'auto'}>
+                                        <Button
+                                            variant={'raised'}
+                                            children={txt.advancedSearchButtonText}
+                                            aria-label={txt.advancedSearchButtonAriaLabel}
+                                            onClick={this._handleSearchMode}
+                                            className="advancedButton"
+                                            fullWidth
+                                        />
                                     </Grid>
                                 </Grid>
-                            </Hidden>
-                            {/* MOBILE in header */}
-                            <Hidden smUp>
-                                {
-                                    !this.state.showMobile ?
-                                        <Tooltip title={txt.searchBoxPlaceholder} placement="bottom-end" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
-                                            <IconButton
-                                                onClick={this._handleToggleMobile}
-                                                aria-label={txt.mobileSearchButtonAriaLabel}>
-                                                <Search className={classes.searchIconMobile}/>
-                                            </IconButton>
-                                        </Tooltip>
-                                        :
-                                        <div className={classes.mobileHeader}>
-                                            <Grid container spacing={0} direction={'row'} wrap={'nowrap'} alignItems={'stretch'} justify={'center'}>
-                                                {
-                                                    this.props.showMobileSearchButton && this.state.showMobile &&
-                                                    <Hidden smUp>
-                                                        <Grid item>
-                                                            <Button onClick={this._handleToggleMobile} className={classes.mobileBackArrowButton}>
-                                                                <ArrowBack className={classes.mobileBackArrow}/>
-                                                            </Button>
-                                                        </Grid>
-                                                    </Hidden>
-                                                }
-                                                <Grid item xs zeroMinWidth>
-                                                    <TextField
-                                                        className={classes.mobileSearchInput}
-                                                        type="search"
-                                                        id="mobileSearchField"
-                                                        fullWidth
-                                                        label={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                                        placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
-                                                        aria-label={txt.ariaInputLabel}
-                                                        onChange={this._handleSearchTextChange}
-                                                        onKeyPress={this._handleSearch}
-                                                        value={this.props.searchText}
-                                                        InputProps={{disableUnderline: true}}
-                                                        error={this.searchTextValidationMessage(this.props.searchText)}/>
-                                                </Grid>
-                                            </Grid>
-                                        </div>
-                                }
-                            </Hidden>
-                        </React.Fragment>
-                        :
-                        <React.Fragment>
-                            {/* NOT in header */}
-                            <Grid container spacing={16} alignItems={'center'}>
-                                <Grid item xs>
-                                    <TextField
-                                        type="search"
-                                        fullWidth
-                                        label={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                        placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
-                                        aria-label={txt.ariaInputLabel}
-                                        onChange={this._handleSearchTextChange}
-                                        onKeyPress={this._handleSearch}
-                                        value={this.props.searchText}
-                                        error={this.searchTextValidationMessage(this.props.searchText)}
-                                    />
-                                </Grid>
-                                <Grid item xs={12} sm={'auto'}>
-                                    <Button
-                                        children={txt.searchButtonText}
-                                        aria-label={txt.searchButtonAriaLabel}
-                                        variant={'raised'}
-                                        color={'primary'}
-                                        disabled={!!this.searchTextValidationMessage(this.props.searchText)}
-                                        onClick={this._handleSearch}
-                                        fullWidth
-                                    />
-                                </Grid>
-                                <Grid item xs={12} sm={'auto'}>
-                                    <Button
-                                        variant={'raised'}
-                                        children={txt.advancedSearchButtonText}
-                                        aria-label={txt.advancedSearchButtonAriaLabel}
-                                        onClick={this._handleSearchMode}
-                                        className="advancedButton"
-                                        fullWidth
-                                    />
-                                </Grid>
-                            </Grid>
-                        </React.Fragment>
-                }
+                            </React.Fragment>
+                    }
+                </form>
             </React.Fragment>
         );
     }

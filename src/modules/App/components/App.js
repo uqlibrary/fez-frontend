@@ -241,7 +241,7 @@ export class App extends PureComponent {
                     color="primary"
                     position="fixed">
                     <Toolbar style={{height: '70px'}}>
-                        <Grid container
+                        <Grid container spacing={8}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
@@ -263,11 +263,15 @@ export class App extends PureComponent {
                             }
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
                                 <Grid container spacing={16} alignItems="center" justify="center">
-                                    <Hidden smDown>
-                                        <Grid item xs="auto">
-                                            <img id="logo" src={logo} style={{height: 66, width: 60}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
-                                        </Grid>
-                                    </Hidden>
+                                    {
+                                        !this.state.docked && !this.state.menuDrawerOpen &&
+                                        <Hidden xsDown>
+                                            <Grid item xs="auto">
+                                                <img id="logo" src={logo} style={{height: 66, width: 60}}
+                                                    aria-label={locale.global.logo.label} onError={this.hideBrokenImage}/>
+                                            </Grid>
+                                        </Hidden>
+                                    }
                                     <Grid item xs>
                                         <Typography variant="title" noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
@@ -277,11 +281,11 @@ export class App extends PureComponent {
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item md={4} >
+                                <Grid item md={4}>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
-                            <Grid item xs="auto" >
+                            <Grid item>
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
