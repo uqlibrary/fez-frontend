@@ -50,7 +50,7 @@ export class TopCitedPublications extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            TopCitedTab: false
+            topCitedTab: 'altmetric'
         };
     }
 
@@ -60,15 +60,10 @@ export class TopCitedPublications extends PureComponent {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            TopCitedTab: nextProps.topCitedPublicationsList.length > 0 && nextProps.topCitedPublicationsList[0].key
-        });
-    }
-
     handleTabChange = (event, value) => {
         this.setState({
-            TopCitedTab: value});
+            topCitedTab: value
+        });
     };
 
     render() {
@@ -85,6 +80,7 @@ export class TopCitedPublications extends PureComponent {
                 </Grid>
             );
         }
+
         const reorderedItems = this.props.topCitedPublicationsList.sort((source1, source2) => (txt[source1.key].order - txt[source2.key].order));
         return (
             <React.Fragment>
@@ -93,7 +89,7 @@ export class TopCitedPublications extends PureComponent {
                         <Tabs
                             className={classes.tabs}
                             classes={{indicator: classes.tabIndicator}}
-                            value={this.state.TopCitedTab}
+                            value={this.state.topCitedTab}
                             onChange={this.handleTabChange}
                             fullWidth
                             centered
@@ -105,25 +101,24 @@ export class TopCitedPublications extends PureComponent {
                             ))}
                         </Tabs>
 
-
                         {/* Content */}
                         {reorderedItems.map(({key, values}) => (
-                            values && values.length >= 1 && (this.state.TopCitedTab === key) &&
-                                <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} style={{marginTop: 24}}>
-                                    <Grid item xs>
-                                        <Typography key={key} variant={'title'}><div key={key} className={`fez-icon ${key} xxlarge`}/> {txt[key].heading}</Typography>
-                                    </Grid>
-                                    <Grid item xs={'auto'} style={{marginTop: -12}}>
-                                        <HelpIcon {...locale.components.trendingPublicationHelp}/>
-                                    </Grid>
-                                    <Grid item xs={12} style={{paddingTop: 24}} id={'topCitedPublications'}>
-                                        <PublicationsList
-                                            key={key}
-                                            publicationsList={values}
-                                            showMetrics
-                                            hideCountTotal/>
-                                    </Grid>
+                            values && values.length >= 1 && (this.state.topCitedTab === key) &&
+                            <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} style={{marginTop: 24}}>
+                                <Grid item xs>
+                                    <Typography key={key} variant={'title'}><div key={key} className={`fez-icon ${key} xxlarge`}/> {txt[key].heading}</Typography>
                                 </Grid>
+                                <Grid item xs={'auto'} style={{marginTop: -12}}>
+                                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
+                                </Grid>
+                                <Grid item xs={12} style={{paddingTop: 24}} id={'topCitedPublications'}>
+                                    <PublicationsList
+                                        key={key}
+                                        publicationsList={values}
+                                        showMetrics
+                                        hideCountTotal/>
+                                </Grid>
+                            </Grid>
                         ))}
                     </StandardCard>
                     :
