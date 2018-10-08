@@ -17,7 +17,7 @@ const styles = () => ({
         position: 'relative',
     },
     paper: {
-        height: 250,
+        maxHeight: 250,
         overflowY: 'scroll',
         position: 'absolute',
         zIndex: 999
@@ -54,7 +54,9 @@ export class AutoCompleteAsyncField extends Component {
     static defaultProps = {
         maxResults: 7,
         required: false,
-        filter: () => true
+        filter: (searchText, key) => {
+            return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+        }
     };
 
     componentDidMount() {
@@ -185,7 +187,7 @@ export class AutoCompleteAsyncField extends Component {
                                                         itemsList
                                                             .filter(suggestion => this.props.filter(inputValue, suggestion.value))
                                                             .slice(0, maxResults).map((suggestion, index) => {
-                                                                return this.renderSuggestion({
+                                                                return !!suggestion && this.renderSuggestion({
                                                                     suggestion,
                                                                     index,
                                                                     itemProps: getItemProps({ item: suggestion }),
