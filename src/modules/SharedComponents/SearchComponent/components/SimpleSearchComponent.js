@@ -254,7 +254,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         <Button
                                             children={txt.searchButtonText}
                                             aria-label={txt.searchButtonAriaLabel}
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             color={'primary'}
                                             disabled={!!this.searchTextValidationMessage(this.props.searchText)}
                                             onClick={this._handleSearch}
@@ -263,7 +263,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     </Grid>
                                     <Grid item xs={12} sm={'auto'}>
                                         <Button
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             children={txt.advancedSearchButtonText}
                                             aria-label={txt.advancedSearchButtonAriaLabel}
                                             onClick={this._handleSearchMode}

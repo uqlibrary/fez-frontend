@@ -116,7 +116,7 @@ export default class GoogleScholar extends PureComponent {
                         </Hidden>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 color={'primary'}
                                 fullWidth
                                 disabled={this.props.submitting}
@@ -125,7 +125,7 @@ export default class GoogleScholar extends PureComponent {
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 color={'secondary'}
                                 fullWidth
                                 disabled={this.props.submitting || this.props.invalid}

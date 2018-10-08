@@ -33,9 +33,6 @@ const styles = (theme) => ({
     fileIcon: {
         opacity: 0.5,
     },
-    data: {
-        fontSize: '0.8rem'
-    }
 });
 
 export class Files extends Component {
@@ -231,7 +228,7 @@ export class Files extends Component {
                     </div>
                     {
                         fileData.map((item, index) => (
-                            <div style={{padding: 8}}>
+                            <div style={{padding: 8}} key={index}>
                                 <Grid
                                     container
                                     direction="row"
@@ -252,12 +249,12 @@ export class Files extends Component {
                                     </Grid>
                                     <Hidden xsDown>
                                         <Grid item sm={5} className={this.props.classes.dataWrapper}>
-                                            <Typography caption="body1" noWrap className={this.props.classes.data}>{item.description}</Typography>
+                                            <Typography variant="body1" noWrap>{item.description}</Typography>
                                         </Grid>
                                     </Hidden>
                                     <Hidden smDown>
                                         <Grid item md={1} className={this.props.classes.dataWrapper}>
-                                            <Typography caption="body1" noWrap className={this.props.classes.data}>{item.calculatedSize}</Typography>
+                                            <Typography variant="body1" noWrap>{item.calculatedSize}</Typography>
                                         </Grid>
                                     </Hidden>
                                     <Hidden xsDown>

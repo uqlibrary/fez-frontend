@@ -52,7 +52,8 @@ class Cards extends Component {
                     <CardHeader
                         title={title}
                         titleTypographyProps={{
-                            variant: 'title',
+                            variant: 'h5',
+                            component: 'h2',
                             color: 'inherit'
                         }}
                         action={

@@ -11,6 +11,7 @@ exports[`Additional Information Component  should render component with audio do
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -426,6 +427,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -466,6 +468,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -511,6 +514,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -557,6 +561,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -603,6 +608,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -646,6 +652,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -686,6 +693,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -735,6 +743,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -795,6 +804,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="22"
       style={
         Object {
           "padding": 16,
@@ -844,6 +854,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -903,6 +914,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
+      key="27"
       style={
         Object {
           "padding": 16,
@@ -959,6 +971,7 @@ exports[`Additional Information Component  should render component with book 1`]
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -1301,6 +1314,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -1341,6 +1355,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -1381,6 +1396,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -1426,6 +1442,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -1472,6 +1489,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -1512,6 +1530,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -1557,6 +1576,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -1616,6 +1636,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -1961,6 +1982,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -2013,6 +2035,7 @@ exports[`Additional Information Component  should render component with book cha
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -2473,6 +2496,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -2513,6 +2537,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -2558,6 +2583,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -2598,6 +2624,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -2643,6 +2670,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -2689,6 +2717,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -2732,6 +2761,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -2770,6 +2800,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -2815,6 +2846,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -2864,6 +2896,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -2913,6 +2946,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -3376,6 +3410,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -3416,6 +3451,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -3456,6 +3492,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -3496,6 +3533,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -3536,6 +3574,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="22"
       style={
         Object {
           "padding": 16,
@@ -3576,6 +3615,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -3616,6 +3656,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="24"
       style={
         Object {
           "padding": 16,
@@ -3665,6 +3706,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="25"
       style={
         Object {
           "padding": 16,
@@ -3719,6 +3761,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="26"
       style={
         Object {
           "padding": 16,
@@ -3823,6 +3866,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
+      key="29"
       style={
         Object {
           "padding": 16,
@@ -3875,6 +3919,7 @@ exports[`Additional Information Component  should render component with conferen
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -4604,6 +4649,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -4644,6 +4690,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -4689,6 +4736,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -4729,6 +4777,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -4769,6 +4818,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -5495,6 +5545,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -5535,6 +5586,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -5580,6 +5632,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -5626,6 +5679,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -5669,6 +5723,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -5723,6 +5778,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="25"
       style={
         Object {
           "padding": 16,
@@ -5763,6 +5819,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="26"
       style={
         Object {
           "padding": 16,
@@ -5803,6 +5860,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="27"
       style={
         Object {
           "padding": 16,
@@ -5843,6 +5901,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="28"
       style={
         Object {
           "padding": 16,
@@ -5883,6 +5942,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="29"
       style={
         Object {
           "padding": 16,
@@ -5923,6 +5983,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="32"
       style={
         Object {
           "padding": 16,
@@ -5984,6 +6045,7 @@ exports[`Additional Information Component  should render component with conferen
     title="Additional information"
   >
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -6024,6 +6086,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -6479,6 +6542,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -6524,6 +6588,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -6564,6 +6629,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -6604,6 +6670,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -6644,6 +6711,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -6693,6 +6761,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -6733,6 +6802,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -6778,6 +6848,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -6824,6 +6895,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="22"
       style={
         Object {
           "padding": 16,
@@ -6870,6 +6942,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="27"
       style={
         Object {
           "padding": 16,
@@ -6910,6 +6983,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="28"
       style={
         Object {
           "padding": 16,
@@ -6950,6 +7024,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="29"
       style={
         Object {
           "padding": 16,
@@ -6990,6 +7065,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="32"
       style={
         Object {
           "padding": 16,
@@ -7039,6 +7115,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="33"
       style={
         Object {
           "padding": 16,
@@ -7103,6 +7180,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="34"
       style={
         Object {
           "padding": 16,
@@ -7267,6 +7345,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="36"
       style={
         Object {
           "padding": 16,
@@ -7307,6 +7386,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
+      key="37"
       style={
         Object {
           "padding": 16,
@@ -7359,6 +7439,7 @@ exports[`Additional Information Component  should render component with creative
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -7399,6 +7480,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -7843,6 +7925,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -7883,6 +7966,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -7923,6 +8007,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -7961,6 +8046,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -8006,6 +8092,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -8052,6 +8139,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -8092,6 +8180,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -8146,6 +8235,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -8195,6 +8285,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -8249,6 +8340,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
+      key="22"
       style={
         Object {
           "padding": 16,
@@ -8340,6 +8432,7 @@ exports[`Additional Information Component  should render component with data col
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -8380,6 +8473,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -8430,6 +8524,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -9232,6 +9327,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -9276,6 +9372,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -10075,6 +10172,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -10144,6 +10242,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -10184,6 +10283,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -10224,6 +10324,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -10282,6 +10383,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -10336,6 +10438,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -10379,6 +10482,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -10433,6 +10537,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -10497,6 +10602,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -10546,6 +10652,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -10595,6 +10702,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -10641,6 +10749,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -10687,6 +10796,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -10733,6 +10843,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -10779,6 +10890,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -10873,6 +10985,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -10939,6 +11052,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -10988,6 +11102,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -11028,6 +11143,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="24"
       style={
         Object {
           "padding": 16,
@@ -11073,6 +11189,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="25"
       style={
         Object {
           "padding": 16,
@@ -11119,6 +11236,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="26"
       style={
         Object {
           "padding": 16,
@@ -11159,6 +11277,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="27"
       style={
         Object {
           "padding": 16,
@@ -11199,6 +11318,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="29"
       style={
         Object {
           "padding": 16,
@@ -11752,6 +11872,7 @@ exports[`Additional Information Component  should render component with data col
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -11792,6 +11913,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -11835,6 +11957,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -12384,6 +12507,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -12428,6 +12552,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -12974,6 +13099,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -13023,6 +13149,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -13063,6 +13190,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -13103,6 +13231,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -13163,6 +13292,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -13222,6 +13352,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -13265,6 +13396,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -13314,6 +13446,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -13363,6 +13496,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -13409,6 +13543,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -13455,6 +13590,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -13539,6 +13675,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -13605,6 +13742,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -13645,6 +13783,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="24"
       style={
         Object {
           "padding": 16,
@@ -13690,6 +13829,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="25"
       style={
         Object {
           "padding": 16,
@@ -13736,6 +13876,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="26"
       style={
         Object {
           "padding": 16,
@@ -13776,6 +13917,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="29"
       style={
         Object {
           "padding": 16,
@@ -13819,6 +13961,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
+      key="30"
       style={
         Object {
           "padding": 16,
@@ -13871,6 +14014,7 @@ exports[`Additional Information Component  should render component with design d
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -14327,6 +14471,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -14367,6 +14512,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -14407,6 +14553,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -14453,6 +14600,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -14499,6 +14647,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -14539,6 +14688,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -14579,6 +14729,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -14625,6 +14776,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -14674,6 +14826,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -14714,6 +14867,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -15173,6 +15327,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -15237,6 +15392,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -15331,6 +15487,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -15376,6 +15533,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
+      key="30"
       style={
         Object {
           "padding": 16,
@@ -15428,6 +15586,7 @@ exports[`Additional Information Component  should render component with digilib 
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -15468,6 +15627,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -15514,6 +15674,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -15560,6 +15721,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -15605,6 +15767,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -15931,6 +16094,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -15985,6 +16149,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -16023,6 +16188,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -16077,6 +16243,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -16131,6 +16298,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -16180,6 +16348,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -16229,6 +16398,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -16283,6 +16453,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -16349,6 +16520,7 @@ exports[`Additional Information Component  should render component with generic 
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -16389,6 +16561,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -16513,6 +16686,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -16559,6 +16733,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -16608,6 +16783,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -17121,6 +17297,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -17637,6 +17814,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -17675,6 +17853,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -17727,6 +17906,7 @@ exports[`Additional Information Component  should render component with image 1`
     title="Additional information"
   >
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -17767,6 +17947,7 @@ exports[`Additional Information Component  should render component with image 1`
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -17879,6 +18060,7 @@ exports[`Additional Information Component  should render component with journal 
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -17919,6 +18101,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -18294,6 +18477,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -18340,6 +18524,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -18380,6 +18565,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -18420,6 +18606,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -18474,6 +18661,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -18512,6 +18700,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -18552,6 +18741,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -18597,6 +18787,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -18646,6 +18837,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -18695,6 +18887,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -18771,6 +18964,7 @@ exports[`Additional Information Component  should render component with journal 
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -19878,6 +20072,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -19918,6 +20113,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -21022,6 +21218,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -21071,6 +21268,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -21117,6 +21315,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -21163,6 +21362,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -21206,6 +21406,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -21244,6 +21445,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -21284,6 +21486,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -21324,6 +21527,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -21364,6 +21568,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -21404,6 +21609,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -21444,6 +21650,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -21484,6 +21691,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -21529,6 +21737,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -21578,6 +21787,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -21692,6 +21902,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
+      key="26"
       style={
         Object {
           "padding": 16,
@@ -21744,6 +21955,7 @@ exports[`Additional Information Component  should render component with manuscri
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -22243,6 +22455,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -22283,6 +22496,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -22321,6 +22535,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -22367,6 +22582,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -22413,6 +22629,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -22915,6 +23132,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -22960,6 +23178,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -23000,6 +23219,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -23040,6 +23260,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -23080,6 +23301,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -23129,6 +23351,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -23169,6 +23392,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -23263,6 +23487,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -23303,6 +23528,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -23367,6 +23593,7 @@ exports[`Additional Information Component  should render component with patent 1
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -23625,6 +23852,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -23665,6 +23893,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -23711,6 +23940,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -23756,6 +23986,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -23796,6 +24027,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -23836,6 +24068,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -23885,6 +24118,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -23944,6 +24178,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -24006,6 +24241,7 @@ exports[`Additional Information Component  should render component with preprint
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -24046,6 +24282,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -24200,6 +24437,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -24246,6 +24484,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -24305,6 +24544,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -24679,6 +24919,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -24717,6 +24958,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -24871,6 +25113,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -24923,6 +25166,7 @@ exports[`Additional Information Component  should render component with proceedi
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -25584,6 +25828,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -25624,6 +25869,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -25669,6 +25915,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -25709,6 +25956,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -25749,6 +25997,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -25794,6 +26043,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -26452,6 +26702,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -26492,6 +26743,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -26537,6 +26789,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -26583,6 +26836,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="19"
       style={
         Object {
           "padding": 16,
@@ -26629,6 +26883,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -26672,6 +26927,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -26712,6 +26968,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="23"
       style={
         Object {
           "padding": 16,
@@ -26766,6 +27023,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="25"
       style={
         Object {
           "padding": 16,
@@ -26806,6 +27064,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="26"
       style={
         Object {
           "padding": 16,
@@ -26846,6 +27105,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="27"
       style={
         Object {
           "padding": 16,
@@ -26886,6 +27146,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="28"
       style={
         Object {
           "padding": 16,
@@ -26926,6 +27187,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="29"
       style={
         Object {
           "padding": 16,
@@ -26966,6 +27228,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="32"
       style={
         Object {
           "padding": 16,
@@ -27015,6 +27278,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(Grid)>
     </div>
     <div
+      key="34"
       style={
         Object {
           "padding": 16,
@@ -27101,6 +27365,7 @@ exports[`Additional Information Component  should render component with referenc
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -27420,6 +27685,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -27460,6 +27726,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -27500,6 +27767,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -27545,6 +27813,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -27591,6 +27860,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -27913,6 +28183,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -27967,6 +28238,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -28007,6 +28279,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -28047,6 +28320,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -28087,6 +28361,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -28136,6 +28411,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -28200,6 +28476,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -28274,6 +28551,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -28326,6 +28604,7 @@ exports[`Additional Information Component  should render component with research
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -28644,6 +28923,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -28684,6 +28964,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -28730,6 +29011,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -28784,6 +29066,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -28829,6 +29112,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -28869,6 +29153,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -28909,6 +29194,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -28949,6 +29235,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -29001,6 +29288,7 @@ exports[`Additional Information Component  should render component with thesis 1
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -29322,6 +29610,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -29362,6 +29651,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -29407,6 +29697,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -29447,6 +29738,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -29493,6 +29785,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -29533,6 +29826,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -29571,6 +29865,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -29630,6 +29925,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -29679,6 +29975,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -29733,6 +30030,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -29773,6 +30071,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -29825,6 +30124,7 @@ exports[`Additional Information Component  should render component with video do
     title="Additional information"
   >
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -30157,6 +30457,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -30197,6 +30498,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -30243,6 +30545,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -30288,6 +30591,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -30328,6 +30632,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="12"
       style={
         Object {
           "padding": 16,
@@ -30368,6 +30673,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -30417,6 +30723,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -30457,6 +30764,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -30506,6 +30814,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -30558,6 +30867,7 @@ exports[`Additional Information Component  should render component with working 
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -30934,6 +31244,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -30974,6 +31285,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -31019,6 +31331,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 16,
@@ -31059,6 +31372,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -31097,6 +31411,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -31142,6 +31457,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -31182,6 +31498,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -31228,6 +31545,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="10"
       style={
         Object {
           "padding": 16,
@@ -31271,6 +31589,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="11"
       style={
         Object {
           "padding": 16,
@@ -31316,6 +31635,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -31356,6 +31676,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -31396,6 +31717,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="15"
       style={
         Object {
           "padding": 16,
@@ -31436,6 +31758,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -31485,6 +31808,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,
@@ -31539,6 +31863,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="18"
       style={
         Object {
           "padding": 16,
@@ -31623,6 +31948,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="20"
       style={
         Object {
           "padding": 16,
@@ -31663,6 +31989,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
+      key="21"
       style={
         Object {
           "padding": 16,
@@ -31715,6 +32042,7 @@ exports[`Additional Information Component  should render oa status value link in
     title="Additional information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -32037,6 +32365,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -32077,6 +32406,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 16,
@@ -32122,6 +32452,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 16,
@@ -32162,6 +32493,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="6"
       style={
         Object {
           "padding": 16,
@@ -32208,6 +32540,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="7"
       style={
         Object {
           "padding": 16,
@@ -32248,6 +32581,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="8"
       style={
         Object {
           "padding": 16,
@@ -32288,6 +32622,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="9"
       style={
         Object {
           "padding": 16,
@@ -32347,6 +32682,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="13"
       style={
         Object {
           "padding": 16,
@@ -32396,6 +32732,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="14"
       style={
         Object {
           "padding": 16,
@@ -32450,6 +32787,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="16"
       style={
         Object {
           "padding": 16,
@@ -32490,6 +32828,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
+      key="17"
       style={
         Object {
           "padding": 16,

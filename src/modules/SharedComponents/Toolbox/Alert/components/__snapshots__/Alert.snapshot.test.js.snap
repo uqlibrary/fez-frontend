@@ -112,7 +112,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
         fullWidth={true}
         id="alertButton"
         onClick={[MockFunction]}
-        variant="flat"
+        variant="text"
       >
         Do something
       </WithStyles(Button)>
@@ -315,7 +315,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         fullWidth={true}
         id="alertButton"
         onClick={[MockFunction]}
-        variant="flat"
+        variant="text"
       >
         Do something
       </WithStyles(Button)>
@@ -442,7 +442,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         fullWidth={true}
         id="alertButton"
         onClick={[MockFunction]}
-        variant="flat"
+        variant="text"
       >
         Do something
       </WithStyles(Button)>

@@ -9,6 +9,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
     title="Grant information"
   >
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -51,6 +52,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -93,6 +95,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -147,11 +150,6 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
     title="Grant information"
   >
     <WithStyles(Typography)
-      classes={
-        Object {
-          "body1": "data",
-        }
-      }
       gutterBottom={true}
       id="grantInformation"
       variant="body1"
@@ -159,6 +157,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(Typography)>
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -201,6 +200,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -243,6 +243,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -299,11 +300,6 @@ exports[`Grant Information Component  should render component 1`] = `
     title="Grant information"
   >
     <WithStyles(Typography)
-      classes={
-        Object {
-          "body1": "data",
-        }
-      }
       gutterBottom={true}
       id="grantInformation"
       variant="body1"
@@ -311,6 +307,7 @@ exports[`Grant Information Component  should render component 1`] = `
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(Typography)>
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -353,6 +350,7 @@ exports[`Grant Information Component  should render component 1`] = `
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -395,6 +393,7 @@ exports[`Grant Information Component  should render component 1`] = `
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,
@@ -449,11 +448,6 @@ exports[`Grant Information Component  should render with publication without gra
     title="Grant information"
   >
     <WithStyles(Typography)
-      classes={
-        Object {
-          "body1": "data",
-        }
-      }
       gutterBottom={true}
       id="grantInformation"
       variant="body1"
@@ -461,6 +455,7 @@ exports[`Grant Information Component  should render with publication without gra
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(Typography)>
     <div
+      key="0"
       style={
         Object {
           "padding": 16,
@@ -501,6 +496,7 @@ exports[`Grant Information Component  should render with publication without gra
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 16,
@@ -541,6 +537,7 @@ exports[`Grant Information Component  should render with publication without gra
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 16,

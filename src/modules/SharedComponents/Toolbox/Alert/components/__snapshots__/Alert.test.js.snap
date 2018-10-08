@@ -115,7 +115,7 @@ ShallowWrapper {
             fullWidth={true}
             id="alertButton"
             onClick={[MockFunction]}
-            variant="flat"
+            variant="text"
           >
             button
           </WithStyles(Button)>
@@ -242,7 +242,7 @@ ShallowWrapper {
               fullWidth={true}
               id="alertButton"
               onClick={[MockFunction]}
-              variant="flat"
+              variant="text"
             >
               button
             </WithStyles(Button)>
@@ -583,7 +583,7 @@ ShallowWrapper {
               fullWidth={true}
               id="alertButton"
               onClick={[MockFunction]}
-              variant="flat"
+              variant="text"
             >
               button
             </WithStyles(Button)>,
@@ -603,7 +603,7 @@ ShallowWrapper {
               "fullWidth": true,
               "id": "alertButton",
               "onClick": [MockFunction],
-              "variant": "flat",
+              "variant": "text",
             },
             "ref": null,
             "rendered": "button",
@@ -791,7 +791,7 @@ ShallowWrapper {
               fullWidth={true}
               id="alertButton"
               onClick={[MockFunction]}
-              variant="flat"
+              variant="text"
             >
               button
             </WithStyles(Button)>
@@ -918,7 +918,7 @@ ShallowWrapper {
                 fullWidth={true}
                 id="alertButton"
                 onClick={[MockFunction]}
-                variant="flat"
+                variant="text"
               >
                 button
               </WithStyles(Button)>
@@ -1259,7 +1259,7 @@ ShallowWrapper {
                 fullWidth={true}
                 id="alertButton"
                 onClick={[MockFunction]}
-                variant="flat"
+                variant="text"
               >
                 button
               </WithStyles(Button)>,
@@ -1279,7 +1279,7 @@ ShallowWrapper {
                 "fullWidth": true,
                 "id": "alertButton",
                 "onClick": [MockFunction],
-                "variant": "flat",
+                "variant": "text",
               },
               "ref": null,
               "rendered": "button",

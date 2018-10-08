@@ -7,28 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
 const styles = (theme) => ({
-    body2: {
-        fontWeight: 400,
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '0.975rem',
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '0.775rem',
-            fontWeight: 500
-        }
-    },
-    body1: {
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '0.975rem'
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '0.775rem'
-        }
-    },
-    data: {
-        fontSize: '0.8rem',
-        lineHeight: '1.5rem'
-    },
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     }
@@ -43,14 +21,14 @@ export class GrantInformation extends PureComponent {
         return (
             <Grid container display="row" alignItems="center">
                 <Grid item>
-                    <Typography variant="body2" classes={{body2: this.props.classes.body2}} className={className}>
+                    <Typography variant="body1" className={className}>
                         {grantAgency}
                     </Typography>
                 </Grid>
                 {
                     !!grantId &&
                     <Grid item>
-                        <Typography variant="body1" classes={{body1: this.props.classes.body1}} className={className}>
+                        <Typography variant="body1" className={className}>
                             {` (${grantId})`}
                         </Typography>
                     </Grid>
@@ -59,10 +37,10 @@ export class GrantInformation extends PureComponent {
         );
     };
 
-    renderGrantDetail = (grantAgency, grantId, grantText, order) => {
+    renderGrantDetail = (grantAgency, grantId, grantText, order, index) => {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
-            <div style={{padding: 16}}>
+            <div style={{padding: 16}} key={index}>
                 <Grid container spacing={32} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}>
                         <this.GrantInformationCell
@@ -95,11 +73,11 @@ export class GrantInformation extends PureComponent {
 
         return grantAgencies.sort((grantAgency1, grantAgency2) => (
             grantAgency1.rek_grant_agency_order - grantAgency2.rek_grant_agency_order
-        )).map((grantAgency) => {
+        )).map((grantAgency, index) => {
             const order = grantAgency.rek_grant_agency_order;
             const grantId = this.searchByOrder(grantIds, 'rek_grant_id_order', order);
             const grantText = includeFundingText && this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
-            return this.renderGrantDetail(grantAgency, grantId, grantText, order);
+            return this.renderGrantDetail(grantAgency, grantId, grantText, order, index);
         });
     }
 
@@ -118,7 +96,7 @@ export class GrantInformation extends PureComponent {
                 <StandardCard title={locale.viewRecord.sections.grantInformation}>
                     {
                         fundingText &&
-                        <Typography id="grantInformation" variant="body1" gutterBottom classes={{body1: this.props.classes.data}}>{fundingText}</Typography>
+                        <Typography id="grantInformation" variant="body1" gutterBottom>{fundingText}</Typography>
                     }
                     {
                         this.props.publication.fez_record_search_key_grant_agency &&

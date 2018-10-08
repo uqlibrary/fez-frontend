@@ -283,7 +283,7 @@ export class Alert extends PureComponent {
                         <Grid item xs sm={'auto'} className={classes.actionButton}>
                             <Button
                                 id={'alertButton'}
-                                variant={'flat'}
+                                variant={'text'}
                                 children={this.props.actionButtonLabel}
                                 onClick={this.props.action}
                                 fullWidth

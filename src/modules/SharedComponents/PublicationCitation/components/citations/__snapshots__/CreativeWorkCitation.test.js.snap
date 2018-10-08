@@ -111,7 +111,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -262,9 +262,10 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -278,8 +279,9 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -294,6 +296,8 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -306,11 +310,12 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -451,11 +456,11 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -1759,7 +1764,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#3872a8",
+                        "dark": "#2a557d",
                         "light": "#54acff",
                         "main": "#4085C6",
                       },
@@ -1910,9 +1915,10 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       "body1": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                        "fontSize": "0.875rem",
+                        "fontSize": "1rem",
                         "fontWeight": 300,
-                        "lineHeight": "1.46429em",
+                        "letterSpacing": "0.00938em",
+                        "lineHeight": 1.5,
                       },
                       "body1Next": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
@@ -1926,8 +1932,9 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": "0.875rem",
-                        "fontWeight": 400,
-                        "lineHeight": "1.71429em",
+                        "fontWeight": 300,
+                        "letterSpacing": "0.01071em",
+                        "lineHeight": 1.5,
                       },
                       "body2Next": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
@@ -1942,6 +1949,8 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": "0.875rem",
                         "fontWeight": 400,
+                        "letterSpacing": "0.02857em",
+                        "lineHeight": 1.5,
                         "textTransform": "uppercase",
                       },
                       "buttonNext": Object {
@@ -1954,11 +1963,12 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                         "textTransform": "uppercase",
                       },
                       "caption": Object {
-                        "color": "rgba(0, 0, 0, 0.54)",
+                        "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": "0.75rem",
                         "fontWeight": 300,
-                        "lineHeight": "1.375em",
+                        "letterSpacing": "0.03333em",
+                        "lineHeight": 1.66,
                       },
                       "captionNext": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
@@ -2099,11 +2109,11 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                        "fontSize": "1.5rem",
-                        "fontWeight": 300,
+                        "fontSize": "1.3125rem",
+                        "fontWeight": 400,
                         "lineHeight": "1.16667em",
                       },
-                      "useNextVariants": false,
+                      "useNextVariants": true,
                     },
                     "zIndex": Object {
                       "appBar": 1100,
@@ -2313,7 +2323,7 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -2464,9 +2474,10 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -2480,8 +2491,9 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -2496,6 +2508,8 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -2508,11 +2522,12 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -2653,11 +2668,11 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -2764,7 +2779,7 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                     },
                     "palette": Object {
                       "accent": Object {
-                        "dark": "#3872a8",
+                        "dark": "#2a557d",
                         "light": "#54acff",
                         "main": "#4085C6",
                       },
@@ -2915,9 +2930,10 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                       "body1": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                        "fontSize": "0.875rem",
+                        "fontSize": "1rem",
                         "fontWeight": 300,
-                        "lineHeight": "1.46429em",
+                        "letterSpacing": "0.00938em",
+                        "lineHeight": 1.5,
                       },
                       "body1Next": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
@@ -2931,8 +2947,9 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": "0.875rem",
-                        "fontWeight": 400,
-                        "lineHeight": "1.71429em",
+                        "fontWeight": 300,
+                        "letterSpacing": "0.01071em",
+                        "lineHeight": 1.5,
                       },
                       "body2Next": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
@@ -2947,6 +2964,8 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": "0.875rem",
                         "fontWeight": 400,
+                        "letterSpacing": "0.02857em",
+                        "lineHeight": 1.5,
                         "textTransform": "uppercase",
                       },
                       "buttonNext": Object {
@@ -2959,11 +2978,12 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                         "textTransform": "uppercase",
                       },
                       "caption": Object {
-                        "color": "rgba(0, 0, 0, 0.54)",
+                        "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": "0.75rem",
                         "fontWeight": 300,
-                        "lineHeight": "1.375em",
+                        "letterSpacing": "0.03333em",
+                        "lineHeight": 1.66,
                       },
                       "captionNext": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
@@ -3104,11 +3124,11 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                        "fontSize": "1.5rem",
-                        "fontWeight": 300,
+                        "fontSize": "1.3125rem",
+                        "fontWeight": 400,
                         "lineHeight": "1.16667em",
                       },
-                      "useNextVariants": false,
+                      "useNextVariants": true,
                     },
                     "zIndex": Object {
                       "appBar": 1100,

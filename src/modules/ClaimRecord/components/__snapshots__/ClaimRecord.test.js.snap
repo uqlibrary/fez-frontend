@@ -1119,7 +1119,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -1131,7 +1131,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -2041,7 +2041,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -2053,7 +2053,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -3210,7 +3210,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -3222,7 +3222,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -4082,7 +4082,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -4094,7 +4094,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -5459,7 +5459,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -5471,7 +5471,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -6836,7 +6836,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -6848,7 +6848,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -8213,7 +8213,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -8225,7 +8225,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -9590,7 +9590,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -9602,7 +9602,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -10645,7 +10645,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -12025,7 +12025,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -12037,7 +12037,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -13402,7 +13402,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -13414,7 +13414,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -14791,7 +14791,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           disabled={true}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -14804,7 +14804,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           disabled={true}
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -16180,7 +16180,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -16192,7 +16192,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -17569,7 +17569,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -17581,7 +17581,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -18969,7 +18969,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -18981,7 +18981,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>
@@ -19152,7 +19152,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel this claim
         </WithStyles(Button)>
@@ -19164,7 +19164,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           color="primary"
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Claim this publication
         </WithStyles(Button)>

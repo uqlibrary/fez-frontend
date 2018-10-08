@@ -122,7 +122,7 @@ export default class PublicationForm extends Component {
                     <Grid item xs />
                     <Grid item xs={12} sm={'auto'}>
                         <Button
-                            // variant="flat"
+                            // variant={'text'}
                             color="secondary"
                             fullWidth
                             children={txt.cancel}
@@ -134,7 +134,7 @@ export default class PublicationForm extends Component {
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 style={{whiteSpace: 'nowrap'}}
-                                variant="raised"
+                                variant={'contained'}
                                 color="primary"
                                 fullWidth
                                 children={txt.submit}

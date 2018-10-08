@@ -82,7 +82,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
-              variant="raised"
+              variant="contained"
             >
               Link your existing ORCID iD
             </WithStyles(Button)>
@@ -142,7 +142,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
-              variant="raised"
+              variant="contained"
             >
               Create a new ORCID iD
             </WithStyles(Button)>
@@ -236,7 +236,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
-              variant="raised"
+              variant="contained"
             >
               Link your existing ORCID iD
             </WithStyles(Button)>
@@ -296,7 +296,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
-              variant="raised"
+              variant="contained"
             >
               Create a new ORCID iD
             </WithStyles(Button)>
@@ -383,7 +383,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
-              variant="raised"
+              variant="contained"
             >
               Link your existing ORCID iD
             </WithStyles(Button)>
@@ -443,7 +443,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
-              variant="raised"
+              variant="contained"
             >
               Create a new ORCID iD
             </WithStyles(Button)>

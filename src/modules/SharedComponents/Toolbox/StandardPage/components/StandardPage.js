@@ -33,7 +33,7 @@ class Page extends Component {
         return (
             <Grid container className="StandardPage">
                 {title &&
-                <Typography variant={'title'} className={classes.layoutTitle}>{title}</Typography>
+                <Typography variant={'h4'} component={'h1'} color={'primary'} className={classes.layoutTitle}>{title}</Typography>
                 }
                 <Grid item className={classes.layoutCard}>
                     {children}

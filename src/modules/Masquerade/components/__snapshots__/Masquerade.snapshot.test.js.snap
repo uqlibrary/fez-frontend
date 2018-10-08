@@ -58,7 +58,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Masquerade
         </WithStyles(Button)>

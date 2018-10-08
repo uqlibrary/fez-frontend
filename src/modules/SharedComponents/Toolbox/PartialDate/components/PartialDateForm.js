@@ -147,7 +147,7 @@ export class PartialDateForm extends Component {
         return (
             <Grid container spacing={16}>
                 <Grid item xs={12}>
-                    <Typography variant="subheading" classes={{subheading: classes.fakeTitle}}>{this.props.floatingTitle}</Typography>
+                    <Typography variant={'subtitle1'} classes={{subheading: classes.fakeTitle}}>{this.props.floatingTitle}</Typography>
                 </Grid>
                 <Grid item xs={4}>
                     <InputLabel htmlFor="day" className={this.props.classes.hideLabel}>Day</InputLabel>

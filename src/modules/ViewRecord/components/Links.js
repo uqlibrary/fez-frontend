@@ -18,11 +18,7 @@ import {openAccessConfig} from 'config';
 const styles = (theme) => ({
     header: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        fontSize: '0.8rem'
     },
-    link: {
-        fontSize: '0.8rem'
-    }
 });
 
 export class Links extends PureComponent {

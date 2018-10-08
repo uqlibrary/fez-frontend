@@ -148,7 +148,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -162,7 +162,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -215,7 +215,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>
@@ -422,7 +422,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -436,7 +436,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -489,7 +489,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>
@@ -690,7 +690,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -704,7 +704,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -757,7 +757,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>
@@ -958,7 +958,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -972,7 +972,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -1025,7 +1025,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>
@@ -1227,7 +1227,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             disabled={true}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -1241,7 +1241,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -1294,7 +1294,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>
@@ -1491,7 +1491,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             disabled={true}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -1505,7 +1505,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -1558,7 +1558,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>
@@ -1846,7 +1846,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             disabled={true}
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Add another field
           </WithStyles(Button)>
@@ -1860,7 +1860,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             aria-label="Click to reset the advanced search"
             fullWidth={true}
             onClick={[Function]}
-            variant="raised"
+            variant="contained"
           >
             Reset
           </WithStyles(Button)>
@@ -1913,7 +1913,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             fullWidth={true}
             onClick={[Function]}
             type="submit"
-            variant="raised"
+            variant="contained"
           >
             Search
           </WithStyles(Button)>

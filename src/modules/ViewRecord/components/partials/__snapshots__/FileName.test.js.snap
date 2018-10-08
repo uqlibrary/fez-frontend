@@ -111,7 +111,7 @@ exports[`File Name Component  should display file name link 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -262,9 +262,10 @@ exports[`File Name Component  should display file name link 1`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -278,8 +279,9 @@ exports[`File Name Component  should display file name link 1`] = `
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -294,6 +296,8 @@ exports[`File Name Component  should display file name link 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -306,11 +310,12 @@ exports[`File Name Component  should display file name link 1`] = `
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -451,11 +456,11 @@ exports[`File Name Component  should display file name link 1`] = `
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -728,11 +733,6 @@ exports[`File Name Component  should display file name link 1`] = `
                       className="MuiGrid-item-2"
                     >
                       <WithStyles(Typography)
-                        style={
-                          Object {
-                            "fontSize": "0.8rem",
-                          }
-                        }
                         variant="body1"
                       >
                         <Typography
@@ -801,11 +801,6 @@ exports[`File Name Component  should display file name link 1`] = `
                           }
                           noWrap={false}
                           paragraph={false}
-                          style={
-                            Object {
-                              "fontSize": "0.8rem",
-                            }
-                          }
                           theme={
                             Object {
                               "breakpoints": Object {
@@ -864,9 +859,9 @@ exports[`File Name Component  should display file name link 1`] = `
                               },
                               "palette": Object {
                                 "accent": Object {
-                                  "dark": "#005EA5",
-                                  "light": "#288BED",
-                                  "main": "#2377CB",
+                                  "dark": "#2a557d",
+                                  "light": "#54acff",
+                                  "main": "#4085C6",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -912,9 +907,19 @@ exports[`File Name Component  should display file name link 1`] = `
                                 },
                                 "primary": Object {
                                   "contrastText": "#fff",
-                                  "dark": "#370546",
-                                  "light": "#760d98",
-                                  "main": "#49075E",
+                                  "dark": "#3b1a59",
+                                  "gradient": Object {
+                                    "diagonal": Object {
+                                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                    "horizontal": Object {
+                                      "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                  },
+                                  "light": "#962A8B",
+                                  "main": "#51247A",
                                 },
                                 "secondary": Object {
                                   "contrastText": "#fff",
@@ -1005,9 +1010,10 @@ exports[`File Name Component  should display file name link 1`] = `
                                 "body1": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "0.875rem",
+                                  "fontSize": "1rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.46429em",
+                                  "letterSpacing": "0.00938em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body1Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -1021,8 +1027,9 @@ exports[`File Name Component  should display file name link 1`] = `
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
-                                  "fontWeight": 400,
-                                  "lineHeight": "1.71429em",
+                                  "fontWeight": 300,
+                                  "letterSpacing": "0.01071em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body2Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -1037,6 +1044,8 @@ exports[`File Name Component  should display file name link 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
+                                  "letterSpacing": "0.02857em",
+                                  "lineHeight": 1.5,
                                   "textTransform": "uppercase",
                                 },
                                 "buttonNext": Object {
@@ -1049,11 +1058,12 @@ exports[`File Name Component  should display file name link 1`] = `
                                   "textTransform": "uppercase",
                                 },
                                 "caption": Object {
-                                  "color": "rgba(0, 0, 0, 0.54)",
+                                  "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.75rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.375em",
+                                  "letterSpacing": "0.03333em",
+                                  "lineHeight": 1.66,
                                 },
                                 "captionNext": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -1194,11 +1204,11 @@ exports[`File Name Component  should display file name link 1`] = `
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "1.5rem",
-                                  "fontWeight": 300,
+                                  "fontSize": "1.3125rem",
+                                  "fontWeight": 400,
                                   "lineHeight": "1.16667em",
                                 },
-                                "useNextVariants": false,
+                                "useNextVariants": true,
                               },
                               "zIndex": Object {
                                 "appBar": 1100,
@@ -1214,11 +1224,6 @@ exports[`File Name Component  should display file name link 1`] = `
                         >
                           <p
                             className="MuiTypography-root-98 MuiTypography-body1-107"
-                            style={
-                              Object {
-                                "fontSize": "0.8rem",
-                              }
-                            }
                           >
                             <ExternalLink
                               className="fileName"
@@ -1335,7 +1340,7 @@ exports[`File Name Component  should display file name link 1`] = `
                           },
                           "palette": Object {
                             "accent": Object {
-                              "dark": "#3872a8",
+                              "dark": "#2a557d",
                               "light": "#54acff",
                               "main": "#4085C6",
                             },
@@ -1486,9 +1491,10 @@ exports[`File Name Component  should display file name link 1`] = `
                             "body1": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "0.875rem",
+                              "fontSize": "1rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.46429em",
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
                             },
                             "body1Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -1502,8 +1508,9 @@ exports[`File Name Component  should display file name link 1`] = `
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
-                              "fontWeight": 400,
-                              "lineHeight": "1.71429em",
+                              "fontWeight": 300,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.5,
                             },
                             "body2Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -1518,6 +1525,8 @@ exports[`File Name Component  should display file name link 1`] = `
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
                               "fontWeight": 400,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.5,
                               "textTransform": "uppercase",
                             },
                             "buttonNext": Object {
@@ -1530,11 +1539,12 @@ exports[`File Name Component  should display file name link 1`] = `
                               "textTransform": "uppercase",
                             },
                             "caption": Object {
-                              "color": "rgba(0, 0, 0, 0.54)",
+                              "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.75rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.375em",
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
                             },
                             "captionNext": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -1675,11 +1685,11 @@ exports[`File Name Component  should display file name link 1`] = `
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "1.5rem",
-                              "fontWeight": 300,
+                              "fontSize": "1.3125rem",
+                              "fontWeight": 400,
                               "lineHeight": "1.16667em",
                             },
-                            "useNextVariants": false,
+                            "useNextVariants": true,
                           },
                           "zIndex": Object {
                             "appBar": 1100,
@@ -1965,7 +1975,7 @@ exports[`File Name Component  should render audio player 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -2116,9 +2126,10 @@ exports[`File Name Component  should render audio player 1`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -2132,8 +2143,9 @@ exports[`File Name Component  should render audio player 1`] = `
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -2148,6 +2160,8 @@ exports[`File Name Component  should render audio player 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -2160,11 +2174,12 @@ exports[`File Name Component  should render audio player 1`] = `
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -2305,11 +2320,11 @@ exports[`File Name Component  should render audio player 1`] = `
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -2582,11 +2597,6 @@ exports[`File Name Component  should render audio player 1`] = `
                       className="MuiGrid-item-2"
                     >
                       <WithStyles(Typography)
-                        style={
-                          Object {
-                            "fontSize": "0.8rem",
-                          }
-                        }
                         variant="body1"
                       >
                         <Typography
@@ -2655,11 +2665,6 @@ exports[`File Name Component  should render audio player 1`] = `
                           }
                           noWrap={false}
                           paragraph={false}
-                          style={
-                            Object {
-                              "fontSize": "0.8rem",
-                            }
-                          }
                           theme={
                             Object {
                               "breakpoints": Object {
@@ -2718,9 +2723,9 @@ exports[`File Name Component  should render audio player 1`] = `
                               },
                               "palette": Object {
                                 "accent": Object {
-                                  "dark": "#005EA5",
-                                  "light": "#288BED",
-                                  "main": "#2377CB",
+                                  "dark": "#2a557d",
+                                  "light": "#54acff",
+                                  "main": "#4085C6",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -2766,9 +2771,19 @@ exports[`File Name Component  should render audio player 1`] = `
                                 },
                                 "primary": Object {
                                   "contrastText": "#fff",
-                                  "dark": "#370546",
-                                  "light": "#760d98",
-                                  "main": "#49075E",
+                                  "dark": "#3b1a59",
+                                  "gradient": Object {
+                                    "diagonal": Object {
+                                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                    "horizontal": Object {
+                                      "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                  },
+                                  "light": "#962A8B",
+                                  "main": "#51247A",
                                 },
                                 "secondary": Object {
                                   "contrastText": "#fff",
@@ -2859,9 +2874,10 @@ exports[`File Name Component  should render audio player 1`] = `
                                 "body1": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "0.875rem",
+                                  "fontSize": "1rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.46429em",
+                                  "letterSpacing": "0.00938em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body1Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -2875,8 +2891,9 @@ exports[`File Name Component  should render audio player 1`] = `
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
-                                  "fontWeight": 400,
-                                  "lineHeight": "1.71429em",
+                                  "fontWeight": 300,
+                                  "letterSpacing": "0.01071em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body2Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -2891,6 +2908,8 @@ exports[`File Name Component  should render audio player 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
+                                  "letterSpacing": "0.02857em",
+                                  "lineHeight": 1.5,
                                   "textTransform": "uppercase",
                                 },
                                 "buttonNext": Object {
@@ -2903,11 +2922,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                   "textTransform": "uppercase",
                                 },
                                 "caption": Object {
-                                  "color": "rgba(0, 0, 0, 0.54)",
+                                  "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.75rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.375em",
+                                  "letterSpacing": "0.03333em",
+                                  "lineHeight": 1.66,
                                 },
                                 "captionNext": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -3048,11 +3068,11 @@ exports[`File Name Component  should render audio player 1`] = `
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "1.5rem",
-                                  "fontWeight": 300,
+                                  "fontSize": "1.3125rem",
+                                  "fontWeight": 400,
                                   "lineHeight": "1.16667em",
                                 },
-                                "useNextVariants": false,
+                                "useNextVariants": true,
                               },
                               "zIndex": Object {
                                 "appBar": 1100,
@@ -3068,11 +3088,6 @@ exports[`File Name Component  should render audio player 1`] = `
                         >
                           <p
                             className="MuiTypography-root-98 MuiTypography-body1-107"
-                            style={
-                              Object {
-                                "fontSize": "0.8rem",
-                              }
-                            }
                           >
                             <ExternalLink
                               className="fileName"
@@ -3189,7 +3204,7 @@ exports[`File Name Component  should render audio player 1`] = `
                           },
                           "palette": Object {
                             "accent": Object {
-                              "dark": "#3872a8",
+                              "dark": "#2a557d",
                               "light": "#54acff",
                               "main": "#4085C6",
                             },
@@ -3340,9 +3355,10 @@ exports[`File Name Component  should render audio player 1`] = `
                             "body1": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "0.875rem",
+                              "fontSize": "1rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.46429em",
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
                             },
                             "body1Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -3356,8 +3372,9 @@ exports[`File Name Component  should render audio player 1`] = `
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
-                              "fontWeight": 400,
-                              "lineHeight": "1.71429em",
+                              "fontWeight": 300,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.5,
                             },
                             "body2Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -3372,6 +3389,8 @@ exports[`File Name Component  should render audio player 1`] = `
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
                               "fontWeight": 400,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.5,
                               "textTransform": "uppercase",
                             },
                             "buttonNext": Object {
@@ -3384,11 +3403,12 @@ exports[`File Name Component  should render audio player 1`] = `
                               "textTransform": "uppercase",
                             },
                             "caption": Object {
-                              "color": "rgba(0, 0, 0, 0.54)",
+                              "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.75rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.375em",
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
                             },
                             "captionNext": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -3529,11 +3549,11 @@ exports[`File Name Component  should render audio player 1`] = `
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "1.5rem",
-                              "fontWeight": 300,
+                              "fontSize": "1.3125rem",
+                              "fontWeight": 400,
                               "lineHeight": "1.16667em",
                             },
-                            "useNextVariants": false,
+                            "useNextVariants": true,
                           },
                           "zIndex": Object {
                             "appBar": 1100,
@@ -4018,7 +4038,7 @@ exports[`File Name Component  should render component and display file name only
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -4169,9 +4189,10 @@ exports[`File Name Component  should render component and display file name only
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -4185,8 +4206,9 @@ exports[`File Name Component  should render component and display file name only
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -4201,6 +4223,8 @@ exports[`File Name Component  should render component and display file name only
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -4213,11 +4237,12 @@ exports[`File Name Component  should render component and display file name only
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -4358,11 +4383,11 @@ exports[`File Name Component  should render component and display file name only
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -4635,11 +4660,6 @@ exports[`File Name Component  should render component and display file name only
                       className="MuiGrid-item-2"
                     >
                       <WithStyles(Typography)
-                        style={
-                          Object {
-                            "fontSize": "0.8rem",
-                          }
-                        }
                         variant="body1"
                       >
                         <Typography
@@ -4708,11 +4728,6 @@ exports[`File Name Component  should render component and display file name only
                           }
                           noWrap={false}
                           paragraph={false}
-                          style={
-                            Object {
-                              "fontSize": "0.8rem",
-                            }
-                          }
                           theme={
                             Object {
                               "breakpoints": Object {
@@ -4771,9 +4786,9 @@ exports[`File Name Component  should render component and display file name only
                               },
                               "palette": Object {
                                 "accent": Object {
-                                  "dark": "#005EA5",
-                                  "light": "#288BED",
-                                  "main": "#2377CB",
+                                  "dark": "#2a557d",
+                                  "light": "#54acff",
+                                  "main": "#4085C6",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -4819,9 +4834,19 @@ exports[`File Name Component  should render component and display file name only
                                 },
                                 "primary": Object {
                                   "contrastText": "#fff",
-                                  "dark": "#370546",
-                                  "light": "#760d98",
-                                  "main": "#49075E",
+                                  "dark": "#3b1a59",
+                                  "gradient": Object {
+                                    "diagonal": Object {
+                                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                    "horizontal": Object {
+                                      "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                  },
+                                  "light": "#962A8B",
+                                  "main": "#51247A",
                                 },
                                 "secondary": Object {
                                   "contrastText": "#fff",
@@ -4912,9 +4937,10 @@ exports[`File Name Component  should render component and display file name only
                                 "body1": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "0.875rem",
+                                  "fontSize": "1rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.46429em",
+                                  "letterSpacing": "0.00938em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body1Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -4928,8 +4954,9 @@ exports[`File Name Component  should render component and display file name only
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
-                                  "fontWeight": 400,
-                                  "lineHeight": "1.71429em",
+                                  "fontWeight": 300,
+                                  "letterSpacing": "0.01071em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body2Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -4944,6 +4971,8 @@ exports[`File Name Component  should render component and display file name only
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
+                                  "letterSpacing": "0.02857em",
+                                  "lineHeight": 1.5,
                                   "textTransform": "uppercase",
                                 },
                                 "buttonNext": Object {
@@ -4956,11 +4985,12 @@ exports[`File Name Component  should render component and display file name only
                                   "textTransform": "uppercase",
                                 },
                                 "caption": Object {
-                                  "color": "rgba(0, 0, 0, 0.54)",
+                                  "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.75rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.375em",
+                                  "letterSpacing": "0.03333em",
+                                  "lineHeight": 1.66,
                                 },
                                 "captionNext": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -5101,11 +5131,11 @@ exports[`File Name Component  should render component and display file name only
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "1.5rem",
-                                  "fontWeight": 300,
+                                  "fontSize": "1.3125rem",
+                                  "fontWeight": 400,
                                   "lineHeight": "1.16667em",
                                 },
-                                "useNextVariants": false,
+                                "useNextVariants": true,
                               },
                               "zIndex": Object {
                                 "appBar": 1100,
@@ -5121,11 +5151,6 @@ exports[`File Name Component  should render component and display file name only
                         >
                           <p
                             className="MuiTypography-root-98 MuiTypography-body1-107"
-                            style={
-                              Object {
-                                "fontSize": "0.8rem",
-                              }
-                            }
                           >
                             UQ676287_OA.pdf
                           </p>
@@ -5224,7 +5249,7 @@ exports[`File Name Component  should render component and display file name only
                           },
                           "palette": Object {
                             "accent": Object {
-                              "dark": "#3872a8",
+                              "dark": "#2a557d",
                               "light": "#54acff",
                               "main": "#4085C6",
                             },
@@ -5375,9 +5400,10 @@ exports[`File Name Component  should render component and display file name only
                             "body1": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "0.875rem",
+                              "fontSize": "1rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.46429em",
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
                             },
                             "body1Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -5391,8 +5417,9 @@ exports[`File Name Component  should render component and display file name only
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
-                              "fontWeight": 400,
-                              "lineHeight": "1.71429em",
+                              "fontWeight": 300,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.5,
                             },
                             "body2Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -5407,6 +5434,8 @@ exports[`File Name Component  should render component and display file name only
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
                               "fontWeight": 400,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.5,
                               "textTransform": "uppercase",
                             },
                             "buttonNext": Object {
@@ -5419,11 +5448,12 @@ exports[`File Name Component  should render component and display file name only
                               "textTransform": "uppercase",
                             },
                             "caption": Object {
-                              "color": "rgba(0, 0, 0, 0.54)",
+                              "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.75rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.375em",
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
                             },
                             "captionNext": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -5564,11 +5594,11 @@ exports[`File Name Component  should render component and display file name only
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "1.5rem",
-                              "fontWeight": 300,
+                              "fontSize": "1.3125rem",
+                              "fontWeight": 400,
                               "lineHeight": "1.16667em",
                             },
-                            "useNextVariants": false,
+                            "useNextVariants": true,
                           },
                           "zIndex": Object {
                             "appBar": 1100,
@@ -5854,7 +5884,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -6005,9 +6035,10 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -6021,8 +6052,9 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -6037,6 +6069,8 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -6049,11 +6083,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -6194,11 +6229,11 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -6471,11 +6506,6 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                       className="MuiGrid-item-2"
                     >
                       <WithStyles(Typography)
-                        style={
-                          Object {
-                            "fontSize": "0.8rem",
-                          }
-                        }
                         variant="body1"
                       >
                         <Typography
@@ -6544,11 +6574,6 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                           }
                           noWrap={false}
                           paragraph={false}
-                          style={
-                            Object {
-                              "fontSize": "0.8rem",
-                            }
-                          }
                           theme={
                             Object {
                               "breakpoints": Object {
@@ -6607,9 +6632,9 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               },
                               "palette": Object {
                                 "accent": Object {
-                                  "dark": "#005EA5",
-                                  "light": "#288BED",
-                                  "main": "#2377CB",
+                                  "dark": "#2a557d",
+                                  "light": "#54acff",
+                                  "main": "#4085C6",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -6655,9 +6680,19 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                 },
                                 "primary": Object {
                                   "contrastText": "#fff",
-                                  "dark": "#370546",
-                                  "light": "#760d98",
-                                  "main": "#49075E",
+                                  "dark": "#3b1a59",
+                                  "gradient": Object {
+                                    "diagonal": Object {
+                                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                    "horizontal": Object {
+                                      "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                  },
+                                  "light": "#962A8B",
+                                  "main": "#51247A",
                                 },
                                 "secondary": Object {
                                   "contrastText": "#fff",
@@ -6748,9 +6783,10 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                 "body1": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "0.875rem",
+                                  "fontSize": "1rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.46429em",
+                                  "letterSpacing": "0.00938em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body1Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -6764,8 +6800,9 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
-                                  "fontWeight": 400,
-                                  "lineHeight": "1.71429em",
+                                  "fontWeight": 300,
+                                  "letterSpacing": "0.01071em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body2Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -6780,6 +6817,8 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
+                                  "letterSpacing": "0.02857em",
+                                  "lineHeight": 1.5,
                                   "textTransform": "uppercase",
                                 },
                                 "buttonNext": Object {
@@ -6792,11 +6831,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                   "textTransform": "uppercase",
                                 },
                                 "caption": Object {
-                                  "color": "rgba(0, 0, 0, 0.54)",
+                                  "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.75rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.375em",
+                                  "letterSpacing": "0.03333em",
+                                  "lineHeight": 1.66,
                                 },
                                 "captionNext": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -6937,11 +6977,11 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "1.5rem",
-                                  "fontWeight": 300,
+                                  "fontSize": "1.3125rem",
+                                  "fontWeight": 400,
                                   "lineHeight": "1.16667em",
                                 },
-                                "useNextVariants": false,
+                                "useNextVariants": true,
                               },
                               "zIndex": Object {
                                 "appBar": 1100,
@@ -6957,11 +6997,6 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                         >
                           <p
                             className="MuiTypography-root-98 MuiTypography-body1-107"
-                            style={
-                              Object {
-                                "fontSize": "0.8rem",
-                              }
-                            }
                           >
                             <a
                               className="fileName"
@@ -7066,7 +7101,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                           },
                           "palette": Object {
                             "accent": Object {
-                              "dark": "#3872a8",
+                              "dark": "#2a557d",
                               "light": "#54acff",
                               "main": "#4085C6",
                             },
@@ -7217,9 +7252,10 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                             "body1": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "0.875rem",
+                              "fontSize": "1rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.46429em",
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
                             },
                             "body1Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -7233,8 +7269,9 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
-                              "fontWeight": 400,
-                              "lineHeight": "1.71429em",
+                              "fontWeight": 300,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.5,
                             },
                             "body2Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -7249,6 +7286,8 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
                               "fontWeight": 400,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.5,
                               "textTransform": "uppercase",
                             },
                             "buttonNext": Object {
@@ -7261,11 +7300,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               "textTransform": "uppercase",
                             },
                             "caption": Object {
-                              "color": "rgba(0, 0, 0, 0.54)",
+                              "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.75rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.375em",
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
                             },
                             "captionNext": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -7406,11 +7446,11 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "1.5rem",
-                              "fontWeight": 300,
+                              "fontSize": "1.3125rem",
+                              "fontWeight": 400,
                               "lineHeight": "1.16667em",
                             },
-                            "useNextVariants": false,
+                            "useNextVariants": true,
                           },
                           "zIndex": Object {
                             "appBar": 1100,
@@ -7696,7 +7736,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -7847,9 +7887,10 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body1Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -7863,8 +7904,9 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "body2Next": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -7879,6 +7921,8 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -7891,11 +7935,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "captionNext": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
@@ -8036,11 +8081,11 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
-              "useNextVariants": false,
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -8313,11 +8358,6 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                       className="MuiGrid-item-2"
                     >
                       <WithStyles(Typography)
-                        style={
-                          Object {
-                            "fontSize": "0.8rem",
-                          }
-                        }
                         variant="body1"
                       >
                         <Typography
@@ -8386,11 +8426,6 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                           }
                           noWrap={false}
                           paragraph={false}
-                          style={
-                            Object {
-                              "fontSize": "0.8rem",
-                            }
-                          }
                           theme={
                             Object {
                               "breakpoints": Object {
@@ -8449,9 +8484,9 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               },
                               "palette": Object {
                                 "accent": Object {
-                                  "dark": "#005EA5",
-                                  "light": "#288BED",
-                                  "main": "#2377CB",
+                                  "dark": "#2a557d",
+                                  "light": "#54acff",
+                                  "main": "#4085C6",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -8497,9 +8532,19 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                 },
                                 "primary": Object {
                                   "contrastText": "#fff",
-                                  "dark": "#370546",
-                                  "light": "#760d98",
-                                  "main": "#49075E",
+                                  "dark": "#3b1a59",
+                                  "gradient": Object {
+                                    "diagonal": Object {
+                                      "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                    "horizontal": Object {
+                                      "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                      "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                    },
+                                  },
+                                  "light": "#962A8B",
+                                  "main": "#51247A",
                                 },
                                 "secondary": Object {
                                   "contrastText": "#fff",
@@ -8590,9 +8635,10 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                 "body1": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "0.875rem",
+                                  "fontSize": "1rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.46429em",
+                                  "letterSpacing": "0.00938em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body1Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -8606,8 +8652,9 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
-                                  "fontWeight": 400,
-                                  "lineHeight": "1.71429em",
+                                  "fontWeight": 300,
+                                  "letterSpacing": "0.01071em",
+                                  "lineHeight": 1.5,
                                 },
                                 "body2Next": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -8622,6 +8669,8 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
+                                  "letterSpacing": "0.02857em",
+                                  "lineHeight": 1.5,
                                   "textTransform": "uppercase",
                                 },
                                 "buttonNext": Object {
@@ -8634,11 +8683,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                   "textTransform": "uppercase",
                                 },
                                 "caption": Object {
-                                  "color": "rgba(0, 0, 0, 0.54)",
+                                  "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                                   "fontSize": "0.75rem",
                                   "fontWeight": 300,
-                                  "lineHeight": "1.375em",
+                                  "letterSpacing": "0.03333em",
+                                  "lineHeight": 1.66,
                                 },
                                 "captionNext": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
@@ -8779,11 +8829,11 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                  "fontSize": "1.5rem",
-                                  "fontWeight": 300,
+                                  "fontSize": "1.3125rem",
+                                  "fontWeight": 400,
                                   "lineHeight": "1.16667em",
                                 },
-                                "useNextVariants": false,
+                                "useNextVariants": true,
                               },
                               "zIndex": Object {
                                 "appBar": 1100,
@@ -8799,11 +8849,6 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                         >
                           <p
                             className="MuiTypography-root-98 MuiTypography-body1-107"
-                            style={
-                              Object {
-                                "fontSize": "0.8rem",
-                              }
-                            }
                           >
                             <a
                               className="fileName"
@@ -8908,7 +8953,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                           },
                           "palette": Object {
                             "accent": Object {
-                              "dark": "#3872a8",
+                              "dark": "#2a557d",
                               "light": "#54acff",
                               "main": "#4085C6",
                             },
@@ -9059,9 +9104,10 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                             "body1": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "0.875rem",
+                              "fontSize": "1rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.46429em",
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
                             },
                             "body1Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -9075,8 +9121,9 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
-                              "fontWeight": 400,
-                              "lineHeight": "1.71429em",
+                              "fontWeight": 300,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.5,
                             },
                             "body2Next": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -9091,6 +9138,8 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.875rem",
                               "fontWeight": 400,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.5,
                               "textTransform": "uppercase",
                             },
                             "buttonNext": Object {
@@ -9103,11 +9152,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               "textTransform": "uppercase",
                             },
                             "caption": Object {
-                              "color": "rgba(0, 0, 0, 0.54)",
+                              "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                               "fontSize": "0.75rem",
                               "fontWeight": 300,
-                              "lineHeight": "1.375em",
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
                             },
                             "captionNext": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
@@ -9248,11 +9298,11 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                              "fontSize": "1.5rem",
-                              "fontWeight": 300,
+                              "fontSize": "1.3125rem",
+                              "fontWeight": 400,
                               "lineHeight": "1.16667em",
                             },
-                            "useNextVariants": false,
+                            "useNextVariants": true,
                           },
                           "zIndex": Object {
                             "appBar": 1100,

@@ -45,12 +45,8 @@ const styles = theme => ({
         marginTop: 12,
     },
     citationTitle: {
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.5rem'
-        },
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '1.25rem'
-        },
+        lineHeight: 1,
+        letterSpacing: 0,
         marginBottom: 6,
         marginRight: 12
     },
@@ -157,8 +153,8 @@ export class PublicationCitation extends PureComponent {
                     <Grid item xs={12} sm={'auto'} key={`action_key_${index}`}>
                         {
                             action.primary
-                                ? (<Button variant={'raised'} {...buttonProps}/>)
-                                : (<Button variant={'flat'} {...buttonProps}/>)
+                                ? (<Button variant={'contained'} {...buttonProps}/>)
+                                : (<Button variant={'text'} {...buttonProps}/>)
                         }
                     </Grid>
                 );
@@ -200,7 +196,7 @@ export class PublicationCitation extends PureComponent {
                             {
                                 !this.props.hideTitle ?
                                     <Grid item xs style={{minWidth: 1}}>
-                                        <Typography variant={'title'} component={'p'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
+                                        <Typography variant={'h5'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
                                     :
                                     <Grid item xs />
@@ -218,13 +214,13 @@ export class PublicationCitation extends PureComponent {
                                                     this.props.showSourceCountIcon &&
                                                     <Grid item>
                                                         <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                        <Typography variant={'title'}>{recordValue.count}</Typography>
+                                                        <Typography variant={'h5'}>{recordValue.count}</Typography>
                                                     </Grid>
                                                 }
                                                 {
                                                     !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
                                                     <Grid item>
-                                                        <Typography variant={'title'} color={'inherit'} className={'count'}>
+                                                        <Typography variant={'h5'} color={'inherit'} className={'count'}>
                                                             {Math.round(recordValue.count)}
                                                         </Typography>
                                                     </Grid>
@@ -232,7 +228,7 @@ export class PublicationCitation extends PureComponent {
                                                 {
                                                     !this.props.hideCountDiff &&
                                                     <Grid item>
-                                                        <Typography variant={'title'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
+                                                        <Typography variant={'h5'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
                                                             +{Math.round(recordValue.difference)}
                                                         </Typography>
                                                     </Grid>

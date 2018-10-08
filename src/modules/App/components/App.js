@@ -252,7 +252,6 @@ export class App extends PureComponent {
                             {
                                 !this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage &&
                                 <Grid item>
-                                <Grid item>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
                                         TransitionComponent={Fade}>
@@ -271,13 +270,13 @@ export class App extends PureComponent {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
                                         <Hidden xsDown>
                                             <Grid item xs="auto">
-                                                <img id="logo" src={logo} style={{height: 66, width: 60}}
+                                                <img id="logo" src={smallLogo} style={{height: 66, width: 60}}
                                                     aria-label={locale.global.logo.label} onError={this.hideBrokenImage}/>
                                             </Grid>
                                         </Hidden>
                                     }
                                     <Grid item xs>
-                                        <Typography variant="title" noWrap className={classes.titleLink}>
+                                        <Typography variant={'h5'} noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
                                     </Grid>

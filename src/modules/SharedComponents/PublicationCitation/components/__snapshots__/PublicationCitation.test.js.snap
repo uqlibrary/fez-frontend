@@ -24,8 +24,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -872,7 +871,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="flat"
+        variant="text"
       >
         Claim now
       </WithStyles(Button)>
@@ -888,7 +887,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="flat"
+        variant="text"
       >
         Not mine
       </WithStyles(Button)>
@@ -904,7 +903,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="flat"
+        variant="text"
       >
         View stats
       </WithStyles(Button)>
@@ -938,8 +937,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -1786,7 +1784,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="flat"
+        variant="text"
       >
         Request Correction
       </WithStyles(Button)>
@@ -1820,8 +1818,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -2663,8 +2660,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -3506,8 +3502,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -4349,8 +4344,7 @@ exports[`PublicationCitation  should render component with publication from mult
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -6088,8 +6082,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
           xs={true}
         >
           <WithStyles(Typography)
-            component="p"
-            variant="title"
+            variant="h5"
           >
             <Link
               replace={false}
@@ -6123,7 +6116,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
                 <WithStyles(Typography)
                   className="count"
                   color="inherit"
-                  variant="title"
+                  variant="h5"
                 >
                   23
                 </WithStyles(Typography)>
@@ -6135,7 +6128,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
                   className="difference"
                   color="inherit"
                   title="Difference in social media activities"
-                  variant="title"
+                  variant="h5"
                 >
                   +
                   5
