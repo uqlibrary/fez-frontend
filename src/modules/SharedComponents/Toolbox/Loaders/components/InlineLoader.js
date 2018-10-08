@@ -10,7 +10,7 @@ const styles = theme => ({
         margin: '24px 0'
     },
     text: {
-        color: theme.palette.secondary.main,
+        color: theme.palette.primary.main,
     },
 });
 
