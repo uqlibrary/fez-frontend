@@ -26,7 +26,10 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
+        loadSuggestions: (searchKey, searchQuery = ' ') => {
+            console.log(searchQuery);
+            dispatch(actions.loadSearchKeyList(searchKey, searchQuery));
+        }
     }
 );
 
