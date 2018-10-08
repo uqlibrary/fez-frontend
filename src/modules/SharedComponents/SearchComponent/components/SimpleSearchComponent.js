@@ -161,7 +161,7 @@ export class SimpleSearchComponent extends PureComponent {
         const {classes} = this.props;
         return (
             <React.Fragment>
-                <form>
+                <form style={{margin: 8}}>
                     {
                         this.props.isInHeader ?
                             <React.Fragment>

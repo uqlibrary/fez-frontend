@@ -2,7 +2,13 @@
 
 exports[`SimpleSearchComponent should render default view 1`] = `
 <React.Fragment>
-  <form>
+  <form
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
     <React.Fragment>
       <WithStyles(Grid)
         alignItems="center"
@@ -66,7 +72,13 @@ exports[`SimpleSearchComponent should render default view 1`] = `
 
 exports[`SimpleSearchComponent should render show mobile button 1`] = `
 <React.Fragment>
-  <form>
+  <form
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
     <React.Fragment>
       <WithStyles(Grid)
         alignItems="center"
@@ -130,7 +142,13 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
 
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
 <React.Fragment>
-  <form>
+  <form
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
     <React.Fragment>
       <WithStyles(Grid)
         alignItems="center"
@@ -194,7 +212,13 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
 
 exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
 <React.Fragment>
-  <form>
+  <form
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
     <React.Fragment>
       <Hidden
         implementation="js"
@@ -280,7 +304,13 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
 
 exports[`SimpleSearchComponent should set search value from prop 1`] = `
 <React.Fragment>
-  <form>
+  <form
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
     <React.Fragment>
       <WithStyles(Grid)
         alignItems="center"
