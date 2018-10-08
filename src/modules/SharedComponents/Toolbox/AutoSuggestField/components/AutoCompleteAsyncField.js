@@ -47,12 +47,14 @@ export class AutoCompleteAsyncField extends Component {
         async: PropTypes.bool,
         disabled: PropTypes.bool,
         maxResults: PropTypes.number,
-        required: PropTypes.bool
+        required: PropTypes.bool,
+        filter: PropTypes.func
     };
 
     static defaultProps = {
         maxResults: 7,
-        required: false
+        required: false,
+        filter: () => true
     };
 
     componentDidMount() {
@@ -179,15 +181,19 @@ export class AutoCompleteAsyncField extends Component {
                                         <div {...getMenuProps()}>
                                             <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">
                                                 <Paper className={classes.paper} square style={{width: this.textInputRef ? this.textInputRef.clientWidth : null}}>
-                                                    {itemsList.slice(0, maxResults).map((suggestion, index) => {
-                                                        return this.renderSuggestion({
-                                                            suggestion,
-                                                            index,
-                                                            itemProps: getItemProps({ item: suggestion }),
-                                                            highlightedIndex,
-                                                            selectedItem,
-                                                        });
-                                                    })}
+                                                    {
+                                                        itemsList
+                                                            .filter(suggestion => this.props.filter(inputValue, suggestion.value))
+                                                            .slice(0, maxResults).map((suggestion, index) => {
+                                                                return this.renderSuggestion({
+                                                                    suggestion,
+                                                                    index,
+                                                                    itemProps: getItemProps({ item: suggestion }),
+                                                                    highlightedIndex,
+                                                                    selectedItem,
+                                                                });
+                                                            })
+                                                    }
                                                 </Paper>
                                             </Popper>
                                         </div>
