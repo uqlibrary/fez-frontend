@@ -61,9 +61,9 @@ export class AutoCompleteAsyncField extends Component {
         }
     }
 
-    getSuggestions = (inputValue) => () => {
+    getSuggestions = (event) => {
         if (this.props.async && this.props.loadSuggestions) {
-            this.props.loadSuggestions(this.props.category, inputValue);
+            this.props.loadSuggestions(this.props.category, event.target.value);
         }
     };
 
@@ -165,7 +165,7 @@ export class AutoCompleteAsyncField extends Component {
                                         fullWidth: true,
                                         classes,
                                         inputProps: getInputProps({
-                                            onChange: this.getSuggestions(inputValue)
+                                            onChange: this.getSuggestions
                                         }),
                                         error: error,
                                         helperText: error && errorText || '',

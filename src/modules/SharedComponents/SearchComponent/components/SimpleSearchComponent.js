@@ -156,12 +156,17 @@ export class SimpleSearchComponent extends PureComponent {
         event && event.target && event.target.blur();
     };
 
+    _handleSubmit = (event) => {
+        event.preventDefault();
+        this._handleSearch(event);
+    }
+
     render() {
         const txt = locale.components.searchComponent;
         const {classes} = this.props;
         return (
             <React.Fragment>
-                <form style={{margin: 8}}>
+                <form style={{margin: 8}} onSubmit={this._handleSubmit}>
                     {
                         this.props.isInHeader ?
                             <React.Fragment>

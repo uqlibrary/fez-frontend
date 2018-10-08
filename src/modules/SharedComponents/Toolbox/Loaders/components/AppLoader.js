@@ -23,7 +23,7 @@ const styles = theme => ({
         margin: '16px 0'
     },
     logo: {
-        width: 150
+        width: 200
     }
 });
 
@@ -43,7 +43,7 @@ export class AppLoader extends React.Component {
                     <CircularProgress size={80} thickness={1} className={classes.white}/>
                 </Grid>
                 <Grid item  className={classes.spaceBetween}>
-                    {logoImage && <img src={logoImage} alt={logoText} className={classes.logo}/>}
+                    {logoImage && <div className={`${logoImage} ${classes.logo}`} alt={logoText}/>}
                 </Grid>
                 <Grid item className={classes.spaceBetween}>
                     <Typography variant={'title'} className={classes.white}>{title}</Typography>
