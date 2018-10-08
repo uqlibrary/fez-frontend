@@ -186,7 +186,7 @@ export class MenuDrawer extends Component {
                                         title={logoText}
                                         openInNewIcon={false}
                                     >
-                                        <img src={logoImage} alt={logoText}/>
+                                        <div className={logoImage} style={{height: 45, margin: '0 auto'}} alt={logoText}/>
                                     </ExternalLink>
                                 }
                             </Grid>
