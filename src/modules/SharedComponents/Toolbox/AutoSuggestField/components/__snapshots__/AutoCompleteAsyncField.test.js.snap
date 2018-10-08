@@ -395,6 +395,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               "root": "root",
             }
           }
+          filter={[Function]}
           itemsList={Array []}
           itemsListLoading={false}
           loadSuggestions={
@@ -949,6 +950,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               "root": "root",
             }
           }
+          filter={[Function]}
           itemsList={Array []}
           itemsListLoading={false}
           loadSuggestions={
@@ -1504,6 +1506,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             }
           }
           disabled={true}
+          filter={[Function]}
           itemsList={Array []}
           itemsListLoading={false}
           loadSuggestions={
