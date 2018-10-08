@@ -178,6 +178,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -229,11 +230,11 @@ exports[`Application component should render alert if user is not fez author 1`]
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -273,7 +274,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -291,7 +291,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -793,6 +792,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -844,11 +844,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -888,7 +888,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -906,7 +905,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -1273,6 +1271,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1324,11 +1323,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -1368,7 +1367,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1386,7 +1384,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -1720,6 +1717,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1771,11 +1769,11 @@ exports[`Application component should render app for account with fez author wit
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -1815,7 +1813,6 @@ exports[`Application component should render app for account with fez author wit
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1833,7 +1830,6 @@ exports[`Application component should render app for account with fez author wit
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -2313,6 +2309,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2364,11 +2361,11 @@ exports[`Application component should render app for account with fez author wit
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -2408,7 +2405,6 @@ exports[`Application component should render app for account with fez author wit
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2426,7 +2422,6 @@ exports[`Application component should render app for account with fez author wit
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -2930,6 +2925,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2953,11 +2949,11 @@ exports[`Application component should render app for account with fez author wit
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -2997,7 +2993,6 @@ exports[`Application component should render app for account with fez author wit
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3005,7 +3000,6 @@ exports[`Application component should render app for account with fez author wit
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -3409,6 +3403,7 @@ exports[`Application component should render application with routing for the us
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -3460,11 +3455,11 @@ exports[`Application component should render application with routing for the us
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -3504,7 +3499,6 @@ exports[`Application component should render application with routing for the us
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3522,7 +3516,6 @@ exports[`Application component should render application with routing for the us
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
@@ -3698,6 +3691,7 @@ exports[`Application component should render for anon user 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -3749,11 +3743,11 @@ exports[`Application component should render for anon user 1`] = `
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -3793,7 +3787,6 @@ exports[`Application component should render for anon user 1`] = `
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3811,7 +3804,6 @@ exports[`Application component should render for anon user 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log in to eSpace"
@@ -4014,6 +4006,7 @@ exports[`Application component should render thesis submission for HDR without m
         container={true}
         direction="row"
         justify="flex-start"
+        spacing={8}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -4037,11 +4030,11 @@ exports[`Application component should render thesis submission for HDR without m
               lgUp={false}
               mdDown={false}
               mdUp={false}
-              smDown={true}
+              smDown={false}
               smUp={false}
               xlDown={false}
               xlUp={false}
-              xsDown={false}
+              xsDown={true}
               xsUp={false}
             >
               <WithStyles(Grid)
@@ -4081,7 +4074,6 @@ exports[`Application component should render thesis submission for HDR without m
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4089,7 +4081,6 @@ exports[`Application component should render thesis submission for HDR without m
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          xs="auto"
         >
           <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
