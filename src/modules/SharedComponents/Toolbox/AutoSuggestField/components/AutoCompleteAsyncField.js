@@ -54,7 +54,9 @@ export class AutoCompleteAsyncField extends Component {
     static defaultProps = {
         maxResults: 7,
         required: false,
-        filter: () => true
+        filter: (searchText, key) => {
+            return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+        }
     };
 
     componentDidMount() {
