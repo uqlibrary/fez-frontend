@@ -273,7 +273,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -888,7 +887,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1368,7 +1366,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1815,7 +1812,6 @@ exports[`Application component should render app for account with fez author wit
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2408,7 +2404,6 @@ exports[`Application component should render app for account with fez author wit
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2997,7 +2992,6 @@ exports[`Application component should render app for account with fez author wit
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3504,7 +3498,6 @@ exports[`Application component should render application with routing for the us
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3793,7 +3786,6 @@ exports[`Application component should render for anon user 1`] = `
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4081,7 +4073,6 @@ exports[`Application component should render thesis submission for HDR without m
                   title="Click to return to the eSpace home page"
                 >
                   UQ eSpace 
-                  eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
