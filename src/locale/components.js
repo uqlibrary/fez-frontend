@@ -30,7 +30,7 @@ export default {
             // },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace publications indexed in:',
+            publicationStatsTitle1: 'eSpace publications',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
@@ -303,7 +303,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
@@ -317,7 +317,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Author\'s name as published',
@@ -366,7 +366,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format "John Smith".</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format "John Smith".</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
@@ -380,7 +380,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
                         nameColumn: 'Editor\'s name in the format eg. "John Smith"',
@@ -428,7 +428,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
@@ -442,7 +442,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Creator\'s name as published',
@@ -489,7 +489,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
@@ -503,7 +503,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Designers name as published',
@@ -550,7 +550,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
@@ -564,7 +564,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Supervisor\'s name as published',
@@ -662,7 +662,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
@@ -676,7 +676,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Contributor\'s name as published',
@@ -711,7 +711,6 @@ export default {
                 }
             }
         },
-
         fieldOfResearchForm: {
             title: 'Field of research',
             text: 'Select up to 3 Field of Research (FoR) codes at the 4 digit level',
@@ -799,6 +798,7 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            searchBoxHint: 'Enter your search query to search all fields in eSpace',
             ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
             mobileSearchButtonAriaLabel: 'Click to search eSpace',
@@ -851,6 +851,16 @@ export default {
                         hint: 'Add a title',
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a title to search for'
+                    },
+                    'rek_book_title': {
+                        order: 2.5,
+                        map: 'Book title',
+                        title: 'Book title for chapters',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a book title to search for'
                     },
                     'rek_pid': {
                         order: 9,
@@ -912,16 +922,6 @@ export default {
                         validation: ['required', 'maxLength500'],
                         ariaLabel: 'Type a conference name to search for'
                     },
-                    'rek_book_title': {
-                        order: 12.5,
-                        map: 'Book title',
-                        title: 'Book title for chapters',
-                        combiner: 'contains',
-                        type: 'TextField',
-                        hint: 'Add a book title',
-                        validation: ['required', 'maxLength255'],
-                        ariaLabel: 'Type a book title to search for'
-                    },
                     'rek_doi': {
                         order: 8,
                         map: '',
@@ -952,7 +952,7 @@ export default {
                         loadingHint: 'Loading collections',
                         errorHint: 'There has been an error loading collections',
                         multiple: true,
-                        validation: ['required'],
+                        validation: ['requiredList'],
                         ariaLabel: 'Select multiple collections to search for'
                     },
                     'rek_genre_type': {
@@ -1062,6 +1062,9 @@ export default {
             reddit: {linkTitle: 'Share this link via Reddit'},
             email: {linkTitle: 'Share this link via Email'},
             print: {linkTitle: 'Print this record'},
+        },
+        fileUploader: {
+            label: 'Click here to select files, or drag files into this area to upload'
         }
     }
 };

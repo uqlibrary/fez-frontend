@@ -63,6 +63,5 @@ describe('PublicationSearchForm renders ', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').length).toEqual(1);
     });
 });

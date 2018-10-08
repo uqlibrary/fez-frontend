@@ -2,7 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -83,44 +85,54 @@ export default class GoogleScholar extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <StandardCard title={cardLocale.title} help={txt.help}>
-                        {cardLocale.description}
-                        <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="aut_google_scholar_id"
-                                    fullWidth
-                                    {...txt.labels.googleScholarIdField}
-                                    validate={[validation.required, validation.isValidGoogleScholarId]}
-                                    className="requiredField" />
-                            </div>
-                        </div>
-                    </StandardCard>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <StandardCard title={cardLocale.title} help={txt.help}>
+                                {cardLocale.description}
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={TextField}
+                                            disabled={this.props.submitting}
+                                            name="aut_google_scholar_id"
+                                            fullWidth
+                                            {...txt.labels.googleScholarIdField}
+                                            validate={[validation.required, validation.isValidGoogleScholarId]}
+                                            className="requiredField" />
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
 
-                    {
-                        this.getAlert({...this.props, alertLocale: txt})
-                    }
-
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
+                        {
+                            <Grid item xs={12}>
+                                {this.getAlert({...this.props, alertLocale: txt})}
+                            </Grid>
+                        }
+                    </Grid>
+                    <Grid container spacing={16}>
+                        <Hidden xsDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
+                                color={'primary'}
                                 fullWidth
                                 disabled={this.props.submitting}
-                                label={txt.labels.cancel}
+                                children={txt.labels.cancel}
                                 onClick={this._navigateToDashboard} />
-                        </div>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
+                        </Grid>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
+                                color={'secondary'}
                                 fullWidth
                                 disabled={this.props.submitting || this.props.invalid}
-                                label={txt.labels.submit}
+                                children={txt.labels.submit}
                                 onClick={this.props.handleSubmit} />
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </form>
             </StandardPage>
         );

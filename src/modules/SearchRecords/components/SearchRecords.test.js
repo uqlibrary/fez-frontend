@@ -246,6 +246,10 @@ describe('SearchRecords page', () => {
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'sometestdata'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {}
             }
         });
     });

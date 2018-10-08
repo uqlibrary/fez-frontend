@@ -1,26 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot tests for StandardPage component renders StandardPage with title 1`] = `
-<div
-  className=" pageContent"
->
-  <h1
-    className="pageTitle"
-  >
-    standard page title
-  </h1>
-  <div
-    className="layout-card"
-  />
-</div>
+<WithStyles(Page)
+  title="standard page title"
+/>
 `;
 
-exports[`Snapshot tests for StandardPage component renders StandardPage without a title 1`] = `
-<div
-  className=" pageContent"
->
-  <div
-    className="layout-card"
-  />
-</div>
-`;
+exports[`Snapshot tests for StandardPage component renders StandardPage without a title 1`] = `<WithStyles(Page) />`;

@@ -1,14 +1,24 @@
-import InlineLoader from './InlineLoader';
+import {InlineLoader} from './InlineLoader';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = {
+        ...testProps,
+        classes: {
+            text: {
+                fontWeight: 200,
+                margin: '24px 0'
+            },
+        }
+    };
     return getElement(InlineLoader, props, isShallow);
 }
 
-describe('InlineLoader snapshots tests', () => {
-    it('renders loader', () => {
-        const wrapper = setup({message: 'Waiting to load...'});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+describe('Component InlineLoader', () => {
+    it('should render as expected', () => {
+        const props = {
+            message: 'This is a tst'
+        };
+        const wrapper = setup({...props});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

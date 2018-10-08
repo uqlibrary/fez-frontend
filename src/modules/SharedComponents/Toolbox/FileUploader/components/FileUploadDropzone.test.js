@@ -1,7 +1,8 @@
-import FileUploadDropzone from './FileUploadDropzone';
+import {FileUploadDropzone} from './FileUploadDropzone';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         onDrop: jest.fn(),
         locale: {},
         maxSize: 1000,

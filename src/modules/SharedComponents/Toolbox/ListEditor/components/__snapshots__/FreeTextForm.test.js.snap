@@ -2,126 +2,175 @@
 
 exports[`FreeTextForm tests  rendering active form 1`] = `
 <div
-  className="columns"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    alignItems="baseline"
+    container={true}
+    display="row"
+    spacing={16}
   >
-    <TextField
-      className="mui-long-labels-fix"
-      disabled={false}
-      errorText={null}
-      floatingLabelFixed={false}
-      floatingLabelText="Item name"
-      fullWidth={true}
-      hintText="Please type the item name"
-      multiLine={false}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-      value=""
-    />
-  </div>
-  <div
-    className="column is-narrow"
-  >
-    <RaisedButton
-      className="is-mui-spacing-button"
-      disabled={true}
-      fullWidth={true}
-      label="Add"
-      labelPosition="after"
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
-  </div>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    >
+      <TextField
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        helperText={null}
+        inputRef={[Function]}
+        label="Item name"
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Please type the item name"
+        required={false}
+        select={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="raised"
+      >
+        Add
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`FreeTextForm tests  rendering disabled form 1`] = `
 <div
-  className="columns"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    alignItems="baseline"
+    container={true}
+    display="row"
+    spacing={16}
   >
-    <TextField
-      className="mui-long-labels-fix"
-      disabled={true}
-      errorText={null}
-      floatingLabelFixed={false}
-      floatingLabelText="Item name"
-      fullWidth={true}
-      hintText="Please type the item name"
-      multiLine={false}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-      value=""
-    />
-  </div>
-  <div
-    className="column is-narrow"
-  >
-    <RaisedButton
-      className="is-mui-spacing-button"
-      disabled={true}
-      fullWidth={true}
-      label="Add"
-      labelPosition="after"
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
-  </div>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    >
+      <TextField
+        disabled={true}
+        error={false}
+        fullWidth={true}
+        helperText={null}
+        inputRef={[Function]}
+        label="Item name"
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Please type the item name"
+        required={false}
+        select={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="raised"
+      >
+        Add
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
 <div
-  className="columns"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
 >
-  <div
-    className="column"
+  <WithStyles(Grid)
+    alignItems="baseline"
+    container={true}
+    display="row"
+    spacing={16}
   >
-    <TextField
-      className="mui-long-labels-fix"
-      disabled={false}
-      errorText={null}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      multiLine={false}
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      rows={1}
-      type="text"
-      underlineShow={true}
-      value="one"
-    />
-    <div
-      className="validationWarningMessage"
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
     >
-      reminder text
-    </div>
-  </div>
-  <div
-    className="column is-narrow"
-  >
-    <RaisedButton
-      className="is-mui-spacing-button"
-      disabled={true}
-      fullWidth={true}
-      label="Add"
-      labelPosition="after"
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-    />
-  </div>
+      <TextField
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        helperText={null}
+        inputRef={[Function]}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        required={false}
+        select={false}
+        value="one"
+      />
+      <WithStyles(Typography)
+        className=""
+        variant="caption"
+      >
+        reminder text
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="raised"
+      >
+        Add
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;

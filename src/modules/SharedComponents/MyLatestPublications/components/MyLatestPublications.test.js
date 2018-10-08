@@ -1,5 +1,5 @@
 import {latestPubsPayload} from 'mock/data/testing/latestPublications';
-import MyLatestPublications from './MyLatestPublications';
+import {MyLatestPublications} from './MyLatestPublications';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -7,6 +7,7 @@ function setup(testProps, isShallow = true){
         actions: {
             searchLatestPublications: jest.fn()
         },
+        classes: {blueButton: 'blueButton'},
         ...testProps
     };
     return getElement(MyLatestPublications, props, isShallow);

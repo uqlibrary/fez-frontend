@@ -1,18 +1,19 @@
 import {dataCollection} from 'mock/data/testing/records';
-import RelatedPublications from "./RelatedPublications";
+import {RelatedPublications} from "./RelatedPublications";
 
 function setup(testProps, isShallow = true){
     const props = {
-        ...testProps,
+        classes: {list: 'list', data: 'data'},
         publication: testProps.publication || dataCollection,
-        title: testProps.title || ''
+        title: testProps.title || '',
+        ...testProps
     };
     return getElement(RelatedPublications, props, isShallow);
 }
 
 describe('Related publications Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.relatedPublications li').length).toEqual(2);
     });

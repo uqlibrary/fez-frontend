@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application component should render alert if user is not fez author 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -161,86 +161,150 @@ exports[`Application component should render alert if user is not fez author 1`]
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -320,7 +384,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -332,22 +396,28 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
-        <Alert
-          allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
+        <WithStyles(Alert)
           message="Please contact the UQ eSpace administrator to resolve this."
-          showLoader={false}
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -540,14 +610,14 @@ exports[`Application component should render alert if user is not fez author 1`]
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -706,86 +776,150 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J RHD Student"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -865,7 +999,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -1069,14 +1203,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for HDR without ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1122,86 +1256,150 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J RHD Student"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1257,7 +1455,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -1269,22 +1467,28 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
-        <Alert
-          allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
+        <WithStyles(Alert)
           message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
-          showLoader={false}
           title="ORCID ID REQUIRED"
           type="error_outline"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -1333,14 +1537,14 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -1499,86 +1703,150 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -1658,7 +1926,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -1862,14 +2130,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2028,86 +2296,150 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -2187,7 +2519,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -2199,24 +2531,30 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
-    <div
-      className="dashAlert"
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
     >
-      <div
-        className="layout-card"
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
       >
-        <Alert
+        <WithStyles(Alert)
           action={[Function]}
           actionButtonLabel="Click here to link or register"
-          allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
-          showLoader={false}
           title="ORCID ID REQUIRED"
           type="warning"
         />
-      </div>
-    </div>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -2409,14 +2747,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -2575,84 +2913,116 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
-        />
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
             }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={false}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <div
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -2856,14 +3226,14 @@ exports[`Application component should render app for account with fez author wit
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3022,86 +3392,150 @@ exports[`Application component should render application with routing for the us
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - undefined"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -3181,7 +3615,7 @@ exports[`Application component should render application with routing for the us
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3194,22 +3628,18 @@ exports[`Application component should render application with routing for the us
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <div
-      className="isLoading is-centered"
-    >
-      <InlineLoader
-        message="Loading user account..."
-      />
-    </div>
+    <WithStyles(InlineLoader)
+      message="Loading user account..."
+    />
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render for anon user 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3251,86 +3681,150 @@ exports[`Application component should render for anon user 1`] = `
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          md={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
-        </div>
-        <div
-          className="column is-narrow auth-button-column"
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
         >
-          <AuthButton
+          <WithStyles(AuthButton)
             ariaLabel="Click to log in to eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
-            }
             isAuthorizedUser={false}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText=""
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
     history={Object {}}
@@ -3377,7 +3871,7 @@ exports[`Application component should render for anon user 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3432,27 +3926,32 @@ exports[`Application component should render for anon user 1`] = `
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render loading screen while account is loading 1`] = `
-<div
-  className="layout-fill"
+<WithStyles(Grid)
+  container={true}
+  zeroMinWidth={true}
 >
-  <AppLoader
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="University of Queensland"
-    progressColor="#FFF"
-    title="UQ eSpace "
-  />
-</div>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(AppLoader)
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="University of Queensland"
+      title="UQ eSpace "
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`Application component should render thesis submission for HDR without menu 1`] = `
-<div
-  className="layout-fill align-stretch"
+<WithStyles(Grid)
+  container={true}
 >
   <withRouter(Connect(Meta))
     routesConfig={
@@ -3498,84 +3997,116 @@ exports[`Application component should render thesis submission for HDR without m
       ]
     }
   />
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        aria-label="Click to open the main navigation"
-        className="main-menu-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
         }
-        iconStyle={Object {}}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        wrap="nowrap"
       >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        className="columns is-gapless appbar-right-columns is-mobile"
-      >
-        <div
-          className="column search-column"
-        />
-        <div
-          className="column is-narrow auth-button-column"
-        >
-          <AuthButton
-            ariaLabel="Click to log out of eSpace"
-            hoveredStyle={
-              Object {
-                "backgroundColor": "rgba(0,0,0,0.3)",
-                "borderRadius": "50%",
-              }
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
             }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="center"
+            spacing={16}
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                xs="auto"
+              >
+                <img
+                  aria-label="University of Queensland"
+                  id="logo"
+                  onError={[Function]}
+                  src=""
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            >
+              <WithStyles(Typography)
+                noWrap={true}
+                variant="title"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                  eSpace
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J RHD Student"
           />
-        </div>
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonClick={[Function]}
-    showMenuIconButton={false}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title={
-      <a
-        className="appTitle"
-        href="/"
-        title="Click to return to the eSpace home page"
-      >
-        UQ eSpace 
-        
-      </a>
-    }
-    titleStyle={Object {}}
-    zDepth={1}
-  />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
   <div
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3635,7 +4166,7 @@ exports[`Application component should render thesis submission for HDR without m
       />
     </Switch>
   </div>
-  <Connect(HelpDrawer) />
-  <OfflineSnackbar />
-</div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
 `;

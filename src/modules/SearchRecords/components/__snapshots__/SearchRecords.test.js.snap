@@ -4,31 +4,45 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
-    message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
-    showLoader={false}
-    title="Error"
-    type="error_outline"
-  />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Alert)
+        message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
+        pushToTop={true}
+        title="Error"
+        type="error_outline"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -36,26 +50,34 @@ exports[`SearchRecords page renders loading screen while export publications loa
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -63,64 +85,99 @@ exports[`SearchRecords page should render loading screen while export publicatio
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
       >
-        <span>
-          Searching for publications...
-        </span>
-        <PublicationsListSorting
-          disabled={true}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          sortBy="score"
-          sortDirection="Desc"
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
         />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-        />
-        <div
-          className="is-centered"
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      sm={true}
+      xs={true}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <InlineLoader
-            message="Exporting search results..."
-          />
-        </div>
-        <PublicationsListPaging
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Searching for publications...
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={true}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              sortBy="score"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          container={true}
+          justify="center"
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(InlineLoader)
+              message="Exporting search results..."
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(PublicationsListPaging)
           disabled={true}
           loading={true}
           onPageChanged={[Function]}
         />
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -128,71 +185,107 @@ exports[`SearchRecords page should render loading screen while loading publicati
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={true}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="is-centered"
-  >
-    <InlineLoader
-      message="Searching for publications..."
-    />
-  </div>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
       >
-        <span>
-          Searching for publications...
-        </span>
-        <PublicationsListSorting
-          disabled={true}
-          onExportPublications={[Function]}
-          onPageSizeChanged={[Function]}
-          onSortByChanged={[Function]}
-          pageSize={20}
-          sortBy="score"
-          sortDirection="Desc"
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={true}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
         />
-        <PublicationsListPaging
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-        />
-        <div
-          className="is-centered"
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InlineLoader)
+        message="Searching for publications..."
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      sm={true}
+      xs={true}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
         >
-          <InlineLoader
-            message="Searching for publications..."
-          />
-        </div>
-        <PublicationsListPaging
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Searching for publications...
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={true}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              sortBy="score"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          container={true}
+          justify="center"
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(InlineLoader)
+              message="Searching for publications..."
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(PublicationsListPaging)
           disabled={true}
           loading={true}
           onPageChanged={[Function]}
         />
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -200,33 +293,42 @@ exports[`SearchRecords page should render loading screen while loading search re
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={true}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="is-centered"
-  >
-    <InlineLoader
-      message="Searching for publications..."
-    />
-  </div>
-  <div
-    className="columns"
-  />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={true}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InlineLoader)
+        message="Searching for publications..."
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -234,31 +336,38 @@ exports[`SearchRecords page should render no results 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
         text={
           <div>
             We were unable to find any results.
@@ -270,8 +379,8 @@ exports[`SearchRecords page should render no results 1`] = `
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -279,26 +388,34 @@ exports[`SearchRecords page should render placeholders 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -306,30 +423,37 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "showOpenAccessOnly": true,
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "showOpenAccessOnly": true,
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
         text={
           <div>
             We were unable to find any results.
@@ -341,8 +465,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -350,32 +474,39 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {
-            "Display type": 179,
-          },
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {
+                "Display type": 179,
+              },
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
         text={
           <div>
             We were unable to find any results.
@@ -387,8 +518,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -396,35 +527,42 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "ranges": Object {
-            "Year published": Object {
-              "from": 2015,
-              "to": 2018,
-            },
-          },
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "ranges": Object {
+                "Year published": Object {
+                  "from": 2015,
+                  "to": 2018,
+                },
+              },
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
         text={
           <div>
             We were unable to find any results.
@@ -436,8 +574,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-  </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
 
@@ -445,31 +583,38 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <StandardCard
-    className="searchComponent"
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    <withRouter(Connect(SearchComponent))
-      activeFacets={
-        Object {
-          "filters": Object {},
-          "ranges": Object {},
-        }
-      }
-      className="search-body"
-      facetsChanged={[Function]}
-      searchLoading={false}
-      showAdvancedSearchButton={true}
-      updateFacetExcludesFromSearchFields={[Function]}
-    />
-  </StandardCard>
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
       <StandardCard
-        className=""
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
         text={
           <div>
             We were unable to find any results.
@@ -481,46 +626,61 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </div>
-    <div
-      className="column is-3 is-hidden-mobile"
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
     >
-      <StandardRighthandCard
-        title="Refine results"
+      <WithStyles(Grid)
+        item={true}
+        md={3}
       >
-        <FacetsFilter
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {},
+              }
             }
-          }
-          disabled={false}
-          excludeFacetsList={Array []}
-          facetsData={
-            Object {
-              "Another facet": 2,
-              "Some facet": 1,
+            disabled={false}
+            excludeFacetsList={Array []}
+            facetsData={
+              Object {
+                "Another facet": 2,
+                "Some facet": 1,
+              }
             }
-          }
-          lookupFacetsList={
-            Object {
-              "Author": "Author (lookup)",
-              "Collection": "Collection (lookup)",
-              "Subject": "Subject (lookup)",
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
             }
-          }
-          onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-              "Subtype": "Publication subtype",
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Publication type",
+                "Subtype": "Publication subtype",
+              }
             }
-          }
-          showOpenAccessFilter={true}
-        />
-      </StandardRighthandCard>
-    </div>
-  </div>
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </StandardPage>
 `;

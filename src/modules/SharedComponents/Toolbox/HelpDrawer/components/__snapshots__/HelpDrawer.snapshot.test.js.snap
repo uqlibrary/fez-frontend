@@ -1,48 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HelpDrawer snapshots tests renders menu 1`] = `
-<Drawer
-  containerClassName="help-drawer"
-  disableSwipeToOpen={true}
-  docked={false}
-  onRequestChange={[Function]}
+<WithStyles(Drawer)
+  anchor="right"
+  classes={
+    Object {
+      "paper": undefined,
+    }
+  }
+  onClose={[Function]}
   open={true}
-  openSecondary={true}
-  swipeAreaWidth={30}
-  width={320}
-  zDepth={2}
 >
-  <div
-    className="layout-fill side-drawer"
+  <WithStyles(Grid)
+    container={true}
+    spacing={40}
   >
-    <div
-      className="content"
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <span
-        className="cardTitle"
+      <WithStyles(Typography)
+        component="span"
+        key="title"
+        variant="title"
       >
         HelpDrawer Title
-      </span>
-      <div
-        className="body-1"
+      </WithStyles(Typography)>
+      <WithStyles(Typography)
+        component="span"
+        key="text"
+        variant="body1"
       >
         Integer mattis rutrum velit nec posuere. Quisque rhoncus quam elit.
-      </div>
-    </div>
-    <div
-      className="layout-padding"
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
     >
-      <RaisedButton
-        className="is-pulled-right"
-        disabled={false}
-        fullWidth={false}
-        label="Close"
-        labelPosition="after"
+      <WithStyles(Button)
+        color="primary"
         onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
-</Drawer>
+        variant="contained"
+      >
+        Close
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Drawer)>
 `;

@@ -3,6 +3,7 @@ import {researchReport} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         ...testProps,
         prefix: testProps.prefix || ' ',
         suffix: testProps.suffix || '.',

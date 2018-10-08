@@ -5,10 +5,11 @@ import {propTypes} from 'redux-form/immutable';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import {validation} from 'config';
+
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 export default class PublicationSearchForm extends Component {
     static propTypes = {
@@ -24,42 +25,44 @@ export default class PublicationSearchForm extends Component {
     render() {
         return (
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
-                <div>{this.props.locale.text}</div>
                 <form onSubmit={this.props.handleSubmit}>
-                    <div className="columns">
-                        <div className="column">
+                    <Grid container spacing={16} alignItems={'center'}>
+                        <Grid item xs={12}>
+                            <Typography gutterBottom>{this.props.locale.text}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm>
                             <Field
                                 component={TextField}
-                                className="requiredField"
+                                color={'primary'}
+                                required
                                 name="searchQuery"
                                 fullWidth
-                                floatingLabelText={this.props.locale.fieldLabels.search}
-                                autoComplete="off"
+                                label={this.props.locale.fieldLabels.search}
                                 autoFocus
                                 validate={[validation.required]}/>
-                        </div>
-                        <div className="column is-narrow">
-                            <RaisedButton
-                                className="is-mui-spacing-button"
-                                label={this.props.locale.submit}
+                        </Grid>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                variant={'raised'}
+                                children={this.props.locale.submit}
                                 fullWidth
-                                secondary
+                                color={'primary'}
                                 onClick={this.props.handleSubmit}
                                 disabled={this.props.invalid}
                             />
-                        </div>
+                        </Grid>
                         {
                             this.props.onSkipSearch &&
-                            <div className="column is-narrow">
-                                <FlatButton
-                                    className="is-mui-spacing-button"
-                                    label={this.props.locale.skip}
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'flat'}
+                                    children={this.props.locale.skip}
                                     fullWidth
                                     onClick={this.props.onSkipSearch}
                                 />
-                            </div>
+                            </Grid>
                         }
-                    </div>
+                    </Grid>
                 </form>
             </StandardCard>
         );

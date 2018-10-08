@@ -1,6 +1,6 @@
 jest.dontMock('./Dashboard');
 
-import Dashboard from './Dashboard';
+import {Dashboard} from './Dashboard';
 import * as mock from 'mock/data';
 
 const publicationTotalCount = {
@@ -10,6 +10,7 @@ const publicationTotalCount = {
 };
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         account: mock.accounts.uqresearcher,
         accountAuthorDetailsLoading: false,
         publicationTotalCount: null,

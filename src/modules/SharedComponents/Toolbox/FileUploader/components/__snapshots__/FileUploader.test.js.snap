@@ -1,13 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -22,9 +23,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -57,75 +56,80 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -140,9 +144,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -175,88 +177,92 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2020-01-01T10:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
-              },
-              "lastModified": 12345678912,
-              "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <div
-      className="open-access-checkbox error-checkbox"
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
     >
-      <Checkbox
-        checked={false}
-        disabled={false}
-        label="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
-        labelPosition="right"
-        onCheck={[Function]}
-      />
-    </div>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2020-01-01T10:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
+              "name": "a.txt",
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadTermsAndConditions)
+          accessTermsAndConditions="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
+          isTermsAndConditionsAccepted={false}
+          onAcceptTermsAndConditions={[Function]}
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -271,9 +277,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -306,88 +310,92 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2020-01-01T10:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
-              },
-              "lastModified": 12345678912,
-              "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <div
-      className="open-access-checkbox"
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
     >
-      <Checkbox
-        checked={true}
-        disabled={false}
-        label="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
-        labelPosition="right"
-        onCheck={[Function]}
-      />
-    </div>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2020-01-01T10:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
+              "name": "a.txt",
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadTermsAndConditions)
+          accessTermsAndConditions="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
+          isTermsAndConditionsAccepted={true}
+          onAcceptTermsAndConditions={[Function]}
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -402,9 +410,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -437,77 +443,82 @@ exports[`Component FileUploader should accept terms and condition and reset back
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "access_condition_id": 8,
-          "date": null,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "access_condition_id": 8,
+              "date": null,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -523,9 +534,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -558,103 +567,108 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -670,9 +684,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -705,105 +717,110 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2020-01-01T10:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2020-01-01T10:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -819,9 +836,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -854,107 +869,112 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2020-01-01T10:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2020-01-01T10:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 8,
-          "date": null,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 8,
+              "date": null,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -972,9 +992,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1007,163 +1025,168 @@ exports[`Component FileUploader should not reset file access or embargo date inf
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 4 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={2}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2020-01-01T10:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={2}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2020-01-01T10:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={2}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 8,
-          "date": null,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={2}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 8,
+              "date": null,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={2}
-      index={2}
-      key="c.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={2}
+          index={2}
+          key="c.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "c.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "c.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "c.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={2}
-      index={3}
-      key="d.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={2}
+          index={3}
+          key="d.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "d.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "d.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "d.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render default component 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
@@ -1174,9 +1197,7 @@ exports[`Component FileUploader should render default component 1`] = `
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1209,17 +1230,18 @@ exports[`Component FileUploader should render default component 1`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render disabled component 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     disabled={true}
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1231,9 +1253,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1266,17 +1286,18 @@ exports[`Component FileUploader should render disabled component 1`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
@@ -1287,9 +1308,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1322,17 +1341,18 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -1348,9 +1368,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1383,103 +1401,108 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -1494,9 +1517,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1529,75 +1550,80 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 1 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
@@ -1608,9 +1634,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1643,17 +1667,18 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access condition dropdown based on quick template Id and require open access 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
@@ -1664,9 +1689,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1699,17 +1722,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access condition dropdown based on quick template Id and require open access 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -1725,9 +1749,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1760,107 +1782,112 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      defaultAccessCondition={3}
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 3,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          defaultAccessCondition={3}
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 3,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      defaultAccessCondition={3}
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 3,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          defaultAccessCondition={3}
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 3,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
@@ -1871,9 +1898,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1906,17 +1931,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -1932,9 +1958,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -1967,103 +1991,108 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -2079,9 +2108,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -2114,105 +2141,110 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "access_condition_id": 8,
-          "date": null,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "access_condition_id": 8,
+              "date": null,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -2228,9 +2260,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -2263,116 +2293,120 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2020-01-01T10:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
-              },
-              "lastModified": 12345678912,
-              "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
-              },
-              "lastModified": 12345678912,
-              "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
-    <div
-      className="open-access-checkbox error-checkbox"
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
     >
-      <Checkbox
-        checked={false}
-        disabled={false}
-        label="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
-        labelPosition="right"
-        onCheck={[Function]}
-      />
-    </div>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2020-01-01T10:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
+              "name": "a.txt",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
+              "name": "b.txt",
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadTermsAndConditions)
+          accessTermsAndConditions="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
+          isTermsAndConditionsAccepted={false}
+          onAcceptTermsAndConditions={[Function]}
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 5`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -2388,9 +2422,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -2423,116 +2455,120 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={true}
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "access_condition_id": 9,
-          "date": "2017-10-10T00:00:00-00:15",
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
-              },
-              "lastModified": 12345678912,
-              "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={true}
-      uploadedFile={
-        Object {
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
-              },
-              "lastModified": 12345678912,
-              "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
-    <div
-      className="open-access-checkbox error-checkbox"
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
     >
-      <Checkbox
-        checked={false}
-        disabled={false}
-        label="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
-        labelPosition="right"
-        onCheck={[Function]}
-      />
-    </div>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "access_condition_id": 9,
+              "date": "2017-10-10T00:00:00-00:15",
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
+              "name": "a.txt",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={true}
+          uploadedFile={
+            Object {
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
+              "name": "b.txt",
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadTermsAndConditions)
+          accessTermsAndConditions="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
+          isTermsAndConditionsAccepted={false}
+          onAcceptTermsAndConditions={[Function]}
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with default access condition based on quick template Id 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
@@ -2543,9 +2579,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -2578,17 +2612,18 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with default access condition based on quick template Id 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
-  <FileUploadDropzone
+  </WithStyles(Typography)>
+  <WithStyles(FileUploadDropzone)
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
@@ -2604,9 +2639,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
         </p>,
-        "fileUploadRestrictionHeading": <h3>
-          File upload restrictions
-        </h3>,
+        "fileUploadRestrictionHeading": "File upload restrictions",
         "fileUploadRestrictions": <div>
           Please ensure your files:
           <ul>
@@ -2639,95 +2672,99 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     maxSize={1000}
     onDrop={[Function]}
   />
-  <Alert
-    allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
+  <WithStyles(Alert)
     message="Successfully added 2 file(s) to upload queue."
-    showLoader={false}
     title="Success"
     type="done"
   />
   <div
-    className="metadata-container"
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 8,
+      }
+    }
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
-      onDeleteAll={[Function]}
-      requireOpenAccessStatus={false}
-    />
-    <Connect(FileUploadRow)
-      defaultAccessCondition={3}
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={0}
-      key="a.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 3,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(FileUploadRowHeader)
+          onDeleteAll={[Function]}
+          requireOpenAccessStatus={false}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithTheme(WithWidth(FileUploadRow))
+          defaultAccessCondition={3}
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={0}
+          key="a.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 3,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "a.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "a.txt",
-          "size": 0,
-        }
-      }
-    />
-    <Connect(FileUploadRow)
-      defaultAccessCondition={3}
-      fileSizeUnit="K"
-      focusOnIndex={0}
-      index={1}
-      key="b.txt"
-      onAccessConditionChange={[Function]}
-      onDelete={[Function]}
-      onEmbargoDateChange={[Function]}
-      requireOpenAccessStatus={false}
-      uploadedFile={
-        Object {
-          "access_condition_id": 3,
-          "fileData": File {
-            Symbol(impl): FileImpl {
-              "_buffer": Object {
-                "data": Array [],
-                "type": "Buffer",
+              "size": 0,
+            }
+          }
+        />
+        <WithTheme(WithWidth(FileUploadRow))
+          defaultAccessCondition={3}
+          fileSizeUnit="K"
+          focusOnIndex={0}
+          index={1}
+          key="b.txt"
+          onAccessConditionChange={[Function]}
+          onDelete={[Function]}
+          onEmbargoDateChange={[Function]}
+          requireOpenAccessStatus={false}
+          uploadedFile={
+            Object {
+              "access_condition_id": 3,
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
               },
-              "lastModified": 12345678912,
               "name": "b.txt",
-              "type": "",
-              Symbol(wrapper): [Circular],
-            },
-          },
-          "name": "b.txt",
-          "size": 0,
-        }
-      }
-    />
+              "size": 0,
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
-</div>
+</React.Fragment>
 `;

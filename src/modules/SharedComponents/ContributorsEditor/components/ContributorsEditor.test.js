@@ -3,20 +3,24 @@ import {authorsSearch} from 'mock/data';
 
 function setup(testProps, isShallow = true){
     const props = {
+        author: { aut_id: 1 },
+        classes: {
+            list: 'list',
+            scroll: 'scroll'
+        },
         ...testProps,
-        author: testProps.author || { aut_id: 1 }
     };
     return getElement(ContributorsEditor, props, isShallow);
 }
 
 describe('ContributorsEditor tests ', () => {
     it('rendering full component with a defined className', () => {
-        const wrapper = setup({ className: 'requiredField' }, false);
+        const wrapper = setup({ className: 'requiredField' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering full component with identifier lookup', () => {
-        const wrapper = setup({ showIdentifierLookup: true }, false);
+        const wrapper = setup({ showIdentifierLookup: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -111,8 +115,9 @@ describe('ContributorsEditor tests ', () => {
 
     it('renders 3 contributor rows with no infinite scroll', () => {
         const wrapper = setup({contributors: []});
-        wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
-        expect(wrapper.find('ContributorRow').length).toEqual(3);
+        wrapper.setState({ contributors: [ {nameAsPublished: 1}, {nameAsPublished: 2}, {nameAsPublished: 3}]});
+        wrapper.update();
+        expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(3);
         expect(wrapper.find('Infinite').length).toEqual(0);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -120,15 +125,14 @@ describe('ContributorsEditor tests ', () => {
     it('renders 4 contributor rows wrapped in an infinite scroll', () => {
         const wrapper = setup({contributors: []});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}, {displayName: 4}]});
-        expect(wrapper.find('ContributorRow').length).toEqual(4);
-        expect(wrapper.find('Infinite').length).toEqual(1);
+        expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should show validation error', () => {
-        const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}}, false);
-        expect(wrapper.find('.validationErrorMessage').length).toEqual(1);
+        const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}});
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('WithStyles(Typography)').length).toEqual(1);
     });
 
 });

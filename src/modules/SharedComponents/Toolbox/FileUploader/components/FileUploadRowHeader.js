@@ -1,15 +1,22 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
 
-export default class FileUploadRowHeader extends PureComponent {
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import {withStyles} from '@material-ui/core/styles';
+
+export class FileUploadRowHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         locale: PropTypes.object,
         requireOpenAccessStatus: PropTypes.bool,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -33,32 +40,45 @@ export default class FileUploadRowHeader extends PureComponent {
 
     render() {
         const {filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation} = this.props.locale;
-
+        const {classes, requireOpenAccessStatus, disabled} = this.props;
         return (
-            <div className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile">
+            <Hidden only={['xs']}>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.props.onDeleteAll}
-                    locale={deleteAllFilesConfirmation}/>
-                <div className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header">
-                    {filenameColumn}
+                    locale={deleteAllFilesConfirmation}
+                />
+                <div style={{flexGrow: 1, padding: 4}}>
+                    <Grid container direction="row" alignItems="center" spacing={8} className={classes.header} gutter={8}>
+                        <Grid item md={6} sm={5}>
+                            <Typography variant="caption" gutterBottom>{filenameColumn}</Typography>
+                        </Grid>
+                        <Grid item md={3} sm={4}>
+                            <Typography variant="caption" gutterBottom>{requireOpenAccessStatus && fileAccessColumn}</Typography>
+                        </Grid>
+                        <Grid item md={2} sm={2}>
+                            <Typography variant="caption" gutterBottom>{requireOpenAccessStatus && embargoDateColumn}</Typography>
+                        </Grid>
+                        <Grid item xs={1} className={classes.icon}>
+                            <Tooltip title={deleteAllFiles}>
+                                <IconButton onClick={this._showConfirmation} disabled={disabled}>
+                                    <DeleteForeverIcon/>
+                                </IconButton>
+                            </Tooltip>
+                        </Grid>
+                    </Grid>
                 </div>
-                <div className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header">
-                    {
-                        this.props.requireOpenAccessStatus && fileAccessColumn
-                    }
-                </div>
-                <div className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header">
-                    {
-                        this.props.requireOpenAccessStatus && embargoDateColumn
-                    }
-                </div>
-                <div className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered">
-                    <IconButton tooltip={deleteAllFiles} onClick={this._showConfirmation} disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">delete_forever</FontIcon>
-                    </IconButton>
-                </div>
-            </div>
+            </Hidden>
         );
     }
 }
+const styles = () => ({
+    icon: {
+        textAlign: 'center'
+    },
+    header: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+    }
+});
+
+export default withStyles(styles)(FileUploadRowHeader);

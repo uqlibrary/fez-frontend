@@ -6,16 +6,29 @@ import {locale} from 'locale';
 
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import RaisedButton from 'material-ui/RaisedButton';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class MyLatestPublications extends PureComponent {
+const styles = (theme) => ({
+    blueButton: {
+        backgroundColor: theme.palette.accent.main,
+        color: theme.palette.white.main,
+        '&:hover': {
+            backgroundColor: theme.palette.accent.dark,
+        }
+    }
+});
+
+export class MyLatestPublications extends PureComponent {
     static propTypes = {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
         loadingLatestPublications: PropTypes.bool,
         accountAuthorDetailsLoading: PropTypes.bool,
         actions: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -46,22 +59,26 @@ export default class MyLatestPublications extends PureComponent {
         }
 
         return (
-            <div className="latestPubs">
+            <React.Fragment>
                 <PublicationsList
                     publicationsList={this.props.latestPublicationsList}
                     showDefaultActions/>
-                <div className="columns">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow">
-                        <RaisedButton
-                            secondary
-                            label={`${txt.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                            onClick={this._viewMyResearch}/>
-                    </div>
-                </div>
-            </div>
+                <Grid container>
+                    <Grid item xs />
+                    <Grid item xs={12} sm="auto">
+                        <Button
+                            variant="contained"
+                            onClick={this._viewMyResearch}
+                            color="secondary"
+                            className={this.props.classes.blueButton}
+                        >
+                            {`${txt.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
+                        </Button>
+                    </Grid>
+                </Grid>
+            </React.Fragment>
         );
     }
 }
 
-
+export default withStyles(styles)(MyLatestPublications);

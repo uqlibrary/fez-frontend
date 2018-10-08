@@ -1,180 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
-<SelectField
-  autoWidth={false}
-  disabled={true}
-  dropDownMenuProps={
-    Object {
-      "animated": false,
-    }
-  }
-  floatingLabelText="Select item loading..."
-  fullWidth={false}
-  hintText={null}
-  id="selectedValue"
-  maxHeight={250}
-  menuItemStyle={
-    Object {
-      "lineHeight": "24px",
-      "paddingBottom": "4px",
-      "paddingTop": "4px",
-      "whiteSpace": "normal",
-    }
-  }
-  multiple={false}
-  name="selectedValue"
-  onChange={[Function]}
-  value={null}
+<WithStyles(FormControl)
+  error={false}
+  fullWidth={true}
 >
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
+  <WithStyles(InputLabel)>
+    Select item
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    autoWidth={false}
+    disabled={true}
+    multiple={false}
+    onChange={[Function]}
+    value=""
+  >
+    <WithStyles(MenuItem)
+      aria-label="Item 1"
+      classes={
+        Object {
+          "selected": undefined,
+        }
       }
-    }
-    checked={false}
-    className=""
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="select_field_0"
-    primaryText="Item 1"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
+      key="1"
+      style={
+        Object {
+          "display": "block",
+        }
       }
-    }
-    value="Item 1"
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
+      value="Item 1"
+    >
+      Item 1
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      aria-label="Item 2"
+      classes={
+        Object {
+          "selected": undefined,
+        }
       }
-    }
-    checked={false}
-    className=""
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="select_field_1"
-    primaryText="Item 2"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
+      key="2"
+      style={
+        Object {
+          "display": "block",
+        }
       }
-    }
-    value="Item 2"
-  />
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
+      value="Item 2"
+    >
+      Item 2
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      aria-label="Item 3"
+      classes={
+        Object {
+          "selected": undefined,
+        }
       }
-    }
-    checked={false}
-    className=""
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="select_field_2"
-    primaryText="Item 3"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
+      key="3"
+      style={
+        Object {
+          "display": "block",
+        }
       }
-    }
-    value="Item 3"
-  />
-</SelectField>
+      value="Item 3"
+    >
+      Item 3
+    </WithStyles(MenuItem)>
+  </WithStyles(Select)>
+</WithStyles(FormControl)>
 `;
 
 exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
-<SelectField
-  autoWidth={false}
-  disabled={false}
-  dropDownMenuProps={
-    Object {
-      "animated": false,
-    }
-  }
-  floatingLabelText="Select item "
-  fullWidth={false}
-  hintText={null}
-  id="selectedValue"
-  maxHeight={250}
-  menuItemStyle={
-    Object {
-      "lineHeight": "24px",
-      "paddingBottom": "4px",
-      "paddingTop": "4px",
-      "whiteSpace": "normal",
-    }
-  }
-  multiple={false}
-  name="selectedValue"
-  onChange={[Function]}
-/>
+<WithStyles(FormControl)
+  error={false}
+  fullWidth={true}
+>
+  <WithStyles(InputLabel)>
+    Select item
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    autoWidth={false}
+    multiple={false}
+    onChange={[Function]}
+    value=""
+  />
+</WithStyles(FormControl)>
 `;
 
 exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
-<SelectField
-  autoWidth={false}
-  disabled={false}
-  dropDownMenuProps={
-    Object {
-      "animated": false,
-    }
-  }
-  floatingLabelText="Select item "
-  fullWidth={false}
-  hintText={null}
-  id="selectedValue"
-  maxHeight={250}
-  menuItemStyle={
-    Object {
-      "lineHeight": "24px",
-      "paddingBottom": "4px",
-      "paddingTop": "4px",
-      "whiteSpace": "normal",
-    }
-  }
-  multiple={false}
-  name="selectedValue"
-  onChange={[Function]}
+<WithStyles(FormControl)
+  error={false}
+  fullWidth={true}
 >
-  <MenuItem
-    anchorOrigin={
-      Object {
-        "horizontal": "right",
-        "vertical": "top",
+  <WithStyles(InputLabel)>
+    Select item
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    autoWidth={false}
+    multiple={false}
+    onChange={[Function]}
+    value=""
+  >
+    <WithStyles(MenuItem)
+      aria-label="Item 1"
+      classes={
+        Object {
+          "selected": undefined,
+        }
       }
-    }
-    checked={false}
-    className=""
-    desktop={false}
-    disabled={false}
-    focusState="none"
-    insetChildren={false}
-    key="select_field_0"
-    primaryText="Item 1"
-    targetOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "top",
+      key="1"
+      style={
+        Object {
+          "display": "block",
+        }
       }
-    }
-    value="Item 1"
-  />
-</SelectField>
+      value="Item 1"
+    >
+      Item 1
+    </WithStyles(MenuItem)>
+  </WithStyles(Select)>
+</WithStyles(FormControl)>
 `;

@@ -3,163 +3,119 @@
 exports[`Publication Details Component  should not render component with empty publication 1`] = `""`;
 
 exports[`Publication Details Component  should render component 1`] = `
-<StandardCard
-  className=""
-  title="Publication details"
+<WithStyles(Grid)
+  item={true}
+  xs={12}
 >
-  <Table
-    allRowsSelected={false}
-    className="publicationDetails vertical"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
+  <StandardCard
+    title="Publication details"
   >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
-    >
-      <ViewRecordTableRow
-        data="Journal Article"
-        heading="Publication type"
-      />
-      <ViewRecordTableRow
-        data="Article (original research)"
-        heading="Sub-type"
-      />
-      <ViewRecordTableRow
-        data={
-          <ul>
-            <li>
-              <Link
-                replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D=UQ%3A3825&searchMode=advanced"
-              >
-                School of Chemistry and Molecular Biosciences
-              </Link>
-            </li>
-            <li>
-              <Link
-                replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D=UQ%3A218311&searchMode=advanced"
-              >
-                HERDC Pre-Audit
-              </Link>
-            </li>
-            <li>
-              <Link
-                replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D=UQ%3A171723&searchMode=advanced"
-              >
-                UQ Centre for Clinical Research Publications
-              </Link>
-            </li>
-          </ul>
-        }
-        heading="Collections"
-      />
-    </TableBody>
-  </Table>
-</StandardCard>
+    <Component
+      data="Journal Article"
+      heading="Publication type"
+    />
+    <Component
+      data="Article (original research)"
+      heading="Sub-type"
+    />
+    <Component
+      data={
+        <ul
+          className="ul"
+        >
+          <li>
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
+            >
+              School of Chemistry and Molecular Biosciences
+            </Link>
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
+            >
+              HERDC Pre-Audit
+            </Link>
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
+            >
+              UQ Centre for Clinical Research Publications
+            </Link>
+          </li>
+        </ul>
+      }
+      heading="Collections"
+    />
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Publication Details Component  should render with publication without collection data 1`] = `
-<StandardCard
-  className=""
-  title="Publication details"
+<WithStyles(Grid)
+  item={true}
+  xs={12}
 >
-  <Table
-    allRowsSelected={false}
-    className="publicationDetails vertical"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
+  <StandardCard
+    title="Publication details"
   >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
-    >
-      <ViewRecordTableRow
-        data="Journal Article"
-        heading="Publication type"
-      />
-    </TableBody>
-  </Table>
-</StandardCard>
+    <Component
+      data="Journal Article"
+      heading="Publication type"
+    />
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Publication Details Component  should render with publication without subtype data 1`] = `
-<StandardCard
-  className=""
-  title="Publication details"
+<WithStyles(Grid)
+  item={true}
+  xs={12}
 >
-  <Table
-    allRowsSelected={false}
-    className="publicationDetails vertical"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
+  <StandardCard
+    title="Publication details"
   >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
-    >
-      <ViewRecordTableRow
-        data="Journal Article"
-        heading="Publication type"
-      />
-      <ViewRecordTableRow
-        data={
-          <ul>
-            <li>
-              <Link
-                replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D=UQ%3A3825&searchMode=advanced"
-              >
-                School of Chemistry and Molecular Biosciences
-              </Link>
-            </li>
-            <li>
-              <Link
-                replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D=UQ%3A218311&searchMode=advanced"
-              >
-                HERDC Pre-Audit
-              </Link>
-            </li>
-            <li>
-              <Link
-                replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D=UQ%3A171723&searchMode=advanced"
-              >
-                UQ Centre for Clinical Research Publications
-              </Link>
-            </li>
-          </ul>
-        }
-        heading="Collections"
-      />
-    </TableBody>
-  </Table>
-</StandardCard>
+    <Component
+      data="Journal Article"
+      heading="Publication type"
+    />
+    <Component
+      data={
+        <ul
+          className="ul"
+        >
+          <li>
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
+            >
+              School of Chemistry and Molecular Biosciences
+            </Link>
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
+            >
+              HERDC Pre-Audit
+            </Link>
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
+            >
+              UQ Centre for Clinical Research Publications
+            </Link>
+          </li>
+        </ul>
+      }
+      heading="Collections"
+    />
+  </StandardCard>
+</WithStyles(Grid)>
 `;

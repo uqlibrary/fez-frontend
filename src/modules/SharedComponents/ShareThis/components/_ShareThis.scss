@@ -5,16 +5,3 @@ a.researchgate {
 a.researchgate::before {
   content: url(../../src/images/researchgate_icon.svg);
 }
-
-.shareThis {
-  padding-bottom: 12px !important;
-  @include mobile {
-    zoom: 2;
-    text-align: center !important;
-    margin-left: -2px !important;
-    a {
-      text-align: center !important;
-      margin: 0 2px 2px 0 !important;
-    }
-  }
-}

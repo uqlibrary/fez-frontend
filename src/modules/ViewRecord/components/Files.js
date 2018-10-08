@@ -4,24 +4,46 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {withStyles} from '@material-ui/core/styles';
+
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
 
 import moment from 'moment';
-import AvVolumeUp from 'material-ui/svg-icons/av/volume-up';
-import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
-import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
-import Image from 'material-ui/svg-icons/image/image';
-import AvVideocam from 'material-ui/svg-icons/av/videocam';
+import VolumeUp from '@material-ui/icons/VolumeUp';
+import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
+import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
+import Image from '@material-ui/icons/Image';
+import Videocam from '@material-ui/icons/Videocam';
 import {openAccessConfig, viewRecordsConfig, routes} from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
 
-export default class Files extends Component {
+const styles = (theme) => ({
+    header: {
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    },
+    dataWrapper: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+    },
+    fileIcon: {
+        opacity: 0.5,
+    },
+    data: {
+        fontSize: '0.8rem'
+    }
+});
+
+export class Files extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
-        setHideCulturalSensitivityStatement: PropTypes.func
+        setHideCulturalSensitivityStatement: PropTypes.func,
+        classes: PropTypes.object
     };
 
     constructor(props) {
@@ -50,15 +72,15 @@ export default class Files extends Component {
                 <Thumbnail {...thumbnailProps} />
             );
         } else if (mimeType.indexOf('audio') >= 0) {
-            return <AvVolumeUp />;
+            return <VolumeUp className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('pdf') >= 0) {
-            return <PictureAsPdf />;
+            return <PictureAsPdf className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('image') >= 0) {
-            return <Image />;
+            return <Image className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('video') >= 0) {
-            return <AvVideocam />;
+            return <Videocam className={this.props.classes.fileIcon} color={'secondary'} />;
         } else {
-            return <InsertDriveFile />;
+            return <InsertDriveFile className={this.props.classes.fileIcon} color={'secondary'} />;
         }
     }
 
@@ -171,7 +193,7 @@ export default class Files extends Component {
             if(item.mimeType.indexOf('video') > -1) { hasVideo = true; }
         });
         return (
-            <section>
+            <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
                     {
                         !!publication.fez_record_search_key_advisory_statement && !this.props.hideCulturalSensitivityStatement &&
@@ -186,45 +208,65 @@ export default class Files extends Component {
                             message={locale.viewRecord.fireFoxAlert.message}
                         />
                     }
-                    <div className="files" ref="files">
-                        <div className="header columns is-gapless is-vcentered is-mobile">
-                            <div className="column filetype fileIcon is-narrow is-vcentered" />
-                            <div className="column filename is-3-desktop is-4-tablet is-vcentered">
-                                {locale.viewRecord.sections.files.fileName}
-                            </div>
-                            <div className="column description is-hidden-mobile is-vcentered">
-                                {locale.viewRecord.sections.files.description}
-                            </div>
-                            <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
-                                {locale.viewRecord.sections.files.size}
-                            </div>
-                            <div className="column oa align-right is-2 is-vcentered is-hidden-mobile" />
-                        </div>
-                        {
-                            fileData.map((item, index) => (
-                                <div className="data columns is-gapless is-vcentered is-mobile" key={`file-${index}`}>
-                                    <div className="column filetype fileIcon is-narrow is-vcentered">
+                    <div style={{padding: 8}}>
+                        <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
+                            <Grid item xs={1}>&nbsp;</Grid>
+                            <Grid item sm={4} md={3}>
+                                <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.fileName}</Typography>
+                            </Grid>
+                            <Hidden xsDown>
+                                <Grid item sm={5}>
+                                    <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.description}</Typography>
+                                </Grid>
+                            </Hidden>
+                            <Hidden smDown>
+                                <Grid item md={1}>
+                                    <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.size}</Typography>
+                                </Grid>
+                            </Hidden>
+                            <Hidden xsDown>
+                                <Grid item sm={'auto'}/>
+                            </Hidden>
+                        </Grid>
+                    </div>
+                    {
+                        fileData.map((item, index) => (
+                            <div style={{padding: 8}}>
+                                <Grid
+                                    container
+                                    direction="row"
+                                    alignItems="center"
+                                    key={`file-${index}`}
+                                    spacing={16}
+                                    wrap={'nowrap'}
+                                    className={this.props.classes.header}
+                                >
+                                    <Grid item xs={1}>
                                         {item.icon}
-                                    </div>
-                                    <div className="column filename is-3-desktop is-4-tablet is-vcentered">
+                                    </Grid>
+                                    <Grid item sm={4} md={3} className={this.props.classes.dataWrapper}>
                                         <FileName
                                             {...item}
                                             onFileSelect={this.showPreview}
                                         />
-                                    </div>
-                                    <div className="column description is-hidden-mobile is-vcentered">
-                                        {item.description}
-                                    </div>
-                                    <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
-                                        {item.calculatedSize}
-                                    </div>
-                                    <div className="column oa is-2 is-hidden-mobile is-vcentered">
-                                        <OpenAccessIcon {...item.openAccessStatus} />
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
+                                    </Grid>
+                                    <Hidden xsDown>
+                                        <Grid item sm={5} className={this.props.classes.dataWrapper}>
+                                            <Typography caption="body1" noWrap className={this.props.classes.data}>{item.description}</Typography>
+                                        </Grid>
+                                    </Hidden>
+                                    <Hidden smDown>
+                                        <Grid item md={1} className={this.props.classes.dataWrapper}>
+                                            <Typography caption="body1" noWrap className={this.props.classes.data}>{item.calculatedSize}</Typography>
+                                        </Grid>
+                                    </Hidden>
+                                    <Hidden xsDown>
+                                        <Grid item sm style={{textAlign: 'right'}}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
+                                    </Hidden>
+                                </Grid>
+                            </div>
+                        ))
+                    }
                 </StandardCard>
                 {
                     this.state.preview.mediaUrl && this.state.preview.mimeType &&
@@ -235,7 +277,9 @@ export default class Files extends Component {
                         mimeType={this.state.preview.mimeType}
                         onClose={this.hidePreview}/>
                 }
-            </section>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles)(Files);

@@ -2,337 +2,479 @@
 
 exports[`Alert snapshots test renders Alert of error type 1`] = `
 <div
-  className="error alertWrapper "
+  className="Alert"
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <div
-    className="columns is-multiline is-mobile"
+  <WithStyles(Grid)
+    alignContent="center"
+    alignItems="flex-start"
+    className=""
+    container={true}
+    justify="center"
+    spacing={24}
   >
-    <div
-      className="column is-narrow alertIcon"
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="flex-start"
+        container={true}
+        justify="center"
       >
-        error
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText"
-    >
-      <div>
-        <b>
-          This is a title - 
-        </b>
-        This is the message
-      </div>
-    </div>
-  </div>
+        <WithStyles(Grid)
+          id="icon"
+          item={true}
+        >
+          <pure(ErrorIcon)
+            className="icon"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          id="text"
+          item={true}
+          xs={true}
+        >
+          <b>
+            This is a title - 
+          </b>
+          This is the message
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render action button 1`] = `
 <div
-  className="error alertWrapper "
+  className="Alert"
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <div
-    className="columns is-multiline is-mobile"
+  <WithStyles(Grid)
+    alignContent="center"
+    alignItems="flex-start"
+    className=""
+    container={true}
+    justify="center"
+    spacing={24}
   >
-    <div
-      className="column is-narrow alertIcon linked"
-      onClick={[MockFunction]}
-      onKeyDown={[MockFunction]}
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="flex-start"
+        container={true}
+        justify="center"
       >
-        error
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText linked"
-      onClick={[MockFunction]}
-      onKeyDown={[MockFunction]}
+        <WithStyles(Grid)
+          id="icon"
+          item={true}
+          onClick={[MockFunction]}
+          onKeyDown={[MockFunction]}
+        >
+          <pure(ErrorIcon)
+            className="icon"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          id="text"
+          item={true}
+          onClick={[MockFunction]}
+          onKeyDown={[MockFunction]}
+          xs={true}
+        >
+          <b />
+          Unexpected error
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={true}
     >
-      <div>
-        <b />
-        Unexpected error
-      </div>
-    </div>
-    <div
-      className="column is-narrow-tablet is-12-mobile noDismiss"
-    >
-      <FlatButton
-        className="alertAction"
-        disabled={false}
+      <WithStyles(Button)
+        className="action"
         fullWidth={true}
-        label="Do something"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="alertButton"
         onClick={[MockFunction]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+        variant="flat"
+      >
+        Do something
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render dismiss icon button 1`] = `
 <div
-  className="error alertWrapper "
+  className="Alert"
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <div
-    className="columns is-multiline is-mobile"
+  <WithStyles(Grid)
+    alignContent="center"
+    alignItems="flex-start"
+    className=""
+    container={true}
+    justify="center"
+    spacing={24}
   >
-    <div
-      className="column is-narrow alertIcon"
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="flex-start"
+        container={true}
+        justify="center"
       >
-        error
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText"
+        <WithStyles(Grid)
+          id="icon"
+          item={true}
+        >
+          <pure(ErrorIcon)
+            className="icon"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          id="text"
+          item={true}
+          xs={true}
+        >
+          <b />
+          Unexpected error
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={true}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to dismiss this alert"
+              id="dismiss"
+              onClick={[MockFunction]}
+              title="Click to dismiss this alert"
+            >
+              <pure(CloseIcon)
+                className="dismiss"
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
-      <div>
-        <b />
-        Unexpected error
-      </div>
-    </div>
-    <div
-      className="column is-narrow is-hidden-tablet"
-    >
-      <IconButton
-        aria-label="Click to dismiss this alert"
-        className="alertDismissButton"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[MockFunction]}
-        title="Click to dismiss this alert"
-        tooltipPosition="bottom-center"
-        touch={false}
+      <WithStyles(Grid)
+        item={true}
       >
-        <NavigationClose
-          className="alertDismiss"
-        />
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile"
-    >
-      <IconButton
-        aria-label="Click to dismiss this alert"
-        className="alertDismissButton"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[MockFunction]}
-        title="Click to dismiss this alert"
-        tooltipPosition="bottom-center"
-        touch={false}
-      >
-        <NavigationClose
-          className="alertDismiss"
-        />
-      </IconButton>
-    </div>
-  </div>
+        <WithStyles(IconButton)
+          aria-label="Click to dismiss this alert"
+          id="dismiss"
+          onClick={[MockFunction]}
+          title="Click to dismiss this alert"
+        >
+          <pure(CloseIcon)
+            className="dismiss"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render dismiss icon button and action button 1`] = `
 <div
-  className="error alertWrapper "
+  className="Alert"
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <div
-    className="columns is-multiline is-mobile"
+  <WithStyles(Grid)
+    alignContent="center"
+    alignItems="flex-start"
+    className=""
+    container={true}
+    justify="center"
+    spacing={24}
   >
-    <div
-      className="column is-narrow alertIcon linked"
-      onClick={[MockFunction]}
-      onKeyDown={[MockFunction]}
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="flex-start"
+        container={true}
+        justify="center"
       >
-        error
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText linked"
-      onClick={[MockFunction]}
-      onKeyDown={[MockFunction]}
+        <WithStyles(Grid)
+          id="icon"
+          item={true}
+          onClick={[MockFunction]}
+          onKeyDown={[MockFunction]}
+        >
+          <pure(ErrorIcon)
+            className="icon"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          id="text"
+          item={true}
+          onClick={[MockFunction]}
+          onKeyDown={[MockFunction]}
+          xs={true}
+        >
+          <b />
+          Unexpected error
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={true}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to dismiss this alert"
+              id="dismiss"
+              onClick={[MockFunction]}
+              title="Click to dismiss this alert"
+            >
+              <pure(CloseIcon)
+                className="dismiss"
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={true}
     >
-      <div>
-        <b />
-        Unexpected error
-      </div>
-    </div>
-    <div
-      className="column is-narrow is-hidden-tablet"
-    >
-      <IconButton
-        aria-label="Click to dismiss this alert"
-        className="alertDismissButton"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[MockFunction]}
-        title="Click to dismiss this alert"
-        tooltipPosition="bottom-center"
-        touch={false}
-      >
-        <NavigationClose
-          className="alertDismiss"
-        />
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow-tablet is-12-mobile"
-    >
-      <FlatButton
-        className="alertAction"
-        disabled={false}
+      <WithStyles(Button)
+        className="action"
         fullWidth={true}
-        label="Do something"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="alertButton"
         onClick={[MockFunction]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile"
-    >
-      <IconButton
-        aria-label="Click to dismiss this alert"
-        className="alertDismissButton"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[MockFunction]}
-        title="Click to dismiss this alert"
-        tooltipPosition="bottom-center"
-        touch={false}
+        variant="flat"
       >
-        <NavigationClose
-          className="alertDismiss"
-        />
-      </IconButton>
-    </div>
-  </div>
+        Do something
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          aria-label="Click to dismiss this alert"
+          id="dismiss"
+          onClick={[MockFunction]}
+          title="Click to dismiss this alert"
+        >
+          <pure(CloseIcon)
+            className="dismiss"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </div>
 `;
 
 exports[`Alert snapshots test renders Alert of error type should render dismiss icon button and action button and spinner 1`] = `
 <div
-  className="error alertWrapper "
+  className="Alert"
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
 >
-  <div
-    className="columns is-multiline is-mobile"
+  <WithStyles(Grid)
+    alignContent="center"
+    alignItems="flex-start"
+    className=""
+    container={true}
+    justify="center"
+    spacing={24}
   >
-    <div
-      className="column is-narrow alertIcon linked"
-      onClick={[MockFunction]}
-      onKeyDown={[MockFunction]}
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
     >
-      <CircularProgress
-        className="alertSpinner"
-        max={100}
-        min={0}
-        mode="indeterminate"
-        size={32}
-        thickness={4}
-        value={0}
-      />
-    </div>
-    <div
-      className="column alertText linked"
-      onClick={[MockFunction]}
-      onKeyDown={[MockFunction]}
-    >
-      <div>
-        <b />
-        Unexpected error
-      </div>
-    </div>
-    <div
-      className="column is-narrow is-hidden-tablet"
-    >
-      <IconButton
-        aria-label="Click to dismiss this alert"
-        className="alertDismissButton"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[MockFunction]}
-        title="Click to dismiss this alert"
-        tooltipPosition="bottom-center"
-        touch={false}
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="flex-start"
+        container={true}
+        justify="center"
       >
-        <NavigationClose
-          className="alertDismiss"
-        />
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow-tablet is-12-mobile"
+        <WithStyles(Grid)
+          id="icon"
+          item={true}
+          onClick={[MockFunction]}
+          onKeyDown={[MockFunction]}
+        >
+          <WithStyles(CircularProgress)
+            className="spinner"
+            size={38}
+            thickness={3}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          id="text"
+          item={true}
+          onClick={[MockFunction]}
+          onKeyDown={[MockFunction]}
+          xs={true}
+        >
+          <b />
+          Unexpected error
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={true}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to dismiss this alert"
+              id="dismiss"
+              onClick={[MockFunction]}
+              title="Click to dismiss this alert"
+            >
+              <pure(CloseIcon)
+                className="dismiss"
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={true}
     >
-      <FlatButton
-        className="alertAction"
-        disabled={false}
+      <WithStyles(Button)
+        className="action"
         fullWidth={true}
-        label="Do something"
-        labelPosition="after"
-        labelStyle={Object {}}
+        id="alertButton"
         onClick={[MockFunction]}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile"
-    >
-      <IconButton
-        aria-label="Click to dismiss this alert"
-        className="alertDismissButton"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[MockFunction]}
-        title="Click to dismiss this alert"
-        tooltipPosition="bottom-center"
-        touch={false}
+        variant="flat"
       >
-        <NavigationClose
-          className="alertDismiss"
-        />
-      </IconButton>
-    </div>
-  </div>
+        Do something
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(IconButton)
+          aria-label="Click to dismiss this alert"
+          id="dismiss"
+          onClick={[MockFunction]}
+          title="Click to dismiss this alert"
+        >
+          <pure(CloseIcon)
+            className="dismiss"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
 </div>
 `;

@@ -9,11 +9,10 @@ export default class PubmedCentralLink extends PureComponent {
     };
 
     render() {
-        if (!this.props.pubmedCentralId) {
-            return (<span className="pubmedCentralLinkUrl empty"/>);
-        }
-
         const txt = locale.global.pubmedCentralLink;
+        if (!this.props.pubmedCentralId) {
+            return (<div className="pubmedCentralLinkUrl empty"/>);
+        }
         return (
             <ExternalLink
                 className="pubmedCentralLinkUrl"

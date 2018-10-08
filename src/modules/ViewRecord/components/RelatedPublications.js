@@ -4,20 +4,31 @@ import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class RelatedPublications extends PureComponent {
+const styles = () => ({
+    list: {
+        margin: 0
+    },
+    data: {
+        fontSize: '0.8rem'
+    }
+});
+
+export class RelatedPublications extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         title: PropTypes.string,
-        className: PropTypes.string,
         parentSearchKey: PropTypes.object,
         childrenSearchKey: PropTypes.object.isRequired,
-        showPublicationTitle: PropTypes.bool
+        showPublicationTitle: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
         title: locale.viewRecord.sections.relatedPublications.title,
-        className: 'relatedPublications',
         childrenSearchKey: {
             key: 'fez_record_search_key_has_related_datasets',
             pid: 'rek_has_related_datasets',
@@ -32,14 +43,16 @@ export default class RelatedPublications extends PureComponent {
         const children = publication[childrenSearchKey.key];
 
         return(
-            <ul className="publicationList">
+            <ul className={`${this.props.classes.list} publicationList`}>
                 {
                     this.renderSubList(parents, parentSearchKey)
                 }
                 {
                     showPublicationTitle &&
                     <li key={'current'}>
-                        {publication.rek_title}<b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
+                        <Typography variant="body1" classes={{body1: this.props.classes.data}}>
+                            {publication.rek_title}<b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
+                        </Typography>
                     </li>
                 }
                 {
@@ -58,9 +71,11 @@ export default class RelatedPublications extends PureComponent {
             )).map((item, index)=> {
                 return (
                     <li key={`${searchKey.key}-${index}`}>
-                        {
-                            this.renderTitle(item, searchKey)
-                        }
+                        <Typography variant="body1" classes={{body1: this.props.classes.data}}>
+                            {
+                                this.renderTitle(item, searchKey)
+                            }
+                        </Typography>
                     </li>
                 );
             })
@@ -75,7 +90,7 @@ export default class RelatedPublications extends PureComponent {
     }
 
     render() {
-        const {publication, parentSearchKey, childrenSearchKey, title, className, showPublicationTitle} = this.props;
+        const {publication, parentSearchKey, childrenSearchKey, title, showPublicationTitle} = this.props;
 
         if ((!parentSearchKey || !publication[parentSearchKey.key] || publication[parentSearchKey.key].length === 0) &&
             (!publication[childrenSearchKey.key] || publication[childrenSearchKey.key].length === 0)) {
@@ -83,11 +98,15 @@ export default class RelatedPublications extends PureComponent {
         }
 
         return (
-            <StandardCard title={title} className={className}>
-                {
-                    this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)
-                }
-            </StandardCard>
+            <Grid item xs={12}>
+                <StandardCard title={title} className="relatedPublications">
+                    {
+                        this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)
+                    }
+                </StandardCard>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles)(RelatedPublications);

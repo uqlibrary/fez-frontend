@@ -21,7 +21,7 @@ describe('Audio Player Component ', () => {
     it('should play audio', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        const element = wrapper.find('IconButton.audioButton.play');
+        const element = wrapper.find('PlayArrowIcon.play');
         const audio = wrapper.find('audio');
         const play = jest.fn();
         audio.getDOMNode().play = play;
@@ -36,7 +36,7 @@ describe('Audio Player Component ', () => {
 
         const wrapper = getElement(() => shallowWrapper.instance(), shallowWrapper.instance().props, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        const element = wrapper.find('IconButton.audioButton.pause');
+        const element = wrapper.find('PauseIcon.pause');
         const audio = wrapper.find('audio');
         const pause = jest.fn();
         audio.getDOMNode().pause = pause;

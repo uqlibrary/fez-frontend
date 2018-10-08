@@ -1,15 +1,69 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
-import IconButton from 'material-ui/IconButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import SearchIcon from 'material-ui/svg-icons/action/search';
+import TextField from '@material-ui/core/TextField';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
 
-import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+import Search from '@material-ui/icons/Search';
+import ArrowBack from '@material-ui/icons/ArrowBack';
+
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {locale} from 'locale';
 
-export default class SimpleSearchComponent extends PureComponent {
+import {withStyles} from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
+import Fade from '@material-ui/core/Fade';
+
+const styles = theme => ({
+    searchIconPrefix: {
+        fill: theme.palette.secondary.main,
+        opacity: 0.66
+    },
+    inHeader: {
+        backgroundColor: theme.palette.white.main,
+        '& input[type="search"]::-webkit-search-cancel-button': {
+            display: 'none'
+        }
+    },
+    searchIconMobile: {
+        fill: theme.palette.white.main
+    },
+    mobileBackArrow: {
+        height: 50,
+        width: 50,
+        fill: theme.palette.secondary.main,
+        opacity: 0.5
+    },
+    mobileBackArrowButton: {
+        height: 70,
+        width: 70,
+    },
+    mobileHeader: {
+        zIndex: 100,
+        backgroundColor: theme.palette.white.main,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: 70
+    },
+    mobileSearchInput: {
+        width: '99%',
+        height: 70,
+        '& input': {
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            marginTop: 10,
+            fontSize: 32,
+            lineHeight: 1.2,
+            fontWeight: theme.typography.fontWeightNormal
+        }
+    }
+});
+
+export class SimpleSearchComponent extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
 
@@ -24,9 +78,10 @@ export default class SimpleSearchComponent extends PureComponent {
         onSearch: PropTypes.func,
         onSearchTextChange: PropTypes.func.isRequired,
         onToggleSearchMode: PropTypes.func,
-        onInvalidSearch: PropTypes.func
-    };
+        onInvalidSearch: PropTypes.func,
 
+        classes: PropTypes.object
+    };
     static defaultProps = {
         searchText: '',
 
@@ -36,9 +91,12 @@ export default class SimpleSearchComponent extends PureComponent {
         showAdvancedSearchButton: false,
         showPrefixIcon: false,
 
-        onSearch: () => {},
-        onToggleSearchMode: () => {},
-        onInvalidSearch: () => {}
+        onSearch: () => {
+        },
+        onToggleSearchMode: () => {
+        },
+        onInvalidSearch: () => {
+        }
     };
 
     constructor(props) {
@@ -61,14 +119,14 @@ export default class SimpleSearchComponent extends PureComponent {
             ...this.state,
             showMobile: !this.state.showMobile
         }, () => {
-            if(this.state.showMobile) {
-                document.getElementById('searchField') && document.getElementById('searchField').focus();
+            if (this.state.showMobile) {
+                document.getElementById('mobileSearchField') && document.getElementById('mobileSearchField').focus();
             }
         });
     };
 
-    _handleSearchTextChange = (event, value) => {
-        this.props.onSearchTextChange(value);
+    _handleSearchTextChange = (event) => {
+        this.props.onSearchTextChange(event.target.value);
     };
 
     _handleSearchMode = () => {
@@ -100,96 +158,124 @@ export default class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-
+        const {classes} = this.props;
         return (
-            <div className={`searchComponent ${this.props.isInHeader && 'header'} ${this.props.className}`}>
-                <div className="columns is-gapless">
-                    <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
-                        <div className="columns is-gapless search-field is-mobile">
-                            {
-                                this.props.showPrefixIcon &&
-                                <div className="column is-narrow searchIconPrefix is-hidden-mobile">
-                                    <SearchIcon/>
-                                </div>
-                            }
-                            {
-                                this.props.showMobileSearchButton &&
-                                <div className="column is-narrow searchIconPrefix is-hidden-tablet">
-                                    <IconButton
-                                        onClick={this._handleToggleMobile}
-                                        className="mobileBackArrow" >
-                                        <ArrowBack/>
-                                    </IconButton>
-                                </div>
-                            }
-                            <div className="column">
-                                <TextField
-                                    type="search"
-                                    id="searchField"
-                                    fullWidth
-                                    floatingLabelText={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                    hintText={this.props.isInHeader && txt.searchBoxPlaceholder}
-                                    aria-label={txt.ariaInputLabel}
-                                    onChange={this._handleSearchTextChange}
-                                    onKeyPress={this._handleSearch}
-                                    value={this.props.searchText}
-                                    underlineStyle={this.props.isInHeader ? {display: 'none'} : {}}
-                                    errorText={this.searchTextValidationMessage(this.props.searchText)}
-                                />
-                            </div>
-                            <div className="is-hidden-tablet mobileSpacer" />
-                        </div>
-                    </div>
-                    {
-                        this.props.showMobileSearchButton &&
-                        <div className="column is-narrow is-hidden-tablet">
-                            <IconButton
-                                onClick={this._handleToggleMobile}
-                                aria-label={txt.mobileSearchButtonAriaLabel}
-                                className="searchButton"
-                                hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                            >
-                                <SearchIcon/>
-                            </IconButton>
-                        </div>
-                    }
-                    {
-                        this.props.showSearchButton &&
-                        <div className="column is-narrow iconSearchButtonWrapper">
-                            <IconButton
-                                tooltipPosition="bottom-left"
-                                onClick={this._handleSearch}
-                                disabled={!!this.searchTextValidationMessage(this.props.searchText)}
-                                className="searchButton"
-                                tooltip={txt.searchButtonHint}
-                                aria-label={txt.searchButtonAriaLabel}>
-                                <SearchIcon/>
-                            </IconButton>
-                        </div>
-                    }
-                    <div className="column is-narrow searchButtonWrapper">
-                        <RaisedButton
-                            label={txt.searchButtonText}
-                            aria-label={txt.searchButtonAriaLabel}
-                            primary
-                            disabled={!!this.searchTextValidationMessage(this.props.searchText)}
-                            onClick={this._handleSearch}
-                            fullWidth />
-                    </div>
-                    {
-                        this.props.showAdvancedSearchButton &&
-                        <div className="column is-narrow advancedSearchButtonWrapper">
-                            <RaisedButton
-                                label={txt.advancedSearchButtonText}
-                                aria-label={txt.advancedSearchButtonAriaLabel}
-                                onClick={this._handleSearchMode}
-                                className="advancedButton"
-                                fullWidth
-                            />
-                        </div>
-                    }
-                </div>
-            </div>
+            <React.Fragment>
+                {
+                    this.props.isInHeader ?
+                        <React.Fragment>
+                            {/* DESKTOP in header */}
+                            <Hidden xsDown>
+                                <Grid container spacing={16} alignItems={'center'} alignContent={'center'} justify={'center'} className={classes.inHeader}>
+                                    {
+                                        this.props.showPrefixIcon &&
+                                        <Grid item>
+                                            <Search className={classes.searchIconPrefix}/>
+                                        </Grid>
+                                    }
+                                    <Grid item xs>
+                                        <TextField
+                                            type="search"
+                                            fullWidth
+                                            label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                            placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                            aria-label={txt.ariaInputLabel}
+                                            onChange={this._handleSearchTextChange}
+                                            onKeyPress={this._handleSearch}
+                                            value={this.props.searchText}
+                                            InputProps={{disableUnderline: true}}
+                                            error={this.searchTextValidationMessage(this.props.searchText)}/>
+                                    </Grid>
+                                </Grid>
+                            </Hidden>
+                            {/* MOBILE in header */}
+                            <Hidden smUp>
+                                {
+                                    !this.state.showMobile ?
+                                        <Tooltip title={txt.searchBoxPlaceholder} placement="bottom-end" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                                            <IconButton
+                                                onClick={this._handleToggleMobile}
+                                                aria-label={txt.mobileSearchButtonAriaLabel}>
+                                                <Search className={classes.searchIconMobile}/>
+                                            </IconButton>
+                                        </Tooltip>
+                                        :
+                                        <div className={classes.mobileHeader}>
+                                            <Grid container spacing={0} direction={'row'} wrap={'nowrap'} alignItems={'stretch'} justify={'center'}>
+                                                {
+                                                    this.props.showMobileSearchButton && this.state.showMobile &&
+                                                    <Hidden smUp>
+                                                        <Grid item>
+                                                            <Button onClick={this._handleToggleMobile} className={classes.mobileBackArrowButton}>
+                                                                <ArrowBack className={classes.mobileBackArrow}/>
+                                                            </Button>
+                                                        </Grid>
+                                                    </Hidden>
+                                                }
+                                                <Grid item xs zeroMinWidth>
+                                                    <TextField
+                                                        className={classes.mobileSearchInput}
+                                                        type="search"
+                                                        id="mobileSearchField"
+                                                        fullWidth
+                                                        label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                                        placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                                        aria-label={txt.ariaInputLabel}
+                                                        onChange={this._handleSearchTextChange}
+                                                        onKeyPress={this._handleSearch}
+                                                        value={this.props.searchText}
+                                                        InputProps={{disableUnderline: true}}
+                                                        error={this.searchTextValidationMessage(this.props.searchText)}/>
+                                                </Grid>
+                                            </Grid>
+                                        </div>
+                                }
+                            </Hidden>
+                        </React.Fragment>
+                        :
+                        <React.Fragment>
+                            {/* NOT in header */}
+                            <Grid container spacing={16} alignItems={'center'}>
+                                <Grid item xs>
+                                    <TextField
+                                        type="search"
+                                        fullWidth
+                                        label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                        placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                        aria-label={txt.ariaInputLabel}
+                                        onChange={this._handleSearchTextChange}
+                                        onKeyPress={this._handleSearch}
+                                        value={this.props.searchText}
+                                        error={this.searchTextValidationMessage(this.props.searchText)}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={'auto'}>
+                                    <Button
+                                        children={txt.searchButtonText}
+                                        aria-label={txt.searchButtonAriaLabel}
+                                        variant={'raised'}
+                                        color={'primary'}
+                                        disabled={!!this.searchTextValidationMessage(this.props.searchText)}
+                                        onClick={this._handleSearch}
+                                        fullWidth
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={'auto'}>
+                                    <Button
+                                        variant={'raised'}
+                                        children={txt.advancedSearchButtonText}
+                                        aria-label={txt.advancedSearchButtonAriaLabel}
+                                        onClick={this._handleSearchMode}
+                                        className="advancedButton"
+                                        fullWidth
+                                    />
+                                </Grid>
+                            </Grid>
+                        </React.Fragment>
+                }
+            </React.Fragment>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(SimpleSearchComponent);

@@ -1,36 +1,25 @@
-import React from 'react';
-import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
-import MenuItem from 'material-ui/MenuItem';
 
 const mapStateToProps = (state, props) => {
     const category = 'author';
     return {
         category: category,
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-            ? state.get('searchKeysReducer')[category].itemsList
-                .map(item => {
-                    return {
-                        id: item.id,
-                        text: `${item.id} (${item.value})`,
-                        value: (
-                            <MenuItem
-                                primaryText={item.value}
-                                secondaryText={item.id}
-                            />
-                        )
-                    };
-                })
+            ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
             : [],
-        onChange: props.onChange,
+        onChange: (item) => {
+            if (!item.id) {
+                props.onChange({...item, id: item.value});
+            } else {
+                props.onChange(item);
+            }
+        },
         allowFreeText: true,
         async: true,
-        errorText: props.errorText,
         selectedValue: !!props.label && {value: props.label} || !!props.value && {value: props.value} || '',
-        filter: (searchText, key, item) => {
-            return !!item.id && item.id !== 0;
-        },
+        itemToString: (item) => !!item && String(`${item.id} (${item.value})`) || '',
         maxResults: 50
     };
 };
@@ -41,5 +30,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
 

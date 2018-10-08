@@ -4,6 +4,8 @@ import {locale} from 'locale';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class CitationCounts extends PureComponent {
     static propTypes = {
@@ -25,8 +27,8 @@ export default class CitationCounts extends PureComponent {
         };
 
         return (
-            <div className="citationCounts columns is-gapless is-marginless is-multiline">
-                <div className="column is-narrow-tablet is-12-mobile citationIcons">
+            <Grid container spacing={16}>
+                <Grid item xs={12} sm={'auto'}>
                     {
                         counts.wos !== null && !!publication.fez_record_search_key_isi_loc
                         && !!publication.fez_record_search_key_isi_loc.rek_isi_loc &&
@@ -66,17 +68,19 @@ export default class CitationCounts extends PureComponent {
                         />
                     }
                     <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
-                </div>
-                <div className="column is-narrow">
+                </Grid>
+                <Grid item>
                     {
                         !!publication.rek_pid && (counts.wos !== null || counts.scopus !== null) && !hideViewFullStatisticsLink &&
                         <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>
                             {txt.statsLabel}
                         </ExternalLink>
                     }
-                </div>
-                <div className="column is-hidden-mobile" />
-            </div>
+                </Grid>
+                <Hidden xsDown>
+                    <Grid item xs />
+                </Hidden>
+            </Grid>
         );
     }
 }

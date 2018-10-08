@@ -4,8 +4,15 @@ import CitationView from './CitationView';
 import {locale} from 'locale';
 import {pathConfig} from 'config/routes';
 import {Link} from 'react-router-dom';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class AuthorsCitationView extends PureComponent {
+const styles = theme => ({
+    authorIdLink: {
+        color: theme.palette.success.main
+    }
+});
+
+export class AuthorsCitationView extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         searchKey: PropTypes.object,
@@ -17,7 +24,8 @@ export default class AuthorsCitationView extends PureComponent {
         initialNumberOfAuthors: PropTypes.number,
         thresholdNumberOfAuthors: PropTypes.number,
         showLink: PropTypes.bool,
-        getLink: PropTypes.func
+        getLink: PropTypes.func,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -106,7 +114,7 @@ export default class AuthorsCitationView extends PureComponent {
 
             if (showLink) {
                 const href = getLink(author.value, author.id);
-                const className = author.id ? 'authorIdLink' : 'authorNameLink';
+                const className = author.id ? this.props.classes.authorIdLink : 'authorNameLink';
                 return <Link className={className} to={href} key={key}>{element}</Link>;
             } else {
                 return element;
@@ -160,3 +168,5 @@ export default class AuthorsCitationView extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(AuthorsCitationView);

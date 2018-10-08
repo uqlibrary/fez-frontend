@@ -1,9 +1,12 @@
-import FileUploadEmbargoDate from './FileUploadEmbargoDate';
+import {FileUploadEmbargoDate} from './FileUploadEmbargoDate';
 
 function setup(testProps, isShallow = true) {
     const props = {
         minDate: new Date('2016'),
         value: new Date('2016'),
+        classes: {
+            input: ''
+        },
         ...testProps
     };
 
@@ -19,18 +22,6 @@ describe('Component FileUploadEmbargoDate', () => {
     it('should render disabled', () => {
         const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render datepicker on key pressed', () => {
-        const openDialogTestFn = jest.fn();
-
-        const wrapper = setup({}, false);
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.find('FileUploadEmbargoDate').instance().datePickerRef.openDialog = openDialogTestFn;
-        wrapper.find('FileUploadEmbargoDate').instance()._onKeyPress();
-        expect(openDialogTestFn).toHaveBeenCalled();
     });
 
     it('should set correct date on date changed', () => {
@@ -50,7 +41,7 @@ describe('Component FileUploadEmbargoDate', () => {
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({}, 'Sat Feb 10 2018 00:00:00 GMT+1000 (AEST)');
+        wrapper.instance()._onChange('Sat Feb 10 2018 00:00:00 GMT+1000 (AEST)');
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(onDateChangedTestFn).toHaveBeenCalled();

@@ -5,9 +5,6 @@ import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 import locale from 'locale/global';
 
 // application components
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
@@ -20,9 +17,54 @@ import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
-import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class App extends PureComponent {
+// MUI1
+import Tooltip from '@material-ui/core/Tooltip';
+import Fade from '@material-ui/core/Fade';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
+import Menu from '@material-ui/icons/Menu';
+import {withStyles} from '@material-ui/core/styles';
+
+const logo = require('../../../images/uq-logo-white-minimal.svg');
+
+const styles = theme => ({
+    layoutCard: {
+        maxWidth: '1200px',
+        margin: '24px auto',
+        width: '90%',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 auto 24px auto'
+        },
+    },
+    layoutFill: {
+        margin: 0,
+        padding: 0,
+        maxHeight: '100%',
+        height: '100%'
+    },
+    titleLink: {
+        color: theme.palette.common.white,
+        '& a': {
+            textDecoration: 'none',
+            '&:hover': {
+                textDecoration: 'underline'
+            }
+        }
+    },
+    nowrap: {
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+    }
+});
+
+export class App extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -31,7 +73,8 @@ export default class App extends PureComponent {
         isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        classes: PropTypes.object
     };
     static childContextTypes = {
         isMobile: PropTypes.bool,
@@ -43,7 +86,7 @@ export default class App extends PureComponent {
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1200px)'),
+            mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
         };
     }
@@ -118,15 +161,22 @@ export default class App extends PureComponent {
         this.sessionExpiredConfirmationBox = ref;
     };
 
+    hideBrokenImage = () =>{
+        document.getElementById('logo').style.display = 'none';
+    };
+
     render() {
+        const {classes} = this.props;
         if (this.props.accountLoading) {
             return (
-                <div className="layout-fill">
-                    <AppLoader
-                        title={locale.global.title}
-                        logoImage={locale.global.logo.image}
-                        logoText={locale.global.logo.label}/>
-                </div>
+                <Grid container zeroMinWidth className={classes.layoutFill}>
+                    <Grid item xs={12}>
+                        <AppLoader
+                            title={locale.global.title}
+                            logoImage={locale.global.logo.image}
+                            logoText={locale.global.logo.label}/>
+                    </Grid>
+                </Grid>
             );
         }
 
@@ -146,10 +196,7 @@ export default class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
-        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
-        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
-
+        const containerStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 260} : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
@@ -185,50 +232,66 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+        const titleStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 284} : {paddingLeft: 0};
         return (
-            <div className="layout-fill align-stretch">
+            <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
-                    className="AppBar align-center"
-                    showMenuIconButton={showMenu && !this.state.docked}
-                    style={{height: 75}}
-                    iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.appTitle}
-                    titleStyle={titleStyle}
-                    onLeftIconButtonClick={this.toggleDrawer}
-                    iconElementLeft={
-                        this.state.docked || !this.state.menuDrawerOpen ?
-                            <IconButton
-                                tooltip={locale.global.mainNavButton.tooltip}
-                                aria-label={locale.global.mainNavButton.aria}
-                                tooltipPosition="bottom-right"
-                                hoveredStyle={appBarButtonStyles}
-                                className="main-menu-button">
-                                <NavigationMenu/>
-                            </IconButton>
-                            :
-                            <div className="menuHidden" />
-                    }
-                    iconElementRight={
-                        <div className="columns is-gapless appbar-right-columns is-mobile">
-                            <div className="column search-column">
-                                {
-                                    !isThesisSubmissionPage && !isSearchPage &&
-                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />
-                                }
-                            </div>
-                            <div className="column is-narrow auth-button-column">
+                    className="AppBar"
+                    color="primary"
+                    position="fixed">
+                    <Toolbar style={{height: '70px'}}>
+                        <Grid container
+                            alignItems="center"
+                            direction="row"
+                            wrap="nowrap"
+                            justify="flex-start">
+                            {
+                                !this.state.docked && !isThesisSubmissionPage &&
+                                <Grid item>
+                                    <Tooltip title={locale.global.mainNavButton.tooltip}
+                                        placement="bottom-end"
+                                        TransitionComponent={Fade}>
+                                        <IconButton
+                                            aria-label={locale.global.mainNavButton.aria}
+                                            style={{marginLeft: '-12px', marginRight: '12px'}}
+                                            onClick={this.toggleDrawer}>
+                                            <Menu style={{color: 'white'}}/>
+                                        </IconButton>
+                                    </Tooltip>
+                                </Grid>
+                            }
+                            <Grid item xs style={titleStyle} className={classes.nowrap}>
+                                <Grid container spacing={16} alignItems="center" justify="center">
+                                    <Hidden smDown>
+                                        <Grid item xs="auto">
+                                            <img id="logo" src={logo} style={{height: 66, width: 60}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
+                                        </Grid>
+                                    </Hidden>
+                                    <Grid item xs>
+                                        <Typography variant="title" noWrap className={classes.titleLink}>
+                                            {locale.global.appTitle}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            {/* Search */}
+                            {!isThesisSubmissionPage && !isSearchPage &&
+                                <Grid item md={4} >
+                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
+                                </Grid>
+                            }
+                            <Grid item xs="auto" >
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
-                                    hoveredStyle={appBarButtonStyles}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
                                     signInTooltipText={locale.global.authentication.signInText}
                                     signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
-                                    ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn}/>
-                            </div>
-                        </div>
-                    }
-                />
+                                    ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
+                            </Grid>
+                        </Grid>
+                    </Toolbar>
+                </AppBar>
                 {
                     showMenu &&
                     <MenuDrawer
@@ -256,18 +319,16 @@ export default class App extends PureComponent {
                     />
                     {
                         userStatusAlert &&
-                        <div className="dashAlert">
-                            <div className="layout-card">
+                        <Grid container alignContent="center" justify="center" alignItems="center" >
+                            <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />
-                            </div>
-                        </div>
+                            </Grid>
+                        </Grid>
                     }
                     <AppAlertContainer/>
                     {
                         isAuthorLoading &&
-                        <div className="isLoading is-centered">
-                            <InlineLoader message={locale.global.loadingUserAccount}/>
-                        </div>
+                        <InlineLoader message={locale.global.loadingUserAccount}/>
                     }
 
                     {
@@ -283,7 +344,9 @@ export default class App extends PureComponent {
                 </div>
                 <HelpDrawer/>
                 <OfflineSnackbar/>
-            </div>
+            </Grid>
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(App);

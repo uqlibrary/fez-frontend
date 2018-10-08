@@ -1,12 +1,13 @@
 import {publicationDetails} from 'mock/data/testing/records';
-import PublicationDetails from "./PublicationDetails";
+import {PublicationDetails} from "./PublicationDetails";
 
 function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
         publication: testProps.publication || publicationDetails,
         history: testProps.history || {push: jest.fn()},
-        actions: testProps.actions
+        actions: testProps.actions,
+        classes: {ul: 'ul', header: 'header', data: 'data', gridRow: 'gridRow'}
     };
     return getElement(PublicationDetails, props, isShallow);
 }
