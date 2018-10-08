@@ -241,11 +241,10 @@ exports[`Application component should render alert if user is not fez author 1`]
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -315,7 +314,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -855,11 +854,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -929,7 +927,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -1334,11 +1332,10 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -1408,7 +1405,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -1780,11 +1777,10 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -1854,7 +1850,7 @@ exports[`Application component should render app for account with fez author wit
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -2372,11 +2368,10 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -2446,7 +2441,7 @@ exports[`Application component should render app for account with fez author wit
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -2960,11 +2955,10 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -3466,11 +3460,10 @@ exports[`Application component should render application with routing for the us
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -3540,7 +3533,7 @@ exports[`Application component should render application with routing for the us
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -3754,11 +3747,10 @@ exports[`Application component should render for anon user 1`] = `
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
@@ -3828,7 +3820,7 @@ exports[`Application component should render for anon user 1`] = `
         "skipNavTitle": "Skip Navigation",
       }
     }
-    logoImage=""
+    logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="University of Queensland"
     menuItems={
@@ -3933,7 +3925,7 @@ exports[`Application component should render loading screen while account is loa
     xs={12}
   >
     <WithStyles(AppLoader)
-      logoImage=""
+      logoImage="largeLogo"
       logoText="University of Queensland"
       title="UQ eSpace "
     />
@@ -4041,11 +4033,10 @@ exports[`Application component should render thesis submission for HDR without m
                 item={true}
                 xs="auto"
               >
-                <img
+                <div
                   aria-label="University of Queensland"
+                  className="smallLogo"
                   id="logo"
-                  onError={[Function]}
-                  src=""
                   style={
                     Object {
                       "height": 66,
