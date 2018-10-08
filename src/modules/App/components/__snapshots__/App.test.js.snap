@@ -162,7 +162,8 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -775,7 +776,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -1253,7 +1255,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -1698,7 +1701,8 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -2289,7 +2293,8 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -2904,7 +2909,8 @@ exports[`Application component should render app for account with fez author wit
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -3381,7 +3387,8 @@ exports[`Application component should render application with routing for the us
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -3668,7 +3675,8 @@ exports[`Application component should render for anon user 1`] = `
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
@@ -3982,7 +3990,8 @@ exports[`Application component should render thesis submission for HDR without m
     }
   />
   <WithStyles(AppBar)
-    className="undefined AppBar"
+    className="AppBar"
+    color="primary"
     position="fixed"
   >
     <WithStyles(Toolbar)
