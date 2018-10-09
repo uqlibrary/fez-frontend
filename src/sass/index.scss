@@ -27,6 +27,14 @@ a {
   }
 }
 
+.smallLogo::before {
+  content: url(../../src/images/uq-logo-white-minimal.svg);
+}
+
+.largeLogo::before {
+  content: url(../../src/images/uq-logo-white-2018.svg);
+}
+
 .layout-fill {
   margin: 0; padding: 0;
   max-height: 100%;

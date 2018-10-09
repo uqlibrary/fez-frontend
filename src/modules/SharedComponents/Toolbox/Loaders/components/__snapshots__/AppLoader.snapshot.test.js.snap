@@ -46,9 +46,9 @@ exports[`Component AppLoader should render as expected 1`] = `
     }
     item={true}
   >
-    <img
+    <div
       alt="Fez logo"
-      src="http://image/image.svg"
+      className="http://image/image.svg undefined"
     />
   </WithStyles(Grid)>
   <WithStyles(Grid)

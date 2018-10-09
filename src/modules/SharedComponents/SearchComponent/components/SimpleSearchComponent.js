@@ -156,21 +156,26 @@ export class SimpleSearchComponent extends PureComponent {
         event && event.target && event.target.blur();
     };
 
+    _handleSubmit = (event) => {
+        event.preventDefault();
+        this._handleSearch(event);
+    }
+
     render() {
         const txt = locale.components.searchComponent;
         const {classes} = this.props;
         return (
             <React.Fragment>
-                <form style={{margin: 8}}>
+                <form style={{margin: 8}} onSubmit={this._handleSubmit}>
                     {
                         this.props.isInHeader ?
                             <React.Fragment>
                                 {/* DESKTOP in header */}
                                 <Hidden xsDown>
-                                    <Grid container spacing={16} alignItems={'center'} alignContent={'center'} justify={'center'} className={classes.inHeader}>
+                                    <Grid container alignItems={'center'} spacing={8} wrap={'nowrap'} className={classes.inHeader} direction={'row'}>
                                         {
                                             this.props.showPrefixIcon &&
-                                            <Grid item>
+                                            <Grid item xs={'auto'}>
                                                 <Search className={classes.searchIconPrefix}/>
                                             </Grid>
                                         }

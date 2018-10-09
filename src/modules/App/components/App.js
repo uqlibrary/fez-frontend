@@ -26,12 +26,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
 import Menu from '@material-ui/icons/Menu';
 import {withStyles} from '@material-ui/core/styles';
-
-const smallLogo = require('../../../images/uq-logo-white-minimal.svg');
-const largeLogo = require('../../../images/uq-logo-white-2018.svg');
 
 const styles = theme => ({
     appBG: {
@@ -177,7 +173,7 @@ export class App extends PureComponent {
                     <Grid item xs={12}>
                         <AppLoader
                             title={locale.global.title}
-                            logoImage={largeLogo}
+                            logoImage="largeLogo"
                             logoText={locale.global.logo.label}/>
                     </Grid>
                 </Grid>
@@ -241,7 +237,8 @@ export class App extends PureComponent {
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
-                    className={`${classes.appBG} AppBar`}
+                    className="AppBar"
+                    color="primary"
                     position="fixed">
                     <Toolbar style={{height: '70px'}}>
                         <Grid container spacing={8}
@@ -265,18 +262,18 @@ export class App extends PureComponent {
                                 </Grid>
                             }
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={16} alignItems="center" justify="center">
+                                <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
                                     {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
-                                        <Hidden xsDown>
-                                            <Grid item xs="auto">
-                                                <img id="logo" src={smallLogo} style={{height: 66, width: 60}}
-                                                    aria-label={locale.global.logo.label} onError={this.hideBrokenImage}/>
-                                            </Grid>
-                                        </Hidden>
+                                        <Grid item>
+                                            <div id="logo" className="smallLogo"
+                                                style={{height: 66, width: 60}}
+                                                aria-label={locale.global.logo.label}
+                                            />
+                                        </Grid>
                                     }
-                                    <Grid item xs>
-                                        <Typography variant={'h5'} noWrap className={classes.titleLink}>
+                                    <Grid item xs={'auto'}>
+                                        <Typography variant="title" noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
                                     </Grid>
@@ -284,7 +281,7 @@ export class App extends PureComponent {
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item md={4}>
+                                <Grid item sm={4}>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
@@ -306,7 +303,7 @@ export class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={largeLogo}
+                        logoImage="largeLogo"
                         logoText={locale.global.logo.label}
                         logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}

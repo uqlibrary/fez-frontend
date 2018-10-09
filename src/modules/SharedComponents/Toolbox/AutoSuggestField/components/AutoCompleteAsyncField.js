@@ -17,7 +17,7 @@ const styles = () => ({
         position: 'relative',
     },
     paper: {
-        height: 250,
+        maxHeight: 250,
         overflowY: 'scroll',
         position: 'absolute',
         zIndex: 999
@@ -47,12 +47,16 @@ export class AutoCompleteAsyncField extends Component {
         async: PropTypes.bool,
         disabled: PropTypes.bool,
         maxResults: PropTypes.number,
-        required: PropTypes.bool
+        required: PropTypes.bool,
+        filter: PropTypes.func
     };
 
     static defaultProps = {
         maxResults: 7,
-        required: false
+        required: false,
+        filter: (searchText, key) => {
+            return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+        }
     };
 
     componentDidMount() {
@@ -61,9 +65,9 @@ export class AutoCompleteAsyncField extends Component {
         }
     }
 
-    getSuggestions = (inputValue) => () => {
+    getSuggestions = (event) => {
         if (this.props.async && this.props.loadSuggestions) {
-            this.props.loadSuggestions(this.props.category, inputValue);
+            this.props.loadSuggestions(this.props.category, event.target.value);
         }
     };
 
@@ -165,7 +169,7 @@ export class AutoCompleteAsyncField extends Component {
                                         fullWidth: true,
                                         classes,
                                         inputProps: getInputProps({
-                                            onChange: this.getSuggestions(inputValue)
+                                            onChange: this.getSuggestions
                                         }),
                                         error: error,
                                         helperText: error && errorText || '',
@@ -179,15 +183,19 @@ export class AutoCompleteAsyncField extends Component {
                                         <div {...getMenuProps()}>
                                             <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">
                                                 <Paper className={classes.paper} square style={{width: this.textInputRef ? this.textInputRef.clientWidth : null}}>
-                                                    {itemsList.slice(0, maxResults).map((suggestion, index) => {
-                                                        return this.renderSuggestion({
-                                                            suggestion,
-                                                            index,
-                                                            itemProps: getItemProps({ item: suggestion }),
-                                                            highlightedIndex,
-                                                            selectedItem,
-                                                        });
-                                                    })}
+                                                    {
+                                                        itemsList
+                                                            .filter(suggestion => this.props.filter(inputValue, suggestion.value))
+                                                            .slice(0, maxResults).map((suggestion, index) => {
+                                                                return !!suggestion && this.renderSuggestion({
+                                                                    suggestion,
+                                                                    index,
+                                                                    itemProps: getItemProps({ item: suggestion }),
+                                                                    highlightedIndex,
+                                                                    selectedItem,
+                                                                });
+                                                            })
+                                                    }
                                                 </Paper>
                                             </Popper>
                                         </div>

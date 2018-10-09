@@ -233,7 +233,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           docTypes={
@@ -507,7 +507,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           docTypes={
@@ -775,7 +775,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           fieldRows={
@@ -1043,7 +1043,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           docTypes={
@@ -1312,7 +1312,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           fieldRows={
@@ -1576,7 +1576,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           fieldRows={
@@ -1667,7 +1667,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           fieldRows={
@@ -1931,7 +1931,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           }
         }
       >
-        <AdvancedSearchCaption
+        <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
           fieldRows={
