@@ -104,7 +104,8 @@ const webpackConfig = {
                     destination: 'icons',
                     ios: true
                 }
-            ]
+            ],
+            fingerprints: false
         }),
         new ProgressBarPlugin({
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
@@ -163,10 +164,7 @@ const webpackConfig = {
                 sourceMap: true,
                 parallel: true
             })
-        ],
-        runtimeChunk: {
-            name: "manifest.appcache"
-        }
+        ]
     },
     module: {
         rules: [
