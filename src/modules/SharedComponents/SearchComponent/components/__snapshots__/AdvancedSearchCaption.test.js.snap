@@ -4,145 +4,100 @@ exports[`Component AdvancedSearchCaption should render as expected with no props
 <div
   className="undefined searchQueryCaption"
 >
-  <span
-    key="0"
-  >
-    <span
-      className="and"
-    >
+  <React.Fragment>
+    <span>
+       
        
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Any field
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       contains
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       anything
     </span>
-  </span>
-  <span
-    key="1"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Collection
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is one of
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       UQ:120743, UQ:217419 or UQ:217422
     </span>
-  </span>
-  <span
-    key="2"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Author ID
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       570
     </span>
-  </span>
-  <span
-    key="3"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Publication type
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is one of
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       Audio document or Book
     </span>
-  </span>
-  <span
-    key="4"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
-    </span>
-    <span
-      className="title"
-    >
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
+       
+    </span>
+    <span>
        
       is
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       <span
         className="value"
@@ -150,36 +105,27 @@ exports[`Component AdvancedSearchCaption should render as expected with no props
         open access/full text
       </span>
     </span>
-  </span>
-  <span
-    key="5"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Published
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       between
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       1991 to 2012
     </span>
-  </span>
+  </React.Fragment>
 </div>
 `;
 
@@ -187,92 +133,65 @@ exports[`Component AdvancedSearchCaption updateStateData should return expected 
 <div
   className="search-body searchQueryCaption"
 >
-  <span
-    key="0"
-  >
-    <span
-      className="and"
-    >
+  <React.Fragment>
+    <span>
+       
        
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Any field
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       contains
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       sdsdfsdfgsdfg
     </span>
-  </span>
-  <span
-    key="1"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Collection
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is one of
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       UQ:120743, UQ:217419 or UQ:217422
     </span>
-  </span>
-  <span
-    key="2"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Author ID
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       81861
     </span>
-  </span>
+  </React.Fragment>
 </div>
 `;
 
@@ -280,91 +199,64 @@ exports[`Component AdvancedSearchCaption updateStateData should return expected 
 <div
   className="search-body searchQueryCaption"
 >
-  <span
-    key="0"
-  >
-    <span
-      className="and"
-    >
+  <React.Fragment>
+    <span>
+       
        
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Any field
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       contains
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       sdsdfsdfgsdfg
     </span>
-  </span>
-  <span
-    key="1"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Collection
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is one of
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       UQ:120743, UQ:217419 or UQ:217422
     </span>
-  </span>
-  <span
-    key="2"
-  >
-    <span
-      className="and"
-    >
+  </React.Fragment>
+  <React.Fragment>
+    <span>
        
        AND 
+       
     </span>
-    <span
-      className="title"
-    >
+    <span>
       Author ID
        
     </span>
-    <span
-      className="combiner"
-    >
+    <span>
        
       is
        
     </span>
-    <span
-      className="value"
-    >
+    <span>
        
       81861
     </span>
-  </span>
+  </React.Fragment>
 </div>
 `;
