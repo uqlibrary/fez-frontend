@@ -238,12 +238,12 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
         xsUp={false}
       >
         <WithStyles(Grid)
-          alignContent="center"
           alignItems="center"
           className={Object {}}
           container={true}
-          justify="center"
-          spacing={16}
+          direction="row"
+          spacing={8}
+          wrap="nowrap"
         >
           <WithStyles(Grid)
             item={true}
