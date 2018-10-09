@@ -163,7 +163,10 @@ const webpackConfig = {
                 sourceMap: true,
                 parallel: true
             })
-        ]
+        ],
+        runtimeChunk: {
+            name: "manifest.appcache"
+        }
     },
     module: {
         rules: [
