@@ -263,7 +263,7 @@ export class App extends PureComponent {
                                 </Grid>
                             }
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={16} alignItems="center" justify="left" wrap={'nowrap'}>
+                                <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
                                     {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
                                         <Grid item>
