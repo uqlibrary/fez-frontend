@@ -2,14 +2,34 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
+import {withStyles} from '@material-ui/core';
 
-export default class AdvancedSearchCaption extends PureComponent {
+const styles = (theme) => ({
+    and: {
+        ...theme.typography.caption,
+    },
+    title: {
+        ...theme.typography.caption
+    },
+    combiner: {
+        ...theme.typography.caption,
+        fontStyle: 'italic'
+    },
+    value: {
+        ...theme.typography.caption,
+        fontWeight: 'bold'
+    }
+
+});
+
+export class AdvancedSearchCaption extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
         fieldRows: PropTypes.array,
         docTypes: PropTypes.array,
         yearFilter: PropTypes.object,
         isOpenAccess: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -98,18 +118,19 @@ export default class AdvancedSearchCaption extends PureComponent {
     };
 
     renderCaptions = (items) => {
+        const {classes} = this.props;
         return items
             .filter((item) => item !== null) // Dont render nulls
             .filter((item) => item.title !== 'Select a field') // Dont render caption for select a field
             .filter((item) => !!item.value) // Dont render caption until it has a value
             .map((item, index) => {
                 return (
-                    <span key={index}>
-                        <span className="and"> {index !== 0 && ' AND '}</span>
-                        <span className="title">{item.title} </span>
-                        <span className="combiner"> {item.combiner} </span>
-                        <span className="value"> {item.value}</span>
-                    </span>
+                    <React.Fragment>
+                        <span className={classes.and}> {index !== 0 && ' AND '} </span>
+                        <span className={classes.title}>{item.title} </span>
+                        <span className={classes.combiner}> {item.combiner} </span>
+                        <span className={classes.value}> {item.value}</span>
+                    </React.Fragment>
                 );
             });
     };
@@ -122,3 +143,5 @@ export default class AdvancedSearchCaption extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(AdvancedSearchCaption);
