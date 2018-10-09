@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
-import {withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 
 const styles = (theme) => ({
     and: {
