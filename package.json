@@ -60,7 +60,7 @@
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
-    "webpack-pwa-manifest": "^3.6.2"
+    "webpack-pwa-manifest": "^3.7.1"
   },
   "dependencies": {
     "@material-ui/core": "^3.0.3",
