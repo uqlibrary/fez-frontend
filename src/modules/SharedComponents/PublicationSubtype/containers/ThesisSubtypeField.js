@@ -13,8 +13,8 @@ const mapStateToProps = (state, props) => {
         placeholder: props.placeholder,
         required: props.required,
         itemsLoadingHint: props.loadingHint || 'Loading..',
-        errorText: props.meta.error,
-        error: !!props.meta.error
+        errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || '',
+        error: !!props.meta && !!props.meta.error || props.error || false
     };
 };
 
