@@ -221,42 +221,28 @@ exports[`Application component should render alert if user is not fez author 1`]
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -280,7 +266,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -834,42 +820,28 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -893,7 +865,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -1312,42 +1284,28 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -1371,7 +1329,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -1757,42 +1715,28 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -1816,7 +1760,7 @@ exports[`Application component should render app for account with fez author wit
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -2348,42 +2292,28 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -2407,7 +2337,7 @@ exports[`Application component should render app for account with fez author wit
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -2935,42 +2865,28 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -3440,42 +3356,28 @@ exports[`Application component should render application with routing for the us
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -3499,7 +3401,7 @@ exports[`Application component should render application with routing for the us
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -3727,42 +3629,28 @@ exports[`Application component should render for anon user 1`] = `
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}
@@ -3786,7 +3674,7 @@ exports[`Application component should render for anon user 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={4}
+          sm={4}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -4013,42 +3901,28 @@ exports[`Application component should render thesis submission for HDR without m
           <WithStyles(Grid)
             alignItems="center"
             container={true}
-            justify="center"
+            justify="left"
             spacing={16}
+            wrap="nowrap"
           >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-                xs="auto"
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
             <WithStyles(Grid)
               item={true}
-              xs={true}
+            >
+              <div
+                aria-label="University of Queensland"
+                className="smallLogo"
+                id="logo"
+                style={
+                  Object {
+                    "height": 66,
+                    "width": 60,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs="auto"
             >
               <WithStyles(Typography)
                 noWrap={true}

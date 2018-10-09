@@ -172,10 +172,10 @@ export class SimpleSearchComponent extends PureComponent {
                             <React.Fragment>
                                 {/* DESKTOP in header */}
                                 <Hidden xsDown>
-                                    <Grid container spacing={16} alignItems={'center'} alignContent={'center'} justify={'center'} className={classes.inHeader}>
+                                    <Grid container alignItems={'center'} spacing={8} wrap={'nowrap'} className={classes.inHeader} direction={'row'}>
                                         {
                                             this.props.showPrefixIcon &&
-                                            <Grid item>
+                                            <Grid item xs={'auto'}>
                                                 <Search className={classes.searchIconPrefix}/>
                                             </Grid>
                                         }
