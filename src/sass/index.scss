@@ -27,11 +27,11 @@ a {
   }
 }
 
-.smallLogo {
+.smallLogo::before {
   content: url(../../src/images/uq-logo-white-minimal.svg);
 }
 
-.largeLogo {
+.largeLogo::before {
   content: url(../../src/images/uq-logo-white-2018.svg);
 }
 
