@@ -24,6 +24,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link
@@ -937,6 +938,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link
@@ -1818,6 +1820,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link
@@ -2660,6 +2663,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link
@@ -3502,6 +3506,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link
@@ -4344,6 +4349,7 @@ exports[`PublicationCitation  should render component with publication from mult
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link
@@ -6076,6 +6082,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
           xs={true}
         >
           <WithStyles(Typography)
+            component="h5"
             variant="h5"
           >
             <Link

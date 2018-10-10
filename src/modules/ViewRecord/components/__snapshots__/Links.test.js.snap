@@ -1189,7 +1189,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                   titleTypographyProps={
                                     Object {
                                       "color": "inherit",
-                                      "component": "h2",
+                                      "component": "h3",
                                       "variant": "h5",
                                     }
                                   }
@@ -1212,7 +1212,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                     titleTypographyProps={
                                       Object {
                                         "color": "inherit",
-                                        "component": "h2",
+                                        "component": "h3",
                                         "variant": "h5",
                                       }
                                     }
@@ -1226,7 +1226,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         <WithStyles(Typography)
                                           className="MuiCardHeader-title-134"
                                           color="inherit"
-                                          component="h2"
+                                          component="h3"
                                           internalDeprecatedVariant={true}
                                           variant="h5"
                                         >
@@ -1273,7 +1273,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               }
                                             }
                                             color="inherit"
-                                            component="h2"
+                                            component="h3"
                                             gutterBottom={false}
                                             headlineMapping={
                                               Object {
@@ -1720,11 +1720,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             }
                                             variant="h5"
                                           >
-                                            <h2
+                                            <h3
                                               className="MuiTypography-root-136 MuiTypography-h5-152 MuiTypography-colorInherit-165 MuiCardHeader-title-134"
                                             >
                                               Links
-                                            </h2>
+                                            </h3>
                                           </Typography>
                                         </WithStyles(Typography)>
                                       </div>
@@ -13031,7 +13031,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                   titleTypographyProps={
                                     Object {
                                       "color": "inherit",
-                                      "component": "h2",
+                                      "component": "h3",
                                       "variant": "h5",
                                     }
                                   }
@@ -13054,7 +13054,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                     titleTypographyProps={
                                       Object {
                                         "color": "inherit",
-                                        "component": "h2",
+                                        "component": "h3",
                                         "variant": "h5",
                                       }
                                     }
@@ -13068,7 +13068,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         <WithStyles(Typography)
                                           className="MuiCardHeader-title-134"
                                           color="inherit"
-                                          component="h2"
+                                          component="h3"
                                           internalDeprecatedVariant={true}
                                           variant="h5"
                                         >
@@ -13115,7 +13115,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               }
                                             }
                                             color="inherit"
-                                            component="h2"
+                                            component="h3"
                                             gutterBottom={false}
                                             headlineMapping={
                                               Object {
@@ -13562,11 +13562,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             }
                                             variant="h5"
                                           >
-                                            <h2
+                                            <h3
                                               className="MuiTypography-root-136 MuiTypography-h5-152 MuiTypography-colorInherit-165 MuiCardHeader-title-134"
                                             >
                                               Links
-                                            </h2>
+                                            </h3>
                                           </Typography>
                                         </WithStyles(Typography)>
                                       </div>
@@ -23141,7 +23141,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                   titleTypographyProps={
                                     Object {
                                       "color": "inherit",
-                                      "component": "h2",
+                                      "component": "h3",
                                       "variant": "h5",
                                     }
                                   }
@@ -23164,7 +23164,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                     titleTypographyProps={
                                       Object {
                                         "color": "inherit",
-                                        "component": "h2",
+                                        "component": "h3",
                                         "variant": "h5",
                                       }
                                     }
@@ -23178,7 +23178,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         <WithStyles(Typography)
                                           className="MuiCardHeader-title-134"
                                           color="inherit"
-                                          component="h2"
+                                          component="h3"
                                           internalDeprecatedVariant={true}
                                           variant="h5"
                                         >
@@ -23225,7 +23225,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               }
                                             }
                                             color="inherit"
-                                            component="h2"
+                                            component="h3"
                                             gutterBottom={false}
                                             headlineMapping={
                                               Object {
@@ -23672,11 +23672,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             }
                                             variant="h5"
                                           >
-                                            <h2
+                                            <h3
                                               className="MuiTypography-root-136 MuiTypography-h5-152 MuiTypography-colorInherit-165 MuiCardHeader-title-134"
                                             >
                                               Links
-                                            </h2>
+                                            </h3>
                                           </Typography>
                                         </WithStyles(Typography)>
                                       </div>
@@ -34710,7 +34710,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                   titleTypographyProps={
                                     Object {
                                       "color": "inherit",
-                                      "component": "h2",
+                                      "component": "h3",
                                       "variant": "h5",
                                     }
                                   }
@@ -34733,7 +34733,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                     titleTypographyProps={
                                       Object {
                                         "color": "inherit",
-                                        "component": "h2",
+                                        "component": "h3",
                                         "variant": "h5",
                                       }
                                     }
@@ -34747,7 +34747,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         <WithStyles(Typography)
                                           className="MuiCardHeader-title-134"
                                           color="inherit"
-                                          component="h2"
+                                          component="h3"
                                           internalDeprecatedVariant={true}
                                           variant="h5"
                                         >
@@ -34794,7 +34794,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               }
                                             }
                                             color="inherit"
-                                            component="h2"
+                                            component="h3"
                                             gutterBottom={false}
                                             headlineMapping={
                                               Object {
@@ -35241,11 +35241,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             }
                                             variant="h5"
                                           >
-                                            <h2
+                                            <h3
                                               className="MuiTypography-root-136 MuiTypography-h5-152 MuiTypography-colorInherit-165 MuiCardHeader-title-134"
                                             >
                                               Links
-                                            </h2>
+                                            </h3>
                                           </Typography>
                                         </WithStyles(Typography)>
                                       </div>

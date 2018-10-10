@@ -196,7 +196,7 @@ export class PublicationCitation extends PureComponent {
                             {
                                 !this.props.hideTitle ?
                                     <Grid item xs style={{minWidth: 1}}>
-                                        <Typography variant={'h5'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
+                                        <Typography variant={'h5'} component={'h5'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
                                     :
                                     <Grid item xs />
