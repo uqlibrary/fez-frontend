@@ -12,7 +12,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21,7 +21,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         className="gridRow"
         container={true}
         key="1"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -55,7 +55,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -64,7 +64,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         className="gridRow"
         container={true}
         key="2"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -98,7 +98,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -107,7 +107,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         className="gridRow"
         container={true}
         key="3"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -160,7 +160,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -169,7 +169,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         className="gridRow"
         container={true}
         key="1"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -203,7 +203,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -212,7 +212,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         className="gridRow"
         container={true}
         key="2"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -246,7 +246,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -255,7 +255,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         className="gridRow"
         container={true}
         key="3"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -310,7 +310,7 @@ exports[`Grant Information Component  should render component 1`] = `
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -319,7 +319,7 @@ exports[`Grant Information Component  should render component 1`] = `
         className="gridRow"
         container={true}
         key="1"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -353,7 +353,7 @@ exports[`Grant Information Component  should render component 1`] = `
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -362,7 +362,7 @@ exports[`Grant Information Component  should render component 1`] = `
         className="gridRow"
         container={true}
         key="2"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -396,7 +396,7 @@ exports[`Grant Information Component  should render component 1`] = `
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -405,7 +405,7 @@ exports[`Grant Information Component  should render component 1`] = `
         className="gridRow"
         container={true}
         key="3"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -458,7 +458,7 @@ exports[`Grant Information Component  should render with publication without gra
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -467,7 +467,7 @@ exports[`Grant Information Component  should render with publication without gra
         className="gridRow"
         container={true}
         key="1"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -499,7 +499,7 @@ exports[`Grant Information Component  should render with publication without gra
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -508,7 +508,7 @@ exports[`Grant Information Component  should render with publication without gra
         className="gridRow"
         container={true}
         key="2"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -540,7 +540,7 @@ exports[`Grant Information Component  should render with publication without gra
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -549,7 +549,7 @@ exports[`Grant Information Component  should render with publication without gra
         className="gridRow"
         container={true}
         key="3"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}

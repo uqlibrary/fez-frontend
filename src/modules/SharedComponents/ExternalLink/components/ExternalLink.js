@@ -14,10 +14,11 @@ const styles = {
         maxWidth: '100% !important',
         minWidth: 0,
         display: 'inline-block',
+        marginBottom: '-0.35rem'
     },
     externalLinkIcon: {
         color: 'inherit',
-        fontSize: '0.8rem',
+        fontSize: '0.66rem',
         display: 'inline-block',
         float: 'right',
         marginLeft: '0.25rem'

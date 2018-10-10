@@ -117,36 +117,36 @@ const styles = theme => ({
     },
     help: {
         color: theme.palette.white.main,
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: theme.palette.secondary.main,
         '& .spinner': {
-            color: theme.palette.primary.dark
+            color: theme.palette.secondary.dark
         },
         '& .icon': {
-            color: theme.palette.primary.dark
+            color: theme.palette.secondary.dark
         },
         '& .dismiss': {
-            color: theme.palette.primary.dark
+            color: theme.palette.secondary.dark
         },
         '& .action': {
             color: theme.palette.white.main,
-            backgroundColor: theme.palette.primary.dark
+            backgroundColor: theme.palette.secondary.dark
         }
     },
     help_outline: {
         color: theme.palette.white.main,
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: theme.palette.secondary.main,
         '& .spinner': {
-            color: theme.palette.primary.dark
+            color: theme.palette.secondary.dark
         },
         '& .icon': {
-            color: theme.palette.primary.dark
+            color: theme.palette.secondary.dark
         },
         '& .dismiss': {
-            color: theme.palette.primary.dark
+            color: theme.palette.secondary.dark
         },
         '& .action': {
             color: theme.palette.white.main,
-            backgroundColor: theme.palette.primary.dark
+            backgroundColor: theme.palette.secondary.dark
         }
     },
     info: {

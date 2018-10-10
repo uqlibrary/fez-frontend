@@ -4255,7 +4255,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -4370,14 +4370,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -5730,7 +5730,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -5845,14 +5845,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -7203,7 +7203,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -7318,14 +7318,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -8664,7 +8664,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -8779,14 +8779,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -10125,7 +10125,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -10240,14 +10240,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -16097,7 +16097,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -16212,14 +16212,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -17570,7 +17570,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -17685,14 +17685,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -19031,7 +19031,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -19146,14 +19146,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -20492,7 +20492,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -20607,14 +20607,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -26207,7 +26207,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -26322,14 +26322,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -27676,7 +27676,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -27791,14 +27791,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -29145,7 +29145,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -29260,14 +29260,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -30606,7 +30606,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -30721,14 +30721,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -32067,7 +32067,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -32182,14 +32182,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -37776,7 +37776,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -37891,14 +37891,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -39249,7 +39249,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -39364,14 +39364,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -40710,7 +40710,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -40825,14 +40825,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -42171,7 +42171,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           className="header"
                                           container={true}
                                           justify="center"
-                                          spacing={16}
+                                          spacing={32}
                                         >
                                           <Grid
                                             alignContent="center"
@@ -42286,14 +42286,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             lg={false}
                                             md={false}
                                             sm={false}
-                                            spacing={16}
+                                            spacing={32}
                                             wrap="wrap"
                                             xl={false}
                                             xs={false}
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
+                                              className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 MuiGrid-align-items-xs-center-9 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18 header"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}

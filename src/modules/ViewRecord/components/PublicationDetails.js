@@ -26,8 +26,8 @@ export class PublicationDetails extends PureComponent {
     };
 
     ViewRecordRow = ({heading, data}) => (
-        <div style={{padding: 16}}>
-            <Grid container spacing={32} className={this.props.classes.gridRow} alignItems="flex-start">
+        <div style={{padding: 8}}>
+            <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body1" classes={{root: this.props.classes.header}}>{heading}</Typography>
                 </Grid>

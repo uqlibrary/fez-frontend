@@ -33,7 +33,7 @@ export class Links extends PureComponent {
     };
 
     LinkRow = ({link, description, openAccessStatus}) => (
-        <Grid container spacing={16} className={this.props.classes.header} alignItems={'center'} alignContent={'center'} justify={'center'}>
+        <Grid container spacing={32} className={this.props.classes.header} alignItems={'center'} alignContent={'center'} justify={'center'}>
             <Grid item xs={12} sm={6}>
                 {link}
             </Grid>

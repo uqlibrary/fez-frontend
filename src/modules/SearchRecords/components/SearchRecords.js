@@ -314,7 +314,9 @@ class SearchRecords extends PureComponent {
                                 }
                                 {
                                     !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                    <PublicationsList publicationsList={this.props.publicationsList} />
+                                        <div style={{marginTop: 16}}>
+                                            <PublicationsList publicationsList={this.props.publicationsList} />
+                                        </div>
                                 }
                                 <PublicationsListPaging
                                     loading={isLoadingOrExporting}

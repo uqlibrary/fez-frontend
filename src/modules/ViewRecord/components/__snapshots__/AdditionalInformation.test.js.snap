@@ -14,7 +14,7 @@ exports[`Additional Information Component  should render component with audio do
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23,7 +23,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Creator(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -430,7 +430,7 @@ exports[`Additional Information Component  should render component with audio do
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -439,7 +439,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -471,7 +471,7 @@ exports[`Additional Information Component  should render component with audio do
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -480,7 +480,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -517,7 +517,7 @@ exports[`Additional Information Component  should render component with audio do
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -526,7 +526,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -564,7 +564,7 @@ exports[`Additional Information Component  should render component with audio do
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -573,7 +573,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Recording date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -611,7 +611,7 @@ exports[`Additional Information Component  should render component with audio do
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -620,7 +620,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Series"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -655,7 +655,7 @@ exports[`Additional Information Component  should render component with audio do
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -664,7 +664,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -696,7 +696,7 @@ exports[`Additional Information Component  should render component with audio do
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -705,7 +705,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -746,7 +746,7 @@ exports[`Additional Information Component  should render component with audio do
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -755,7 +755,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-License"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -804,7 +804,7 @@ exports[`Additional Information Component  should render component with audio do
       key="22"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -813,7 +813,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Genres"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -854,7 +854,7 @@ exports[`Additional Information Component  should render component with audio do
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -863,7 +863,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -914,7 +914,7 @@ exports[`Additional Information Component  should render component with audio do
       key="27"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -923,7 +923,7 @@ exports[`Additional Information Component  should render component with audio do
         className="gridRow"
         container={true}
         key="additional-info-Transcript"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -971,7 +971,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -980,7 +980,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1314,7 +1314,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1323,7 +1323,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1355,7 +1355,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1364,7 +1364,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1396,7 +1396,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1405,7 +1405,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1442,7 +1442,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1451,7 +1451,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Publication year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1489,7 +1489,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1498,7 +1498,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Edition"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1530,7 +1530,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1539,7 +1539,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Series"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1576,7 +1576,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1585,7 +1585,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-ISBN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1636,7 +1636,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1645,7 +1645,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Editor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -1982,7 +1982,7 @@ exports[`Additional Information Component  should render component with book 1`]
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -1991,7 +1991,7 @@ exports[`Additional Information Component  should render component with book 1`]
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2035,7 +2035,7 @@ exports[`Additional Information Component  should render component with book cha
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2044,7 +2044,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2496,7 +2496,7 @@ exports[`Additional Information Component  should render component with book cha
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2505,7 +2505,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Title of chapter"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2537,7 +2537,7 @@ exports[`Additional Information Component  should render component with book cha
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2546,7 +2546,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Title of book"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2583,7 +2583,7 @@ exports[`Additional Information Component  should render component with book cha
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2592,7 +2592,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2624,7 +2624,7 @@ exports[`Additional Information Component  should render component with book cha
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2633,7 +2633,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2670,7 +2670,7 @@ exports[`Additional Information Component  should render component with book cha
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2679,7 +2679,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Publication year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2717,7 +2717,7 @@ exports[`Additional Information Component  should render component with book cha
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2726,7 +2726,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2761,7 +2761,7 @@ exports[`Additional Information Component  should render component with book cha
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2770,7 +2770,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2800,7 +2800,7 @@ exports[`Additional Information Component  should render component with book cha
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2809,7 +2809,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Series"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2846,7 +2846,7 @@ exports[`Additional Information Component  should render component with book cha
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2855,7 +2855,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-ISBN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2896,7 +2896,7 @@ exports[`Additional Information Component  should render component with book cha
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2905,7 +2905,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-ISSN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -2946,7 +2946,7 @@ exports[`Additional Information Component  should render component with book cha
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -2955,7 +2955,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Editor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3410,7 +3410,7 @@ exports[`Additional Information Component  should render component with book cha
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3419,7 +3419,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Volume"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3451,7 +3451,7 @@ exports[`Additional Information Component  should render component with book cha
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3460,7 +3460,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Chapter number"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3492,7 +3492,7 @@ exports[`Additional Information Component  should render component with book cha
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3501,7 +3501,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3533,7 +3533,7 @@ exports[`Additional Information Component  should render component with book cha
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3542,7 +3542,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3574,7 +3574,7 @@ exports[`Additional Information Component  should render component with book cha
       key="22"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3583,7 +3583,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3615,7 +3615,7 @@ exports[`Additional Information Component  should render component with book cha
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3624,7 +3624,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Total chapters"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3656,7 +3656,7 @@ exports[`Additional Information Component  should render component with book cha
       key="24"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3665,7 +3665,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3706,7 +3706,7 @@ exports[`Additional Information Component  should render component with book cha
       key="25"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3715,7 +3715,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3761,7 +3761,7 @@ exports[`Additional Information Component  should render component with book cha
       key="26"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3770,7 +3770,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3866,7 +3866,7 @@ exports[`Additional Information Component  should render component with book cha
       key="29"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3875,7 +3875,7 @@ exports[`Additional Information Component  should render component with book cha
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -3919,7 +3919,7 @@ exports[`Additional Information Component  should render component with conferen
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -3928,7 +3928,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -4649,7 +4649,7 @@ exports[`Additional Information Component  should render component with conferen
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -4658,7 +4658,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Title of paper"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -4690,7 +4690,7 @@ exports[`Additional Information Component  should render component with conferen
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -4699,7 +4699,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Conference name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -4736,7 +4736,7 @@ exports[`Additional Information Component  should render component with conferen
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -4745,7 +4745,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Conference Location"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -4777,7 +4777,7 @@ exports[`Additional Information Component  should render component with conferen
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -4786,7 +4786,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Conference dates"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -4818,7 +4818,7 @@ exports[`Additional Information Component  should render component with conferen
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -4827,7 +4827,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Journal name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5545,7 +5545,7 @@ exports[`Additional Information Component  should render component with conferen
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5554,7 +5554,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5586,7 +5586,7 @@ exports[`Additional Information Component  should render component with conferen
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5595,7 +5595,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5632,7 +5632,7 @@ exports[`Additional Information Component  should render component with conferen
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5641,7 +5641,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Publication year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5679,7 +5679,7 @@ exports[`Additional Information Component  should render component with conferen
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5688,7 +5688,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5723,7 +5723,7 @@ exports[`Additional Information Component  should render component with conferen
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5732,7 +5732,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-ISSN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5778,7 +5778,7 @@ exports[`Additional Information Component  should render component with conferen
       key="25"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5787,7 +5787,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Volume"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5819,7 +5819,7 @@ exports[`Additional Information Component  should render component with conferen
       key="26"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5828,7 +5828,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Issue"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5860,7 +5860,7 @@ exports[`Additional Information Component  should render component with conferen
       key="27"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5869,7 +5869,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5901,7 +5901,7 @@ exports[`Additional Information Component  should render component with conferen
       key="28"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5910,7 +5910,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5942,7 +5942,7 @@ exports[`Additional Information Component  should render component with conferen
       key="29"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5951,7 +5951,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -5983,7 +5983,7 @@ exports[`Additional Information Component  should render component with conferen
       key="32"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -5992,7 +5992,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6045,7 +6045,7 @@ exports[`Additional Information Component  should render component with conferen
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6054,7 +6054,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Title of proceedings"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6086,7 +6086,7 @@ exports[`Additional Information Component  should render component with conferen
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6095,7 +6095,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Editor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6542,7 +6542,7 @@ exports[`Additional Information Component  should render component with conferen
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6551,7 +6551,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Conference name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6588,7 +6588,7 @@ exports[`Additional Information Component  should render component with conferen
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6597,7 +6597,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Conference Location"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6629,7 +6629,7 @@ exports[`Additional Information Component  should render component with conferen
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6638,7 +6638,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Conference dates"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6670,7 +6670,7 @@ exports[`Additional Information Component  should render component with conferen
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6679,7 +6679,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Convener"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6711,7 +6711,7 @@ exports[`Additional Information Component  should render component with conferen
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6720,7 +6720,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-ISBN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6761,7 +6761,7 @@ exports[`Additional Information Component  should render component with conferen
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6770,7 +6770,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6802,7 +6802,7 @@ exports[`Additional Information Component  should render component with conferen
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6811,7 +6811,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6848,7 +6848,7 @@ exports[`Additional Information Component  should render component with conferen
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6857,7 +6857,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6895,7 +6895,7 @@ exports[`Additional Information Component  should render component with conferen
       key="22"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6904,7 +6904,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Collection year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6942,7 +6942,7 @@ exports[`Additional Information Component  should render component with conferen
       key="27"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6951,7 +6951,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -6983,7 +6983,7 @@ exports[`Additional Information Component  should render component with conferen
       key="28"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -6992,7 +6992,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7024,7 +7024,7 @@ exports[`Additional Information Component  should render component with conferen
       key="29"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7033,7 +7033,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7065,7 +7065,7 @@ exports[`Additional Information Component  should render component with conferen
       key="32"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7074,7 +7074,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7115,7 +7115,7 @@ exports[`Additional Information Component  should render component with conferen
       key="33"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7124,7 +7124,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7180,7 +7180,7 @@ exports[`Additional Information Component  should render component with conferen
       key="34"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7189,7 +7189,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7345,7 +7345,7 @@ exports[`Additional Information Component  should render component with conferen
       key="36"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7354,7 +7354,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7386,7 +7386,7 @@ exports[`Additional Information Component  should render component with conferen
       key="37"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7395,7 +7395,7 @@ exports[`Additional Information Component  should render component with conferen
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7439,7 +7439,7 @@ exports[`Additional Information Component  should render component with creative
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7448,7 +7448,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7480,7 +7480,7 @@ exports[`Additional Information Component  should render component with creative
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7489,7 +7489,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7925,7 +7925,7 @@ exports[`Additional Information Component  should render component with creative
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7934,7 +7934,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -7966,7 +7966,7 @@ exports[`Additional Information Component  should render component with creative
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -7975,7 +7975,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8007,7 +8007,7 @@ exports[`Additional Information Component  should render component with creative
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8016,7 +8016,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8046,7 +8046,7 @@ exports[`Additional Information Component  should render component with creative
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8055,7 +8055,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8092,7 +8092,7 @@ exports[`Additional Information Component  should render component with creative
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8101,7 +8101,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8139,7 +8139,7 @@ exports[`Additional Information Component  should render component with creative
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8148,7 +8148,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8180,7 +8180,7 @@ exports[`Additional Information Component  should render component with creative
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8189,7 +8189,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8235,7 +8235,7 @@ exports[`Additional Information Component  should render component with creative
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8244,7 +8244,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8285,7 +8285,7 @@ exports[`Additional Information Component  should render component with creative
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8294,7 +8294,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8340,7 +8340,7 @@ exports[`Additional Information Component  should render component with creative
       key="22"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8349,7 +8349,7 @@ exports[`Additional Information Component  should render component with creative
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8432,7 +8432,7 @@ exports[`Additional Information Component  should render component with data col
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8441,7 +8441,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Project name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8473,7 +8473,7 @@ exports[`Additional Information Component  should render component with data col
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8482,7 +8482,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Project description"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -8524,7 +8524,7 @@ exports[`Additional Information Component  should render component with data col
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -8533,7 +8533,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Contact name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -9327,7 +9327,7 @@ exports[`Additional Information Component  should render component with data col
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -9336,7 +9336,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Contact email"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -9372,7 +9372,7 @@ exports[`Additional Information Component  should render component with data col
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -9381,7 +9381,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Creator name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10172,7 +10172,7 @@ exports[`Additional Information Component  should render component with data col
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10181,7 +10181,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Creator(s) role"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10242,7 +10242,7 @@ exports[`Additional Information Component  should render component with data col
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10251,7 +10251,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Dataset name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10283,7 +10283,7 @@ exports[`Additional Information Component  should render component with data col
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10292,7 +10292,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Access conditions"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10324,7 +10324,7 @@ exports[`Additional Information Component  should render component with data col
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10333,7 +10333,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Licencing and terms of access"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10380,7 +10380,7 @@ exports[`Additional Information Component  should render component with data col
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10389,7 +10389,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-ANZSRC Field of Research (FoR) Code"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10435,7 +10435,7 @@ exports[`Additional Information Component  should render component with data col
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10444,7 +10444,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10479,7 +10479,7 @@ exports[`Additional Information Component  should render component with data col
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10488,7 +10488,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Grant ID"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10534,7 +10534,7 @@ exports[`Additional Information Component  should render component with data col
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10543,7 +10543,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Type of data"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10599,7 +10599,7 @@ exports[`Additional Information Component  should render component with data col
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10608,7 +10608,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Software required"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10649,7 +10649,7 @@ exports[`Additional Information Component  should render component with data col
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10658,7 +10658,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10699,7 +10699,7 @@ exports[`Additional Information Component  should render component with data col
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10708,7 +10708,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Collection start date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10746,7 +10746,7 @@ exports[`Additional Information Component  should render component with data col
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10755,7 +10755,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Collection end date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10793,7 +10793,7 @@ exports[`Additional Information Component  should render component with data col
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10802,7 +10802,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Time coverage start date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10840,7 +10840,7 @@ exports[`Additional Information Component  should render component with data col
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10849,7 +10849,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Time coverage end date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10887,7 +10887,7 @@ exports[`Additional Information Component  should render component with data col
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10896,7 +10896,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -10982,7 +10982,7 @@ exports[`Additional Information Component  should render component with data col
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -10991,7 +10991,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Geographic co-ordinates"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11049,7 +11049,7 @@ exports[`Additional Information Component  should render component with data col
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11058,7 +11058,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-ANZSRC Socio-Economic Objective (SEO) Code"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11099,7 +11099,7 @@ exports[`Additional Information Component  should render component with data col
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11108,7 +11108,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Collection type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11140,7 +11140,7 @@ exports[`Additional Information Component  should render component with data col
       key="24"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11149,7 +11149,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11186,7 +11186,7 @@ exports[`Additional Information Component  should render component with data col
       key="25"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11195,7 +11195,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Publication year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11233,7 +11233,7 @@ exports[`Additional Information Component  should render component with data col
       key="26"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11242,7 +11242,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Copyright notice"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11274,7 +11274,7 @@ exports[`Additional Information Component  should render component with data col
       key="27"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11283,7 +11283,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11315,7 +11315,7 @@ exports[`Additional Information Component  should render component with data col
       key="29"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11324,7 +11324,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Dataset description"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11869,7 +11869,7 @@ exports[`Additional Information Component  should render component with data col
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11878,7 +11878,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Project name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11910,7 +11910,7 @@ exports[`Additional Information Component  should render component with data col
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11919,7 +11919,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Project description"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -11954,7 +11954,7 @@ exports[`Additional Information Component  should render component with data col
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -11963,7 +11963,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Contact name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -12504,7 +12504,7 @@ exports[`Additional Information Component  should render component with data col
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -12513,7 +12513,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Contact email"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -12549,7 +12549,7 @@ exports[`Additional Information Component  should render component with data col
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -12558,7 +12558,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Creator name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13096,7 +13096,7 @@ exports[`Additional Information Component  should render component with data col
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13105,7 +13105,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Creator(s) role"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13146,7 +13146,7 @@ exports[`Additional Information Component  should render component with data col
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13155,7 +13155,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Dataset name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13187,7 +13187,7 @@ exports[`Additional Information Component  should render component with data col
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13196,7 +13196,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Access conditions"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13228,7 +13228,7 @@ exports[`Additional Information Component  should render component with data col
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13237,7 +13237,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Licencing and terms of access"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13286,7 +13286,7 @@ exports[`Additional Information Component  should render component with data col
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13295,7 +13295,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-ANZSRC Field of Research (FoR) Code"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13346,7 +13346,7 @@ exports[`Additional Information Component  should render component with data col
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13355,7 +13355,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13390,7 +13390,7 @@ exports[`Additional Information Component  should render component with data col
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13399,7 +13399,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Type of data"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13440,7 +13440,7 @@ exports[`Additional Information Component  should render component with data col
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13449,7 +13449,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13490,7 +13490,7 @@ exports[`Additional Information Component  should render component with data col
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13499,7 +13499,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Time coverage start date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13537,7 +13537,7 @@ exports[`Additional Information Component  should render component with data col
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13546,7 +13546,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Time coverage end date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13584,7 +13584,7 @@ exports[`Additional Information Component  should render component with data col
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13593,7 +13593,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13669,7 +13669,7 @@ exports[`Additional Information Component  should render component with data col
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13678,7 +13678,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Geographic co-ordinates"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13736,7 +13736,7 @@ exports[`Additional Information Component  should render component with data col
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13745,7 +13745,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Collection type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13777,7 +13777,7 @@ exports[`Additional Information Component  should render component with data col
       key="24"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13786,7 +13786,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13823,7 +13823,7 @@ exports[`Additional Information Component  should render component with data col
       key="25"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13832,7 +13832,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Publication year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13870,7 +13870,7 @@ exports[`Additional Information Component  should render component with data col
       key="26"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13879,7 +13879,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Copyright notice"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13911,7 +13911,7 @@ exports[`Additional Information Component  should render component with data col
       key="29"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13920,7 +13920,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Dataset description"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -13955,7 +13955,7 @@ exports[`Additional Information Component  should render component with data col
       key="30"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -13964,7 +13964,7 @@ exports[`Additional Information Component  should render component with data col
         className="gridRow"
         container={true}
         key="additional-info-Data Volume"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14008,7 +14008,7 @@ exports[`Additional Information Component  should render component with design d
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14017,7 +14017,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Designer(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14465,7 +14465,7 @@ exports[`Additional Information Component  should render component with design d
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14474,7 +14474,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14506,7 +14506,7 @@ exports[`Additional Information Component  should render component with design d
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14515,7 +14515,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Project name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14547,7 +14547,7 @@ exports[`Additional Information Component  should render component with design d
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14556,7 +14556,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Project start date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14594,7 +14594,7 @@ exports[`Additional Information Component  should render component with design d
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14603,7 +14603,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Year available"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14641,7 +14641,7 @@ exports[`Additional Information Component  should render component with design d
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14650,7 +14650,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14682,7 +14682,7 @@ exports[`Additional Information Component  should render component with design d
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14691,7 +14691,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14723,7 +14723,7 @@ exports[`Additional Information Component  should render component with design d
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14732,7 +14732,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14770,7 +14770,7 @@ exports[`Additional Information Component  should render component with design d
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14779,7 +14779,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Location"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14820,7 +14820,7 @@ exports[`Additional Information Component  should render component with design d
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14829,7 +14829,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -14861,7 +14861,7 @@ exports[`Additional Information Component  should render component with design d
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -14870,7 +14870,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Consultant(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15321,7 +15321,7 @@ exports[`Additional Information Component  should render component with design d
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15330,7 +15330,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15386,7 +15386,7 @@ exports[`Additional Information Component  should render component with design d
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15395,7 +15395,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15481,7 +15481,7 @@ exports[`Additional Information Component  should render component with design d
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15490,7 +15490,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Job number"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15527,7 +15527,7 @@ exports[`Additional Information Component  should render component with design d
       key="30"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15536,7 +15536,7 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-Project description"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15580,7 +15580,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15589,7 +15589,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15621,7 +15621,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15630,7 +15630,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Date photo taken"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15668,7 +15668,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15677,7 +15677,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Date scanned"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15715,7 +15715,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15724,7 +15724,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -15761,7 +15761,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -15770,7 +15770,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Photographer"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16088,7 +16088,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16097,7 +16097,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Location"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16143,7 +16143,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16152,7 +16152,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16182,7 +16182,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16191,7 +16191,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Category"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16237,7 +16237,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16246,7 +16246,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Subcategory"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16292,7 +16292,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16301,7 +16301,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Condition"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16342,7 +16342,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16351,7 +16351,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Structural systems & elements"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16392,7 +16392,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16401,7 +16401,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Building materials"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16447,7 +16447,7 @@ exports[`Additional Information Component  should render component with digilib 
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16456,7 +16456,7 @@ exports[`Additional Information Component  should render component with digilib 
         className="gridRow"
         container={true}
         key="additional-info-Architectural features"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16514,7 +16514,7 @@ exports[`Additional Information Component  should render component with generic 
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16523,7 +16523,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16555,7 +16555,7 @@ exports[`Additional Information Component  should render component with generic 
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16564,7 +16564,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16680,7 +16680,7 @@ exports[`Additional Information Component  should render component with generic 
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16689,7 +16689,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16727,7 +16727,7 @@ exports[`Additional Information Component  should render component with generic 
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16736,7 +16736,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Research fields, Courses and Disciplines"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -16777,7 +16777,7 @@ exports[`Additional Information Component  should render component with generic 
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -16786,7 +16786,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -17291,7 +17291,7 @@ exports[`Additional Information Component  should render component with generic 
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -17300,7 +17300,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Editor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -17808,7 +17808,7 @@ exports[`Additional Information Component  should render component with generic 
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -17817,7 +17817,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -17847,7 +17847,7 @@ exports[`Additional Information Component  should render component with generic 
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -17856,7 +17856,7 @@ exports[`Additional Information Component  should render component with generic 
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -17900,7 +17900,7 @@ exports[`Additional Information Component  should render component with image 1`
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -17909,7 +17909,7 @@ exports[`Additional Information Component  should render component with image 1`
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -17941,7 +17941,7 @@ exports[`Additional Information Component  should render component with image 1`
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -17950,7 +17950,7 @@ exports[`Additional Information Component  should render component with image 1`
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18054,7 +18054,7 @@ exports[`Additional Information Component  should render component with journal 
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18063,7 +18063,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Title of journal"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18095,7 +18095,7 @@ exports[`Additional Information Component  should render component with journal 
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18104,7 +18104,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Editor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18471,7 +18471,7 @@ exports[`Additional Information Component  should render component with journal 
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18480,7 +18480,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18518,7 +18518,7 @@ exports[`Additional Information Component  should render component with journal 
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18527,7 +18527,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Volume"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18559,7 +18559,7 @@ exports[`Additional Information Component  should render component with journal 
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18568,7 +18568,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Issue"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18600,7 +18600,7 @@ exports[`Additional Information Component  should render component with journal 
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18609,7 +18609,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-ISSN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18655,7 +18655,7 @@ exports[`Additional Information Component  should render component with journal 
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18664,7 +18664,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18694,7 +18694,7 @@ exports[`Additional Information Component  should render component with journal 
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18703,7 +18703,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18735,7 +18735,7 @@ exports[`Additional Information Component  should render component with journal 
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18744,7 +18744,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18781,7 +18781,7 @@ exports[`Additional Information Component  should render component with journal 
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18790,7 +18790,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18831,7 +18831,7 @@ exports[`Additional Information Component  should render component with journal 
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18840,7 +18840,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18881,7 +18881,7 @@ exports[`Additional Information Component  should render component with journal 
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18890,7 +18890,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -18958,7 +18958,7 @@ exports[`Additional Information Component  should render component with journal 
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -18967,7 +18967,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -20066,7 +20066,7 @@ exports[`Additional Information Component  should render component with journal 
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -20075,7 +20075,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -20107,7 +20107,7 @@ exports[`Additional Information Component  should render component with journal 
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -20116,7 +20116,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Journal name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21212,7 +21212,7 @@ exports[`Additional Information Component  should render component with journal 
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21221,7 +21221,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-ISSN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21262,7 +21262,7 @@ exports[`Additional Information Component  should render component with journal 
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21271,7 +21271,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21309,7 +21309,7 @@ exports[`Additional Information Component  should render component with journal 
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21318,7 +21318,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Year available"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21356,7 +21356,7 @@ exports[`Additional Information Component  should render component with journal 
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21365,7 +21365,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21400,7 +21400,7 @@ exports[`Additional Information Component  should render component with journal 
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21409,7 +21409,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21439,7 +21439,7 @@ exports[`Additional Information Component  should render component with journal 
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21448,7 +21448,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Volume"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21480,7 +21480,7 @@ exports[`Additional Information Component  should render component with journal 
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21489,7 +21489,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Issue"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21521,7 +21521,7 @@ exports[`Additional Information Component  should render component with journal 
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21530,7 +21530,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21562,7 +21562,7 @@ exports[`Additional Information Component  should render component with journal 
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21571,7 +21571,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21603,7 +21603,7 @@ exports[`Additional Information Component  should render component with journal 
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21612,7 +21612,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21644,7 +21644,7 @@ exports[`Additional Information Component  should render component with journal 
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21653,7 +21653,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21685,7 +21685,7 @@ exports[`Additional Information Component  should render component with journal 
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21694,7 +21694,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21731,7 +21731,7 @@ exports[`Additional Information Component  should render component with journal 
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21740,7 +21740,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21781,7 +21781,7 @@ exports[`Additional Information Component  should render component with journal 
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21790,7 +21790,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21896,7 +21896,7 @@ exports[`Additional Information Component  should render component with journal 
       key="26"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21905,7 +21905,7 @@ exports[`Additional Information Component  should render component with journal 
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -21949,7 +21949,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -21958,7 +21958,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Creator"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -22449,7 +22449,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -22458,7 +22458,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -22490,7 +22490,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -22499,7 +22499,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -22529,7 +22529,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -22538,7 +22538,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -22576,7 +22576,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -22585,7 +22585,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Year available"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -22623,7 +22623,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -22632,7 +22632,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Contributor"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23126,7 +23126,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23135,7 +23135,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Series"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23172,7 +23172,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23181,7 +23181,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23213,7 +23213,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23222,7 +23222,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Original format"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23254,7 +23254,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23263,7 +23263,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Source"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23295,7 +23295,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23304,7 +23304,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23345,7 +23345,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23354,7 +23354,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Rights"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23386,7 +23386,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23395,7 +23395,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23481,7 +23481,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23490,7 +23490,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23522,7 +23522,7 @@ exports[`Additional Information Component  should render component with manuscri
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23531,7 +23531,7 @@ exports[`Additional Information Component  should render component with manuscri
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23587,7 +23587,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23596,7 +23596,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Creator"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23846,7 +23846,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23855,7 +23855,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Patent title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23887,7 +23887,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23896,7 +23896,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Date of issue"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23934,7 +23934,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23943,7 +23943,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Patent owner"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -23980,7 +23980,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -23989,7 +23989,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Patent number"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24021,7 +24021,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24030,7 +24030,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Country of origin"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24062,7 +24062,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24071,7 +24071,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24112,7 +24112,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24121,7 +24121,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24172,7 +24172,7 @@ exports[`Additional Information Component  should render component with patent 1
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24181,7 +24181,7 @@ exports[`Additional Information Component  should render component with patent 1
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24235,7 +24235,7 @@ exports[`Additional Information Component  should render component with preprint
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24244,7 +24244,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24276,7 +24276,7 @@ exports[`Additional Information Component  should render component with preprint
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24285,7 +24285,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24431,7 +24431,7 @@ exports[`Additional Information Component  should render component with preprint
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24440,7 +24440,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24478,7 +24478,7 @@ exports[`Additional Information Component  should render component with preprint
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24487,7 +24487,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24538,7 +24538,7 @@ exports[`Additional Information Component  should render component with preprint
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24547,7 +24547,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24913,7 +24913,7 @@ exports[`Additional Information Component  should render component with preprint
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24922,7 +24922,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -24952,7 +24952,7 @@ exports[`Additional Information Component  should render component with preprint
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -24961,7 +24961,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25107,7 +25107,7 @@ exports[`Additional Information Component  should render component with preprint
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -25116,7 +25116,7 @@ exports[`Additional Information Component  should render component with preprint
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25160,7 +25160,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -25169,7 +25169,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25822,7 +25822,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -25831,7 +25831,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Title of paper"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25863,7 +25863,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -25872,7 +25872,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Conference name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25909,7 +25909,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -25918,7 +25918,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Conference Location"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25950,7 +25950,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -25959,7 +25959,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Conference dates"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -25991,7 +25991,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26000,7 +26000,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Proceedings title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26037,7 +26037,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26046,7 +26046,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Journal name"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26696,7 +26696,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26705,7 +26705,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26737,7 +26737,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26746,7 +26746,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26783,7 +26783,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26792,7 +26792,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Publication year"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26830,7 +26830,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="19"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26839,7 +26839,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Year available"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26877,7 +26877,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26886,7 +26886,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26921,7 +26921,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26930,7 +26930,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -26962,7 +26962,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="23"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -26971,7 +26971,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-ISSN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27017,7 +27017,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="25"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27026,7 +27026,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Volume"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27058,7 +27058,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="26"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27067,7 +27067,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Issue"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27099,7 +27099,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="27"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27108,7 +27108,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27140,7 +27140,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="28"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27149,7 +27149,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27181,7 +27181,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="29"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27190,7 +27190,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27222,7 +27222,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="32"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27231,7 +27231,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27272,7 +27272,7 @@ exports[`Additional Information Component  should render component with proceedi
       key="34"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27281,7 +27281,7 @@ exports[`Additional Information Component  should render component with proceedi
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27359,7 +27359,7 @@ exports[`Additional Information Component  should render component with referenc
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27368,7 +27368,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27679,7 +27679,7 @@ exports[`Additional Information Component  should render component with referenc
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27688,7 +27688,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Title of entry"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27720,7 +27720,7 @@ exports[`Additional Information Component  should render component with referenc
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27729,7 +27729,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Parent publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27761,7 +27761,7 @@ exports[`Additional Information Component  should render component with referenc
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27770,7 +27770,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27807,7 +27807,7 @@ exports[`Additional Information Component  should render component with referenc
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27816,7 +27816,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -27854,7 +27854,7 @@ exports[`Additional Information Component  should render component with referenc
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -27863,7 +27863,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Editor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28177,7 +28177,7 @@ exports[`Additional Information Component  should render component with referenc
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28186,7 +28186,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-ISBN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28232,7 +28232,7 @@ exports[`Additional Information Component  should render component with referenc
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28241,7 +28241,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28273,7 +28273,7 @@ exports[`Additional Information Component  should render component with referenc
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28282,7 +28282,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28314,7 +28314,7 @@ exports[`Additional Information Component  should render component with referenc
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28323,7 +28323,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28355,7 +28355,7 @@ exports[`Additional Information Component  should render component with referenc
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28364,7 +28364,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28405,7 +28405,7 @@ exports[`Additional Information Component  should render component with referenc
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28414,7 +28414,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28470,7 +28470,7 @@ exports[`Additional Information Component  should render component with referenc
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28479,7 +28479,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28545,7 +28545,7 @@ exports[`Additional Information Component  should render component with referenc
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28554,7 +28554,7 @@ exports[`Additional Information Component  should render component with referenc
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28598,7 +28598,7 @@ exports[`Additional Information Component  should render component with research
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28607,7 +28607,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28917,7 +28917,7 @@ exports[`Additional Information Component  should render component with research
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28926,7 +28926,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Title of report"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -28958,7 +28958,7 @@ exports[`Additional Information Component  should render component with research
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -28967,7 +28967,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29005,7 +29005,7 @@ exports[`Additional Information Component  should render component with research
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29014,7 +29014,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-ISBN"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29060,7 +29060,7 @@ exports[`Additional Information Component  should render component with research
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29069,7 +29069,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29106,7 +29106,7 @@ exports[`Additional Information Component  should render component with research
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29115,7 +29115,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Place of publication"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29147,7 +29147,7 @@ exports[`Additional Information Component  should render component with research
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29156,7 +29156,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29188,7 +29188,7 @@ exports[`Additional Information Component  should render component with research
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29197,7 +29197,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29229,7 +29229,7 @@ exports[`Additional Information Component  should render component with research
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29238,7 +29238,7 @@ exports[`Additional Information Component  should render component with research
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29282,7 +29282,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29291,7 +29291,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29604,7 +29604,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29613,7 +29613,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Thesis title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29645,7 +29645,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29654,7 +29654,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-School, Centre or Institute"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29691,7 +29691,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29700,7 +29700,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Institution"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29732,7 +29732,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29741,7 +29741,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29779,7 +29779,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29788,7 +29788,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Thesis type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29820,7 +29820,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29829,7 +29829,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29859,7 +29859,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29868,7 +29868,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Supervisor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29919,7 +29919,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29928,7 +29928,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -29969,7 +29969,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -29978,7 +29978,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30024,7 +30024,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30033,7 +30033,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30065,7 +30065,7 @@ exports[`Additional Information Component  should render component with thesis 1
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30074,7 +30074,7 @@ exports[`Additional Information Component  should render component with thesis 1
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30118,7 +30118,7 @@ exports[`Additional Information Component  should render component with video do
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30127,7 +30127,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Creator"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30451,7 +30451,7 @@ exports[`Additional Information Component  should render component with video do
       key="2"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30460,7 +30460,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30492,7 +30492,7 @@ exports[`Additional Information Component  should render component with video do
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30501,7 +30501,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30539,7 +30539,7 @@ exports[`Additional Information Component  should render component with video do
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30548,7 +30548,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Series"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30585,7 +30585,7 @@ exports[`Additional Information Component  should render component with video do
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30594,7 +30594,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30626,7 +30626,7 @@ exports[`Additional Information Component  should render component with video do
       key="12"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30635,7 +30635,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Format"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30667,7 +30667,7 @@ exports[`Additional Information Component  should render component with video do
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30676,7 +30676,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30717,7 +30717,7 @@ exports[`Additional Information Component  should render component with video do
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30726,7 +30726,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Rights"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30758,7 +30758,7 @@ exports[`Additional Information Component  should render component with video do
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30767,7 +30767,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30808,7 +30808,7 @@ exports[`Additional Information Component  should render component with video do
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30817,7 +30817,7 @@ exports[`Additional Information Component  should render component with video do
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -30861,7 +30861,7 @@ exports[`Additional Information Component  should render component with working 
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -30870,7 +30870,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31238,7 +31238,7 @@ exports[`Additional Information Component  should render component with working 
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31247,7 +31247,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31279,7 +31279,7 @@ exports[`Additional Information Component  should render component with working 
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31288,7 +31288,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-School, Department or Centre"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31325,7 +31325,7 @@ exports[`Additional Information Component  should render component with working 
       key="5"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31334,7 +31334,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Institution"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31366,7 +31366,7 @@ exports[`Additional Information Component  should render component with working 
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31375,7 +31375,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31405,7 +31405,7 @@ exports[`Additional Information Component  should render component with working 
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31414,7 +31414,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Series"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31451,7 +31451,7 @@ exports[`Additional Information Component  should render component with working 
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31460,7 +31460,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Report number"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31492,7 +31492,7 @@ exports[`Additional Information Component  should render component with working 
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31501,7 +31501,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31539,7 +31539,7 @@ exports[`Additional Information Component  should render component with working 
       key="10"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31548,7 +31548,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-DOI"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31583,7 +31583,7 @@ exports[`Additional Information Component  should render component with working 
       key="11"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31592,7 +31592,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Publisher"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31629,7 +31629,7 @@ exports[`Additional Information Component  should render component with working 
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31638,7 +31638,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Start page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31670,7 +31670,7 @@ exports[`Additional Information Component  should render component with working 
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31679,7 +31679,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-End page"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31711,7 +31711,7 @@ exports[`Additional Information Component  should render component with working 
       key="15"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31720,7 +31720,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Total pages"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31752,7 +31752,7 @@ exports[`Additional Information Component  should render component with working 
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31761,7 +31761,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Language"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31802,7 +31802,7 @@ exports[`Additional Information Component  should render component with working 
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31811,7 +31811,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31857,7 +31857,7 @@ exports[`Additional Information Component  should render component with working 
       key="18"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31866,7 +31866,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31942,7 +31942,7 @@ exports[`Additional Information Component  should render component with working 
       key="20"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31951,7 +31951,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -31983,7 +31983,7 @@ exports[`Additional Information Component  should render component with working 
       key="21"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -31992,7 +31992,7 @@ exports[`Additional Information Component  should render component with working 
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32036,7 +32036,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="0"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32045,7 +32045,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Author(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32359,7 +32359,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="1"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32368,7 +32368,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Thesis title"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32400,7 +32400,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="3"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32409,7 +32409,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-School, Centre or Institute"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32446,7 +32446,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="4"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32455,7 +32455,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Institution"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32487,7 +32487,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="6"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32496,7 +32496,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Publication date"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32534,7 +32534,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="7"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32543,7 +32543,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Thesis type"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32575,7 +32575,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="8"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32584,7 +32584,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Open access status"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32616,7 +32616,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="9"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32625,7 +32625,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Supervisor(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32676,7 +32676,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="13"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32685,7 +32685,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Subject(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32726,7 +32726,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="14"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32735,7 +32735,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Keyword(s)"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32781,7 +32781,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="16"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32790,7 +32790,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Additional notes"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
@@ -32822,7 +32822,7 @@ exports[`Additional Information Component  should render oa status value link in
       key="17"
       style={
         Object {
-          "padding": 16,
+          "padding": 8,
         }
       }
     >
@@ -32831,7 +32831,7 @@ exports[`Additional Information Component  should render oa status value link in
         className="gridRow"
         container={true}
         key="additional-info-Abstract"
-        spacing={32}
+        spacing={16}
       >
         <WithStyles(Grid)
           item={true}
