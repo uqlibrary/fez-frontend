@@ -54,7 +54,7 @@ export default class Masquerade extends Component {
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 fullWidth
                                 color="primary"
                                 children={txt.labels.submit}

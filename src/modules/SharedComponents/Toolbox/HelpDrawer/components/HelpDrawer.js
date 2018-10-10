@@ -47,7 +47,7 @@ export class HelpDrawer extends Component {
                 onClose={hide}>
                 <Grid container spacing={40}>
                     <Grid item xs={12}>
-                        <Typography key={'title'} component={'span'} variant="title" className={classes.title}>{title}</Typography>
+                        <Typography key={'title'} component={'span'} variant={'h5'} className={classes.title}>{title}</Typography>
                         <Typography key={'text'} component={'span'} variant="body1">{text}</Typography>
                     </Grid>
                     <Grid item xs={12}>

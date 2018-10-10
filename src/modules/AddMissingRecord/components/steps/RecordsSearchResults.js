@@ -175,7 +175,7 @@ export default class RecordsSearchResults extends PureComponent {
                                     <Grid item xs={12} sm="auto">
                                         <Button
                                             fullWidth
-                                            // variant="raised"
+                                            // variant={'contained'}
                                             onClick={this._cancelWorkflow}
                                         >
                                             {searchResultsTxt.cancel}
@@ -184,7 +184,7 @@ export default class RecordsSearchResults extends PureComponent {
                                     <Grid item xs={12} sm="auto">
                                         <Button
                                             fullWidth
-                                            variant="raised"
+                                            variant={'contained'}
                                             color="primary"
                                             onClick={this._showNewRecordForm}
                                             ref={(node) => {this.showNewRecordButton = node;}}

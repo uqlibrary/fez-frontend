@@ -132,16 +132,13 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
     />
     <div>
       CRICOS Provider No: 
-      <ExternalLink
-        className=""
+      <WithStyles(ExternalLink)
         href="http://www.uq.edu.au/about/cricos-link"
         openInNewIcon={false}
-        rel="noopener noreferrer"
-        target="_blank"
         title="CRICOS Provider No: "
       >
         00025B
-      </ExternalLink>
+      </WithStyles(ExternalLink)>
     </div>
   </React.Fragment>
 </WithStyles(Drawer)>
@@ -279,16 +276,13 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
     />
     <div>
       CRICOS Provider No: 
-      <ExternalLink
-        className=""
+      <WithStyles(ExternalLink)
         href="http://www.uq.edu.au/about/cricos-link"
         openInNewIcon={false}
-        rel="noopener noreferrer"
-        target="_blank"
         title="CRICOS Provider No: "
       >
         00025B
-      </ExternalLink>
+      </WithStyles(ExternalLink)>
     </div>
   </React.Fragment>
 </WithStyles(Drawer)>
@@ -426,16 +420,13 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
     />
     <div>
       CRICOS Provider No: 
-      <ExternalLink
-        className=""
+      <WithStyles(ExternalLink)
         href="http://www.uq.edu.au/about/cricos-link"
         openInNewIcon={false}
-        rel="noopener noreferrer"
-        target="_blank"
         title="CRICOS Provider No: "
       >
         00025B
-      </ExternalLink>
+      </WithStyles(ExternalLink)>
     </div>
   </React.Fragment>
 </WithStyles(Drawer)>

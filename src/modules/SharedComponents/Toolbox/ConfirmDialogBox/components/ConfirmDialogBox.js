@@ -90,7 +90,7 @@ export class ConfirmDialogBox extends Component {
                     {
                         !this.props.hideCancelButton &&
                         <Button
-                            variant={'raised'}
+                            variant={'contained'}
                             color={'primary'}
                             children={this.props.locale.cancelButtonLabel}
                             onClick={this._onCancelAction}/>

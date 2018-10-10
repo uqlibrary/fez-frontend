@@ -12,6 +12,9 @@ const styles = (theme) => ({
     listItemGutters: {
         paddingLeft: theme.spacing.unit,
         paddingRight: theme.spacing.unit,
+    },
+    listText: {
+        ...theme.typography.body1
     }
 });
 
@@ -41,7 +44,8 @@ export class FacetsFilterListItem extends PureComponent {
                 >
                     <ListItemText
                         primary={facetTitle}
-                        primaryTypographyProps={{variant: 'body2'}} />
+                        className={classes.listText}
+                    />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 {

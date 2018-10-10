@@ -10,7 +10,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
     xs={12}
   >
     <WithStyles(Typography)
-      variant="title"
+      variant="h5"
     >
        
        

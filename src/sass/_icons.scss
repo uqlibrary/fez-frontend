@@ -28,6 +28,7 @@
     content: url(../../src/images/oa_icon.svg);
   }
   &.openAccessEmbargoed::before {
+    margin-top: 6px;
     content: url(../../src/images/oa_icon_embargoed.svg);
   }
   &.google::before, &.google_scholar::before {
