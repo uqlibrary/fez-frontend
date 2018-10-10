@@ -6,6 +6,12 @@ import {withStyles} from '@material-ui/core/styles';
 import locale from 'locale/pages';
 
 const styles = () => ({
+    image: {
+        width: '100%',
+        '&:hover': {
+            cursor: 'pointer'
+        }
+    },
     brokenImage: {
         opacity: 0.5,
     }
@@ -64,7 +70,7 @@ class Thumbnail extends PureComponent {
             >
                 {
                     !this.state.thumbnailError ?
-                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
+                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError} className={this.props.classes.image}/>
                         : <BrokenImage color={'secondary'} className={this.props.classes.brokenImage}/>
                 }
             </a>

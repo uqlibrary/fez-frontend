@@ -20,7 +20,7 @@ const styles = {
         fontSize: '0.8rem',
         display: 'inline-block',
         float: 'right',
-        marginLeft: '0.5rem'
+        marginLeft: '0.25rem'
     }
 };
 

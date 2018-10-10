@@ -4,7 +4,8 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
 <Thumbnail
   classes={
     Object {
-      "brokenImage": "Thumbnail-brokenImage-1",
+      "brokenImage": "Thumbnail-brokenImage-2",
+      "image": "Thumbnail-image-1",
     }
   }
   mediaUrl="/test/mediaUrl"
@@ -500,7 +501,8 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
           <Thumbnail
             classes={
               Object {
-                "brokenImage": "Thumbnail-brokenImage-2",
+                "brokenImage": "Thumbnail-brokenImage-4",
+                "image": "Thumbnail-image-3",
               }
             }
             mediaUrl="/test/mediaUrl"
@@ -517,6 +519,7 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
             >
               <img
                 alt="thumbnail.jpg"
+                className="Thumbnail-image-3"
                 onError={[Function]}
                 src="/test/thumbnail/mediaUrl"
               />
@@ -1013,7 +1016,8 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
           <Thumbnail
             classes={
               Object {
-                "brokenImage": "Thumbnail-brokenImage-2",
+                "brokenImage": "Thumbnail-brokenImage-4",
+                "image": "Thumbnail-image-3",
               }
             }
             mediaUrl="/test/mediaUrl"
@@ -1030,6 +1034,7 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
             >
               <img
                 alt="thumbnail.jpg"
+                className="Thumbnail-image-3"
                 onError={[Function]}
                 src="/test/thumbnail/mediaUrl"
               />
@@ -1046,7 +1051,8 @@ exports[`Thumbnail Component  should show a broken thumbnail icon when the thumb
 <Thumbnail
   classes={
     Object {
-      "brokenImage": "Thumbnail-brokenImage-1",
+      "brokenImage": "Thumbnail-brokenImage-2",
+      "image": "Thumbnail-image-1",
     }
   }
   mediaUrl="/test/mediaUrl"

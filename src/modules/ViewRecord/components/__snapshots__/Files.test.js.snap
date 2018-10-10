@@ -2081,7 +2081,8 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "classes": Object {
-        "brokenImage": "Thumbnail-brokenImage-1",
+        "brokenImage": "Thumbnail-brokenImage-2",
+        "image": "Thumbnail-image-1",
       },
       "fileName": "test.tiff",
       "mediaUrl": "https://espace.library.uq.edu.au/view/UQ:1/test.tiff",
@@ -2102,7 +2103,8 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "classes": Object {
-          "brokenImage": "Thumbnail-brokenImage-1",
+          "brokenImage": "Thumbnail-brokenImage-2",
+          "image": "Thumbnail-image-1",
         },
         "fileName": "test.tiff",
         "mediaUrl": "https://espace.library.uq.edu.au/view/UQ:1/test.tiff",
