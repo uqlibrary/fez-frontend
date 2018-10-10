@@ -1030,7 +1030,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1852,7 +1852,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2377,7 +2377,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3103,7 +3103,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3628,7 +3628,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4290,7 +4290,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4815,7 +4815,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5493,7 +5493,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -6018,7 +6018,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -6680,7 +6680,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -7205,7 +7205,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -7867,7 +7867,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -8392,7 +8392,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -9167,7 +9167,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "letterSpacing": "0.00714em",
                                                     "lineHeight": 1.57,
                                                   },
-                                                  "suppressDeprecationWarnings": undefined,
+                                                  "suppressDeprecationWarnings": true,
                                                   "title": Object {
                                                     "color": "rgba(0, 0, 0, 0.87)",
                                                     "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -9692,7 +9692,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     "letterSpacing": "0.00714em",
                                     "lineHeight": 1.57,
                                   },
-                                  "suppressDeprecationWarnings": undefined,
+                                  "suppressDeprecationWarnings": true,
                                   "title": Object {
                                     "color": "rgba(0, 0, 0, 0.87)",
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -10587,7 +10587,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -11411,7 +11411,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -11938,7 +11938,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -12675,7 +12675,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                   "letterSpacing": "0.00714em",
                                                                   "lineHeight": 1.57,
                                                                 },
-                                                                "suppressDeprecationWarnings": undefined,
+                                                                "suppressDeprecationWarnings": true,
                                                                 "title": Object {
                                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -13436,7 +13436,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -13961,7 +13961,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -14623,7 +14623,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -15148,7 +15148,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -15826,7 +15826,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -16351,7 +16351,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -17013,7 +17013,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -17538,7 +17538,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -18200,7 +18200,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "letterSpacing": "0.00714em",
                                                   "lineHeight": 1.57,
                                                 },
-                                                "suppressDeprecationWarnings": undefined,
+                                                "suppressDeprecationWarnings": true,
                                                 "title": Object {
                                                   "color": "rgba(0, 0, 0, 0.87)",
                                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -18725,7 +18725,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -19500,7 +19500,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "letterSpacing": "0.00714em",
                                                     "lineHeight": 1.57,
                                                   },
-                                                  "suppressDeprecationWarnings": undefined,
+                                                  "suppressDeprecationWarnings": true,
                                                   "title": Object {
                                                     "color": "rgba(0, 0, 0, 0.87)",
                                                     "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -20025,7 +20025,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     "letterSpacing": "0.00714em",
                                     "lineHeight": 1.57,
                                   },
-                                  "suppressDeprecationWarnings": undefined,
+                                  "suppressDeprecationWarnings": true,
                                   "title": Object {
                                     "color": "rgba(0, 0, 0, 0.87)",
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

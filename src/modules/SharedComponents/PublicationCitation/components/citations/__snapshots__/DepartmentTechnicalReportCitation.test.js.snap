@@ -452,7 +452,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1541,7 +1541,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         "letterSpacing": "0.00714em",
                         "lineHeight": 1.57,
                       },
-                      "suppressDeprecationWarnings": undefined,
+                      "suppressDeprecationWarnings": true,
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2131,7 +2131,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3235,7 +3235,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         "letterSpacing": "0.00714em",
                         "lineHeight": 1.57,
                       },
-                      "suppressDeprecationWarnings": undefined,
+                      "suppressDeprecationWarnings": true,
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3825,7 +3825,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4281,7 +4281,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                         "letterSpacing": "0.00714em",
                         "lineHeight": 1.57,
                       },
-                      "suppressDeprecationWarnings": undefined,
+                      "suppressDeprecationWarnings": true,
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

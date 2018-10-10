@@ -501,7 +501,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           "letterSpacing": "0.00714em",
           "lineHeight": 1.57,
         },
-        "suppressDeprecationWarnings": undefined,
+        "suppressDeprecationWarnings": true,
         "title": Object {
           "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

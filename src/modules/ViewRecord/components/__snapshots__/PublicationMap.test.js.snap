@@ -452,7 +452,7 @@ exports[`Publication's map coordinates should render component with a marker 1`]
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -938,7 +938,7 @@ exports[`Publication's map coordinates should render component with a selected a
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1424,7 +1424,7 @@ exports[`Publication's map coordinates should render component with empty coordi
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

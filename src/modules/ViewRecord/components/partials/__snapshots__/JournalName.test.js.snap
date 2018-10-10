@@ -452,7 +452,7 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -936,7 +936,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2460,7 +2460,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                           "letterSpacing": "0.00714em",
                           "lineHeight": 1.57,
                         },
-                        "suppressDeprecationWarnings": undefined,
+                        "suppressDeprecationWarnings": true,
                         "title": Object {
                           "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2887,7 +2887,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                             "letterSpacing": "0.00714em",
                             "lineHeight": 1.57,
                           },
-                          "suppressDeprecationWarnings": undefined,
+                          "suppressDeprecationWarnings": true,
                           "title": Object {
                             "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3426,7 +3426,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4926,7 +4926,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
                           "letterSpacing": "0.00714em",
                           "lineHeight": 1.57,
                         },
-                        "suppressDeprecationWarnings": undefined,
+                        "suppressDeprecationWarnings": true,
                         "title": Object {
                           "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5353,7 +5353,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
                             "letterSpacing": "0.00714em",
                             "lineHeight": 1.57,
                           },
-                          "suppressDeprecationWarnings": undefined,
+                          "suppressDeprecationWarnings": true,
                           "title": Object {
                             "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5892,7 +5892,7 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

@@ -478,7 +478,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1220,7 +1220,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1962,7 +1962,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

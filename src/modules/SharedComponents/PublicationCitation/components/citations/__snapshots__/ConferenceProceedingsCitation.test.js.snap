@@ -452,7 +452,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2563,7 +2563,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "letterSpacing": "0.00714em",
                           "lineHeight": 1.57,
                         },
-                        "suppressDeprecationWarnings": undefined,
+                        "suppressDeprecationWarnings": true,
                         "title": Object {
                           "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3186,7 +3186,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5309,7 +5309,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "letterSpacing": "0.00714em",
                           "lineHeight": 1.57,
                         },
-                        "suppressDeprecationWarnings": undefined,
+                        "suppressDeprecationWarnings": true,
                         "title": Object {
                           "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5932,7 +5932,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -6415,7 +6415,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                           "letterSpacing": "0.00714em",
                           "lineHeight": 1.57,
                         },
-                        "suppressDeprecationWarnings": undefined,
+                        "suppressDeprecationWarnings": true,
                         "title": Object {
                           "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

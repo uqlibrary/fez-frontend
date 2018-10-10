@@ -452,7 +452,7 @@ exports[`File Name Component  should display file name link 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1150,7 +1150,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1577,7 +1577,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                     "letterSpacing": "0.00714em",
                                     "lineHeight": 1.57,
                                   },
-                                  "suppressDeprecationWarnings": undefined,
+                                  "suppressDeprecationWarnings": true,
                                   "title": Object {
                                     "color": "rgba(0, 0, 0, 0.87)",
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2085,7 +2085,7 @@ exports[`File Name Component  should display file name link 1`] = `
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2720,7 +2720,7 @@ exports[`File Name Component  should render audio player 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3418,7 +3418,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3845,7 +3845,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                     "letterSpacing": "0.00714em",
                                     "lineHeight": 1.57,
                                   },
-                                  "suppressDeprecationWarnings": undefined,
+                                  "suppressDeprecationWarnings": true,
                                   "title": Object {
                                     "color": "rgba(0, 0, 0, 0.87)",
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4353,7 +4353,7 @@ exports[`File Name Component  should render audio player 1`] = `
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5187,7 +5187,7 @@ exports[`File Name Component  should render component and display file name only
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -5936,7 +5936,7 @@ exports[`File Name Component  should render component and display file name only
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -6399,7 +6399,7 @@ exports[`File Name Component  should render component and display file name only
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -7034,7 +7034,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -7783,7 +7783,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -8252,7 +8252,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -8887,7 +8887,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -9636,7 +9636,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -10105,7 +10105,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",

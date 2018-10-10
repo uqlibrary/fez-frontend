@@ -57,7 +57,7 @@ export const mui1theme = createMuiTheme({
         fontWeightRegular: 300,
         fontWeightMedium: 400,
         useNextVariants: true,
-        // suppressDeprecationWarnings: true
+        suppressDeprecationWarnings: true
     },
     overrides: {
         MuiFormLabel: {

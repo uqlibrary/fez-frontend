@@ -452,7 +452,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1215,7 +1215,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -1678,7 +1678,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -2958,7 +2958,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                         "letterSpacing": "0.00714em",
                         "lineHeight": 1.57,
                       },
-                      "suppressDeprecationWarnings": undefined,
+                      "suppressDeprecationWarnings": true,
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -3535,7 +3535,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4298,7 +4298,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -4761,7 +4761,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -6568,7 +6568,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                         "letterSpacing": "0.00714em",
                         "lineHeight": 1.57,
                       },
-                      "suppressDeprecationWarnings": undefined,
+                      "suppressDeprecationWarnings": true,
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -7072,7 +7072,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                 "letterSpacing": "0.00714em",
                 "lineHeight": 1.57,
               },
-              "suppressDeprecationWarnings": undefined,
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -7835,7 +7835,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                   "letterSpacing": "0.00714em",
                                   "lineHeight": 1.57,
                                 },
-                                "suppressDeprecationWarnings": undefined,
+                                "suppressDeprecationWarnings": true,
                                 "title": Object {
                                   "color": "rgba(0, 0, 0, 0.87)",
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -8298,7 +8298,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                               "letterSpacing": "0.00714em",
                               "lineHeight": 1.57,
                             },
-                            "suppressDeprecationWarnings": undefined,
+                            "suppressDeprecationWarnings": true,
                             "title": Object {
                               "color": "rgba(0, 0, 0, 0.87)",
                               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
@@ -9586,7 +9586,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                         "letterSpacing": "0.00714em",
                         "lineHeight": 1.57,
                       },
-                      "suppressDeprecationWarnings": undefined,
+                      "suppressDeprecationWarnings": true,
                       "title": Object {
                         "color": "rgba(0, 0, 0, 0.87)",
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
