@@ -273,7 +273,7 @@ export class App extends PureComponent {
                                         </Grid>
                                     }
                                     <Grid item xs={'auto'}>
-                                        <Typography variant="title" noWrap className={classes.titleLink}>
+                                        <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
                                     </Grid>
