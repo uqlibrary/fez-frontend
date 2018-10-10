@@ -787,17 +787,14 @@ exports[`Additional Information Component  should render component with audio do
               Creative Commons Attribution noncommercial no derivatives
             </Link>
             <div>
-              <ExternalLink
-                className=""
+              <WithStyles(ExternalLink)
                 href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                 openInNewIcon={false}
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 <div
                   className="fez-icon license cc-by-nc-nd"
                 />
-              </ExternalLink>
+              </WithStyles(ExternalLink)>
             </div>
           </span>
         </WithStyles(Grid)>
@@ -10368,15 +10365,12 @@ exports[`Additional Information Component  should render component with data col
               453701
             </Link>
             <div>
-              <ExternalLink
-                className=""
+              <WithStyles(ExternalLink)
                 href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                 openInNewIcon={true}
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 View license details
-              </ExternalLink>
+              </WithStyles(ExternalLink)>
             </div>
           </span>
         </WithStyles(Grid)>
@@ -13275,17 +13269,14 @@ exports[`Additional Information Component  should render component with data col
               Creative Commons Attribution (only)
             </Link>
             <div>
-              <ExternalLink
-                className=""
+              <WithStyles(ExternalLink)
                 href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
                 openInNewIcon={false}
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 <div
                   className="fez-icon license cc-by"
                 />
-              </ExternalLink>
+              </WithStyles(ExternalLink)>
             </div>
           </span>
         </WithStyles(Grid)>

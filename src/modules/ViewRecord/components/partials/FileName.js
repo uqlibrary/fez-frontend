@@ -45,14 +45,12 @@ export default class FileName extends PureComponent {
 
         return (
             <Grid container alignItems="center" wrap="nowrap">
-                <Grid item>
+                <Grid item xs>
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&
-                        <Typography variant="body1" >
-                            <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
-                                {fileName}
-                            </ExternalLink>
-                        </Typography>
+                        <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
+                            {fileName}
+                        </ExternalLink>
                     }
                     {
                         allowDownload && this.canShowPreview(mimeType) &&

@@ -6,11 +6,19 @@ import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class CitationCounts extends PureComponent {
+const styles = (theme) => ({
+    statsLink: {
+        ...theme.typography.caption
+    }
+});
+
+export class CitationCounts extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideViewFullStatisticsLink: PropTypes.bool
+        hideViewFullStatisticsLink: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     getTitle = (title) => (locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title));
@@ -18,7 +26,7 @@ export default class CitationCounts extends PureComponent {
     render() {
         const txt = locale.components.publicationCitation.citationCounts;
         const {sources} = locale.global;
-        const {publication, hideViewFullStatisticsLink} = this.props;
+        const {publication, hideViewFullStatisticsLink, classes} = this.props;
         const counts = {
             wos: publication.hasOwnProperty('rek_thomson_citation_count') ? publication.rek_thomson_citation_count : null,
             scopus: publication.hasOwnProperty('rek_scopus_citation_count') ? publication.rek_scopus_citation_count : null,
@@ -27,7 +35,7 @@ export default class CitationCounts extends PureComponent {
         };
 
         return (
-            <Grid container spacing={16}>
+            <Grid container spacing={0}>
                 <Grid item xs={12} sm={'auto'}>
                     {
                         counts.wos !== null && !!publication.fez_record_search_key_isi_loc
@@ -72,7 +80,7 @@ export default class CitationCounts extends PureComponent {
                 <Grid item>
                     {
                         !!publication.rek_pid && (counts.wos !== null || counts.scopus !== null) && !hideViewFullStatisticsLink &&
-                        <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>
+                        <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title} className={classes.statsLink} >
                             {txt.statsLabel}
                         </ExternalLink>
                     }
@@ -84,3 +92,5 @@ export default class CitationCounts extends PureComponent {
         );
     }
 }
+
+export default withStyles(styles, {withTheme: true})(CitationCounts);

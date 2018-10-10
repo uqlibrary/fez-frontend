@@ -438,7 +438,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -1351,7 +1351,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -2232,7 +2232,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -3074,7 +3074,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -3916,7 +3916,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -4764,7 +4764,7 @@ exports[`PublicationCitation  should render component with publication from mult
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -5176,17 +5176,14 @@ exports[`PublicationCitation  should render component with publication from mult
           >
             <React.Fragment>
               Found in: 
-              <ExternalLink
+              <WithStyles(ExternalLink)
                 aria-label="Link to eSpace will open in a new window."
                 className="publicationSource"
                 href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
                 key="source_0"
-                openInNewIcon={true}
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 eSpace
-              </ExternalLink>
+              </WithStyles(ExternalLink)>
             </React.Fragment>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -5625,7 +5622,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
@@ -6037,17 +6034,14 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           >
             <React.Fragment>
               Found in: 
-              <ExternalLink
+              <WithStyles(ExternalLink)
                 aria-label="Link to eSpace will open in a new window."
                 className="publicationSource"
                 href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
                 key="source_0"
-                openInNewIcon={true}
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 eSpace
-              </ExternalLink>
+              </WithStyles(ExternalLink)>
             </React.Fragment>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -6098,13 +6092,10 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
           sm="auto"
           xs={12}
         >
-          <ExternalLink
+          <WithStyles(ExternalLink)
             aria-label="Full citation in Altmetric will open in a new window"
-            className=""
             href="http://www.test.com"
             openInNewIcon={false}
-            rel="noopener noreferrer"
-            target="_blank"
             title="Full citation in Altmetric will open in a new window"
           >
             <WithStyles(Grid)
@@ -6135,7 +6126,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
                 </WithStyles(Typography)>
               </WithStyles(Grid)>
             </WithStyles(Grid)>
-          </ExternalLink>
+          </WithStyles(ExternalLink)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -6547,7 +6538,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
           item={true}
           xs={12}
         >
-          <CitationCounts
+          <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
               Object {
