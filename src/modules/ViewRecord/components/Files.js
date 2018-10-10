@@ -264,16 +264,16 @@ export class Files extends Component {
                             </div>
                         ))
                     }
+                    {
+                        this.state.preview.mediaUrl && this.state.preview.mimeType &&
+                        <MediaPreview
+                            ref="mediaPreview"
+                            mediaUrl={this.state.preview.mediaUrl}
+                            previewMediaUrl={this.state.preview.previewMediaUrl}
+                            mimeType={this.state.preview.mimeType}
+                            onClose={this.hidePreview}/>
+                    }
                 </StandardCard>
-                {
-                    this.state.preview.mediaUrl && this.state.preview.mimeType &&
-                    <MediaPreview
-                        ref="mediaPreview"
-                        mediaUrl={this.state.preview.mediaUrl}
-                        previewMediaUrl={this.state.preview.previewMediaUrl}
-                        mimeType={this.state.preview.mimeType}
-                        onClose={this.hidePreview}/>
-                }
             </Grid>
         );
     }
