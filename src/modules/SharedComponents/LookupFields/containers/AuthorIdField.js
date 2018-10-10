@@ -18,7 +18,7 @@ const mapStateToProps = (state, props) => {
         },
         allowFreeText: true,
         async: true,
-        selectedValue: !!props.label && {value: props.label} || !!props.value && {value: props.value} || '',
+        selectedValue: !!props.label && props.label || !!props.value && props.value || '',
         itemToString: (item) => !!item && String(`${item.id} (${item.value})`) || '',
         maxResults: 50
     };

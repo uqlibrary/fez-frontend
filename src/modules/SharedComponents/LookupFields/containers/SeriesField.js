@@ -14,7 +14,7 @@ const mapStateToProps = (state, props) => {
         errorText: props.meta ? props.meta.error : null,
         error: !!props.meta && !!props.meta.error,
         itemToString: (item) => !!item && String(item.value) || '',
-        selectedValue: props.input ? {value: props.input.value} : null
+        selectedValue: props.input ? props.input.value : null
     };
 };
 
