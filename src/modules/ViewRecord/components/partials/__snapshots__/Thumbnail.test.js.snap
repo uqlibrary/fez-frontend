@@ -4,7 +4,8 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
 <Thumbnail
   classes={
     Object {
-      "brokenImage": "Thumbnail-brokenImage-01",
+      "brokenImage": "Thumbnail-brokenImage-2",
+      "image": "Thumbnail-image-1",
     }
   }
   mediaUrl="/test/mediaUrl"
@@ -127,7 +128,7 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -278,30 +279,68 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
+              },
+              "body1Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body2": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
+              },
+              "body2Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "button": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
+                "textTransform": "uppercase",
+              },
+              "buttonNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
+              },
+              "captionNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "display1": Object {
                 "color": "rgba(0, 0, 0, 0.54)",
@@ -341,12 +380,69 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
+              "h1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "6rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.01562em",
+                "lineHeight": 1,
+              },
+              "h2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.75rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.00833em",
+                "lineHeight": 1,
+              },
+              "h3": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.04,
+              },
+              "h4": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00735em",
+                "lineHeight": 1.17,
+              },
+              "h5": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.33,
+              },
+              "h6": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.25rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.0075em",
+                "lineHeight": 1.6,
+              },
               "headline": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "lineHeight": "1.35417em",
+              },
+              "overline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.08333em",
+                "lineHeight": 2.66,
+                "textTransform": "uppercase",
               },
               "pxToRem": [Function],
               "round": [Function],
@@ -357,13 +453,31 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
                 "fontWeight": 300,
                 "lineHeight": "1.5em",
               },
+              "subtitle1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.75,
+              },
+              "subtitle2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.00714em",
+                "lineHeight": 1.57,
+              },
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -387,7 +501,8 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
           <Thumbnail
             classes={
               Object {
-                "brokenImage": "Thumbnail-brokenImage-02",
+                "brokenImage": "Thumbnail-brokenImage-4",
+                "image": "Thumbnail-image-3",
               }
             }
             mediaUrl="/test/mediaUrl"
@@ -404,6 +519,7 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
             >
               <img
                 alt="thumbnail.jpg"
+                className="Thumbnail-image-3"
                 onError={[Function]}
                 src="/test/thumbnail/mediaUrl"
               />
@@ -527,7 +643,7 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -678,30 +794,68 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
+              },
+              "body1Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body2": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
+              },
+              "body2Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "button": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
+                "textTransform": "uppercase",
+              },
+              "buttonNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
+              },
+              "captionNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "display1": Object {
                 "color": "rgba(0, 0, 0, 0.54)",
@@ -741,12 +895,69 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
+              "h1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "6rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.01562em",
+                "lineHeight": 1,
+              },
+              "h2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.75rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.00833em",
+                "lineHeight": 1,
+              },
+              "h3": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.04,
+              },
+              "h4": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00735em",
+                "lineHeight": 1.17,
+              },
+              "h5": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.33,
+              },
+              "h6": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.25rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.0075em",
+                "lineHeight": 1.6,
+              },
               "headline": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "lineHeight": "1.35417em",
+              },
+              "overline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.08333em",
+                "lineHeight": 2.66,
+                "textTransform": "uppercase",
               },
               "pxToRem": [Function],
               "round": [Function],
@@ -757,13 +968,31 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
                 "fontWeight": 300,
                 "lineHeight": "1.5em",
               },
+              "subtitle1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.75,
+              },
+              "subtitle2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.00714em",
+                "lineHeight": 1.57,
+              },
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -787,7 +1016,8 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
           <Thumbnail
             classes={
               Object {
-                "brokenImage": "Thumbnail-brokenImage-02",
+                "brokenImage": "Thumbnail-brokenImage-4",
+                "image": "Thumbnail-image-3",
               }
             }
             mediaUrl="/test/mediaUrl"
@@ -804,6 +1034,7 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
             >
               <img
                 alt="thumbnail.jpg"
+                className="Thumbnail-image-3"
                 onError={[Function]}
                 src="/test/thumbnail/mediaUrl"
               />
@@ -820,7 +1051,8 @@ exports[`Thumbnail Component  should show a broken thumbnail icon when the thumb
 <Thumbnail
   classes={
     Object {
-      "brokenImage": "Thumbnail-brokenImage-01",
+      "brokenImage": "Thumbnail-brokenImage-2",
+      "image": "Thumbnail-image-1",
     }
   }
   mediaUrl="/test/mediaUrl"

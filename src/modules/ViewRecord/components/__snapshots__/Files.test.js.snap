@@ -113,6 +113,7 @@ exports[`Files Component  should not render cultural message 1`] = `
       </WithStyles(Grid)>
     </div>
     <div
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -196,8 +197,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               testing image description
             </WithStyles(Typography)>
@@ -221,8 +222,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               95.49 KB
             </WithStyles(Typography)>
@@ -381,6 +382,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
     <div
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -464,8 +466,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               Movie 1
             </WithStyles(Typography)>
@@ -489,8 +491,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               2.86 MB
             </WithStyles(Typography)>
@@ -529,6 +531,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
     <div
+      key="1"
       style={
         Object {
           "padding": 8,
@@ -612,8 +615,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               Movie 2
             </WithStyles(Typography)>
@@ -637,8 +640,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               2.62 MB
             </WithStyles(Typography)>
@@ -677,6 +680,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
     <div
+      key="2"
       style={
         Object {
           "padding": 8,
@@ -760,8 +764,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               Movie 3
             </WithStyles(Typography)>
@@ -785,8 +789,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               2.86 MB
             </WithStyles(Typography)>
@@ -825,6 +829,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
     <div
+      key="3"
       style={
         Object {
           "padding": 8,
@@ -908,8 +913,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               Movie 4
             </WithStyles(Typography)>
@@ -933,8 +938,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               4.29 MB
             </WithStyles(Typography)>
@@ -973,6 +978,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
     <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -1056,8 +1062,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               Movie 5
             </WithStyles(Typography)>
@@ -1081,8 +1087,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               1.12 MB
             </WithStyles(Typography)>
@@ -1121,6 +1127,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       </WithStyles(Grid)>
     </div>
     <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -1193,8 +1200,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               Technical report PDF file
             </WithStyles(Typography)>
@@ -1218,8 +1225,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               6.67 MB
             </WithStyles(Typography)>
@@ -1372,6 +1379,7 @@ exports[`Files Component  should render component 1`] = `
       </WithStyles(Grid)>
     </div>
     <div
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -1455,8 +1463,8 @@ exports[`Files Component  should render component 1`] = `
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               testing image description
             </WithStyles(Typography)>
@@ -1480,8 +1488,8 @@ exports[`Files Component  should render component 1`] = `
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               95.49 KB
             </WithStyles(Typography)>
@@ -1640,6 +1648,7 @@ exports[`Files Component  should render cultural message 1`] = `
       </WithStyles(Grid)>
     </div>
     <div
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -1723,8 +1732,8 @@ exports[`Files Component  should render cultural message 1`] = `
             sm={5}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               testing image description
             </WithStyles(Typography)>
@@ -1748,8 +1757,8 @@ exports[`Files Component  should render cultural message 1`] = `
             md={1}
           >
             <WithStyles(Typography)
-              caption="body1"
               noWrap={true}
+              variant="body1"
             >
               95.49 KB
             </WithStyles(Typography)>
@@ -2072,7 +2081,8 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "classes": Object {
-        "brokenImage": "Thumbnail-brokenImage-01",
+        "brokenImage": "Thumbnail-brokenImage-2",
+        "image": "Thumbnail-image-1",
       },
       "fileName": "test.tiff",
       "mediaUrl": "https://espace.library.uq.edu.au/view/UQ:1/test.tiff",
@@ -2093,7 +2103,8 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "classes": Object {
-          "brokenImage": "Thumbnail-brokenImage-01",
+          "brokenImage": "Thumbnail-brokenImage-2",
+          "image": "Thumbnail-image-1",
         },
         "fileName": "test.tiff",
         "mediaUrl": "https://espace.library.uq.edu.au/view/UQ:1/test.tiff",

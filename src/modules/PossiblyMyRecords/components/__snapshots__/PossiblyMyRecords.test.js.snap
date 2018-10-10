@@ -170,6 +170,11 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
           </WithStyles(Grid)>
           <WithStyles(Grid)
             item={true}
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
             xs={true}
           >
             <WithStyles(Grid)

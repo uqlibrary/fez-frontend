@@ -241,7 +241,7 @@ export default class ClaimRecord extends PureComponent {
                         <Grid item xs />
                         <Grid item>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 fullWidth
                                 children={txt.cancel}
                                 disabled={this.props.submitting}
@@ -251,7 +251,7 @@ export default class ClaimRecord extends PureComponent {
                             (!publication.rek_pid || !(authorLinked || contributorLinked)) && !(!publication.rek_pid && this.props.submitFailed) &&
                             <Grid item>
                                 <Button
-                                    variant={'raised'}
+                                    variant={'contained'}
                                     color={'primary'}
                                     fullWidth
                                     children={txt.submit}

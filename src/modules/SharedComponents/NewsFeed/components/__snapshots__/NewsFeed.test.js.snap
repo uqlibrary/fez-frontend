@@ -58,7 +58,9 @@ exports[`Component NewsFeed should render news feed 1`] = `
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)>
+        <WithStyles(Typography)
+          variant="body1"
+        >
           <b>
             Outage
           </b>
@@ -117,7 +119,9 @@ exports[`Component NewsFeed should render news feed 1`] = `
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)>
+        <WithStyles(Typography)
+          variant="body1"
+        >
           <b>
             Statistics
           </b>
@@ -176,7 +180,9 @@ exports[`Component NewsFeed should render news feed 1`] = `
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)>
+        <WithStyles(Typography)
+          variant="body1"
+        >
           <b>
             PREFS - Account Preferences
           </b>

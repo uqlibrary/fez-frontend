@@ -17,11 +17,12 @@ import {openAccessConfig} from 'config';
 
 const styles = (theme) => ({
     header: {
+        marginTop: 8,
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        fontSize: '0.8rem'
     },
-    link: {
-        fontSize: '0.8rem'
+    description: {
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis'
     }
 });
 
@@ -32,13 +33,13 @@ export class Links extends PureComponent {
     };
 
     LinkRow = ({link, description, openAccessStatus}) => (
-        <div style={{padding: 16}}>
-            <Grid container spacing={32} className={this.props.classes.header}>
-                <Grid item xs={12} sm={6}><Typography variant="body1" noWrap classes={{body1: this.props.classes.link}}>{link}</Typography></Grid>
-                <Grid item xs={10} sm={4}><Typography variant="body1" classes={{body1: this.props.classes.link}}>{description}</Typography></Grid>
-                <Grid item xs={2} sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
+        <Grid container spacing={32} className={this.props.classes.header} alignItems={'center'} alignContent={'center'} justify={'center'}>
+            <Grid item xs={12} sm={6}>
+                {link}
             </Grid>
-        </div>
+            <Grid item xs={10} sm={4} className={this.props.classes.description}>{description}</Grid>
+            <Grid item xs={2} sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
+        </Grid>
     );
 
     getDOILink = (doi, openAccessStatus) => {
@@ -131,17 +132,17 @@ export class Links extends PureComponent {
             <Grid item xs={12}>
                 <StandardCard title={txt.title}>
                     <Hidden xsDown>
-                        <div style={{padding: 16}}>
-                            <Grid container direction="row" alignItems="center" spacing={32} className={this.props.classes.header}>
-                                <Grid item sm={6}><Typography variant="caption" gutterBottom>{txt.headerTitles.link}</Typography></Grid>
-                                <Grid item sm={4}>
-                                    <Typography variant="caption" gutterBottom>{txt.headerTitles.description}</Typography>
-                                </Grid>
-                                <Grid item sm={2}>
-                                    <Typography variant="caption" gutterBottom>{txt.headerTitles.oaStatus}</Typography>
-                                </Grid>
+                        <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
+                            <Grid item sm={6}>
+                                <Typography variant="caption" gutterBottom>{txt.headerTitles.link}</Typography>
                             </Grid>
-                        </div>
+                            <Grid item sm={4}>
+                                <Typography variant="caption" gutterBottom>{txt.headerTitles.description}</Typography>
+                            </Grid>
+                            <Grid item sm={2}>
+                                <Typography variant="caption" gutterBottom>{txt.headerTitles.oaStatus}</Typography>
+                            </Grid>
+                        </Grid>
                     </Hidden>
                     {
                         // if record has a PubMedCentral Id - display link, should be always OA

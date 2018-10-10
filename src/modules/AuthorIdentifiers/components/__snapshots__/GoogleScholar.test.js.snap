@@ -133,7 +133,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -148,7 +148,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
           disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Save Google Scholar ID
         </WithStyles(Button)>
@@ -292,7 +292,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
           disabled={true}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -307,7 +307,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
           disabled={true}
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Save Google Scholar ID
         </WithStyles(Button)>
@@ -444,7 +444,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -459,7 +459,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
           disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Save Google Scholar ID
         </WithStyles(Button)>
@@ -593,7 +593,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -608,7 +608,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
           disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Save Google Scholar ID
         </WithStyles(Button)>

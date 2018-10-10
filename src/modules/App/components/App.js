@@ -26,7 +26,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-// import Hidden from '@material-ui/core/Hidden';
 import Menu from '@material-ui/icons/Menu';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -274,7 +273,7 @@ export class App extends PureComponent {
                                         </Grid>
                                     }
                                     <Grid item xs={'auto'}>
-                                        <Typography variant="title" noWrap className={classes.titleLink}>
+                                        <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
                                     </Grid>

@@ -22,7 +22,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
       <WithStyles(Typography)
         component="span"
         key="title"
-        variant="title"
+        variant="h5"
       >
         HelpDrawer Title
       </WithStyles(Typography)>

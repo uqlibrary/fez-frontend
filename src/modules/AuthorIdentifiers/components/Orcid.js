@@ -215,7 +215,7 @@ export default class Orcid extends Component {
                                 </Hidden>
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
-                                        variant={'raised'}
+                                        variant={'contained'}
                                         color={'primary'}
                                         fullWidth
                                         disabled={this.props.accountAuthorSaving}
@@ -235,7 +235,7 @@ export default class Orcid extends Component {
                                 </Hidden>
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
-                                        variant={'raised'}
+                                        variant={'contained'}
                                         color={'primary'}
                                         fullWidth
                                         disabled={this.props.accountAuthorSaving}

@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 
@@ -44,10 +44,17 @@ export default class MediaPreview extends PureComponent {
         const isImage = mimeType.indexOf('image') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
         return (
-            <StandardCard title={title} className={'mediaPreview'}>
-                <Hidden xsDown>
-                    <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
-                </Hidden>
+            <React.Fragment>
+                <Grid container spacing={0} direction={'row'} style={{marginTop: 32}}>
+                    <Grid item xs>
+                        <Typography variant={'h5'} component={'h2'}>{title}</Typography>
+                    </Grid>
+                    <Hidden xsDown>
+                        <Grid item>
+                            <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
+                        </Grid>
+                    </Hidden>
+                </Grid>
                 {
                     isVideo &&
                     <video controls>
@@ -57,12 +64,20 @@ export default class MediaPreview extends PureComponent {
                 }
                 {
                     isImage &&
-                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} />
+                        <div style={{padding: 16, margin: 16}}>
+                            <Grid container spacing={32}>
+                                <Grid xs />
+                                <Grid xs={'auto'}>
+                                    <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{border: '5px solid black', maxWidth: '100%'}} />
+                                </Grid>
+                                <Grid xs />
+                            </Grid>
+                        </div>
                 }
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
                 </Hidden>
-            </StandardCard>
+            </React.Fragment>
         );
     }
 }
