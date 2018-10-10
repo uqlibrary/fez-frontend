@@ -8,7 +8,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 // MUI 1
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -17,9 +16,7 @@ const moment = require('moment');
 const styles = theme => ({
     fakeTitle: {
         color: theme.palette.secondary.main,
-        fontSize: 12,
-        marginBottom: -100,
-        marginTop: 0
+        marginTop: -32
     },
     hideLabel: {
         position: 'absolute',
@@ -142,65 +139,68 @@ export class PartialDateForm extends Component {
         const renderMonths = months.map((month, index) =>
             <MenuItem key={index} value={index + 1}>{month}</MenuItem>
         );
-        const {classes} = this.props;
         const isError = !!this.errors.day || !!this.errors.month || !!this.errors.year;
         return (
-            <Grid container spacing={16}>
+            <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <Typography variant={'subtitle1'} classes={{subheading: classes.fakeTitle}}>{this.props.floatingTitle}</Typography>
+                    <InputLabel error={isError} dense shrink required={this.props.required} style={{zoom: '0.75'}}>{this.props.floatingTitle}</InputLabel>
                 </Grid>
-                <Grid item xs={4}>
-                    <InputLabel htmlFor="day" className={this.props.classes.hideLabel}>Day</InputLabel>
-                    <TextField
-                        name="day"
-                        id="day"
-                        type="text"
-                        maxLength="2"
-                        fullWidth
-                        disabled={this.props.disabled}
-                        error={isError}
-                        onKeyPress={this._isNumber}
-                        onChange={this._onDateChanged('day')}
-                        onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
-                        placeholder={locale.dayLabel}
-                        inputProps={{label: 'day'}}
-                    />
-                    {
-                        isError &&
-                        <FormHelperText error>Invalid date</FormHelperText>
-                    }
-                </Grid>
-                <Grid item xs={4}>
-                    <InputLabel htmlFor="month" className={this.props.classes.hideLabel}>Month</InputLabel>
-                    <Select
-                        style={{width: '100%'}}
-                        name="month"
-                        id="month"
-                        error={isError}
-                        disabled={this.props.disabled}
-                        value={this.state.month || -1}
-                        placeholder={locale.monthLabel}
-                        onChange={this._onDateChanged('month')}>
-                        <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
-                        {renderMonths}
-                    </Select>
-                </Grid>
-                <Grid item xs={4}>
-                    <InputLabel htmlFor="year" className={this.props.classes.hideLabel}>Year</InputLabel>
-                    <TextField
-                        name="year"
-                        id="year"
-                        type="text"
-                        fullWidth
-                        maxLength="4"
-                        disabled={this.props.disabled}
-                        placeholder={locale.yearLabel}
-                        error={isError}
-                        onKeyPress={this._isNumber}
-                        onChange={this._onDateChanged('year')}
-                        onBlur={this._onDateChanged('year')}
-                        inputProps={{label: 'year'}}
-                    />
+                <Grid item xs={12}>
+                    <Grid container spacing={16} style={{marginTop: -12}}>
+                        <Grid item xs={4}>
+                            <InputLabel htmlFor="day" className={this.props.classes.hideLabel}>Day</InputLabel>
+                            <TextField
+                                name="day"
+                                id="day"
+                                type="text"
+                                maxLength="2"
+                                fullWidth
+                                disabled={this.props.disabled}
+                                error={isError}
+                                onKeyPress={this._isNumber}
+                                onChange={this._onDateChanged('day')}
+                                onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
+                                placeholder={locale.dayLabel}
+                                inputProps={{label: 'day'}}
+                            />
+                            {
+                                isError &&
+                                <FormHelperText error>Invalid date</FormHelperText>
+                            }
+                        </Grid>
+                        <Grid item xs={4}>
+                            <InputLabel htmlFor="month" className={this.props.classes.hideLabel}>Month</InputLabel>
+                            <Select
+                                style={{width: '100%'}}
+                                name="month"
+                                id="month"
+                                error={isError}
+                                disabled={this.props.disabled}
+                                value={this.state.month || -1}
+                                placeholder={locale.monthLabel}
+                                onChange={this._onDateChanged('month')}>
+                                <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
+                                {renderMonths}
+                            </Select>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <InputLabel htmlFor="year" className={this.props.classes.hideLabel}>Year</InputLabel>
+                            <TextField
+                                name="year"
+                                id="year"
+                                type="text"
+                                fullWidth
+                                maxLength="4"
+                                disabled={this.props.disabled}
+                                placeholder={locale.yearLabel}
+                                error={isError}
+                                onKeyPress={this._isNumber}
+                                onChange={this._onDateChanged('year')}
+                                onBlur={this._onDateChanged('year')}
+                                inputProps={{label: 'year'}}
+                            />
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
         );

@@ -26,26 +26,24 @@ const styles = (theme) => ({
         backgroundColor: theme.palette.accent.light
     },
     selected: {
-        color: 'white !important'
+        color: 'white !important',
+        fontWeight: theme.typography.fontWeightMedium
     },
     hideIcon: {
         display: 'none'
     },
     primary: {
-        fontSize: 14,
-        fontWeight: 400
+        fontSize: theme.typography.body1.fontSize,
     },
     identifierName: {
-        fontSize: 11,
-        fontWeight: 400,
+        fontSize: theme.typography.caption.fontSize,
         marginTop: 8,
         '&:before': {
             content: '"UQ Id: "'
         }
     },
     identifierSubtitle: {
-        fontSize: 11,
-        fontWeight: 300,
+        fontSize: theme.typography.caption.fontSize,
         '&:before': {
             content: '"UQ Username: "'
         }
