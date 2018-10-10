@@ -48,6 +48,7 @@ export class AutoCompleteAsyncField extends Component {
         disabled: PropTypes.bool,
         maxResults: PropTypes.number,
         required: PropTypes.bool,
+        selectedValue: PropTypes.any,
         filter: PropTypes.func
     };
 
