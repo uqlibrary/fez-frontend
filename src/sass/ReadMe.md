@@ -17,11 +17,11 @@ Fez-frontend is based on Material Design, and while we are using Material UI for
 * Be accessible, and be designed and built for WCAG2.0 AA
 * Be minimal, and not make a simple process more drawn out
 
-###Grid
+### Grid
 
 We are now using [MUIv1 Grid](https://material-ui.com/layout/grid/) component for our responsive layout.
 
-#####General tips:
+##### General tips:
 
 We use 16 unit spacing for forms
 ```
@@ -60,33 +60,33 @@ To center items
 ```
 For any other combinations, visit the [Grid API documentation](https://material-ui.com/api/grid/).
 
-###Typography
+### Typography
 We now use the Material UI v1 general theme typography styles. Below are some specifications/examples.
 
-#####Site title
+##### Site title
 ```
 <Typography variant={'h5'} component={h1}>Title</Typography>
 ```
-#####Page title
+##### Page title
 ```
 <Typography variant={'h4'} component={h2}>Page ttle</Typography>
 ```
 
-#####Card title
+##### Card title
 ```
 <Typography variant={'h5'} component={h3}>Card ttle</Typography>
 ```
 
-#####Publication titles
+##### Publication titles
 ```
 <Typography variant={'h5'} component={'h5'}>Title of publication</Typography>
 ```
 
-#####Body text
+##### Body text
 ```
 <Typography variant={'body1'}>This is some body text</Typography>
 ```
-#####Citations
+##### Citations
 ```
 <Typography variant={'caption'}>This is citation body text</Typography>
 ```
