@@ -20,11 +20,19 @@ html, body {
 }
 
 a {
-  color: #2377CB;
+  color: #3872a8;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
+}
+
+.smallLogo::before {
+  content: url(../../src/images/uq-logo-white-minimal.svg);
+}
+
+.largeLogo::before {
+  content: url(../../src/images/uq-logo-white-2018.svg);
 }
 
 .layout-fill {

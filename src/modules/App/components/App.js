@@ -26,13 +26,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
+// import Hidden from '@material-ui/core/Hidden';
 import Menu from '@material-ui/icons/Menu';
 import {withStyles} from '@material-ui/core/styles';
 
-const logo = require('../../../images/uq-logo-white-minimal.svg');
-
 const styles = theme => ({
+    appBG: {
+        ...theme.palette.primary.main
+    },
     layoutCard: {
         maxWidth: '1200px',
         margin: '24px auto',
@@ -173,7 +174,7 @@ export class App extends PureComponent {
                     <Grid item xs={12}>
                         <AppLoader
                             title={locale.global.title}
-                            logoImage={locale.global.logo.image}
+                            logoImage="largeLogo"
                             logoText={locale.global.logo.label}/>
                     </Grid>
                 </Grid>
@@ -241,13 +242,13 @@ export class App extends PureComponent {
                     color="primary"
                     position="fixed">
                     <Toolbar style={{height: '70px'}}>
-                        <Grid container
+                        <Grid container spacing={8}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
                             justify="flex-start">
                             {
-                                !this.state.docked && !isThesisSubmissionPage &&
+                                !this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage &&
                                 <Grid item>
                                     <Tooltip title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
@@ -262,13 +263,17 @@ export class App extends PureComponent {
                                 </Grid>
                             }
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={16} alignItems="center" justify="center">
-                                    <Hidden smDown>
-                                        <Grid item xs="auto">
-                                            <img id="logo" src={logo} style={{height: 66, width: 60}} aria-label={locale.global.logo.label} onError={this.hideBrokenImage} />
+                                <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
+                                    {
+                                        !this.state.docked && !this.state.menuDrawerOpen &&
+                                        <Grid item>
+                                            <div id="logo" className="smallLogo"
+                                                style={{height: 66, width: 60}}
+                                                aria-label={locale.global.logo.label}
+                                            />
                                         </Grid>
-                                    </Hidden>
-                                    <Grid item xs>
+                                    }
+                                    <Grid item xs={'auto'}>
                                         <Typography variant="title" noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
@@ -277,11 +282,11 @@ export class App extends PureComponent {
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item md={4} >
+                                <Grid item sm={4}>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
-                            <Grid item xs="auto" >
+                            <Grid item>
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
@@ -299,7 +304,7 @@ export class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={locale.global.logo.image}
+                        logoImage="largeLogo"
                         logoText={locale.global.logo.label}
                         logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}

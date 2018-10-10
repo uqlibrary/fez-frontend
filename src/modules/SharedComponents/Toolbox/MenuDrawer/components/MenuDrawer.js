@@ -16,10 +16,6 @@ import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
 import {withStyles} from '@material-ui/core/styles';
 
-import jss from 'jss';
-import nested from 'jss-nested';
-jss.use(nested());
-
 const styles = theme => {
     return {
         paper: {
@@ -190,7 +186,7 @@ export class MenuDrawer extends Component {
                                         title={logoText}
                                         openInNewIcon={false}
                                     >
-                                        <img src={logoImage} alt={logoText}/>
+                                        <div className={logoImage} style={{height: 50, width: 160, margin: '8px auto'}} alt={logoText}/>
                                     </ExternalLink>
                                 }
                             </Grid>

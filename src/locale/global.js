@@ -29,11 +29,11 @@ export default {
                 title="Click to return to the eSpace home page"
                 style={{color: '#FFFFFF'}}
             >
-                UQ eSpace {process.env.TITLE_SUFFIX || 'eSpace'}
+                UQ eSpace {process.env.TITLE_SUFFIX || ''}
             </a>
         ),
         logo: {
-            image: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+            // image: 'https://static.uq.net.au/v2/logos/corporate/uq-logo-white.svg',
             label: 'University of Queensland',
             link: 'http://www.uq.edu.au'
         },
