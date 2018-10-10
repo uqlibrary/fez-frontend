@@ -45,9 +45,9 @@ export default class MediaPreview extends PureComponent {
         const title = isVideo ? videoTitle : imageTitle;
         return (
             <React.Fragment>
-                <Grid container spacing={0} direction={'row'}>
+                <Grid container spacing={0} direction={'row'} style={{marginTop: 32}}>
                     <Grid item xs>
-                        <Typography variant={'h2'}>{title}</Typography>
+                        <Typography variant={'h5'} component={'h2'}>{title}</Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item>
@@ -64,7 +64,15 @@ export default class MediaPreview extends PureComponent {
                 }
                 {
                     isImage &&
-                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{margin: '0 auto'}} />
+                        <div style={{padding: 16, margin: 16}}>
+                            <Grid container spacing={32}>
+                                <Grid xs />
+                                <Grid xs={'auto'}>
+                                    <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{border: '5px solid black', maxWidth: '100%'}} />
+                                </Grid>
+                                <Grid xs />
+                            </Grid>
+                        </div>
                 }
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>

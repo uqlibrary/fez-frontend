@@ -56,7 +56,7 @@ class Thumbnail extends PureComponent {
             return (
                 !this.state.thumbnailError ?
                     <ExternalLink href={mediaUrl} title={fileName}  openInNewIcon={false}>
-                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
+                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError} className={this.props.classes.image}/>
                     </ExternalLink>
                     : <BrokenImage color={'secondary'} />
             );
