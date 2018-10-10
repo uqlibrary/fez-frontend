@@ -143,7 +143,7 @@ export class PartialDateForm extends Component {
         return (
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <InputLabel error={isError} dense shrink required={this.props.required} style={{zoom: '0.75'}}>{this.props.floatingTitle}</InputLabel>
+                    <InputLabel error={isError} shrink required={this.props.required} style={{zoom: '0.75'}}>{this.props.floatingTitle}</InputLabel>
                 </Grid>
                 <Grid item xs={12}>
                     <Grid container spacing={16} style={{marginTop: -12}}>
