@@ -25,8 +25,6 @@ export const cache = setupCache({
     },
 });
 
-window.Cookies = Cookies;
-
 export const api = axios.create({
     baseURL: API_URL,
     adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter
