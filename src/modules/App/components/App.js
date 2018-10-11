@@ -29,6 +29,8 @@ import Typography from '@material-ui/core/Typography';
 import Menu from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
 import {withStyles} from '@material-ui/core/styles';
+import Cookies from 'js-cookie';
+import {SESSION_COOKIE_NAME} from 'config/general';
 
 const styles = theme => ({
     appBG: {
@@ -208,7 +210,7 @@ export class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
+        if (!this.props.accountLoading && !this.props.account && (!isPublicPage || isPublicPage && !!Cookies.get(SESSION_COOKIE_NAME))) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
