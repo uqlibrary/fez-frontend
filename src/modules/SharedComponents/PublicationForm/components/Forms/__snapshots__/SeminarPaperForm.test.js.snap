@@ -87,6 +87,7 @@ exports[`SeminarPaperForm renders  component 1`] = `
             floatingTitle="Seminar date"
             floatingTitleRequired={true}
             name="rek_date"
+            required={true}
             validate={
               Array [
                 [Function],

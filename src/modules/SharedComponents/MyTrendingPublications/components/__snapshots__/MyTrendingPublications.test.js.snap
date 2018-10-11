@@ -35,7 +35,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         xs={true}
       >
         <WithStyles(Typography)
-          variant="title"
+          variant="h5"
         >
           <div
             className="fez-icon scopus xxlarge"
@@ -43,7 +43,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           Scopus citation count
         </WithStyles(Typography)>
         <WithStyles(Typography)
-          variant="subheading"
+          variant="subtitle1"
         >
           The +plus score indicates the increase in citations over the last month
         </WithStyles(Typography)>
@@ -909,7 +909,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         xs={true}
       >
         <WithStyles(Typography)
-          variant="title"
+          variant="h5"
         >
           <div
             className="fez-icon thomson xxlarge"
@@ -917,7 +917,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           Web of Science citation count
         </WithStyles(Typography)>
         <WithStyles(Typography)
-          variant="subheading"
+          variant="subtitle1"
         >
           The +plus score indicates the increase in citations over the last month
         </WithStyles(Typography)>
@@ -1864,7 +1864,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         xs={true}
       >
         <WithStyles(Typography)
-          variant="title"
+          variant="h5"
         >
           <div
             className="fez-icon altmetric xxlarge"
@@ -1872,7 +1872,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           Altmetric score
         </WithStyles(Typography)>
         <WithStyles(Typography)
-          variant="subheading"
+          variant="subtitle1"
         >
           The +plus score indicates recent increase in social media activity
         </WithStyles(Typography)>

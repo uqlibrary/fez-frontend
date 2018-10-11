@@ -43,7 +43,7 @@ export default class PublicationSearchForm extends Component {
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 children={this.props.locale.submit}
                                 fullWidth
                                 color={'primary'}
@@ -55,7 +55,7 @@ export default class PublicationSearchForm extends Component {
                             this.props.onSkipSearch &&
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
-                                    variant={'flat'}
+                                    variant={'text'}
                                     children={this.props.locale.skip}
                                     fullWidth
                                     onClick={this.props.onSkipSearch}

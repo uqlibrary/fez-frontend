@@ -233,7 +233,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                     }
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs>
+                                            <Grid item xs style={{marginTop: 16}}>
                                                 {
                                                     totalPossiblePubs > this.initState.pageSize &&
                                                         <React.Fragment>

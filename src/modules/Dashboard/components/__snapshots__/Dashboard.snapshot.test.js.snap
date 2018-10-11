@@ -66,6 +66,11 @@ exports[`Dashboard test does render latest and trending publications tabs correc
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -206,6 +211,11 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -330,6 +340,11 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -738,6 +753,11 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -935,6 +955,11 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -1085,6 +1110,11 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -1175,6 +1205,11 @@ exports[`Dashboard test renders dashboard header only 1`] = `
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)
@@ -1256,6 +1291,11 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
       </Hidden>
       <WithStyles(Grid)
         item={true}
+        style={
+          Object {
+            "marginTop": -27,
+          }
+        }
         xs={12}
       >
         <WithStyles(Alert)

@@ -1,16 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
+import OpenInNew from '@material-ui/icons/OpenInNew';
+import {withStyles} from '@material-ui/core/styles';
+
+const styles = {
+    externalLink: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        overflowWrap: 'break-word',
+        wordBreak: 'break-all',
+        whiteSpace: 'nowrap',
+        maxWidth: '100% !important',
+        minWidth: 0,
+        display: 'inline-block',
+        marginBottom: '-0.35rem'
+    },
+    externalLinkIcon: {
+        color: 'inherit',
+        fontSize: '0.66rem',
+        display: 'inline-block',
+        float: 'right',
+        marginLeft: '0.25rem'
+    }
+};
 
 const ExternalLink = (props) => {
-    const {className, children, openInNewIcon, ...rest} = props;
-    const showIcon = openInNewIcon && ' showIcon';
+    const {className, children, openInNewIcon, classes, ...rest} = props;
     return (
         <a {...rest}
-            className={className + ' externalLink' + showIcon}
             tabIndex="0"
-            title={rest.title
-            || (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) || undefined}>
+            title={rest.title || (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) || undefined}
+            className={`${className} ${classes.externalLink}`}
+        >
+            {openInNewIcon &&
+            <OpenInNew className={classes.externalLinkIcon} />
+            }
             {!!children && children}
         </a>
     );
@@ -20,6 +45,7 @@ ExternalLink.propTypes = {
     className: PropTypes.string,
     openInNewIcon: PropTypes.bool,
     children: PropTypes.any,
+    classes: PropTypes.object
 };
 
 ExternalLink.defaultProps = {
@@ -29,4 +55,4 @@ ExternalLink.defaultProps = {
     openInNewIcon: true
 };
 
-export default ExternalLink;
+export default withStyles(styles, {withTheme: true})(ExternalLink);

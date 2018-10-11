@@ -36,6 +36,7 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
         required={false}
         select={false}
         value=""
+        variant="standard"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -48,7 +49,7 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
         disabled={true}
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Add
       </WithStyles(Button)>
@@ -93,6 +94,7 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
         required={false}
         select={false}
         value=""
+        variant="standard"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -105,7 +107,7 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
         disabled={true}
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Add
       </WithStyles(Button)>
@@ -148,6 +150,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
         required={false}
         select={false}
         value="one"
+        variant="standard"
       />
       <WithStyles(Typography)
         className=""
@@ -166,7 +169,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
         disabled={true}
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Add
       </WithStyles(Button)>

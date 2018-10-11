@@ -52,7 +52,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
-          variant="raised"
+          variant="contained"
         >
           Search
         </WithStyles(Button)>
