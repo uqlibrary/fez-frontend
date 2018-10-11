@@ -14,7 +14,7 @@ const styles = {
         maxWidth: '100% !important',
         minWidth: 0,
         display: 'inline-block',
-        marginBottom: '-0.35rem'
+        verticalAlign: 'bottom',
     },
     externalLinkIcon: {
         color: 'inherit',
