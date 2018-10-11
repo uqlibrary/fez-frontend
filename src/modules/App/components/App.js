@@ -210,7 +210,7 @@ export class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if (!this.props.accountLoading && !this.props.account && (!isPublicPage || isPublicPage && !!Cookies.get(SESSION_COOKIE_NAME))) {
+        if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
