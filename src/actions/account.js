@@ -71,6 +71,8 @@ export function loadCurrentAccount() {
 }
 
 export function logout() {
+    console.log(Cookies.get(SESSION_COOKIE_NAME));
+    console.log(window.document.cookie);
     if(!!Cookies.get(SESSION_COOKIE_NAME)) {
         Cookies.remove(SESSION_COOKIE_NAME);
     }
