@@ -225,23 +225,43 @@ exports[`Application component should render alert if user is not fez author 1`]
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -268,6 +288,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -333,7 +354,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -825,23 +846,43 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -868,6 +909,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -933,7 +975,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -1290,23 +1332,43 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -1333,6 +1395,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -1722,23 +1785,43 @@ exports[`Application component should render app for account with fez author wit
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -1765,6 +1848,7 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -1830,7 +1914,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -2300,23 +2384,43 @@ exports[`Application component should render app for account with fez author wit
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -2343,6 +2447,7 @@ exports[`Application component should render app for account with fez author wit
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -2408,7 +2513,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -2874,23 +2979,43 @@ exports[`Application component should render app for account with fez author wit
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -3366,23 +3491,43 @@ exports[`Application component should render application with routing for the us
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -3409,6 +3554,7 @@ exports[`Application component should render application with routing for the us
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -3474,7 +3620,7 @@ exports[`Application component should render application with routing for the us
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -3640,23 +3786,43 @@ exports[`Application component should render for anon user 1`] = `
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)
@@ -3683,6 +3849,7 @@ exports[`Application component should render for anon user 1`] = `
         <WithStyles(Grid)
           item={true}
           sm={4}
+          xs={2}
         >
           <withRouter(Connect(SearchComponent))
             isInHeader={true}
@@ -3913,23 +4080,43 @@ exports[`Application component should render thesis submission for HDR without m
             spacing={16}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
-              item={true}
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
             >
-              <div
-                aria-label="University of Queensland"
-                className="smallLogo"
-                id="logo"
-                style={
-                  Object {
-                    "height": 66,
-                    "width": 60,
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
                   }
-                }
-              />
-            </WithStyles(Grid)>
+                />
+              </WithStyles(Grid)>
+            </Hidden>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
               xs="auto"
             >
               <WithStyles(Typography)

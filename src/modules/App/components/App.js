@@ -27,6 +27,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Menu from '@material-ui/icons/Menu';
+import Hidden from '@material-ui/core/Hidden';
 import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -49,8 +50,12 @@ const styles = theme => ({
         height: '100%'
     },
     titleLink: {
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
         color: theme.palette.common.white,
         '& a': {
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
             textDecoration: 'none',
             '&:hover': {
                 textDecoration: 'underline'
@@ -265,14 +270,16 @@ export class App extends PureComponent {
                                 <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
                                     {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
-                                        <Grid item>
-                                            <div id="logo" className="smallLogo"
-                                                style={{height: 66, width: 60}}
-                                                aria-label={locale.global.logo.label}
-                                            />
-                                        </Grid>
+                                            <Hidden xsDown>
+                                                <Grid item>
+                                                    <div id="logo" className="smallLogo"
+                                                        style={{height: 66, width: 60}}
+                                                        aria-label={locale.global.logo.label}
+                                                    />
+                                                </Grid>
+                                            </Hidden>
                                     }
-                                    <Grid item xs={'auto'}>
+                                    <Grid item xs={'auto'} style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
                                         <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
@@ -281,7 +288,7 @@ export class App extends PureComponent {
                             </Grid>
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
-                                <Grid item sm={4}>
+                                <Grid item xs={2} sm={4}>
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
