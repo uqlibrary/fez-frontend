@@ -29,8 +29,6 @@ import Typography from '@material-ui/core/Typography';
 import Menu from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
 import {withStyles} from '@material-ui/core/styles';
-import Cookies from 'js-cookie';
-import {SESSION_COOKIE_NAME} from 'config/general';
 
 const styles = theme => ({
     appBG: {
