@@ -4,7 +4,7 @@ import {CURRENT_ACCOUNT_API, CURRENT_AUTHOR_API, AUTHOR_DETAILS_API} from 'repos
 import Raven from 'raven-js';
 import {sessionApi} from 'config';
 import Cookies from 'js-cookie';
-import {SESSION_COOKIE_NAME} from './general';
+import {SESSION_COOKIE_NAME} from 'config/general';
 
 /**
  * Loads the user's account and author details into the application
