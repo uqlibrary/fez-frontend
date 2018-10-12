@@ -15,20 +15,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
-    header: {
-        fontWeight: 400,
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '0.975rem',
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '0.775rem',
-            fontWeight: 500
-        }
-    },
-    data: {
-        fontSize: '0.8rem',
-        lineHeight: '1.5rem'
-    },
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`
     },
@@ -45,10 +31,10 @@ export class AdditionalInformation extends PureComponent {
         classes: PropTypes.object
     };
 
-    renderRow = (heading, data) => {
+    renderRow = (heading, data, index) => {
         return (
-            <div style={{padding: 16}}>
-                <Grid container spacing={32} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
+            <div style={{padding: 8}} key={index}>
+                <Grid container spacing={16} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}><Typography variant="body1" classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
                     <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
                 </Grid>
@@ -260,7 +246,7 @@ export class AdditionalInformation extends PureComponent {
 
         fields.sort((field1, field2) => (
             field1.order - field2.order
-        )).map((item) => {
+        )).map((item, index) => {
             let data = '';
             const field = item.field;
             const value = (field === 'rek_description') ? this.getAbstract(publication) : publication[field];
@@ -277,7 +263,7 @@ export class AdditionalInformation extends PureComponent {
                     data = this.renderContent(field, value);
                 }
 
-                rows.push(this.renderRow(heading, data));
+                rows.push(this.renderRow(heading, data, index));
             }
         });
 

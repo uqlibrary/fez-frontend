@@ -236,7 +236,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                 <Grid container spacing={16} style={{marginTop: 24}}>
                                     <Grid item xs={12} sm={'auto'}>
                                         <Button
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             classes={{root: classes.blueButton}}
                                             children={txt.advancedSearch.addField.title}
                                             aria-label={txt.advancedSearch.addField.aria}
@@ -247,7 +247,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                     </Grid>
                                     <Grid item xs={12} sm={'auto'}>
                                         <Button
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             children={txt.advancedSearch.reset.title}
                                             aria-label={txt.advancedSearch.reset.aria}
                                             onClick={this._resetAdvancedSearch}
@@ -267,7 +267,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                     </Hidden>
                                     <Grid item  xs={12} md={4} className={classes.searchButton}>
                                         <Button
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             children={txt.searchButtonText}
                                             aria-label={txt.searchButtonAriaLabel}
                                             type="submit"

@@ -49,7 +49,7 @@ export class DashboardAuthorDetails extends PureComponent {
         return (
             <Grid container spacing={8}>
                 <Grid item xs={12}>
-                    <Typography variant={'title'} className={classes.authorDetails}>
+                    <Typography variant={'h5'} className={classes.authorDetails}>
                         {this.props.title}&nbsp;{this.props.givenName}&nbsp;{this.props.familyName}
                     </Typography>
                 </Grid>

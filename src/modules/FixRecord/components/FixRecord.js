@@ -245,7 +245,7 @@ export default class FixRecord extends PureComponent {
                         <Grid item xs />
                         <Grid item>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 fullWidth
                                 children={txt.cancel}
                                 disabled={this.props.submitting}
@@ -255,7 +255,7 @@ export default class FixRecord extends PureComponent {
                             this.state.selectedRecordAction &&
                             <Grid item>
                                 <Button
-                                    variant={'raised'}
+                                    variant={'contained'}
                                     color={'primary'}
                                     fullWidth
                                     children={txt.submit}

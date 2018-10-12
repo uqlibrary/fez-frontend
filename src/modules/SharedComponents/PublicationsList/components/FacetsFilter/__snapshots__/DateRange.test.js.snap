@@ -47,6 +47,7 @@ exports[`Date range  should render disabled component 1`] = `
             select={false}
             type="number"
             value={2007}
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -62,6 +63,7 @@ exports[`Date range  should render disabled component 1`] = `
             select={false}
             type="number"
             value={2022}
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -71,7 +73,7 @@ exports[`Date range  should render disabled component 1`] = `
             disabled={true}
             fullWidth={true}
             onClick={[Function]}
-            variant="flat"
+            variant="text"
           >
             Go
           </WithStyles(Button)>
@@ -113,6 +115,7 @@ exports[`Date range  should render empty component 1`] = `
             select={false}
             type="number"
             value={2007}
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -128,6 +131,7 @@ exports[`Date range  should render empty component 1`] = `
             select={false}
             type="number"
             value={2022}
+            variant="standard"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -137,7 +141,7 @@ exports[`Date range  should render empty component 1`] = `
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
-            variant="flat"
+            variant="text"
           >
             Go
           </WithStyles(Button)>

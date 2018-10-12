@@ -50,7 +50,7 @@ export default class PreprintForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial
+                                    allowPartial required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}

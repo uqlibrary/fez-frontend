@@ -27,7 +27,7 @@ export const mui1theme = createMuiTheme({
         accent: {
             light: '#54acff',
             main: '#4085C6',
-            dark: '#3872a8'
+            dark: '#2a557d'
         },
         white: {
             main: '#FFFFFF'
@@ -56,10 +56,8 @@ export const mui1theme = createMuiTheme({
         fontWeightLight: 200,
         fontWeightRegular: 300,
         fontWeightMedium: 400,
-        title: {
-            fontSize: '1.5rem',
-            fontWeight: 300
-        }
+        useNextVariants: true,
+        suppressDeprecationWarnings: true
     },
     overrides: {
         MuiFormLabel: {

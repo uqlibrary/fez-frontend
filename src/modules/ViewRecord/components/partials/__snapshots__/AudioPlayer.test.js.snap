@@ -4,7 +4,7 @@ exports[`Audio Player Component  should pause audio 1`] = `
 <div>
   <audio>
     <source
-      src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
@@ -136,7 +136,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -287,30 +287,68 @@ exports[`Audio Player Component  should pause audio 2`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
+              },
+              "body1Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body2": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
+              },
+              "body2Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "button": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
+                "textTransform": "uppercase",
+              },
+              "buttonNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
+              },
+              "captionNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "display1": Object {
                 "color": "rgba(0, 0, 0, 0.54)",
@@ -350,12 +388,69 @@ exports[`Audio Player Component  should pause audio 2`] = `
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
+              "h1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "6rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.01562em",
+                "lineHeight": 1,
+              },
+              "h2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.75rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.00833em",
+                "lineHeight": 1,
+              },
+              "h3": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.04,
+              },
+              "h4": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00735em",
+                "lineHeight": 1.17,
+              },
+              "h5": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.33,
+              },
+              "h6": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.25rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.0075em",
+                "lineHeight": 1.6,
+              },
               "headline": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "lineHeight": "1.35417em",
+              },
+              "overline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.08333em",
+                "lineHeight": 2.66,
+                "textTransform": "uppercase",
               },
               "pxToRem": [Function],
               "round": [Function],
@@ -366,13 +461,31 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 "fontWeight": 300,
                 "lineHeight": "1.5em",
               },
+              "subtitle1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.75,
+              },
+              "subtitle2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.00714em",
+                "lineHeight": 1.57,
+              },
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -393,7 +506,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
           <div>
             <audio>
               <source
-                src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
                 type="audio/mp3"
               />
             </audio>
@@ -411,12 +524,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 aria-label="Click to pause audio file UQ676287_OA.pdf"
                 classes={
                   Object {
-                    "colorInherit": "MuiIconButton-colorInherit-02",
-                    "colorPrimary": "MuiIconButton-colorPrimary-03",
-                    "colorSecondary": "MuiIconButton-colorSecondary-04",
-                    "disabled": "MuiIconButton-disabled-05",
-                    "label": "MuiIconButton-label-06",
-                    "root": "MuiIconButton-root-01",
+                    "colorInherit": "MuiIconButton-colorInherit-2",
+                    "colorPrimary": "MuiIconButton-colorPrimary-3",
+                    "colorSecondary": "MuiIconButton-colorSecondary-4",
+                    "disabled": "MuiIconButton-disabled-5",
+                    "label": "MuiIconButton-label-6",
+                    "root": "MuiIconButton-root-1",
                   }
                 }
                 color="default"
@@ -432,7 +545,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 <WithStyles(ButtonBase)
                   aria-label="Click to pause audio file UQ676287_OA.pdf"
                   centerRipple={true}
-                  className="MuiIconButton-root-01"
+                  className="MuiIconButton-root-1"
                   disabled={false}
                   focusRipple={true}
                   onClick={[Function]}
@@ -446,12 +559,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
                   <ButtonBase
                     aria-label="Click to pause audio file UQ676287_OA.pdf"
                     centerRipple={true}
-                    className="MuiIconButton-root-01"
+                    className="MuiIconButton-root-1"
                     classes={
                       Object {
-                        "disabled": "MuiButtonBase-disabled-08",
-                        "focusVisible": "MuiButtonBase-focusVisible-09",
-                        "root": "MuiButtonBase-root-07",
+                        "disabled": "MuiButtonBase-disabled-8",
+                        "focusVisible": "MuiButtonBase-focusVisible-9",
+                        "root": "MuiButtonBase-root-7",
                       }
                     }
                     component="button"
@@ -471,7 +584,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                   >
                     <button
                       aria-label="Click to pause audio file UQ676287_OA.pdf"
-                      className="MuiButtonBase-root-07 MuiIconButton-root-01"
+                      className="MuiButtonBase-root-7 MuiIconButton-root-1"
                       disabled={false}
                       onBlur={[Function]}
                       onClick={[Function]}
@@ -494,7 +607,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                       type="button"
                     >
                       <span
-                        className="MuiIconButton-label-06"
+                        className="MuiIconButton-label-6"
                       >
                         <pure(PauseIcon)
                           className="pause"
@@ -509,13 +622,15 @@ exports[`Audio Player Component  should pause audio 2`] = `
                                 className="pause"
                                 classes={
                                   Object {
-                                    "colorAction": "MuiSvgIcon-colorAction-013",
-                                    "colorDisabled": "MuiSvgIcon-colorDisabled-015",
-                                    "colorError": "MuiSvgIcon-colorError-014",
-                                    "colorPrimary": "MuiSvgIcon-colorPrimary-011",
-                                    "colorSecondary": "MuiSvgIcon-colorSecondary-012",
-                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-016",
-                                    "root": "MuiSvgIcon-root-010",
+                                    "colorAction": "MuiSvgIcon-colorAction-13",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled-15",
+                                    "colorError": "MuiSvgIcon-colorError-14",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary-11",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary-12",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-16",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-18",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-17",
+                                    "root": "MuiSvgIcon-root-10",
                                   }
                                 }
                                 color="inherit"
@@ -525,8 +640,9 @@ exports[`Audio Player Component  should pause audio 2`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  className="MuiSvgIcon-root-010 pause"
+                                  className="MuiSvgIcon-root-10 pause"
                                   focusable="false"
+                                  role="presentation"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
@@ -550,25 +666,25 @@ exports[`Audio Player Component  should pause audio 2`] = `
                           center={true}
                           classes={
                             Object {
-                              "child": "MuiTouchRipple-child-021",
-                              "childLeaving": "MuiTouchRipple-childLeaving-022",
-                              "childPulsate": "MuiTouchRipple-childPulsate-023",
-                              "ripple": "MuiTouchRipple-ripple-018",
-                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-020",
-                              "rippleVisible": "MuiTouchRipple-rippleVisible-019",
-                              "root": "MuiTouchRipple-root-017",
+                              "child": "MuiTouchRipple-child-23",
+                              "childLeaving": "MuiTouchRipple-childLeaving-24",
+                              "childPulsate": "MuiTouchRipple-childPulsate-25",
+                              "ripple": "MuiTouchRipple-ripple-20",
+                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-22",
+                              "rippleVisible": "MuiTouchRipple-rippleVisible-21",
+                              "root": "MuiTouchRipple-root-19",
                             }
                           }
                         >
                           <TransitionGroup
                             childFactory={[Function]}
-                            className="MuiTouchRipple-root-017"
+                            className="MuiTouchRipple-root-19"
                             component="span"
                             enter={true}
                             exit={true}
                           >
                             <span
-                              className="MuiTouchRipple-root-017"
+                              className="MuiTouchRipple-root-19"
                             />
                           </TransitionGroup>
                         </TouchRipple>
@@ -697,7 +813,7 @@ exports[`Audio Player Component  should play audio 1`] = `
             },
             "palette": Object {
               "accent": Object {
-                "dark": "#3872a8",
+                "dark": "#2a557d",
                 "light": "#54acff",
                 "main": "#4085C6",
               },
@@ -848,30 +964,68 @@ exports[`Audio Player Component  should play audio 1`] = `
               "body1": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
+                "fontSize": "1rem",
                 "fontWeight": 300,
-                "lineHeight": "1.46429em",
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
+              },
+              "body1Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.5,
               },
               "body2": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "lineHeight": "1.71429em",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
+              },
+              "body2Next": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.01071em",
+                "lineHeight": 1.5,
               },
               "button": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
+                "textTransform": "uppercase",
+              },
+              "buttonNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.02857em",
+                "lineHeight": 1.5,
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
+                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
-                "lineHeight": "1.375em",
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
+              },
+              "captionNext": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.03333em",
+                "lineHeight": 1.66,
               },
               "display1": Object {
                 "color": "rgba(0, 0, 0, 0.54)",
@@ -911,12 +1065,69 @@ exports[`Audio Player Component  should play audio 1`] = `
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
+              "h1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "6rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.01562em",
+                "lineHeight": 1,
+              },
+              "h2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3.75rem",
+                "fontWeight": 200,
+                "letterSpacing": "-0.00833em",
+                "lineHeight": 1,
+              },
+              "h3": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "3rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.04,
+              },
+              "h4": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "2.125rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00735em",
+                "lineHeight": 1.17,
+              },
+              "h5": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.5rem",
+                "fontWeight": 300,
+                "letterSpacing": "0em",
+                "lineHeight": 1.33,
+              },
+              "h6": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1.25rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.0075em",
+                "lineHeight": 1.6,
+              },
               "headline": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "lineHeight": "1.35417em",
+              },
+              "overline": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.08333em",
+                "lineHeight": 2.66,
+                "textTransform": "uppercase",
               },
               "pxToRem": [Function],
               "round": [Function],
@@ -927,13 +1138,31 @@ exports[`Audio Player Component  should play audio 1`] = `
                 "fontWeight": 300,
                 "lineHeight": "1.5em",
               },
+              "subtitle1": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "1rem",
+                "fontWeight": 300,
+                "letterSpacing": "0.00938em",
+                "lineHeight": 1.75,
+              },
+              "subtitle2": Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "letterSpacing": "0.00714em",
+                "lineHeight": 1.57,
+              },
+              "suppressDeprecationWarnings": true,
               "title": Object {
                 "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
+                "fontSize": "1.3125rem",
+                "fontWeight": 400,
                 "lineHeight": "1.16667em",
               },
+              "useNextVariants": true,
             },
             "zIndex": Object {
               "appBar": 1100,
@@ -954,7 +1183,7 @@ exports[`Audio Player Component  should play audio 1`] = `
           <div>
             <audio>
               <source
-                src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
                 type="audio/mp3"
               />
             </audio>
@@ -972,12 +1201,12 @@ exports[`Audio Player Component  should play audio 1`] = `
                 aria-label="Click to play audio file UQ676287_OA.pdf"
                 classes={
                   Object {
-                    "colorInherit": "MuiIconButton-colorInherit-02",
-                    "colorPrimary": "MuiIconButton-colorPrimary-03",
-                    "colorSecondary": "MuiIconButton-colorSecondary-04",
-                    "disabled": "MuiIconButton-disabled-05",
-                    "label": "MuiIconButton-label-06",
-                    "root": "MuiIconButton-root-01",
+                    "colorInherit": "MuiIconButton-colorInherit-2",
+                    "colorPrimary": "MuiIconButton-colorPrimary-3",
+                    "colorSecondary": "MuiIconButton-colorSecondary-4",
+                    "disabled": "MuiIconButton-disabled-5",
+                    "label": "MuiIconButton-label-6",
+                    "root": "MuiIconButton-root-1",
                   }
                 }
                 color="default"
@@ -993,7 +1222,7 @@ exports[`Audio Player Component  should play audio 1`] = `
                 <WithStyles(ButtonBase)
                   aria-label="Click to play audio file UQ676287_OA.pdf"
                   centerRipple={true}
-                  className="MuiIconButton-root-01"
+                  className="MuiIconButton-root-1"
                   disabled={false}
                   focusRipple={true}
                   onClick={[Function]}
@@ -1007,12 +1236,12 @@ exports[`Audio Player Component  should play audio 1`] = `
                   <ButtonBase
                     aria-label="Click to play audio file UQ676287_OA.pdf"
                     centerRipple={true}
-                    className="MuiIconButton-root-01"
+                    className="MuiIconButton-root-1"
                     classes={
                       Object {
-                        "disabled": "MuiButtonBase-disabled-08",
-                        "focusVisible": "MuiButtonBase-focusVisible-09",
-                        "root": "MuiButtonBase-root-07",
+                        "disabled": "MuiButtonBase-disabled-8",
+                        "focusVisible": "MuiButtonBase-focusVisible-9",
+                        "root": "MuiButtonBase-root-7",
                       }
                     }
                     component="button"
@@ -1032,7 +1261,7 @@ exports[`Audio Player Component  should play audio 1`] = `
                   >
                     <button
                       aria-label="Click to play audio file UQ676287_OA.pdf"
-                      className="MuiButtonBase-root-07 MuiIconButton-root-01"
+                      className="MuiButtonBase-root-7 MuiIconButton-root-1"
                       disabled={false}
                       onBlur={[Function]}
                       onClick={[Function]}
@@ -1055,7 +1284,7 @@ exports[`Audio Player Component  should play audio 1`] = `
                       type="button"
                     >
                       <span
-                        className="MuiIconButton-label-06"
+                        className="MuiIconButton-label-6"
                       >
                         <pure(PlayArrowIcon)
                           className="play"
@@ -1070,13 +1299,15 @@ exports[`Audio Player Component  should play audio 1`] = `
                                 className="play"
                                 classes={
                                   Object {
-                                    "colorAction": "MuiSvgIcon-colorAction-013",
-                                    "colorDisabled": "MuiSvgIcon-colorDisabled-015",
-                                    "colorError": "MuiSvgIcon-colorError-014",
-                                    "colorPrimary": "MuiSvgIcon-colorPrimary-011",
-                                    "colorSecondary": "MuiSvgIcon-colorSecondary-012",
-                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-016",
-                                    "root": "MuiSvgIcon-root-010",
+                                    "colorAction": "MuiSvgIcon-colorAction-13",
+                                    "colorDisabled": "MuiSvgIcon-colorDisabled-15",
+                                    "colorError": "MuiSvgIcon-colorError-14",
+                                    "colorPrimary": "MuiSvgIcon-colorPrimary-11",
+                                    "colorSecondary": "MuiSvgIcon-colorSecondary-12",
+                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-16",
+                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-18",
+                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-17",
+                                    "root": "MuiSvgIcon-root-10",
                                   }
                                 }
                                 color="inherit"
@@ -1086,8 +1317,9 @@ exports[`Audio Player Component  should play audio 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  className="MuiSvgIcon-root-010 play"
+                                  className="MuiSvgIcon-root-10 play"
                                   focusable="false"
+                                  role="presentation"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
@@ -1111,25 +1343,25 @@ exports[`Audio Player Component  should play audio 1`] = `
                           center={true}
                           classes={
                             Object {
-                              "child": "MuiTouchRipple-child-021",
-                              "childLeaving": "MuiTouchRipple-childLeaving-022",
-                              "childPulsate": "MuiTouchRipple-childPulsate-023",
-                              "ripple": "MuiTouchRipple-ripple-018",
-                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-020",
-                              "rippleVisible": "MuiTouchRipple-rippleVisible-019",
-                              "root": "MuiTouchRipple-root-017",
+                              "child": "MuiTouchRipple-child-23",
+                              "childLeaving": "MuiTouchRipple-childLeaving-24",
+                              "childPulsate": "MuiTouchRipple-childPulsate-25",
+                              "ripple": "MuiTouchRipple-ripple-20",
+                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-22",
+                              "rippleVisible": "MuiTouchRipple-rippleVisible-21",
+                              "root": "MuiTouchRipple-root-19",
                             }
                           }
                         >
                           <TransitionGroup
                             childFactory={[Function]}
-                            className="MuiTouchRipple-root-017"
+                            className="MuiTouchRipple-root-19"
                             component="span"
                             enter={true}
                             exit={true}
                           >
                             <span
-                              className="MuiTouchRipple-root-017"
+                              className="MuiTouchRipple-root-19"
                             />
                           </TransitionGroup>
                         </TouchRipple>
@@ -1151,7 +1383,7 @@ exports[`Audio Player Component  should render component 1`] = `
 <div>
   <audio>
     <source
-      src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
@@ -1176,7 +1408,7 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
 <div>
   <audio>
     <source
-      src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
@@ -1201,7 +1433,7 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
 <div>
   <audio>
     <source
-      src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>

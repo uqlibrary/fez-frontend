@@ -45,18 +45,16 @@ export default class FileName extends PureComponent {
 
         return (
             <Grid container alignItems="center" wrap="nowrap">
-                <Grid item>
+                <Grid item xs>
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&
-                        <Typography variant="body1" style={{fontSize: '0.8rem'}}>
-                            <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
-                                {fileName}
-                            </ExternalLink>
-                        </Typography>
+                        <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
+                            {fileName}
+                        </ExternalLink>
                     }
                     {
                         allowDownload && this.canShowPreview(mimeType) &&
-                        <Typography variant="body1" style={{fontSize: '0.8rem'}}>
+                        <Typography variant="body1" >
                             <a
                                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
@@ -68,7 +66,7 @@ export default class FileName extends PureComponent {
                     }
                     {
                         !allowDownload &&
-                        <Typography variant="body1" style={{fontSize: '0.8rem'}}>{fileName}</Typography>
+                        <Typography variant="body1" >{fileName}</Typography>
                     }
                 </Grid>
                 <Hidden xsDown>
