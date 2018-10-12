@@ -291,6 +291,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -313,7 +314,11 @@ exports[`Application component should render alert if user is not fez author 1`]
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {
@@ -912,6 +917,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -934,7 +940,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {
@@ -1398,6 +1408,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -1420,7 +1431,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {
@@ -1851,6 +1866,7 @@ exports[`Application component should render app for account with fez author wit
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -1873,7 +1889,11 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {
@@ -2450,6 +2470,7 @@ exports[`Application component should render app for account with fez author wit
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -2472,7 +2493,11 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {
@@ -3557,6 +3582,7 @@ exports[`Application component should render application with routing for the us
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -3579,7 +3605,11 @@ exports[`Application component should render application with routing for the us
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {
@@ -3852,6 +3882,7 @@ exports[`Application component should render for anon user 1`] = `
           xs={2}
         >
           <withRouter(Connect(SearchComponent))
+            autoFocus={false}
             isInHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
@@ -3874,7 +3905,11 @@ exports[`Application component should render for anon user 1`] = `
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    history={Object {}}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
     isMobile={false}
     locale={
       Object {

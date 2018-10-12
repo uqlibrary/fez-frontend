@@ -238,6 +238,7 @@ export class App extends PureComponent {
             isHdrStudent: isHdrStudent
         });
         const titleStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 284} : {paddingLeft: 0};
+        const isIndex = this.props.history.location.pathname === '/';
         return (
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig}/>
@@ -289,7 +290,7 @@ export class App extends PureComponent {
                             {/* Search */}
                             {!isThesisSubmissionPage && !isSearchPage &&
                                 <Grid item xs={2} sm={4}>
-                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
+                                    <SearchComponent autoFocus={isIndex} isInHeader showPrefixIcon showMobileSearchButton/>
                                 </Grid>
                             }
                             <Grid item>
