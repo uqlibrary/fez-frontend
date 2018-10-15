@@ -1,9 +1,10 @@
 import {journalArticle} from 'mock/data/testing/records';
-import FileName from './FileName';
+import {FileName} from './FileName';
 
 function setup(testProps, isShallow = true){
     const {previewFileName, ...rest} = testProps;
     const props = {
+        classes: {},
         pid: journalArticle.rek_pid,
         fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: 'application/pdf',

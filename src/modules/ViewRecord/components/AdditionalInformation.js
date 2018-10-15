@@ -36,7 +36,9 @@ export class AdditionalInformation extends PureComponent {
             <div style={{padding: 8}} key={index}>
                 <Grid container spacing={16} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}><Typography variant="body2" classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
-                    <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
+                    <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                        <Typography variant="body2">{data}</Typography>
+                    </Grid>
                 </Grid>
             </div>
         );

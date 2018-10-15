@@ -207,8 +207,8 @@ export class Files extends Component {
                     }
                     <div style={{padding: 8}}>
                         <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
-                            <Grid item xs={2}>&nbsp;</Grid>
-                            <Grid item sm={4} md={3}>
+                            <Grid item xs={1}>&nbsp;</Grid>
+                            <Grid item sm={4}>
                                 <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.fileName}</Typography>
                             </Grid>
                             <Hidden xsDown>
@@ -217,12 +217,12 @@ export class Files extends Component {
                                 </Grid>
                             </Hidden>
                             <Hidden smDown>
-                                <Grid item md={1}>
+                                <Grid item md={2}>
                                     <Typography variant="caption" gutterBottom>{locale.viewRecord.sections.files.size}</Typography>
                                 </Grid>
                             </Hidden>
                             <Hidden xsDown>
-                                <Grid item sm={'auto'}/>
+                                <Grid item sm />
                             </Hidden>
                         </Grid>
                     </div>
@@ -238,10 +238,10 @@ export class Files extends Component {
                                     wrap={'nowrap'}
                                     className={this.props.classes.header}
                                 >
-                                    <Grid item xs={2}>
+                                    <Grid item xs={1}>
                                         {item.icon}
                                     </Grid>
-                                    <Grid item sm={4} md={3} className={this.props.classes.dataWrapper}>
+                                    <Grid item sm={4}className={this.props.classes.dataWrapper}>
                                         <FileName
                                             {...item}
                                             onFileSelect={this.showPreview}
@@ -253,7 +253,7 @@ export class Files extends Component {
                                         </Grid>
                                     </Hidden>
                                     <Hidden smDown>
-                                        <Grid item md={1} className={this.props.classes.dataWrapper}>
+                                        <Grid item sm={2} className={this.props.classes.dataWrapper}>
                                             <Typography variant="body2" noWrap>{item.calculatedSize}</Typography>
                                         </Grid>
                                     </Hidden>

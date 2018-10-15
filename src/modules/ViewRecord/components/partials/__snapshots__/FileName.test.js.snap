@@ -475,6 +475,7 @@ exports[`File Name Component  should display file name link 1`] = `
       >
         <FileName
           allowDownload={true}
+          classes={Object {}}
           fileName="test.jpg"
           mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
           mimeType="application/pdf"
@@ -734,13 +735,12 @@ exports[`File Name Component  should display file name link 1`] = `
                       className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                     >
                       <WithStyles(ExternalLink)
-                        className="fileName"
                         href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
                         openInNewIcon={true}
                         title="test.jpg"
                       >
                         <ExternalLink
-                          className="fileName"
+                          className=""
                           classes={
                             Object {
                               "externalLink": "ExternalLink-externalLink-133",
@@ -1173,7 +1173,7 @@ exports[`File Name Component  should display file name link 1`] = `
                           title="test.jpg"
                         >
                           <a
-                            className="fileName ExternalLink-externalLink-133"
+                            className=" ExternalLink-externalLink-133"
                             href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
                             rel="noopener noreferrer"
                             tabIndex="0"
@@ -2743,6 +2743,7 @@ exports[`File Name Component  should render audio player 1`] = `
       >
         <FileName
           allowDownload={true}
+          classes={Object {}}
           fileName="test.mp3"
           mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
           mimeType="audio/mp3"
@@ -3002,13 +3003,12 @@ exports[`File Name Component  should render audio player 1`] = `
                       className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                     >
                       <WithStyles(ExternalLink)
-                        className="fileName"
                         href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
                         openInNewIcon={true}
                         title="test.mp3"
                       >
                         <ExternalLink
-                          className="fileName"
+                          className=""
                           classes={
                             Object {
                               "externalLink": "ExternalLink-externalLink-133",
@@ -3441,7 +3441,7 @@ exports[`File Name Component  should render audio player 1`] = `
                           title="test.mp3"
                         >
                           <a
-                            className="fileName ExternalLink-externalLink-133"
+                            className=" ExternalLink-externalLink-133"
                             href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
                             rel="noopener noreferrer"
                             tabIndex="0"
@@ -5210,6 +5210,7 @@ exports[`File Name Component  should render component and display file name only
       >
         <FileName
           allowDownload={false}
+          classes={Object {}}
           fileName="UQ676287_OA.pdf"
           mediaUrl=""
           mimeType="application/pdf"
@@ -7057,6 +7058,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
       >
         <FileName
           allowDownload={true}
+          classes={Object {}}
           fileName="test.jpg"
           mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
           mimeType="image/jpeg"
@@ -8910,6 +8912,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
       >
         <FileName
           allowDownload={true}
+          classes={Object {}}
           fileName="test.jpg"
           mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
           mimeType="image/jpeg"

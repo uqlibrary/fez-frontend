@@ -26,13 +26,12 @@ exports[`Files Component  should not render cultural message 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
            
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
           <WithStyles(Typography)
@@ -82,7 +81,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            md={2}
           >
             <WithStyles(Typography)
               gutterBottom={true}
@@ -107,7 +106,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            sm="auto"
+            sm={true}
           />
         </Hidden>
       </WithStyles(Grid)>
@@ -131,7 +130,7 @@ exports[`Files Component  should not render cultural message 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="web_image.jpg"
@@ -145,10 +144,9 @@ exports[`Files Component  should not render cultural message 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
@@ -219,7 +217,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -295,13 +293,12 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
            
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
           <WithStyles(Typography)
@@ -351,7 +348,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            md={2}
           >
             <WithStyles(Typography)
               gutterBottom={true}
@@ -376,7 +373,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            sm="auto"
+            sm={true}
           />
         </Hidden>
       </WithStyles(Grid)>
@@ -400,7 +397,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="CH7409_movie_1.mov"
@@ -414,10 +411,9 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="2.86 MB"
             description="Movie 1"
@@ -488,7 +484,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -549,7 +545,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="CH7409_movie_2.mov"
@@ -563,10 +559,9 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="2.62 MB"
             description="Movie 2"
@@ -637,7 +632,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -698,7 +693,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="CH7409_movie_3.mov"
@@ -712,10 +707,9 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="2.86 MB"
             description="Movie 3"
@@ -786,7 +780,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -847,7 +841,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="CH7409_movie_4.mov"
@@ -861,10 +855,9 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="4.29 MB"
             description="Movie 4"
@@ -935,7 +928,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -996,7 +989,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="CH7409_movie_5.mov"
@@ -1010,10 +1003,9 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="1.12 MB"
             description="Movie 5"
@@ -1084,7 +1076,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -1145,7 +1137,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <pure(PictureAsPdfIcon)
             color="secondary"
@@ -1153,10 +1145,9 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="6.67 MB"
             description="Technical report PDF file"
@@ -1222,7 +1213,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -1292,13 +1283,12 @@ exports[`Files Component  should render component 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
            
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
           <WithStyles(Typography)
@@ -1348,7 +1338,7 @@ exports[`Files Component  should render component 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            md={2}
           >
             <WithStyles(Typography)
               gutterBottom={true}
@@ -1373,7 +1363,7 @@ exports[`Files Component  should render component 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            sm="auto"
+            sm={true}
           />
         </Hidden>
       </WithStyles(Grid)>
@@ -1397,7 +1387,7 @@ exports[`Files Component  should render component 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="web_image.jpg"
@@ -1411,10 +1401,9 @@ exports[`Files Component  should render component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
@@ -1485,7 +1474,7 @@ exports[`Files Component  should render component 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
@@ -1561,13 +1550,12 @@ exports[`Files Component  should render cultural message 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
            
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
           <WithStyles(Typography)
@@ -1617,7 +1605,7 @@ exports[`Files Component  should render cultural message 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            md={2}
           >
             <WithStyles(Typography)
               gutterBottom={true}
@@ -1642,7 +1630,7 @@ exports[`Files Component  should render cultural message 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            sm="auto"
+            sm={true}
           />
         </Hidden>
       </WithStyles(Grid)>
@@ -1666,7 +1654,7 @@ exports[`Files Component  should render cultural message 1`] = `
       >
         <WithStyles(Grid)
           item={true}
-          xs={2}
+          xs={1}
         >
           <WithStyles(Thumbnail)
             fileName="web_image.jpg"
@@ -1680,10 +1668,9 @@ exports[`Files Component  should render cultural message 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          md={3}
           sm={4}
         >
-          <FileName
+          <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
@@ -1754,7 +1741,7 @@ exports[`Files Component  should render cultural message 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            md={1}
+            sm={2}
           >
             <WithStyles(Typography)
               noWrap={true}
