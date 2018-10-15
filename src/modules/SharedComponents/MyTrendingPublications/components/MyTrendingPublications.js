@@ -61,7 +61,7 @@ export class MyTrendingPublications extends PureComponent {
                         this.props.trendingPublicationsList.map(({key, values}, metricIndex) => (
                             <Grid container key={metricIndex} spacing={24}>
                                 <Grid item xs>
-                                    <Typography variant={'h5'}>
+                                    <Typography variant={'h6'}>
                                         <div className={`fez-icon ${key} xxlarge`}/>
                                         {txt.metrics[key].title}
                                     </Typography>

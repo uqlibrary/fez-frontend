@@ -249,12 +249,12 @@ export class Files extends Component {
                                     </Grid>
                                     <Hidden xsDown>
                                         <Grid item sm={4} className={this.props.classes.dataWrapper}>
-                                            <Typography variant="body1" noWrap>{item.description}</Typography>
+                                            <Typography variant="body2" noWrap>{item.description}</Typography>
                                         </Grid>
                                     </Hidden>
                                     <Hidden smDown>
                                         <Grid item md={1} className={this.props.classes.dataWrapper}>
-                                            <Typography variant="body1" noWrap>{item.calculatedSize}</Typography>
+                                            <Typography variant="body2" noWrap>{item.calculatedSize}</Typography>
                                         </Grid>
                                     </Hidden>
                                     <Hidden xsDown>

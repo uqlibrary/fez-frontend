@@ -36,7 +36,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator(s)
           </WithStyles(Typography)>
@@ -452,7 +452,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -493,7 +493,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -539,7 +539,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -586,7 +586,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Recording date
           </WithStyles(Typography)>
@@ -633,7 +633,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Series
           </WithStyles(Typography)>
@@ -677,7 +677,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type
           </WithStyles(Typography)>
@@ -718,7 +718,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -768,7 +768,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             License
           </WithStyles(Typography)>
@@ -826,7 +826,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Genres
           </WithStyles(Typography)>
@@ -876,7 +876,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -936,7 +936,7 @@ exports[`Additional Information Component  should render component with audio do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Transcript
           </WithStyles(Typography)>
@@ -993,7 +993,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -1336,7 +1336,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -1377,7 +1377,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -1418,7 +1418,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -1464,7 +1464,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication year
           </WithStyles(Typography)>
@@ -1511,7 +1511,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Edition
           </WithStyles(Typography)>
@@ -1552,7 +1552,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Series
           </WithStyles(Typography)>
@@ -1598,7 +1598,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISBN
           </WithStyles(Typography)>
@@ -1658,7 +1658,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Editor(s)
           </WithStyles(Typography)>
@@ -2004,7 +2004,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -2057,7 +2057,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -2518,7 +2518,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of chapter
           </WithStyles(Typography)>
@@ -2559,7 +2559,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of book
           </WithStyles(Typography)>
@@ -2605,7 +2605,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -2646,7 +2646,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -2692,7 +2692,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication year
           </WithStyles(Typography)>
@@ -2739,7 +2739,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -2783,7 +2783,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -2822,7 +2822,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Series
           </WithStyles(Typography)>
@@ -2868,7 +2868,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISBN
           </WithStyles(Typography)>
@@ -2918,7 +2918,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISSN
           </WithStyles(Typography)>
@@ -2968,7 +2968,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Editor(s)
           </WithStyles(Typography)>
@@ -3432,7 +3432,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Volume
           </WithStyles(Typography)>
@@ -3473,7 +3473,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Chapter number
           </WithStyles(Typography)>
@@ -3514,7 +3514,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -3555,7 +3555,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -3596,7 +3596,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -3637,7 +3637,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total chapters
           </WithStyles(Typography)>
@@ -3678,7 +3678,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -3728,7 +3728,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -3783,7 +3783,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -3888,7 +3888,7 @@ exports[`Additional Information Component  should render component with book cha
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -3941,7 +3941,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -4671,7 +4671,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of paper
           </WithStyles(Typography)>
@@ -4712,7 +4712,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference name
           </WithStyles(Typography)>
@@ -4758,7 +4758,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference Location
           </WithStyles(Typography)>
@@ -4799,7 +4799,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference dates
           </WithStyles(Typography)>
@@ -4840,7 +4840,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Journal name
           </WithStyles(Typography)>
@@ -5567,7 +5567,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -5608,7 +5608,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -5654,7 +5654,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication year
           </WithStyles(Typography)>
@@ -5701,7 +5701,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -5745,7 +5745,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISSN
           </WithStyles(Typography)>
@@ -5800,7 +5800,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Volume
           </WithStyles(Typography)>
@@ -5841,7 +5841,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Issue
           </WithStyles(Typography)>
@@ -5882,7 +5882,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -5923,7 +5923,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -5964,7 +5964,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -6005,7 +6005,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -6067,7 +6067,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of proceedings
           </WithStyles(Typography)>
@@ -6108,7 +6108,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Editor(s)
           </WithStyles(Typography)>
@@ -6564,7 +6564,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference name
           </WithStyles(Typography)>
@@ -6610,7 +6610,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference Location
           </WithStyles(Typography)>
@@ -6651,7 +6651,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference dates
           </WithStyles(Typography)>
@@ -6692,7 +6692,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Convener
           </WithStyles(Typography)>
@@ -6733,7 +6733,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISBN
           </WithStyles(Typography)>
@@ -6783,7 +6783,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -6824,7 +6824,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -6870,7 +6870,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -6917,7 +6917,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Collection year
           </WithStyles(Typography)>
@@ -6964,7 +6964,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -7005,7 +7005,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -7046,7 +7046,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -7087,7 +7087,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -7137,7 +7137,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -7202,7 +7202,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -7367,7 +7367,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -7408,7 +7408,7 @@ exports[`Additional Information Component  should render component with conferen
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -7461,7 +7461,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type
           </WithStyles(Typography)>
@@ -7502,7 +7502,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -7947,7 +7947,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -7988,7 +7988,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -8029,7 +8029,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -8068,7 +8068,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -8114,7 +8114,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -8161,7 +8161,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -8202,7 +8202,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -8257,7 +8257,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -8307,7 +8307,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -8362,7 +8362,7 @@ exports[`Additional Information Component  should render component with creative
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -8454,7 +8454,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project name
           </WithStyles(Typography)>
@@ -8495,7 +8495,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project description
           </WithStyles(Typography)>
@@ -8546,7 +8546,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Contact name
           </WithStyles(Typography)>
@@ -9349,7 +9349,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Contact email
           </WithStyles(Typography)>
@@ -9394,7 +9394,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator name
           </WithStyles(Typography)>
@@ -10194,7 +10194,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator(s) role
           </WithStyles(Typography)>
@@ -10264,7 +10264,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Dataset name
           </WithStyles(Typography)>
@@ -10305,7 +10305,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Access conditions
           </WithStyles(Typography)>
@@ -10346,7 +10346,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Licencing and terms of access
           </WithStyles(Typography)>
@@ -10402,7 +10402,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ANZSRC Field of Research (FoR) Code
           </WithStyles(Typography)>
@@ -10457,7 +10457,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -10501,7 +10501,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Grant ID
           </WithStyles(Typography)>
@@ -10556,7 +10556,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type of data
           </WithStyles(Typography)>
@@ -10621,7 +10621,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Software required
           </WithStyles(Typography)>
@@ -10671,7 +10671,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -10721,7 +10721,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Collection start date
           </WithStyles(Typography)>
@@ -10768,7 +10768,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Collection end date
           </WithStyles(Typography)>
@@ -10815,7 +10815,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Time coverage start date
           </WithStyles(Typography)>
@@ -10862,7 +10862,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Time coverage end date
           </WithStyles(Typography)>
@@ -10909,7 +10909,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -11004,7 +11004,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Geographic co-ordinates
           </WithStyles(Typography)>
@@ -11071,7 +11071,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ANZSRC Socio-Economic Objective (SEO) Code
           </WithStyles(Typography)>
@@ -11121,7 +11121,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Collection type
           </WithStyles(Typography)>
@@ -11162,7 +11162,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -11208,7 +11208,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication year
           </WithStyles(Typography)>
@@ -11255,7 +11255,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Copyright notice
           </WithStyles(Typography)>
@@ -11296,7 +11296,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -11337,7 +11337,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Dataset description
           </WithStyles(Typography)>
@@ -11891,7 +11891,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project name
           </WithStyles(Typography)>
@@ -11932,7 +11932,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project description
           </WithStyles(Typography)>
@@ -11976,7 +11976,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Contact name
           </WithStyles(Typography)>
@@ -12526,7 +12526,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Contact email
           </WithStyles(Typography)>
@@ -12571,7 +12571,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator name
           </WithStyles(Typography)>
@@ -13118,7 +13118,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator(s) role
           </WithStyles(Typography)>
@@ -13168,7 +13168,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Dataset name
           </WithStyles(Typography)>
@@ -13209,7 +13209,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Access conditions
           </WithStyles(Typography)>
@@ -13250,7 +13250,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Licencing and terms of access
           </WithStyles(Typography)>
@@ -13308,7 +13308,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ANZSRC Field of Research (FoR) Code
           </WithStyles(Typography)>
@@ -13368,7 +13368,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -13412,7 +13412,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type of data
           </WithStyles(Typography)>
@@ -13462,7 +13462,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -13512,7 +13512,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Time coverage start date
           </WithStyles(Typography)>
@@ -13559,7 +13559,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Time coverage end date
           </WithStyles(Typography)>
@@ -13606,7 +13606,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -13691,7 +13691,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Geographic co-ordinates
           </WithStyles(Typography)>
@@ -13758,7 +13758,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Collection type
           </WithStyles(Typography)>
@@ -13799,7 +13799,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -13845,7 +13845,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication year
           </WithStyles(Typography)>
@@ -13892,7 +13892,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Copyright notice
           </WithStyles(Typography)>
@@ -13933,7 +13933,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Dataset description
           </WithStyles(Typography)>
@@ -13977,7 +13977,7 @@ exports[`Additional Information Component  should render component with data col
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Data Volume
           </WithStyles(Typography)>
@@ -14030,7 +14030,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Designer(s)
           </WithStyles(Typography)>
@@ -14487,7 +14487,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -14528,7 +14528,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project name
           </WithStyles(Typography)>
@@ -14569,7 +14569,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project start date
           </WithStyles(Typography)>
@@ -14616,7 +14616,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Year available
           </WithStyles(Typography)>
@@ -14663,7 +14663,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -14704,7 +14704,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -14745,7 +14745,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date
           </WithStyles(Typography)>
@@ -14792,7 +14792,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Location
           </WithStyles(Typography)>
@@ -14842,7 +14842,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type
           </WithStyles(Typography)>
@@ -14883,7 +14883,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Consultant(s)
           </WithStyles(Typography)>
@@ -15343,7 +15343,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -15408,7 +15408,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -15503,7 +15503,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Job number
           </WithStyles(Typography)>
@@ -15549,7 +15549,7 @@ exports[`Additional Information Component  should render component with design d
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Project description
           </WithStyles(Typography)>
@@ -15602,7 +15602,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -15643,7 +15643,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date photo taken
           </WithStyles(Typography)>
@@ -15690,7 +15690,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date scanned
           </WithStyles(Typography)>
@@ -15737,7 +15737,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -15783,7 +15783,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Photographer
           </WithStyles(Typography)>
@@ -16110,7 +16110,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Location
           </WithStyles(Typography)>
@@ -16165,7 +16165,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -16204,7 +16204,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Category
           </WithStyles(Typography)>
@@ -16259,7 +16259,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subcategory
           </WithStyles(Typography)>
@@ -16314,7 +16314,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Condition
           </WithStyles(Typography)>
@@ -16364,7 +16364,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Structural systems & elements
           </WithStyles(Typography)>
@@ -16414,7 +16414,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Building materials
           </WithStyles(Typography)>
@@ -16469,7 +16469,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Architectural features
           </WithStyles(Typography)>
@@ -16536,7 +16536,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -16577,7 +16577,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -16702,7 +16702,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date
           </WithStyles(Typography)>
@@ -16749,7 +16749,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Research fields, Courses and Disciplines
           </WithStyles(Typography)>
@@ -16799,7 +16799,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -17313,7 +17313,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Editor(s)
           </WithStyles(Typography)>
@@ -17830,7 +17830,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -17869,7 +17869,7 @@ exports[`Additional Information Component  should render component with generic 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -17922,7 +17922,7 @@ exports[`Additional Information Component  should render component with image 1`
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -17963,7 +17963,7 @@ exports[`Additional Information Component  should render component with image 1`
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -18076,7 +18076,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of journal
           </WithStyles(Typography)>
@@ -18117,7 +18117,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Editor(s)
           </WithStyles(Typography)>
@@ -18493,7 +18493,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -18540,7 +18540,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Volume
           </WithStyles(Typography)>
@@ -18581,7 +18581,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Issue
           </WithStyles(Typography)>
@@ -18622,7 +18622,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISSN
           </WithStyles(Typography)>
@@ -18677,7 +18677,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -18716,7 +18716,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -18757,7 +18757,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -18803,7 +18803,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -18853,7 +18853,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -18903,7 +18903,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -18980,7 +18980,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -20088,7 +20088,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -20129,7 +20129,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Journal name
           </WithStyles(Typography)>
@@ -21234,7 +21234,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISSN
           </WithStyles(Typography)>
@@ -21284,7 +21284,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -21331,7 +21331,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Year available
           </WithStyles(Typography)>
@@ -21378,7 +21378,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -21422,7 +21422,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -21461,7 +21461,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Volume
           </WithStyles(Typography)>
@@ -21502,7 +21502,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Issue
           </WithStyles(Typography)>
@@ -21543,7 +21543,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -21584,7 +21584,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -21625,7 +21625,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -21666,7 +21666,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -21707,7 +21707,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -21753,7 +21753,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -21803,7 +21803,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -21918,7 +21918,7 @@ exports[`Additional Information Component  should render component with journal 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -21971,7 +21971,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator
           </WithStyles(Typography)>
@@ -22471,7 +22471,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -22512,7 +22512,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -22551,7 +22551,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date
           </WithStyles(Typography)>
@@ -22598,7 +22598,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Year available
           </WithStyles(Typography)>
@@ -22645,7 +22645,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Contributor
           </WithStyles(Typography)>
@@ -23148,7 +23148,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Series
           </WithStyles(Typography)>
@@ -23194,7 +23194,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type
           </WithStyles(Typography)>
@@ -23235,7 +23235,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Original format
           </WithStyles(Typography)>
@@ -23276,7 +23276,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Source
           </WithStyles(Typography)>
@@ -23317,7 +23317,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -23367,7 +23367,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Rights
           </WithStyles(Typography)>
@@ -23408,7 +23408,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -23503,7 +23503,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -23544,7 +23544,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -23609,7 +23609,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator
           </WithStyles(Typography)>
@@ -23868,7 +23868,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Patent title
           </WithStyles(Typography)>
@@ -23909,7 +23909,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date of issue
           </WithStyles(Typography)>
@@ -23956,7 +23956,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Patent owner
           </WithStyles(Typography)>
@@ -24002,7 +24002,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Patent number
           </WithStyles(Typography)>
@@ -24043,7 +24043,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Country of origin
           </WithStyles(Typography)>
@@ -24084,7 +24084,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -24134,7 +24134,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -24194,7 +24194,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -24257,7 +24257,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -24298,7 +24298,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -24453,7 +24453,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Date
           </WithStyles(Typography)>
@@ -24500,7 +24500,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -24560,7 +24560,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -24935,7 +24935,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -24974,7 +24974,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -25129,7 +25129,7 @@ exports[`Additional Information Component  should render component with preprint
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -25182,7 +25182,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -25844,7 +25844,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of paper
           </WithStyles(Typography)>
@@ -25885,7 +25885,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference name
           </WithStyles(Typography)>
@@ -25931,7 +25931,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference Location
           </WithStyles(Typography)>
@@ -25972,7 +25972,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Conference dates
           </WithStyles(Typography)>
@@ -26013,7 +26013,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Proceedings title
           </WithStyles(Typography)>
@@ -26059,7 +26059,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Journal name
           </WithStyles(Typography)>
@@ -26718,7 +26718,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -26759,7 +26759,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -26805,7 +26805,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication year
           </WithStyles(Typography)>
@@ -26852,7 +26852,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Year available
           </WithStyles(Typography)>
@@ -26899,7 +26899,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -26943,7 +26943,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -26984,7 +26984,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISSN
           </WithStyles(Typography)>
@@ -27039,7 +27039,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Volume
           </WithStyles(Typography)>
@@ -27080,7 +27080,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Issue
           </WithStyles(Typography)>
@@ -27121,7 +27121,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -27162,7 +27162,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -27203,7 +27203,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -27244,7 +27244,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -27294,7 +27294,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -27381,7 +27381,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -27701,7 +27701,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of entry
           </WithStyles(Typography)>
@@ -27742,7 +27742,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Parent publication
           </WithStyles(Typography)>
@@ -27783,7 +27783,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -27829,7 +27829,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -27876,7 +27876,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Editor(s)
           </WithStyles(Typography)>
@@ -28199,7 +28199,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISBN
           </WithStyles(Typography)>
@@ -28254,7 +28254,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -28295,7 +28295,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -28336,7 +28336,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -28377,7 +28377,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -28427,7 +28427,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -28492,7 +28492,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -28567,7 +28567,7 @@ exports[`Additional Information Component  should render component with referenc
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -28620,7 +28620,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -28939,7 +28939,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title of report
           </WithStyles(Typography)>
@@ -28980,7 +28980,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -29027,7 +29027,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             ISBN
           </WithStyles(Typography)>
@@ -29082,7 +29082,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -29128,7 +29128,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Place of publication
           </WithStyles(Typography)>
@@ -29169,7 +29169,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -29210,7 +29210,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -29251,7 +29251,7 @@ exports[`Additional Information Component  should render component with research
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -29304,7 +29304,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -29626,7 +29626,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Thesis title
           </WithStyles(Typography)>
@@ -29667,7 +29667,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             School, Centre or Institute
           </WithStyles(Typography)>
@@ -29713,7 +29713,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Institution
           </WithStyles(Typography)>
@@ -29754,7 +29754,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -29801,7 +29801,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Thesis type
           </WithStyles(Typography)>
@@ -29842,7 +29842,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -29881,7 +29881,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Supervisor(s)
           </WithStyles(Typography)>
@@ -29941,7 +29941,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -29991,7 +29991,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -30046,7 +30046,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -30087,7 +30087,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -30140,7 +30140,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Creator
           </WithStyles(Typography)>
@@ -30473,7 +30473,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -30514,7 +30514,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -30561,7 +30561,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Series
           </WithStyles(Typography)>
@@ -30607,7 +30607,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Type
           </WithStyles(Typography)>
@@ -30648,7 +30648,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Format
           </WithStyles(Typography)>
@@ -30689,7 +30689,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -30739,7 +30739,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Rights
           </WithStyles(Typography)>
@@ -30780,7 +30780,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -30830,7 +30830,7 @@ exports[`Additional Information Component  should render component with video do
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -30883,7 +30883,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -31260,7 +31260,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Title
           </WithStyles(Typography)>
@@ -31301,7 +31301,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             School, Department or Centre
           </WithStyles(Typography)>
@@ -31347,7 +31347,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Institution
           </WithStyles(Typography)>
@@ -31388,7 +31388,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -31427,7 +31427,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Series
           </WithStyles(Typography)>
@@ -31473,7 +31473,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Report number
           </WithStyles(Typography)>
@@ -31514,7 +31514,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -31561,7 +31561,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             DOI
           </WithStyles(Typography)>
@@ -31605,7 +31605,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publisher
           </WithStyles(Typography)>
@@ -31651,7 +31651,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Start page
           </WithStyles(Typography)>
@@ -31692,7 +31692,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             End page
           </WithStyles(Typography)>
@@ -31733,7 +31733,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Total pages
           </WithStyles(Typography)>
@@ -31774,7 +31774,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Language
           </WithStyles(Typography)>
@@ -31824,7 +31824,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -31879,7 +31879,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -31964,7 +31964,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -32005,7 +32005,7 @@ exports[`Additional Information Component  should render component with working 
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>
@@ -32058,7 +32058,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Author(s)
           </WithStyles(Typography)>
@@ -32381,7 +32381,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Thesis title
           </WithStyles(Typography)>
@@ -32422,7 +32422,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             School, Centre or Institute
           </WithStyles(Typography)>
@@ -32468,7 +32468,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Institution
           </WithStyles(Typography)>
@@ -32509,7 +32509,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Publication date
           </WithStyles(Typography)>
@@ -32556,7 +32556,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Thesis type
           </WithStyles(Typography)>
@@ -32597,7 +32597,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Open access status
           </WithStyles(Typography)>
@@ -32638,7 +32638,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Supervisor(s)
           </WithStyles(Typography)>
@@ -32698,7 +32698,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Subject(s)
           </WithStyles(Typography)>
@@ -32748,7 +32748,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Keyword(s)
           </WithStyles(Typography)>
@@ -32803,7 +32803,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Additional notes
           </WithStyles(Typography)>
@@ -32844,7 +32844,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "root": "header",
               }
             }
-            variant="body1"
+            variant="body2"
           >
             Abstract
           </WithStyles(Typography)>

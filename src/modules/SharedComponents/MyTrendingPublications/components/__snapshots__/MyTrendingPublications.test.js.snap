@@ -35,7 +35,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         xs={true}
       >
         <WithStyles(Typography)
-          variant="h5"
+          variant="h6"
         >
           <div
             className="fez-icon scopus xxlarge"
@@ -909,7 +909,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         xs={true}
       >
         <WithStyles(Typography)
-          variant="h5"
+          variant="h6"
         >
           <div
             className="fez-icon thomson xxlarge"
@@ -1864,7 +1864,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         xs={true}
       >
         <WithStyles(Typography)
-          variant="h5"
+          variant="h6"
         >
           <div
             className="fez-icon altmetric xxlarge"

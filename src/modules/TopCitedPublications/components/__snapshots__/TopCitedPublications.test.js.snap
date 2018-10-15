@@ -84,7 +84,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         <WithStyles(Typography)
           color="primary"
           key="altmetric"
-          variant="h5"
+          variant="h6"
         >
           <div
             className="fez-icon altmetric xxlarge"

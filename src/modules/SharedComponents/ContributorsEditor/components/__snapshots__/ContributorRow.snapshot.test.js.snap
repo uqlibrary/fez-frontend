@@ -66,7 +66,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           J. Smith
         </WithStyles(Typography)>
@@ -174,7 +174,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           J. Smith
         </WithStyles(Typography)>
@@ -282,7 +282,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           A. Smith
         </WithStyles(Typography)>
@@ -390,7 +390,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           A. Smith
         </WithStyles(Typography)>
@@ -498,7 +498,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           J. Smith
         </WithStyles(Typography)>
@@ -640,7 +640,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           J. Smith
         </WithStyles(Typography)>
@@ -748,7 +748,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
             }
           }
           noWrap={true}
-          variant="body1"
+          variant="body2"
         >
           J. Smith
         </WithStyles(Typography)>
@@ -870,7 +870,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
                 }
               }
               noWrap={true}
-              variant="body1"
+              variant="body2"
             >
               J. Smith
             </WithStyles(Typography)>
@@ -906,7 +906,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
                 }
               }
               noWrap={true}
-              variant="body1"
+              variant="body2"
             >
               Mr Christopher Christoff
             </WithStyles(Typography)>

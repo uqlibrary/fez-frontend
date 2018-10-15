@@ -5469,7 +5469,7 @@ exports[`File Name Component  should render component and display file name only
                       className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                     >
                       <WithStyles(Typography)
-                        variant="body1"
+                        variant="body2"
                       >
                         <Typography
                           align="inherit"
@@ -5956,10 +5956,10 @@ exports[`File Name Component  should render component and display file name only
                               },
                             }
                           }
-                          variant="body1"
+                          variant="body2"
                         >
                           <p
-                            className="MuiTypography-root-98 MuiTypography-body1-107"
+                            className="MuiTypography-root-98 MuiTypography-body2-106"
                           >
                             UQ676287_OA.pdf
                           </p>
@@ -7316,7 +7316,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                       className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                     >
                       <WithStyles(Typography)
-                        variant="body1"
+                        variant="body2"
                       >
                         <Typography
                           align="inherit"
@@ -7803,10 +7803,10 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               },
                             }
                           }
-                          variant="body1"
+                          variant="body2"
                         >
                           <p
-                            className="MuiTypography-root-98 MuiTypography-body1-107"
+                            className="MuiTypography-root-98 MuiTypography-body2-106"
                           >
                             <a
                               className="fileName"
@@ -9169,7 +9169,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                       className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                     >
                       <WithStyles(Typography)
-                        variant="body1"
+                        variant="body2"
                       >
                         <Typography
                           align="inherit"
@@ -9656,10 +9656,10 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               },
                             }
                           }
-                          variant="body1"
+                          variant="body2"
                         >
                           <p
-                            className="MuiTypography-root-98 MuiTypography-body1-107"
+                            className="MuiTypography-root-98 MuiTypography-body2-106"
                           >
                             <a
                               className="fileName"

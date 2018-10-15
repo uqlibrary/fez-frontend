@@ -24,8 +24,8 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -938,8 +938,8 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -1820,8 +1820,8 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -2663,8 +2663,8 @@ exports[`PublicationCitation  should render component with default list hiding t
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -3506,8 +3506,8 @@ exports[`PublicationCitation  should render component with default list hiding t
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -4349,8 +4349,8 @@ exports[`PublicationCitation  should render component with publication from mult
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -6082,8 +6082,8 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
           xs={true}
         >
           <WithStyles(Typography)
-            component="h5"
-            variant="h5"
+            component="h6"
+            variant="h6"
           >
             <Link
               replace={false}
@@ -6114,7 +6114,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
                 <WithStyles(Typography)
                   className="count"
                   color="inherit"
-                  variant="h5"
+                  variant="h6"
                 >
                   23
                 </WithStyles(Typography)>
@@ -6126,7 +6126,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
                   className="difference"
                   color="inherit"
                   title="Difference in social media activities"
-                  variant="h5"
+                  variant="h6"
                 >
                   +
                   5

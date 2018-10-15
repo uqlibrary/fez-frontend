@@ -54,7 +54,7 @@ export default class FileName extends PureComponent {
                     }
                     {
                         allowDownload && this.canShowPreview(mimeType) &&
-                        <Typography variant="body1" >
+                        <Typography variant="body2" >
                             <a
                                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
@@ -66,7 +66,7 @@ export default class FileName extends PureComponent {
                     }
                     {
                         !allowDownload &&
-                        <Typography variant="body1" >{fileName}</Typography>
+                        <Typography variant="body2" >{fileName}</Typography>
                     }
                 </Grid>
                 <Hidden xsDown>

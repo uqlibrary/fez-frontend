@@ -14,7 +14,7 @@ const styles = (theme) => ({
         paddingRight: theme.spacing.unit,
     },
     listText: {
-        ...theme.typography.body1
+        ...theme.typography.body2
     }
 });
 

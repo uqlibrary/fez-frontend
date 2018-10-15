@@ -12,7 +12,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         eSpace publications
       </WithStyles(Typography)>
@@ -29,7 +29,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Web of science
       </WithStyles(Typography)>
@@ -46,7 +46,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Scopus
       </WithStyles(Typography)>
@@ -61,7 +61,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total publications
       </WithStyles(Typography)>
@@ -76,7 +76,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         301
       </WithStyles(Typography)>
@@ -91,7 +91,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         210
       </WithStyles(Typography)>
@@ -107,7 +107,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Publication range
       </WithStyles(Typography)>
@@ -122,7 +122,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -137,7 +137,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -153,7 +153,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         h-index
       </WithStyles(Typography)>
@@ -168,7 +168,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1
       </WithStyles(Typography)>
@@ -183,7 +183,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1
       </WithStyles(Typography)>
@@ -199,7 +199,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Average citation count per publication
       </WithStyles(Typography)>
@@ -214,7 +214,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         24.5
       </WithStyles(Typography)>
@@ -229,7 +229,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         25.2
       </WithStyles(Typography)>
@@ -245,7 +245,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total citations
       </WithStyles(Typography)>
@@ -260,7 +260,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         7374
       </WithStyles(Typography)>
@@ -275,7 +275,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         5297
       </WithStyles(Typography)>
@@ -296,7 +296,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         eSpace publications
       </WithStyles(Typography)>
@@ -313,7 +313,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Web of science
       </WithStyles(Typography)>
@@ -330,7 +330,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Scopus
       </WithStyles(Typography)>
@@ -345,7 +345,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total publications
       </WithStyles(Typography)>
@@ -360,7 +360,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         301
       </WithStyles(Typography)>
@@ -375,7 +375,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         210
       </WithStyles(Typography)>
@@ -391,7 +391,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Publication range
       </WithStyles(Typography)>
@@ -406,7 +406,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -421,7 +421,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -437,7 +437,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         h-index
       </WithStyles(Typography)>
@@ -452,7 +452,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -467,7 +467,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -483,7 +483,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Average citation count per publication
       </WithStyles(Typography)>
@@ -498,7 +498,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         24.5
       </WithStyles(Typography)>
@@ -513,7 +513,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         25.2
       </WithStyles(Typography)>
@@ -529,7 +529,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total citations
       </WithStyles(Typography)>
@@ -544,7 +544,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         7374
       </WithStyles(Typography)>
@@ -559,7 +559,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         5297
       </WithStyles(Typography)>
@@ -580,7 +580,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         eSpace publications
       </WithStyles(Typography)>
@@ -597,7 +597,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Web of science
       </WithStyles(Typography)>
@@ -614,7 +614,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Scopus
       </WithStyles(Typography)>
@@ -629,7 +629,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total publications
       </WithStyles(Typography)>
@@ -644,7 +644,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         301
       </WithStyles(Typography)>
@@ -659,7 +659,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         210
       </WithStyles(Typography)>
@@ -675,7 +675,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Publication range
       </WithStyles(Typography)>
@@ -690,7 +690,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -705,7 +705,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -721,7 +721,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         h-index
       </WithStyles(Typography)>
@@ -736,7 +736,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -751,7 +751,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -767,7 +767,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Average citation count per publication
       </WithStyles(Typography)>
@@ -782,7 +782,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         24.5
       </WithStyles(Typography)>
@@ -797,7 +797,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         25.2
       </WithStyles(Typography)>
@@ -813,7 +813,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total citations
       </WithStyles(Typography)>
@@ -828,7 +828,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         7374
       </WithStyles(Typography)>
@@ -843,7 +843,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         5297
       </WithStyles(Typography)>
@@ -864,7 +864,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         eSpace publications
       </WithStyles(Typography)>
@@ -881,7 +881,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Web of science
       </WithStyles(Typography)>
@@ -898,7 +898,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Scopus
       </WithStyles(Typography)>
@@ -913,7 +913,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total publications
       </WithStyles(Typography)>
@@ -928,7 +928,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         301
       </WithStyles(Typography)>
@@ -943,7 +943,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         210
       </WithStyles(Typography)>
@@ -959,7 +959,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Publication range
       </WithStyles(Typography)>
@@ -974,7 +974,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -989,7 +989,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -1005,7 +1005,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         h-index
       </WithStyles(Typography)>
@@ -1020,7 +1020,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -1035,7 +1035,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -1051,7 +1051,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Average citation count per publication
       </WithStyles(Typography)>
@@ -1066,7 +1066,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         24.5
       </WithStyles(Typography)>
@@ -1081,7 +1081,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         25.2
       </WithStyles(Typography)>
@@ -1097,7 +1097,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total citations
       </WithStyles(Typography)>
@@ -1112,7 +1112,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         7374
       </WithStyles(Typography)>
@@ -1127,7 +1127,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         5297
       </WithStyles(Typography)>
@@ -1154,7 +1154,7 @@ exports[`PublicationStats component should render statistics with table and data
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         eSpace publications
       </WithStyles(Typography)>
@@ -1171,7 +1171,7 @@ exports[`PublicationStats component should render statistics with table and data
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Web of science
       </WithStyles(Typography)>
@@ -1188,7 +1188,7 @@ exports[`PublicationStats component should render statistics with table and data
       <WithStyles(Typography)
         color="inherit"
         gutterBottom={true}
-        variant="body1"
+        variant="body2"
       >
         Scopus
       </WithStyles(Typography)>
@@ -1203,7 +1203,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total publications
       </WithStyles(Typography)>
@@ -1218,7 +1218,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         301
       </WithStyles(Typography)>
@@ -1233,7 +1233,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         210
       </WithStyles(Typography)>
@@ -1249,7 +1249,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Publication range
       </WithStyles(Typography)>
@@ -1264,7 +1264,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -1279,7 +1279,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         1992-2017
       </WithStyles(Typography)>
@@ -1295,7 +1295,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         h-index
       </WithStyles(Typography)>
@@ -1310,7 +1310,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -1325,7 +1325,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         N/A
       </WithStyles(Typography)>
@@ -1341,7 +1341,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Average citation count per publication
       </WithStyles(Typography)>
@@ -1356,7 +1356,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         24.5
       </WithStyles(Typography)>
@@ -1371,7 +1371,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         25.2
       </WithStyles(Typography)>
@@ -1387,7 +1387,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={6}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         Total citations
       </WithStyles(Typography)>
@@ -1402,7 +1402,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         7374
       </WithStyles(Typography)>
@@ -1417,7 +1417,7 @@ exports[`PublicationStats component should render statistics with table and data
       xs={3}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         5297
       </WithStyles(Typography)>

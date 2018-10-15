@@ -42,7 +42,7 @@ export class FileUploadRowDefaultView extends PureComponent {
             <div style={{flexGrow: 1, padding: 4}}>
                 <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
                     <Grid item md={6} sm={5}>
-                        <Typography variant="body1" gutterBottom noWrap>
+                        <Typography variant="body2" gutterBottom noWrap>
                             {name} ({size})
                         </Typography>
                     </Grid>
@@ -61,7 +61,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             <Grid item md={2} sm={2}>
                                 {
                                     accessConditionId !== config.OPEN_ACCESS_ID &&
-                                    <Typography variant="body1" gutterBottom>{embargoDateClosedAccess}</Typography>
+                                    <Typography variant="body2" gutterBottom>{embargoDateClosedAccess}</Typography>
                                 }
                                 {
                                     accessConditionId === config.OPEN_ACCESS_ID &&

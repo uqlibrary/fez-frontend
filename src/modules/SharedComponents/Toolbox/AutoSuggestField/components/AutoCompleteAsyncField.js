@@ -110,10 +110,10 @@ export class AutoCompleteAsyncField extends Component {
                     primary={suggestion.value}
                     secondary={suggestion.id}
                     primaryTypographyProps={{
-                        variant: 'body2'
+                        variant: 'body1'
                     }}
                     secondaryTypographyProps={{
-                        variant: 'body1'
+                        variant: 'body2'
                     }}
                 />
             </MenuItem>
