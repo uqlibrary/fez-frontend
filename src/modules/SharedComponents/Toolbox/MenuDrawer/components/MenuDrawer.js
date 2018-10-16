@@ -67,6 +67,7 @@ const styles = theme => {
             flexGrow: 1,
         },
         ListItemTextPrimary: {
+            whiteSpace: 'nowrap',
             fontWeight: 400,
         },
         ListItemTextSecondary: {

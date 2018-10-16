@@ -62,11 +62,11 @@ exports[`AuthorLinking should be disabled 1`] = `
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={true}
@@ -148,11 +148,11 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={false}
@@ -234,11 +234,11 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={false}
@@ -319,11 +319,11 @@ exports[`AuthorLinking should render authors correctly 1`] = `
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={false}
@@ -393,11 +393,11 @@ exports[`ContributorLinking should be disabled 1`] = `
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={true}
@@ -449,11 +449,11 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={false}
@@ -505,11 +505,11 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
   }
   classes={
     Object {
-      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-05",
-      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-04",
-      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-01",
-      "label": "WithTheme-WithWidth-AuthorLinking---label-03",
-      "root": "WithTheme-WithWidth-AuthorLinking---root-02",
+      "checkboxChecked": "WithTheme-WithWidth-AuthorLinking---checkboxChecked-5",
+      "checkboxRoot": "WithTheme-WithWidth-AuthorLinking---checkboxRoot-4",
+      "infiniteContainer": "WithTheme-WithWidth-AuthorLinking---infiniteContainer-1",
+      "label": "WithTheme-WithWidth-AuthorLinking---label-3",
+      "root": "WithTheme-WithWidth-AuthorLinking---root-2",
     }
   }
   disabled={false}

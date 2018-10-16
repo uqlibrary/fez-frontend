@@ -13,6 +13,9 @@ const styles = (theme) => ({
         paddingLeft: theme.spacing.unit,
         paddingRight: theme.spacing.unit,
     },
+    listText: {
+        ...theme.typography.body1
+    },
     inset: {
         '&:first-child': {
             paddingLeft: theme.spacing.unit * 2
@@ -54,8 +57,8 @@ export class FacetsFilterNestedListItem extends PureComponent {
                 <ListItemText
                     inset
                     primary={primaryText}
+                    className={this.props.classes.listText}
                     primaryTypographyProps={{
-                        variant: 'body2',
                         color: isActive ? 'textPrimary' : 'textSecondary',
                         classes: {
                             colorTextPrimary: this.props.classes.selectedFacet

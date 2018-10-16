@@ -68,6 +68,7 @@ export class SimpleSearchComponent extends PureComponent {
         className: PropTypes.string,
 
         searchText: PropTypes.string,
+        autoFocus: PropTypes.bool,
 
         isInHeader: PropTypes.bool,
         showSearchButton: PropTypes.bool,
@@ -107,7 +108,7 @@ export class SimpleSearchComponent extends PureComponent {
     }
 
     searchTextValidationMessage = (value) => {
-        if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+        if (!!value && value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         }
 
@@ -183,6 +184,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             <TextField
                                                 type="search"
                                                 fullWidth
+                                                autoFocus={this.props.autoFocus}
                                                 label={!this.props.isInHeader && txt.searchBoxPlaceholder}
                                                 placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
                                                 aria-label={txt.ariaInputLabel}
@@ -259,7 +261,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         <Button
                                             children={txt.searchButtonText}
                                             aria-label={txt.searchButtonAriaLabel}
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             color={'primary'}
                                             disabled={!!this.searchTextValidationMessage(this.props.searchText)}
                                             onClick={this._handleSearch}
@@ -268,7 +270,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     </Grid>
                                     <Grid item xs={12} sm={'auto'}>
                                         <Button
-                                            variant={'raised'}
+                                            variant={'contained'}
                                             children={txt.advancedSearchButtonText}
                                             aria-label={txt.advancedSearchButtonAriaLabel}
                                             onClick={this._handleSearchMode}

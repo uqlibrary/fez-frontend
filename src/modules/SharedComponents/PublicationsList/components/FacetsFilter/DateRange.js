@@ -91,7 +91,7 @@ export default class DateRange extends React.Component {
                 </Grid>
                 <Grid item>
                     <Button
-                        variant="flat"
+                        variant={'text'}
                         children={this.props.locale.rangeSubmitButtonLabel}
                         onClick={this.setDateRange}
                         disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}

@@ -437,13 +437,13 @@ export default {
                 ),
                 buttonLabel: 'OK'
             },
-            description: (<span>
+            description: (<p>
                 <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here,
                 and changes you make will apply to their account!
-            </span>),
+            </p>),
             labels: {
                 submit: 'Masquerade',
-                hint: 'Username or student username'
+                hint: 'Enter a UQ staff or student username (eg. uqjsmith1 or s123456)'
             }
         },
         googleScholarLink: {

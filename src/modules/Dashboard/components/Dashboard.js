@@ -170,7 +170,7 @@ export class Dashboard extends PureComponent {
                                 !this.props.hidePossiblyYourPublicationsLure
                                 && !this.props.possiblyYourPublicationsCountLoading
                                 && this.props.possiblyYourPublicationsCount > 0 ?
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{marginTop: -27}}>
                                         <Alert
                                             title={txt.possiblePublicationsLure.title}
                                             message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
@@ -184,7 +184,7 @@ export class Dashboard extends PureComponent {
                                     !this.props.possiblyYourPublicationsCountLoading
                                     && !this.props.hidePossiblyYourPublicationsLure
                                     && !this.props.possiblyYourPublicationsCount &&
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{marginTop: -27}}>
                                         <Alert
                                             {...txt.nothingToClaimLure}
                                             action={this._addPublication}/>

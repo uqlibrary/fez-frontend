@@ -61,7 +61,7 @@ export class PublicationsListPaging extends Component {
         const totalPages = this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         return (
             <Button
-                variant={'flat'}
+                variant={'text'}
                 key={key}
                 id={'pageButton'}
                 size={'small'}
@@ -107,7 +107,7 @@ export class PublicationsListPaging extends Component {
                                 <Grid item>
                                     <Button
                                         style={{paddingLeft: 4}}
-                                        variant={'flat'}
+                                        variant={'text'}
                                         id={'pagingPrevious'}
                                         className={classes.nextPrevButtons}
                                         onClick={() => {
@@ -133,7 +133,7 @@ export class PublicationsListPaging extends Component {
                             <Grid item style={{flexGrow: 1}}>
                                 <Button
                                     style={{margin: '0 auto'}}
-                                    variant={'flat'}
+                                    variant={'text'}
                                     className={classes.nextPrevButtons}
                                     children={txt.pageOf
                                         .replace('[currentPage]', currentPage)
@@ -147,7 +147,7 @@ export class PublicationsListPaging extends Component {
                             <Grid item>
                                 <Button
                                     id={'pagingNext'}
-                                    variant={'flat'}
+                                    variant={'text'}
                                     size={'small'}
                                     className={classes.nextPrevButtons}
                                     onClick={() => {

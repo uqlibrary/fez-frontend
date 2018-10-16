@@ -15,7 +15,7 @@ function setup(testProps, isShallow = true) {
             loadCurrentAccount: jest.fn()
         },
         location: testProps.location || {},
-        history: testProps.history || {}
+        history: testProps.history || {location: {}}
     };
 
     window.matchMedia = window.matchMedia || function () {
@@ -210,7 +210,8 @@ describe('Application component', () => {
             account: account,
             author: author,
             history: {
-                push: testMethod
+                push: testMethod,
+                location: {}
             }
         });
 

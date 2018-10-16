@@ -16,11 +16,6 @@ exports[`Related publications Component  should not render data with empty looku
         key="fez_record_search_key_has_related_datasets-0"
       >
         <WithStyles(Typography)
-          classes={
-            Object {
-              "body1": "data",
-            }
-          }
           variant="body1"
         >
           <Link
@@ -35,11 +30,6 @@ exports[`Related publications Component  should not render data with empty looku
         key="fez_record_search_key_has_related_datasets-1"
       >
         <WithStyles(Typography)
-          classes={
-            Object {
-              "body1": "data",
-            }
-          }
           variant="body1"
         >
           <Link
@@ -71,11 +61,6 @@ exports[`Related publications Component  should render component 1`] = `
         key="fez_record_search_key_has_related_datasets-0"
       >
         <WithStyles(Typography)
-          classes={
-            Object {
-              "body1": "data",
-            }
-          }
           variant="body1"
         >
           <Link
@@ -90,11 +75,6 @@ exports[`Related publications Component  should render component 1`] = `
         key="fez_record_search_key_has_related_datasets-1"
       >
         <WithStyles(Typography)
-          classes={
-            Object {
-              "body1": "data",
-            }
-          }
           variant="body1"
         >
           <Link

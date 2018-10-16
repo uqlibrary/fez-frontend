@@ -27,6 +27,7 @@ export default class SearchComponent extends PureComponent {
         isAdvancedSearch: PropTypes.bool,
         isAdvancedSearchMinimised: PropTypes.bool,
         isOpenAccessInAdvancedMode: PropTypes.bool,
+        autoFocus: PropTypes.bool,
 
         className: PropTypes.string,
         actions: PropTypes.object,
@@ -340,6 +341,7 @@ export default class SearchComponent extends PureComponent {
                 {
                     (!this.state.isAdvancedSearch || this.props.isInHeader) &&
                     <SimpleSearchComponent
+                        autoFocus={this.props.autoFocus}
                         {...this.state.simpleSearch}
                         className={this.props.className}
                         isInHeader={this.props.isInHeader}
