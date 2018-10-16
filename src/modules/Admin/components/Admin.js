@@ -6,7 +6,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-// import Typography from '@material-ui/core/Typography';
 import Switch from '@material-ui/core/Switch';
 import Tooltip from '@material-ui/core/Tooltip';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
@@ -96,21 +95,23 @@ class Admin extends PureComponent {
                         </Grid>
                     </Grid>
                     {
-                        this.state.tabbed &&
-                        <Grid item xs={12}>
-                            <Tabs value={this.state.tabValue}
-                                onChange={this.handleTabChange}
-                                fullWidth
-                                indicatorColor="primary"
-                                textColor="primary">
-                                <Tab label="Item One"/>
-                                <Tab label="Item Two"/>
-                                <Tab label="Item Three"/>
-                                <Tab label="Item Four"/>
-                                <Tab label="Item Five"/>
-                                <Tab label="Item Six"/>
-                            </Tabs>
-                        </Grid>
+                        this.state.tabbed ?
+                            <Grid item xs={12}>
+                                <Tabs value={this.state.tabValue}
+                                    onChange={this.handleTabChange}
+                                    fullWidth
+                                    indicatorColor="primary"
+                                    textColor="primary">
+                                    <Tab label="Item One"/>
+                                    <Tab label="Item Two"/>
+                                    <Tab label="Item Three"/>
+                                    <Tab label="Item Four"/>
+                                    <Tab label="Item Five"/>
+                                    <Tab label="Item Six"/>
+                                </Tabs>
+                            </Grid>
+                            :
+                            <div style={{height: 80}} />
                     }
                 </Grid>
                 {/* --------------- Content here ---------------*/}
@@ -121,12 +122,10 @@ class Admin extends PureComponent {
                             <StandardCard title={'Item 1'}>
                                 <TextField
                                     label="Test"
-                                    autoFocus
+                                    autoFocus={!!this.state.tabbed && this.state.tabValue === 0}
                                     fullWidth
                                 />
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
+                                <p>Hold down &lt;CTRL&gt; + &lt;SHIFT&gt; and up, down, left, right to move between tabs, or toggle between tabbed or full form mode</p>
                             </StandardCard>
                         </Grid>
                     }
@@ -134,6 +133,11 @@ class Admin extends PureComponent {
                         ((this.state.tabbed && this.state.tabValue === 1) || !this.state.tabbed) &&
                         <Grid item xs={12}>
                             <StandardCard title={'Item 2'}>
+                                <TextField
+                                    label="Test"
+                                    autoFocus={!!this.state.tabbed && this.state.tabValue === 1}
+                                    fullWidth
+                                />
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
@@ -146,6 +150,11 @@ class Admin extends PureComponent {
                         ((this.state.tabbed && this.state.tabValue === 2) || !this.state.tabbed) &&
                         <Grid item xs={12}>
                             <StandardCard title={'Item 3'}>
+                                <TextField
+                                    label="Test"
+                                    autoFocus={!!this.state.tabbed && this.state.tabValue === 2}
+                                    fullWidth
+                                />
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
                             </StandardCard>
@@ -176,6 +185,7 @@ class Admin extends PureComponent {
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
+                                <img src={'https://media3.mensxp.com/media/content/2015/Apr/factseverymanshouldknowaboutbeardsh_1428322950_1100x513.jpg'} style={{width: '100%'}} />
                             </StandardCard>
                         </Grid>
                     }
