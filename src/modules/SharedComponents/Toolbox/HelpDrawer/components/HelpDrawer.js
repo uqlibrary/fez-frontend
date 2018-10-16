@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
     paper: {
-        width: 260,
+        width: 320,
         paddingTop: 40,
         paddingRight: 40,
         paddingLeft: 40,
@@ -39,6 +39,16 @@ export class HelpDrawer extends Component {
 
     render() {
         const {classes, title, text, buttonLabel, open, hide} = this.props;
+        let indexedText = null;
+        if (this.props.text && this.props.text.props && this.props.text.props.children) {
+            indexedText = React.Children.map(this.props.text.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {key: index});
+                } else {
+                    return child;
+                }
+            });
+        }
         return (
             <Drawer
                 classes={{paper: classes.paper}}
@@ -48,7 +58,7 @@ export class HelpDrawer extends Component {
                 <Grid container spacing={40}>
                     <Grid item xs={12}>
                         <Typography key={'title'} component={'span'} variant={'h6'} className={classes.title}>{title}</Typography>
-                        <Typography key={'text'} component={'span'} variant="body2">{text}</Typography>
+                        <Typography key={'text'} component={'span'} variant="body2">{indexedText || text}</Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <Button variant="contained" color="primary" className={classes.button} children={buttonLabel} onClick={hide} />
