@@ -75,6 +75,11 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     if (error.response && error.response.status === 403) {
+        if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+            Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
+            delete api.defaults.headers.common[TOKEN_NAME];
+        }
+
         if (process.env.NODE_ENV === 'test') {
             global.mockActionsStore.dispatch(logout());
         } else {
