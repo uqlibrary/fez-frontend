@@ -6,6 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import {withStyles} from '@material-ui/core/styles';
 import Clear from '@material-ui/icons/Clear';
+import Typography from '@material-ui/core/Typography';
 
 
 const styles = (theme) => ({
@@ -14,7 +15,7 @@ const styles = (theme) => ({
         paddingRight: theme.spacing.unit,
     },
     listText: {
-        ...theme.typography.body2
+        ...theme.typography.body2,
     },
     inset: {
         '&:first-child': {
@@ -56,16 +57,14 @@ export class FacetsFilterNestedListItem extends PureComponent {
                 }
                 <ListItemText
                     inset
-                    primary={primaryText}
                     className={this.props.classes.listText}
-                    primaryTypographyProps={{
-                        color: isActive ? 'textPrimary' : 'textSecondary',
-                        classes: {
-                            colorTextPrimary: this.props.classes.selectedFacet
-                        }
-                    }}
+                    disableTypography
                     classes={{inset: this.props.classes.inset}}
-                />
+                >
+                    <Typography variant={'body2'} color={isActive ? 'primary' : 'default'}>
+                        {primaryText}
+                    </Typography>
+                </ListItemText>
             </ListItem>
         );
     }
