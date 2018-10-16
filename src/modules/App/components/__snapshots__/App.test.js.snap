@@ -407,28 +407,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          message="Please contact the UQ eSpace administrator to resolve this."
-          title="You are not registered in UQ eSpace as an author"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -1500,28 +1478,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
-          title="ORCID ID REQUIRED"
-          type="error_outline"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -2586,30 +2542,6 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Click here to link or register"
-          message="You do not have an ORCID ID linked to your UQ eSpace."
-          title="ORCID ID REQUIRED"
-          type="warning"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route

@@ -40,6 +40,9 @@ export default {
         legacyEspace: {
             primaryText: 'Switch to old interface'
         },
+        adminPrototype: {
+            primaryText: 'Admin form prototype'
+        },
         help: {
             primaryText: 'Help'
         }

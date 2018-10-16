@@ -330,7 +330,7 @@ export class App extends PureComponent {
                         locale={locale.global.sessionExpiredConfirmation}
                     />
                     {
-                        userStatusAlert &&
+                        userStatusAlert && false &&
                         <Grid container alignContent="center" justify="center" alignItems="center" >
                             <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />

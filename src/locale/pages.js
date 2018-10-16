@@ -638,6 +638,9 @@ export default {
                 message: 'Request is being processed.',
                 showLoader: true
             }
+        },
+        prototype: {
+            title: 'Admin form prototype'
         }
     }
 };

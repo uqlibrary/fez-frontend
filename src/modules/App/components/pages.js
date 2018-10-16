@@ -15,6 +15,7 @@ export const ViewRecord = () => (<Async load={import('modules/ViewRecord/contain
 // always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
 export {Index} from 'modules/Index';
+export {Admin} from 'modules/Admin';
 export {Masquerade} from 'modules/Masquerade';
 export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 export {SearchRecords} from 'modules/SearchRecords';
