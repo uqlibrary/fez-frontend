@@ -46,7 +46,7 @@ export class AppLoader extends React.Component {
                     {logoImage && <div className={`${logoImage} ${classes.logo}`} alt={logoText}/>}
                 </Grid>
                 <Grid item className={classes.spaceBetween}>
-                    <Typography variant={'h5'} className={classes.white}>{title}</Typography>
+                    <Typography variant={'h6'} className={classes.white}>{title}</Typography>
                 </Grid>
             </Grid>
         );

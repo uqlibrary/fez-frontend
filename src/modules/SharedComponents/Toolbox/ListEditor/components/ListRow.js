@@ -68,7 +68,7 @@ export class ListRow extends PureComponent {
                 />
                 <Grid container alignItems="center" spacing={16} className={classes.row}>
                     <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
-                        <Typography variant="body1">{item.value || item}</Typography>
+                        <Typography variant="body2">{item.value || item}</Typography>
                     </Grid>
                     {
                         !hideReorder &&

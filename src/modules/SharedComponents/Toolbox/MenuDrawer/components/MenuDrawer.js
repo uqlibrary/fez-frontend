@@ -67,11 +67,12 @@ const styles = theme => {
             flexGrow: 1,
         },
         ListItemTextPrimary: {
+            ...theme.typography.body2,
             whiteSpace: 'nowrap',
-            fontWeight: 400,
+            fontWeight: theme.typography.fontWeightMedium
         },
         ListItemTextSecondary: {
-            fontWeight: 400,
+            ...theme.typography.caption,
         },
         mainMenuFooter: {
             paddingLeft: '12px',

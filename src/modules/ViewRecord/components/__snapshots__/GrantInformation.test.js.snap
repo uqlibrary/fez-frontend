@@ -46,7 +46,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
             grantId={false}
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -89,7 +89,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
             grantId="1042819"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -132,7 +132,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
             grantId="CG-12-07 | CG-10-04"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -152,7 +152,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
     <WithStyles(Typography)
       gutterBottom={true}
       id="grantInformation"
-      variant="body1"
+      variant="body2"
     >
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(Typography)>
@@ -194,7 +194,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
             grantId={false}
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -237,7 +237,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
             grantId={false}
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -280,7 +280,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
             grantId={false}
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -302,7 +302,7 @@ exports[`Grant Information Component  should render component 1`] = `
     <WithStyles(Typography)
       gutterBottom={true}
       id="grantInformation"
-      variant="body1"
+      variant="body2"
     >
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(Typography)>
@@ -344,7 +344,7 @@ exports[`Grant Information Component  should render component 1`] = `
             grantId="569645 | 1022263"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -387,7 +387,7 @@ exports[`Grant Information Component  should render component 1`] = `
             grantId="1042819"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -430,7 +430,7 @@ exports[`Grant Information Component  should render component 1`] = `
             grantId="CG-12-07 | CG-10-04"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -450,7 +450,7 @@ exports[`Grant Information Component  should render with publication without gra
     <WithStyles(Typography)
       gutterBottom={true}
       id="grantInformation"
-      variant="body1"
+      variant="body2"
     >
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(Typography)>
@@ -490,7 +490,7 @@ exports[`Grant Information Component  should render with publication without gra
             grantAgency="National Health and Medical Research Council"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -531,7 +531,7 @@ exports[`Grant Information Component  should render with publication without gra
             grantAgency="Cancer Council Queensland"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -572,7 +572,7 @@ exports[`Grant Information Component  should render with publication without gra
             grantAgency="National Breast Cancer Foundation"
           />
           <WithStyles(Typography)
-            variant="body1"
+            variant="body2"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>

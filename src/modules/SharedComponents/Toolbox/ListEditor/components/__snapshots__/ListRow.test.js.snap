@@ -32,7 +32,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       xs={5}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         one
       </WithStyles(Typography)>
@@ -101,7 +101,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       xs={5}
     >
       <WithStyles(Typography)
-        variant="body1"
+        variant="body2"
       >
         one
       </WithStyles(Typography)>

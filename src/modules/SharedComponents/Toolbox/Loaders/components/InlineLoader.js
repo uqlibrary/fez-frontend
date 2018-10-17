@@ -32,7 +32,7 @@ export class InlineLoader extends React.Component {
                     <CircularProgress size={32} thickness={1} color="primary"/>
                 </Grid>
                 <Grid item>
-                    <Typography className={classes.text} variant={'h5'}>{this.props.message}</Typography>
+                    <Typography className={classes.text} variant={'h6'}>{this.props.message}</Typography>
                 </Grid>
             </Grid>
         );

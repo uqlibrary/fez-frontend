@@ -305,7 +305,7 @@ export class FileUploader extends PureComponent {
 
         return (
             <Fragment>
-                <Typography variant="body1" gutterBottom>{instructionsDisplay}</Typography>
+                <Typography variant="body2" gutterBottom>{instructionsDisplay}</Typography>
                 <FileUploadDropzone
                     locale={this.props.locale}
                     maxSize={this.calculateMaxFileSize()}

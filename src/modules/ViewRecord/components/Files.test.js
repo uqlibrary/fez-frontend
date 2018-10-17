@@ -26,7 +26,6 @@ describe('Files Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('FileName').length).toEqual(1);
     });
 
     it('should not render cultural message', () => {
@@ -44,7 +43,6 @@ describe('Files Component ', () => {
         delete publication.fez_datastream_info;
         const wrapper = setup({publication:publication});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.fileName').length).toEqual(0);
     });
 
     it('should render bytes correctly', () => {
