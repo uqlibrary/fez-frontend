@@ -21,14 +21,14 @@ export class GrantInformation extends PureComponent {
         return (
             <Grid container display="row" alignItems="center">
                 <Grid item>
-                    <Typography variant="body1" className={className}>
+                    <Typography variant="body2" className={className}>
                         {grantAgency}
                     </Typography>
                 </Grid>
                 {
                     !!grantId &&
                     <Grid item>
-                        <Typography variant="body1" className={className}>
+                        <Typography variant="body2" className={className}>
                             {` (${grantId})`}
                         </Typography>
                     </Grid>
@@ -55,7 +55,7 @@ export class GrantInformation extends PureComponent {
                             grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id}
                             className={this.props.classes.data}
                         />
-                        <Typography variant="body1">{grantText && grantText.rek_grant_text}</Typography>
+                        <Typography variant="body2">{grantText && grantText.rek_grant_text}</Typography>
                     </Grid>
                 </Grid>
             </div>
@@ -96,7 +96,7 @@ export class GrantInformation extends PureComponent {
                 <StandardCard title={locale.viewRecord.sections.grantInformation}>
                     {
                         fundingText &&
-                        <Typography id="grantInformation" variant="body1" gutterBottom>{fundingText}</Typography>
+                        <Typography id="grantInformation" variant="body2" gutterBottom>{fundingText}</Typography>
                     }
                     {
                         this.props.publication.fez_record_search_key_grant_agency &&

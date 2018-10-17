@@ -30,26 +30,18 @@ describe('FacetsFilter ', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData: facetsData});
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        const categories = wrapper.find('.facetsCategory');
-        expect(categories.length).toEqual(6);
     });
 
     it('renders filter for open access', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData: facetsData, showOpenAccessFilter:true});
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        const categories = wrapper.find('.facetsCategory');
-        expect(categories.length).toEqual(6);
     });
 
     it('components for mock data with excluded facets', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, excludeFacetsList: ['Display type']});
         expect(toJson(wrapper)).toMatchSnapshot();
-        const categories = wrapper.find('.facetsCategory');
-        expect(categories.length).toEqual(5);
     });
 
     it('components for mock data with disabled flag set', () => {
@@ -547,7 +539,7 @@ describe('FacetsFilter ', () => {
     it('getNestedListItems returns list of facets correctly for a given category', () => {
 
         const facetsCategory = {"title":"Publication type","facets":[{"title":"Journal Article","key":179,"count":110},{"title":"Conference Paper","key":130,"count":32},{"title":"Book","key":174,"count":3},{"title":"Book Chapter","key":177,"count":1},{"title":"Generic Document","key":202,"count":1}]};
-        const result = [{"key":"0","ref":null,"props":{"className":"facetsCategoryFilter","index":0,"isActive":false,"primaryText":"Journal Article (110)"},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"className":"facetsCategoryFilter","index":1,"isActive":false,"primaryText":"Conference Paper (32)"},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"className":"facetsCategoryFilter","index":2,"isActive":false,"primaryText":"Book (3)"},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"className":"facetsCategoryFilter","index":3,"isActive":false,"primaryText":"Book Chapter (1)"},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"className":"facetsCategoryFilter","index":4,"isActive":false,"primaryText":"Generic Document (1)"},"_owner":null,"_store":{}}];
+        const result = [{"key":"0","ref":null,"props":{"index":0,"isActive":false,"primaryText":"Journal Article (110)"},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"index":1,"isActive":false,"primaryText":"Conference Paper (32)"},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"index":2,"isActive":false,"primaryText":"Book (3)"},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"index":3,"isActive":false,"primaryText":"Book Chapter (1)"},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"index":4,"isActive":false,"primaryText":"Generic Document (1)"},"_owner":null,"_store":{}}];
 
         const wrapper = setup({});
         expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
@@ -555,7 +547,7 @@ describe('FacetsFilter ', () => {
 
     it('getNestedListItems returns list of facets correctly for categories where item.key is expected to be an integer but supplied in the string form', () => {
         const facetsCategory = {"facetTitle":"Display type","facets":[{"title":"Journal Article","key":179,"count":110},{"title":"Conference Paper","key":130,"count":32},{"title":"Book","key":174,"count":3},{"title":"Book Chapter","key":177,"count":1},{"title":"Generic Document","key":202,"count":1}]};
-        const result = [{"key":"0","ref":null,"props":{"className":"facetsCategoryFilter active","index":0,"isActive":true,"primaryText":"Journal Article (110)"},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"className":"facetsCategoryFilter","index":1,"isActive":false,"primaryText":"Conference Paper (32)"},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"className":"facetsCategoryFilter","index":2,"isActive":false,"primaryText":"Book (3)"},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"className":"facetsCategoryFilter","index":3,"isActive":false,"primaryText":"Book Chapter (1)"},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"className":"facetsCategoryFilter","index":4,"isActive":false,"primaryText":"Generic Document (1)"},"_owner":null,"_store":{}}];
+        const result = [{"key":"0","ref":null,"props":{"index":0,"isActive":true,"primaryText":"Journal Article (110)"},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"index":1,"isActive":false,"primaryText":"Conference Paper (32)"},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"index":2,"isActive":false,"primaryText":"Book (3)"},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"index":3,"isActive":false,"primaryText":"Book Chapter (1)"},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"index":4,"isActive":false,"primaryText":"Generic Document (1)"},"_owner":null,"_store":{}}];
 
         const wrapper = setup({activeFacets: {filters: {"Display type": "179"}, ranges: {}}});
         expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));

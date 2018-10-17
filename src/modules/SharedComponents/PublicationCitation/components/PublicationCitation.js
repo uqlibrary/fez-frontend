@@ -52,7 +52,7 @@ const styles = theme => ({
     },
     citationText: {
         ...theme.typography.caption,
-        color: theme.typography.body1.color,
+        color: theme.typography.body2.color,
         marginBottom: 6
     },
     citationCounts: {
@@ -196,7 +196,7 @@ export class PublicationCitation extends PureComponent {
                             {
                                 !this.props.hideTitle ?
                                     <Grid item xs style={{minWidth: 1}}>
-                                        <Typography variant={'h5'} component={'h5'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
+                                        <Typography variant={'h6'} component={'h6'} className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
                                     :
                                     <Grid item xs />
@@ -214,13 +214,13 @@ export class PublicationCitation extends PureComponent {
                                                     this.props.showSourceCountIcon &&
                                                     <Grid item>
                                                         <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                        <Typography variant={'h5'}>{recordValue.count}</Typography>
+                                                        <Typography variant={'h6'}>{recordValue.count}</Typography>
                                                     </Grid>
                                                 }
                                                 {
                                                     !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
                                                     <Grid item>
-                                                        <Typography variant={'h5'} color={'inherit'} className={'count'}>
+                                                        <Typography variant={'h6'} color={'inherit'} className={'count'}>
                                                             {Math.round(recordValue.count)}
                                                         </Typography>
                                                     </Grid>
@@ -228,7 +228,7 @@ export class PublicationCitation extends PureComponent {
                                                 {
                                                     !this.props.hideCountDiff &&
                                                     <Grid item>
-                                                        <Typography variant={'h5'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
+                                                        <Typography variant={'h6'} color={'inherit'} className={'difference'} title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
                                                             +{Math.round(recordValue.difference)}
                                                         </Typography>
                                                     </Grid>

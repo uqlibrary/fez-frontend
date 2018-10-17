@@ -34,7 +34,7 @@ class RighthandCard extends React.Component {
             <Grid container>
                 <Grid item xs className={classes.title}>
                     {title &&
-                    <Typography variant={'h5'} color={'primary'}>{title}</Typography>}
+                    <Typography variant={'h6'} color={'primary'}>{title}</Typography>}
                 </Grid>
                 {help && help.text &&
                 <Grid item>

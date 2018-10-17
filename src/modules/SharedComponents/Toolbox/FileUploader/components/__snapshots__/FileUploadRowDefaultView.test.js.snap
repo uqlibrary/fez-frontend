@@ -23,7 +23,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       <WithStyles(Typography)
         gutterBottom={true}
         noWrap={true}
-        variant="body1"
+        variant="body2"
       >
         test.pdf
          (
@@ -69,7 +69,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       <WithStyles(Typography)
         gutterBottom={true}
         noWrap={true}
-        variant="body1"
+        variant="body2"
       >
         test.pdf
          (
@@ -97,7 +97,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       >
         <WithStyles(Typography)
           gutterBottom={true}
-          variant="body1"
+          variant="body2"
         >
           No date required
         </WithStyles(Typography)>
@@ -141,7 +141,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       <WithStyles(Typography)
         gutterBottom={true}
         noWrap={true}
-        variant="body1"
+        variant="body2"
       >
         test.pdf
          (
@@ -169,7 +169,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       >
         <WithStyles(Typography)
           gutterBottom={true}
-          variant="body1"
+          variant="body2"
         >
           No date required
         </WithStyles(Typography)>
@@ -213,7 +213,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       <WithStyles(Typography)
         gutterBottom={true}
         noWrap={true}
-        variant="body1"
+        variant="body2"
       >
         test.pdf
          (

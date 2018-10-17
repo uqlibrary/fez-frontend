@@ -23,6 +23,9 @@ const styles = (theme) => ({
     description: {
         whiteSpace: 'nowrap',
         textOverflow: 'ellipsis'
+    },
+    body2: {
+        ...theme.typography.body2
     }
 });
 
@@ -35,9 +38,11 @@ export class Links extends PureComponent {
     LinkRow = ({link, description, openAccessStatus}) => (
         <Grid container spacing={32} className={this.props.classes.header} alignItems={'center'} alignContent={'center'} justify={'center'}>
             <Grid item xs={12} sm={6}>
-                {link}
+                <Typography variant={'body2'}>{link}</Typography>
             </Grid>
-            <Grid item xs={10} sm={4} className={this.props.classes.description}>{description}</Grid>
+            <Grid item xs={10} sm={4} className={this.props.classes.description}>
+                <Typography variant={'body2'}>{description}</Typography>
+            </Grid>
             <Grid item xs={2} sm={2}><OpenAccessIcon {...openAccessStatus} /></Grid>
         </Grid>
     );

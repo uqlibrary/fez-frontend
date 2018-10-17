@@ -23,7 +23,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
       primaryTypographyProps={
         Object {
           "noWrap": true,
-          "variant": "body2",
+          "variant": "body1",
         }
       }
       secondary="File name"
@@ -60,7 +60,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       primaryTypographyProps={
         Object {
           "noWrap": true,
-          "variant": "body2",
+          "variant": "body1",
         }
       }
       secondary="File name"
@@ -111,7 +111,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       <WithStyles(ListItemText)
         primaryTypographyProps={
           Object {
-            "variant": "body2",
+            "variant": "body1",
           }
         }
         secondary="Embargo date"
@@ -123,7 +123,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       >
         <WithStyles(Typography)
           gutterBottom={true}
-          variant="body1"
+          variant="body2"
         >
           No date required
         </WithStyles(Typography)>
@@ -169,7 +169,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       primaryTypographyProps={
         Object {
           "noWrap": true,
-          "variant": "body2",
+          "variant": "body1",
         }
       }
       secondary="File name"
@@ -220,7 +220,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       <WithStyles(ListItemText)
         primaryTypographyProps={
           Object {
-            "variant": "body2",
+            "variant": "body1",
           }
         }
         secondary="Embargo date"
@@ -232,7 +232,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       >
         <WithStyles(Typography)
           gutterBottom={true}
-          variant="body1"
+          variant="body2"
         >
           No date required
         </WithStyles(Typography)>
@@ -278,7 +278,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       primaryTypographyProps={
         Object {
           "noWrap": true,
-          "variant": "body2",
+          "variant": "body1",
         }
       }
       secondary="File name"
@@ -329,7 +329,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       <WithStyles(ListItemText)
         primaryTypographyProps={
           Object {
-            "variant": "body2",
+            "variant": "body1",
           }
         }
         secondary="Embargo date"
