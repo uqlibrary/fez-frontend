@@ -33,7 +33,7 @@ const styles = (theme) => ({
         display: 'none'
     },
     primary: {
-        fontSize: theme.typography.body1.fontSize,
+        fontSize: theme.typography.body2.fontSize,
     },
     identifierName: {
         fontSize: theme.typography.caption.fontSize,
@@ -131,7 +131,7 @@ export class ContributorRow extends PureComponent {
         <ListItemText
             disableTypography
             primary={
-                <Typography noWrap variant="body1" classes={{ root: primaryClass }}>
+                <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
                     {primaryText}
                 </Typography>
             }

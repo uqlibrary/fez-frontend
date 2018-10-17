@@ -80,7 +80,7 @@ export class NewsFeed extends PureComponent {
                                     </Grid>
                                 </Grid>
                                 <Grid item xs>
-                                    <Typography variant={'body1'}>
+                                    <Typography variant={'body2'}>
                                         <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
                                     </Typography>
                                 </Grid>

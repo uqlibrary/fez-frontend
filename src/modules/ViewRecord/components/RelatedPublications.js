@@ -47,7 +47,7 @@ export class RelatedPublications extends PureComponent {
                 {
                     showPublicationTitle &&
                     <li key={'current'}>
-                        <Typography variant="body1">
+                        <Typography variant="body2">
                             {publication.rek_title}<b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
                         </Typography>
                     </li>
@@ -68,7 +68,7 @@ export class RelatedPublications extends PureComponent {
             )).map((item, index)=> {
                 return (
                     <li key={`${searchKey.key}-${index}`}>
-                        <Typography variant="body1">
+                        <Typography variant="body2">
                             {
                                 this.renderTitle(item, searchKey)
                             }

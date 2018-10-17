@@ -16,7 +16,7 @@ exports[`Related publications Component  should not render data with empty looku
         key="fez_record_search_key_has_related_datasets-0"
       >
         <WithStyles(Typography)
-          variant="body1"
+          variant="body2"
         >
           <Link
             replace={false}
@@ -30,7 +30,7 @@ exports[`Related publications Component  should not render data with empty looku
         key="fez_record_search_key_has_related_datasets-1"
       >
         <WithStyles(Typography)
-          variant="body1"
+          variant="body2"
         >
           <Link
             replace={false}
@@ -61,7 +61,7 @@ exports[`Related publications Component  should render component 1`] = `
         key="fez_record_search_key_has_related_datasets-0"
       >
         <WithStyles(Typography)
-          variant="body1"
+          variant="body2"
         >
           <Link
             replace={false}
@@ -75,7 +75,7 @@ exports[`Related publications Component  should render component 1`] = `
         key="fez_record_search_key_has_related_datasets-1"
       >
         <WithStyles(Typography)
-          variant="body1"
+          variant="body2"
         >
           <Link
             replace={false}
