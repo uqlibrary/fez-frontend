@@ -138,7 +138,6 @@ export default class FacetsFilter extends PureComponent {
             const isActive = this.isFacetFilterActive(this.state.activeFacets, facetCategory.facetTitle, item.key);
             return (
                 <FacetFilterNestedListItem
-                    className={`facetsCategoryFilter${isActive ? ' active' : ''}`}
                     key={index}
                     index={index}
                     onFacetClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
@@ -238,7 +237,6 @@ export default class FacetsFilter extends PureComponent {
                             return (
                                 <FacetFilterListItem
                                     id={`facet-category-${item.facetTitle.replace(' ', '-')}`}
-                                    className="facetsCategory"
                                     key={`${index}`}
                                     facetTitle={item.title}
                                     disabled={this.props.disabled}
