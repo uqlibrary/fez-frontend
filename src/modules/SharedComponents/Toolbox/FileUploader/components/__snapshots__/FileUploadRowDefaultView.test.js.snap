@@ -17,8 +17,8 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
   >
     <WithStyles(Grid)
       item={true}
-      md={6}
-      sm={5}
+      md={11}
+      sm={11}
     >
       <WithStyles(Typography)
         gutterBottom={true}

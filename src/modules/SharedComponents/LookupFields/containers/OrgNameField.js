@@ -9,18 +9,26 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: (item) => props.input.onChange(item.value),
         async: true,
-        errorText: props.meta ? props.meta.error : null,
-        error: props.meta ? !!props.meta.error : null,
-        selectedValue: props.input ? {value: props.input.value} : null,
+        errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || null,
+        error: props.meta ? !!props.meta.error : props.error && !!props.errorText || null,
+        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || '',
         itemToString: (item) => !!item && String(item.value) || ''
     };
 };
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = (dispatch, props) => (
     {
-        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+        onChange: (value) => {
+            if (!!props.input) {
+                props.input.onChange(value.value);
+            } else if (typeof value === 'string') {
+                props.onChange({value});
+            } else {
+                props.onChange(value);
+            }
+        }
     }
 );
 
