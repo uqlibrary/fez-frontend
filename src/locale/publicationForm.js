@@ -1213,5 +1213,143 @@ export default {
             confirmButtonLabel: 'Redirect to login'
         },
         depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
+    },
+    addDataset: {
+        information: {
+            dataset: {
+                title: 'Dataset information',
+                fieldLabels: {
+                    name: {
+                        label: 'Dataset name',
+                        placeholder: 'Type the descriptive name for the dataset'
+                    },
+                    description: {
+                        label: 'Dataset description',
+                        placeholder: 'Describe the dataset\'s topic(s) and theme(s)'
+                    },
+                    contactName: {
+                        label: 'Contact name',
+                        placeholder: 'Type the name of primary contact for this dataset'
+                    },
+                    contactEmail: {
+                        label: 'Contact email',
+                        placeholder: 'Type the email address of primary contact for this dataset'
+                    },
+                    publisher: {
+                        label: 'Publisher',
+                        placeholder: 'This is where the dataset was originally made available e.g. UQ eSpace'
+                    },
+                    publicationYear: {
+                        label: '',
+                        placeholder: ''
+                    },
+                    fieldOfResearchCodes: {
+                        label: '',
+                        placeholder: ''
+                    }
+                }
+            },
+            creator: {
+                title: 'Creator information',
+                fieldLabels: {
+                    creatorName: {
+                        label: 'Creator name',
+                        placeholder: 'Type the names of persons related to the creation, maintenance or update of the dataset'
+                    },
+                    creatorRole: {
+                        label: 'Creator role',
+                        placeholder: 'Type the role of the creator in relation to the dataset'
+                    },
+                    AdditionalCreatorName: {
+                        label: 'Additional creator name',
+                        placeholder: 'Type the additional names of persons related to the creation, maintenance or update of the dataset'
+                    },
+                    AdditionalCreatorRole: {
+                        label: 'Additional creator role',
+                        placeholder: 'Type the role of the additional creator in relation to the dataset'
+                    }
+                }
+            },
+            accessAndLicensing: {
+                title: 'Access and licensing information',
+                fieldLabels: {
+                    accessConditions: {
+                        label: 'Access conditions',
+                        helperText: 'Select Open Access or Closed Access'
+                    },
+                    licensingAndTermsOfAccess: {
+                        label: 'Licensing and terms of access',
+                        helperText: 'View UQ Terms & Conditions and Creative Commons Licenses',
+                    },
+                    copyrightNotice: {
+                        label: 'Copyright notice',
+                        placeholder: 'e.g. 2012, The University of Queensland'
+                    }
+                }
+            },
+            project: {
+                title: 'Project information',
+                fieldLabels: {
+                    projectName: {
+                        label: 'Project name',
+                        placeholder: 'Type the name of the project that initiated the dataset'
+                    },
+                    projectDescription: {
+                        label: 'Project description',
+                        placeholder: 'Briefly describe the project, including purpose'
+                    },
+                    fundingBody: {
+                        label: 'Funding body',
+                        placeholder: 'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC'
+                    },
+                    grantId: {
+                        label: 'Grant ID',
+                        placeholder: 'e.g. ARC or NHMRC grant number'
+                    }
+                }
+            },
+            optionalDatasetDetails: {
+                title: 'Optional dataset details (non mandatory)',
+                fieldLabels: {
+                    typeOfData: {
+                        label: 'Type of data',
+                        placeholder: 'Type of data represented in the dataset e.g. excel file, images, video'
+                    },
+                    softwareRequired: {
+                        label: 'Software required',
+                        placeholder: 'List any software required to view the data'
+                    },
+                    collectionStart: {
+                        label: 'Collection start date',
+                        placeholder: 'Date that data started being collected'
+                    },
+                    collectionEnd: {
+                        label: 'Collection end date',
+                        placeholder: 'Date that data ceased being collected'
+                    },
+                    geographicCoordinates: {
+                        label: 'Geographic coordinates',
+                        placeholder: 'Use this tool to specify the geographic co-ordinates the data relates to'
+                    },
+                    relatedDatasets: {
+                        label: 'Related datasets',
+                        placeholder: 'Search for and add related datasets in UQ eSpace'
+                    }
+                }
+            },
+            additionalNotes: {
+                title: 'Optional information - free text field for additional notes or information',
+                fieldLabels: {
+                    notes: {
+                        label: 'Optional information',
+                        placeholder: 'Additional information related to the dataset'
+                    }
+                }
+            },
+            links: {
+                label: 'Link to data in external repository',
+                placeholder: 'Provide the URL to the dataset where stored in another repository'
+            }
+        }
     }
 };
