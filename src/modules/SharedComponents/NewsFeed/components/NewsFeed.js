@@ -67,7 +67,7 @@ export class NewsFeed extends PureComponent {
             );
 
         return (
-            <StandardCard title={txt.title} darkHeader>
+            <StandardCard title={txt.title} primaryHeader>
                 {
                     !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
                         <div style={{padding: '8px 0px'}} key={index}>

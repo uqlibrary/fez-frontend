@@ -15,9 +15,15 @@ const styles = theme => ({
     cardContentNoPadding: {
         padding: 0
     },
-    cardHeaderPurple: {
+    cardHeaderPrimary: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.primary.main,
+        borderRadius: '4px 4px 0px 0px',
+        padding: '12px 24px',
+    },
+    cardHeaderAccent: {
+        color: theme.palette.white.main,
+        backgroundColor: theme.palette.accent.main,
         borderRadius: '4px 4px 0px 0px',
         padding: '12px 24px',
     },
@@ -30,7 +36,8 @@ const styles = theme => ({
 class Cards extends Component {
     static propTypes = {
         title: PropTypes.any,
-        darkHeader: PropTypes.bool,
+        primaryHeader: PropTypes.bool,
+        accentHeader: PropTypes.bool,
         fullHeight: PropTypes.bool,
         noPadding: PropTypes.bool,
         noHeader: PropTypes.bool,
@@ -38,18 +45,21 @@ class Cards extends Component {
         classes: PropTypes.object,
         help: PropTypes.object,
         customBackgroundColor: PropTypes.any,
-        customTitleColor: PropTypes.any
+        customTitleColor: PropTypes.any,
+        squareTop: PropTypes.bool
     };
     render() {
-        const {classes, title, help, children, darkHeader} = this.props;
+        const {classes, title, help, children, primaryHeader, accentHeader} = this.props;
         const customBG = !!this.props.customBackgroundColor ? {backgroundColor: this.props.customBackgroundColor} : null;
         const customTitle = !!this.props.customTitleColor ? {color: this.props.customTitleColor} : null;
         const fullHeight = !!this.props.fullHeight ? {height: '100%'} : null;
+        const squareTop = !!this.props.squareTop ? {borderTopLeftRadius: 0, borderTopRightRadius: 0} : null;
         return (
             <Card className={`${classes.card} StandardCard`} style={{...customBG, ...customTitle, ...fullHeight}}>
                 {
                     !this.props.noHeader &&
                     <CardHeader
+                        style={{...squareTop}}
                         title={title}
                         titleTypographyProps={{
                             variant: 'h5',
@@ -61,7 +71,7 @@ class Cards extends Component {
                             <HelpIcon {...help} />
                         }
                         classes={{
-                            root: darkHeader && classes.cardHeaderPurple || ''
+                            root: primaryHeader && classes.cardHeaderPrimary || accentHeader && classes.cardHeaderAccent
                         }}
                     />
                 }

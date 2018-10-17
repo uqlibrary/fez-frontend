@@ -24,6 +24,10 @@ const styles = theme => ({
         '&:hover': {
             opacity: 0.87
         }
+    },
+    tabIndicator: {
+        height: 4,
+        backgroundColor: theme.palette.primary.main
     }
 });
 
@@ -150,8 +154,10 @@ class Admin extends PureComponent {
                             <Grid item xs={12}>
                                 <Tabs value={this.state.tabValue}
                                     style={{marginRight: -56, marginLeft: -56}}
+                                    classes={{indicator: classes.tabIndicator}}
                                     onChange={this.handleTabChange}
                                     scrollable
+                                    fullWidth
                                     scrollButtons={'on'}
                                     indicatorColor="primary"
                                     textColor="primary">
@@ -172,73 +178,282 @@ class Admin extends PureComponent {
                     {
                         ((this.state.tabbed && this.state.tabValue === 0) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Item 1'}>
-                                <TextField
-                                    label="Test"
-                                    autoFocus={!!this.state.tabbed && this.state.tabValue === 0}
-                                    fullWidth
-                                />
-                                <p>Hold down &lt;CTRL&gt; + &lt;SHIFT&gt; and up, down, left, right to move between tabs, or toggle between tabbed or full form mode</p>
+                            <StandardCard title={'General'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12} sm={12}>
+                                        <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test"
+                                            autoFocus={!!this.state.tabbed && this.state.tabValue === 0}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test2"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <TextField
+                                            label="Test3"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test4"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test5"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test6"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test7"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     }
                     {
                         ((this.state.tabbed && this.state.tabValue === 1) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Item 2'}>
-                                <TextField
-                                    label="Test"
-                                    autoFocus={!!this.state.tabbed && this.state.tabValue === 1}
-                                    fullWidth
-                                />
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
+                            <StandardCard title={'Contributors'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12} sm={12}>
+                                        <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test"
+                                            autoFocus={!!this.state.tabbed && this.state.tabValue === 1}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test2"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <TextField
+                                            label="Test3"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test4"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     }
                     {
                         ((this.state.tabbed && this.state.tabValue === 2) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Item 3'}>
-                                <TextField
-                                    label="Test"
-                                    autoFocus={!!this.state.tabbed && this.state.tabValue === 2}
-                                    fullWidth
-                                />
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
+                            <StandardCard title={'Identifiers'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12} sm={12}>
+                                        <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test"
+                                            autoFocus={!!this.state.tabbed && this.state.tabValue === 2}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test2"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <TextField
+                                            label="Test3"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test4"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test5"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test6"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     }
                     {
                         ((this.state.tabbed && this.state.tabValue === 3) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Item 4'}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
+                            <StandardCard title={'Meta data'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12} sm={12}>
+                                        <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test"
+                                            autoFocus={!!this.state.tabbed && this.state.tabValue === 3}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test2"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <TextField
+                                            label="Test3"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test4"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test5"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test6"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     }
                     {
                         ((this.state.tabbed && this.state.tabValue === 4) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Item 5'}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
+                            <StandardCard title={'Files'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12} sm={12}>
+                                        <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <TextField
+                                            label="Test"
+                                            autoFocus={!!this.state.tabbed && this.state.tabValue === 4}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     }
                     {
                         ((this.state.tabbed && this.state.tabValue === 5) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Item 6'}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus ipsum, ullamcorper ac enim et, tempus posuere enim. Nam dui ex, gravida vel magna consequat, vehicula scelerisque ex. Proin tellus ipsum, malesuada vitae sapien non, efficitur rutrum lacus. Nam sapien sem, pharetra ac enim vitae, rhoncus tincidunt lectus. Maecenas eget sapien nec arcu semper ornare. Vestibulum facilisis a nisi a interdum. Quisque mollis ipsum augue, vitae fringilla urna dictum eget.</p>
-                                <img src={'https://media3.mensxp.com/media/content/2015/Apr/factseverymanshouldknowaboutbeardsh_1428322950_1100x513.jpg'} style={{width: '100%'}} />
+                            <StandardCard title={'Security'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12} sm={12}>
+                                        <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test"
+                                            autoFocus={!!this.state.tabbed && this.state.tabValue === 5}
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test2"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <TextField
+                                            label="Test3"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test4"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test5"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test6"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test5"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test6"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test5"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            label="Test6"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     }

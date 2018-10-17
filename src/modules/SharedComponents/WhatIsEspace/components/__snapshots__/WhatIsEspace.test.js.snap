@@ -2,7 +2,7 @@
 
 exports[`Component WhatIsEspace should render component 1`] = `
 <StandardCard
-  darkHeader={true}
+  primaryHeader={true}
   title="What is eSpace?"
 >
   <WithStyles(Typography)
