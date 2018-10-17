@@ -87,7 +87,6 @@ export class PartialDateForm extends Component {
         } else {
             valid = moment(state).isValid() && !isNaN(day) && day !== null && !isNaN(year) && year !== null && month !== null;
         }
-
         return valid;
     };
 
@@ -137,7 +136,7 @@ export class PartialDateForm extends Component {
     render() {
         const {locale, months} = this.props;
         const renderMonths = months.map((month, index) =>
-            <MenuItem key={index} value={index + 1}>{month}</MenuItem>
+            <MenuItem key={index} value={index}>{month}</MenuItem>
         );
         const isError = !!this.errors.day || !!this.errors.month || !!this.errors.year;
         return (
@@ -176,7 +175,7 @@ export class PartialDateForm extends Component {
                                 id="month"
                                 error={isError}
                                 disabled={this.props.disabled}
-                                value={this.state.month || -1}
+                                value={this.state.month === null ? -1 : this.state.month}
                                 placeholder={locale.monthLabel}
                                 onChange={this._onDateChanged('month')}>
                                 <MenuItem key={-1} value={-1} disabled>Month</MenuItem>

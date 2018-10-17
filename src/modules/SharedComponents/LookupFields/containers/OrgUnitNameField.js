@@ -9,11 +9,10 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: !!props.input && ((item) => props.input.onChange(item.value)) || props.onChange,
         async: true,
-        errorText: !!props.meta && props.meta.error || !!props.errorText && props.errorText || null,
-        error: props.meta ? !!props.meta.error : !!props.errorText || null,
-        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || '',
+        errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || null,
+        error: props.meta ? !!props.meta.error : props.error && !!props.errorText || null,
+        selectedValue: !!props.input && props.input.value || !!props.value && props.value || '',
         itemToString: (item) => !!item && String(item.value) || ''
     };
 };
