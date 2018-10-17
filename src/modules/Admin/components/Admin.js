@@ -8,10 +8,21 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Switch from '@material-ui/core/Switch';
 import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 import TextField from '@material-ui/core/TextField';
+import Keyboard from '@material-ui/icons/Keyboard';
+import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
-const styles = {};
+const styles = theme => ({
+    helpIcon: {
+        color: theme.palette.secondary.main,
+        opacity: 0.66,
+        '&:hover': {
+            opacity: 0.87
+        }
+    }
+});
 
 class Admin extends PureComponent {
     static propTypes = {
@@ -72,13 +83,13 @@ class Admin extends PureComponent {
 
     render() {
         return (
-            <StandardPage title={`Admin form prototype - ${this.state.tabbed ? 'Tabbed ' : 'Form '}:${this.state.tabValue + 1}`}>
+            <StandardPage title={'Admin form prototype'}>
                 <KeyboardEventHandler
                     handleKeys={['ctrl+shift+left', 'ctrl+shift+right', 'ctrl+shift+up', 'ctrl+shift+down']}
                     onKeyEvent={this.handleKeyEvent}
                     handleFocusableElements
                 />
-                <Grid container spacing={0} direction={'row'} style={{marginTop: -70}}>
+                <Grid container direction={'row'} style={{marginTop: -70}}>
                     <Grid item xs />
                     <Grid item xs={'auto'}>
                         <Grid container direction={'row'} spacing={0} alignItems={'center'}>
@@ -92,26 +103,47 @@ class Admin extends PureComponent {
                                     />
                                 </Tooltip>
                             </Grid>
+                            <Grid item>
+                                <HelpIcon
+                                    icon={<Keyboard className={this.props.classes.helpIcon} />}
+                                    tooltip={'Learn about keyboard shortcuts'}
+                                    title={'Keyboard shortcuts'}
+                                    text={(
+                                        <React.Fragment>
+                                            <br/>
+                                            <Typography variant={'h6'} component={'p'}>Tab navigation</Typography>
+                                            <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
+                                            <Typography variant={'h6'} component={'p'}>Form style</Typography>
+                                            <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
+                                        </React.Fragment>
+                                    )}
+                                    buttonLabel={'GOT IT'}
+                                />
+                            </Grid>
                         </Grid>
                     </Grid>
+                </Grid>
+                <Grid container spacing={0} direction={'row'}>
                     {
                         this.state.tabbed ?
                             <Grid item xs={12}>
                                 <Tabs value={this.state.tabValue}
+                                    style={{marginRight: -56, marginLeft: -56}}
                                     onChange={this.handleTabChange}
-                                    fullWidth
+                                    scrollable
+                                    scrollButtons={'on'}
                                     indicatorColor="primary"
                                     textColor="primary">
-                                    <Tab label="Item One"/>
-                                    <Tab label="Item Two"/>
-                                    <Tab label="Item Three"/>
-                                    <Tab label="Item Four"/>
-                                    <Tab label="Item Five"/>
-                                    <Tab label="Item Six"/>
+                                    <Tab label="General"/>
+                                    <Tab label="Contributors"/>
+                                    <Tab label="Identifiers"/>
+                                    <Tab label="Meta data"/>
+                                    <Tab label="Files"/>
+                                    <Tab label="Security"/>
                                 </Tabs>
                             </Grid>
                             :
-                            <div style={{height: 80}} />
+                            <div style={{height: 12}} />
                     }
                 </Grid>
                 {/* --------------- Content here ---------------*/}
