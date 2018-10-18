@@ -3,6 +3,9 @@ export default {
         index: {
             primaryText: 'Home',
         },
+        adminPrototype: {
+            primaryText: 'Admin form prototype'
+        },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email
@@ -39,9 +42,6 @@ export default {
         },
         legacyEspace: {
             primaryText: 'Switch to old interface'
-        },
-        adminPrototype: {
-            primaryText: 'Admin form prototype'
         },
         help: {
             primaryText: 'Help'

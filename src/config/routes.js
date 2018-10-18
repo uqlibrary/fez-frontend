@@ -27,6 +27,7 @@ const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
 
 export const pathConfig = {
     index: '/',
+    prototype: '/admin/prototype',
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
@@ -88,7 +89,6 @@ export const pathConfig = {
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}})
     },
     admin: {
-        prototype: '/admin/prototype',
         masquerade: '/admin/masquerade',
         legacyEspace: `${fullPath}/my_upo_tools.php`
     },
@@ -199,6 +199,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 pageTitle: locale.pages.index.title
             },
             {
+                path: pathConfig.admin.prototype,
+                component: components.Admin,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.prototype.title
+            },
+            {
                 path: pathConfig.dashboard,
                 component: components.Dashboard,
                 access: [roles.researcher, roles.admin],
@@ -286,13 +293,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.masquerade.title
-            },
-            {
-                path: pathConfig.admin.prototype,
-                component: components.Admin,
-                exact: true,
-                access: [roles.admin],
-                pageTitle: locale.pages.prototype.title
             }
         ] : []),
         ...publicPages,
@@ -353,6 +353,10 @@ export const getMenuConfig = (account, disabled) => {
 
     return [
         ...homePage,
+        {
+            linkTo: pathConfig.admin.prototype,
+            ...locale.menu.adminPrototype
+        },
         ...(account ? [
             {
                 linkTo: pathConfig.dashboard,
@@ -396,10 +400,6 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.admin.legacyEspace,
                 ...locale.menu.legacyEspace
-            },
-            {
-                linkTo: pathConfig.admin.prototype,
-                ...locale.menu.adminPrototype
             },
             {
                 divider: true,

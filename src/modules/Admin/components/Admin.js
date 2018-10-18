@@ -15,6 +15,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Keyboard from '@material-ui/icons/Keyboard';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import withWidth from '@material-ui/core/withWidth';
+import Badge from '@material-ui/core/Badge';
 import Cookies from 'js-cookie';
 
 const styles = theme => ({
@@ -28,6 +29,14 @@ const styles = theme => ({
     tabIndicator: {
         height: 4,
         backgroundColor: theme.palette.primary.main
+    },
+    badgeMargin: {
+        top: 8,
+        left: 28,
+        width: 12, height: 12,
+        fontSize: 10,
+        fontWeight: 'bold',
+        backgroundColor: '#595959'
     }
 });
 
@@ -103,18 +112,19 @@ class Admin extends PureComponent {
 
     render() {
         const {classes} = this.props;
+        const PIDtitle = 'UQ:12345 Uncoupling of the Pdc-Treg Crosstalk During Early-Life Pneumovirus Infection Underlies Long-Lived Treg Dysfunction and Asthma Development';
         return (
-            <StandardPage title={'Admin form prototype'}>
+            <StandardPage>
                 <Hidden xsDown>
                     <KeyboardEventHandler
                         handleKeys={['ctrl+shift+left', 'ctrl+shift+right', 'ctrl+shift+up', 'ctrl+shift+down']}
                         onKeyEvent={this.handleKeyEvent}
                         handleFocusableElements
                     />
-                </Hidden>
-                <Hidden xsDown>
-                    <Grid container direction={'row'} style={{marginTop: -70}}>
-                        <Grid item xs />
+                    <Grid container direction={'row'} alignItems={'center'} style={{marginTop: -24}}>
+                        <Grid item xs style={{marginBottom: 12}}>
+                            <Typography variant={'h5'} color={'primary'} style={{fontSize: 24}}>{PIDtitle}</Typography>
+                        </Grid>
                         <Grid item xs={'auto'}>
                             <Grid container direction={'row'} spacing={0} alignItems={'center'}>
                                 <Grid item>
@@ -128,57 +138,62 @@ class Admin extends PureComponent {
                                     </Tooltip>
                                 </Grid>
                                 <Grid item>
-                                    <HelpIcon
-                                        icon={<Keyboard className={classes.helpIcon} />}
-                                        tooltip={'Learn about keyboard shortcuts'}
-                                        title={'Keyboard shortcuts'}
-                                        text={(
-                                            <React.Fragment>
-                                                <br/>
-                                                <Typography variant={'h6'} component={'p'}>Tab navigation</Typography>
-                                                <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
-                                                <Typography variant={'h6'} component={'p'}>Form style</Typography>
-                                                <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
-                                            </React.Fragment>
-                                        )}
-                                        buttonLabel={'GOT IT'}
-                                    />
+                                    <Badge classes={{badge: classes.badgeMargin}} badgeContent={'?'} color="secondary">
+                                        <HelpIcon
+                                            icon={<Keyboard className={classes.helpIcon} />}
+                                            tooltip={'Learn about keyboard shortcuts'}
+                                            title={'Keyboard shortcuts'}
+                                            text={(
+                                                <React.Fragment>
+                                                    <br/>
+                                                    <Typography variant={'h6'} component={'p'}>Tab navigation</Typography>
+                                                    <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
+                                                    <Typography variant={'h6'} component={'p'}>Form style</Typography>
+                                                    <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
+                                                    <p>Your preference is saved as a cookie on this browser and it will remember your preference.</p>
+                                                </React.Fragment>
+                                            )}
+                                            buttonLabel={'GOT IT'}
+                                        />
+                                    </Badge>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
+                    <Grid container spacing={0} direction={'row'}>
+                        {
+                            this.state.tabbed &&
+                                <Grid item xs={12}>
+                                    <Tabs value={this.state.tabValue}
+                                        style={{marginRight: -56, marginLeft: -56}}
+                                        classes={{indicator: classes.tabIndicator}}
+                                        onChange={this.handleTabChange}
+                                        scrollable
+                                        scrollButtons={'on'}
+                                        indicatorColor="primary"
+                                        textColor="primary">
+                                        <Tab label="General"/>
+                                        <Tab label="Contributors"/>
+                                        <Tab label="Identifiers"/>
+                                        <Tab label="Meta data"/>
+                                        <Tab label="Files"/>
+                                        <Tab label="Security"/>
+                                    </Tabs>
+                                </Grid>
+                        }
+                    </Grid>
                 </Hidden>
-                <Grid container spacing={0} direction={'row'}>
-                    {
-                        this.state.tabbed ?
-                            <Grid item xs={12}>
-                                <Tabs value={this.state.tabValue}
-                                    style={{marginRight: -56, marginLeft: -56}}
-                                    classes={{indicator: classes.tabIndicator}}
-                                    onChange={this.handleTabChange}
-                                    scrollable
-                                    fullWidth
-                                    scrollButtons={'on'}
-                                    indicatorColor="primary"
-                                    textColor="primary">
-                                    <Tab label="General"/>
-                                    <Tab label="Contributors"/>
-                                    <Tab label="Identifiers"/>
-                                    <Tab label="Meta data"/>
-                                    <Tab label="Files"/>
-                                    <Tab label="Security"/>
-                                </Tabs>
-                            </Grid>
-                            :
-                            <div style={{height: 12}} />
-                    }
-                </Grid>
                 {/* --------------- Content here ---------------*/}
-                <Grid container spacing={24}>
+                <Grid container spacing={16}>
+                    <Hidden smUp>
+                        <Grid item xs>
+                            <Typography variant={'h5'} color={'primary'} style={{fontSize: 24}}>{PIDtitle}</Typography>
+                        </Grid>
+                    </Hidden>
                     {
                         ((this.state.tabbed && this.state.tabValue === 0) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'General'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                            <StandardCard title={'General'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
@@ -233,7 +248,7 @@ class Admin extends PureComponent {
                     {
                         ((this.state.tabbed && this.state.tabValue === 1) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Contributors'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                            <StandardCard title={'Contributors'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
@@ -270,7 +285,7 @@ class Admin extends PureComponent {
                     {
                         ((this.state.tabbed && this.state.tabValue === 2) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Identifiers'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                            <StandardCard title={'Identifiers'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
@@ -319,7 +334,7 @@ class Admin extends PureComponent {
                     {
                         ((this.state.tabbed && this.state.tabValue === 3) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Meta data'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                            <StandardCard title={'Meta data'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
@@ -368,7 +383,7 @@ class Admin extends PureComponent {
                     {
                         ((this.state.tabbed && this.state.tabValue === 4) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Files'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                            <StandardCard title={'Files'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
@@ -387,7 +402,7 @@ class Admin extends PureComponent {
                     {
                         ((this.state.tabbed && this.state.tabValue === 5) || !this.state.tabbed) &&
                         <Grid item xs={12}>
-                            <StandardCard title={'Security'} accentHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                            <StandardCard title={'Security'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
