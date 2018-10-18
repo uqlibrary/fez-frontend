@@ -202,7 +202,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 path: pathConfig.admin.prototype,
                 component: components.Admin,
                 exact: true,
-                access: [roles.admin],
+                // access: [roles.admin],
                 pageTitle: locale.pages.prototype.title
             },
             {
