@@ -199,10 +199,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 pageTitle: locale.pages.index.title
             },
             {
-                path: pathConfig.admin.prototype,
+                path: pathConfig.prototype,
                 component: components.Admin,
                 exact: true,
-                // access: [roles.admin],
                 pageTitle: locale.pages.prototype.title
             },
             {

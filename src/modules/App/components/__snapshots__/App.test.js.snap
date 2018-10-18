@@ -27,7 +27,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "component": [Function],
           "exact": true,
           "pageTitle": "Admin form prototype",
-          "path": undefined,
+          "path": "/admin/prototype",
         },
         Object {
           "access": Array [
@@ -443,6 +443,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         exact={true}
         key="route_3"
         pageTitle="Admin form prototype"
+        path="/admin/prototype"
       />
       <Route
         access={
@@ -647,7 +648,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "component": [Function],
           "exact": true,
           "pageTitle": "Admin form prototype",
-          "path": undefined,
+          "path": "/admin/prototype",
         },
         Object {
           "access": Array [
@@ -1063,6 +1064,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         exact={true}
         key="route_3"
         pageTitle="Admin form prototype"
+        path="/admin/prototype"
       />
       <Route
         access={
@@ -1590,7 +1592,7 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": "Admin form prototype",
-          "path": undefined,
+          "path": "/admin/prototype",
         },
         Object {
           "access": Array [
@@ -2006,6 +2008,7 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_3"
         pageTitle="Admin form prototype"
+        path="/admin/prototype"
       />
       <Route
         access={
@@ -2210,7 +2213,7 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": "Admin form prototype",
-          "path": undefined,
+          "path": "/admin/prototype",
         },
         Object {
           "access": Array [
@@ -2626,6 +2629,7 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_3"
         pageTitle="Admin form prototype"
+        path="/admin/prototype"
       />
       <Route
         access={
@@ -2830,7 +2834,7 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": "Admin form prototype",
-          "path": undefined,
+          "path": "/admin/prototype",
         },
         Object {
           "access": Array [
@@ -3122,6 +3126,7 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_3"
         pageTitle="Admin form prototype"
+        path="/admin/prototype"
       />
       <Route
         access={
@@ -3326,7 +3331,7 @@ exports[`Application component should render application with routing for the us
           "component": [Function],
           "exact": true,
           "pageTitle": "Admin form prototype",
-          "path": undefined,
+          "path": "/admin/prototype",
         },
         Object {
           "access": Array [
