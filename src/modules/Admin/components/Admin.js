@@ -128,7 +128,7 @@ class Admin extends PureComponent {
                         <Grid item xs={'auto'}>
                             <Grid container direction={'row'} spacing={0} alignItems={'center'}>
                                 <Grid item>
-                                    <Tooltip title={`Switch to ${this.state.tabbed ? 'full form' : 'tabbed'} mode`} placement="left">
+                                    <Tooltip title={`Switch to ${this.state.tabbed ? 'full form' : 'tabbed'} mode`}>
                                         <Switch
                                             color={'primary'}
                                             checked={this.state.tabbed}
