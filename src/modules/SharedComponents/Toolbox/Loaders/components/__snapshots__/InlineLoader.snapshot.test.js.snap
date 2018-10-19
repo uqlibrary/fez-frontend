@@ -12,43 +12,83 @@ exports[`Component InlineLoader should render as expected 1`] = `
     alignContent="center"
     alignItems="center"
     container={true}
+    direction="row"
     justify="center"
-    spacing={16}
+    spacing={8}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+    </Hidden>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
       style={
         Object {
           "textAlign": "center",
         }
       }
-      xs={12}
+      xs="auto"
     >
       <WithStyles(CircularProgress)
         color="primary"
-        size={24}
+        size={18}
         thickness={2}
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm={true}
       style={
         Object {
           "textAlign": "center",
         }
       }
-      xs={12}
+      xs="auto"
     >
       <WithStyles(Typography)
         color="primary"
         component="span"
-        variant="h6"
+        style={
+          Object {
+            "fontSize": "1.33rem",
+          }
+        }
+        variant="h5"
       >
         This is a tst
       </WithStyles(Typography)>
     </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+    </Hidden>
   </WithStyles(Grid)>
 </div>
 `;
