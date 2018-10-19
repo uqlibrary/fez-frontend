@@ -13,6 +13,7 @@ const styles = (theme) => ({
         borderBottom: `1px solid ${theme.palette.secondary.light}`
     },
     ul: {
+        ...theme.typography.body2,
         listStyleType: 'none',
         padding: 0,
         margin: 0
@@ -29,9 +30,10 @@ export class PublicationDetails extends PureComponent {
         <div style={{padding: 8}}>
             <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="body2" classes={{root: this.props.classes.header}}>{heading}</Typography>
+                    <Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>{heading}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
+                <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                    <Typography variant="body2" component={'span'}>{data}</Typography></Grid>
             </Grid>
         </div>
     );
