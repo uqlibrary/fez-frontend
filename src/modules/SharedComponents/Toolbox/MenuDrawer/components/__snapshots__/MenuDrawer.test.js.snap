@@ -33,55 +33,55 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
   variant="temporary"
 >
   <React.Fragment>
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-      spacing={0}
-      wrap="nowrap"
-    >
-      <WithStyles(Grid)
-        item={true}
-        sm={12}
-        xs={10}
-        zeroMinWidth={true}
-      />
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={true}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={2}
-        >
-          <WithStyles(IconButton)
-            aria-label="Close menu"
-            onClick={[MockFunction]}
-          >
-            <pure(KeyboardArrowLeftIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
     <WithStyles(List)
       component="nav"
       id="mainMenu"
       tabIndex={-1}
     >
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        classes={
+          Object {
+            "container": undefined,
+          }
+        }
+        container={true}
+        spacing={0}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={12}
+          xs={10}
+          zeroMinWidth={true}
+        />
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={true}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={2}
+          >
+            <WithStyles(IconButton)
+              aria-label="Close menu"
+              onClick={[MockFunction]}
+            >
+              <pure(KeyboardArrowLeftIcon) />
+            </WithStyles(IconButton)>
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
       <span
         className="menu-item-container"
         key="menu_item_0"
@@ -159,55 +159,55 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   variant="permanent"
 >
   <React.Fragment>
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-      spacing={0}
-      wrap="nowrap"
-    >
-      <WithStyles(Grid)
-        item={true}
-        sm={12}
-        xs={10}
-        zeroMinWidth={true}
-      />
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={true}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={2}
-        >
-          <WithStyles(IconButton)
-            aria-label="Close menu"
-            onClick={[MockFunction]}
-          >
-            <pure(KeyboardArrowLeftIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
     <WithStyles(List)
       component="nav"
       id="mainMenu"
       tabIndex={-1}
     >
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        classes={
+          Object {
+            "container": undefined,
+          }
+        }
+        container={true}
+        spacing={0}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={12}
+          xs={10}
+          zeroMinWidth={true}
+        />
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={true}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={2}
+          >
+            <WithStyles(IconButton)
+              aria-label="Close menu"
+              onClick={[MockFunction]}
+            >
+              <pure(KeyboardArrowLeftIcon) />
+            </WithStyles(IconButton)>
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
       <div
         aria-label="Skip navigation"
         id="skipNav"
@@ -303,55 +303,55 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   variant="permanent"
 >
   <React.Fragment>
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-      spacing={0}
-      wrap="nowrap"
-    >
-      <WithStyles(Grid)
-        item={true}
-        sm={12}
-        xs={10}
-        zeroMinWidth={true}
-      />
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={true}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={2}
-        >
-          <WithStyles(IconButton)
-            aria-label="Close menu"
-            onClick={[MockFunction]}
-          >
-            <pure(KeyboardArrowLeftIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Grid)>
-      </Hidden>
-    </WithStyles(Grid)>
     <WithStyles(List)
       component="nav"
       id="mainMenu"
       tabIndex={-1}
     >
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="center"
+        classes={
+          Object {
+            "container": undefined,
+          }
+        }
+        container={true}
+        spacing={0}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={12}
+          xs={10}
+          zeroMinWidth={true}
+        />
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={true}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={2}
+          >
+            <WithStyles(IconButton)
+              aria-label="Close menu"
+              onClick={[MockFunction]}
+            >
+              <pure(KeyboardArrowLeftIcon) />
+            </WithStyles(IconButton)>
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
       <div
         aria-label="Skip navigation"
         id="skipNav"

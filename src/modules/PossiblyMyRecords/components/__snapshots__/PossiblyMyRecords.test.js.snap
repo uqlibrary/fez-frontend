@@ -352,7 +352,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
       item={true}
     >
       <WithStyles(InlineLoader)
-        message="Searching for possibly your publications..."
+        message="Searching for possibly your publications"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -382,7 +382,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
       item={true}
     >
       <WithStyles(InlineLoader)
-        message="Searching for possibly your publications..."
+        message="Searching for possibly your publications"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
