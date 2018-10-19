@@ -86,7 +86,7 @@ export default {
             }
         },
         myTrendingPublications: {
-            loading: 'Loading your trending publications...',
+            loading: 'Loading your trending publications',
             metrics: {
                 altmetric: {
                     title: 'Altmetric score',
@@ -129,11 +129,11 @@ export default {
             buttonLabel: 'OK'
         },
         myLatestPublications: {
-            loading: 'Loading your latest publications...',
+            loading: 'Loading your latest publications',
             viewAllButtonLabel: 'View all'
         },
         topCitedPublications: {
-            loading: 'Loading trending publications...',
+            loading: 'Loading trending publications',
             notAvailableAlert: {
                 type: 'error',
                 title: 'There has been an error',

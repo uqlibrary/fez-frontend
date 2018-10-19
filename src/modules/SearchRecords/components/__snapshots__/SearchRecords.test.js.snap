@@ -130,7 +130,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
             xs={12}
           >
             <span>
-              Searching for publications...
+              Searching for publications
             </span>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -166,7 +166,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
             item={true}
           >
             <WithStyles(InlineLoader)
-              message="Exporting search results..."
+              message="Exporting search results"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -217,7 +217,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for publications..."
+        message="Searching for publications"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -238,7 +238,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
             xs={12}
           >
             <span>
-              Searching for publications...
+              Searching for publications
             </span>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -274,7 +274,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
             item={true}
           >
             <WithStyles(InlineLoader)
-              message="Searching for publications..."
+              message="Searching for publications"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -325,7 +325,7 @@ exports[`SearchRecords page should render loading screen while loading search re
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for publications..."
+        message="Searching for publications"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>

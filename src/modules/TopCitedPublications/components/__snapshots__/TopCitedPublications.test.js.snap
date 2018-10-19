@@ -12,7 +12,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading trending publications..."
+      message="Loading trending publications"
     />
   </WithStyles(Grid)>
   <WithStyles(Grid)

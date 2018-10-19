@@ -7,9 +7,11 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     root: {
-        margin: '24px 0'
+        margin: '24px 0',
+        width: '100%'
     },
     text: {
+        alignText: 'center',
         color: theme.palette.primary.main,
     },
 });
@@ -27,14 +29,16 @@ export class InlineLoader extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <Grid container spacing={40} direction="row" justify="center" alignItems="center" className={classes.root}>
-                <Grid item>
-                    <CircularProgress size={32} thickness={1} color="primary"/>
+            <div style={{padding: 8}}>
+                <Grid container spacing={16} justify="center" alignItems="center" alignContent={'center'} className={classes.root}>
+                    <Grid item xs={12} sm={'auto'} style={{textAlign: 'center'}}>
+                        <CircularProgress size={24} thickness={2} color="primary"/>
+                    </Grid>
+                    <Grid item xs={12} sm style={{textAlign: 'center'}}>
+                        <Typography color={'primary'} variant={'h6'} component={'span'}>{this.props.message}</Typography>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <Typography className={classes.text} variant={'h6'}>{this.props.message}</Typography>
-                </Grid>
-            </Grid>
+            </div>
         );
     }
 }

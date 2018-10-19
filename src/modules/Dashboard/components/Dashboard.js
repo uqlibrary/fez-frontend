@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
 import {withStyles} from '@material-ui/core/styles';
 
 import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
@@ -157,15 +156,13 @@ export class Dashboard extends PureComponent {
                     {
                         !loading && this.props.authorDetails &&
                         <React.Fragment>
-                            <Hidden xsDown>
-                                <Grid item xs={12}>
-                                    <DashboardAuthorProfile
-                                        authorDetails={this.props.authorDetails}
-                                        author={this.props.author}
-                                        history={this.props.history}
-                                    />
-                                </Grid>
-                            </Hidden>
+                            <Grid item xs={12}>
+                                <DashboardAuthorProfile
+                                    authorDetails={this.props.authorDetails}
+                                    author={this.props.author}
+                                    history={this.props.history}
+                                />
+                            </Grid>
                             {
                                 !this.props.hidePossiblyYourPublicationsLure
                                 && !this.props.possiblyYourPublicationsCountLoading
