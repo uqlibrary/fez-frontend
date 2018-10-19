@@ -51,11 +51,7 @@ export default class ViewRecord extends PureComponent {
         const {loadingRecordToView, recordToViewError, recordToView} = this.props;
 
         if(loadingRecordToView) {
-            return (
-                <div className="is-centered">
-                    <InlineLoader message={txt.loadingMessage}/>
-                </div>
-            );
+            return <InlineLoader message={txt.loadingMessage}/>;
         } else if(recordToViewError) {
             return (
                 <StandardPage>

@@ -68,13 +68,9 @@ exports[`Component ViewRecord  should render error 1`] = `
 `;
 
 exports[`Component ViewRecord  should render loader 1`] = `
-<div
-  className="is-centered"
->
-  <WithStyles(InlineLoader)
-    message="Loading record"
-  />
-</div>
+<WithStyles(InlineLoader)
+  message="Loading record"
+/>
 `;
 
 exports[`Component ViewRecord  should render record view 1`] = `
