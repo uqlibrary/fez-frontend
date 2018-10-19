@@ -29,7 +29,8 @@ const PublicationMap = compose(
                 }
                 this.setState({
                     currentOverlay: currentOverlay,
-                    geoCoords: geoCoords
+                    geoCoords: geoCoords,
+                    isSearch: false
                 });
             };
 
@@ -38,6 +39,10 @@ const PublicationMap = compose(
                 zoom: geoCoords.length === 1 ? pointZoom : polygonZoom,
                 geoCoords: [...geoCoords],
                 currentOverlay: null,
+                onMapMounted: (bounds, geoCoords) => map => {
+                    refs.map = map;
+                    map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);
+                },
                 onBoundsChanged: () => {
                     this.setState({
                         bounds: refs.map.getBounds(),
@@ -68,8 +73,10 @@ const PublicationMap = compose(
 
                     this.setState({
                         center: nextCenter,
-                        geoCoords: nextMarkers,
+                        geoCoords: nextMarkers.map(coord => ({lat: coord.position.lat(), lng: coord.position.lng()})),
+                        isSearch: true
                     });
+                    refs.map.fitBounds(bounds);
                 },
                 handleRectangleComplete: (rectangle) => {
                     const ne = rectangle.getBounds().getNorthEast();
@@ -127,10 +134,10 @@ const PublicationMap = compose(
                     <GoogleMap
                         defaultZoom={props.zoom}
                         defaultCenter={props.center}
-                        ref={(map) => {map && bounds && props.geoCoords.length > 1 && map.fitBounds(bounds);}}
+                        ref={props.onMapMounted(bounds, props.geoCoords)}
                     >
                         {
-                            props.readOnly &&
+                            (props.readOnly || props.isSearch) &&
                             props.geoCoords.length >= 1 &&
                             (
                                 props.geoCoords.length > 1
@@ -169,15 +176,15 @@ const PublicationMap = compose(
                             >
                                 <input
                                     type="text"
-                                    placeholder="Customized your placeholder"
+                                    placeholder="Search..."
                                     style={{
                                         boxSizing: 'border-box',
                                         border: '1px solid transparent',
                                         width: '240px',
-                                        height: '32px',
-                                        marginTop: '27px',
+                                        height: '24px',
+                                        marginTop: '5px',
                                         padding: '0 12px',
-                                        borderRadius: '3px',
+                                        borderRadius: '3px 0px 0px 3px',
                                         boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
                                         fontSize: '14px',
                                         outline: 'none',

@@ -502,6 +502,7 @@ exports[`Publication's map coordinates should render component with a marker 1`]
             loadingElement={<div />}
             onBoundsChanged={[Function]}
             onDrawingManagerMounted={[Function]}
+            onMapMounted={[Function]}
             onPlacesChanged={[Function]}
             onSearchBoxMounted={[Function]}
             zoom={7}
@@ -1033,6 +1034,7 @@ exports[`Publication's map coordinates should render component with a selected a
             loadingElement={<div />}
             onBoundsChanged={[Function]}
             onDrawingManagerMounted={[Function]}
+            onMapMounted={[Function]}
             onPlacesChanged={[Function]}
             onSearchBoxMounted={[Function]}
             zoom={13}
@@ -1548,6 +1550,7 @@ exports[`Publication's map coordinates should render component with empty coordi
             loadingElement={<div />}
             onBoundsChanged={[Function]}
             onDrawingManagerMounted={[Function]}
+            onMapMounted={[Function]}
             onPlacesChanged={[Function]}
             onSearchBoxMounted={[Function]}
             zoom={7}
