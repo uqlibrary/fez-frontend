@@ -1,36 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component InlineLoader should render as expected 1`] = `
-<WithStyles(Grid)
-  alignItems="center"
-  container={true}
-  direction="row"
-  justify="center"
-  spacing={40}
+<div
+  style={
+    Object {
+      "padding": 8,
+    }
+  }
 >
   <WithStyles(Grid)
-    item={true}
+    alignContent="center"
+    alignItems="center"
+    container={true}
+    justify="center"
+    spacing={16}
   >
-    <WithStyles(CircularProgress)
-      color="primary"
-      size={32}
-      thickness={1}
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-  >
-    <WithStyles(Typography)
-      className={
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      style={
         Object {
-          "fontWeight": 200,
-          "margin": "24px 0",
+          "textAlign": "center",
         }
       }
-      variant="h6"
+      xs={12}
     >
-      This is a tst
-    </WithStyles(Typography)>
+      <WithStyles(CircularProgress)
+        color="primary"
+        size={24}
+        thickness={2}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        component="span"
+        variant="h6"
+      >
+        This is a tst
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
-</WithStyles(Grid)>
+</div>
 `;

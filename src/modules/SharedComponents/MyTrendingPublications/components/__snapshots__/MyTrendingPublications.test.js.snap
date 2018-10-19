@@ -9,7 +9,7 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading your trending publications..."
+      message="Loading your trending publications"
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>

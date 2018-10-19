@@ -86,7 +86,7 @@ export default {
             }
         },
         myTrendingPublications: {
-            loading: 'Loading your trending publications...',
+            loading: 'Loading your trending publications',
             metrics: {
                 altmetric: {
                     title: 'Altmetric score',
@@ -129,32 +129,32 @@ export default {
             buttonLabel: 'OK'
         },
         myLatestPublications: {
-            loading: 'Loading your latest publications...',
+            loading: 'Loading your latest publications',
             viewAllButtonLabel: 'View all'
         },
         topCitedPublications: {
-            loading: 'Loading trending publications...',
+            loading: 'Loading trending publications',
             notAvailableAlert: {
                 type: 'error',
                 title: 'There has been an error',
                 message: 'Trending publications are temporarily unavailable'
             },
             altmetric: {
-                title: (<span>Trending&nbsp;on Altmetric</span>),
+                title: (<span>Trending on Altmetric</span>),
                 mobileTitle: 'Trending',
                 heading: 'Altmetric score',
                 subHeading: 'The +plus score indicates recent increase in social media activity',
                 order: 0
             },
             scopus: {
-                title: (<span>Hot&nbsp;papers&nbsp;on Scopus</span>),
+                title: (<span>Hot papers on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
                 order: 1
             },
             thomson: {
-                title: (<span>Trending&nbsp;on Web&nbsp;of&nbsp;science</span>),
+                title: (<span>Trending on Web of science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',

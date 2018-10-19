@@ -567,7 +567,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Exporting your publications..."
+                message="Exporting your publications"
               />
             </div>
           </WithStyles(Grid)>
@@ -604,7 +604,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for your publications..."
+        message="Searching for your publications"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -687,7 +687,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Retrieving your publications..."
+                message="Retrieving your publications"
               />
             </div>
           </WithStyles(Grid)>
