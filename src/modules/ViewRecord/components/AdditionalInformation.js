@@ -183,6 +183,7 @@ export class AdditionalInformation extends PureComponent {
                 containerElement={<div style={{height: '400px'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}
                 coordinates={coordinatesList[0].rek_geographic_area}
+                readOnly
             />
         );
     };

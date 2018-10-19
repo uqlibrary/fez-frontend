@@ -11692,7 +11692,7 @@ exports[`Additional Information Component  should render component with data col
             component="span"
             variant="body2"
           >
-            <withScriptjs(withGoogleMap(Component))
+            <lifecycle(withScriptjs(withGoogleMap(Component)))
               containerElement={
                 <div
                   style={
@@ -11718,6 +11718,7 @@ exports[`Additional Information Component  should render component with data col
                   }
                 />
               }
+              readOnly={true}
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -14523,7 +14524,7 @@ exports[`Additional Information Component  should render component with data col
             component="span"
             variant="body2"
           >
-            <withScriptjs(withGoogleMap(Component))
+            <lifecycle(withScriptjs(withGoogleMap(Component)))
               containerElement={
                 <div
                   style={
@@ -14549,6 +14550,7 @@ exports[`Additional Information Component  should render component with data col
                   }
                 />
               }
+              readOnly={true}
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
