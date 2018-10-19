@@ -2,17 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
-
-const styles = theme => ({
-    root: {
-        margin: '24px 0'
-    },
-    text: {
-        color: theme.palette.primary.main,
-    },
-});
 
 export class InlineLoader extends React.Component {
     static propTypes = {
@@ -25,18 +17,25 @@ export class InlineLoader extends React.Component {
     };
 
     render() {
-        const {classes} = this.props;
         return (
-            <Grid container spacing={40} direction="row" justify="center" alignItems="center" className={classes.root}>
-                <Grid item>
-                    <CircularProgress size={32} thickness={1} color="primary"/>
+            <div style={{padding: 8}}>
+                <Grid container direction={'row'} spacing={8} justify="center" alignItems="center" alignContent={'center'}>
+                    <Hidden smUp>
+                        <Grid item xs />
+                    </Hidden>
+                    <Grid item xs={'auto'} style={{textAlign: 'center'}}>
+                        <CircularProgress size={18} thickness={2} color="primary"/>
+                    </Grid>
+                    <Grid item xs={'auto'} style={{textAlign: 'center'}}>
+                        <Typography color={'primary'} variant={'h5'} component={'span'} style={{fontSize: '1.33rem'}}>{this.props.message}</Typography>
+                    </Grid>
+                    <Hidden smUp>
+                        <Grid item xs />
+                    </Hidden>
                 </Grid>
-                <Grid item>
-                    <Typography className={classes.text} variant={'h6'}>{this.props.message}</Typography>
-                </Grid>
-            </Grid>
+            </div>
         );
     }
 }
 
-export default withStyles(styles, {withTheme: true})(InlineLoader);
+export default withStyles(null, {withTheme: true})(InlineLoader);

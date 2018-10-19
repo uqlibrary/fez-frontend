@@ -6,6 +6,7 @@ import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
+import withWidth from '@material-ui/core/withWidth';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
@@ -32,14 +33,15 @@ const styles = theme => ({
     }
 });
 
-export class TopCitedPublications extends PureComponent {
+export class TopCitedPublicationsClass extends PureComponent {
     static propTypes = {
         topCitedPublicationsList: PropTypes.array,
         loadingTopCitedPublications: PropTypes.bool,
         actions: PropTypes.object.isRequired,
         showSourceCountIcon: PropTypes.bool,
         theme: PropTypes.object,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        width: PropTypes.string
     };
 
     static defaultProps = {
@@ -97,7 +99,7 @@ export class TopCitedPublications extends PureComponent {
                             {/* Tabs */}
                             {reorderedItems.map(({key, values}) => (
                                 values && values.length >= 1 &&
-                                <Tab className={classes.tab} key={key} label={txt[key].title} value={key}/>
+                                <Tab className={classes.tab} key={key} label={this.props.width === 'xs' ? txt[key].mobileTitle : txt[key].title} value={key}/>
                             ))}
                         </Tabs>
 
@@ -128,5 +130,5 @@ export class TopCitedPublications extends PureComponent {
         );
     }
 }
-
+const TopCitedPublications = withWidth()(TopCitedPublicationsClass);
 export default withStyles(styles)(TopCitedPublications);

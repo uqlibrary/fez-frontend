@@ -3840,7 +3840,7 @@ exports[`Application component should render application with routing for the us
     />
     <Connect(AppAlert) />
     <WithStyles(InlineLoader)
-      message="Loading user account..."
+      message="Loading account"
     />
   </div>
   <Connect(WithStyles(HelpDrawer)) />
