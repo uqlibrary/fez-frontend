@@ -162,13 +162,13 @@ export class AdditionalInformation extends PureComponent {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} separator={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={''} suffix={''} separator={', '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 
     renderAuthors = (publication) => {
         return (
-            <AuthorsCitationView key="additional-information-authors" publication={publication} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
+            <AuthorsCitationView key="additional-information-authors" publication={publication} prefix={''} suffix={''} separator={', '} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
         );
     }
 

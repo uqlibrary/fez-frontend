@@ -37,8 +37,8 @@ export default {
             label: 'University of Queensland',
             link: 'http://www.uq.edu.au'
         },
-        loading: 'Loading...',
-        loadingUserAccount: 'Loading user account...',
+        loading: 'Loading',
+        loadingUserAccount: 'Loading account',
         mainNavButton: {
             tooltip: 'Main navigation',
             aria: 'Click to open the main navigation',

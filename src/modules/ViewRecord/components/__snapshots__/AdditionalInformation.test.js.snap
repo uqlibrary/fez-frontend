@@ -55,6 +55,7 @@ exports[`Additional Information Component  should render component with audio do
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={5}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -426,7 +427,9 @@ exports[`Additional Information Component  should render component with audio do
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -1084,6 +1087,7 @@ exports[`Additional Information Component  should render component with book 1`]
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={4}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -1382,7 +1386,9 @@ exports[`Additional Information Component  should render component with book 1`]
                   "rek_wok_doc_type": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -1797,7 +1803,7 @@ exports[`Additional Information Component  should render component with book 1`]
             <EditorsCitationView
               initialNumberOfEditors={3}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -2096,7 +2102,7 @@ exports[`Additional Information Component  should render component with book 1`]
                   "rek_wok_doc_type": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -2208,6 +2214,7 @@ exports[`Additional Information Component  should render component with book cha
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={5}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -2624,7 +2631,9 @@ exports[`Additional Information Component  should render component with book cha
                   "rek_wok_doc_type": "@",
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -3185,7 +3194,7 @@ exports[`Additional Information Component  should render component with book cha
             <EditorsCitationView
               initialNumberOfEditors={3}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -3602,7 +3611,7 @@ exports[`Additional Information Component  should render component with book cha
                   "rek_wok_doc_type": "@",
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -4224,6 +4233,7 @@ exports[`Additional Information Component  should render component with conferen
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={14}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -4909,7 +4919,9 @@ exports[`Additional Information Component  should render component with conferen
                   "rek_wok_doc_type": "MC",
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -6499,7 +6511,7 @@ exports[`Additional Information Component  should render component with conferen
             <EditorsCitationView
               initialNumberOfEditors={2}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -6908,7 +6920,7 @@ exports[`Additional Information Component  should render component with conferen
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -8007,6 +8019,7 @@ exports[`Additional Information Component  should render component with creative
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -8407,7 +8420,9 @@ exports[`Additional Information Component  should render component with creative
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -9129,7 +9144,7 @@ exports[`Additional Information Component  should render component with data col
             <EditorsCitationView
               initialNumberOfEditors={1}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -9885,7 +9900,7 @@ exports[`Additional Information Component  should render component with data col
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -9989,6 +10004,7 @@ exports[`Additional Information Component  should render component with data col
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={5}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -10744,7 +10760,9 @@ exports[`Additional Information Component  should render component with data col
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -12728,7 +12746,7 @@ exports[`Additional Information Component  should render component with data col
             <EditorsCitationView
               initialNumberOfEditors={1}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -13231,7 +13249,7 @@ exports[`Additional Information Component  should render component with data col
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -13335,6 +13353,7 @@ exports[`Additional Information Component  should render component with data col
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={5}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -13837,7 +13856,9 @@ exports[`Additional Information Component  should render component with data col
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -14909,6 +14930,7 @@ exports[`Additional Information Component  should render component with design d
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={2}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_acknowledgements": null,
@@ -15321,7 +15343,9 @@ exports[`Additional Information Component  should render component with design d
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -15822,7 +15846,7 @@ exports[`Additional Information Component  should render component with design d
             <EditorsCitationView
               initialNumberOfEditors={9}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_acknowledgements": null,
@@ -16235,7 +16259,7 @@ exports[`Additional Information Component  should render component with design d
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -16776,6 +16800,7 @@ exports[`Additional Information Component  should render component with digilib 
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_alternative_title": Array [],
@@ -17058,7 +17083,9 @@ exports[`Additional Information Component  should render component with digilib 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -17870,6 +17897,7 @@ exports[`Additional Information Component  should render component with generic 
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -18339,7 +18367,9 @@ exports[`Additional Information Component  should render component with generic 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -18390,7 +18420,7 @@ exports[`Additional Information Component  should render component with generic 
             <EditorsCitationView
               initialNumberOfEditors={2}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -18860,7 +18890,7 @@ exports[`Additional Information Component  should render component with generic 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -19230,7 +19260,7 @@ exports[`Additional Information Component  should render component with journal 
             <EditorsCitationView
               initialNumberOfEditors={1}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -19559,7 +19589,7 @@ exports[`Additional Information Component  should render component with journal 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -20159,6 +20189,7 @@ exports[`Additional Information Component  should render component with journal 
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={9}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -21222,7 +21253,9 @@ exports[`Additional Information Component  should render component with journal 
                   "rek_wok_doc_type": "@",
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -23258,6 +23291,7 @@ exports[`Additional Information Component  should render component with manuscri
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -23713,7 +23747,9 @@ exports[`Additional Information Component  should render component with manuscri
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -23962,7 +23998,7 @@ exports[`Additional Information Component  should render component with manuscri
             <EditorsCitationView
               initialNumberOfEditors={2}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -24418,7 +24454,7 @@ exports[`Additional Information Component  should render component with manuscri
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -24986,6 +25022,7 @@ exports[`Additional Information Component  should render component with patent 1
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={4}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_article_number": null,
@@ -25200,7 +25237,9 @@ exports[`Additional Information Component  should render component with patent 1
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -26015,6 +26054,7 @@ exports[`Additional Information Component  should render component with preprint
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={3}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -26345,7 +26385,9 @@ exports[`Additional Information Component  should render component with preprint
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -26661,6 +26703,7 @@ exports[`Additional Information Component  should render component with proceedi
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={3}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -27278,7 +27321,9 @@ exports[`Additional Information Component  should render component with proceedi
                   "rek_wok_doc_type_xsdmf_id": 12551,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -28986,6 +29031,7 @@ exports[`Additional Information Component  should render component with referenc
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_matched_journals": Array [],
@@ -29261,7 +29307,9 @@ exports[`Additional Information Component  should render component with referenc
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -29511,7 +29559,7 @@ exports[`Additional Information Component  should render component with referenc
             <EditorsCitationView
               initialNumberOfEditors={2}
               key="additional-information-editors"
-              prefix=" "
+              prefix=""
               publication={
                 Object {
                   "fez_matched_journals": Array [],
@@ -29787,7 +29835,7 @@ exports[`Additional Information Component  should render component with referenc
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              separator=""
+              separator=", "
               showLink={true}
               suffix=""
             />
@@ -30309,6 +30357,7 @@ exports[`Additional Information Component  should render component with research
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -30583,7 +30632,9 @@ exports[`Additional Information Component  should render component with research
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -31047,6 +31098,7 @@ exports[`Additional Information Component  should render component with thesis 1
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -31324,7 +31376,9 @@ exports[`Additional Information Component  should render component with thesis 1
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -31955,6 +32009,7 @@ exports[`Additional Information Component  should render component with video do
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_record_search_key_access_conditions": null,
@@ -32243,7 +32298,9 @@ exports[`Additional Information Component  should render component with video do
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -32758,6 +32815,7 @@ exports[`Additional Information Component  should render component with working 
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={2}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -33090,7 +33148,9 @@ exports[`Additional Information Component  should render component with working 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -34041,6 +34101,7 @@ exports[`Additional Information Component  should render oa status value link in
             <WithStyles(AuthorsCitationView)
               initialNumberOfAuthors={1}
               key="additional-information-authors"
+              prefix=""
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -34319,7 +34380,9 @@ exports[`Additional Information Component  should render oa status value link in
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
+              separator=", "
               showLink={true}
+              suffix=""
             />
           </WithStyles(Typography)>
         </WithStyles(Grid)>
