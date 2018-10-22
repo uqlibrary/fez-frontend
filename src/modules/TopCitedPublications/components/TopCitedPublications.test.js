@@ -1,5 +1,5 @@
 import {trendingPublications} from 'mock/data/testing/trendingPublications';
-import {TopCitedPublications} from './TopCitedPublications';
+import {TopCitedPublicationsClass} from './TopCitedPublications';
 import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
 
 function setup(testProps, isShallow = true){
@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true){
         },
         ...testProps
     };
-    return getElement(TopCitedPublications, props, isShallow);
+    return getElement(TopCitedPublicationsClass, props, isShallow);
 }
 
 describe('Component TopCitedPublications', () => {

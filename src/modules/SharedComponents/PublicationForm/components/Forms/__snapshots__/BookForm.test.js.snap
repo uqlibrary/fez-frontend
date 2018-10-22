@@ -91,7 +91,7 @@ exports[`BookForm renders  component 1`] = `
             locale={
               Object {
                 "label": "Publication subtype",
-                "loading": "Loading...",
+                "loading": "Loading",
               }
             }
             name="rek_subtype"

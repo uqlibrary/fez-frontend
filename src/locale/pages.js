@@ -136,7 +136,7 @@ export default {
             )
         },
         dashboard: {
-            loading: 'Loading your dashboard...',
+            loading: 'Loading your dashboard',
             header: {
                 // help: {
                 //     title: 'Your dashboard',
@@ -199,9 +199,9 @@ export default {
                     Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
                 </span>
             ),
-            loadingMessage: 'Searching for your publications...',
-            loadingPagingMessage: 'Retrieving your publications...',
-            exportPublicationsLoadingMessage: 'Exporting your publications...',
+            loadingMessage: 'Searching for your publications',
+            loadingPagingMessage: 'Retrieving your publications',
+            exportPublicationsLoadingMessage: 'Exporting your publications',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
@@ -222,8 +222,8 @@ export default {
                     Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
                 </span>
             ),
-            loadingMessage: 'Searching for your datasets...',
-            loadingPagingMessage: 'Retrieving your datasets...',
+            loadingMessage: 'Searching for your datasets',
+            loadingPagingMessage: 'Retrieving your datasets',
             noResultsFound: {
                 title: 'No datasets found',
                 text: (
@@ -240,7 +240,7 @@ export default {
         },
         claimPublications: {
             title: 'Claim possible publications',
-            loadingMessage: 'Searching for possibly your publications...',
+            loadingMessage: 'Searching for possibly your publications',
             noResultsFound: {
                 title: 'No matching publications found',
                 text: (
@@ -353,7 +353,7 @@ export default {
                         ]
                     }
                 },
-                loadingMessage: 'Searching for publications...',
+                loadingMessage: 'Searching for publications',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
                 claim: 'Claim this publication',
@@ -380,7 +380,7 @@ export default {
             }
         },
         fixRecord: {
-            loadingMessage: 'Loading record...',
+            loadingMessage: 'Loading record',
             title: 'Request a correction or upload files',
             subTitle: 'Record to be amended',
             fieldLabels: {
@@ -400,15 +400,15 @@ export default {
             submit: 'Submit'
         },
         viewRecord: {
-            loadingMessage: 'Loading record...',
+            loadingMessage: 'Loading record',
             thumbnailTitle: 'Click to open a preview of [image]'
         },
         searchRecords: {
             title: 'eSpace search',
-            loadingMessage: 'Searching for publications...',
+            loadingMessage: 'Searching for publications',
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
-            loadingPagingMessage: 'Searching for publications...',
-            exportPublicationsLoadingMessage: 'Exporting search results...',
+            loadingPagingMessage: 'Searching for publications',
+            exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
                 title: 'No publications found',
                 text: (

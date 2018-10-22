@@ -412,7 +412,7 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for your datasets..."
+        message="Searching for your datasets"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -490,7 +490,7 @@ exports[`myDatasets test renders loading screen while loading publications while
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Retrieving your datasets..."
+                message="Retrieving your datasets"
               />
             </div>
           </WithStyles(Grid)>

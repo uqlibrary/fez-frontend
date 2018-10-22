@@ -12,7 +12,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading trending publications..."
+      message="Loading trending publications"
     />
   </WithStyles(Grid)>
   <WithStyles(Grid)
@@ -42,7 +42,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="altmetric"
         label={
           <span>
-            Trending on Altmetric
+            Trending on Altmetric
           </span>
         }
         value="altmetric"
@@ -51,7 +51,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="scopus"
         label={
           <span>
-            Hot papers on Scopus
+            Hot papers on Scopus
           </span>
         }
         value="scopus"
@@ -60,7 +60,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="thomson"
         label={
           <span>
-            Trending on Web of science
+            Trending on Web of science
           </span>
         }
         value="thomson"

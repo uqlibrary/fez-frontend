@@ -7,63 +7,49 @@ exports[`Dashboard test does render latest and trending publications tabs correc
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -152,63 +138,49 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -281,63 +253,49 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -694,63 +652,49 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -827,63 +771,49 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
     </React.Fragment>
   </WithStyles(Grid)>
 </StandardPage>
@@ -896,63 +826,49 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -982,63 +898,49 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
     </React.Fragment>
   </WithStyles(Grid)>
 </StandardPage>
@@ -1051,63 +953,49 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -1146,63 +1034,49 @@ exports[`Dashboard test renders dashboard header only 1`] = `
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
@@ -1232,63 +1106,49 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
     spacing={24}
   >
     <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorProfile)
-            authorDetails={
-              Object {
-                "espace": Object {
-                  "doc_count": 357,
-                  "first_year": 1975,
-                  "last_year": 2018,
-                },
-                "espace_id": 20288,
-                "family_name": "Researcher",
-                "given_name": "J",
-                "google_scholar_id": "kUemDfMAAAAJ",
-                "image_exists": 1,
-                "mypub_url": "uqresearcher",
-                "orcid_id": "0000-0001-1111-1111",
-                "org_units": Array [
-                  "Institute for Molecular Bioscience",
-                  "Institute for Molecular Bioscience",
-                  "School of Chemistry and Molecular Biosciences",
-                  "The University of Queensland Diamantina Institute",
-                ],
-                "positions": Array [
-                  "Affiliate Professor",
-                  "Casual Affiliate Professor",
-                  "Affiliate Professorial Res Fellow",
-                  "ARC Australian Laureate Fellow",
-                ],
-                "publons_id": "",
-                "researcher_id": "G-111-1111",
-                "scopus_id": "",
-                "staff_id": "0000111",
-                "title": "Professor",
-                "uqr_id": 14,
-                "username": "uqresearcher",
-              }
+        <WithStyles(DashboardAuthorProfile)
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Casual Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
             }
-            history={Object {}}
-          />
-        </WithStyles(Grid)>
-      </Hidden>
+          }
+          history={Object {}}
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         style={
