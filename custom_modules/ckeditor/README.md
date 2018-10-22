@@ -1,39 +1,45 @@
-CKEditor 4
-==========
+# CKEditor 4
 
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
-http://ckeditor.com - See LICENSE.md for license information.
+this is a pre-compiled version of CKEditor 4 with minimum required elements for eSpace.
+Webpack loader is added to import CKEditor as a module (from https://www.fomfus.com/articles/how-to-use-ckeditor-4-with-webpack)
 
-CKEditor is a text editor to be used inside web pages. It's not a replacement
-for desktop text editors like Word or OpenOffice, but a component to be used as
-part of web applications and websites.
+## Build details
 
-## Documentation
+This package is manually built on CKEditor website (CKEditor4 doesn't properly support proper JS modules/npm install)
+Steps to build requied CKEditor:
 
-The full editor documentation is available online at the following address:
-https://ckeditor.com/docs/ckeditor4/latest/
+- Navigate to https://ckeditor.com/cke4/builder
+- 1.Select preset: Basic
+- 2.Select plugins:
+    - Add plugins: 
+        - Special Characters
+        - Remove format
+    - Remove plugins:
+        - About CKEditor
+        - Link
+        - List
+        - Indent List
+    - Final list of plugins
+        - Special characters
+        - Remove format
+        - Basic styles
+        - Clipboard
+        - Editor toolbar
+        - Enter Key
+        - Escape HTML Entitites
+        - Floating space
+        - IFrame editing area
+        - Undo
+        - Dialog
+        - Dialog UI
+        - Notification
+        - UI Button
+  - Skin: Moono-Lisa 
+- 3.Finalize and download: English only
+- Download Optimized package
+- Compare it to custom_modules/ckeditor_build/* to make sure update is valid and no plugins are missing (build-config.js)
+- Replace all contents of ckeditor_build with new package
 
-## Installation
-
-Installing CKEditor is an easy task. Just follow these simple steps:
-
- 1. **Download** the latest version from the CKEditor website:
-    http://ckeditor.com. You should have already completed this step, but be
-    sure you have the very latest version.
- 2. **Extract** (decompress) the downloaded file into the root of your website.
-
-**Note:** CKEditor is by default installed in the `ckeditor` folder. You can
-place the files in whichever you want though.
-
-## Checking Your Installation
-
-The editor comes with a few sample pages that can be used to verify that
-installation proceeded properly. Take a look at the `samples` directory.
-
-To test your installation, just call the following page at your website:
-
-	http://<your site>/<CKEditor installation path>/samples/index.html
-
-For example:
-
-	http://www.example.com/ckeditor/samples/index.html
+## Known issues
+When deployed to development environment (s3:dev/espace/master) CKEditor manually loads files (config.js/styles.js/etc) from root directory (s3:custom_modules/ckeditor). For a temporary fix custom_modules was uploaded to s3:dev directly.
+It's not an issue in staging, production environment.
