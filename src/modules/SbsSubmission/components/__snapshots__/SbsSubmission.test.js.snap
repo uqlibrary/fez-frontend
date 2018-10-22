@@ -94,7 +94,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
-  Hello
   <form>
     <NavigationDialogBox
       txt={
@@ -617,7 +616,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
-  Hello
   <form>
     <NavigationDialogBox
       txt={
