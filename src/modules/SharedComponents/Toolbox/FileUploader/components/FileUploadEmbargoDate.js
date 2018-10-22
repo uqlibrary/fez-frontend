@@ -2,6 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'material-ui-pickers/DatePicker';
 import { withStyles } from '@material-ui/core/styles';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import Event from '@material-ui/icons/Event';
 
 
 export class FileUploadEmbargoDate extends PureComponent {
@@ -33,13 +36,18 @@ export class FileUploadEmbargoDate extends PureComponent {
 
         return (
             <DatePicker
-                autoOk
                 format="DD/MM/YYYY"
                 minDate={this.props.minDate}
                 value={this.props.value}
                 onChange={this._onChange}
                 disabled={this.props.disabled}
                 InputProps={inputProps}
+                keyboard
+                allowKeyboardControl
+                autoOk
+                leftArrowIcon={<KeyboardArrowLeft/>}
+                rightArrowIcon={<KeyboardArrowRight/>}
+                keyboardIcon={<Event/>}
             />
         );
     }

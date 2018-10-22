@@ -10,11 +10,16 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
       "disableUnderline": true,
     }
   }
+  allowKeyboardControl={true}
   autoOk={true}
   disabled={true}
   format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
   minDate={2016-01-01T00:00:00.000Z}
   onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
 />
 `;
@@ -29,10 +34,15 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
       "disableUnderline": true,
     }
   }
+  allowKeyboardControl={true}
   autoOk={true}
   format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
   minDate={2016-01-01T00:00:00.000Z}
   onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
 />
 `;
@@ -47,10 +57,15 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
       "disableUnderline": true,
     }
   }
+  allowKeyboardControl={true}
   autoOk={true}
   format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
   minDate={2016-01-01T00:00:00.000Z}
   onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
 />
 `;
@@ -65,10 +80,15 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
       "disableUnderline": true,
     }
   }
+  allowKeyboardControl={true}
   autoOk={true}
   format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
   minDate={2016-01-01T00:00:00.000Z}
   onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
 />
 `;
