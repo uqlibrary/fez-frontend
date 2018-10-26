@@ -78,23 +78,12 @@ export default class SbsSubmission extends Component {
 
         if (this.props.submitSucceeded) {
             return (
-                <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+                <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
+                            <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
+                                <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
                             </StandardCard>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={16}>
-                        <Grid item xs/>
-                        <Grid item>
-                            <Button
-                                variant={'raised'}
-                                color={'primary'}
-                                fullWidth
-                                children={formLocale.thesisSubmission.afterSubmit}
-                                onClick={this.afterSubmit}/>
                         </Grid>
                     </Grid>
                 </StandardPage>
