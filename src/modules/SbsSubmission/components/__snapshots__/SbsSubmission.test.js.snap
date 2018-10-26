@@ -16,30 +16,11 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
         title="Your thesis has been deposited"
       >
         <WithStyles(Typography)>
-          You will receive an email confirming your thesis deposit shortly.
+          <p>
+            You have successfully deposited your thesis to UQ eSpace.  You wil receive a confirmation email soon.
+          </p>
         </WithStyles(Typography)>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={16}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
-      >
-        Return to the Graduate School website
-      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
@@ -61,30 +42,11 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
         title="Your thesis has been deposited"
       >
         <WithStyles(Typography)>
-          You will receive an email confirming your thesis deposit shortly.
+          <p>
+            You have successfully deposited your thesis to UQ eSpace.  You wil receive a confirmation email soon.
+          </p>
         </WithStyles(Typography)>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={16}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="raised"
-      >
-        Return to the Graduate School website
-      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>

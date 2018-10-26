@@ -1178,8 +1178,8 @@ export default {
                         Document name could be thesis, abstract, and etc.
                         For example:
                         <ul>
-                            <li>s1234567_phd_thesis.pdf</li>
-                            <li>s1234567_phd_abstract.pdf</li>
+                            <li>s1234567_pd_abstract.pdf</li>
+                            <li>s1234567_pd_totalthesis.pdf</li>
                         </ul>
                         Supplementary audio files are to be in MP 3 format. <br />
                         Supplementary video files are to be in WMV or AVI format. <br />
@@ -1198,9 +1198,8 @@ export default {
         cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
-        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
-        afterSubmit: 'Return to the Graduate School website',
-        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>),
+        afterSubmitTitle: 'Your thesis has been deposited',
+        afterSubmitText: (<p>You have successfully deposited your thesis to UQ eSpace.  You wil receive a confirmation email soon.</p>),
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
             confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
