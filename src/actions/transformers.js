@@ -67,7 +67,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         });
     const attachmentEmbargoDates = files
         .map((item, index) => {
-            if (!item.hasOwnProperty('date') || !item.date) return null;
+            if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) return null;
             return {
                 rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
                 rek_file_attachment_embargo_date_order: initialCount + index + 1
