@@ -1529,20 +1529,13 @@ exports[`Publication's map coordinates should render component with empty coordi
           <withScriptjs(withGoogleMap(Component))
             center={
               Object {
-                "lat": NaN,
-                "lng": 0,
+                "lat": -27.499412,
+                "lng": 153.013346,
               }
             }
             coordinates=""
             currentOverlay={null}
-            geoCoords={
-              Array [
-                Object {
-                  "lat": NaN,
-                  "lng": 0,
-                },
-              ]
-            }
+            geoCoords={Array []}
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places"
             handleMarkerComplete={[Function]}
             handlePolygonComplete={[Function]}
@@ -1553,7 +1546,7 @@ exports[`Publication's map coordinates should render component with empty coordi
             onMapMounted={[Function]}
             onPlacesChanged={[Function]}
             onSearchBoxMounted={[Function]}
-            zoom={7}
+            zoom={13}
           >
             <div />
           </withScriptjs(withGoogleMap(Component))>

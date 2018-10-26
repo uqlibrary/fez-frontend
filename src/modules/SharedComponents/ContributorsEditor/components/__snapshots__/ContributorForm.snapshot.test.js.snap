@@ -30,11 +30,11 @@ exports[`Component ContributorForm should render display name field and identifi
         autoComplete="off"
         disabled={false}
         fullWidth={true}
-        helperText="Please type the name exactly as published"
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
+        placeholder="Please type the name exactly as published"
         value=""
       />
     </WithStyles(Grid)>
@@ -100,11 +100,11 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         autoComplete="off"
         disabled={false}
         fullWidth={true}
-        helperText="Please type the name exactly as published"
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
+        placeholder="Please type the name exactly as published"
         value=""
       />
     </WithStyles(Grid)>

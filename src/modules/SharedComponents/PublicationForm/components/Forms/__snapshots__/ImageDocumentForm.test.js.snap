@@ -105,6 +105,8 @@ exports[`ImageDocumentForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add creator",
+                "creatorRoleHint": "Type the role of the creator in relation to the dataset",
+                "creatorRoleLabel": "Enter creator's role",
                 "descriptionStep1": <div>
                   <span
                     className="authorSteps"
@@ -154,6 +156,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
                 "identifierColumn": "UQ identifier",
                 "nameColumn": "Creator's name as published",
                 "reorderColumn": "Reorder items",
+                "roleColumn": "Creator's role",
               },
             },
             "row": Object {

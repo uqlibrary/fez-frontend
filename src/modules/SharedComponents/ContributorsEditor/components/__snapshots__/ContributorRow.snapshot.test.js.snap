@@ -56,35 +56,51 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary ",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -164,35 +180,51 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary ",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -272,35 +304,51 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary ",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          A. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              A. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -380,35 +428,51 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary ",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          A. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              A. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -488,35 +552,51 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary ",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Move record up the order"
@@ -630,35 +710,51 @@ exports[`Component ContributorRow  a row with index and contributor with author 
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary selected",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "selected",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -738,35 +834,51 @@ exports[`Component ContributorRow  a row with index and contributor with author 
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary selected",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "selected",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
