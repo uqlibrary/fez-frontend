@@ -102,7 +102,7 @@ export default class SbsSubmission extends Component {
                 }
             }});
         return (
-            <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+            <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
