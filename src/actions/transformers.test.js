@@ -98,10 +98,6 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
             ],
             fez_record_search_key_file_attachment_embargo_date: [
                 {
-                    rek_file_attachment_embargo_date: '2018-01-01',
-                    rek_file_attachment_embargo_date_order: 1
-                },
-                {
                     rek_file_attachment_embargo_date: '2018-01-31',
                     rek_file_attachment_embargo_date_order: 2
                 },
@@ -249,12 +245,7 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
                     rek_file_attachment_name_order: 3
                 }
             ],
-            fez_record_search_key_file_attachment_embargo_date: [
-                {
-                    rek_file_attachment_embargo_date: '2018-01-01',
-                    rek_file_attachment_embargo_date_order: 2
-                }
-            ],
+            fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [
                 {
                     rek_file_attachment_access_condition: 1,
@@ -269,7 +260,6 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
         const result = transformers.getRecordFileAttachmentSearchKey(files, record);
         expect(result).toEqual(expected);
     });
-
 });
 
 describe('getFixIssueRequest test ', () => {
