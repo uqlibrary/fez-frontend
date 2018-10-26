@@ -15,6 +15,7 @@ import Grid from '@material-ui/core/Grid';
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
+        showRoleInput: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         disabled: PropTypes.bool,
         meta: PropTypes.object,
@@ -28,6 +29,7 @@ export class ContributorsEditor extends PureComponent {
 
     static defaultProps = {
         showIdentifierLookup: false,
+        showRoleInput: false,
         showContributorAssignment: false,
         locale: {
             errorTitle: 'Error',
@@ -133,7 +135,7 @@ export class ContributorsEditor extends PureComponent {
     };
 
     render() {
-        const {classes, showIdentifierLookup, showContributorAssignment, disabled} = this.props;
+        const {classes, showIdentifierLookup, showContributorAssignment, disabled, showRoleInput} = this.props;
         const {contributors, isCurrentAuthorSelected, errorMessage} = this.state;
 
         const renderContributorsRows = contributors.map((contributor, index) => (
@@ -147,6 +149,7 @@ export class ContributorsEditor extends PureComponent {
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
                 showIdentifierLookup={showIdentifierLookup}
+                showRoleInput={showRoleInput}
                 contributorSuffix={this.props.locale.contributorSuffix}
                 disabled={disabled}
                 showContributorAssignment={showContributorAssignment}
@@ -180,6 +183,7 @@ export class ContributorsEditor extends PureComponent {
                 <ContributorForm
                     onAdd={this.addContributor}
                     showIdentifierLookup={showIdentifierLookup}
+                    showRoleInput={showRoleInput}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     disabled={disabled}
                     showContributorAssignment={showContributorAssignment}
@@ -194,6 +198,7 @@ export class ContributorsEditor extends PureComponent {
                                     onDeleteAll={this.deleteAllContributors}
                                     {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                                     showIdentifierLookup={showIdentifierLookup}
+                                    showRoleInput={showRoleInput}
                                     disabled={disabled}
                                     showContributorAssignment={showContributorAssignment}
                                     isInfinite={contributors.length > 3}

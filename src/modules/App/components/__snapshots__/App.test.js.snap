@@ -58,7 +58,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "researcher",
             "admin",
           ],
-          "component": undefined,
+          "component": [Function],
           "exact": true,
           "pageTitle": "Add data collection",
           "path": "/data-collections/add",
@@ -509,6 +509,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
+        component={[Function]}
         exact={true}
         key="route_6"
         pageTitle="Add data collection"
@@ -710,7 +711,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "researcher",
             "admin",
           ],
-          "component": undefined,
+          "component": [Function],
           "exact": true,
           "pageTitle": "Add data collection",
           "path": "/data-collections/add",
@@ -1139,6 +1140,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
+        component={[Function]}
         exact={true}
         key="route_6"
         pageTitle="Add data collection"
@@ -1685,7 +1687,7 @@ exports[`Application component should render app for account with fez author wit
             "researcher",
             "admin",
           ],
-          "component": undefined,
+          "component": [Function],
           "exact": true,
           "pageTitle": "Add data collection",
           "path": "/data-collections/add",
@@ -2114,6 +2116,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
+        component={[Function]}
         exact={true}
         key="route_6"
         pageTitle="Add data collection"
@@ -2315,7 +2318,7 @@ exports[`Application component should render app for account with fez author wit
             "researcher",
             "admin",
           ],
-          "component": undefined,
+          "component": [Function],
           "exact": true,
           "pageTitle": "Add data collection",
           "path": "/data-collections/add",
@@ -2768,6 +2771,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
+        component={[Function]}
         exact={true}
         key="route_6"
         pageTitle="Add data collection"
@@ -2969,7 +2973,7 @@ exports[`Application component should render app for account with fez author wit
             "researcher",
             "admin",
           ],
-          "component": undefined,
+          "component": [Function],
           "exact": true,
           "pageTitle": "Add data collection",
           "path": "/data-collections/add",
@@ -3274,6 +3278,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
+        component={[Function]}
         exact={true}
         key="route_6"
         pageTitle="Add data collection"
@@ -3475,7 +3480,7 @@ exports[`Application component should render application with routing for the us
             "researcher",
             "admin",
           ],
-          "component": undefined,
+          "component": [Function],
           "exact": true,
           "pageTitle": "Add data collection",
           "path": "/data-collections/add",

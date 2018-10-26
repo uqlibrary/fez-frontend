@@ -26,6 +26,7 @@ export default {
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
+        rek_description: 'Description is required',
         rek_book_title: 'Book title is required',
         rek_date: 'Publication date is required',
         rek_subtype: 'Publication subtype is required',
@@ -56,6 +57,10 @@ export default {
         contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
-        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).'
+        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).',
+        contactName: 'Contact name is required',
+        contactId: 'ID for contact name is required',
+        contactEmail: 'Contact email is required',
+        accessCondition: 'Access condition is required'
     }
 };

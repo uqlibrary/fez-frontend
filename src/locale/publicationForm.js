@@ -1215,11 +1215,25 @@ export default {
         depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
     },
     addDataset: {
+        pageTitle: 'Add data collection',
         information: {
+            agreement: {
+                title: 'Deposit agreement',
+                text: (
+                    <div>
+                        <p>1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;</p>
+                        <p>2.   I have permission to include any third-party content contained in the dataset;</p>
+                        <p>3.   The dataset is original;</p>
+                        <p>4.   The dataset does not infringe the legal rights of any third-party;</p>
+                        <p>5.   I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;</p>
+                        <p>6.   The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.</p>
+                    </div>
+                )
+            },
             dataset: {
                 title: 'Dataset information',
                 fieldLabels: {
-                    name: {
+                    datasetTitle: {
                         label: 'Dataset name',
                         placeholder: 'Type the descriptive name for the dataset'
                     },
@@ -1231,6 +1245,10 @@ export default {
                         label: 'Contact name',
                         placeholder: 'Type the name of primary contact for this dataset'
                     },
+                    contactId: {
+                        floatingLabelText: 'Contact name ID',
+                        hintText: 'Type to search ID of primary contact for this dataset'
+                    },
                     contactEmail: {
                         label: 'Contact email',
                         placeholder: 'Type the email address of primary contact for this dataset'
@@ -1239,47 +1257,41 @@ export default {
                         label: 'Publisher',
                         placeholder: 'This is where the dataset was originally made available e.g. UQ eSpace'
                     },
-                    publicationYear: {
-                        label: '',
-                        placeholder: ''
+                    date: {
+                        title: 'Publication year',
+                        day: 'Day',
+                        month: 'Month',
+                        year: 'Year'
                     },
                     fieldOfResearchCodes: {
-                        label: '',
+                        title: 'ANZSRC field of research (FoR) codes',
                         placeholder: ''
                     }
                 }
             },
-            creator: {
-                title: 'Creator information',
-                fieldLabels: {
-                    creatorName: {
-                        label: 'Creator name',
-                        placeholder: 'Type the names of persons related to the creation, maintenance or update of the dataset'
-                    },
-                    creatorRole: {
-                        label: 'Creator role',
-                        placeholder: 'Type the role of the creator in relation to the dataset'
-                    },
-                    AdditionalCreatorName: {
-                        label: 'Additional creator name',
-                        placeholder: 'Type the additional names of persons related to the creation, maintenance or update of the dataset'
-                    },
-                    AdditionalCreatorRole: {
-                        label: 'Additional creator role',
-                        placeholder: 'Type the role of the additional creator in relation to the dataset'
-                    }
-                }
-            },
+            creator: txt.components.creators,
             accessAndLicensing: {
                 title: 'Access and licensing information',
+                help: {
+                    title: 'Access and licensing information',
+                    text: (
+                        <p>
+                            <h3>Access conditions</h3>
+                            <ul>
+                                <li>Open Access (upload your data, or link to the data)</li>
+                                <li>Meditated Access</li>
+                            </ul>
+                            <h3>Licensing and terms of access</h3>
+                            <p>View <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons Licenses</a> and <a href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions" target="_blank">UQ Terms & Conditions</a></p>
+                        </p>
+                    )
+                },
                 fieldLabels: {
                     accessConditions: {
-                        label: 'Access conditions',
-                        helperText: 'Select Open Access or Closed Access'
+                        label: 'Access conditions'
                     },
                     licensingAndTermsOfAccess: {
-                        label: 'Licensing and terms of access',
-                        helperText: 'View UQ Terms & Conditions and Creative Commons Licenses',
+                        label: 'Licensing and terms of access'
                     },
                     copyrightNotice: {
                         label: 'Copyright notice',
@@ -1328,11 +1340,11 @@ export default {
                         placeholder: 'Date that data ceased being collected'
                     },
                     geographicCoordinates: {
-                        label: 'Geographic coordinates',
-                        placeholder: 'Use this tool to specify the geographic co-ordinates the data relates to'
+                        label: 'Geographic coordinates (non mandatory)',
+                        description: 'Use this tool to specify the geographic co-ordinates the data relates to'
                     },
                     relatedDatasets: {
-                        label: 'Related datasets',
+                        label: 'Related datasets (non mandatory)',
                         placeholder: 'Search for and add related datasets in UQ eSpace'
                     }
                 }

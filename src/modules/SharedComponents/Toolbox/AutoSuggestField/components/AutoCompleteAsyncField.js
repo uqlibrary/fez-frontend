@@ -49,14 +49,16 @@ export class AutoCompleteAsyncField extends Component {
         maxResults: PropTypes.number,
         required: PropTypes.bool,
         selectedValue: PropTypes.any,
-        filter: PropTypes.func
+        filter: PropTypes.func,
+        openOnFocus: PropTypes.bool
     };
 
     static defaultProps = {
         maxResults: 7,
         required: false,
         filter: (searchText, key) => {
-            return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+            const anyKey = isNaN(key) ? key : `${key}`;
+            return !!anyKey && anyKey.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
         }
     };
 
@@ -76,11 +78,16 @@ export class AutoCompleteAsyncField extends Component {
         this.props.onChange(value);
     };
 
-    renderInput = ({ inputProps, classes, ...other }) => {
+    renderInput = ({ inputProps, classes, openMenu, ...other }) => {
         return (
             <TextField
                 InputProps={{
-                    inputRef: node => {this.textInputRef = node;},
+                    inputRef: node => {
+                        this.textInputRef = node;
+                        if (this.props.openOnFocus) {
+                            this.textInputRef.addEventListener('focus', openMenu);
+                        }
+                    },
                     classes: {
                         root: classes.inputRoot,
                     },
@@ -164,7 +171,7 @@ export class AutoCompleteAsyncField extends Component {
                     }
                 >
                     {
-                        ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex }) => {
+                        ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {
                             return (
                                 <div className={classes.container}>
                                     {this.renderInput({
@@ -179,7 +186,8 @@ export class AutoCompleteAsyncField extends Component {
                                         label: floatingLabelText,
                                         value: inputValue,
                                         disabled: disabled,
-                                        required: required
+                                        required: required,
+                                        openMenu: openMenu
                                     })}
                                     {isOpen && itemsList.length > 0 ? (
                                         <div {...getMenuProps()}>
@@ -187,7 +195,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 <Paper className={classes.paper} square style={{width: this.textInputRef ? this.textInputRef.clientWidth : null}}>
                                                     {
                                                         itemsList
-                                                            .filter(suggestion => this.props.filter(inputValue, suggestion.value))
+                                                            .filter(suggestion => this.props.filter(inputValue, isNaN(inputValue) ? suggestion.value : suggestion.id))
                                                             .slice(0, maxResults).map((suggestion, index) => {
                                                                 return !!suggestion && this.renderSuggestion({
                                                                     suggestion,

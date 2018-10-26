@@ -385,3 +385,50 @@ export const defaultQueryParams = {
         ranges: {}
     }
 };
+
+export const DATA_COLLECTION_CREATOR_ROLES = [
+    {value: 'Project lead/Principal investigator'},
+    {value: 'Co-investigator'},
+    {value: 'Higher degree research student'},
+    {value: 'Research assistant'},
+    {value: 'Software engineer'},
+    {value: 'Statistician'},
+    {value: 'Technician'}
+];
+
+export const CLOSED_ACCESS_ID = 8;
+export const OPEN_ACCESS_ID = 9;
+export const licenses = [
+    {
+        id: 453608,
+        value: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US'
+    },
+    {
+        id: 453609,
+        value: 'Creative Commons Attribution no derivatives http://creativecommons.org/licenses/by-nd/3.0/deed.en_US'
+    },
+    {
+        id: 453610,
+        value: 'Creative Commons Attribution noncommercial http://creativecommons.org/licenses/by-nc/3.0/deed.en_US'
+    },
+    {
+        id: 453611,
+        value: 'Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US'
+    },
+    {
+        id: 453612,
+        value: 'Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US '
+    },
+    {
+        id: 453613,
+        value: 'Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US'
+    },
+    {
+        id: 453701,
+        value: 'UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+    },
+    {
+        id: 453702,
+        value: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+    }
+];

@@ -4,6 +4,7 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import {UqIdField} from 'modules/SharedComponents/LookupFields';
+import {RoleField} from 'modules/SharedComponents/LookupFields';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -14,6 +15,7 @@ export class ContributorForm extends PureComponent {
         authorsList: PropTypes.array.isRequired,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
+        showRoleInput: PropTypes.bool,
         errorText: PropTypes.string,
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
@@ -26,6 +28,8 @@ export class ContributorForm extends PureComponent {
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
+            creatorRoleLabel: 'Creator role',
+            creatorRoleHint: 'Role of the creator in relation to the dataset',
             identifierLabel: 'UQ identifier (if available)',
             addButton: 'Add author',
             descriptionStep1: (<div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>),
@@ -38,6 +42,7 @@ export class ContributorForm extends PureComponent {
 
         this.state = {
             nameAsPublished: '',
+            creatorRole: '',
             uqIdentifier: '',
             contributor: {}
         };
@@ -45,14 +50,22 @@ export class ContributorForm extends PureComponent {
 
     _addContributor = (event) => {
         // add contributor if user hits 'enter' key on input field
-        if(this.props.disabled || (event && event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0))) return;
+        if(
+            this.props.disabled ||
+            (event && event.key && (
+                event.key !== 'Enter' ||
+                this.state.nameAsPublished.length === 0 ||
+                (this.props.showRoleInput && this.state.creatorRole.length === 0)
+            ))
+        ) return;
 
         // pass on the selected contributor
-        this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished}});
+        this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished, creatorRole: this.state.creatorRole}});
 
         // reset internal state
         this.setState({
             nameAsPublished: '',
+            creatorRole: '',
             uqIdentifier: '',
             contributor: {}
         });
@@ -61,6 +74,12 @@ export class ContributorForm extends PureComponent {
     _onNameChanged = (event) => {
         this.setState({
             nameAsPublished: event.target.value
+        });
+    }
+
+    _onRoleChanged = (value) => {
+        this.setState({
+            creatorRole: value
         });
     }
 
@@ -88,13 +107,22 @@ export class ContributorForm extends PureComponent {
             <div style={{flexGrow: 1}}>
                 {description}
                 <Grid container spacing={16} alignItems="baseline">
-                    <Grid item xs={12} sm={this.props.showIdentifierLookup ? 12 : 9} md={this.props.showIdentifierLookup ? 5 : 10}>
+                    <Grid
+                        item
+                        xs={12}
+                        sm={this.props.showIdentifierLookup ? 12 : 9}
+                        md={
+                            this.props.showIdentifierLookup && this.props.showRoleInput && 4 ||
+                            (this.props.showIdentifierLookup || this.props.showRoleInput) && 5 ||
+                            10
+                        }
+                    >
                         <TextField
                             fullWidth
                             ref="nameAsPublishedField"
                             id="nameAsPublishedField"
                             label={this.props.locale.nameAsPublishedLabel}
-                            helperText={this.props.locale.nameAsPublishedHint}
+                            placeholder={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyPress={this._addContributor}
@@ -105,7 +133,7 @@ export class ContributorForm extends PureComponent {
                     </Grid>
                     {
                         this.props.showIdentifierLookup &&
-                        <Grid item xs={12} sm={12} md={5}>
+                        <Grid item xs={12} sm={12} md={this.props.showIdentifierLookup && this.props.showRoleInput && 3 || 5}>
                             <UqIdField
                                 disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
@@ -114,12 +142,29 @@ export class ContributorForm extends PureComponent {
                             />
                         </Grid>
                     }
+                    {
+                        this.props.showRoleInput &&
+                        <Grid item xs={12} sm={12} md={this.props.showIdentifierLookup && this.props.showRoleInput && 3 || 5}>
+                            <RoleField
+                                fullWidth
+                                ref="creatorRoleField"
+                                if="creatorRoleField"
+                                floatingLabelText={this.props.locale.creatorRoleLabel}
+                                hintText={this.props.locale.creatorRoleHint}
+                                onChange={this._onRoleChanged}
+                                disabled={this.props.disabled}
+                                required={this.props.required}
+                                autoComplete="off"
+                                error={this.state.creatorRole.length === 0}
+                            />
+                        </Grid>
+                    }
                     <Grid item xs={12} sm={3} md={2}>
                         <Button
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0 || this.props.showRoleInput && this.state.creatorRole.length === 0}
                             onClick={this._addContributor}
                         >
                             {this.props.locale.addButton}
