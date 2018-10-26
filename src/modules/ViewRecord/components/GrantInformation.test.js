@@ -7,8 +7,8 @@ function setup(testProps, isShallow = true){
         history: {push: jest.fn()},
         actions: testProps.actions,
         classes: {
-            body1: 'body1',
-            body1: 'body1',
+            body2: 'body2',
+            body2: 'body2',
             data: 'data',
             gridRow: 'gridRow'
         },

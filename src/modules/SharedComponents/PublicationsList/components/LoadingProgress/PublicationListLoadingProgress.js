@@ -30,7 +30,7 @@ export class PublicationListLoadingProgress extends PureComponent {
                     {txt.repositories.map((item, index) => (
                         <Grid container spacing={8} key={index}>
                             <Grid item xs>
-                                <Typography variant={'body2'} className={classes.copy}>{item.title}</Typography>
+                                <Typography variant={'body1'} className={classes.copy}>{item.title}</Typography>
                             </Grid>
                             {
                                 loadingPublicationSources && loadingPublicationSources[item.id]

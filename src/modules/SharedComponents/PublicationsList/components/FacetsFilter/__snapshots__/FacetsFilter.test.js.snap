@@ -9,14 +9,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
     dense={true}
   >
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Display type"
       id="facet-category-Display-type"
       key="0"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -28,14 +26,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Keywords"
       id="facet-category-Keywords"
       key="1"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -43,7 +39,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -51,7 +46,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={2}
             isActive={false}
@@ -59,7 +53,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={3}
             isActive={false}
@@ -67,7 +60,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={4}
             isActive={false}
@@ -79,14 +71,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Year published"
       id="facet-category-Year-published"
       key="2"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -98,14 +88,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Journal name"
       id="facet-category-Journal-name"
       key="3"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -113,7 +101,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -125,14 +112,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Collection"
       id="facet-category-Collection"
       key="4"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -144,14 +129,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Author"
       id="facet-category-Author"
       key="5"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -194,14 +177,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
     dense={true}
   >
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Display type"
       id="facet-category-Display-type"
       key="0"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -209,7 +190,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
             primaryText="Journal Article (2)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -221,14 +201,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Keywords"
       id="facet-category-Keywords"
       key="1"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -236,7 +214,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -244,7 +221,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={2}
             isActive={false}
@@ -252,7 +228,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={3}
             isActive={false}
@@ -260,7 +235,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={4}
             isActive={false}
@@ -272,14 +246,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Year published"
       id="facet-category-Year-published"
       key="2"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -291,14 +263,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Journal name"
       id="facet-category-Journal-name"
       key="3"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -306,7 +276,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -318,14 +287,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Collection"
       id="facet-category-Collection"
       key="4"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -337,14 +304,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Author"
       id="facet-category-Author"
       key="5"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -387,14 +352,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
     dense={true}
   >
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Display type"
       id="facet-category-Display-type"
       key="0"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter active"
             disabled={undefined}
             index={0}
             isActive={true}
@@ -406,14 +369,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Keywords"
       id="facet-category-Keywords"
       key="1"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -421,7 +382,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter active"
             disabled={undefined}
             index={1}
             isActive={true}
@@ -429,7 +389,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={2}
             isActive={false}
@@ -437,7 +396,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={3}
             isActive={false}
@@ -445,7 +403,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={4}
             isActive={false}
@@ -457,14 +414,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Year published"
       id="facet-category-Year-published"
       key="2"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -476,14 +431,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Journal name"
       id="facet-category-Journal-name"
       key="3"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -491,7 +444,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -503,14 +455,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Collection"
       id="facet-category-Collection"
       key="4"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -522,14 +472,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Author"
       id="facet-category-Author"
       key="5"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -1234,14 +1182,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                   className="MuiList-root-1 MuiList-dense-3 MuiList-padding-2"
                 >
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Display type"
                     id="facet-category-Display-type"
                     key="0"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter active"
                           disabled={undefined}
                           index={0}
                           isActive={true}
@@ -1253,7 +1199,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -1265,7 +1210,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter active"
                             disabled={undefined}
                             index={0}
                             isActive={true}
@@ -1355,12 +1299,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Display type"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -1371,22 +1313,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Display type"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -1426,8 +1366,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -1450,7 +1389,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -1872,13 +1810,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Display type
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -2421,14 +2359,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Keywords"
                     id="facet-category-Keywords"
                     key="1"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -2436,7 +2372,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                           primaryText="Applied Microbiology and Biotechnology (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={1}
                           isActive={false}
@@ -2444,7 +2379,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                           primaryText="Biochemistry (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={2}
                           isActive={false}
@@ -2452,7 +2386,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                           primaryText="Bioengineering (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={3}
                           isActive={false}
@@ -2460,7 +2393,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                           primaryText="Biomaterials (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={4}
                           isActive={false}
@@ -2472,7 +2404,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -2484,7 +2415,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -2492,7 +2422,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                             primaryText="Applied Microbiology and Biotechnology (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={1}
                             isActive={false}
@@ -2500,7 +2429,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                             primaryText="Biochemistry (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={2}
                             isActive={false}
@@ -2508,7 +2436,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                             primaryText="Bioengineering (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={3}
                             isActive={false}
@@ -2516,7 +2443,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                             primaryText="Biomaterials (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={4}
                             isActive={false}
@@ -2606,12 +2532,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Keywords"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -2622,22 +2546,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Keywords"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -2677,8 +2599,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -2701,7 +2622,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -3123,13 +3043,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Keywords
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -3672,14 +3592,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Year published"
                     id="facet-category-Year-published"
                     key="2"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -3691,7 +3609,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -3703,7 +3620,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -3793,12 +3709,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Year published"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -3809,22 +3723,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Year published"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -3864,8 +3776,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -3888,7 +3799,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -4310,13 +4220,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Year published
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -4859,14 +4769,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Journal name"
                     id="facet-category-Journal-name"
                     key="3"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -4874,7 +4782,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                           primaryText="Metallomics (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={1}
                           isActive={false}
@@ -4886,7 +4793,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -4898,7 +4804,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -4906,7 +4811,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                             primaryText="Metallomics (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={1}
                             isActive={false}
@@ -4996,12 +4900,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Journal name"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -5012,22 +4914,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Journal name"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -5067,8 +4967,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -5091,7 +4990,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -5513,13 +5411,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Journal name
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -6062,14 +5960,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Collection"
                     id="facet-category-Collection"
                     key="4"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -6081,7 +5977,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -6093,7 +5988,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -6183,12 +6077,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Collection"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -6199,22 +6091,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Collection"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -6254,8 +6144,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -6278,7 +6167,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -6700,13 +6588,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Collection
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -7249,14 +7137,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Author"
                     id="facet-category-Author"
                     key="5"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -7268,7 +7154,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -7280,7 +7165,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -7370,12 +7254,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Author"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -7386,22 +7268,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Author"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -7441,8 +7321,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -7465,7 +7344,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -7887,13 +7765,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Author
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -8670,12 +8548,10 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   tabIndex="0"
                                 >
                                   <WithStyles(ListItemText)
-                                    className="FacetsFilterListItem-listText-6"
+                                    disableTypography={true}
                                     key=".0"
-                                    primary="Published year range"
                                   >
                                     <ListItemText
-                                      className="FacetsFilterListItem-listText-6"
                                       classes={
                                         Object {
                                           "dense": "MuiListItemText-dense-23",
@@ -8686,22 +8562,20 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                           "textDense": "MuiListItemText-textDense-26",
                                         }
                                       }
-                                      disableTypography={false}
+                                      disableTypography={true}
                                       inset={false}
-                                      primary="Published year range"
                                     >
                                       <div
-                                        className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                        className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                       >
                                         <WithStyles(Typography)
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                          component="span"
-                                          internalDeprecatedVariant={true}
-                                          variant="subheading"
+                                          className="FacetsFilterListItem-listText-6"
+                                          color="textPrimary"
+                                          variant="body2"
                                         >
                                           <Typography
                                             align="inherit"
-                                            className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                            className="FacetsFilterListItem-listText-6"
                                             classes={
                                               Object {
                                                 "alignCenter": "MuiTypography-alignCenter-50",
@@ -8741,8 +8615,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 "title": "MuiTypography-title-33",
                                               }
                                             }
-                                            color="default"
-                                            component="span"
+                                            color="textPrimary"
                                             gutterBottom={false}
                                             headlineMapping={
                                               Object {
@@ -8765,7 +8638,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 "title": "h2",
                                               }
                                             }
-                                            internalDeprecatedVariant={true}
                                             noWrap={false}
                                             paragraph={false}
                                             theme={
@@ -9187,13 +9059,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               }
                                             }
-                                            variant="subheading"
+                                            variant="body2"
                                           >
-                                            <span
-                                              className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                            <p
+                                              className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                             >
                                               Published year range
-                                            </span>
+                                            </p>
                                           </Typography>
                                         </WithStyles(Typography)>
                                       </div>
@@ -10791,14 +10663,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                   className="MuiList-root-1 MuiList-dense-3 MuiList-padding-2"
                 >
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Display type"
                     id="facet-category-Display-type"
                     key="0"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter active"
                           disabled={undefined}
                           index={0}
                           isActive={true}
@@ -10811,7 +10681,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     open={true}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -10823,7 +10692,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter active"
                             disabled={undefined}
                             index={0}
                             isActive={true}
@@ -10914,12 +10782,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Display type"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -10930,22 +10796,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Display type"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -10985,8 +10849,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -11009,7 +10872,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -11431,13 +11293,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Display type
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -11992,7 +11854,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   className="MuiCollapse-wrapperInner-81"
                                 >
                                   <WithStyles(FacetsFilterNestedListItem)
-                                    className="facetsCategoryFilter active"
                                     index={0}
                                     isActive={true}
                                     key="0"
@@ -12000,7 +11861,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     primaryText="Journal Article (2)"
                                   >
                                     <FacetsFilterNestedListItem
-                                      className="facetsCategoryFilter active"
                                       classes={
                                         Object {
                                           "inset": "FacetsFilterNestedListItem-inset-207",
@@ -12156,17 +12016,9 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       "inset": "FacetsFilterNestedListItem-inset-207",
                                                     }
                                                   }
+                                                  disableTypography={true}
                                                   inset={true}
                                                   key=".1"
-                                                  primary="Journal Article (2)"
-                                                  primaryTypographyProps={
-                                                    Object {
-                                                      "classes": Object {
-                                                        "colorTextPrimary": "FacetsFilterNestedListItem-selectedFacet-208",
-                                                      },
-                                                      "color": "textPrimary",
-                                                    }
-                                                  }
                                                 >
                                                   <ListItemText
                                                     className="FacetsFilterNestedListItem-listText-206"
@@ -12180,36 +12032,18 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                         "textDense": "MuiListItemText-textDense-26",
                                                       }
                                                     }
-                                                    disableTypography={false}
+                                                    disableTypography={true}
                                                     inset={true}
-                                                    primary="Journal Article (2)"
-                                                    primaryTypographyProps={
-                                                      Object {
-                                                        "classes": Object {
-                                                          "colorTextPrimary": "FacetsFilterNestedListItem-selectedFacet-208",
-                                                        },
-                                                        "color": "textPrimary",
-                                                      }
-                                                    }
                                                   >
                                                     <div
                                                       className="MuiListItemText-root-21 MuiListItemText-dense-23 MuiListItemText-inset-22 FacetsFilterNestedListItem-inset-207 FacetsFilterNestedListItem-listText-206"
                                                     >
                                                       <WithStyles(Typography)
-                                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                                        classes={
-                                                          Object {
-                                                            "colorTextPrimary": "FacetsFilterNestedListItem-selectedFacet-208",
-                                                          }
-                                                        }
-                                                        color="textPrimary"
-                                                        component="span"
-                                                        internalDeprecatedVariant={true}
-                                                        variant="subheading"
+                                                        color="primary"
+                                                        variant="body2"
                                                       >
                                                         <Typography
                                                           align="inherit"
-                                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
                                                           classes={
                                                             Object {
                                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -12224,7 +12058,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                               "colorInherit": "MuiTypography-colorInherit-56",
                                                               "colorPrimary": "MuiTypography-colorPrimary-57",
                                                               "colorSecondary": "MuiTypography-colorSecondary-58",
-                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary-59 FacetsFilterNestedListItem-selectedFacet-208",
+                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary-59",
                                                               "colorTextSecondary": "MuiTypography-colorTextSecondary-60",
                                                               "display1": "MuiTypography-display1-31",
                                                               "display2": "MuiTypography-display2-30",
@@ -12249,8 +12083,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                               "title": "MuiTypography-title-33",
                                                             }
                                                           }
-                                                          color="textPrimary"
-                                                          component="span"
+                                                          color="primary"
                                                           gutterBottom={false}
                                                           headlineMapping={
                                                             Object {
@@ -12273,7 +12106,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                               "title": "h2",
                                                             }
                                                           }
-                                                          internalDeprecatedVariant={true}
                                                           noWrap={false}
                                                           paragraph={false}
                                                           theme={
@@ -12695,13 +12527,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                               },
                                                             }
                                                           }
-                                                          variant="subheading"
+                                                          variant="body2"
                                                         >
-                                                          <span
-                                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiTypography-colorTextPrimary-59 FacetsFilterNestedListItem-selectedFacet-208 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                                          <p
+                                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorPrimary-57"
                                                           >
                                                             Journal Article (2)
-                                                          </span>
+                                                          </p>
                                                         </Typography>
                                                       </WithStyles(Typography)>
                                                     </div>
@@ -12754,14 +12586,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Keywords"
                     id="facet-category-Keywords"
                     key="1"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -12769,7 +12599,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                           primaryText="Applied Microbiology and Biotechnology (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={1}
                           isActive={false}
@@ -12777,7 +12606,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                           primaryText="Biochemistry (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={2}
                           isActive={false}
@@ -12785,7 +12613,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                           primaryText="Bioengineering (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={3}
                           isActive={false}
@@ -12793,7 +12620,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                           primaryText="Biomaterials (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={4}
                           isActive={false}
@@ -12805,7 +12631,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -12817,7 +12642,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -12825,7 +12649,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                             primaryText="Applied Microbiology and Biotechnology (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={1}
                             isActive={false}
@@ -12833,7 +12656,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                             primaryText="Biochemistry (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={2}
                             isActive={false}
@@ -12841,7 +12663,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                             primaryText="Bioengineering (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={3}
                             isActive={false}
@@ -12849,7 +12670,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                             primaryText="Biomaterials (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={4}
                             isActive={false}
@@ -12939,12 +12759,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Keywords"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -12955,22 +12773,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Keywords"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -13010,8 +12826,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -13034,7 +12849,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -13456,13 +13270,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Keywords
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -14005,14 +13819,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Year published"
                     id="facet-category-Year-published"
                     key="2"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -14024,7 +13836,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -14036,7 +13847,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -14126,12 +13936,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Year published"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -14142,22 +13950,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Year published"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -14197,8 +14003,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -14221,7 +14026,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -14643,13 +14447,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Year published
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -15192,14 +14996,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Journal name"
                     id="facet-category-Journal-name"
                     key="3"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -15207,7 +15009,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                           primaryText="Metallomics (1)"
                         />,
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={1}
                           isActive={false}
@@ -15219,7 +15020,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -15231,7 +15031,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -15239,7 +15038,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                             primaryText="Metallomics (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={1}
                             isActive={false}
@@ -15329,12 +15127,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Journal name"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -15345,22 +15141,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Journal name"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -15400,8 +15194,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -15424,7 +15217,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -15846,13 +15638,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Journal name
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -16395,14 +16187,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Collection"
                     id="facet-category-Collection"
                     key="4"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -16414,7 +16204,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -16426,7 +16215,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -16516,12 +16304,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Collection"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -16532,22 +16318,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Collection"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -16587,8 +16371,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -16611,7 +16394,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -17033,13 +16815,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Collection
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -17582,14 +17364,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     </FacetsFilterListItem>
                   </WithStyles(FacetsFilterListItem)>
                   <WithStyles(FacetsFilterListItem)
-                    className="facetsCategory"
                     facetTitle="Author"
                     id="facet-category-Author"
                     key="5"
                     nestedItems={
                       Array [
                         <WithStyles(FacetsFilterNestedListItem)
-                          className="facetsCategoryFilter"
                           disabled={undefined}
                           index={0}
                           isActive={false}
@@ -17601,7 +17381,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                     onToggle={[Function]}
                   >
                     <FacetsFilterListItem
-                      className="facetsCategory"
                       classes={
                         Object {
                           "listItemGutters": "FacetsFilterListItem-listItemGutters-5",
@@ -17613,7 +17392,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            className="facetsCategoryFilter"
                             disabled={undefined}
                             index={0}
                             isActive={false}
@@ -17703,12 +17481,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 tabIndex="0"
                               >
                                 <WithStyles(ListItemText)
-                                  className="FacetsFilterListItem-listText-6"
+                                  disableTypography={true}
                                   key=".0"
-                                  primary="Author"
                                 >
                                   <ListItemText
-                                    className="FacetsFilterListItem-listText-6"
                                     classes={
                                       Object {
                                         "dense": "MuiListItemText-dense-23",
@@ -17719,22 +17495,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                         "textDense": "MuiListItemText-textDense-26",
                                       }
                                     }
-                                    disableTypography={false}
+                                    disableTypography={true}
                                     inset={false}
-                                    primary="Author"
                                   >
                                     <div
-                                      className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                      className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                     >
                                       <WithStyles(Typography)
-                                        className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                        component="span"
-                                        internalDeprecatedVariant={true}
-                                        variant="subheading"
+                                        className="FacetsFilterListItem-listText-6"
+                                        color="textPrimary"
+                                        variant="body2"
                                       >
                                         <Typography
                                           align="inherit"
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          className="FacetsFilterListItem-listText-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter-50",
@@ -17774,8 +17548,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "MuiTypography-title-33",
                                             }
                                           }
-                                          color="default"
-                                          component="span"
+                                          color="textPrimary"
                                           gutterBottom={false}
                                           headlineMapping={
                                             Object {
@@ -17798,7 +17571,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "title": "h2",
                                             }
                                           }
-                                          internalDeprecatedVariant={true}
                                           noWrap={false}
                                           paragraph={false}
                                           theme={
@@ -18220,13 +17992,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               },
                                             }
                                           }
-                                          variant="subheading"
+                                          variant="body2"
                                         >
-                                          <span
-                                            className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                          <p
+                                            className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                           >
                                             Author
-                                          </span>
+                                          </p>
                                         </Typography>
                                       </WithStyles(Typography)>
                                     </div>
@@ -19003,12 +18775,10 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   tabIndex="0"
                                 >
                                   <WithStyles(ListItemText)
-                                    className="FacetsFilterListItem-listText-6"
+                                    disableTypography={true}
                                     key=".0"
-                                    primary="Published year range"
                                   >
                                     <ListItemText
-                                      className="FacetsFilterListItem-listText-6"
                                       classes={
                                         Object {
                                           "dense": "MuiListItemText-dense-23",
@@ -19019,22 +18789,20 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                           "textDense": "MuiListItemText-textDense-26",
                                         }
                                       }
-                                      disableTypography={false}
+                                      disableTypography={true}
                                       inset={false}
-                                      primary="Published year range"
                                     >
                                       <div
-                                        className="MuiListItemText-root-21 MuiListItemText-dense-23 FacetsFilterListItem-listText-6"
+                                        className="MuiListItemText-root-21 MuiListItemText-dense-23"
                                       >
                                         <WithStyles(Typography)
-                                          className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
-                                          component="span"
-                                          internalDeprecatedVariant={true}
-                                          variant="subheading"
+                                          className="FacetsFilterListItem-listText-6"
+                                          color="textPrimary"
+                                          variant="body2"
                                         >
                                           <Typography
                                             align="inherit"
-                                            className="MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                            className="FacetsFilterListItem-listText-6"
                                             classes={
                                               Object {
                                                 "alignCenter": "MuiTypography-alignCenter-50",
@@ -19074,8 +18842,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 "title": "MuiTypography-title-33",
                                               }
                                             }
-                                            color="default"
-                                            component="span"
+                                            color="textPrimary"
                                             gutterBottom={false}
                                             headlineMapping={
                                               Object {
@@ -19098,7 +18865,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 "title": "h2",
                                               }
                                             }
-                                            internalDeprecatedVariant={true}
                                             noWrap={false}
                                             paragraph={false}
                                             theme={
@@ -19520,13 +19286,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               }
                                             }
-                                            variant="subheading"
+                                            variant="body2"
                                           >
-                                            <span
-                                              className="MuiTypography-root-27 MuiTypography-subtitle1-45 MuiListItemText-primary-24 MuiListItemText-textDense-26"
+                                            <p
+                                              className="MuiTypography-root-27 MuiTypography-body2-35 MuiTypography-colorTextPrimary-59 FacetsFilterListItem-listText-6"
                                             >
                                               Published year range
-                                            </span>
+                                            </p>
                                           </Typography>
                                         </WithStyles(Typography)>
                                       </div>
@@ -20477,7 +20243,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
     dense={true}
   >
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       disabled={true}
       facetTitle="Display type"
       id="facet-category-Display-type"
@@ -20485,7 +20250,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={0}
             isActive={false}
@@ -20497,7 +20261,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       disabled={true}
       facetTitle="Keywords"
       id="facet-category-Keywords"
@@ -20505,7 +20268,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={0}
             isActive={false}
@@ -20513,7 +20275,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={1}
             isActive={false}
@@ -20521,7 +20282,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={2}
             isActive={false}
@@ -20529,7 +20289,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={3}
             isActive={false}
@@ -20537,7 +20296,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={4}
             isActive={false}
@@ -20549,7 +20307,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       disabled={true}
       facetTitle="Year published"
       id="facet-category-Year-published"
@@ -20557,7 +20314,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={0}
             isActive={false}
@@ -20569,7 +20325,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       disabled={true}
       facetTitle="Journal name"
       id="facet-category-Journal-name"
@@ -20577,7 +20332,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={0}
             isActive={false}
@@ -20585,7 +20339,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={1}
             isActive={false}
@@ -20597,7 +20350,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       disabled={true}
       facetTitle="Collection"
       id="facet-category-Collection"
@@ -20605,7 +20357,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={0}
             isActive={false}
@@ -20617,7 +20368,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       disabled={true}
       facetTitle="Author"
       id="facet-category-Author"
@@ -20625,7 +20375,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={true}
             index={0}
             isActive={false}
@@ -20669,14 +20418,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
     dense={true}
   >
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Keywords"
       id="facet-category-Keywords"
       key="0"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20684,7 +20431,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -20692,7 +20438,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={2}
             isActive={false}
@@ -20700,7 +20445,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={3}
             isActive={false}
@@ -20708,7 +20452,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={4}
             isActive={false}
@@ -20720,14 +20463,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Year published"
       id="facet-category-Year-published"
       key="1"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20739,14 +20480,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Journal name"
       id="facet-category-Journal-name"
       key="2"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20754,7 +20493,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -20766,14 +20504,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Collection"
       id="facet-category-Collection"
       key="3"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20785,14 +20521,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Author"
       id="facet-category-Author"
       key="4"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20841,14 +20575,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
     dense={true}
   >
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Display type"
       id="facet-category-Display-type"
       key="0"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20860,14 +20592,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Keywords"
       id="facet-category-Keywords"
       key="1"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20875,7 +20605,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -20883,7 +20612,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={2}
             isActive={false}
@@ -20891,7 +20619,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={3}
             isActive={false}
@@ -20899,7 +20626,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={4}
             isActive={false}
@@ -20911,14 +20637,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Year published"
       id="facet-category-Year-published"
       key="2"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20930,14 +20654,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Journal name"
       id="facet-category-Journal-name"
       key="3"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20945,7 +20667,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={1}
             isActive={false}
@@ -20957,14 +20678,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Collection"
       id="facet-category-Collection"
       key="4"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}
@@ -20976,14 +20695,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       onToggle={[Function]}
     />
     <WithStyles(FacetsFilterListItem)
-      className="facetsCategory"
       facetTitle="Author"
       id="facet-category-Author"
       key="5"
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            className="facetsCategoryFilter"
             disabled={undefined}
             index={0}
             isActive={false}

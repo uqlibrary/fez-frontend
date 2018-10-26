@@ -65,13 +65,15 @@ const styles = theme => {
         mainMenu: {
             outline: 'none',
             flexGrow: 1,
+            paddingTop: 0
         },
         ListItemTextPrimary: {
+            ...theme.typography.body2,
             whiteSpace: 'nowrap',
-            fontWeight: 400,
+            fontWeight: theme.typography.fontWeightMedium
         },
         ListItemTextSecondary: {
-            fontWeight: 400,
+            ...theme.typography.caption,
         },
         mainMenuFooter: {
             paddingLeft: '12px',
@@ -178,10 +180,10 @@ export class MenuDrawer extends Component {
                 {
                     drawerOpen &&
                     <Fragment>
-                        <Grid container spacing={0} wrap={'nowrap'} alignContent={'center'} alignItems={'center'} classes={{container: classes.header}}
-                        >
-                            <Grid item xs={10} sm={12} zeroMinWidth>
-                                {logoImage && logoLink && logoText &&
+                        <List component="nav" id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
+                            <Grid container spacing={0} wrap={'nowrap'} alignContent={'center'} alignItems={'center'} classes={{container: classes.header}}>
+                                <Grid item xs={10} sm={12} zeroMinWidth>
+                                    {logoImage && logoLink && logoText &&
                                     <ExternalLink
                                         href={logoLink}
                                         title={logoText}
@@ -189,17 +191,16 @@ export class MenuDrawer extends Component {
                                     >
                                         <div className={logoImage} style={{height: 50, width: 160, margin: '8px auto'}} alt={logoText}/>
                                     </ExternalLink>
-                                }
-                            </Grid>
-                            <Hidden smUp>
-                                <Grid item xs={2}>
-                                    <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>
-                                        <KeyboardArrowLeft className={classes.iconButton}/>
-                                    </IconButton>
+                                    }
                                 </Grid>
-                            </Hidden>
-                        </Grid>
-                        <List component="nav" id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
+                                <Hidden smUp>
+                                    <Grid item xs={2}>
+                                        <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>
+                                            <KeyboardArrowLeft className={classes.iconButton}/>
+                                        </IconButton>
+                                    </Grid>
+                                </Hidden>
+                            </Grid>
                             {
                                 // Skip nav section
                                 docked &&

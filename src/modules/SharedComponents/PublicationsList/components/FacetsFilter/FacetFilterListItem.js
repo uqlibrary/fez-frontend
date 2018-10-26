@@ -7,6 +7,7 @@ import Collapse from '@material-ui/core/Collapse';
 import {withStyles} from '@material-ui/core/styles';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
     listItemGutters: {
@@ -14,7 +15,7 @@ const styles = (theme) => ({
         paddingRight: theme.spacing.unit,
     },
     listText: {
-        ...theme.typography.body1
+        fontWeight: 400,
     }
 });
 
@@ -42,10 +43,11 @@ export class FacetsFilterListItem extends PureComponent {
                     }}
                     onClick={this.props.onToggle}
                 >
-                    <ListItemText
-                        primary={facetTitle}
-                        className={classes.listText}
-                    />
+                    <ListItemText disableTypography>
+                        <Typography variant={'body2'} color={'textPrimary'} className={classes.listText}>
+                            {facetTitle}
+                        </Typography>
+                    </ListItemText>
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 {

@@ -35,16 +35,18 @@ export class AdditionalInformation extends PureComponent {
         return (
             <div style={{padding: 8}} key={index}>
                 <Grid container spacing={16} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
-                    <Grid item xs={12} sm={3}><Typography variant="body1" classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
-                    <Grid item xs={12} sm={9} className={this.props.classes.data}>{data}</Grid>
+                    <Grid item xs={12} sm={3}><Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
+                    <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                        <Typography variant="body2" component={'span'}>{data}</Typography>
+                    </Grid>
                 </Grid>
             </div>
         );
-    }
+    };
 
     renderLink = (link, value) => {
         return <Link to={link}>{value}</Link>;
-    }
+    };
 
     renderList = (list, subkey, getLink) => {
         return (
@@ -160,13 +162,13 @@ export class AdditionalInformation extends PureComponent {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} separator={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={''} suffix={''} separator={', '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 
     renderAuthors = (publication) => {
         return (
-            <AuthorsCitationView key="additional-information-authors" publication={publication} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
+            <AuthorsCitationView key="additional-information-authors" publication={publication} prefix={''} suffix={''} separator={', '} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
         );
     }
 

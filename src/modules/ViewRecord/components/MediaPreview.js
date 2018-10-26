@@ -47,7 +47,7 @@ export default class MediaPreview extends PureComponent {
             <React.Fragment>
                 <Grid container spacing={0} direction={'row'} style={{marginTop: 32}}>
                     <Grid item xs>
-                        <Typography variant={'h5'} component={'h2'}>{title}</Typography>
+                        <Typography variant={'h6'} component={'h2'}>{title}</Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item>

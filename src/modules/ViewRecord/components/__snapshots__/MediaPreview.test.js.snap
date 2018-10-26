@@ -747,7 +747,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                     >
                       <WithStyles(Typography)
                         component="h2"
-                        variant="h5"
+                        variant="h6"
                       >
                         <Typography
                           align="inherit"
@@ -1235,10 +1235,10 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                               },
                             }
                           }
-                          variant="h5"
+                          variant="h6"
                         >
                           <h2
-                            className="MuiTypography-root-98 MuiTypography-h5-114"
+                            className="MuiTypography-root-98 MuiTypography-h6-115"
                           >
                             Image preview
                           </h2>
@@ -3028,7 +3028,7 @@ exports[`Media Preview Component  should render component 1`] = `
     >
       <WithStyles(Typography)
         component="h2"
-        variant="h5"
+        variant="h6"
       >
         Image preview
       </WithStyles(Typography)>
@@ -3830,7 +3830,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                     >
                       <WithStyles(Typography)
                         component="h2"
-                        variant="h5"
+                        variant="h6"
                       >
                         <Typography
                           align="inherit"
@@ -4318,10 +4318,10 @@ exports[`Media Preview Component  should render component with image 1`] = `
                               },
                             }
                           }
-                          variant="h5"
+                          variant="h6"
                         >
                           <h2
-                            className="MuiTypography-root-98 MuiTypography-h5-114"
+                            className="MuiTypography-root-98 MuiTypography-h6-115"
                           >
                             Image preview
                           </h2>
@@ -7367,7 +7367,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                     >
                       <WithStyles(Typography)
                         component="h2"
-                        variant="h5"
+                        variant="h6"
                       >
                         <Typography
                           align="inherit"
@@ -7855,10 +7855,10 @@ exports[`Media Preview Component  should render component with video 1`] = `
                               },
                             }
                           }
-                          variant="h5"
+                          variant="h6"
                         >
                           <h2
-                            className="MuiTypography-root-98 MuiTypography-h5-114"
+                            className="MuiTypography-root-98 MuiTypography-h6-115"
                           >
                             Video preview
                           </h2>

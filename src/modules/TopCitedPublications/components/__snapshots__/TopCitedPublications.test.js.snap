@@ -12,7 +12,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading trending publications..."
+      message="Loading trending publications"
     />
   </WithStyles(Grid)>
   <WithStyles(Grid)
@@ -42,7 +42,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="altmetric"
         label={
           <span>
-            Trending on Altmetric
+            Trending on Altmetric
           </span>
         }
         value="altmetric"
@@ -51,7 +51,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="scopus"
         label={
           <span>
-            Hot papers on Scopus
+            Hot papers on Scopus
           </span>
         }
         value="scopus"
@@ -60,7 +60,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="thomson"
         label={
           <span>
-            Trending on Web of science
+            Trending on Web of science
           </span>
         }
         value="thomson"
@@ -84,7 +84,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         <WithStyles(Typography)
           color="primary"
           key="altmetric"
-          variant="h5"
+          variant="h6"
         >
           <div
             className="fez-icon altmetric xxlarge"
@@ -106,7 +106,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         <Connect(WithStyles(HelpIcon))
           buttonLabel="OK"
           text={
-            <div>
+            <UNDEFINED>
               <h3>
                 WOS and Scopus
               </h3>
@@ -122,17 +122,16 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               <p>
                 You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
               </p>
-              <p>
-                For more information visit :
-                <a
-                  href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
-                </a>
-              </p>
-            </div>
+              For more information visit :
+              <br />
+              <a
+                href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+              </a>
+            </UNDEFINED>
           }
           title="About these metrics"
         />
