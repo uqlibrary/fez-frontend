@@ -250,12 +250,12 @@ export default class SbsSubmission extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
+                            <StandardCard title={formLocale.sbsSubmission.fileUpload.title} help={formLocale.sbsSubmission.fileUpload.help}>
                                 <Field
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
-                                    locale={formLocale.thesisSubmission.fileUpload.locale}
+                                    locale={formLocale.sbsSubmission.fileUpload.locale}
                                     defaultQuickTemplateId={this.props.fileAccessId}
                                     validate={[validation.fileUploadRequired]}/>
                             </StandardCard>
