@@ -108,6 +108,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -1197,6 +1203,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -1785,6 +1797,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -2891,6 +2909,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -3481,6 +3505,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -3935,6 +3965,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
                           "width": "100%",
+                        },
+                      },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
                         },
                       },
                     },

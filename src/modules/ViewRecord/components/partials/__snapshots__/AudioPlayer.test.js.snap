@@ -133,6 +133,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -808,6 +814,12 @@ exports[`Audio Player Component  should play audio 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },

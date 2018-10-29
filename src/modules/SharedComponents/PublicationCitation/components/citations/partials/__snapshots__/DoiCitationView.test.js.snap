@@ -108,6 +108,12 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -551,6 +557,12 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                         "width": "100%",
                       },
                     },
+                    "MuiMenuItem": Object {
+                      "selected": Object {
+                        "backgroundColor": "#4085C6 !important",
+                        "color": "#FFFFFF",
+                      },
+                    },
                   },
                   "palette": Object {
                     "accent": Object {
@@ -977,6 +989,12 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
                           "width": "100%",
+                        },
+                      },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
                         },
                       },
                     },
@@ -1510,6 +1528,12 @@ exports[`DoiCitationView test  should render component with empty span 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },

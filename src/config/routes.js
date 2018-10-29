@@ -27,7 +27,7 @@ const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
 
 export const pathConfig = {
     index: '/',
-    prototype: '/admin/prototype',
+    prototype: '/prototype',
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
@@ -112,7 +112,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', '/admin/prototype', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
+    '/admin/masquerade', '/prototype', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
 // TODO: will we even have roles?
 export const roles = {
@@ -352,10 +352,6 @@ export const getMenuConfig = (account, disabled) => {
 
     return [
         ...homePage,
-        {
-            linkTo: pathConfig.admin.prototype,
-            ...locale.menu.adminPrototype
-        },
         ...(account ? [
             {
                 linkTo: pathConfig.dashboard,
@@ -399,6 +395,10 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.admin.legacyEspace,
                 ...locale.menu.legacyEspace
+            },
+            {
+                linkTo: pathConfig.prototype,
+                ...locale.menu.adminPrototype
             },
             {
                 divider: true,

@@ -108,6 +108,12 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -590,6 +596,12 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -2116,6 +2128,12 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                             "width": "100%",
                           },
                         },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
+                        },
                       },
                       "palette": Object {
                         "accent": Object {
@@ -2541,6 +2559,12 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
                               "width": "100%",
+                            },
+                          },
+                          "MuiMenuItem": Object {
+                            "selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
                             },
                           },
                         },
@@ -3080,6 +3104,12 @@ exports[`Journal Name Component test  should render without era journal listed 1
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -4582,6 +4612,12 @@ exports[`Journal Name Component test  should render without era journal listed 1
                             "width": "100%",
                           },
                         },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
+                        },
                       },
                       "palette": Object {
                         "accent": Object {
@@ -5007,6 +5043,12 @@ exports[`Journal Name Component test  should render without era journal listed 1
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
                               "width": "100%",
+                            },
+                          },
+                          "MuiMenuItem": Object {
+                            "selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
                             },
                           },
                         },
@@ -5546,6 +5588,12 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },

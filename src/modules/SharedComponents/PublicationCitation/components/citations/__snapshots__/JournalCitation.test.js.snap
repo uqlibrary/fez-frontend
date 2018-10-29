@@ -108,6 +108,12 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -976,6 +982,12 @@ exports[`JournalCitation renders  component with empty publication 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },

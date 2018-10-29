@@ -108,6 +108,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -871,6 +877,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -1332,6 +1344,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -2614,6 +2632,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -3189,6 +3213,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -3954,6 +3984,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -4415,6 +4451,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -6224,6 +6266,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -6726,6 +6774,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -7491,6 +7545,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -7952,6 +8012,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -9240,6 +9306,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
                           "width": "100%",
+                        },
+                      },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
                         },
                       },
                     },

@@ -108,6 +108,12 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -2219,6 +2225,12 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                             "width": "100%",
                           },
                         },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
+                        },
                       },
                       "palette": Object {
                         "accent": Object {
@@ -2840,6 +2852,12 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -4965,6 +4983,12 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                             "width": "100%",
                           },
                         },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
+                        },
                       },
                       "palette": Object {
                         "accent": Object {
@@ -5588,6 +5612,12 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -6069,6 +6099,12 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
                           },
                         },
                       },

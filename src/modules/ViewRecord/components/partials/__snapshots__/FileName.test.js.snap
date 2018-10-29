@@ -108,6 +108,12 @@ exports[`File Name Component  should display file name link 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -806,6 +812,12 @@ exports[`File Name Component  should display file name link 1`] = `
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -1231,6 +1243,12 @@ exports[`File Name Component  should display file name link 1`] = `
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
                                     },
                                   },
                                 },
@@ -1739,6 +1757,12 @@ exports[`File Name Component  should display file name link 1`] = `
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -2374,6 +2398,12 @@ exports[`File Name Component  should render audio player 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -3074,6 +3104,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -3499,6 +3535,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
                                     },
                                   },
                                 },
@@ -4007,6 +4049,12 @@ exports[`File Name Component  should render audio player 1`] = `
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -4843,6 +4891,12 @@ exports[`File Name Component  should render component and display file name only
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -5593,6 +5647,12 @@ exports[`File Name Component  should render component and display file name only
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -6054,6 +6114,12 @@ exports[`File Name Component  should render component and display file name only
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -6691,6 +6757,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -7441,6 +7513,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -7908,6 +7986,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },
@@ -8545,6 +8629,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -9295,6 +9385,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                     "width": "100%",
                                   },
                                 },
+                                "MuiMenuItem": Object {
+                                  "selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
+                                },
                               },
                               "palette": Object {
                                 "accent": Object {
@@ -9762,6 +9858,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiMenuItem": Object {
+                              "selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
                               },
                             },
                           },

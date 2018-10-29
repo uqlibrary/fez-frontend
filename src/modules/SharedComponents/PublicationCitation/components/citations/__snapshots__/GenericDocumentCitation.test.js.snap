@@ -108,6 +108,12 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -1965,6 +1971,12 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -2500,6 +2512,12 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -4362,6 +4380,12 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -4901,6 +4925,12 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -6769,6 +6799,12 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                           "width": "100%",
                         },
                       },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
+                      },
                     },
                     "palette": Object {
                       "accent": Object {
@@ -7306,6 +7342,12 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -7760,6 +7802,12 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
                           "width": "100%",
+                        },
+                      },
+                      "MuiMenuItem": Object {
+                        "selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
                         },
                       },
                     },

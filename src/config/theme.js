@@ -67,6 +67,12 @@ export const mui1theme = createMuiTheme({
                 width: '100%',
                 textOverflow: 'ellipsis'
             }
+        },
+        MuiMenuItem: {
+            selected: {
+                backgroundColor: '#4085C6 !important',
+                color: '#FFFFFF'
+            }
         }
     },
     graphs: {

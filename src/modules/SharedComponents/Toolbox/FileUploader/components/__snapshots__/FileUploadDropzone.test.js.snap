@@ -108,6 +108,12 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -1208,6 +1214,12 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                           "textOverflow": "ellipsis",
                                                           "whiteSpace": "nowrap",
                                                           "width": "100%",
+                                                        },
+                                                      },
+                                                      "MuiMenuItem": Object {
+                                                        "selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
                                                         },
                                                       },
                                                     },
@@ -2339,6 +2351,12 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -3440,6 +3458,12 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                           "textOverflow": "ellipsis",
                                                           "whiteSpace": "nowrap",
                                                           "width": "100%",
+                                                        },
+                                                      },
+                                                      "MuiMenuItem": Object {
+                                                        "selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
                                                         },
                                                       },
                                                     },

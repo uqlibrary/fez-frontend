@@ -157,6 +157,12 @@ exports[`Add new record should render the confirm dialog with an alert for faile
             "width": "100%",
           },
         },
+        "MuiMenuItem": Object {
+          "selected": Object {
+            "backgroundColor": "#4085C6 !important",
+            "color": "#FFFFFF",
+          },
+        },
       },
       "palette": Object {
         "accent": Object {

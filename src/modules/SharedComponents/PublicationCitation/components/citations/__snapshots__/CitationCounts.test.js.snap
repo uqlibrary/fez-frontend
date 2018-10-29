@@ -108,6 +108,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -584,6 +590,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
                       "width": "100%",
+                    },
+                  },
+                  "MuiMenuItem": Object {
+                    "selected": Object {
+                      "backgroundColor": "#4085C6 !important",
+                      "color": "#FFFFFF",
                     },
                   },
                 },
@@ -1272,6 +1284,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -1713,6 +1731,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -2139,6 +2163,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -2591,6 +2621,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -3032,6 +3068,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -3458,6 +3500,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -3910,6 +3958,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -4351,6 +4405,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -4777,6 +4837,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -5229,6 +5295,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -5670,6 +5742,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -6096,6 +6174,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -6701,6 +6785,12 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiMenuItem": Object {
+                                "selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
                                 },
                               },
                             },
@@ -7337,6 +7427,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -9467,6 +9563,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "width": "100%",
                     },
                   },
+                  "MuiMenuItem": Object {
+                    "selected": Object {
+                      "backgroundColor": "#4085C6 !important",
+                      "color": "#FFFFFF",
+                    },
+                  },
                 },
                 "palette": Object {
                   "accent": Object {
@@ -10153,6 +10255,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -10594,6 +10702,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -11020,6 +11134,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -11472,6 +11592,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -11913,6 +12039,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -12339,6 +12471,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -12791,6 +12929,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -13232,6 +13376,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -13658,6 +13808,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -14246,6 +14402,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -14671,6 +14833,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "textOverflow": "ellipsis",
                                         "whiteSpace": "nowrap",
                                         "width": "100%",
+                                      },
+                                    },
+                                    "MuiMenuItem": Object {
+                                      "selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
                                       },
                                     },
                                   },
@@ -15179,6 +15347,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiMenuItem": Object {
+                                "selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
                                 },
                               },
                             },
@@ -15817,6 +15991,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -16291,6 +16471,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
                       "width": "100%",
+                    },
+                  },
+                  "MuiMenuItem": Object {
+                    "selected": Object {
+                      "backgroundColor": "#4085C6 !important",
+                      "color": "#FFFFFF",
                     },
                   },
                 },
@@ -16979,6 +17165,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -17420,6 +17612,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -17846,6 +18044,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -18298,6 +18502,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -18739,6 +18949,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -19165,6 +19381,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -19617,6 +19839,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -20058,6 +20286,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -20484,6 +20718,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -20936,6 +21176,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -21377,6 +21623,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "width": "100%",
                                         },
                                       },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
                                     },
                                     "palette": Object {
                                       "accent": Object {
@@ -21803,6 +22055,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -22393,6 +22651,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "width": "100%",
                                     },
                                   },
+                                  "MuiMenuItem": Object {
+                                    "selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
+                                  },
                                 },
                                 "palette": Object {
                                   "accent": Object {
@@ -22818,6 +23082,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "textOverflow": "ellipsis",
                                         "whiteSpace": "nowrap",
                                         "width": "100%",
+                                      },
+                                    },
+                                    "MuiMenuItem": Object {
+                                      "selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
                                       },
                                     },
                                   },
@@ -23326,6 +23596,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiMenuItem": Object {
+                                "selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
                                 },
                               },
                             },
@@ -23964,6 +24240,12 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -24392,6 +24674,12 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
                       "width": "100%",
+                    },
+                  },
+                  "MuiMenuItem": Object {
+                    "selected": Object {
+                      "backgroundColor": "#4085C6 !important",
+                      "color": "#FFFFFF",
                     },
                   },
                 },
@@ -25233,6 +25521,12 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiMenuItem": Object {
+                                "selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
                                 },
                               },
                             },

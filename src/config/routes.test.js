@@ -6,12 +6,12 @@ import {locale} from 'locale';
 describe('Routes method', () => {
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
-        expect(testRoutes.length).toEqual(5);
+        expect(testRoutes.length).toEqual(4);
     });
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(13);
+        expect(testRoutes.length).toEqual(12);
     });
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
@@ -90,7 +90,7 @@ describe('Routes method', () => {
 
     it('should not return Switch to old interface menu item for public view page', () => {
         const testMenuItems = routes.getMenuConfig(null, false, true);
-        expect(testMenuItems.length).toEqual(5);
+        expect(testMenuItems.length).toEqual(4);
 
         const contactMenuItem = testMenuItems.pop();
         expect(contactMenuItem.primaryText).toEqual('Contact');
@@ -98,7 +98,7 @@ describe('Routes method', () => {
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
         const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
-        expect(testMenuItems.length).toEqual(13);
+        expect(testMenuItems.length).toEqual(12);
     });
 });
 

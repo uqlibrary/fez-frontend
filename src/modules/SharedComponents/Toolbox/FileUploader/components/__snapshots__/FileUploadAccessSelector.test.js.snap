@@ -108,6 +108,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   "width": "100%",
                 },
               },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -1050,6 +1056,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                                 "width": "100%",
                                               },
                                             },
+                                            "MuiMenuItem": Object {
+                                              "selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
+                                            },
                                           },
                                           "palette": Object {
                                             "accent": Object {
@@ -1682,6 +1694,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -2629,6 +2647,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                                 "textOverflow": "ellipsis",
                                                 "whiteSpace": "nowrap",
                                                 "width": "100%",
+                                              },
+                                            },
+                                            "MuiMenuItem": Object {
+                                              "selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
                                               },
                                             },
                                           },
