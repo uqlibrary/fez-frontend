@@ -483,7 +483,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             disabled={false}
             locale={
               Object {
-                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload
@@ -499,10 +498,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   . Document name could be thesis, abstract, and etc. For example:
                   <ul>
                     <li>
-                      s1234567_phd_thesis.pdf
+                      s1234567_pd_abstract.pdf
                     </li>
                     <li>
-                      s1234567_phd_abstract.pdf
+                      s1234567_pd_totalthesis.pdf
                     </li>
                   </ul>
                   Supplementary audio files are to be in MP 3 format. 
@@ -1005,7 +1004,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             disabled={false}
             locale={
               Object {
-                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload
@@ -1021,10 +1019,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   . Document name could be thesis, abstract, and etc. For example:
                   <ul>
                     <li>
-                      s1234567_phd_thesis.pdf
+                      s1234567_pd_abstract.pdf
                     </li>
                     <li>
-                      s1234567_phd_abstract.pdf
+                      s1234567_pd_totalthesis.pdf
                     </li>
                   </ul>
                   Supplementary audio files are to be in MP 3 format. 
