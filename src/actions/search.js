@@ -168,6 +168,19 @@ export function searchEspacePublications(searchParams) {
     };
 }
 
+export function loadPublicationList(searchKey, searchQuery) {
+    return dispatch => {
+        dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
+
+        return get(SEARCH_INTERNAL_RECORDS_API({searchQueryParams: {all: searchQuery}, page: 1, pageSize: 20, sortBy: 'score', sortDirection: 'Desc', facets: {}}))
+            .then((response) => {
+                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
+            }, (error) => {
+                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error.message});
+            });
+    };
+}
+
 /**
  * Export publications list
  *

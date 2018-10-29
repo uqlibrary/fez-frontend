@@ -10,3 +10,4 @@ export {FieldOfResearchListField} from './containers/FieldOfResearchListField';
 export {FilteredFieldOfResearchListField} from './containers/FieldOfResearchListField';
 export {UqIdField} from './containers/UqIdField';
 export {RoleField} from './containers/RoleField';
+export {RelatedDatasetAndPublicationListField} from './containers/RelatedDatasetAndPublicationListField';

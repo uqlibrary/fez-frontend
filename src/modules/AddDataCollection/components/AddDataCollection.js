@@ -19,6 +19,7 @@ import {LicenseSelectorField} from 'modules/SharedComponents/Toolbox/LicenseSele
 import {GeoCoordinatesField} from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import {DatePickerField} from 'modules/SharedComponents/Toolbox/DatePickerField';
 import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
+import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
 import locale from 'locale/components';
@@ -387,6 +388,17 @@ export default class AddDataCollection extends Component {
                                 <Field
                                     component={GeoCoordinatesField}
                                     name="geographicArea"/>
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.label}>
+                                <Field
+                                    component={RelatedDatasetAndPublicationListField}
+                                    name="fez_record_search_key_has_related_datasets"
+                                    searchKey={{value: 'rek_has_related_datasets', order: 'rek_has_related_datasets_order', lookup: 'rek_has_related_datasets_lookup'}}
+                                    disabled={this.props.submitting}
+                                    height={50}
+                                    validate={[validation.required]}/>
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
