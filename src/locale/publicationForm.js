@@ -1350,17 +1350,17 @@ export default {
                 }
             },
             additionalNotes: {
-                title: 'Optional information - free text field for additional notes or information',
+                title: 'Optional information',
                 fieldLabels: {
                     notes: {
                         label: 'Optional information',
                         placeholder: 'Additional information related to the dataset'
+                    },
+                    links: {
+                        label: 'Link to data in external repository',
+                        placeholder: 'Provide the URL to the dataset where stored in another repository'
                     }
                 }
-            },
-            links: {
-                label: 'Link to data in external repository',
-                placeholder: 'Provide the URL to the dataset where stored in another repository'
             }
         }
     }

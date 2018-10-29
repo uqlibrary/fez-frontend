@@ -402,6 +402,33 @@ export default class AddDataCollection extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
+                            <StandardCard title={txt.information.additionalNotes.title}>
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={TextField}
+                                            name="comments"
+                                            type="text"
+                                            disabled={this.props.submitting}
+                                            fullWidth
+                                            multiline
+                                            {...txt.information.additionalNotes.fieldLabels.notes}/>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={TextField}
+                                            name="rek_link"
+                                            type="text"
+                                            disabled={this.props.submitting}
+                                            fullWidth
+                                            {...txt.information.additionalNotes.fieldLabels.links}
+                                            validate={[validation.url]}
+                                        />
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
                             <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
                                 <Field
                                     name="files"
