@@ -15,7 +15,7 @@ export class DepositAgreement extends PureComponent {
     };
 
     _handleChange = (event) => {
-        this.props.onChange(event.target.checked);
+        this.props.onChange(event.target.checked ? 'on' : 'off');
     };
 
     render() {
