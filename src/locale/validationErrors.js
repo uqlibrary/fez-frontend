@@ -58,9 +58,14 @@ export default {
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
         fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).',
-        contactName: 'Contact name is required',
-        contactId: 'ID for contact name is required',
-        contactEmail: 'Contact email is required',
-        accessCondition: 'Access condition is required'
+        name: 'Contact name is required',
+        nameId: 'ID for contact name is required',
+        email: 'Contact email is required',
+        rek_access_conditions: 'Access condition is required',
+        rek_copyright: 'You are required to accept deposit agreement',
+        rek_license: 'Licensing and terms of access is required',
+        rek_project_name: 'Project name is required',
+        rek_project_description: 'Project description is required',
+        fez_record_search_key_grant_id: 'Grant information is required'
     }
 };

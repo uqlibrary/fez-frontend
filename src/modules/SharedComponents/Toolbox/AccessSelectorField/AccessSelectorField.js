@@ -1,6 +1,6 @@
 import React from 'react';
 import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
-import {OPEN_ACCESS_ID, CLOSED_ACCESS_ID} from 'config/general';
+import {OPEN_ACCESS_ID, MEDIATED_ACCESS_ID} from 'config/general';
 
 export default function AccessSelectorField(fieldProps) {
     return (
@@ -15,7 +15,7 @@ export default function AccessSelectorField(fieldProps) {
                     value: 'Open Access'
                 },
                 {
-                    id: CLOSED_ACCESS_ID,
+                    id: MEDIATED_ACCESS_ID,
                     value: 'Mediated Access'
                 }
             ]}

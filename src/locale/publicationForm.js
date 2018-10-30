@@ -1257,6 +1257,10 @@ export default {
                         label: 'Publisher',
                         placeholder: 'This is where the dataset was originally made available e.g. UQ eSpace'
                     },
+                    doi: {
+                        label: 'DOI',
+                        placeholder: ' '
+                    },
                     date: {
                         title: 'Publication year',
                         day: 'Day',
@@ -1362,6 +1366,8 @@ export default {
                     }
                 }
             }
-        }
+        },
+        cancel: 'Cancel',
+        submit: 'Submit for approval'
     }
 };

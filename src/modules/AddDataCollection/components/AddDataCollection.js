@@ -22,8 +22,9 @@ import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
 import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
-import locale from 'locale/components';
+import componentLocale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
+import {locale} from 'locale';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -61,17 +62,13 @@ export default class AddDataCollection extends Component {
     }
 
     openDepositConfirmation = () => {
-        this.depositConfirmationBox.showConfirmation();
+        this.confirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
-    };
-
-    setDepositConfirmation = (ref) => {
-        this.depositConfirmationBox = ref;
     };
 
     render() {
         const txt = formLocale.addDataset;
-        const txtFoR = locale.components.fieldOfResearchForm;
+        const txtFoR = componentLocale.components.fieldOfResearchForm;
 
         if (this.props.submitSucceeded) {
             return (
@@ -97,22 +94,29 @@ export default class AddDataCollection extends Component {
                 validationAlert: {...formLocale.validationAlert},
                 progressAlert: {...formLocale.progressAlert},
                 successAlert: {...formLocale.successAlert},
-                errorAlert: {
-                    ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage
-                }
+                errorAlert: {...formLocale.errorAlert}
             }});
+
+        const saveConfirmationLocale = {...locale.pages.addRecord.successWorkflowConfirmation};
+        saveConfirmationLocale.confirmationMessage = (
+            <Grid container spacing={24}>
+                <Grid item xs={12}>
+                    {this.props.newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                    {saveConfirmationLocale.recordSuccessConfirmationMessage}
+                </Grid>
+            </Grid>
+        );
         return (
             <StandardPage title={formLocale.pageTitle}>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
                         txt={formLocale.cancelWorkflowConfirmation}/>
-
                     <ConfirmDialogBox
-                        onRef={this.setDepositConfirmation}
-                        onAction={this.props.handleSubmit}
-                        locale={formLocale.thesisSubmission.depositConfirmation}
+                        onRef={ref => (this.confirmationBox = ref)}
+                        onAction={this._navigateToMyResearch}
+                        onCancelAction={this._restartWorkflow}
+                        locale={saveConfirmationLocale}
                     />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -122,7 +126,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={DepositAgreementField}
                                             depositAgreement={txt.information.agreement.text}
-                                            name="depositAgreement"
+                                            name="rek_copyright"
                                             required
                                             validate={[validation.required]}
                                         />
@@ -136,11 +140,9 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12}>
                                         <Field
                                             component={TextField}
-                                            autoFocus
                                             disabled={this.props.submitting}
                                             name="rek_title"
                                             required
-                                            type="text"
                                             fullWidth
                                             multiline
                                             rows={1}
@@ -154,7 +156,6 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                             name="rek_description"
                                             required
-                                            type="text"
                                             fullWidth
                                             multiline
                                             rows={1}
@@ -168,7 +169,6 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                             name="contactName"
                                             required
-                                            type="text"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactName}
                                             validate={[validation.required]}
@@ -178,8 +178,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={AuthorIdField}
                                             disabled={this.props.submitting}
-                                            name="contactId"
-                                            type="text"
+                                            name="contactNameId"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactId}
                                             validate={[validation.required]}
@@ -189,12 +188,23 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={TextField}
                                             disabled={this.props.submitting}
-                                            name="fez_record_search_key_contact_details_email"
+                                            name="contactEmail"
                                             required
-                                            type="text"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactEmail}
                                             validate={[validation.required]}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={12}>
+                                        <Field
+                                            component={TextField}
+                                            disabled={this.props.submitting}
+                                            name="rek_doi"
+                                            required
+                                            type="text"
+                                            fullWidth
+                                            {...txt.information.dataset.fieldLabels.doi}
+                                            validate={[validation.required, validation.doi]}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
@@ -212,8 +222,8 @@ export default class AddDataCollection extends Component {
                                             component={PartialDateField}
                                             disabled={this.props.submitting}
                                             name="rek_date"
-                                            allowPartial required
-                                            className="requiredHintField"
+                                            allowPartial
+                                            required
                                             validate={[validation.required]}
                                             floatingTitle={txt.information.dataset.fieldLabels.date.title}
                                             floatingTitleRequired
@@ -246,6 +256,7 @@ export default class AddDataCollection extends Component {
                                     locale={txt.information.creator.field}
                                     required
                                     disabled={this.props.submitting}
+                                    validate={[validation.requiredList]}
                                 />
                             </StandardCard>
                         </Grid>
@@ -255,7 +266,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={AccessSelectorField}
-                                            name="accessCondition"
+                                            name="fez_record_search_key_access_conditions.rek_access_conditions"
                                             required
                                             validate={[validation.required]}
                                             disabled={this.props.submitting}
@@ -265,7 +276,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={LicenseSelectorField}
-                                            name="licensingAndTermsOfAccess"
+                                            name="fez_record_search_key_license.rek_license"
                                             required
                                             validate={[validation.required]}
                                             disabled={this.props.submitting}
@@ -276,7 +287,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={TextField}
                                             disabled={this.props.submitting}
-                                            name="copyrightNotice"
+                                            name="fez_record_search_key_rights.rek_rights"
                                             type="text"
                                             fullWidth
                                             {...txt.information.accessAndLicensing.fieldLabels.copyrightNotice}
@@ -291,9 +302,8 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12}>
                                         <Field
                                             component={TextField}
-                                            autoFocus
                                             disabled={this.props.submitting}
-                                            name="projectName"
+                                            name="fez_record_search_key_project_name.rek_project_name"
                                             required
                                             type="text"
                                             fullWidth
@@ -306,9 +316,8 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12}>
                                         <Field
                                             component={TextField}
-                                            autoFocus
                                             disabled={this.props.submitting}
-                                            name="projectDescription"
+                                            name="fez_record_search_key_project_description.rek_project_description"
                                             required
                                             type="text"
                                             fullWidth
@@ -322,9 +331,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={ListEditorField}
                                             name="fez_record_search_key_grant_id"
-                                            required
                                             maxCount={10}
-                                            validate={[validation.requiredList]}
                                             searchKey={{value: 'rek_grant_id', order: 'rek_grant_id_order'}}
                                             locale={locale.components.grantIdForm.field}
                                             disabled={this.props.submitting}/>
@@ -332,7 +339,6 @@ export default class AddDataCollection extends Component {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.optionalDatasetDetails.title}>
                                 <Grid container spacing={24}>
@@ -368,7 +374,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={DatePickerField}
                                             autoOk
-                                            name="fez_record_search_key_collection_start"
+                                            name="fez_record_search_key_start_date.rek_start_date"
                                             disabled={this.props.submitting}/>
                                     </Grid>
                                     <Grid item xs={12} sm={6} style={{padding: '0px 20px'}}>
@@ -376,7 +382,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={DatePickerField}
                                             autoOk
-                                            name="fez_record_search_key_collection_end"
+                                            name="fez_record_search_key_end_date.rek_end_date"
                                             disabled={this.props.submitting}/>
                                     </Grid>
                                 </Grid>
@@ -407,7 +413,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12}>
                                         <Field
                                             component={TextField}
-                                            name="comments"
+                                            name="fez_record_search_key_additional_notes.rek_additional_notes"
                                             type="text"
                                             disabled={this.props.submitting}
                                             fullWidth
@@ -434,8 +440,6 @@ export default class AddDataCollection extends Component {
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
-                                    locale={formLocale.thesisSubmission.fileUpload.locale}
-                                    defaultQuickTemplateId={this.props.fileAccessId}
                                     validate={[validation.fileUploadRequired]}/>
                             </StandardCard>
                         </Grid>
@@ -449,21 +453,21 @@ export default class AddDataCollection extends Component {
                     </Grid>
                     <Grid container spacing={16}>
                         <Grid item xs={false} sm />
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid item xs={12} sm="auto">
                             <Button
-                                variant={'contained'}
+                                variant="contained"
                                 fullWidth
-                                children={formLocale.thesisSubmission.cancel}
+                                children={formLocale.addDataset.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this.cancelSubmit}/>
                         </Grid>
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid item xs={12} sm="auto">
                             <Button
-                                variant={'contained'}
-                                color={'primary'}
+                                variant="contained"
+                                color="primary"
                                 fullWidth
-                                children={formLocale.thesisSubmission.submit}
-                                onClick={this.deposit}
+                                children={formLocale.addDataset.submit}
+                                onClick={this.props.handleSubmit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </Grid>
                     </Grid>

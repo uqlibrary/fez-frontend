@@ -10,7 +10,6 @@ export const RelatedDatasetAndPublicationListField = (fieldProps) => {
         transformFunction={
             (searchKey, item, index) => ({
                 [searchKey.value]: item.id,
-                [searchKey.lookup]: item.value,
                 [searchKey.order]: index + 1
             })
         }

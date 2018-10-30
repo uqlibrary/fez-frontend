@@ -7,6 +7,7 @@ import {createNewRecord} from 'actions';
 import AddDataCollection from '../components/AddDataCollection';
 import {withRouter} from 'react-router-dom';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import {PUBLICATION_TYPE_DATA_COLLECTION} from 'config/general';
 
 const FORM_NAME = 'DataCollection';
 
@@ -44,10 +45,17 @@ const AddDataCollectionContainer = reduxForm({
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
 
+    const today = new Date();
+    const initialValues = {
+        rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
+        rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION
+    };
+
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        initialValues: initialValues
     };
 };
 
