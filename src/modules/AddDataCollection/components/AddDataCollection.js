@@ -40,19 +40,6 @@ export default class AddDataCollection extends Component {
         isSessionValid: PropTypes.bool
     };
 
-    componentWillReceiveProps(nextProps) {
-        if (
-            nextProps.isSessionValid &&
-            !nextProps.submitting
-        ) {
-            this.openDepositConfirmation();
-        }
-    }
-
-    deposit = () => {
-        this.props.actions.checkSession();
-    }
-
     cancelSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.cancelLink);
     }
@@ -60,11 +47,6 @@ export default class AddDataCollection extends Component {
     afterSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     }
-
-    openDepositConfirmation = () => {
-        this.confirmationBox.showConfirmation();
-        this.props.actions.clearSessionExpiredFlag();
-    };
 
     render() {
         const txt = formLocale.addDataset;
@@ -77,8 +59,8 @@ export default class AddDataCollection extends Component {
                         <Grid item xs/>
                         <Grid item>
                             <Button
-                                variant={'contained'}
-                                color={'primary'}
+                                variant="contained"
+                                color="primary"
                                 fullWidth
                                 children={formLocale.dataset.afterSubmit}
                                 onClick={this.afterSubmit}/>
