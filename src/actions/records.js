@@ -26,7 +26,7 @@ export function createNewRecord(data) {
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
             ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-            ...transformers.getDatasetContactDetailSearchKeys(data || null),
+            ...transformers.getDatasetContactDetailSearchKeys(data.contact || null),
             ...transformers.getGeographicAreaSearchKey(data.geographicArea || null)
         };
 

@@ -20,6 +20,7 @@ import {GeoCoordinatesField} from 'modules/SharedComponents/Toolbox/GeoCoordinat
 import {DatePickerField} from 'modules/SharedComponents/Toolbox/DatePickerField';
 import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
 import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
+import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
 
 import {validation} from 'config';
 import componentLocale from 'locale/components';
@@ -149,7 +150,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={TextField}
                                             disabled={this.props.submitting}
-                                            name="contactName"
+                                            name="contact.contactName"
                                             required
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactName}
@@ -160,7 +161,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={AuthorIdField}
                                             disabled={this.props.submitting}
-                                            name="contactNameId"
+                                            name="contact.contactNameId"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactId}
                                             validate={[validation.required]}
@@ -170,7 +171,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={TextField}
                                             disabled={this.props.submitting}
-                                            name="contactEmail"
+                                            name="contact.contactEmail"
                                             required
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactEmail}
@@ -334,6 +335,9 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}/>
                                     </Grid>
                                     <Grid item xs={12}>
+                                        <Divider />
+                                    </Grid>
+                                    <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
                                             name="fez_record_search_key_software_required"
@@ -343,6 +347,9 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}/>
                                     </Grid>
                                     <Grid item xs={12}>
+                                        <Divider />
+                                    </Grid>
+                                    <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
                                             name="fez_record_search_key_keyword"
@@ -350,6 +357,9 @@ export default class AddDataCollection extends Component {
                                             searchKey={{value: 'rek_keyword', order: 'rek_keyword_order'}}
                                             locale={locale.components.keywordsForm.field}
                                             disabled={this.props.submitting}/>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Divider />
                                     </Grid>
                                     <Grid item xs={12} sm={6} style={{padding: '0px 20px'}}>
                                         <Typography variant="caption">{txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label}</Typography>

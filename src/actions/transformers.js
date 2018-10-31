@@ -307,21 +307,21 @@ export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = n
     return patchRequest;
 };
 
-export const getDatasetContactDetailSearchKeys = (data) => {
-    if (!data) return {};
+export const getDatasetContactDetailSearchKeys = (contact) => {
+    if (!contact) return {};
 
     return {
         fez_record_search_key_contributor: [{
-            rek_contributor: data.contactName,
+            rek_contributor: contact.contactName,
             rek_contributor_id: null,
             rek_contributor_order: 1
         }],
         fez_record_search_key_contributor_id: [{
-            rek_contributor_id: data.contactNameId.id,
+            rek_contributor_id: contact.contactNameId.id,
             rek_contributor_id_order: 1
         }],
         fez_record_search_key_contact_details_email: [{
-            rek_contact_details_email: data.contactEmail,
+            rek_contact_details_email: contact.contactEmail,
             rek_contact_details_email_order: 1
         }]
     };
