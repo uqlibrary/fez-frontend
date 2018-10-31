@@ -346,9 +346,21 @@ export const FieldOfResearchVocabId = 451780;
 export const NEW_RECORD_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 2,
+    rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
     fez_record_search_key_ismemberof: [
         {
             rek_ismemberof: 'UQ:218198',
+            rek_ismemberof_order: 1
+        }
+    ]
+};
+
+export const NEW_DATASET_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {
+            rek_ismemberof: 'UQ:289097',
             rek_ismemberof_order: 1
         }
     ]

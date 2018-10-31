@@ -7,7 +7,7 @@ import {createNewRecord} from 'actions';
 import AddDataCollection from '../components/AddDataCollection';
 import {withRouter} from 'react-router-dom';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import {PUBLICATION_TYPE_DATA_COLLECTION} from 'config/general';
+import {NEW_DATASET_DEFAULT_VALUES} from 'config/general';
 
 const FORM_NAME = 'DataCollection';
 
@@ -48,7 +48,7 @@ const mapStateToProps = (state) => {
     const today = new Date();
     const initialValues = {
         rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
-        rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION
+        ...NEW_DATASET_DEFAULT_VALUES
     };
 
     return {
