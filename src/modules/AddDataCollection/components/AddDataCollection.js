@@ -4,7 +4,6 @@ import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
@@ -53,8 +52,7 @@ export default class AddDataCollection extends Component {
     }
 
     _restartWorkflow = () => {
-        this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.records.add.dataset);
+        window.location.reload();
     };
 
     render() {
@@ -83,9 +81,6 @@ export default class AddDataCollection extends Component {
         return (
             <StandardPage title={formLocale.pageTitle}>
                 <form>
-                    <NavigationDialogBox
-                        when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={formLocale.cancelWorkflowConfirmation}/>
                     <ConfirmDialogBox
                         onRef={ref => (this.confirmationBox = ref)}
                         onAction={this._navigateToMyDatasets}
