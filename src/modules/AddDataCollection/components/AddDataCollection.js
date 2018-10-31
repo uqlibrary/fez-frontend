@@ -225,7 +225,6 @@ export default class AddDataCollection extends Component {
                                     validate={[validation.forRequired]}
                                     hideReorder
                                     distinctOnly
-                                    maxCount={3}
                                     disabled={this.props.submitting}
                                     locale={txtFoR.field}/>
                             </StandardCard>
