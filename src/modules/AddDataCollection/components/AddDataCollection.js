@@ -41,6 +41,17 @@ export default class AddDataCollection extends Component {
         isSessionValid: PropTypes.bool
     };
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+            this.confirmationBox.showConfirmation();
+        }
+    }
+
+    _navigateToMyDatasets = () => {
+        this.props.actions.clearNewRecord();
+        this.props.history.push(routes.pathConfig.dataset.mine);
+    }
+
     _restartWorkflow = () => {
         this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.records.add.dataset);
@@ -60,7 +71,7 @@ export default class AddDataCollection extends Component {
                 errorAlert: {...formLocale.errorAlert}
             }});
 
-        const saveConfirmationLocale = {...locale.pages.addRecord.successWorkflowConfirmation};
+        const saveConfirmationLocale = {...locale.pages.addDataset.successWorkflowConfirmation};
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -77,7 +88,7 @@ export default class AddDataCollection extends Component {
                         txt={formLocale.cancelWorkflowConfirmation}/>
                     <ConfirmDialogBox
                         onRef={ref => (this.confirmationBox = ref)}
-                        onAction={this._navigateToMyResearch}
+                        onAction={this._navigateToMyDatasets}
                         onCancelAction={this._restartWorkflow}
                         locale={saveConfirmationLocale}
                     />
