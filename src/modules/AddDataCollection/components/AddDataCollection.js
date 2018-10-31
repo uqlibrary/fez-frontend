@@ -22,7 +22,7 @@ import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
 import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
 import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
 
-import {validation} from 'config';
+import {validation, routes} from 'config';
 import componentLocale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {locale} from 'locale';
@@ -41,35 +41,15 @@ export default class AddDataCollection extends Component {
         isSessionValid: PropTypes.bool
     };
 
-    cancelSubmit = () => {
-        window.location.assign(formLocale.thesisSubmission.cancelLink);
-    }
-
-    afterSubmit = () => {
-        window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
-    }
+    _restartWorkflow = () => {
+        this.props.actions.clearNewRecord();
+        this.props.history.push(routes.pathConfig.records.add.dataset);
+    };
 
     render() {
         const txt = formLocale.addDataset;
         const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-        if (this.props.submitSucceeded) {
-            return (
-                <StandardPage title={formLocale.pageTitle}>
-                    <Grid container>
-                        <Grid item xs/>
-                        <Grid item>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                                children={formLocale.dataset.afterSubmit}
-                                onClick={this.afterSubmit}/>
-                        </Grid>
-                    </Grid>
-                </StandardPage>
-            );
-        }
         // customise error for data collection submission
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
@@ -450,7 +430,7 @@ export default class AddDataCollection extends Component {
                                 fullWidth
                                 children={formLocale.addDataset.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this.cancelSubmit}/>
+                                onClick={this._restartWorkflow}/>
                         </Grid>
                         <Grid item xs={12} sm="auto">
                             <Button
