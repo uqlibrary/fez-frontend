@@ -84,7 +84,7 @@ export class AutoCompleteAsyncField extends Component {
                 InputProps={{
                     inputRef: node => {
                         this.textInputRef = node;
-                        if (this.props.openOnFocus) {
+                        if (!!this.textInputRef && this.props.openOnFocus) {
                             this.textInputRef.addEventListener('focus', openMenu);
                         }
                     },
