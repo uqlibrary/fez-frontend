@@ -182,7 +182,7 @@ export default class AddDataCollection extends Component {
                                         <Field
                                             component={TextField}
                                             disabled={this.props.submitting}
-                                            name="rek_doi"
+                                            name="fez_record_search_key_doi.rek_doi"
                                             required
                                             type="text"
                                             fullWidth

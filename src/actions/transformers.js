@@ -118,6 +118,18 @@ export const getRecordAuthorsSearchKey = (authors) => {
     };
 };
 
+export const getDatasetCreatorRolesSearchKey = (creators) => {
+    if (!creators || creators.length === 0) return {};
+    return {
+        fez_record_search_key_author_role: creators.map((item, index) => (
+            !!item.creatorRole && {
+                rek_author_role: item.creatorRole,
+                rek_author_order: index + 1
+            } || {}
+        ))
+    };
+};
+
 export const getRecordSupervisorsSearchKey = (supervisors) => {
     if (!supervisors || supervisors.length === 0) return {};
     return {
