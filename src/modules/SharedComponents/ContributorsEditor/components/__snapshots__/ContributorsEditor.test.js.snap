@@ -22,6 +22,17 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 </div>
 `;
 
+exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
+<div>
+  <Connect(ContributorForm)
+    onAdd={[Function]}
+    showContributorAssignment={false}
+    showIdentifierLookup={false}
+    showRoleInput={true}
+  />
+</div>
+`;
+
 exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
