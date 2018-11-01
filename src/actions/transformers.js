@@ -124,7 +124,7 @@ export const getDatasetCreatorRolesSearchKey = (creators) => {
         fez_record_search_key_author_role: creators.map((item, index) => (
             !!item.creatorRole && {
                 rek_author_role: item.creatorRole,
-                rek_author_order: index + 1
+                rek_author_role_order: index + 1
             } || {}
         ))
     };

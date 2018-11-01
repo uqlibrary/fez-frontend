@@ -768,3 +768,38 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getDatasetCreatorRolesSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = [];
+        const expected = {};
+        const result = transformers.getDatasetCreatorRolesSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [
+            {creatorRole: "Investigator"},
+            {creatorRole: "Software Developer"},
+            {creatorRole: "Co-investigator"}
+        ];
+        const expected = {
+            fez_record_search_key_author_role: [
+                {
+                    rek_author_role: 'Investigator',
+                    rek_author_role_order: 1
+                },
+                {
+                    rek_author_role: 'Software Developer',
+                    rek_author_role_order: 2
+                },
+                {
+                    rek_author_role: 'Co-investigator',
+                    rek_author_role_order: 3
+                }
+            ]
+        };
+        const result = transformers.getDatasetCreatorRolesSearchKey(input);
+        expect(result).toEqual(expected);
+    })
+})
