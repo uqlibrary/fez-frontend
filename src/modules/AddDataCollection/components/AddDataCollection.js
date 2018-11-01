@@ -98,6 +98,7 @@ export default class AddDataCollection extends Component {
                                             name="rek_copyright"
                                             required
                                             validate={[validation.required]}
+                                            disabled={this.props.submitting}
                                         />
                                     </Grid>
                                 </Grid>
@@ -370,6 +371,7 @@ export default class AddDataCollection extends Component {
                                 <Typography variant="caption" gutterBottom>{txt.information.optionalDatasetDetails.fieldLabels.geographicCoordinates.description}</Typography>
                                 <Field
                                     component={GeoCoordinatesField}
+                                    disabled={this.props.submitting}
                                     name="geographicArea"/>
                             </StandardCard>
                         </Grid>

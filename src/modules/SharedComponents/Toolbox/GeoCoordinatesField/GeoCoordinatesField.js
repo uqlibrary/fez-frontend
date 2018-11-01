@@ -2,7 +2,7 @@ import React from 'react';
 import PublicationMap from 'modules/ViewRecord/components/PublicationMap';
 import {GOOGLE_MAPS_API_URL} from 'config/general';
 
-export default function LicenseSelectorField(fieldProps) {
+export default function GeoCoordinatesField(fieldProps) {
     return (
         <PublicationMap
             onChange={fieldProps.input.onChange}

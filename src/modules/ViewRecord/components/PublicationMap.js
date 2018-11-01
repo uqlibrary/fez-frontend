@@ -40,6 +40,10 @@ const PublicationMap = compose(
                 });
             };
 
+            const trimCoordinates = (value, precision = 6) => (
+                value.toFixed(precision).replace(/[\.]?0+$/, '')
+            );
+
             this.setState({
                 center: defaultCenter,
                 zoom: geoCoords.length === 1 ? pointZoom : polygonZoom,
@@ -79,7 +83,7 @@ const PublicationMap = compose(
 
                     this.setState({
                         center: nextCenter,
-                        geoCoords: nextMarkers.map(coord => ({lat: coord.position.lat(), lng: coord.position.lng()})),
+                        geoCoords: nextMarkers.map(coord => ({lat: trimCoordinates(coord.position.lat()), lng: trimCoordinates(coord.position.lng())})),
                         isSearch: true
                     });
                     refs.map.fitBounds(bounds);
@@ -115,7 +119,7 @@ const PublicationMap = compose(
         },
         componentWillUpdate(nextProps, nextState) {
             if (!!this.props.onChange) {
-                this.props.onChange(nextState.geoCoords.map(coord => (`${coord.lng},${coord.lat}`)).join(' '));
+                this.props.onChange(nextState.geoCoords.map(coord => (`${coord.lng.toFixed(6)},${coord.lat.toFixed(6)}`)).join(' '));
             }
         }
     }),
