@@ -1368,6 +1368,9 @@ export default {
             }
         },
         cancel: 'Cancel',
-        submit: 'Submit for approval'
+        submit: 'Submit for approval',
+        fileUpload: {
+            title: 'Upload files'
+        }
     }
 };

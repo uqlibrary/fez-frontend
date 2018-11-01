@@ -412,7 +412,7 @@ export default class AddDataCollection extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
+                            <StandardCard title={txt.fileUpload.title}>
                                 <Field
                                     name="files"
                                     component={FileUploadField}
