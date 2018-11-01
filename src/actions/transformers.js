@@ -321,7 +321,6 @@ export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = n
 
 export const getDatasetContactDetailSearchKeys = (contact) => {
     if (!contact) return {};
-    console.log(contact);
     return {
         fez_record_search_key_contributor: [{
             rek_contributor: contact.contactName,

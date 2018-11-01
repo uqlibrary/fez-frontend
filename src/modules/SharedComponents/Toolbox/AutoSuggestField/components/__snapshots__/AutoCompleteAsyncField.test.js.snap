@@ -3063,7 +3063,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   aria-autocomplete="list"
                                   aria-controls={null}
                                   aria-labelledby="downshift-3-label"
-                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-focused-20 MuiInput-focused-7 MuiInputBase-formControl-19 MuiInput-formControl-6"
                                   onClick={[Function]}
                                 >
                                   <input
