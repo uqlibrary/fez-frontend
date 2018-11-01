@@ -840,3 +840,24 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
         expect(result).toEqual(expected);
     })
 });
+
+describe('getGeographicAreaSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getGeographicAreaSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = '12.231112,-32.323323';
+        const expected = {
+            fez_record_search_key_geographic_area: [{
+                rek_geographic_area: '12.231112,-32.323323',
+                rek_geographic_area_order: 1
+            }]
+        };
+        const result = transformers.getGeographicAreaSearchKey(input);
+        expect(result).toEqual(expected);
+    })
+});
