@@ -10,6 +10,7 @@ function setup(testProps, isShallow = true) {
         canMoveUp: false,
         canMoveDown: false,
         showIdentifierLookup: false,
+        showRoleInput: false,
         showContributorAssignment: false,
         disabledContributorAssignment: false,
         disabled: false,
@@ -44,8 +45,18 @@ describe('Component ContributorRow ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('a row with index and creator with creator role set and set as selected', () => {
+        const wrapper = setup({...authorsSearch.data[0], index: 0, showRoleInput: true, contributor: {nameAsPublished: "J. Smith", selected: true, creatorRole: 'Investigator'}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('a row with index and contributor with author details set and set as selected for mobile view', () => {
         const wrapper = setup({...authorsSearch.data[0], index: 0, showIdentifierLookup: true, contributor: {nameAsPublished: "J. Smith", selected: true}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('a row with index and creator with creator role set and set as selected for mobile view', () => {
+        const wrapper = setup({...authorsSearch.data[0], index: 0, showRoleInput: true, contributor: {nameAsPublished: "J. Smith", selected: true, creatorRole: 'Investigator'}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -168,7 +179,7 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({contributor: {nameAsPublished: "J. Smith"}});
         wrapper.instance().shouldComponentUpdate = testFunction;
         wrapper.setProps({contributor: {nameAsPublished: "K. Lane"}});
-        expect(testFunction).toBeCalledWith({"canMoveDown": false, "canMoveUp": false, "classes": {"hideIcon": "hideIcon", "identifierName": "identifierName", "identifierSubtitle": "identifierSubtitle", "listItem": "listItem", "primary": "primary", "selected": "selected"}, "contributor": {"nameAsPublished": "K. Lane"}, "disabled": false, "disabledContributorAssignment": false, "index": 0, "locale": {"deleteHint": "Remove this record", "deleteRecordConfirmation": {"cancelButtonLabel": "No", "confirmButtonLabel": "Yes", "confirmationMessage": "Are you sure you want to delete this record?", "confirmationTitle": "Delete record"}, "moveDownHint": "Move record down the order", "moveUpHint": "Move record up the order", "ordinalData": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], "selectHint": "Select this record ([name]) to assign it to you", "suffix": " listed contributor"}, "showContributorAssignment": false, "showIdentifierLookup": false, "width": "md"}, null, {});
+        expect(testFunction).toBeCalledWith({"canMoveDown": false, "canMoveUp": false, "classes": {"hideIcon": "hideIcon", "identifierName": "identifierName", "identifierSubtitle": "identifierSubtitle", "listItem": "listItem", "primary": "primary", "selected": "selected"}, "contributor": {"nameAsPublished": "K. Lane"}, "disabled": false, "disabledContributorAssignment": false, "index": 0, "locale": {"deleteHint": "Remove this record", "deleteRecordConfirmation": {"cancelButtonLabel": "No", "confirmButtonLabel": "Yes", "confirmationMessage": "Are you sure you want to delete this record?", "confirmationTitle": "Delete record"}, "moveDownHint": "Move record down the order", "moveUpHint": "Move record up the order", "ordinalData": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], "selectHint": "Select this record ([name]) to assign it to you", "suffix": " listed contributor"}, "showContributorAssignment": false, "showIdentifierLookup": false, "showRoleInput": false, "width": "md"}, null, {});
     });
 
     it('triggers the confirmation box', () => {
