@@ -89,7 +89,8 @@ export const pathConfig = {
     },
     admin: {
         masquerade: '/admin/masquerade',
-        legacyEspace: `${fullPath}/my_upo_tools.php`
+        legacyEspace: `${fullPath}/my_upo_tools.php`,
+        unpublished: '/admin/unpublished'
     },
     authorIdentifiers: {
         orcid: {
@@ -111,7 +112,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
+    '/admin/masquerade', '/admin/unpublished', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
 // TODO: will we even have roles?
 export const roles = {
