@@ -286,6 +286,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.masquerade.title
+            },
+            {
+                path: pathConfig.admin.unpublished,
+                component: components.SearchRecords,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.unpublished.title
             }
         ] : []),
         ...publicPages,
@@ -385,6 +392,10 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
+            },
+            {
+                linkTo: pathConfig.admin.unpublished,
+                ...locale.menu.unpublished
             },
             {
                 linkTo: pathConfig.admin.legacyEspace,

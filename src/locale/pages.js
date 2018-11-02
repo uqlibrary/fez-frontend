@@ -638,6 +638,9 @@ export default {
                 message: 'Request is being processed.',
                 showLoader: true
             }
+        },
+        unpublished: {
+            title: 'Unpublished buffer'
         }
     }
 };
