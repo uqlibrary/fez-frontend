@@ -60,13 +60,13 @@ export class ListRow extends PureComponent {
         const {moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation} = this.props.locale;
 
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
+            <React.Fragment>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
                     locale={deleteRecordConfirmation}
                 />
-                <Grid container alignItems="center" spacing={16} className={classes.row}>
+                <Grid container alignItems="center" spacing={8} className={classes.row}>
                     <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
                         <Typography variant="body2">{item.value || item}</Typography>
                     </Grid>
@@ -105,7 +105,7 @@ export class ListRow extends PureComponent {
                         </Tooltip>
                     </Grid>
                 </Grid>
-            </div>
+            </React.Fragment>
         );
     }
 }
@@ -115,6 +115,7 @@ const styles = () => ({
         textAlign: 'center'
     },
     row: {
+        marginLeft: 0, marginRight: 0,
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
     }
 });

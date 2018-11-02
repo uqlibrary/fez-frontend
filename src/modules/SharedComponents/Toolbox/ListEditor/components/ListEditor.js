@@ -18,7 +18,7 @@ export default class ListsEditor extends Component {
         distinctOnly: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
-        input: PropTypes.object
+        input: PropTypes.object,
     };
 
     static defaultProps = {
@@ -28,14 +28,14 @@ export default class ListsEditor extends Component {
             value: 'rek_value',
             order: 'rek_order'
         },
-        maxCount: 0
+        maxCount: 0,
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            itemList: props.input && props.input.name && props.input.value ? props.input.value.toJS().map(item => item[props.searchKey.value]) : []
+            itemList: props.input && props.input.name && props.input.value ? props.input.value.map(item => item[props.searchKey.value]) : []
         };
     }
 
@@ -100,6 +100,7 @@ export default class ListsEditor extends Component {
     }
 
     render() {
+        console.log(this.props);
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
                 key={index}

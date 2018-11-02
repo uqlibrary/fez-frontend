@@ -1,1 +1,1 @@
-export {default as Admin} from './components/Admin';
+export {default as Admin} from './containers/Admin';

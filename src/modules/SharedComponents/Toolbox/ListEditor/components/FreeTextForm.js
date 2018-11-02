@@ -74,45 +74,43 @@ export class FreeTextForm extends Component {
         const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
 
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
-                <Grid container spacing={16} display="row" alignItems="baseline">
-                    <Grid item style={{flexGrow: 1}}>
-                        <TextField
-                            fullWidth
-                            inputRef={(node) => {this.textField = node;}}
-                            label={inputFieldLabel}
-                            placeholder={inputFieldHint}
-                            value={this.state.itemName}
-                            onChange={this.onNameChanged}
-                            onKeyPress={this.addItem}
-                            error={!!this.props.isValid(this.state.itemName)}
-                            helperText={this.props.isValid(this.state.itemName) || errorText
-                                ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
-                                : null}
-                            disabled={disabled}
-                        />
-                        {
-                            this.props.remindToAdd &&
-                            remindToAdd &&
-                            this.state.itemName.length !== 0 &&
-                            !this.props.isValid(this.state.itemName) &&
-                            <Typography variant="caption" className={classes.remindToAdd}>
-                                {remindToAdd}
-                            </Typography>
-                        }
-                    </Grid>
-                    <Grid item xs={12} sm={2}>
-                        <Button
-                            fullWidth
-                            color={'primary'}
-                            variant={'contained'}
-                            children={addButtonLabel}
-                            disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
-                            onClick={this.addItem}
-                        />
-                    </Grid>
+            <Grid container spacing={8} display="row" alignItems={'flex-end'} alignContent={'flex-end'}>
+                <Grid item xs>
+                    <TextField
+                        fullWidth
+                        inputRef={(node) => {this.textField = node;}}
+                        label={inputFieldLabel}
+                        placeholder={inputFieldHint}
+                        value={this.state.itemName}
+                        onChange={this.onNameChanged}
+                        onKeyPress={this.addItem}
+                        error={!!this.props.isValid(this.state.itemName)}
+                        helperText={this.props.isValid(this.state.itemName) || errorText
+                            ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
+                            : null}
+                        disabled={disabled}
+                    />
+                    {
+                        this.props.remindToAdd &&
+                        remindToAdd &&
+                        this.state.itemName.length !== 0 &&
+                        !this.props.isValid(this.state.itemName) &&
+                        <Typography variant="caption" className={classes.remindToAdd}>
+                            {remindToAdd}
+                        </Typography>
+                    }
                 </Grid>
-            </div>
+                <Grid item xs={12} sm={'auto'}>
+                    <Button
+                        fullWidth
+                        color={'primary'}
+                        variant={'contained'}
+                        children={addButtonLabel}
+                        disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                        onClick={this.addItem}
+                    />
+                </Grid>
+            </Grid>
         );
     }
 }

@@ -1,179 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FreeTextForm tests  rendering active form 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 8,
-    }
-  }
+<WithStyles(Grid)
+  alignContent="flex-end"
+  alignItems="flex-end"
+  container={true}
+  display="row"
+  spacing={8}
 >
   <WithStyles(Grid)
-    alignItems="baseline"
-    container={true}
-    display="row"
-    spacing={16}
+    item={true}
+    xs={true}
   >
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    >
-      <TextField
-        disabled={false}
-        error={false}
-        fullWidth={true}
-        helperText={null}
-        inputRef={[Function]}
-        label="Item name"
-        onChange={[Function]}
-        onKeyPress={[Function]}
-        placeholder="Please type the item name"
-        required={false}
-        select={false}
-        value=""
-        variant="standard"
-      />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        disabled={true}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
-      >
-        Add
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
+    <TextField
+      disabled={false}
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      inputRef={[Function]}
+      label="Item name"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Please type the item name"
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
   </WithStyles(Grid)>
-</div>
+  <WithStyles(Grid)
+    item={true}
+    sm="auto"
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="contained"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`FreeTextForm tests  rendering disabled form 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 8,
-    }
-  }
+<WithStyles(Grid)
+  alignContent="flex-end"
+  alignItems="flex-end"
+  container={true}
+  display="row"
+  spacing={8}
 >
   <WithStyles(Grid)
-    alignItems="baseline"
-    container={true}
-    display="row"
-    spacing={16}
+    item={true}
+    xs={true}
   >
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    >
-      <TextField
-        disabled={true}
-        error={false}
-        fullWidth={true}
-        helperText={null}
-        inputRef={[Function]}
-        label="Item name"
-        onChange={[Function]}
-        onKeyPress={[Function]}
-        placeholder="Please type the item name"
-        required={false}
-        select={false}
-        value=""
-        variant="standard"
-      />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        disabled={true}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
-      >
-        Add
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
+    <TextField
+      disabled={true}
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      inputRef={[Function]}
+      label="Item name"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Please type the item name"
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
   </WithStyles(Grid)>
-</div>
+  <WithStyles(Grid)
+    item={true}
+    sm="auto"
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="contained"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 8,
-    }
-  }
+<WithStyles(Grid)
+  alignContent="flex-end"
+  alignItems="flex-end"
+  container={true}
+  display="row"
+  spacing={8}
 >
   <WithStyles(Grid)
-    alignItems="baseline"
-    container={true}
-    display="row"
-    spacing={16}
+    item={true}
+    xs={true}
   >
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
+    <TextField
+      disabled={false}
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      inputRef={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={false}
+      select={false}
+      value="one"
+      variant="standard"
+    />
+    <WithStyles(Typography)
+      className=""
+      variant="caption"
     >
-      <TextField
-        disabled={false}
-        error={false}
-        fullWidth={true}
-        helperText={null}
-        inputRef={[Function]}
-        onChange={[Function]}
-        onKeyPress={[Function]}
-        required={false}
-        select={false}
-        value="one"
-        variant="standard"
-      />
-      <WithStyles(Typography)
-        className=""
-        variant="caption"
-      >
-        reminder text
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        disabled={true}
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
-      >
-        Add
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
+      reminder text
+    </WithStyles(Typography)>
   </WithStyles(Grid)>
-</div>
+  <WithStyles(Grid)
+    item={true}
+    sm="auto"
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="contained"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
