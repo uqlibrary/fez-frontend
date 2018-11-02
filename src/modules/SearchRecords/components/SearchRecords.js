@@ -33,6 +33,7 @@ class SearchRecords extends PureComponent {
         canUseExport: PropTypes.bool,
         searchLoading: PropTypes.bool,
         searchLoadingError: PropTypes.bool,
+        isAdvancedSearch: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -236,6 +237,7 @@ class SearchRecords extends PureComponent {
                                 searchLoading={this.props.searchLoading}
                                 clearSearchQuery={this.props.actions.clearSearchQuery}
                                 updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
+                                isAdvancedSearch={this.props.isAdvancedSearch}
                             />
                         </StandardCard>
                     </Grid>

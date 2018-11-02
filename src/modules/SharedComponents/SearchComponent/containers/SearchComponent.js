@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 
     const {publicationsList} = !!state && !!state.get('searchRecordsReducer') && state.get('searchRecordsReducer') || {};
 
-    const isAdvancedSearch = !!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced';
+    const isAdvancedSearch = !!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced' || ownProps.isAdvancedSearch;
     const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList.length > 0;
 
     return {

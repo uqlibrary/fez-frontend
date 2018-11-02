@@ -289,7 +289,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             },
             {
                 path: pathConfig.admin.unpublished,
-                component: components.SearchRecords,
+                render: (props) => components.SearchRecords({...props, isAdvancedSearch: true}),
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.unpublished.title
