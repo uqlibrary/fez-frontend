@@ -296,6 +296,16 @@ export default class AddDataCollection extends Component {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
+
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={ListEditorField}
+                                            name="fez_record_search_key_grant_agency"
+                                            maxCount={10}
+                                            searchKey={{value: 'rek_grant_agency', order: 'rek_grant_agency_order'}}
+                                            locale={locale.components.fundingBodyForm.field}
+                                            disabled={this.props.submitting}/>
+                                    </Grid>
                                     <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}

@@ -61,7 +61,7 @@ describe('AddDataCollection test', () => {
     it('should render data set form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(27);
+        expect(wrapper.find('Field').length).toEqual(28);
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
     });
 

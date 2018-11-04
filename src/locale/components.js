@@ -199,6 +199,43 @@ export default {
                 }
             }
         },
+        fundingBodyForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Funding body',
+                        inputFieldHint: 'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Funding body',
+                        reorderColumn: 'Reorder funding bodies',
+                        deleteAll: 'Remove all funding bodies',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all funding bodies?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move funding body up the order',
+                        moveDownHint: 'Move funding body down the order',
+                        deleteHint: 'Remove this funding body',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete funding body',
+                            confirmationMessage: 'Are you sure you want to delete this funding body?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         grantIdForm: {
             field: {
                 form: {
