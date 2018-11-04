@@ -1195,7 +1195,6 @@ export default {
                 </div>
             )
         },
-        cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
