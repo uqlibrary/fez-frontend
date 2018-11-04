@@ -123,12 +123,6 @@ describe('SbsSubmission test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should redirect to cancel page', () => {
-        window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().cancelSubmit();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.cancelLink));
-    });
-
     it('should redirect to after submit page', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().afterSubmit();

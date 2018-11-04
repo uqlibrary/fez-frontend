@@ -434,17 +434,11 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             }
             maxCount={10}
             name="fez_record_search_key_keywords"
-            required={true}
             searchKey={
               Object {
                 "order": "rek_keywords_order",
                 "value": "rek_keywords",
               }
-            }
-            validate={
-              Array [
-                [Function],
-              ]
             }
           />
         </StandardCard>
@@ -955,17 +949,11 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             }
             maxCount={10}
             name="fez_record_search_key_keywords"
-            required={true}
             searchKey={
               Object {
                 "order": "rek_keywords_order",
                 "value": "rek_keywords",
               }
-            }
-            validate={
-              Array [
-                [Function],
-              ]
             }
           />
         </StandardCard>

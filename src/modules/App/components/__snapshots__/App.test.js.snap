@@ -14,7 +14,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -454,7 +454,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -667,7 +667,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -1085,7 +1085,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -1322,7 +1322,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -1614,7 +1614,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       <Route
         key="route_5"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -1643,7 +1643,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -2061,7 +2061,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -2274,7 +2274,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -2716,7 +2716,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -2929,7 +2929,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -3223,7 +3223,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -3436,7 +3436,7 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -4214,7 +4214,7 @@ exports[`Application component should render thesis submission for HDR without m
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -4388,7 +4388,7 @@ exports[`Application component should render thesis submission for HDR without m
       <Route
         key="route_5"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route

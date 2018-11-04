@@ -30,7 +30,7 @@ export const pathConfig = {
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
-    sbsSubmission: '/sbslodge_new',
+    sbsSubmission: '/habslodge',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
