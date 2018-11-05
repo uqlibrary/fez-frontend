@@ -170,11 +170,10 @@ export default class AddDataCollection extends Component {
                                             component={TextField}
                                             disabled={this.props.submitting}
                                             name="fez_record_search_key_doi.rek_doi"
-                                            required
                                             type="text"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.doi}
-                                            validate={[validation.required, validation.doi]}
+                                            validate={[validation.doi]}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
@@ -429,6 +428,7 @@ export default class AddDataCollection extends Component {
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
+                                    requireOpenAccessStatus
                                     validate={[validation.fileUploadRequired]}/>
                             </StandardCard>
                         </Grid>

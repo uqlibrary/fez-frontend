@@ -217,11 +217,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 label="DOI"
                 name="fez_record_search_key_doi.rek_doi"
                 placeholder=" "
-                required={true}
                 type="text"
                 validate={
                   Array [
-                    [Function],
                     [Function],
                   ]
                 }
@@ -968,7 +966,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Related datasets (non mandatory)"
+          title="Related datasets/publications (non mandatory)"
         >
           <Field
             component={[Function]}
@@ -1049,6 +1047,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
             component={[Function]}
             disabled={false}
             name="files"
+            requireOpenAccessStatus={true}
             validate={
               Array [
                 [Function],

@@ -1347,7 +1347,7 @@ export default {
                         description: 'Use this tool to specify the geographic co-ordinates the data relates to'
                     },
                     relatedDatasets: {
-                        label: 'Related datasets (non mandatory)',
+                        label: 'Related datasets/publications (non mandatory)',
                         placeholder: 'Search for and add related datasets in UQ eSpace'
                     }
                 }
