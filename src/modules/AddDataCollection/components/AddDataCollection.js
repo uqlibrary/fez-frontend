@@ -162,7 +162,7 @@ export default class AddDataCollection extends Component {
                                             required
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.contactEmail}
-                                            validate={[validation.required]}
+                                            validate={[validation.required, validation.email]}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={12}>
