@@ -385,3 +385,31 @@ export const defaultQueryParams = {
         ranges: {}
     }
 };
+
+export const ANY_UNPUBLISHED = -4;
+export const IN_CREATION = 4;
+export const IN_DRAFT = 6;
+export const IN_REVIEW = 5;
+export const RETRACTED = 7;
+export const SUBMITTED_FOR_APPROVAL = 3;
+export const UNPUBLISHED = 1;
+
+export const UNPUBLISHED_STATUS = [
+    'Any unpublished',
+    'In Creation',
+    'In Draft',
+    'In Review',
+    'Retracted',
+    'Submitted for Approval',
+    'Unpublished'
+];
+
+export const UNPUBLISHED_STATUS_MAP = {
+    'Any unpublished': ANY_UNPUBLISHED,
+    'In Creation': IN_CREATION,
+    'In Draft': IN_DRAFT,
+    'In Review': IN_REVIEW,
+    'Retracted': RETRACTED,
+    'Submitted for Approval': SUBMITTED_FOR_APPROVAL,
+    'Unpublished': UNPUBLISHED
+};

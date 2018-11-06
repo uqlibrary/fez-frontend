@@ -1002,7 +1002,6 @@ export default {
                         combiner: 'is one of',
                         type: null,
                         hint: 'Select document types',
-                        floatingLabelText: 'Test',
                         validation: [],
                         ariaLabel: 'Select multiple publications types to search on'
                     },
@@ -1019,6 +1018,16 @@ export default {
                         toHint: 'Year to',
                         invalidText: 'Invalid year range',
                         ariaLabel: 'Add valid year ranges to search between'
+                    },
+                    'rek_status': {
+                        order: 16,
+                        map: 'Status',
+                        title: 'Status',
+                        combiner: 'is',
+                        type: 'StatusLookup',
+                        hint: 'Select status',
+                        validation: [],
+                        ariaLabel: 'Select a status to search on'
                     }
                 },
                 openAccess: {

@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import UnpublishedStatusField from './Fields/UnpublishedStatusField';
 
 export default class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -71,6 +72,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
                 return AuthorIdField;
             case 'OrgUnitLookup':
                 return OrgUnitNameField;
+            case 'StatusLookup':
+                return UnpublishedStatusField;
             default:
                 return TextField;
         }
@@ -156,6 +159,14 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     'autoWidth': false,
                     'hideLabel': true,
                     'displayEmpty': true
+                };
+            case 'StatusLookup':
+                return {
+                    ...selectDefaultProps,
+                    'autoWidth': false,
+                    'hideLabel': true,
+                    'displayEmtpy': false,
+                    'onChange': (item) => this.props.onChange(item)
                 };
             default: return {};
         }
