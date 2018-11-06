@@ -4,7 +4,7 @@ import param from 'can-param';
 
 import Snackbar from '@material-ui/core/Snackbar';
 import {routes} from 'config';
-import {defaultQueryParams} from 'config/general';
+import {defaultQueryParams, UNPUBLISHED_STATUS_MAP} from 'config/general';
 import {locale} from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
@@ -304,7 +304,11 @@ export default class SearchComponent extends PureComponent {
             .filter(item => item.searchField !== '0')
             .reduce((searchQueries, item) => {
                 const {searchField, ...rest} = item;
-                return {...searchQueries, [searchField]: rest};
+                if (searchField === 'rek_status' && !!item.value) {
+                    return {...searchQueries, [searchField]: UNPUBLISHED_STATUS_MAP[item.value]};
+                } else {
+                    return {...searchQueries, [searchField]: rest};
+                }
             }, {});
         const searchQuery = this.getSearchQuery(searchQueryParams);
         this.handleSearch(searchQuery);
