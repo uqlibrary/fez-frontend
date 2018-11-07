@@ -10,7 +10,6 @@ import Switch from '@material-ui/core/Switch';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
-import TextField from '@material-ui/core/TextField';
 import {TextField as GenericTextField} from '../../SharedComponents/Toolbox/TextField';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import Hidden from '@material-ui/core/Hidden';
@@ -35,7 +34,7 @@ import Button from '@material-ui/core/Button';
 import MUIDataTable from 'mui-datatables';
 import IconButton from '@material-ui/core/IconButton';
 import Edit from '@material-ui/icons/Edit';
-
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 const styles = theme => ({
     helpIcon: {
@@ -78,7 +77,7 @@ class Admin extends PureComponent {
         super(props);
         this.state = {
             tabbed: Cookies.get('adminFormTabbed') ? !!(Cookies.get('adminFormTabbed') === 'tabbed') : true,
-            tabValue: 3,
+            tabValue: 4,
             grants: {
                 showEdit: false,
                 showAdd: false,
@@ -160,6 +159,7 @@ class Admin extends PureComponent {
             }
         });
     }
+
     handleGrantEditButtonSubmit = () => {
         this.setState({
             ...this.state,
@@ -172,58 +172,137 @@ class Admin extends PureComponent {
 
     render() {
         const { classes } = this.props;
-
-        const columns = [{
-            name: 'Grant agency',
-            options: {
-                display: true,
-                sort: true,
-            }
-        },
-        {
-            name: 'Grant agency ID',
-            options: {
-                display: true,
-                sort: true,
-            }
-        },
-        {
-            name: 'Grant ID',
-            options: {
-                display: true,
-                sort: true,
-            }
-        },
-        {
-            name: 'Grant acronym',
-            options: {
-                display: true,
-                sort: true,
-            }
-        },
-        {
-            name: 'Grant text',
-            options: {
-                display: 'excluded',
-                sort: true,
-            }
-        },
-        {
-            name: 'Actions',
-            options: {
-                display: true,
-                sort: false,
-                filter: false
-            }
-        }];
-
-        const data = [
+        const grantColumns = [
+            {
+                name: 'Grant agency',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Grant agency ID',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Grant ID',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Grant acronym',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Grant text',
+                options: {
+                    display: 'false',
+                    sort: true,
+                }
+            },
+            {
+                name: 'Actions',
+                options: {
+                    display: true,
+                    sort: false,
+                    filter: false
+                }
+            }];
+        const grantData = [
             ['National Breast Cancer Foundation of Australia', 'NBCF: 2007003445', '1234', 'NBCF', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec ligula nec nulla sodales laoreet.', <IconButton onClick={this.handleGrantEditButton}><Edit/></IconButton>],
             ['Australian Research Council', 'ARC: DP0985025', '1234', 'NBCF', 'Gravida lectus quis, fermentum dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec quis interdum leo.', <IconButton onClick={this.handleGrantEditButton}><Edit/></IconButton>],
         ];
-
-        const options = {
+        const grantOptions = {
             filterType: 'checkbox',
+        };
+
+        const authorColumns = [
+            {
+                name: 'Author name',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Author school/institute',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Author affiliation',
+                options: {
+                    display: true,
+                    sort: false,
+                    filter: false
+                }
+            },
+            {
+                name: '',
+                options: {
+                    display: true,
+                    sort: false,
+                    filter: false
+                }
+            }];
+        const authorData = [
+            ['John Smith (uq12345)', 'UQ Diamantina Institute', <Field name={'author1affiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Update'} />],
+            ['Mary Jones (uq67890)', 'School of public health', <Field name={'author2affiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Update'} />],
+            ['Michael O`Reilly (uq98765)', 'Centre for health services research', <Field name={'author3affiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Update'} />],
+        ];
+        const authorOptions = {
+            filterType: 'checkbox',
+            rowHover: false,
+        };
+
+        const authorRecColumns = [
+            {
+                name: 'Author name',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Author school/institute',
+                options: {
+                    display: true,
+                    sort: true,
+                }
+            },
+            {
+                name: 'Author affiliation',
+                options: {
+                    display: true,
+                    sort: false,
+                    filter: false
+                }
+            },
+            {
+                name: '',
+                options: {
+                    display: true,
+                    sort: false,
+                    filter: false
+                }
+            }];
+        const authorRecData = [
+            ['Peter Day (uq12345)', 'UQ Diamantina Institute', <Field name={'author1recaffiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Add'} />],
+            ['Mitchel Clarke (uq67890)', 'School of public health', <Field name={'author2recaffiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Add'} />],
+        ];
+        const authorRecOptions = {
+            filterType: 'checkbox',
+            rowHover: false,
         };
 
         return (
@@ -869,98 +948,104 @@ class Admin extends PureComponent {
                         {
                             ((this.state.tabbed && this.state.tabValue === 3) || !this.state.tabbed) &&
                             // Grant Info
-                                <React.Fragment>
-
-                                    <Grid item xs={12}>
-                                        <StandardCard title={'Grant information'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
-                                            <Grid container spacing={8} style={{marginTop: -24}}>
-                                                <Grid item xs={12} sm={6}>
-                                                    <Field
-                                                        component={GenericTextField}
-                                                        name="grantagency"
-                                                        fullWidth
-                                                        label={'Grant agency'}
-                                                        placeholder={''} />
-                                                </Grid>
-                                                <Grid item xs={12} sm={6}>
-                                                    <Field
-                                                        component={GenericTextField}
-                                                        name="grantagencyid"
-                                                        fullWidth
-                                                        label={'Grant agency ID'}
-                                                        placeholder={''} />
-                                                </Grid>
-                                                <Grid item xs={12} sm={6}>
-                                                    <Field
-                                                        component={GenericTextField}
-                                                        name="grantid"
-                                                        fullWidth
-                                                        label={'Grant ID'}
-                                                        placeholder={''} />
-                                                </Grid>
-                                                <Grid item xs={12} sm={6}>
-                                                    <Field
-                                                        component={GenericTextField}
-                                                        name="grantacronym"
-                                                        fullWidth
-                                                        label={'Grant acronym'}
-                                                        placeholder={''} />
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Grant text</Typography>
-                                                    <Field
-                                                        component={RichEditorField}
-                                                        name="granttext"
-                                                        height={100} />
-                                                </Grid>
-                                                <Grid item xs={12} style={{padding: 4}}>
-                                                    <Grid container spacing={8}>
-                                                        <Grid item xs />
-                                                        <Grid item xs={'auto'}>
-                                                            <Button variant={'contained'} color={'primary'} onClick={this.handleGrantEditButtonSubmit}>
-                                                                {this.state.grants.buttonAction}
-                                                            </Button>
-                                                        </Grid>
-                                                        <Grid item xs={'auto'}>
-                                                            <Button color={'secondary'}>
-                                                                Clear
-                                                            </Button>
-                                                        </Grid>
+                            <React.Fragment>
+                                <Grid item xs={12}>
+                                    <StandardCard title={'Grant information'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                        <Grid container spacing={8} style={{marginTop: -24}}>
+                                            <Grid item xs={12} sm={6}>
+                                                <Field
+                                                    component={GenericTextField}
+                                                    name="grantagency"
+                                                    fullWidth
+                                                    label={'Grant agency'}
+                                                    placeholder={''} />
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <Field
+                                                    component={GenericTextField}
+                                                    name="grantagencyid"
+                                                    fullWidth
+                                                    label={'Grant agency ID'}
+                                                    placeholder={''} />
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <Field
+                                                    component={GenericTextField}
+                                                    name="grantid"
+                                                    fullWidth
+                                                    label={'Grant ID'}
+                                                    placeholder={''} />
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <Field
+                                                    component={GenericTextField}
+                                                    name="grantacronym"
+                                                    fullWidth
+                                                    label={'Grant acronym'}
+                                                    placeholder={''} />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Grant text</Typography>
+                                                <Field
+                                                    component={RichEditorField}
+                                                    name="granttext"
+                                                    height={100} />
+                                            </Grid>
+                                            <Grid item xs={12} style={{padding: 4}}>
+                                                <Grid container spacing={8}>
+                                                    <Grid item xs />
+                                                    <Grid item xs={'auto'}>
+                                                        <Button color={'secondary'}>
+                                                            Clear
+                                                        </Button>
+                                                    </Grid>
+                                                    <Grid item xs={'auto'}>
+                                                        <Button variant={'contained'} color={'primary'} onClick={this.handleGrantEditButtonSubmit}>
+                                                            {this.state.grants.buttonAction}
+                                                        </Button>
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <MUIDataTable
-                                            title={'Grant list'}
-                                            data={data}
-                                            columns={columns}
-                                            options={options}
-                                        />
-                                    </Grid>
-                                </React.Fragment>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <MUIDataTable
+                                        title={'Grant list'}
+                                        data={grantData}
+                                        columns={grantColumns}
+                                        options={grantOptions}
+                                    />
+                                </Grid>
+                            </React.Fragment>
 
                         }
                         {
                             ((this.state.tabbed && this.state.tabValue === 4) || !this.state.tabbed) &&
                             // Author Affiliation
-                            <Grid item xs={12}>
-                                <StandardCard title={'Author Affiliation'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
-                                    <Grid container spacing={16}>
-                                        <Grid item xs={12} sm={12}>
-                                            <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
-                                        </Grid>
-                                        <Grid item xs={12} sm={12}>
-                                            <TextField
-                                                label="Test"
-                                                autoFocus={!!this.state.tabbed && this.state.tabValue === 4}
-                                                fullWidth
-                                            />
-                                        </Grid>
-                                    </Grid>
-                                </StandardCard>
-                            </Grid>
+                            <React.Fragment>
+                                <Grid item xs={12}>
+                                    <StandardCard title={'Author Affiliation'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                        <Typography variant={'h6'}>Add a new affiliation</Typography>
+                                    </StandardCard>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <MUIDataTable
+                                        title={'Recommended affiliations'}
+                                        data={authorRecData}
+                                        columns={authorRecColumns}
+                                        options={authorRecOptions}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <MUIDataTable
+                                        title={'Currently recorded author affiliations'}
+                                        data={authorData}
+                                        columns={authorColumns}
+                                        options={authorOptions}
+                                    />
+                                </Grid>
+                            </React.Fragment>
                         }
                         {
                             ((this.state.tabbed && this.state.tabValue === 5) || !this.state.tabbed) &&
@@ -972,17 +1057,26 @@ class Admin extends PureComponent {
                                             <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
                                         </Grid>
                                     </Grid>
-                                </StandardCard>
-                            </Grid>
-                        }
-                        {
-                            ((this.state.tabbed && this.state.tabValue === 6) || !this.state.tabbed) &&
-                            // Security
-                            <Grid item xs={12}>
-                                <StandardCard title={'Security'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
-                                    <Grid container spacing={16}>
-                                        <Grid item xs={12} sm={12}>
-                                            <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            name="files"
+                                            component={ FileUploadField }
+                                            requireOpenAccessStatus
+                                            validate={[validation.validFileUpload]} />
+                                    </Grid>
+                                    <Grid item xs={12} style={{padding: '8px 0'}}>
+                                        <Grid container spacing={16}>
+                                            <Grid item xs/>
+                                            <Grid item xs={'auto'}>
+                                                <Button color={'secondary'}>
+                                                    Clear list
+                                                </Button>
+                                            </Grid>
+                                            <Grid item xs={'auto'}>
+                                                <Button variant={'contained'} color={'primary'}>
+                                                    Upload files
+                                                </Button>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
