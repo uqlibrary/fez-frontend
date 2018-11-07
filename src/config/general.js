@@ -386,7 +386,7 @@ export const defaultQueryParams = {
     }
 };
 
-export const ANY_UNPUBLISHED = -4;
+export const ANY_UNPUBLISHED = 1;
 export const IN_CREATION = 4;
 export const IN_DRAFT = 6;
 export const IN_REVIEW = 5;
