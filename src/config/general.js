@@ -413,3 +413,13 @@ export const UNPUBLISHED_STATUS_MAP = {
     'Submitted for Approval': SUBMITTED_FOR_APPROVAL,
     'Unpublished': UNPUBLISHED
 };
+
+export const UNPUBLISHED_STATUS_TEXT_MAP = {
+    [ANY_UNPUBLISHED]: 'Any unpublished',
+    [IN_CREATION]: 'In Creation',
+    [IN_DRAFT]: 'In Draft',
+    [IN_REVIEW]: 'In Review',
+    [RETRACTED]: 'Retracted',
+    [SUBMITTED_FOR_APPROVAL]: 'Submitted for Approval',
+    [UNPUBLISHED]: 'Unpublished'
+};

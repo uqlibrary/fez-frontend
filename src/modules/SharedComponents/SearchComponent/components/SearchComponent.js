@@ -4,7 +4,7 @@ import param from 'can-param';
 
 import Snackbar from '@material-ui/core/Snackbar';
 import {routes} from 'config';
-import {defaultQueryParams, UNPUBLISHED_STATUS_MAP} from 'config/general';
+import {defaultQueryParams, UNPUBLISHED_STATUS_MAP, UNPUBLISHED_STATUS_TEXT_MAP} from 'config/general';
 import {locale} from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
@@ -50,7 +50,8 @@ export default class SearchComponent extends PureComponent {
         isInHeader: false,
         isAdvancedSearch: false,
         isAdvancedSearchMinimised: false,
-        isOpenAccessInAdvancedMode: false
+        isOpenAccessInAdvancedMode: false,
+        updateFacetExcludesFromSearchFields: () => {}
     };
 
     constructor(props) {
@@ -123,11 +124,19 @@ export default class SearchComponent extends PureComponent {
             }];
         } else {
             return fieldRows
-                .map(key => ({
-                    searchField: key,
-                    value: searchQueryParams[key].hasOwnProperty('value') ? searchQueryParams[key].value : searchQueryParams[key],
-                    label: searchQueryParams[key].hasOwnProperty('label') ? searchQueryParams[key].label : ''
-                }));
+                .map(key => (
+                    key !== 'rek_status'
+                        ? {
+                            searchField: key,
+                            value: searchQueryParams[key].hasOwnProperty('value') ? searchQueryParams[key].value : searchQueryParams[key],
+                            label: searchQueryParams[key].hasOwnProperty('label') ? searchQueryParams[key].label : ''
+                        }
+                        : {
+                            searchField: key,
+                            value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key]],
+                            label: ''
+                        }
+                ));
         }
     };
 
@@ -155,7 +164,11 @@ export default class SearchComponent extends PureComponent {
 
             // navigate to search results page
             this.props.history.push({
-                pathname: routes.pathConfig.records.search,
+                pathname: (
+                    this.props.location.pathname === routes.pathConfig.admin.unpublished
+                        ? routes.pathConfig.admin.unpublished
+                        : routes.pathConfig.records.search
+                ),
                 search: param(searchQuery),
                 state: {...searchQuery}
             });
