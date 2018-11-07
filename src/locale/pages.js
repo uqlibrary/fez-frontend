@@ -437,7 +437,11 @@ export default {
                 ),
                 buttonLabel: 'OK'
             },
-            description: (<p>
+            description: (account) => account && account.canMasqueradeType && account.canMasqueradeType === 'readonly' ?
+                (<p>
+                <strong>NOTE:</strong> As a read-only masquerader you can view all parts of the profile but you are not able to make any changes to the account.
+            </p>) :
+                (<p>
                 <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here,
                 and changes you make will apply to their account!
             </p>),

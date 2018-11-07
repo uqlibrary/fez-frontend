@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -9,6 +10,10 @@ import locale from 'locale/pages';
 import {routes} from 'config';
 
 export default class Masquerade extends Component {
+    static propTypes = {
+        account: PropTypes.object
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +45,7 @@ export default class Masquerade extends Component {
         return (
             <StandardPage>
                 <StandardCard title={txt.title} help={txt.help}>
-                    <Typography>{txt.description}</Typography>
+                    <Typography>{txt.description(this.props.account)}</Typography>
                     <Grid container spacing={24} alignItems={'flex-end'} style={{marginTop: 12}}>
                         <Grid item xs>
                             <TextField
