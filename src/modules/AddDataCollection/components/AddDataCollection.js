@@ -385,12 +385,13 @@ export default class AddDataCollection extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.label}>
+                            <StandardCard title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.title}>
                                 <Field
                                     component={RelatedDatasetAndPublicationListField}
                                     name="fez_record_search_key_has_related_datasets"
                                     searchKey={{value: 'rek_has_related_datasets', order: 'rek_has_related_datasets_order', lookup: 'rek_has_related_datasets_lookup'}}
                                     disabled={this.props.submitting}
+                                    locale={{form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}}
                                     height={50}
                                     validate={[validation.required]}/>
                             </StandardCard>
