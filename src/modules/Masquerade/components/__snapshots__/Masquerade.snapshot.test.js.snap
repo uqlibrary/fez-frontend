@@ -87,7 +87,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
         <strong>
           NOTE:
         </strong>
-         As a read-only masquerader you can view all parts of the profile but you are not able to make any changes to the account.
+         As a read-only masquerader, you can view all parts of the profile, but you are not able to make any changes to the account.
       </p>
     </WithStyles(Typography)>
     <WithStyles(Grid)
