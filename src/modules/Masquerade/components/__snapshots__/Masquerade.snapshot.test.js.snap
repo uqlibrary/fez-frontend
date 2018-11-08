@@ -19,7 +19,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
         <strong>
           WARNING!!
         </strong>
-         Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+         When masquerading as a user, you will effectively become that user, and changes you make will apply to the account!
       </p>
     </WithStyles(Typography)>
     <WithStyles(Grid)

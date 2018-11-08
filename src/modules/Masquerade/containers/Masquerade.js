@@ -5,17 +5,17 @@ import * as actions from 'actions';
 
 import Masquerade from '../components/Masquerade';
 
-const mapStateToProps = (state) => (
-    {
+const mapStateToProps = (state) => {
+    return {
         ...state.get('accountReducer')
-    }
-);
+    };
+};
 
-const mapDispatchToProps = (dispatch) => (
-    {
+function mapDispatchToProps(dispatch) {
+    return {
         actions: bindActionCreators(actions, dispatch)
-    }
-);
+    };
+}
 
 let MasqueradeContainer = connect(mapStateToProps, mapDispatchToProps)(Masquerade);
 MasqueradeContainer = withRouter(MasqueradeContainer);

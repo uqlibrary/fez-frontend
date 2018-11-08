@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -9,9 +9,9 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
 import {routes} from 'config';
 
-export default class Masquerade extends Component {
+export default class Masquerade extends PureComponent {
     static propTypes = {
-        account: PropTypes.object
+        account: PropTypes.object.isRequired
     };
 
     constructor(props) {
