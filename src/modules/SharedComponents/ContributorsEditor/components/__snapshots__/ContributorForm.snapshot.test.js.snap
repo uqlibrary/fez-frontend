@@ -123,6 +123,7 @@ exports[`Component ContributorForm should render display name field and role fie
         hintText="Role of the creator in relation to the dataset"
         if="creatorRoleField"
         onChange={[Function]}
+        value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)

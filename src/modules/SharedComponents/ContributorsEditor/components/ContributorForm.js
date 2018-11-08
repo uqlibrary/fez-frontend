@@ -156,6 +156,7 @@ export class ContributorForm extends PureComponent {
                                 required={this.props.required}
                                 autoComplete="off"
                                 error={this.state.creatorRole.length === 0}
+                                value={this.state.creatorRole}
                             />
                         </Grid>
                     }

@@ -161,6 +161,7 @@ export class AutoCompleteAsyncField extends Component {
         return (
             <div className={classes.root}>
                 <Downshift
+                    selectedItem={{value: selectedValue}}
                     defaultInputValue={selectedValue}
                     stateReducer={this.stateReducer}
                     onChange={this.handleSelected}
