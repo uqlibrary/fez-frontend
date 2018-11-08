@@ -14,7 +14,7 @@ const mapStateToProps = (state, props) => {
         errorText: null,
         error: false,
         itemToString: (item) => !!item && String(item.value) || '',
-        selectedValue: props.value,
+        selectedValue: !!props.value && {value: props.value} || null,
         openOnFocus: true,
         filter: () => true
     };
