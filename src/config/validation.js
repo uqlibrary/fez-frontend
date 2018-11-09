@@ -71,7 +71,6 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    console.log(value, values);
     const accessCondition = values.toJS().fez_record_search_key_access_conditions;
     if (!!accessCondition && accessCondition.rek_access_conditions === 'Mediated Access') {
         return undefined;

@@ -122,6 +122,7 @@ export default class ListsEditor extends Component {
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
                     locale={{...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     isValid={this.props.isValid}
                     disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}
                     errorText={this.props.errorText}
