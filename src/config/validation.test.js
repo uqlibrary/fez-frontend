@@ -3,6 +3,7 @@ import * as validation from './validation';
 import {accounts} from 'mock/data/account';
 import {locale} from 'locale';
 import {APP_URL} from 'config';
+import Immutable from 'immutable';
 
 describe('Validation method', () => {
     it('should validate required', () => {
@@ -132,6 +133,13 @@ describe('Validation method', () => {
         expect(validation.isValidGoogleScholarId('12345vbgHJ0p')).toEqual('');
         expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
+
+    it('should conditionally validate file uploader based on open access value', () => {
+        expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({}))).toEqual(locale.validationErrors.fileUploadRequired);
+        expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({
+            fez_record_search_key_access_conditions: {rek_access_conditions: 'Mediated Access'}
+        }))).toEqual(undefined);
+    });
 });
 
 describe('getErrorAlertProps ', () => {
@@ -194,6 +202,5 @@ describe('getErrorAlertProps ', () => {
         const emptyMessage = validation.translateFormErrorsToText('');
         expect(emptyMessage).toBeNull();
     });
-
 });
 
