@@ -994,12 +994,11 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 },
               }
             }
-            name="fez_record_search_key_has_related_datasets"
+            name="fez_record_search_key_isdatasetof"
             searchKey={
               Object {
-                "lookup": "rek_has_related_datasets_lookup",
-                "order": "rek_has_related_datasets_order",
-                "value": "rek_has_related_datasets",
+                "order": "rek_isdatasetof_order",
+                "value": "rek_isdatasetof",
               }
             }
             validate={
