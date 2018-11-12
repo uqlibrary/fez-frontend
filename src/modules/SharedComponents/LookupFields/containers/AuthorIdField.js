@@ -22,7 +22,7 @@ const mapStateToProps = (state, props) => {
         },
         allowFreeText: true,
         async: true,
-        selectedValue: !props.input && (!!props.label && props.label || !!props.value && props.value) || '',
+        selectedValue: !props.input && (!!props.label && {value: props.label} || !!props.value && {value: props.value}) || '',
         itemToString: (item) => !!item && String(`${item.id} (${item.value})`) || '',
         maxResults: 50,
         error: (!!props.meta && !!props.meta.error) || props.error,

@@ -360,17 +360,21 @@ export default class AddDataCollection extends Component {
                                         <Typography variant="caption">{txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label}</Typography>
                                         <Field
                                             component={DatePickerField}
+                                            disableFuture
                                             autoOk
                                             name="fez_record_search_key_start_date.rek_start_date"
-                                            disabled={this.props.submitting}/>
+                                            disabled={this.props.submitting}
+                                            validate={[validation.dateRange]}/>
                                     </Grid>
                                     <Grid item xs={12} sm={6} style={{padding: '0px 20px'}}>
                                         <Typography variant="caption">{txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label}</Typography>
                                         <Field
                                             component={DatePickerField}
+                                            disableFuture
                                             autoOk
                                             name="fez_record_search_key_end_date.rek_end_date"
-                                            disabled={this.props.submitting}/>
+                                            disabled={this.props.submitting}
+                                            validate={[validation.dateRange]}/>
                                     </Grid>
                                 </Grid>
                             </StandardCard>
@@ -430,7 +434,7 @@ export default class AddDataCollection extends Component {
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
                                     requireOpenAccessStatus
-                                    validate={[validation.fileUploadNotRequiredForMediated]}/>
+                                    validate={[validation.fileUploadNotRequiredForMediated, validation.validFileUpload]}/>
                             </StandardCard>
                         </Grid>
 

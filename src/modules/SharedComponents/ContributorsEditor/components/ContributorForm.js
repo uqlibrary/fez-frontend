@@ -67,13 +67,15 @@ export class ContributorForm extends PureComponent {
             nameAsPublished: '',
             creatorRole: '',
             uqIdentifier: '',
+            clearRoleInput: true,
             contributor: {}
         });
     }
 
     _onNameChanged = (event) => {
         this.setState({
-            nameAsPublished: event.target.value
+            nameAsPublished: event.target.value,
+            clearRoleInput: false
         });
     }
 
@@ -157,6 +159,7 @@ export class ContributorForm extends PureComponent {
                                 autoComplete="off"
                                 error={this.state.creatorRole.length === 0}
                                 value={this.state.creatorRole}
+                                clearInput={this.state.clearRoleInput}
                             />
                         </Grid>
                     }

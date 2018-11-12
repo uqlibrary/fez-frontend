@@ -16,7 +16,8 @@ const mapStateToProps = (state, props) => {
         itemToString: (item) => !!item && String(item.value) || '',
         selectedValue: !!props.value && {value: props.value} || null,
         openOnFocus: true,
-        filter: () => true
+        filter: () => true,
+        clearInput: props.clearInput
     };
 };
 

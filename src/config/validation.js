@@ -113,6 +113,17 @@ export const isValidGoogleScholarId = id => {
     }
 };
 
+export const dateRange = (value, values) => {
+    const lowerInRange = values.toJS().fez_record_search_key_start_date;
+    const higherInRange = values.toJS().fez_record_search_key_end_date;
+
+    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
+        return locale.validationErrors.dateRange;
+    } else {
+        return '';
+    }
+};
+
 export const translateFormErrorsToText = (formErrors) => {
     if (!formErrors) return null;
 

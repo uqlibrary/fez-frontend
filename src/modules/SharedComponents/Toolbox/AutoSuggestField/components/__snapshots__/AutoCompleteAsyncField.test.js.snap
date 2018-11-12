@@ -6,7 +6,7 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
 >
   <Downshift
     defaultHighlightedIndex={null}
-    defaultInputValue={null}
+    defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
@@ -19,7 +19,6 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
     onStateChange={[Function]}
     onUserAction={[Function]}
     scrollIntoView={[Function]}
-    selectedItem={null}
     selectedItemChanged={[Function]}
     stateReducer={[Function]}
     suppressRefError={false}
@@ -532,7 +531,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
           >
             <Downshift
               defaultHighlightedIndex={null}
-              defaultInputValue={null}
+              defaultInputValue=""
               defaultIsOpen={false}
               defaultSelectedItem={null}
               environment={[Window]}
@@ -545,7 +544,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               onStateChange={[Function]}
               onUserAction={[Function]}
               scrollIntoView={[Function]}
-              selectedItem={null}
               selectedItemChanged={[Function]}
               stateReducer={[Function]}
               suppressRefError={false}
@@ -574,7 +572,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
-                      "value": null,
+                      "value": "",
                     }
                   }
                   disabled={false}
@@ -585,7 +583,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                   placeholder={null}
                   required={true}
                   select={false}
-                  value={null}
+                  value=""
                   variant="standard"
                 >
                   <WithStyles(FormControl)
@@ -633,7 +631,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                           onChange={[Function]}
                           onKeyDown={[Function]}
                           placeholder={null}
-                          value={null}
+                          value=""
                         >
                           <Input
                             aria-activedescendant={null}
@@ -665,7 +663,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                             onChange={[Function]}
                             onKeyDown={[Function]}
                             placeholder={null}
-                            value={null}
+                            value=""
                           >
                             <WithStyles(InputBase)
                               aria-activedescendant={null}
@@ -700,7 +698,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                               onKeyDown={[Function]}
                               placeholder={null}
                               type="text"
-                              value={null}
+                              value=""
                             >
                               <InputBase
                                 aria-activedescendant={null}
@@ -739,7 +737,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                 onKeyDown={[Function]}
                                 placeholder={null}
                                 type="text"
-                                value={null}
+                                value=""
                               >
                                 <div
                                   aria-activedescendant={null}
@@ -762,7 +760,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     placeholder={null}
                                     required={true}
                                     type="text"
-                                    value={null}
+                                    value=""
                                   />
                                 </div>
                               </InputBase>
@@ -1296,7 +1294,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
           >
             <Downshift
               defaultHighlightedIndex={null}
-              defaultInputValue={null}
+              defaultInputValue=""
               defaultIsOpen={false}
               defaultSelectedItem={null}
               environment={[Window]}
@@ -1309,7 +1307,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               onStateChange={[Function]}
               onUserAction={[Function]}
               scrollIntoView={[Function]}
-              selectedItem={null}
               selectedItemChanged={[Function]}
               stateReducer={[Function]}
               suppressRefError={false}
@@ -1338,7 +1335,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
-                      "value": null,
+                      "value": "",
                     }
                   }
                   disabled={false}
@@ -1349,7 +1346,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                   placeholder={null}
                   required={false}
                   select={false}
-                  value={null}
+                  value=""
                   variant="standard"
                 >
                   <WithStyles(FormControl)
@@ -1397,7 +1394,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                           onChange={[Function]}
                           onKeyDown={[Function]}
                           placeholder={null}
-                          value={null}
+                          value=""
                         >
                           <Input
                             aria-activedescendant={null}
@@ -1429,7 +1426,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                             onChange={[Function]}
                             onKeyDown={[Function]}
                             placeholder={null}
-                            value={null}
+                            value=""
                           >
                             <WithStyles(InputBase)
                               aria-activedescendant={null}
@@ -1464,7 +1461,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                               onKeyDown={[Function]}
                               placeholder={null}
                               type="text"
-                              value={null}
+                              value=""
                             >
                               <InputBase
                                 aria-activedescendant={null}
@@ -1503,7 +1500,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                 onKeyDown={[Function]}
                                 placeholder={null}
                                 type="text"
-                                value={null}
+                                value=""
                               >
                                 <div
                                   aria-activedescendant={null}
@@ -1526,7 +1523,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     placeholder={null}
                                     required={false}
                                     type="text"
-                                    value={null}
+                                    value=""
                                   />
                                 </div>
                               </InputBase>
@@ -2075,7 +2072,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
           >
             <Downshift
               defaultHighlightedIndex={null}
-              defaultInputValue={null}
+              defaultInputValue=""
               defaultIsOpen={false}
               defaultSelectedItem={null}
               environment={[Window]}
@@ -2088,7 +2085,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               onStateChange={[Function]}
               onUserAction={[Function]}
               scrollIntoView={[Function]}
-              selectedItem={null}
               selectedItemChanged={[Function]}
               stateReducer={[Function]}
               suppressRefError={false}
@@ -2117,7 +2113,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
-                      "value": null,
+                      "value": "",
                     }
                   }
                   disabled={false}
@@ -2128,7 +2124,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   placeholder={null}
                   required={false}
                   select={false}
-                  value={null}
+                  value=""
                   variant="standard"
                 >
                   <WithStyles(FormControl)
@@ -2176,7 +2172,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                           onChange={[Function]}
                           onKeyDown={[Function]}
                           placeholder={null}
-                          value={null}
+                          value=""
                         >
                           <Input
                             aria-activedescendant={null}
@@ -2208,7 +2204,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                             onChange={[Function]}
                             onKeyDown={[Function]}
                             placeholder={null}
-                            value={null}
+                            value=""
                           >
                             <WithStyles(InputBase)
                               aria-activedescendant={null}
@@ -2243,7 +2239,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                               onKeyDown={[Function]}
                               placeholder={null}
                               type="text"
-                              value={null}
+                              value=""
                             >
                               <InputBase
                                 aria-activedescendant={null}
@@ -2282,7 +2278,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 onKeyDown={[Function]}
                                 placeholder={null}
                                 type="text"
-                                value={null}
+                                value=""
                               >
                                 <div
                                   aria-activedescendant={null}
@@ -2305,7 +2301,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     placeholder={null}
                                     required={false}
                                     type="text"
-                                    value={null}
+                                    value=""
                                   />
                                 </div>
                               </InputBase>
@@ -2854,7 +2850,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
           >
             <Downshift
               defaultHighlightedIndex={null}
-              defaultInputValue={null}
+              defaultInputValue=""
               defaultIsOpen={false}
               defaultSelectedItem={null}
               environment={[Window]}
@@ -2867,7 +2863,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               onStateChange={[Function]}
               onUserAction={[Function]}
               scrollIntoView={[Function]}
-              selectedItem={null}
               selectedItemChanged={[Function]}
               stateReducer={[Function]}
               suppressRefError={false}
@@ -2896,7 +2891,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
-                      "value": null,
+                      "value": "",
                     }
                   }
                   disabled={false}
@@ -2907,7 +2902,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   placeholder={null}
                   required={false}
                   select={false}
-                  value={null}
+                  value=""
                   variant="standard"
                 >
                   <WithStyles(FormControl)
@@ -2955,7 +2950,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                           onChange={[Function]}
                           onKeyDown={[Function]}
                           placeholder={null}
-                          value={null}
+                          value=""
                         >
                           <Input
                             aria-activedescendant={null}
@@ -2987,7 +2982,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                             onChange={[Function]}
                             onKeyDown={[Function]}
                             placeholder={null}
-                            value={null}
+                            value=""
                           >
                             <WithStyles(InputBase)
                               aria-activedescendant={null}
@@ -3022,7 +3017,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                               onKeyDown={[Function]}
                               placeholder={null}
                               type="text"
-                              value={null}
+                              value=""
                             >
                               <InputBase
                                 aria-activedescendant={null}
@@ -3061,7 +3056,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 onKeyDown={[Function]}
                                 placeholder={null}
                                 type="text"
-                                value={null}
+                                value=""
                               >
                                 <div
                                   aria-activedescendant={null}
@@ -3084,7 +3079,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     placeholder={null}
                                     required={false}
                                     type="text"
-                                    value={null}
+                                    value=""
                                   />
                                 </div>
                               </InputBase>
@@ -3610,7 +3605,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
           >
             <Downshift
               defaultHighlightedIndex={null}
-              defaultInputValue={null}
+              defaultInputValue=""
               defaultIsOpen={false}
               defaultSelectedItem={null}
               environment={[Window]}
@@ -3623,7 +3618,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
               onStateChange={[Function]}
               onUserAction={[Function]}
               scrollIntoView={[Function]}
-              selectedItem={null}
               selectedItemChanged={[Function]}
               stateReducer={[Function]}
               suppressRefError={false}
@@ -3652,7 +3646,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                       "onBlur": [Function],
                       "onChange": [Function],
                       "onKeyDown": [Function],
-                      "value": null,
+                      "value": "",
                     }
                   }
                   disabled={true}
@@ -3663,7 +3657,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                   placeholder={null}
                   required={false}
                   select={false}
-                  value={null}
+                  value=""
                   variant="standard"
                 >
                   <WithStyles(FormControl)
@@ -3711,7 +3705,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                           onChange={[Function]}
                           onKeyDown={[Function]}
                           placeholder={null}
-                          value={null}
+                          value=""
                         >
                           <Input
                             aria-activedescendant={null}
@@ -3743,7 +3737,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                             onChange={[Function]}
                             onKeyDown={[Function]}
                             placeholder={null}
-                            value={null}
+                            value=""
                           >
                             <WithStyles(InputBase)
                               aria-activedescendant={null}
@@ -3778,7 +3772,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                               onKeyDown={[Function]}
                               placeholder={null}
                               type="text"
-                              value={null}
+                              value=""
                             >
                               <InputBase
                                 aria-activedescendant={null}
@@ -3817,7 +3811,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                 onKeyDown={[Function]}
                                 placeholder={null}
                                 type="text"
-                                value={null}
+                                value=""
                               >
                                 <div
                                   aria-activedescendant={null}
@@ -3840,7 +3834,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     placeholder={null}
                                     required={false}
                                     type="text"
-                                    value={null}
+                                    value=""
                                   />
                                 </div>
                               </InputBase>

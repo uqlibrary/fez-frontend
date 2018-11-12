@@ -50,7 +50,8 @@ export class AutoCompleteAsyncField extends Component {
         required: PropTypes.bool,
         selectedValue: PropTypes.any,
         filter: PropTypes.func,
-        openOnFocus: PropTypes.bool
+        openOnFocus: PropTypes.bool,
+        clearInput: PropTypes.bool
     };
 
     static defaultProps = {
@@ -101,7 +102,6 @@ export class AutoCompleteAsyncField extends Component {
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
         const isSelected = (selectedItem && selectedItem.value || '').indexOf(suggestion.value) > -1;
-
         return (
             <MenuItem
                 button
@@ -158,11 +158,14 @@ export class AutoCompleteAsyncField extends Component {
 
     render() {
         const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, allowFreeText, required, selectedValue } = this.props;
+
+        const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
+
         return (
             <div className={classes.root}>
                 <Downshift
-                    selectedItem={selectedValue}
-                    defaultInputValue={selectedValue}
+                    {...selectedItemProps}
+                    defaultInputValue={!!selectedValue && selectedValue.value || ''}
                     stateReducer={this.stateReducer}
                     onChange={this.handleSelected}
                     itemToString={itemToString}
