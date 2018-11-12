@@ -51,7 +51,8 @@ export class AutoCompleteAsyncField extends Component {
         selectedValue: PropTypes.any,
         filter: PropTypes.func,
         openOnFocus: PropTypes.bool,
-        clearInput: PropTypes.bool
+        clearInput: PropTypes.bool,
+        MenuItemComponent: PropTypes.func
     };
 
     static defaultProps = {
@@ -60,7 +61,19 @@ export class AutoCompleteAsyncField extends Component {
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
             return !!anyKey && anyKey.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
-        }
+        },
+        MenuItemComponent: ({suggestion}) => (
+            <ListItemText
+                primary={suggestion.value}
+                secondary={suggestion.id}
+                primaryTypographyProps={{
+                    variant: 'body1'
+                }}
+                secondaryTypographyProps={{
+                    variant: 'body2'
+                }}
+            />
+        )
     };
 
     componentDidMount() {
@@ -99,6 +112,8 @@ export class AutoCompleteAsyncField extends Component {
         );
     };
 
+    renderMenuItemComponent = (suggestion) => (<this.props.MenuItemComponent suggestion={suggestion} />);
+
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
         const isSelected = (selectedItem && selectedItem.value || '').indexOf(suggestion.value) > -1;
@@ -114,16 +129,9 @@ export class AutoCompleteAsyncField extends Component {
                     height: 'auto'
                 }}
             >
-                <ListItemText
-                    primary={suggestion.value}
-                    secondary={suggestion.id}
-                    primaryTypographyProps={{
-                        variant: 'body1'
-                    }}
-                    secondaryTypographyProps={{
-                        variant: 'body2'
-                    }}
-                />
+                {
+                    this.renderMenuItemComponent(suggestion)
+                }
             </MenuItem>
         );
     };
