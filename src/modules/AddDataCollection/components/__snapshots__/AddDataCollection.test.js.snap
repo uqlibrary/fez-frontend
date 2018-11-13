@@ -272,7 +272,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           title="ANZSRC field of research (FoR) codes"
         >
           <WithStyles(Typography)>
-            Select up to 3 Field of Research (FoR) codes at the 4 digit level
+            Select Field of Research (FoR) codes at the 4 digit level
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -337,7 +337,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButton": "Add creator",
-                    "creatorRoleHint": "Type the role of the creator in relation to the dataset",
+                    "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
                     "creatorRoleLabel": "Enter creator's role",
                     "descriptionStep1": <div>
                       <span
@@ -709,7 +709,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Optional dataset details (non mandatory)"
+          title="Dataset details"
         >
           <WithStyles(Grid)
             container={true}
@@ -959,7 +959,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Geographic coordinates (non mandatory)"
+          title="Geographic coordinates"
         >
           <WithStyles(Typography)
             gutterBottom={true}
@@ -1014,7 +1014,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Optional information"
+          title="Additional information"
         >
           <WithStyles(Grid)
             container={true}
@@ -1028,7 +1028,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 component={[Function]}
                 disabled={false}
                 fullWidth={true}
-                label="Optional information"
+                label="Additional information"
                 multiline={true}
                 name="fez_record_search_key_additional_notes.rek_additional_notes"
                 placeholder="Additional information related to the dataset"

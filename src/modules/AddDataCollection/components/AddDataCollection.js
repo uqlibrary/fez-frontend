@@ -203,7 +203,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.dataset.fieldLabels.fieldOfResearchCodes.title} help={txtFoR.help}>
-                                <Typography>{txtFoR.text}</Typography>
+                                <Typography>{txt.information.fieldOfResearchCodes.text}</Typography>
                                 <Field
                                     component={FilteredFieldOfResearchListField}
                                     name="fieldOfResearch"
@@ -212,7 +212,7 @@ export default class AddDataCollection extends Component {
                                     hideReorder
                                     distinctOnly
                                     disabled={this.props.submitting}
-                                    locale={txtFoR.field}/>
+                                    locale={txt.information.fieldOfResearchCodes.field}/>
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>

@@ -583,7 +583,7 @@ export default {
                         nameAsPublishedLabel: 'Enter each creator\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         creatorRoleLabel: 'Enter creator\'s role',
-                        creatorRoleHint: 'Type the role of the creator in relation to the dataset',
+                        creatorRoleHint: 'Select role from list or type the role of the creator in relation to the dataset',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator'
                     }

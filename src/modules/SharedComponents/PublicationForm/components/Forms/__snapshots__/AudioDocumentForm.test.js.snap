@@ -142,7 +142,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add creator",
-                "creatorRoleHint": "Type the role of the creator in relation to the dataset",
+                "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
                 "creatorRoleLabel": "Enter creator's role",
                 "descriptionStep1": <div>
                   <span

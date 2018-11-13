@@ -1272,7 +1272,13 @@ export default {
                     }
                 }
             },
-            creator: txt.components.creators,
+            creator: {
+                ...txt.components.creators
+            },
+            fieldOfResearchCodes: {
+                ...txt.components.fieldOfResearchForm,
+                text: 'Select Field of Research (FoR) codes at the 4 digit level'
+            },
             accessAndLicensing: {
                 title: 'Access and licensing information',
                 help: {
@@ -1318,16 +1324,16 @@ export default {
                         placeholder: 'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC'
                     },
                     grantId: {
-                        label: 'Grant ID',
+                        label: 'Grant IDs',
                         placeholder: 'e.g. ARC or NHMRC grant number'
                     }
                 }
             },
             optionalDatasetDetails: {
-                title: 'Optional dataset details (non mandatory)',
+                title: 'Dataset details',
                 fieldLabels: {
                     typeOfData: {
-                        label: 'Type of data',
+                        label: 'Describe type of data',
                         placeholder: 'Type of data represented in the dataset e.g. excel file, images, video'
                     },
                     softwareRequired: {
@@ -1343,7 +1349,7 @@ export default {
                         placeholder: 'Date that data ceased being collected'
                     },
                     geographicCoordinates: {
-                        label: 'Geographic coordinates (non mandatory)',
+                        label: 'Geographic coordinates',
                         description: 'Use this tool to specify the geographic co-ordinates the data relates to'
                     },
                     relatedDatasets: {
@@ -1354,10 +1360,10 @@ export default {
                 }
             },
             additionalNotes: {
-                title: 'Optional information',
+                title: 'Additional information',
                 fieldLabels: {
                     notes: {
-                        label: 'Optional information',
+                        label: 'Additional information',
                         placeholder: 'Additional information related to the dataset'
                     },
                     links: {
