@@ -17,6 +17,7 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": true,
+        "canMasqueradeType": "readonly",
         "blocked": false
     },
     // student

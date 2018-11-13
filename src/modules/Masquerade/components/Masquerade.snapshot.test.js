@@ -22,4 +22,12 @@ describe('Component Masquerade', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('Should render readonly description', () => {
+        const props = {
+            account: {canMasqueradeType: 'readonly'}
+        };
+        const wrapper = setup({...props});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });
