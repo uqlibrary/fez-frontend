@@ -318,7 +318,7 @@ export default class SearchComponent extends PureComponent {
             .reduce((searchQueries, item) => {
                 const {searchField, ...rest} = item;
                 if (searchField === 'rek_status' && !!item.value) {
-                    return {...searchQueries, [searchField]: UNPUBLISHED_STATUS_MAP[item.value]};
+                    return {...searchQueries, [searchField]: {...rest, value: UNPUBLISHED_STATUS_MAP[item.value]}};
                 } else {
                     return {...searchQueries, [searchField]: rest};
                 }
