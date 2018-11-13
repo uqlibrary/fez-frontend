@@ -18,7 +18,9 @@ const mapStateToProps = (state, props) => {
         async: true,
         selectedValue: !!props.value && {value: props.value} || '',
         itemToString: () => '',
-        maxResults: 7
+        maxResults: 7,
+        floatingLabelText: props.label || 'UQ identifier (if available)',
+        hintText: props.placeholder || ''
     };
 };
 

@@ -100,6 +100,13 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -590,6 +597,13 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -2120,6 +2134,13 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -2553,6 +2574,13 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                           },
                         },
                         "overrides": Object {
+                          "MUIDataTable": Object {
+                            "paper": Object {
+                              "boxShadow": "none",
+                              "margin": 0,
+                              "padding": 0,
+                            },
+                          },
                           "MuiFormLabel": Object {
                             "root": Object {
                               "overflow": "hidden",
@@ -3098,6 +3126,13 @@ exports[`Journal Name Component test  should render without era journal listed 1
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -4604,6 +4639,13 @@ exports[`Journal Name Component test  should render without era journal listed 1
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -5037,6 +5079,13 @@ exports[`Journal Name Component test  should render without era journal listed 1
                           },
                         },
                         "overrides": Object {
+                          "MUIDataTable": Object {
+                            "paper": Object {
+                              "boxShadow": "none",
+                              "margin": 0,
+                              "padding": 0,
+                            },
+                          },
                           "MuiFormLabel": Object {
                             "root": Object {
                               "overflow": "hidden",
@@ -5582,6 +5631,13 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",

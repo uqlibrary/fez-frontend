@@ -100,6 +100,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -2217,6 +2224,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -2846,6 +2860,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -4975,6 +4996,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -5604,6 +5632,13 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -6093,6 +6128,13 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",

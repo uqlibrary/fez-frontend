@@ -100,6 +100,13 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -640,6 +647,13 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1200,6 +1214,13 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1794,6 +1815,13 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -2380,6 +2408,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -2960,6 +2995,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -3590,6 +3632,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -4172,6 +4221,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -5106,6 +5162,13 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -5620,6 +5683,13 @@ exports[`AuthorsCitationView test  should set class on component with no authors
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",

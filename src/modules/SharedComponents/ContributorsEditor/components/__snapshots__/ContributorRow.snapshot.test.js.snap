@@ -27,8 +27,8 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -135,8 +135,8 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -243,8 +243,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -351,8 +351,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -459,8 +459,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -601,8 +601,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -630,35 +630,93 @@ exports[`Component ContributorRow  a row with index and contributor with author 
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary selected",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "selected",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={4}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        92
+        %
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              undefined
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -709,8 +767,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -738,35 +796,93 @@ exports[`Component ContributorRow  a row with index and contributor with author 
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary selected",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          J. Smith
-        </WithStyles(Typography)>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "selected",
-            }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={4}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              J. Smith
+            </WithStyles(Typography)>
           }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        16
+        %
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              undefined
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         title="Remove this record"
@@ -817,8 +933,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -856,8 +972,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     >
       <WithStyles(Grid)
         item={true}
-        md={5}
-        sm={5}
+        sm={4}
         xs={10}
       >
         <WithStyles(ListItemText)
@@ -892,8 +1007,15 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        md={5}
-        sm={5}
+        sm={3}
+        xs={12}
+      >
+        57
+        %
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={3}
         xs={10}
       >
         <WithStyles(ListItemText)

@@ -201,7 +201,7 @@ export class ContributorsEditor extends PureComponent {
                             </List>
                         </Grid>
                         <Grid item xs={12}>
-                            <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
+                            <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}} >
                                 {renderContributorsRows}
                             </List>
                         </Grid>
@@ -228,8 +228,6 @@ const mapStateToProps = (state) => {
 
 const styles = () => ({
     list: {
-        width: '98%',
-        margin: '0 1%',
         maxHeight: 200,
         overflow: 'hidden',
         marginBottom: 8

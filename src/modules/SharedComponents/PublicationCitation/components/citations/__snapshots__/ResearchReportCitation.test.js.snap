@@ -100,6 +100,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1381,6 +1388,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -1917,6 +1931,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -2351,6 +2372,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                           },
                         },
                         "overrides": Object {
+                          "MUIDataTable": Object {
+                            "paper": Object {
+                              "boxShadow": "none",
+                              "margin": 0,
+                              "padding": 0,
+                            },
+                          },
                           "MuiFormLabel": Object {
                             "root": Object {
                               "overflow": "hidden",
@@ -2892,6 +2920,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -4173,6 +4208,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -4709,6 +4751,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -5143,6 +5192,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                           },
                         },
                         "overrides": Object {
+                          "MUIDataTable": Object {
+                            "paper": Object {
+                              "boxShadow": "none",
+                              "margin": 0,
+                              "padding": 0,
+                            },
+                          },
                           "MuiFormLabel": Object {
                             "root": Object {
                               "overflow": "hidden",
@@ -5684,6 +5740,13 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -6971,6 +7034,13 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -7507,6 +7577,13 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
@@ -7941,6 +8018,13 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
                           },
                         },
                         "overrides": Object {
+                          "MUIDataTable": Object {
+                            "paper": Object {
+                              "boxShadow": "none",
+                              "margin": 0,
+                              "padding": 0,
+                            },
+                          },
                           "MuiFormLabel": Object {
                             "root": Object {
                               "overflow": "hidden",
@@ -8482,6 +8566,13 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -8944,6 +9035,13 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",

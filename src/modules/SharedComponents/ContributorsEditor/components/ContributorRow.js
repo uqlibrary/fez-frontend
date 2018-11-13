@@ -20,7 +20,6 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 
 const styles = (theme) => ({
     listItem: {
-        padding: '0 16px'
     },
     rowSelected: {
         backgroundColor: theme.palette.accent.light
@@ -147,9 +146,9 @@ export class ContributorRow extends PureComponent {
         const {ordinalData, suffix} = this.props.locale;
         const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
 
-        return showIdentifierLookup && !!contributor.aut_title
-            ? (<Grid container classes={{container: classes.listItem}}>
-                <Grid item xs={10} sm={5} md={5}>
+        return showIdentifierLookup ?
+            (<Grid container classes={{container: classes.listItem}}>
+                <Grid item xs={10} sm={4}>
                     {this.getListItemTypoGraphy(
                         contributor.nameAsPublished,
                         contributorOrder,
@@ -157,7 +156,10 @@ export class ContributorRow extends PureComponent {
                         `${selectedClass}`
                     )}
                 </Grid>
-                <Grid item xs={10} sm={5} md={5}>
+                <Grid item xs={12} sm={3}>
+                    {parseInt(Math.random(100) * 100, 10)}%
+                </Grid>
+                <Grid item xs={10} sm={3}>
                     {this.getListItemTypoGraphy(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
                         `${contributor.aut_org_username || contributor.aut_student_username}`,
@@ -191,7 +193,7 @@ export class ContributorRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
-                    style={{cursor: 'pointer', width: '98%', margin: '0 1%'}}
+                    style={{cursor: 'pointer', width: '100%', margin: 0}}
                     divider
                     classes={{root: contributor.selected ? classes.rowSelected : ''}}
                     tabIndex={0}

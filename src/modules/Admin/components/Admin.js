@@ -34,7 +34,14 @@ import Button from '@material-ui/core/Button';
 import MUIDataTable from 'mui-datatables';
 import IconButton from '@material-ui/core/IconButton';
 import Edit from '@material-ui/icons/Edit';
+import PersonAdd from '@material-ui/icons/PersonAdd';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import TextField from '@material-ui/core/TextField';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
+
 
 const styles = theme => ({
     helpIcon: {
@@ -77,12 +84,13 @@ class Admin extends PureComponent {
         super(props);
         this.state = {
             tabbed: Cookies.get('adminFormTabbed') ? !!(Cookies.get('adminFormTabbed') === 'tabbed') : true,
-            tabValue: 4,
+            tabValue: 6,
             grants: {
                 showEdit: false,
                 showAdd: false,
                 buttonAction: 'Add new item'
-            }
+            },
+            overrideSecurity: false
         };
     }
 
@@ -160,6 +168,13 @@ class Admin extends PureComponent {
         });
     }
 
+    toggleSecurityOverride = () => {
+        this.setState({
+            ...this.state,
+            overrideSecurity: !this.state.overrideSecurity
+        });
+    }
+
     handleGrantEditButtonSubmit = () => {
         this.setState({
             ...this.state,
@@ -169,6 +184,15 @@ class Admin extends PureComponent {
             }
         });
     }
+
+    findWithAttr = (array, attr, value) => {
+        for(let i = 0; i < array.length; i += 1) {
+            if(array[i][attr] === value) {
+                return i;
+            }
+        }
+        return -1;
+    };
 
     render() {
         const { classes } = this.props;
@@ -224,47 +248,6 @@ class Admin extends PureComponent {
             filterType: 'checkbox',
         };
 
-        const authorColumns = [
-            {
-                name: 'Author name',
-                options: {
-                    display: true,
-                    sort: true,
-                }
-            },
-            {
-                name: 'Author school/institute',
-                options: {
-                    display: true,
-                    sort: true,
-                }
-            },
-            {
-                name: 'Author affiliation',
-                options: {
-                    display: true,
-                    sort: false,
-                    filter: false
-                }
-            },
-            {
-                name: '',
-                options: {
-                    display: true,
-                    sort: false,
-                    filter: false
-                }
-            }];
-        const authorData = [
-            ['John Smith (uq12345)', 'UQ Diamantina Institute', <Field name={'author1affiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Update'} />],
-            ['Mary Jones (uq67890)', 'School of public health', <Field name={'author2affiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Update'} />],
-            ['Michael O`Reilly (uq98765)', 'Centre for health services research', <Field name={'author3affiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Update'} />],
-        ];
-        const authorOptions = {
-            filterType: 'checkbox',
-            rowHover: false,
-        };
-
         const authorRecColumns = [
             {
                 name: 'Author name',
@@ -274,18 +257,17 @@ class Admin extends PureComponent {
                 }
             },
             {
-                name: 'Author school/institute',
+                name: 'Author UQ ID',
                 options: {
                     display: true,
                     sort: true,
                 }
             },
             {
-                name: 'Author affiliation',
+                name: 'Affiliation %',
                 options: {
                     display: true,
-                    sort: false,
-                    filter: false
+                    sort: true,
                 }
             },
             {
@@ -295,15 +277,35 @@ class Admin extends PureComponent {
                     sort: false,
                     filter: false
                 }
-            }];
+            }
+        ];
         const authorRecData = [
-            ['Peter Day (uq12345)', 'UQ Diamantina Institute', <Field name={'author1recaffiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Add'} />],
-            ['Mitchel Clarke (uq67890)', 'School of public health', <Field name={'author2recaffiliation'} component={GenericTextField} placeholder={'0%'}/>, <Button children={'Add'} />],
+            ['John Smith', 'UQ12345', <TextField
+                fullWidth
+                placeholder={'1% - 100%'}
+                autoComplete="off"
+            />, <IconButton style={{float: 'right', marginRight: -24}}><PersonAdd/></IconButton>]
         ];
         const authorRecOptions = {
-            filterType: 'checkbox',
+            sort: false,
+            filter: false,
+            search: false,
+            print: false,
+            download: false,
+            viewColumns: false,
+            selectableRows: false,
             rowHover: false,
+            customToolbar: () => <div />
         };
+
+        const communitySecurity = [
+            {value: 'A', label: 'Policy A', id: 'PolicyAID', name: 'Policy A', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum. Sed lectus mauris, mollis et dolor vitae, rutrum lobortis risus. Aenean a nisl non felis pretium tincidunt id sit amet augue. Aenean ac quam non libero malesuada vulputate. Integer commodo lacus quis egestas varius. Etiam dapibus mollis feugiat. Aliquam pellentesque nunc ac libero feugiat laoreet. In hac habitasse platea dictumst. Duis sagittis lorem id vestibulum maximus. Nullam vel libero eu eros faucibus venenatis. Vestibulum interdum porttitor ipsum sed fringilla. Sed enim lacus, faucibus vel tincidunt euismod, euismod vitae turpis.'},
+            {value: 'B', label: 'Policy B', id: 'PolicyBID', name: 'Policy B', description: 'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.'},
+            {value: 'C', label: 'Policy C', id: 'PolicyCID', name: 'Policy C', description: 'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.'},
+        ];
+
+        console.log('collectionSecurity', this.props.formValues.get('collectionSecurity'));
+        console.log('communitySecurity', this.props.formValues.get('communitySecurity'));
 
         return (
             <form>
@@ -370,9 +372,9 @@ class Admin extends PureComponent {
                                             <Tab label="Bibliographic"/>
                                             <Tab label="Admin"/>
                                             <Tab label="Grant Information"/>
-                                            <Tab label="Author Affiliation"/>
+                                            <Tab label="Author details"/>
                                             <Tab label="Files"/>
-                                            {/* <Tab label="Security"/> */}
+                                            <Tab label="Security"/>
                                         </Tabs>
                                     </Grid>
                             }
@@ -499,59 +501,6 @@ class Admin extends PureComponent {
                                                 validate={[validation.required]}/>
                                         </Grid>
 
-                                        <Grid item xs={12} sm={6}>
-                                            <Field
-                                                component={GenericTextField}
-                                                name="authorName"
-                                                fullWidth
-                                                label={'Author name'}
-                                                placeholder={''}
-                                                required
-                                                validate={[validation.required]} />
-                                        </Grid>
-                                        <Grid item xs={12} sm={6}>
-                                            <Field
-                                                component={GenericTextField}
-                                                name="authorId"
-                                                fullWidth
-                                                label={'Author ID'}
-                                                placeholder={''}
-                                                required
-                                                validate={[validation.required]} />
-                                        </Grid>
-
-                                        <Grid item xs={12} sm={4}>
-                                            <Field
-                                                component={GenericTextField}
-                                                name="authorAffiliationId"
-                                                fullWidth
-                                                label={'Author affiliation ID'}
-                                                placeholder={''}
-                                                required
-                                                validate={[validation.required]} />
-                                        </Grid>
-
-                                        <Grid item xs={12} sm={4}>
-                                            <Field
-                                                component={GenericTextField}
-                                                name="authorAffiliationCountry"
-                                                fullWidth
-                                                label={'Author affiliation country'}
-                                                placeholder={''}
-                                                required
-                                                validate={[validation.required]} />
-                                        </Grid>
-                                        <Grid item xs={12} sm={4}>
-                                            <Field
-                                                component={GenericTextField}
-                                                name="authorAffiliationName"
-                                                fullWidth
-                                                label={'Author affiliation name'}
-                                                placeholder={''}
-                                                required
-                                                validate={[validation.required]} />
-                                        </Grid>
-
                                         <Grid item xs={12}>
                                             <Field
                                                 component={GenericTextField}
@@ -617,7 +566,9 @@ class Admin extends PureComponent {
                                                 name="journalName"
                                                 fullWidth
                                                 label={'Journal name'}
-                                                placeholder={''}  />
+                                                placeholder={''}
+                                                required
+                                                validate={[validation.required]}/>
                                         </Grid>
 
                                         <Grid item xs={12} sm={4}>
@@ -626,7 +577,9 @@ class Admin extends PureComponent {
                                                 name="ISSN"
                                                 fullWidth
                                                 label={'ISSN'}
-                                                placeholder={''} />
+                                                placeholder={''}
+                                                required
+                                                validate={[validation.required]} />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <Field
@@ -665,7 +618,7 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="eraJournal"
                                                 fullWidth
-                                                label={'ERA journal'}
+                                                label={'ERA journal list match'}
                                                 placeholder={''}
                                                 required
                                                 validate={[validation.required]} />
@@ -1022,28 +975,38 @@ class Admin extends PureComponent {
                         }
                         {
                             ((this.state.tabbed && this.state.tabValue === 4) || !this.state.tabbed) &&
-                            // Author Affiliation
+                            // Authors
                             <React.Fragment>
                                 <Grid item xs={12}>
-                                    <StandardCard title={'Author Affiliation'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
-                                        <Typography variant={'h6'}>Add a new affiliation</Typography>
+                                    <StandardCard title={'Author detail'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                        <Field
+                                            component={ContributorsEditorField}
+                                            showIdentifierLookup
+                                            name="authoraffiliation"
+                                            locale={{
+                                                errorTitle: 'Error',
+                                                errorMessage: 'Unable to add an item with the same identifier.',
+                                                form: {
+                                                    locale: {
+                                                        nameAsPublishedLabel: 'Author name',
+                                                        nameAsPublishedHint: '',
+                                                        identifierLabel: 'UQ identifier (if available)',
+                                                        descriptionStep1NoStep2: 'Enter each author and add affiliation data to each.',
+                                                        addButton: <span>Add&nbsp;affiliation</span>
+                                                    }
+                                                }
+                                            }}
+                                        />
                                     </StandardCard>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <MUIDataTable
-                                        title={'Recommended affiliations'}
-                                        data={authorRecData}
-                                        columns={authorRecColumns}
-                                        options={authorRecOptions}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <MUIDataTable
-                                        title={'Currently recorded author affiliations'}
-                                        data={authorData}
-                                        columns={authorColumns}
-                                        options={authorOptions}
-                                    />
+                                    <StandardCard title={'Author affiliation recommendations'}>
+                                        <MUIDataTable
+                                            data={authorRecData}
+                                            columns={authorRecColumns}
+                                            options={authorRecOptions}
+                                        />
+                                    </StandardCard>
                                 </Grid>
                             </React.Fragment>
                         }
@@ -1064,23 +1027,140 @@ class Admin extends PureComponent {
                                             requireOpenAccessStatus
                                             validate={[validation.validFileUpload]} />
                                     </Grid>
-                                    <Grid item xs={12} style={{padding: '8px 0'}}>
-                                        <Grid container spacing={16}>
-                                            <Grid item xs/>
-                                            <Grid item xs={'auto'}>
-                                                <Button color={'secondary'}>
-                                                    Clear list
-                                                </Button>
-                                            </Grid>
-                                            <Grid item xs={'auto'}>
-                                                <Button variant={'contained'} color={'primary'}>
-                                                    Upload files
-                                                </Button>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
                                 </StandardCard>
                             </Grid>
+                        }
+                        {
+                            ((this.state.tabbed && this.state.tabValue === 6) || !this.state.tabbed) &&
+                            // Security
+                                <React.Fragment>
+                                    <Grid item xs={12}>
+                                        <StandardCard title={'Security'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                            <Grid container spacing={16}>
+                                                <Grid item xs={12} sm={12}>
+                                                    <Alert type={'warning'} title={'Warning'} message={'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you`re doing.'} />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <StandardCard title={<span><b>Community</b> level security - UQ:12345</span>} accentHeader>
+                                            <Grid container spacing={8}>
+                                                <Grid item xs={12}>
+                                                    <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.</Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={SelectField}
+                                                        name="communitySecurity"
+                                                        value={this.props.formValues.get('communitySecurity')}
+                                                        label={'Community policy to apply to this PID'}
+                                                        required
+                                                        validation={[validation.required]}>
+                                                        <MenuItem value={''} disabled>Select a security policy to apply</MenuItem>
+                                                        {communitySecurity.map((item, index) => {
+                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                        })}
+                                                    </Field>
+                                                </Grid>
+                                                {
+                                                    this.props.formValues.get('communitySecurity') &&
+                                                    <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
+                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected community record security policy details</Typography>
+                                                        <Grid container spacing={8} style={{marginTop: 8}}>
+                                                            <Grid item xs={2}><b>Name (ID):</b></Grid>
+                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].id})</Grid>
+                                                            <Grid item xs={2}><b>Description:</b></Grid>
+                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].description}</Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                }
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <StandardCard title={<span><b>Collection</b> level security - UQ:12345</span>} accentHeader>
+                                            <Grid container spacing={8}>
+                                                <Grid item xs={12}>
+                                                    <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.</Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={SelectField}
+                                                        name="collectionSecurity"
+                                                        value={this.props.formValues.get('collectionSecurity')}
+                                                        label={'Collection policy to apply to this PID'}
+                                                        required
+                                                        validation={[validation.required]}>
+                                                        <MenuItem value={''} disabled>Select a security policy to apply</MenuItem>
+                                                        {communitySecurity.map((item, index) => {
+                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                        })}
+                                                    </Field>
+                                                </Grid>
+                                                {
+                                                    this.props.formValues.get('collectionSecurity') &&
+                                                    <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
+                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected collection record security policy details</Typography>
+                                                        <Grid container spacing={8} style={{marginTop: 8}}>
+                                                            <Grid item xs={2}><b>Name (ID):</b></Grid>
+                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].id})</Grid>
+                                                            <Grid item xs={2}><b>Description:</b></Grid>
+                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].description}</Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                }
+                                            </Grid>
+
+                                            <Grid container spacing={8} style={{marginTop: 16}}>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={SelectField}
+                                                        name="collectionDataSecurity"
+                                                        value={this.props.formValues.get('collectionDataSecurity')}
+                                                        label={'Collection policy to apply to the datastream of this PID'}
+                                                        required
+                                                        validation={[validation.required]}>
+                                                        <MenuItem value={''} disabled>Select a security policy to apply</MenuItem>
+                                                        {communitySecurity.map((item, index) => {
+                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                        })}
+                                                    </Field>
+                                                </Grid>
+                                                {
+                                                    this.props.formValues.get('collectionDataSecurity') &&
+                                                    <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
+                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected collection datastream security policy details</Typography>
+                                                        <Grid container spacing={8} style={{marginTop: 8}}>
+                                                            <Grid item xs={2}><b>Name (ID):</b></Grid>
+                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].id})</Grid>
+                                                            <Grid item xs={2}><b>Description:</b></Grid>
+                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].description}</Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                }
+                                            </Grid>
+
+                                        </StandardCard>
+                                    </Grid>
+
+                                    <Grid item xs={12}>
+                                        <StandardCard title={<span><b>Record</b> level security - UQ:12345</span>} accentHeader>
+                                            <Grid container spacing={8}>
+                                                <Grid item xs={12}>
+                                                    <FormControlLabel
+                                                        control={<Checkbox
+                                                            checked={this.state.overrideSecurity}
+                                                            onChange={this.toggleSecurityOverride}
+                                                        />}
+                                                        label={'Override inherited security (detailed below).'}
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+
+                                </React.Fragment>
                         }
                     </Grid>
                 </StandardPage>

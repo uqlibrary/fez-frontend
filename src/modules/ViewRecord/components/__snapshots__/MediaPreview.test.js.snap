@@ -100,6 +100,13 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -869,6 +876,13 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -1338,6 +1352,13 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             },
                           },
                           "overrides": Object {
+                            "MUIDataTable": Object {
+                              "paper": Object {
+                                "boxShadow": "none",
+                                "margin": 0,
+                                "padding": 0,
+                              },
+                            },
                             "MuiFormLabel": Object {
                               "root": Object {
                                 "overflow": "hidden",
@@ -2624,6 +2645,13 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -3207,6 +3235,13 @@ exports[`Media Preview Component  should render component with image 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -3976,6 +4011,13 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -4445,6 +4487,13 @@ exports[`Media Preview Component  should render component with image 1`] = `
                             },
                           },
                           "overrides": Object {
+                            "MUIDataTable": Object {
+                              "paper": Object {
+                                "boxShadow": "none",
+                                "margin": 0,
+                                "padding": 0,
+                              },
+                            },
                             "MuiFormLabel": Object {
                               "root": Object {
                                 "overflow": "hidden",
@@ -6258,6 +6307,13 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -6768,6 +6824,13 @@ exports[`Media Preview Component  should render component with video 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -7537,6 +7600,13 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -8006,6 +8076,13 @@ exports[`Media Preview Component  should render component with video 1`] = `
                             },
                           },
                           "overrides": Object {
+                            "MUIDataTable": Object {
+                              "paper": Object {
+                                "boxShadow": "none",
+                                "margin": 0,
+                                "padding": 0,
+                              },
+                            },
                             "MuiFormLabel": Object {
                               "root": Object {
                                 "overflow": "hidden",
@@ -9300,6 +9377,13 @@ exports[`Media Preview Component  should render component with video 1`] = `
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",

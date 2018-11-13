@@ -64,6 +64,14 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemText)
+        secondary="Affiliation %"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+      <WithStyles(ListItemText)
         secondary="UQ identifier"
         secondaryTypographyProps={
           Object {

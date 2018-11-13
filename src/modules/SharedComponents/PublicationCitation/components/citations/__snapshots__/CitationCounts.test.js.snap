@@ -100,6 +100,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -584,6 +591,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                   },
                 },
                 "overrides": Object {
+                  "MUIDataTable": Object {
+                    "paper": Object {
+                      "boxShadow": "none",
+                      "margin": 0,
+                      "padding": 0,
+                    },
+                  },
                   "MuiFormLabel": Object {
                     "root": Object {
                       "overflow": "hidden",
@@ -1276,6 +1290,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -1723,6 +1744,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -2157,6 +2185,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -2613,6 +2648,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -3060,6 +3102,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -3494,6 +3543,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -3950,6 +4006,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -4397,6 +4460,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -4831,6 +4901,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -5287,6 +5364,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -5734,6 +5818,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -6168,6 +6259,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -6779,6 +6877,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               },
                             },
                             "overrides": Object {
+                              "MUIDataTable": Object {
+                                "paper": Object {
+                                  "boxShadow": "none",
+                                  "margin": 0,
+                                  "padding": 0,
+                                },
+                              },
                               "MuiFormLabel": Object {
                                 "root": Object {
                                   "overflow": "hidden",
@@ -7421,6 +7526,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -9555,6 +9667,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   },
                 },
                 "overrides": Object {
+                  "MUIDataTable": Object {
+                    "paper": Object {
+                      "boxShadow": "none",
+                      "margin": 0,
+                      "padding": 0,
+                    },
+                  },
                   "MuiFormLabel": Object {
                     "root": Object {
                       "overflow": "hidden",
@@ -10247,6 +10366,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -10694,6 +10820,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -11128,6 +11261,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -11584,6 +11724,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -12031,6 +12178,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -12465,6 +12619,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -12921,6 +13082,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -13368,6 +13536,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -13802,6 +13977,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -14394,6 +14576,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -14827,6 +15016,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     },
                                   },
                                   "overrides": Object {
+                                    "MUIDataTable": Object {
+                                      "paper": Object {
+                                        "boxShadow": "none",
+                                        "margin": 0,
+                                        "padding": 0,
+                                      },
+                                    },
                                     "MuiFormLabel": Object {
                                       "root": Object {
                                         "overflow": "hidden",
@@ -15341,6 +15537,13 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               },
                             },
                             "overrides": Object {
+                              "MUIDataTable": Object {
+                                "paper": Object {
+                                  "boxShadow": "none",
+                                  "margin": 0,
+                                  "padding": 0,
+                                },
+                              },
                               "MuiFormLabel": Object {
                                 "root": Object {
                                   "overflow": "hidden",
@@ -15983,6 +16186,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -16465,6 +16675,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                   },
                 },
                 "overrides": Object {
+                  "MUIDataTable": Object {
+                    "paper": Object {
+                      "boxShadow": "none",
+                      "margin": 0,
+                      "padding": 0,
+                    },
+                  },
                   "MuiFormLabel": Object {
                     "root": Object {
                       "overflow": "hidden",
@@ -17157,6 +17374,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -17604,6 +17828,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -18038,6 +18269,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -18494,6 +18732,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -18941,6 +19186,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -19375,6 +19627,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -19831,6 +20090,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -20278,6 +20544,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -20712,6 +20985,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -21168,6 +21448,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -21615,6 +21902,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
@@ -22049,6 +22343,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
@@ -22643,6 +22944,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -23076,6 +23384,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     },
                                   },
                                   "overrides": Object {
+                                    "MUIDataTable": Object {
+                                      "paper": Object {
+                                        "boxShadow": "none",
+                                        "margin": 0,
+                                        "padding": 0,
+                                      },
+                                    },
                                     "MuiFormLabel": Object {
                                       "root": Object {
                                         "overflow": "hidden",
@@ -23590,6 +23905,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               },
                             },
                             "overrides": Object {
+                              "MUIDataTable": Object {
+                                "paper": Object {
+                                  "boxShadow": "none",
+                                  "margin": 0,
+                                  "padding": 0,
+                                },
+                              },
                               "MuiFormLabel": Object {
                                 "root": Object {
                                   "overflow": "hidden",
@@ -24232,6 +24554,13 @@ exports[`CitationCounts should render component with no metrics 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -24668,6 +24997,13 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                   },
                 },
                 "overrides": Object {
+                  "MUIDataTable": Object {
+                    "paper": Object {
+                      "boxShadow": "none",
+                      "margin": 0,
+                      "padding": 0,
+                    },
+                  },
                   "MuiFormLabel": Object {
                     "root": Object {
                       "overflow": "hidden",
@@ -25515,6 +25851,13 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                               },
                             },
                             "overrides": Object {
+                              "MUIDataTable": Object {
+                                "paper": Object {
+                                  "boxShadow": "none",
+                                  "margin": 0,
+                                  "padding": 0,
+                                },
+                              },
                               "MuiFormLabel": Object {
                                 "root": Object {
                                   "overflow": "hidden",

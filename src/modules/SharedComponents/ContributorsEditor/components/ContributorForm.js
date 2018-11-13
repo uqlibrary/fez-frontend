@@ -14,6 +14,7 @@ export class ContributorForm extends PureComponent {
         authorsList: PropTypes.array.isRequired,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
+        showAffiliation: PropTypes.bool,
         errorText: PropTypes.string,
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
@@ -27,6 +28,7 @@ export class ContributorForm extends PureComponent {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
             identifierLabel: 'UQ identifier (if available)',
+            identifierHint: '',
             addButton: 'Add author',
             descriptionStep1: (<div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>),
             descriptionStep1NoStep2: (<div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>)
@@ -39,7 +41,8 @@ export class ContributorForm extends PureComponent {
         this.state = {
             nameAsPublished: '',
             uqIdentifier: '',
-            contributor: {}
+            contributor: {},
+            affiliation: ''
         };
     }
 
@@ -54,15 +57,23 @@ export class ContributorForm extends PureComponent {
         this.setState({
             nameAsPublished: '',
             uqIdentifier: '',
-            contributor: {}
+            contributor: {},
+            affiliation: ''
         });
-    }
+    };
 
     _onNameChanged = (event) => {
         this.setState({
             nameAsPublished: event.target.value
         });
-    }
+    };
+    _onAffChanged = (event) => {
+        const value = event.target.value.replace('%', '');
+        this.setState({
+            affiliation: value + '%'
+        });
+    };
+
 
     _onUQIdentifierSelected = (selectedItem) => {
         this.setState({
@@ -70,9 +81,10 @@ export class ContributorForm extends PureComponent {
         }, () => {
             this._addContributor();
         });
-    }
+    };
 
     _onUQIdentifierChanged = (newValue) => {
+        console.log(newValue);
         this.setState({
             uqIdentifier: newValue
         });
@@ -87,8 +99,8 @@ export class ContributorForm extends PureComponent {
         return (
             <div style={{flexGrow: 1}}>
                 {description}
-                <Grid container spacing={16} alignItems="baseline">
-                    <Grid item xs={12} sm={this.props.showIdentifierLookup ? 12 : 9} md={this.props.showIdentifierLookup ? 5 : 10}>
+                <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'}>
+                    <Grid item xs={12} sm>
                         <TextField
                             fullWidth
                             ref="nameAsPublishedField"
@@ -103,18 +115,47 @@ export class ContributorForm extends PureComponent {
                             autoComplete="off"
                         />
                     </Grid>
-                    {
-                        this.props.showIdentifierLookup &&
-                        <Grid item xs={12} sm={12} md={5}>
-                            <UqIdField
-                                disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                                onChange={this._onUQIdentifierSelected}
-                                ref="identifierField"
-                                id="identifierField"
-                            />
-                        </Grid>
-                    }
-                    <Grid item xs={12} sm={3} md={2}>
+                    <Grid item xs={12} sm={2}>
+                        <TextField
+                            fullWidth
+                            label={'Affiliation value'}
+                            placeholder={'1% - 100%'}
+                            value={this.state.affiliation}
+                            onChange={this._onAffChanged}
+                            disabled={!this.state.nameAsPublished}
+                            autoComplete="off"
+                        />
+                    </Grid>
+                </Grid>
+                <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'}>
+                    <Grid item xs={12} sm>
+                        <TextField
+                            fullWidth
+                            label={'Affiliation ID'}
+                            disabled={!this.state.nameAsPublished}
+                            autoComplete="off"
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm>
+                        <TextField
+                            fullWidth
+                            label={'Affiliation country'}
+                            disabled={!this.state.nameAsPublished}
+                            autoComplete="off"
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm>
+                        <UqIdField
+                            label={this.props.locale.identifierLabel}
+                            placeholder={this.props.locale.identifierHint}
+                            value={this.state.uqIdentifier}
+                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                            onChange={this._onUQIdentifierSelected}
+                            ref="identifierField"
+                            id="identifierField"
+                        />
+                    </Grid>
+                    <Grid item xs={'auto'}>
                         <Button
                             variant="contained"
                             fullWidth
@@ -122,7 +163,7 @@ export class ContributorForm extends PureComponent {
                             disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                             onClick={this._addContributor}
                         >
-                            {this.props.locale.addButton}
+                            Add author
                         </Button>
                     </Grid>
                 </Grid>

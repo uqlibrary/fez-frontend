@@ -100,6 +100,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1195,6 +1202,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -1791,6 +1805,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -2901,6 +2922,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
@@ -3497,6 +3525,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -3959,6 +3994,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",

@@ -75,6 +75,7 @@ export class ContributorRowHeader extends PureComponent {
                     {
                         showIdentifierLookup &&
                         <Hidden xsDown>
+                            <ListItemText secondary={'Affiliation %'} secondaryTypographyProps={{variant: 'caption'}}/>
                             <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                         </Hidden>
                     }

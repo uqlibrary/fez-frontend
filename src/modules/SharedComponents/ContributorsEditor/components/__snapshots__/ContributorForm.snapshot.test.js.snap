@@ -16,14 +16,14 @@ exports[`Component ContributorForm should render display name field and identifi
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignItems="baseline"
+    alignContent="flex-end"
+    alignItems="flex-end"
     container={true}
-    spacing={16}
+    spacing={8}
   >
     <WithStyles(Grid)
       item={true}
-      md={5}
-      sm={12}
+      sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
@@ -40,21 +40,67 @@ exports[`Component ContributorForm should render display name field and identifi
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      md={5}
-      sm={12}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        fullWidth={true}
+        label="Affiliation value"
+        onChange={[Function]}
+        placeholder="1% - 100%"
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    alignContent="flex-end"
+    alignItems="flex-end"
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        fullWidth={true}
+        label="Affiliation ID"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        fullWidth={true}
+        label="Affiliation country"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
       xs={12}
     >
       <Connect(WithStyles(AutoCompleteAsyncField))
         disabled={true}
         id="identifierField"
+        label="UQ identifier (if available)"
         onChange={[Function]}
+        placeholder=""
+        value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      md={2}
-      sm={3}
-      xs={12}
+      xs="auto"
     >
       <WithStyles(Button)
         color="primary"
@@ -86,14 +132,14 @@ exports[`Component ContributorForm should render display name field only 1`] = `
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignItems="baseline"
+    alignContent="flex-end"
+    alignItems="flex-end"
     container={true}
-    spacing={16}
+    spacing={8}
   >
     <WithStyles(Grid)
       item={true}
-      md={10}
-      sm={9}
+      sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
@@ -110,9 +156,67 @@ exports[`Component ContributorForm should render display name field only 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      md={2}
-      sm={3}
+      sm={2}
       xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        fullWidth={true}
+        label="Affiliation value"
+        onChange={[Function]}
+        placeholder="1% - 100%"
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    alignContent="flex-end"
+    alignItems="flex-end"
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        fullWidth={true}
+        label="Affiliation ID"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        fullWidth={true}
+        label="Affiliation country"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        id="identifierField"
+        label="UQ identifier (if available)"
+        onChange={[Function]}
+        placeholder=""
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
     >
       <WithStyles(Button)
         color="primary"

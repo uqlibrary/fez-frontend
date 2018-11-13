@@ -100,6 +100,13 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1208,6 +1215,13 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                       },
                                                     },
                                                     "overrides": Object {
+                                                      "MUIDataTable": Object {
+                                                        "paper": Object {
+                                                          "boxShadow": "none",
+                                                          "margin": 0,
+                                                          "padding": 0,
+                                                        },
+                                                      },
                                                       "MuiFormLabel": Object {
                                                         "root": Object {
                                                           "overflow": "hidden",
@@ -2343,6 +2357,13 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -3452,6 +3473,13 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                       },
                                                     },
                                                     "overrides": Object {
+                                                      "MUIDataTable": Object {
+                                                        "paper": Object {
+                                                          "boxShadow": "none",
+                                                          "margin": 0,
+                                                          "padding": 0,
+                                                        },
+                                                      },
                                                       "MuiFormLabel": Object {
                                                         "root": Object {
                                                           "overflow": "hidden",

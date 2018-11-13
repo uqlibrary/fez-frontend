@@ -73,7 +73,14 @@ export const mui1theme = createMuiTheme({
                 backgroundColor: '#4085C6 !important',
                 color: '#FFFFFF'
             }
-        }
+        },
+        MUIDataTable: {
+            paper: {
+                boxShadow: 'none',
+                padding: 0,
+                margin: 0
+            }
+        },
     },
     graphs: {
         color1: '#d72865',

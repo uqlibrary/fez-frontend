@@ -626,6 +626,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1444,6 +1451,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -1975,6 +1989,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -2689,6 +2710,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -3220,6 +3248,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -3878,6 +3913,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -4409,6 +4451,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -5081,6 +5130,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -5612,6 +5668,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -6270,6 +6333,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -6801,6 +6871,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -7459,6 +7536,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -7990,6 +8074,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -8765,6 +8856,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   },
                                                 },
                                                 "overrides": Object {
+                                                  "MUIDataTable": Object {
+                                                    "paper": Object {
+                                                      "boxShadow": "none",
+                                                      "margin": 0,
+                                                      "padding": 0,
+                                                    },
+                                                  },
                                                   "MuiFormLabel": Object {
                                                     "root": Object {
                                                       "overflow": "hidden",
@@ -9296,6 +9394,13 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
@@ -10197,6 +10302,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -11017,6 +11129,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -11550,6 +11669,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -12263,6 +12389,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
+                                                                "MUIDataTable": Object {
+                                                                  "paper": Object {
+                                                                    "boxShadow": "none",
+                                                                    "margin": 0,
+                                                                    "padding": 0,
+                                                                  },
+                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
@@ -13012,6 +13145,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -13543,6 +13683,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -14201,6 +14348,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -14732,6 +14886,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -15404,6 +15565,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -15935,6 +16103,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -16593,6 +16768,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -17124,6 +17306,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -17782,6 +17971,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "overrides": Object {
+                                                "MUIDataTable": Object {
+                                                  "paper": Object {
+                                                    "boxShadow": "none",
+                                                    "margin": 0,
+                                                    "padding": 0,
+                                                  },
+                                                },
                                                 "MuiFormLabel": Object {
                                                   "root": Object {
                                                     "overflow": "hidden",
@@ -18313,6 +18509,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
@@ -19088,6 +19291,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   },
                                                 },
                                                 "overrides": Object {
+                                                  "MUIDataTable": Object {
+                                                    "paper": Object {
+                                                      "boxShadow": "none",
+                                                      "margin": 0,
+                                                      "padding": 0,
+                                                    },
+                                                  },
                                                   "MuiFormLabel": Object {
                                                     "root": Object {
                                                       "overflow": "hidden",
@@ -19619,6 +19829,13 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",

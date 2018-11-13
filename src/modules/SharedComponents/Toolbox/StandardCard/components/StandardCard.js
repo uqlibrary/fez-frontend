@@ -46,11 +46,13 @@ class Cards extends Component {
         help: PropTypes.object,
         customBackgroundColor: PropTypes.any,
         customTitleColor: PropTypes.any,
+        customTitleBgColor: PropTypes.any,
         squareTop: PropTypes.bool
     };
     render() {
         const {classes, title, help, children, primaryHeader, accentHeader} = this.props;
         const customBG = !!this.props.customBackgroundColor ? {backgroundColor: this.props.customBackgroundColor} : null;
+        const customTitleBG = !!this.props.customTitleBgColor ? {backgroundColor: this.props.customTitleBgColor} : null;
         const customTitle = !!this.props.customTitleColor ? {color: this.props.customTitleColor} : null;
         const fullHeight = !!this.props.fullHeight ? {height: '100%'} : null;
         const squareTop = !!this.props.squareTop ? {borderTopLeftRadius: 0, borderTopRightRadius: 0} : null;
@@ -59,7 +61,7 @@ class Cards extends Component {
                 {
                     !this.props.noHeader &&
                     <CardHeader
-                        style={{...squareTop}}
+                        style={{...squareTop, ...customTitleBG}}
                         title={title}
                         titleTypographyProps={{
                             variant: 'h5',

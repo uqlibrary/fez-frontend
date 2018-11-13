@@ -100,6 +100,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -1048,6 +1055,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             },
                                           },
                                           "overrides": Object {
+                                            "MUIDataTable": Object {
+                                              "paper": Object {
+                                                "boxShadow": "none",
+                                                "margin": 0,
+                                                "padding": 0,
+                                              },
+                                            },
                                             "MuiFormLabel": Object {
                                               "root": Object {
                                                 "overflow": "hidden",
@@ -1688,6 +1702,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
@@ -2641,6 +2662,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             },
                                           },
                                           "overrides": Object {
+                                            "MUIDataTable": Object {
+                                              "paper": Object {
+                                                "boxShadow": "none",
+                                                "margin": 0,
+                                                "padding": 0,
+                                              },
+                                            },
                                             "MuiFormLabel": Object {
                                               "root": Object {
                                                 "overflow": "hidden",
