@@ -422,4 +422,50 @@ describe('Backend routes method', () => {
         MockDate.reset();
     });
 
+    it('should correctly construct url for SEARCH_INTERNAL_RECORDS_API when rek_status key value is less than 0', () => {
+        const testCases = [
+            {
+                values: {searchMode: 'advanced', searchQueryParams: {rek_status: {value: -4}}},
+                expected: {
+                    apiUrl: 'records/search',
+                    options: {
+                        params: {
+                            export_to: '',
+                            order_by: 'desc',
+                            page: 1,
+                            per_page: 20,
+                            sort: 'score',
+                            mode: 'advanced',
+                            key: {
+                                rek_status: [1, 3, 4, 5, 6, 7]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                values: {searchMode: 'advanced', searchQueryParams: {rek_status: {value: 4}}},
+                expected: {
+                    apiUrl: 'records/search',
+                    options: {
+                        params: {
+                            export_to: '',
+                            order_by: 'desc',
+                            page: 1,
+                            per_page: 20,
+                            sort: 'score',
+                            mode: 'advanced',
+                            key: {
+                                rek_status: 4
+                            }
+                        }
+                    }
+                }
+            }
+        ];
+
+        testCases.map(item => {
+            expect(routes.SEARCH_INTERNAL_RECORDS_API({...item.values})).toEqual(item.expected);
+        });
+    });
 });

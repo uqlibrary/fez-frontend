@@ -1,4 +1,5 @@
 import {validation, openAccessConfig} from 'config';
+import {IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL} from 'config/general';
 
 const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
@@ -177,6 +178,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         return (
             (key === 'rek_pid' && value.toLowerCase().indexOf('uq:') !== 0) && {...result, [key]: `UQ:${value}`}
             || (key === 'rek_genre_type') && {...result, [key]: value.map(item => `"${item}"`)}
+            || (key === 'rek_status' && value < 0) && {...result, [key]: [UNPUBLISHED, SUBMITTED_FOR_APPROVAL, IN_CREATION,  IN_REVIEW, IN_DRAFT, RETRACTED]}
             || (key === 'all' || !!value) && {...result, [key]: value}
             || {...result, [key]: searchQueryParams[key]}
         );
