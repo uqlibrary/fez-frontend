@@ -6,7 +6,7 @@ import {defaultQueryParams} from 'config/general';
 const fullPath = process.env.FULL_PATH && process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
+const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}, searchUrl = '/records/search') => {
     const params = {
         ...defaultQueryParams,
         searchQueryParams: {
@@ -22,7 +22,7 @@ const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
         params.searchMode = 'advanced';
     }
 
-    return `/records/search?${param(params)}`;
+    return `${searchUrl}?${param(params)}`;
 };
 
 export const pathConfig = {
@@ -394,7 +394,7 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.masquerade,
             },
             {
-                linkTo: pathConfig.admin.unpublished,
+                linkTo: getSearchUrl({searchQuery: {'rek_status': {'value': -4}}}, pathConfig.admin.unpublished),
                 ...locale.menu.unpublished
             },
             {
