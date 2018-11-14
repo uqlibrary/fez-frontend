@@ -133,7 +133,7 @@ export default class SearchComponent extends PureComponent {
                         }
                         : {
                             searchField: key,
-                            value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key]],
+                            value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key].value],
                             label: ''
                         }
                 ));
