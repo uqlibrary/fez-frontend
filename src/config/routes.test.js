@@ -11,7 +11,7 @@ describe('Routes method', () => {
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(13);
+        expect(testRoutes.length).toEqual(12);
     });
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
@@ -21,7 +21,7 @@ describe('Routes method', () => {
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
-        expect(testRoutes.length).toEqual(16);
+        expect(testRoutes.length).toEqual(15);
     });
 
     it('should return a list of routes for anon user', () => {
@@ -98,7 +98,7 @@ describe('Routes method', () => {
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
         const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
-        expect(testMenuItems.length).toEqual(13);
+        expect(testMenuItems.length).toEqual(12);
     });
 });
 

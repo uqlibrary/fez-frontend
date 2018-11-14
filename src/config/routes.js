@@ -46,7 +46,7 @@ export const pathConfig = {
     },
     dataset: {
         mine: '/data-collections/mine',
-        legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
+        // legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
         add: '/data-collections/add'
     },
     // TODO: update how we get files after security is implemented in fez file api
@@ -375,10 +375,10 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
-            {
-                linkTo: pathConfig.dataset.legacy,
-                ...locale.menu.addDataset
-            },
+            // {
+            //     linkTo: pathConfig.dataset.legacy,
+            //     ...locale.menu.addDataset
+            // },
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addMissingDataset

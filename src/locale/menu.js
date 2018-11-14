@@ -22,9 +22,6 @@ export default {
         addMissingRecord: {
             primaryText: 'Add a missing publication'
         },
-        addDataset: {
-            primaryText: 'Add a missing dataset (legacy)'
-        },
         addMissingDataset: {
             primaryText: 'Add a missing dataset'
         },
