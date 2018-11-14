@@ -1277,7 +1277,7 @@ export default {
             },
             fieldOfResearchCodes: {
                 ...txt.components.fieldOfResearchForm,
-                text: 'Select Field of Research (FoR) codes at the 4 digit level'
+                text: 'Select Field of Research (FoR) codes'
             },
             accessAndLicensing: {
                 title: 'Access and licensing information',

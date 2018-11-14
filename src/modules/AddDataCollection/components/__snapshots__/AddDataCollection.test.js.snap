@@ -272,7 +272,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           title="ANZSRC field of research (FoR) codes"
         >
           <WithStyles(Typography)>
-            Select Field of Research (FoR) codes at the 4 digit level
+            Select Field of Research (FoR) codes
           </WithStyles(Typography)>
           <Field
             component={[Function]}
