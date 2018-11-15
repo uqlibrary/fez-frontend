@@ -1042,19 +1042,18 @@ class Admin extends PureComponent {
                                         <StandardCard title={'Security'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                             <Grid container spacing={16}>
                                                 <Grid item xs={12} sm={12}>
-                                                    <Alert type={'warning'} title={'Warning'} message={'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you`re doing.'} />
-                                                    <br/>
                                                     <Field
                                                         component={SelectField}
                                                         name="level"
                                                         value={this.props.formValues.get('level')}
                                                         label={'Use this interface as a...'}
                                                         required
-                                                        fullWidth
                                                         validation={[validation.required]}>
                                                         <MenuItem value={'Superadmin'} >Super admin</MenuItem>
                                                         <MenuItem value={'Admin'} >Admin</MenuItem>
                                                     </Field>
+                                                    <br/><br/>
+                                                    <Alert type={'warning'} title={'Warning'} message={'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you`re doing.'} />
                                                 </Grid>
                                             </Grid>
                                         </StandardCard>
