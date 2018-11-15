@@ -1027,7 +1027,8 @@ export default {
                         type: 'StatusLookup',
                         hint: 'Select status',
                         validation: [],
-                        ariaLabel: 'Select a status to search on'
+                        ariaLabel: 'Select a status to search on',
+                        isUnpublishedField: true
                     }
                 },
                 openAccess: {

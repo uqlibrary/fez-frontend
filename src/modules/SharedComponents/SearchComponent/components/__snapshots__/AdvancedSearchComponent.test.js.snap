@@ -64,6 +64,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="all"
+            showUnpublishedFields={false}
             value="i feel lucky"
           />
         </WithStyles(Grid)>
@@ -261,6 +262,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -338,6 +340,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="all"
+            showUnpublishedFields={false}
             value="i feel lucky"
           />
         </WithStyles(Grid)>
@@ -535,6 +538,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -612,6 +616,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="all"
+            showUnpublishedFields={false}
             value="i feel lucky"
           />
         </WithStyles(Grid)>
@@ -797,6 +802,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -874,6 +880,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="all"
+            showUnpublishedFields={false}
             value="i feel lucky"
           />
         </WithStyles(Grid)>
@@ -1071,6 +1078,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -1149,6 +1157,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="0"
+            showUnpublishedFields={false}
             value=""
           />
         </WithStyles(Grid)>
@@ -1335,6 +1344,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -1413,6 +1423,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="0"
+            showUnpublishedFields={false}
             value=""
           />
         </WithStyles(Grid)>
@@ -1599,6 +1610,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -1690,6 +1702,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           onToggleMinimise={[Function]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {
@@ -1768,6 +1781,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             onSearchRowDelete={[Function]}
             rowIndex={0}
             searchField="0"
+            showUnpublishedFields={false}
             value=""
           />
         </WithStyles(Grid)>
@@ -1954,6 +1968,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           onToggleMinimise={[MockFunction]}
           onToggleOpenAccess={[Function]}
           onToggleSearchMode={[Function]}
+          showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
           yearFilter={
             Object {

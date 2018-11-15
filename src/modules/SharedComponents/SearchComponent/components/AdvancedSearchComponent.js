@@ -52,6 +52,7 @@ export class AdvancedSearchComponent extends PureComponent {
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
         isLoading: PropTypes.bool,
+        showUnpublishedFields: PropTypes.bool,
 
         // Event handlers
         onToggleSearchMode: PropTypes.func,
@@ -79,6 +80,7 @@ export class AdvancedSearchComponent extends PureComponent {
         },
         isMinimised: false,
         isOpenAccess: false,
+        showUnpublishedFields: false,
 
         onToggleSearchMode: () => {},
         onToggleMinimise: () => {},
@@ -198,6 +200,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                                         disabledFields={alreadyAddedFields}
                                                         onSearchRowChange={this._handleAdvancedSearchRowChange}
                                                         onSearchRowDelete={this._removeAdvancedSearchRow}
+                                                        showUnpublishedFields={this.props.showUnpublishedFields}
                                                         {...item}
                                                     />
                                                 ))

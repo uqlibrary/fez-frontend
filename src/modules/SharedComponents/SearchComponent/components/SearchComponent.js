@@ -29,6 +29,8 @@ export default class SearchComponent extends PureComponent {
         isOpenAccessInAdvancedMode: PropTypes.bool,
         autoFocus: PropTypes.bool,
 
+        isAdmin: PropTypes.bool,
+
         className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
@@ -387,6 +389,7 @@ export default class SearchComponent extends PureComponent {
                         onAdvancedSearchReset={this._resetAdvancedSearch}
                         onAdvancedSearchRowChange={this._handleAdvancedSearchRowChange}
                         onSearch={this._handleAdvancedSearch}
+                        showUnpublishedFields={this.props.location.pathname === routes.pathConfig.admin.unpublished && this.props.isAdmin}
                         isLoading={this.props.searchLoading}
                     />
                 }

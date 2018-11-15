@@ -239,18 +239,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
               >
                 School, Centre or Institute
               </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="rek_status"
-                style={
-                  Object {
-                    "display": "block",
-                  }
-                }
-                value="rek_status"
-              >
-                Status
-              </WithStyles(MenuItem)>
             </WithStyles(Select)>
             <WithStyles(FormHelperText)
               error={true}
@@ -567,18 +555,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_org_unit_name"
               >
                 School, Centre or Institute
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="rek_status"
-                style={
-                  Object {
-                    "display": "block",
-                  }
-                }
-                value="rek_status"
-              >
-                Status
               </WithStyles(MenuItem)>
             </WithStyles(Select)>
             <WithStyles(FormHelperText)
@@ -904,18 +880,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_org_unit_name"
               >
                 School, Centre or Institute
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="rek_status"
-                style={
-                  Object {
-                    "display": "block",
-                  }
-                }
-                value="rek_status"
-              >
-                Status
               </WithStyles(MenuItem)>
             </WithStyles(Select)>
             <WithStyles(FormHelperText)
