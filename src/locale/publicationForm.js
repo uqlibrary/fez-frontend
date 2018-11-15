@@ -1,5 +1,6 @@
 import React from 'react';
 import {default as txt} from './components';
+import {fileUploaderLocale, CLOSED_ACCESS_ID} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 export default {
     cancel: 'Abandon and search again',
@@ -1376,7 +1377,20 @@ export default {
         cancel: 'Cancel',
         submit: 'Submit for approval',
         fileUpload: {
-            title: 'Upload files'
+            title: 'Upload files',
+            fileUploader: {
+                ...fileUploaderLocale,
+                fileUploadRow: {
+                    ...fileUploaderLocale.fileUploadRow,
+                    fileUploadRowAccessSelector: {
+                        ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector,
+                        accessSelectOptionsText: {
+                            ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.accessSelectOptionsText,
+                            [CLOSED_ACCESS_ID]: 'Mediated Access'
+                        }
+                    }
+                }
+            }
         }
     }
 };

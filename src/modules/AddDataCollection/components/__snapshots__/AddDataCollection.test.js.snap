@@ -1067,6 +1067,74 @@ exports[`AddDataCollection test should render data set form 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Please ensure your files:
+                  <ul>
+                    <li>
+                      begin with a letter and are less than 45 characters long
+                    </li>
+                    <li>
+                      contain only upper and lowercase alphanumeric characters, and underscores
+                    </li>
+                    <li>
+                      have only a single period which precedes the file extension: “.pdf”
+                    </li>
+                    <li>
+                      are uploaded individually and not inside a folder
+                    </li>
+                  </ul>
+                </div>,
+                "fileUploadRow": Object {
+                  "defaultView": Object {
+                    "embargoDateClosedAccess": "No date required",
+                  },
+                  "deleteHint": "Remove this file",
+                  "deleteRecordConfirmation": Object {
+                    "cancelButtonLabel": "No",
+                    "confirmButtonLabel": "Yes",
+                    "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                    "confirmationTitle": "Delete file",
+                  },
+                  "embargoDateClosedAccess": "No date required",
+                  "embargoDateColumn": "Embargo date",
+                  "fileAccessColumn": "File access",
+                  "fileUploadRowAccessSelector": Object {
+                    "accessSelectOptionsText": Object {
+                      "8": "Mediated Access",
+                      "9": "Open Access",
+                    },
+                    "errorMessage": "This field is required",
+                    "initialValue": "Select access conditions",
+                  },
+                  "filenameColumn": "File name",
+                  "mobileView": Object {
+                    "embargoDateClosedAccess": "No date required",
+                    "embargoDateColumn": "Embargo date",
+                    "fileAccessColumn": "File access",
+                    "filenameColumn": "File name",
+                  },
+                  "uploadInProgressText": "Uploading...",
+                },
+                "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
             name="files"
             requireOpenAccessStatus={true}
             validate={
