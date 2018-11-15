@@ -175,6 +175,13 @@ class Admin extends PureComponent {
         });
     }
 
+    toggleSecurityOverride2 = () => {
+        this.setState({
+            ...this.state,
+            overrideSecurity2: !this.state.overrideSecurity2
+        });
+    }
+
     handleGrantEditButtonSubmit = () => {
         this.setState({
             ...this.state,
@@ -303,9 +310,6 @@ class Admin extends PureComponent {
             {value: 'B', label: 'Policy B', id: 'PolicyBID', name: 'Policy B', description: 'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.'},
             {value: 'C', label: 'Policy C', id: 'PolicyCID', name: 'Policy C', description: 'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.'},
         ];
-
-        console.log('collectionSecurity', this.props.formValues.get('collectionSecurity'));
-        console.log('communitySecurity', this.props.formValues.get('communitySecurity'));
 
         return (
             <form>
@@ -1039,50 +1043,77 @@ class Admin extends PureComponent {
                                             <Grid container spacing={16}>
                                                 <Grid item xs={12} sm={12}>
                                                     <Alert type={'warning'} title={'Warning'} message={'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you`re doing.'} />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <StandardCard title={<span><b>Community</b> level security - UQ:12345</span>} accentHeader>
-                                            <Grid container spacing={8}>
-                                                <Grid item xs={12}>
-                                                    <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.</Typography>
-                                                </Grid>
-                                                <Grid item xs={12}>
+                                                    <br/>
                                                     <Field
                                                         component={SelectField}
-                                                        name="communitySecurity"
-                                                        value={this.props.formValues.get('communitySecurity')}
-                                                        label={'Community policy to apply to this PID'}
+                                                        name="level"
+                                                        value={this.props.formValues.get('level')}
+                                                        label={'Use this interface as a...'}
                                                         required
+                                                        fullWidth
                                                         validation={[validation.required]}>
-                                                        <MenuItem value={''} disabled>Select a security policy to apply</MenuItem>
-                                                        {communitySecurity.map((item, index) => {
-                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                                                        })}
+                                                        <MenuItem value={'Superadmin'} >Super admin</MenuItem>
+                                                        <MenuItem value={'Admin'} >Admin</MenuItem>
                                                     </Field>
                                                 </Grid>
-                                                {
-                                                    this.props.formValues.get('communitySecurity') &&
-                                                    <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
-                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected community record security policy details</Typography>
-                                                        <Grid container spacing={8} style={{marginTop: 8}}>
-                                                            <Grid item xs={2}><b>Name (ID):</b></Grid>
-                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].id})</Grid>
-                                                            <Grid item xs={2}><b>Description:</b></Grid>
-                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].description}</Grid>
-                                                        </Grid>
-                                                    </Grid>
-                                                }
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
+                                    {this.props.formValues.get('level') === 'Superadmin' &&
+                                        <Grid item xs={12}>
+                                            <StandardCard title={<span><b>Community</b> level security - UQ:12345</span>} accentHeader>
+                                                <Grid container spacing={8}>
+                                                    <Grid item xs={12}>
+                                                        <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit
+                                                            amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam
+                                                            rhoncus congue consectetur. Aenean sed sapien
+                                                            ipsum.</Typography>
+                                                    </Grid>
+                                                    <Grid item xs={12}>
+                                                        <Field
+                                                            component={SelectField}
+                                                            name="communitySecurity"
+                                                            value={this.props.formValues.get('communitySecurity')}
+                                                            label={'Community policy to apply to this PID'}
+                                                            required
+                                                            validation={[validation.required]}>
+                                                            <MenuItem value={''} disabled>Select a security policy to
+                                                                apply</MenuItem>
+                                                            {communitySecurity.map((item, index) => {
+                                                                return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                            })}
+                                                        </Field>
+                                                    </Grid>
+                                                    {
+                                                        this.props.formValues.get('communitySecurity') &&
+                                                        <Grid item xs={12} style={{
+                                                            marginTop: 24,
+                                                            padding: 24,
+                                                            backgroundColor: 'rgba(0,0,0,0.05)'
+                                                        }}>
+                                                            <Typography variant={'h6'} style={{marginTop: -8}}>Selected
+                                                                community record security policy details</Typography>
+                                                            <Grid container spacing={8} style={{marginTop: 8}}>
+                                                                <Grid item xs={2}><b>Name (ID):</b></Grid>
+                                                                <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].id})</Grid>
+                                                                <Grid item xs={2}><b>Description:</b></Grid>
+                                                                <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].description}</Grid>
+                                                            </Grid>
+                                                        </Grid>
+                                                    }
+                                                </Grid>
+                                            </StandardCard>
+                                        </Grid>
+                                    }
+                                    {this.props.formValues.get('level') === 'Superadmin' &&
                                     <Grid item xs={12}>
                                         <StandardCard title={<span><b>Collection</b> level security - UQ:12345</span>} accentHeader>
                                             <Grid container spacing={8}>
                                                 <Grid item xs={12}>
-                                                    <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.</Typography>
+                                                    <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit
+                                                        amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam
+                                                        rhoncus congue consectetur. Aenean sed sapien
+                                                        ipsum.</Typography>
                                                 </Grid>
                                                 <Grid item xs={12}>
                                                     <Field
@@ -1092,7 +1123,8 @@ class Admin extends PureComponent {
                                                         label={'Collection policy to apply to this PID'}
                                                         required
                                                         validation={[validation.required]}>
-                                                        <MenuItem value={''} disabled>Select a security policy to apply</MenuItem>
+                                                        <MenuItem value={''} disabled>Select a security policy to
+                                                            apply</MenuItem>
                                                         {communitySecurity.map((item, index) => {
                                                             return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                                                         })}
@@ -1100,13 +1132,18 @@ class Admin extends PureComponent {
                                                 </Grid>
                                                 {
                                                     this.props.formValues.get('collectionSecurity') &&
-                                                    <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
-                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected collection record security policy details</Typography>
+                                                    <Grid item xs={12} style={{
+                                                        marginTop: 24,
+                                                        padding: 24,
+                                                        backgroundColor: 'rgba(0,0,0,0.05)'
+                                                    }}>
+                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected
+                                                            collection record security policy details</Typography>
                                                         <Grid container spacing={8} style={{marginTop: 8}}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                             <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].id})</Grid>
                                                             <Grid item xs={2}><b>Description:</b></Grid>
-                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].description}</Grid>
+                                                            <Grid item  xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].description}</Grid>
                                                         </Grid>
                                                     </Grid>
                                                 }
@@ -1118,10 +1155,11 @@ class Admin extends PureComponent {
                                                         component={SelectField}
                                                         name="collectionDataSecurity"
                                                         value={this.props.formValues.get('collectionDataSecurity')}
-                                                        label={'Collection policy to apply to the datastream of this PID'}
+                                                        label={<span>Collection policy to apply to the <b>datastream</b> of this PID</span>}
                                                         required
                                                         validation={[validation.required]}>
-                                                        <MenuItem value={''} disabled>Select a security policy to apply</MenuItem>
+                                                        <MenuItem value={''} disabled>Select a security policy to
+                                                            apply</MenuItem>
                                                         {communitySecurity.map((item, index) => {
                                                             return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                                                         })}
@@ -1129,8 +1167,12 @@ class Admin extends PureComponent {
                                                 </Grid>
                                                 {
                                                     this.props.formValues.get('collectionDataSecurity') &&
-                                                    <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
-                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected collection datastream security policy details</Typography>
+                                                    <Grid item xs={12} style={{
+                                                        marginTop: 24,
+                                                        padding: 24,
+                                                        backgroundColor: 'rgba(0,0,0,0.05)'
+                                                    }}>
+                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected collection <b>datastream</b> security policy details</Typography>
                                                         <Grid container spacing={8} style={{marginTop: 8}}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                             <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].id})</Grid>
@@ -1140,26 +1182,168 @@ class Admin extends PureComponent {
                                                     </Grid>
                                                 }
                                             </Grid>
-
                                         </StandardCard>
                                     </Grid>
-
-                                    <Grid item xs={12}>
-                                        <StandardCard title={<span><b>Record</b> level security - UQ:12345</span>} accentHeader>
-                                            <Grid container spacing={8}>
-                                                <Grid item xs={12}>
-                                                    <FormControlLabel
-                                                        control={<Checkbox
-                                                            checked={this.state.overrideSecurity}
-                                                            onChange={this.toggleSecurityOverride}
-                                                        />}
-                                                        label={'Override inherited security (detailed below).'}
-                                                    />
+                                    }
+                                    {
+                                        this.props.formValues.get('collectionDataSecurity') &&
+                                        <Grid item xs={12}>
+                                            <StandardCard title={
+                                                <span><b>Datastream</b> security - UQ:12345</span>} accentHeader>
+                                                <Grid container spacing={8}>
+                                                    <Grid item xs={12}>
+                                                        <Typography variant={'body2'} component={'p'}>Lorem ipsum
+                                                            dolor
+                                                            sit amet, consectetur adipiscing elit. Ut id aliquam
+                                                            sapien.
+                                                            Aliquam rhoncus congue consectetur. Aenean sed sapien
+                                                            ipsum.</Typography>
+                                                    </Grid>
+                                                    <Grid container spacing={8}>
+                                                        <Grid item xs={12}>
+                                                            <FormControlLabel
+                                                                control={<Checkbox
+                                                                    checked={this.state.overrideSecurity2}
+                                                                    onChange={this.toggleSecurityOverride2}
+                                                                />}
+                                                                label={'Override inherited security (detailed below).'}
+                                                            />
+                                                        </Grid>
+                                                    </Grid>
+                                                    {
+                                                        this.props.formValues.get('collectionDataSecurity') && !this.state.overrideSecurity2 ?
+                                                            <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
+                                                                <Typography variant={'h6'} style={{marginTop: -8}}>Inherited security policy details</Typography>
+                                                                <Grid container spacing={8} style={{marginTop: 8}}>
+                                                                    <Grid item xs={2}><b>Collection:</b></Grid>
+                                                                    <Grid item xs={5}>UQ:12345</Grid>
+                                                                    <Grid item xs={5}>UQ:67890</Grid>
+                                                                    <Grid item xs={2}><b>Policy:</b></Grid>
+                                                                    <Grid item xs={5}>{communitySecurity[1].name} ({communitySecurity[1].id})</Grid>
+                                                                    <Grid item xs={5}>{communitySecurity[2].name} ({communitySecurity[2].id})</Grid>
+                                                                    <Grid item xs={2}><b>Description:</b></Grid>
+                                                                    <Grid item xs={5}>{communitySecurity[1].description}</Grid>
+                                                                    <Grid item xs={5}>{communitySecurity[2].description}</Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                            :
+                                                            <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
+                                                                <Typography variant={'h6'} style={{marginTop: -8}}>Override datastream security policy details</Typography>
+                                                                <Grid container spacing={8} alignContent={'flex-end'} alignItems={'flex-end'} style={{borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8}}>
+                                                                    <Grid item xs={2}>Filename:</Grid>
+                                                                    <Grid item xs={4}>Test_1.PDF</Grid>
+                                                                    <Grid item xs={6}>
+                                                                        <Field
+                                                                            component={SelectField}
+                                                                            name="filePolicy1"
+                                                                            value={this.props.formValues.get('filePolicy1')}
+                                                                            label={<span>Security policy for this file to override inheritance</span>}
+                                                                            required
+                                                                            validation={[validation.required]}>
+                                                                            {communitySecurity.map((item, index) => {
+                                                                                return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                                            })}
+                                                                        </Field>
+                                                                    </Grid>
+                                                                </Grid>
+                                                                <Grid container spacing={8} alignContent={'flex-end'} alignItems={'flex-end'} style={{borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8}}>
+                                                                    <Grid item xs={2}>Filename:</Grid>
+                                                                    <Grid item xs={4}>Test_3.JPG</Grid>
+                                                                    <Grid item xs={6}>
+                                                                        <Field
+                                                                            component={SelectField}
+                                                                            name="filePolicy2"
+                                                                            value={this.props.formValues.get('filePolicy2')}
+                                                                            label={<span>Security policy for this file to override inheritance</span>}
+                                                                            required
+                                                                            validation={[validation.required]}>
+                                                                            {communitySecurity.map((item, index) => {
+                                                                                return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                                            })}
+                                                                        </Field>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                    }
                                                 </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-
+                                            </StandardCard>
+                                        </Grid>
+                                    }
+                                    {this.props.formValues.get('level') &&
+                                    <React.Fragment>
+                                        <Grid item xs={12}>
+                                            <StandardCard title={<span><b>Record</b> level security - UQ:12345</span>} accentHeader>
+                                                {this.props.formValues.get('collectionSecurity') &&
+                                                <Grid container spacing={8}>
+                                                    <Grid item xs={12}>
+                                                        <FormControlLabel
+                                                            control={<Checkbox
+                                                                checked={this.state.overrideSecurity}
+                                                                onChange={this.toggleSecurityOverride}
+                                                            />}
+                                                            label={'Override inherited security (detailed below).'}
+                                                        />
+                                                    </Grid>
+                                                </Grid>
+                                                }
+                                                {
+                                                    !this.state.overrideSecurity && this.props.formValues.get('collectionSecurity') ?
+                                                        <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
+                                                            <Typography variant={'h6'} style={{marginTop: -8}}>Inherited security policy details</Typography>
+                                                            <Grid container spacing={8} style={{marginTop: 8}}>
+                                                                <Grid item xs={2}><b>Collection:</b></Grid>
+                                                                <Grid item xs={5}>UQ:12345</Grid>
+                                                                <Grid item xs={5}>UQ:67890</Grid>
+                                                                <Grid item xs={2}><b>Policy:</b></Grid>
+                                                                <Grid item xs={5}>{communitySecurity[1].name} ({communitySecurity[1].id})</Grid>
+                                                                <Grid item xs={5}>{communitySecurity[2].name} ({communitySecurity[2].id})</Grid>
+                                                                <Grid item xs={2}><b>Description:</b></Grid>
+                                                                <Grid item xs={5}>{communitySecurity[1].description}</Grid>
+                                                                <Grid item xs={5}>{communitySecurity[2].description}</Grid>
+                                                            </Grid>
+                                                        </Grid>
+                                                        :
+                                                        <React.Fragment>
+                                                            <Grid item xs={12}>
+                                                                <Field
+                                                                    component={SelectField}
+                                                                    name="overrideSecurity"
+                                                                    value={this.props.formValues.get('overrideSecurity')}
+                                                                    label={'Policy to apply to override this PID`s inherited security'}
+                                                                    required
+                                                                    validation={[validation.required]}>
+                                                                    <MenuItem value={''} disabled>Select a security
+                                                                        policy
+                                                                        to apply</MenuItem>
+                                                                    {communitySecurity.map((item, index) => {
+                                                                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                                    })}
+                                                                </Field>
+                                                            </Grid>
+                                                            {
+                                                                this.props.formValues.get('overrideSecurity') &&
+                                                                <Grid item xs={12} style={{
+                                                                    marginTop: 24,
+                                                                    padding: 24,
+                                                                    backgroundColor: 'rgba(0,0,0,0.05)'
+                                                                }}>
+                                                                    <Typography variant={'h6'} style={{marginTop: -8}}>Selected
+                                                                        record level security policy
+                                                                        details</Typography>
+                                                                    <Grid container spacing={8} style={{marginTop: 8}}>
+                                                                        <Grid item xs={2}><b>Name (ID):</b></Grid>
+                                                                        <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('overrideSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('overrideSecurity'))].id})</Grid>
+                                                                        <Grid item xs={2}><b>Description:</b></Grid>
+                                                                        <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('overrideSecurity'))].description}</Grid>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            }
+                                                        </React.Fragment>
+                                                }
+                                            </StandardCard>
+                                        </Grid>
+                                    </React.Fragment>
+                                    }
                                 </React.Fragment>
                         }
                     </Grid>
