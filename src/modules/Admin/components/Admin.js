@@ -41,6 +41,7 @@ import TextField from '@material-ui/core/TextField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
+const queryString = require('query-string');
 
 
 const styles = theme => ({
@@ -82,9 +83,17 @@ class Admin extends PureComponent {
 
     constructor(props) {
         super(props);
+        let queryStringTabValue = 0;
+        switch (queryString.parse(this.props.location.search, { ignoreQueryPrefix: true }).tab) {
+            case 'security':
+                queryStringTabValue = 6;
+                break;
+            default:
+                queryStringTabValue = 0;
+        }
         this.state = {
             tabbed: Cookies.get('adminFormTabbed') ? !!(Cookies.get('adminFormTabbed') === 'tabbed') : true,
-            tabValue: 6,
+            tabValue: queryStringTabValue,
             grants: {
                 showEdit: false,
                 showAdd: false,
@@ -310,6 +319,8 @@ class Admin extends PureComponent {
             {value: 'B', label: 'Policy B', id: 'PolicyBID', name: 'Policy B', description: 'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.'},
             {value: 'C', label: 'Policy C', id: 'PolicyCID', name: 'Policy C', description: 'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.'},
         ];
+
+        console.log(queryString.parse(this.props.location.search, { ignoreQueryPrefix: true }).tab);
 
         return (
             <form>
@@ -1095,8 +1106,6 @@ class Admin extends PureComponent {
                                                             <Grid container spacing={8} style={{marginTop: 8}}>
                                                                 <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                                 <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].id})</Grid>
-                                                                <Grid item xs={2}><b>Description:</b></Grid>
-                                                                <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('communitySecurity'))].description}</Grid>
                                                             </Grid>
                                                         </Grid>
                                                     }
@@ -1141,29 +1150,29 @@ class Admin extends PureComponent {
                                                         <Grid container spacing={8} style={{marginTop: 8}}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                             <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].id})</Grid>
-                                                            <Grid item xs={2}><b>Description:</b></Grid>
-                                                            <Grid item  xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionSecurity'))].description}</Grid>
                                                         </Grid>
                                                     </Grid>
                                                 }
                                             </Grid>
 
                                             <Grid container spacing={8} style={{marginTop: 16}}>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={SelectField}
-                                                        name="collectionDataSecurity"
-                                                        value={this.props.formValues.get('collectionDataSecurity')}
-                                                        label={<span>Collection policy to apply to the <b>datastream</b> of this PID</span>}
-                                                        required
-                                                        validation={[validation.required]}>
-                                                        <MenuItem value={''} disabled>Select a security policy to
-                                                            apply</MenuItem>
-                                                        {communitySecurity.map((item, index) => {
-                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                                                        })}
-                                                    </Field>
-                                                </Grid>
+                                                {false &&
+                                                    <Grid item xs={12}>
+                                                        <Field
+                                                            component={SelectField}
+                                                            name="collectionDataSecurity"
+                                                            value={this.props.formValues.get('collectionDataSecurity')}
+                                                            label={<span>Collection policy to apply to the <b>datastream</b> of this PID</span>}
+                                                            required
+                                                            validation={[validation.required]}>
+                                                            <MenuItem value={''} disabled>Select a security policy to
+                                                                apply</MenuItem>
+                                                            {communitySecurity.map((item, index) => {
+                                                                return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                            })}
+                                                        </Field>
+                                                    </Grid>
+                                                }
                                                 {
                                                     this.props.formValues.get('collectionDataSecurity') &&
                                                     <Grid item xs={12} style={{
@@ -1175,8 +1184,6 @@ class Admin extends PureComponent {
                                                         <Grid container spacing={8} style={{marginTop: 8}}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                             <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].id})</Grid>
-                                                            <Grid item xs={2}><b>Description:</b></Grid>
-                                                            <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].description}</Grid>
                                                         </Grid>
                                                     </Grid>
                                                 }
@@ -1296,9 +1303,6 @@ class Admin extends PureComponent {
                                                                 <Grid item xs={2}><b>Policy:</b></Grid>
                                                                 <Grid item xs={5}>{communitySecurity[1].name} ({communitySecurity[1].id})</Grid>
                                                                 <Grid item xs={5}>{communitySecurity[2].name} ({communitySecurity[2].id})</Grid>
-                                                                <Grid item xs={2}><b>Description:</b></Grid>
-                                                                <Grid item xs={5}>{communitySecurity[1].description}</Grid>
-                                                                <Grid item xs={5}>{communitySecurity[2].description}</Grid>
                                                             </Grid>
                                                         </Grid>
                                                         :
@@ -1332,8 +1336,6 @@ class Admin extends PureComponent {
                                                                     <Grid container spacing={8} style={{marginTop: 8}}>
                                                                         <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                                         <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('overrideSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('overrideSecurity'))].id})</Grid>
-                                                                        <Grid item xs={2}><b>Description:</b></Grid>
-                                                                        <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('overrideSecurity'))].description}</Grid>
                                                                     </Grid>
                                                                 </Grid>
                                                             }

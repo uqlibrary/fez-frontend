@@ -23,6 +23,10 @@ const mapStateToProps = (state) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        initialValues: {
+            communitySecurity: 'A',
+            collectionSecurity: 'B'
+        }
     };
 };
 
