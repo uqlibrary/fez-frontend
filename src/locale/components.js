@@ -1029,6 +1029,28 @@ export default {
                         validation: [],
                         ariaLabel: 'Select a status to search on',
                         isUnpublishedField: true
+                    },
+                    'rek_created_date': {
+                        order: 22,
+                        title: 'Created date range',
+                        captionTitle: 'Created',
+                        type: null,
+                        combiner: 'between',
+                        ariaLabel: 'Add valid date ranges to search between',
+                        isUnpublishedField: true,
+                        validation: [],
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
+                    },
+                    'rek_updated_date': {
+                        order: 23,
+                        title: 'Updated date range',
+                        captionTitle: 'Updated',
+                        type: null,
+                        combiner: 'between',
+                        ariaLabel: 'Add valid date ranges to search between',
+                        isUnpublishedField: true,
+                        validation: [],
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
                     }
                 },
                 openAccess: {

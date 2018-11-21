@@ -237,6 +237,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           docTypes={
             Array [
               "179",
@@ -264,6 +265,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -513,6 +515,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           docTypes={
             Array [
               179,
@@ -540,6 +543,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -783,6 +787,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -804,6 +809,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1053,6 +1059,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           docTypes={
             Array [
               "test",
@@ -1080,6 +1087,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1324,6 +1332,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1346,6 +1355,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1590,6 +1600,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1612,6 +1623,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1682,6 +1694,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1704,6 +1717,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1948,6 +1962,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
           classes={Object {}}
+          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1970,6 +1985,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           onToggleSearchMode={[Function]}
           showUnpublishedFields={false}
           updateYearRangeFilter={[MockFunction]}
+          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,

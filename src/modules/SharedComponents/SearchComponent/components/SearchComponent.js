@@ -9,6 +9,7 @@ import {locale} from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
+import moment from 'moment';
 
 export default class SearchComponent extends PureComponent {
     static propTypes = {
@@ -74,7 +75,8 @@ export default class SearchComponent extends PureComponent {
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
                 docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
-                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets) || {}
+                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets) || {},
+                ...this.getDateRangeFromSearchQuery(props.searchQueryParams)
             }
         };
     }
@@ -103,7 +105,8 @@ export default class SearchComponent extends PureComponent {
                     yearFilter: {
                         from: this.state.advancedSearch.yearFilter.from,
                         to: this.state.advancedSearch.yearFilter.to,
-                    }
+                    },
+                    ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams)
                 }
             }, () => {
                 // Update the excluded facets in SearchRecords to hide from facetFilter
@@ -126,20 +129,50 @@ export default class SearchComponent extends PureComponent {
             }];
         } else {
             return fieldRows
-                .map(key => (
-                    key !== 'rek_status'
-                        ? {
-                            searchField: key,
-                            value: searchQueryParams[key].hasOwnProperty('value') ? searchQueryParams[key].value : searchQueryParams[key],
-                            label: searchQueryParams[key].hasOwnProperty('label') ? searchQueryParams[key].label : ''
-                        }
-                        : {
-                            searchField: key,
-                            value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key].value],
-                            label: ''
-                        }
-                ));
+                .map(key => {
+                    switch (key) {
+                        case 'rek_status':
+                            return {
+                                searchField: key,
+                                value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key].value],
+                                label: ''
+                            };
+                        case 'rek_created_date':
+                        case 'rek_updated_date':
+                            return {
+                                searchField: key,
+                                value: searchQueryParams[key].hasOwnProperty('value') ? this.parseDateRange(searchQueryParams[key].value) : {},
+                                label: ''
+                            };
+                        default:
+                            return {
+                                searchField: key,
+                                value: searchQueryParams[key].hasOwnProperty('value') ? searchQueryParams[key].value : searchQueryParams[key],
+                                label: searchQueryParams[key].hasOwnProperty('label') ? searchQueryParams[key].label : ''
+                            };
+                    }
+                });
         }
+    };
+
+    getDateRangeFromSearchQuery = (searchQueryParams) => {
+        const fieldRows = !!searchQueryParams && Object.keys(searchQueryParams);
+        const keys = {rek_created_date: 'createdRange', rek_updated_date: 'updatedRange'};
+
+        return fieldRows
+            .filter(key => key === 'rek_created_date' || key === 'rek_updated_date')
+            .reduce((ranges, key) => {
+                ranges[[keys[key]]] = searchQueryParams[key].hasOwnProperty('value') ? this.parseDateRange(searchQueryParams[key].value) : {};
+                return {...ranges};
+            }, {});
+    };
+
+    parseDateRange = (range) => {
+        const parts = range.indexOf(' to ') > 0 ? range.substring(1, range.length - 1).split(' to ') : [];
+        return {
+            from: moment(parts[0], 'DD/MM/YYYY'),
+            to: moment(parts[1], 'DD/MM/YYYY')
+        };
     };
 
     getDocTypesFromSearchQuery = (searchQueryParams) => {
@@ -257,6 +290,23 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
+    _updateDateRange = (field, dateRange) => {
+        const {fieldRows} = this.state.advancedSearch;
+        const index = fieldRows.findIndex(row => row.searchField === field);
+        const captionIndex = index === -1 ? fieldRows.length : index;
+
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...fieldRows.slice(0, captionIndex),
+                    {searchField: field, value: dateRange, label: ''},
+                    ...fieldRows.slice(captionIndex + 1)
+                ]
+            }
+        });
+    };
+
     _addAdvancedSearchRow = () => {
         this.setState({
             advancedSearch: {
@@ -321,6 +371,8 @@ export default class SearchComponent extends PureComponent {
                 const {searchField, ...rest} = item;
                 if (searchField === 'rek_status' && !!item.value) {
                     return {...searchQueries, [searchField]: {...rest, value: UNPUBLISHED_STATUS_MAP[item.value]}};
+                } else if (searchField === 'rek_created_date' || searchField === 'rek_updated_date') {
+                    return {...searchQueries, [searchField]: {...rest, value: `[${item.value.from.format('DD/MM/YYYY')} to ${item.value.to.format('DD/MM/YYYY')}]`}};
                 } else {
                     return {...searchQueries, [searchField]: rest};
                 }
@@ -384,6 +436,7 @@ export default class SearchComponent extends PureComponent {
                         onToggleOpenAccess={this._toggleOpenAccess}
                         updateDocTypeValues={this._updateDocTypeValues}
                         updateYearRangeFilter={this._updateYearRangeFilter}
+                        updateDateRange={this._updateDateRange}
                         onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
                         onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
                         onAdvancedSearchReset={this._resetAdvancedSearch}

@@ -51,7 +51,7 @@ export class AdvancedSearchRow extends PureComponent {
         ]),
         label: PropTypes.any,
         disabledFields: PropTypes.array,
-        showUnpublishedFields: PropTypes.array,
+        showUnpublishedFields: PropTypes.bool,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,
         classes: PropTypes.object
