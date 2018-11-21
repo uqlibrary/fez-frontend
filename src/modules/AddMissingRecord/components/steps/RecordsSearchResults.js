@@ -140,22 +140,24 @@ export default class RecordsSearchResults extends PureComponent {
                             this.props.publicationsList.length > 0 &&
                             <Grid item sm={12}>
                                 <StandardCard {...searchResultsTxt.searchResults}>
-                                    <div>
-                                        {
-                                            searchResultsTxt.searchResults.resultsText
-                                                .replace('[noOfResults]', this.props.publicationsList.length)
-                                                .replace('[searchQuery]', this.props.rawSearchQuery)
-                                        }
-                                    </div>
-                                    <div>
-                                        {searchResultsTxt.searchResults.text}
-                                    </div>
-                                    <PublicationsList
-                                        publicationsList={this.props.publicationsList}
-                                        customActions={actions}
-                                        publicationsListSubset={unclaimablePublicationsList}
-                                        subsetCustomActions={unclaimable}
-                                        showSources />
+                                    <Grid container spacing={16}>
+                                        <Grid item xs={12}>
+                                            {
+                                                searchResultsTxt.searchResults.resultsText
+                                                    .replace('[noOfResults]', this.props.publicationsList.length)
+                                                    .replace('[searchQuery]', this.props.rawSearchQuery)
+                                            }
+                                            {searchResultsTxt.searchResults.text}
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <PublicationsList
+                                                publicationsList={this.props.publicationsList}
+                                                customActions={actions}
+                                                publicationsListSubset={unclaimablePublicationsList}
+                                                subsetCustomActions={unclaimable}
+                                                showSources />
+                                        </Grid>
+                                    </Grid>
                                 </StandardCard>
                             </Grid>
                         }
