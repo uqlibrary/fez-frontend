@@ -76,7 +76,7 @@ export class PublicationCitation extends PureComponent {
         hideCountTotal: PropTypes.bool,
         hideViewFullStatisticsLink: PropTypes.bool,
         hideCitationCounts: PropTypes.bool,
-        hideTitleLink: PropTypes.bool,
+        hideLinks: PropTypes.bool,
         classes: PropTypes.object
     };
 
@@ -86,7 +86,7 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: false,
         className: '',
         hideTitle: false,
-        hideTitleLink: false,
+        hideLinks: false,
         hideCountDiff: false,
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
@@ -123,7 +123,7 @@ export class PublicationCitation extends PureComponent {
     };
 
     renderTitle = () => {
-        return this.props.publication.rek_pid && !this.props.hideTitleLink
+        return this.props.publication.rek_pid && !this.props.hideLinks
             ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
             : (ReactHtmlParser(this.props.publication.rek_title));
     }
@@ -136,7 +136,7 @@ export class PublicationCitation extends PureComponent {
             : null;
 
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent
-            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication})
+            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication, hideDoiLink: this.props.hideLinks})
             : (<div>Citation display not available for {publicationTypeId}</div>);
     }
 

@@ -20,7 +20,7 @@ const mapStateToProps = (state, props) => {
         itemToString: (item) => !!item && String(item.value) || '',
         selectedValue: !!props.input && !!props.input.value && {value: props.input.value} || null,
         maxResults: 20,
-        MenuItemComponent: (item) => (<PublicationCitation publication={item.suggestion.publication} hideCitationCounts hideTitleLink />)
+        MenuItemComponent: (item) => (<PublicationCitation publication={item.suggestion.publication} hideCitationCounts hideLinks />)
     };
 };
 

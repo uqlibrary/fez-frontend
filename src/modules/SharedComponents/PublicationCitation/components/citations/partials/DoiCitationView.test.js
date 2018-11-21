@@ -20,4 +20,9 @@ describe('DoiCitationView test ', () => {
         const wrapper = setup({doi: '10.121212/lskdjflsdjf'}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render doi without external link', () => {
+        const wrapper = setup({doi: '10.121212/lskdjflsdjf', hideDoiLink: true}, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
