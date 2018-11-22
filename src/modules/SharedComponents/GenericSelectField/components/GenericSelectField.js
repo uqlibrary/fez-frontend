@@ -114,7 +114,7 @@ export class GenericSelectField extends Component {
                 if(this.props.hideLabel) {
                     return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
                 } else{
-                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '';
+                    return this.props.selectedValue || '';
                 }
             }
         };

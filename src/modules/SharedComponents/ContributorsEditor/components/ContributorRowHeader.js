@@ -16,6 +16,7 @@ export class ContributorRowHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
+        showRoleInput: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
@@ -28,6 +29,7 @@ export class ContributorRowHeader extends PureComponent {
             contributorAssignmentColumn: 'Select your name',
             nameColumn: 'Name as published',
             identifierColumn: 'UQ identifier',
+            roleColumn: 'Role',
             reorderColumn: 'Reorder records',
             deleteAll: 'Remove all records',
             deleteAllConfirmation: {
@@ -49,8 +51,8 @@ export class ContributorRowHeader extends PureComponent {
     };
 
     render() {
-        const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
-        const {classes, showIdentifierLookup, isInfinite} = this.props;
+        const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation, roleColumn} = this.props.locale;
+        const {classes, showIdentifierLookup, isInfinite, showRoleInput} = this.props;
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -76,6 +78,12 @@ export class ContributorRowHeader extends PureComponent {
                         showIdentifierLookup &&
                         <Hidden xsDown>
                             <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
+                        </Hidden>
+                    }
+                    {
+                        showRoleInput &&
+                        <Hidden xsDown>
+                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                         </Hidden>
                     }
                     <Hidden xsDown>

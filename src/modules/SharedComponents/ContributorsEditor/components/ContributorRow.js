@@ -20,7 +20,7 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 
 const styles = (theme) => ({
     listItem: {
-        padding: '0 16px'
+        padding: '0'
     },
     rowSelected: {
         backgroundColor: theme.palette.accent.light
@@ -66,7 +66,8 @@ export class ContributorRow extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
-        width: PropTypes.string
+        width: PropTypes.string,
+        showRoleInput: PropTypes.bool
     };
 
     static defaultProps = {
@@ -142,13 +143,12 @@ export class ContributorRow extends PureComponent {
         />
     );
 
-    getContributorRowText = (showIdentifierLookup, selectedClass) => {
+    getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
         const {index, contributor, classes, width} = this.props;
         const {ordinalData, suffix} = this.props.locale;
         const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
-
-        return showIdentifierLookup && !!contributor.aut_title
-            ? (<Grid container classes={{container: classes.listItem}}>
+        return (
+            <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
                     {this.getListItemTypoGraphy(
                         contributor.nameAsPublished,
@@ -157,21 +157,30 @@ export class ContributorRow extends PureComponent {
                         `${selectedClass}`
                     )}
                 </Grid>
-                <Grid item xs={10} sm={5} md={5}>
-                    {this.getListItemTypoGraphy(
-                        `${contributor.aut_title} ${contributor.aut_display_name}`,
-                        `${contributor.aut_org_username || contributor.aut_student_username}`,
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                    )}
-                </Grid>
-            </Grid>)
-            : this.getListItemTypoGraphy(
-                contributor.nameAsPublished,
-                contributorOrder,
-                `${classes.primary} ${selectedClass}`,
-                `${selectedClass}`
-            );
+                {
+                    showIdentifierLookup && !!contributor.aut_title &&
+                    <Grid item xs={10} sm={5} md={5}>
+                        {this.getListItemTypoGraphy(
+                            `${contributor.aut_title} ${contributor.aut_display_name}`,
+                            `${contributor.aut_org_username || contributor.aut_student_username}`,
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+                {
+                    showRoleInput &&
+                    <Grid item xs={10} sm={5} md={5}>
+                        {this.getListItemTypoGraphy(
+                            contributor.creatorRole,
+                            '',
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+            </Grid>
+        );
     };
 
     render() {
@@ -205,7 +214,7 @@ export class ContributorRow extends PureComponent {
                         </ListItemIcon>
                     </Hidden>
                     {
-                        this.getContributorRowText(this.props.showIdentifierLookup, selectedClass)
+                        this.getContributorRowText(this.props.showIdentifierLookup, this.props.showRoleInput, selectedClass)
                     }
                     <ListItemSecondaryAction>
                         {

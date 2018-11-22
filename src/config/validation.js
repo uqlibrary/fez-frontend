@@ -70,6 +70,15 @@ export const fileUploadRequired = value => {
     return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
+export const fileUploadNotRequiredForMediated = (value, values) => {
+    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    if (!!accessCondition && accessCondition.rek_access_conditions === 'Mediated Access') {
+        return undefined;
+    } else {
+        return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+    }
+};
+
 export const isValidIssn = subject => {
     const regex = /^([ep]{0,1}ISSN |)[\d]{4}(\-|)[\d]{3}(\d|\S){1}$/;
     if (subject.trim().length === 0 || regex.test(subject)) {
@@ -101,6 +110,17 @@ export const isValidGoogleScholarId = id => {
         return '';
     } else {
         return locale.validationErrors.googleScholarId;
+    }
+};
+
+export const dateRange = (value, values) => {
+    const lowerInRange = values.toJS().fez_record_search_key_start_date;
+    const higherInRange = values.toJS().fez_record_search_key_end_date;
+
+    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
+        return locale.validationErrors.dateRange;
+    } else {
+        return '';
     }
 };
 

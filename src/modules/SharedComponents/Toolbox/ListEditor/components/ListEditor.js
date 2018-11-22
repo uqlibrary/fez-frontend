@@ -18,7 +18,8 @@ export default class ListsEditor extends Component {
         distinctOnly: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
-        input: PropTypes.object
+        input: PropTypes.object,
+        transformFunction: PropTypes.func.isRequired
     };
 
     static defaultProps = {
@@ -28,7 +29,11 @@ export default class ListsEditor extends Component {
             value: 'rek_value',
             order: 'rek_order'
         },
-        maxCount: 0
+        maxCount: 0,
+        transformFunction: (searchKey, item, index) => ({
+            [searchKey.value]: item,
+            [searchKey.order]: index + 1
+        })
     };
 
     constructor(props) {
@@ -47,12 +52,7 @@ export default class ListsEditor extends Component {
     }
 
     transformOutput = (items) => {
-        return items.map((item, index) => {
-            return {
-                [this.props.searchKey.value]: item,
-                [this.props.searchKey.order]: index + 1
-            };
-        });
+        return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     }
 
     addItem = (item) => {
@@ -121,6 +121,7 @@ export default class ListsEditor extends Component {
                     inputField={this.props.inputField}
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
+                    locale={{...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     isValid={this.props.isValid}
                     disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}

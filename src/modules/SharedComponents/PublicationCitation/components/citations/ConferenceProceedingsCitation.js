@@ -4,7 +4,8 @@ import * as Partials from './partials';
 
 export default class ConferenceProceedingsCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        hideDoiLink: PropTypes.bool
     };
 
     constructor(props) {
@@ -59,7 +60,7 @@ export default class ConferenceProceedingsCitation extends Component {
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
                 {/* {doi| https://doi.org/||} */}
-                <Partials.DoiCitationView doi={record.doi} />
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
             </div>
         );
     }

@@ -15,7 +15,7 @@ const mapStateToProps = (state, props) => {
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        selectedValue: props.input ? {value: props.input.value} : null,
+        selectedValue: !!props.input && !!props.input.value ? {value: props.input.value} : null,
         maxResults: props.maxResults,
         async: true,
         itemToString: (item) => !!item && String(item.value) || '',
@@ -33,7 +33,7 @@ const filterFoRmapStateToProps = (state, props) => {
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        selectedValue: props.input ? props.input.value : null,
+        selectedValue: !!props.input && !!props.input.value ? {value: props.input.value} : null,
         maxResults: 20,
         async: true,
         itemToString: (item) => !!item && String(item.value) || '',
