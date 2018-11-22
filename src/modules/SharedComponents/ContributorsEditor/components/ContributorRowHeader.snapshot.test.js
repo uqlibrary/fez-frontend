@@ -6,6 +6,7 @@ function setup(testProps, isShallow = true) {
     const props = {
         onDeleteAll: jest.fn(),
         showIdentifierLookup: false,
+        showRoleInput: false,
         showContributorAssignment: false,
         disabled: false,
         classes: {
@@ -30,6 +31,11 @@ describe('Component ContributorRowHeader', () => {
 
     it('header for contributor editor control with all options', () => {
         const wrapper = setup({ showIdentifierLookup: true, showContributorAssignment: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('header for creator role', () => {
+        const wrapper = setup({ showRoleInput: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

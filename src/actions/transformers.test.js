@@ -768,3 +768,96 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getDatasetCreatorRolesSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = [];
+        const expected = {};
+        const result = transformers.getDatasetCreatorRolesSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [
+            {creatorRole: "Investigator"},
+            {creatorRole: "Software Developer"},
+            {creatorRole: "Co-investigator"}
+        ];
+        const expected = {
+            fez_record_search_key_author_role: [
+                {
+                    rek_author_role: 'Investigator',
+                    rek_author_role_order: 1
+                },
+                {
+                    rek_author_role: 'Software Developer',
+                    rek_author_role_order: 2
+                },
+                {
+                    rek_author_role: 'Co-investigator',
+                    rek_author_role_order: 3
+                }
+            ]
+        };
+        const result = transformers.getDatasetCreatorRolesSearchKey(input);
+        expect(result).toEqual(expected);
+    })
+});
+
+describe('getDatasetContactDetailSearchKeys tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactNameId: {
+                id: 121212,
+                value: 'Test, Contact'
+            },
+            contactEmail: 'test@test.com'
+        };
+        const expected = {
+            fez_record_search_key_contributor: [{
+                rek_contributor: 'Test Contact',
+                rek_contributor_id: null,
+                rek_contributor_order: 1
+            }],
+            fez_record_search_key_contributor_id: [{
+                rek_contributor_id: 121212,
+                rek_contributor_id_order: 1
+            }],
+            fez_record_search_key_contact_details_email: [{
+                rek_contact_details_email: 'test@test.com',
+                rek_contact_details_email_order: 1
+            }]
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    })
+});
+
+describe('getGeographicAreaSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getGeographicAreaSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = '12.231112,-32.323323';
+        const expected = {
+            fez_record_search_key_geographic_area: [{
+                rek_geographic_area: '12.231112,-32.323323',
+                rek_geographic_area_order: 1
+            }]
+        };
+        const result = transformers.getGeographicAreaSearchKey(input);
+        expect(result).toEqual(expected);
+    })
+});

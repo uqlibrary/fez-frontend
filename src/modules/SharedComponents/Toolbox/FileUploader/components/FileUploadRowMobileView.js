@@ -32,7 +32,8 @@ export class FileUploadRowMobileView extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired,
-        focusOnIndex: PropTypes.number
+        focusOnIndex: PropTypes.number,
+        accessConditionLocale: PropTypes.object
     };
 
     static defaultProps = {
@@ -71,6 +72,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                     disabled={disabled}
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
+                                    locale={this.props.accessConditionLocale}
                                 />
                             </ListItemText>
                         </ListItem>

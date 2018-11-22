@@ -1,5 +1,6 @@
 import React from 'react';
 import {default as txt} from './components';
+import {fileUploaderLocale, CLOSED_ACCESS_ID} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 export default {
     cancel: 'Abandon and search again',
@@ -1212,5 +1213,184 @@ export default {
             confirmButtonLabel: 'Redirect to login'
         },
         depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
+    },
+    addDataset: {
+        pageTitle: 'Add data collection',
+        information: {
+            agreement: {
+                title: 'Deposit agreement',
+                text: (
+                    <div>
+                        <p>1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;</p>
+                        <p>2.   I have permission to include any third-party content contained in the dataset;</p>
+                        <p>3.   The dataset is original;</p>
+                        <p>4.   The dataset does not infringe the legal rights of any third-party;</p>
+                        <p>5.   I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;</p>
+                        <p>6.   The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.</p>
+                    </div>
+                )
+            },
+            dataset: {
+                title: 'Dataset information',
+                fieldLabels: {
+                    datasetTitle: {
+                        label: 'Dataset name',
+                        placeholder: 'Type the descriptive name for the dataset'
+                    },
+                    description: {
+                        label: 'Dataset description',
+                        placeholder: 'Describe the dataset\'s topic(s) and theme(s)'
+                    },
+                    contactName: {
+                        label: 'Contact name',
+                        placeholder: 'Type the name of primary contact for this dataset'
+                    },
+                    contactId: {
+                        floatingLabelText: 'Contact name ID',
+                        hintText: 'Type to search ID of primary contact for this dataset'
+                    },
+                    contactEmail: {
+                        label: 'Contact email',
+                        placeholder: 'Type the email address of primary contact for this dataset'
+                    },
+                    publisher: {
+                        label: 'Publisher',
+                        placeholder: 'This is where the dataset was originally made available e.g. UQ eSpace'
+                    },
+                    doi: {
+                        label: 'DOI',
+                        placeholder: ' '
+                    },
+                    date: {
+                        title: 'Publication year',
+                        day: 'Day',
+                        month: 'Month',
+                        year: 'Year'
+                    },
+                    fieldOfResearchCodes: {
+                        title: 'ANZSRC field of research (FoR) codes',
+                        placeholder: ''
+                    }
+                }
+            },
+            creator: {
+                ...txt.components.creators
+            },
+            fieldOfResearchCodes: {
+                ...txt.components.fieldOfResearchForm,
+                text: 'Select Field of Research (FoR) codes'
+            },
+            accessAndLicensing: {
+                title: 'Access and licensing information',
+                help: {
+                    title: 'Access and licensing information',
+                    text: (
+                        <p>
+                            <h3>Access conditions</h3>
+                            <ul>
+                                <li>Open Access (upload your data, or link to the data)</li>
+                                <li>Meditated Access</li>
+                            </ul>
+                            <h3>Licensing and terms of access</h3>
+                            <p>View <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons Licenses</a> and <a href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions" target="_blank">UQ Terms & Conditions</a></p>
+                        </p>
+                    )
+                },
+                fieldLabels: {
+                    accessConditions: {
+                        label: 'Access conditions'
+                    },
+                    licensingAndTermsOfAccess: {
+                        label: 'Licensing and terms of access'
+                    },
+                    copyrightNotice: {
+                        label: 'Copyright notice',
+                        placeholder: 'e.g. 2012, The University of Queensland'
+                    }
+                }
+            },
+            project: {
+                title: 'Project information',
+                fieldLabels: {
+                    projectName: {
+                        label: 'Project name',
+                        placeholder: 'Type the name of the project that initiated the dataset'
+                    },
+                    projectDescription: {
+                        label: 'Project description',
+                        placeholder: 'Briefly describe the project, including purpose'
+                    },
+                    fundingBody: {
+                        label: 'Funding body',
+                        placeholder: 'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC'
+                    },
+                    grantId: {
+                        label: 'Grant IDs',
+                        placeholder: 'e.g. ARC or NHMRC grant number'
+                    }
+                }
+            },
+            optionalDatasetDetails: {
+                title: 'Dataset details',
+                fieldLabels: {
+                    typeOfData: {
+                        label: 'Describe type of data',
+                        placeholder: 'Type of data represented in the dataset e.g. excel file, images, video'
+                    },
+                    softwareRequired: {
+                        label: 'Software required',
+                        placeholder: 'List any software required to view the data'
+                    },
+                    collectionStart: {
+                        label: 'Collection start date',
+                        placeholder: 'Date that data started being collected'
+                    },
+                    collectionEnd: {
+                        label: 'Collection end date',
+                        placeholder: 'Date that data ceased being collected'
+                    },
+                    geographicCoordinates: {
+                        label: 'Geographic coordinates',
+                        description: 'Use this tool to specify the geographic co-ordinates the data relates to'
+                    },
+                    relatedDatasets: {
+                        title: 'Related datasets/publications',
+                        inputFieldLabel: 'Dataset/publication title',
+                        inputFieldHint: 'Please type the dataset or publication title then select from the list'
+                    }
+                }
+            },
+            additionalNotes: {
+                title: 'Additional information',
+                fieldLabels: {
+                    notes: {
+                        label: 'Additional information',
+                        placeholder: 'Additional information related to the dataset'
+                    },
+                    links: {
+                        label: 'Link to data in external repository',
+                        placeholder: 'Provide the URL to the dataset where stored in another repository'
+                    }
+                }
+            }
+        },
+        cancel: 'Cancel',
+        submit: 'Submit for approval',
+        fileUpload: {
+            title: 'Upload files',
+            fileUploader: {
+                ...fileUploaderLocale,
+                fileUploadRow: {
+                    ...fileUploaderLocale.fileUploadRow,
+                    fileUploadRowAccessSelector: {
+                        ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector,
+                        accessSelectOptionsText: {
+                            ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.accessSelectOptionsText,
+                            [CLOSED_ACCESS_ID]: 'Mediated Access'
+                        }
+                    }
+                }
+            }
+        }
     }
 };

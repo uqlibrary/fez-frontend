@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         onChange: (item) => props.input.onChange(item.value),
         async: true,
         errorText: props.meta ? props.meta.error : null,
-        selectedValue: props.input ? props.input.value : null,
+        selectedValue: !!props.input && !!props.input.value && {value: props.input.value} || null,
         error: !!props.meta && !!props.meta.error,
         itemToString: (item) => !!item && String(item.value) || ''
     };

@@ -22,10 +22,12 @@ export default {
         editorRequired: (<span>Please <b>provide a list of editors/contributors</b> of the publication and <b>select an editor/contributor or author/creator</b> as you</span>),
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
-        advancedSearchSelectionRequired: 'Please select a field to search'
+        advancedSearchSelectionRequired: 'Please select a field to search',
+        dateRange: 'Please provide a valid date range'
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
+        rek_description: 'Description is required',
         rek_book_title: 'Book title is required',
         rek_date: 'Publication date is required',
         rek_subtype: 'Publication subtype is required',
@@ -56,6 +58,15 @@ export default {
         contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
-        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).'
+        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).',
+        contactName: 'Contact name is required',
+        contactNameId: 'ID for contact name is required',
+        contactEmail: 'Contact email is required',
+        rek_access_conditions: 'Access condition is required',
+        rek_copyright: 'You are required to accept deposit agreement',
+        rek_license: 'Licensing and terms of access is required',
+        rek_project_name: 'Project name is required',
+        rek_project_description: 'Project description is required',
+        fez_record_search_key_grant_id: 'Grant information is required'
     }
 };

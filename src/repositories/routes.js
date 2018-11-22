@@ -86,6 +86,7 @@ export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (
 );
 
 // academic stats apis
+
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => (
     {apiUrl: `academic/${userId}/hindex`}
 );

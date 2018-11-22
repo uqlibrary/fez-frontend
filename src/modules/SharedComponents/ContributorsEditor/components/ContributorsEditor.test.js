@@ -24,6 +24,11 @@ describe('ContributorsEditor tests ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('rendering full component with role input', () => {
+        const wrapper = setup({ showRoleInput: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('appending a contributor to the list', () => {
         const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
