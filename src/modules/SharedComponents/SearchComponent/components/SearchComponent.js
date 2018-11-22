@@ -141,7 +141,7 @@ export default class SearchComponent extends PureComponent {
                         case 'rek_updated_date':
                             return {
                                 searchField: key,
-                                value: searchQueryParams[key].hasOwnProperty('value') ? this.parseDateRange(searchQueryParams[key].value) : {},
+                                value: searchQueryParams[key].hasOwnProperty('label') ? this.parseDateRange(searchQueryParams[key].label) : {},
                                 label: ''
                             };
                         default:
@@ -162,7 +162,7 @@ export default class SearchComponent extends PureComponent {
         return fieldRows
             .filter(key => key === 'rek_created_date' || key === 'rek_updated_date')
             .reduce((ranges, key) => {
-                ranges[[keys[key]]] = searchQueryParams[key].hasOwnProperty('value') ? this.parseDateRange(searchQueryParams[key].value) : {};
+                ranges[[keys[key]]] = searchQueryParams[key].hasOwnProperty('label') ? this.parseDateRange(searchQueryParams[key].label) : {};
                 return {...ranges};
             }, {});
     };
@@ -372,7 +372,14 @@ export default class SearchComponent extends PureComponent {
                 if (searchField === 'rek_status' && !!item.value) {
                     return {...searchQueries, [searchField]: {...rest, value: UNPUBLISHED_STATUS_MAP[item.value]}};
                 } else if (searchField === 'rek_created_date' || searchField === 'rek_updated_date') {
-                    return {...searchQueries, [searchField]: {...rest, value: `[${item.value.from.format('DD/MM/YYYY')} to ${item.value.to.format('DD/MM/YYYY')}]`}};
+                    return {
+                        ...searchQueries,
+                        [searchField]: {
+                            ...rest,
+                            label: `[${item.value.from.format('DD/MM/YYYY')} to ${item.value.to.format('DD/MM/YYYY')}]`,
+                            value: `[${item.value.from.utc().format()} TO ${item.value.to.endOf('day').utc().format()}]`
+                        }
+                    };
                 } else {
                     return {...searchQueries, [searchField]: rest};
                 }
