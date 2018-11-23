@@ -232,7 +232,7 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({searchQuery}) => ({
     options: {
         params: {
             rule: 'lookup',
-            query: searchQuery
+            query: searchQuery.replace(',', '')
         }
     }
 });
