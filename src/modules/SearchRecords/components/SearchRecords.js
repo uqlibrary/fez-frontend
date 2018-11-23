@@ -34,6 +34,8 @@ class SearchRecords extends PureComponent {
         searchLoading: PropTypes.bool,
         searchLoadingError: PropTypes.bool,
         isAdvancedSearch: PropTypes.bool,
+        isAdmin: PropTypes.bool,
+        isUnpublishedBufferPage: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -142,6 +144,12 @@ class SearchRecords extends PureComponent {
             ? locale.components.sorting.sortBy[1].value
             : providedSearchQuery.sortBy;
 
+        if (!this.props.isUnpublishedBufferPage) {
+            delete providedSearchQuery.searchQueryParams.rek_status;
+            delete providedSearchQuery.searchQueryParams.rek_created_date;
+            delete providedSearchQuery.searchQueryParams.rek_updated_date;
+        }
+
         return providedSearchQuery;
     };
 
@@ -238,6 +246,8 @@ class SearchRecords extends PureComponent {
                                 clearSearchQuery={this.props.actions.clearSearchQuery}
                                 updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
                                 isAdvancedSearch={this.props.isAdvancedSearch}
+                                isAdmin={this.props.isAdmin}
+                                isUnpublishedBufferPage={this.props.isUnpublishedBufferPage}
                             />
                         </StandardCard>
                     </Grid>

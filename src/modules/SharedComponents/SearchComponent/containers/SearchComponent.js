@@ -7,10 +7,7 @@ import deparam from 'can-deparam';
 
 const mapStateToProps = (state, ownProps) => {
     const searchQuery = deparam(ownProps.location.search.substr(1)) || {};
-    const isAdmin = !!state && !!state.get('accountReducer') && !!state.get('accountReducer').account && state.get('accountReducer').account.canMasquerade;
-
     const {publicationsList} = !!state && !!state.get('searchRecordsReducer') && state.get('searchRecordsReducer') || {};
-
     const isAdvancedSearch = !!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced' || ownProps.isAdvancedSearch;
     const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList.length > 0;
 
@@ -18,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
         searchQueryParams: !!searchQuery && searchQuery.searchQueryParams || {},
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,
-        isAdmin: isAdmin,
+        isAdmin: ownProps.isAdmin || false,
+        isUnpublishedBufferPage: ownProps.isUnpublishedBufferPage || false,
         isOpenAccessInAdvancedMode: (
             isAdvancedSearch
             && !!searchQuery

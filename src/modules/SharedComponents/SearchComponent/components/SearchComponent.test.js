@@ -14,6 +14,8 @@ function setup(testProps, isShallow = true) {
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
         updateFacetExcludesFromSearchFields: jest.fn(),
+        isAdmin: false,
+        isUnpublishedBufferPage: false,
 
         history: {
             push: jest.fn()
@@ -132,7 +134,9 @@ describe('SearchComponent', () => {
         const wrapper = setup({
             actions: {searchEspacePublications: testMethod},
             history: {push: testHistoryPushMehtod},
-            location: {pathname: '/admin/unpublished'}
+            location: {pathname: '/admin/unpublished'},
+            isAdmin: true,
+            isUnpublishedBufferPage: true
         });
 
         const searchQuery = {

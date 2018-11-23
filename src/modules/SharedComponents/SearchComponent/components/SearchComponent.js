@@ -31,6 +31,7 @@ export default class SearchComponent extends PureComponent {
         autoFocus: PropTypes.bool,
 
         isAdmin: PropTypes.bool,
+        isUnpublishedBufferPage: PropTypes.bool,
 
         className: PropTypes.string,
         actions: PropTypes.object,
@@ -116,34 +117,36 @@ export default class SearchComponent extends PureComponent {
     }
 
     getFieldRowsFromSearchQuery = (searchQueryParams) => {
+        const defaultFieldRow = {
+            searchField: '0',
+            value: '',
+            label: ''
+        };
+
         const fieldRows = !!searchQueryParams && Object.keys(searchQueryParams)
             .filter((item) => {
                 return item !== 'rek_display_type';
             }) || [];
 
         if (fieldRows.length === 0) {
-            return [{
-                searchField: '0',
-                value: '',
-                label: ''
-            }];
+            return [defaultFieldRow];
         } else {
-            return fieldRows
+            const rows =  fieldRows
                 .map(key => {
                     switch (key) {
                         case 'rek_status':
-                            return {
+                            return this.props.isAdmin && this.props.isUnpublishedBufferPage && {
                                 searchField: key,
                                 value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key].value],
                                 label: ''
-                            };
+                            } || null;
                         case 'rek_created_date':
                         case 'rek_updated_date':
-                            return {
+                            return this.props.isAdmin && this.props.isUnpublishedBufferPage && {
                                 searchField: key,
                                 value: searchQueryParams[key].hasOwnProperty('label') ? this.parseDateRange(searchQueryParams[key].label) : {},
                                 label: ''
-                            };
+                            } || null;
                         default:
                             return {
                                 searchField: key,
@@ -151,7 +154,9 @@ export default class SearchComponent extends PureComponent {
                                 label: searchQueryParams[key].hasOwnProperty('label') ? searchQueryParams[key].label : ''
                             };
                     }
-                });
+                })
+                .filter(item => !!item);
+            return rows.length > 0 ? rows : [defaultFieldRow];
         }
     };
 
@@ -200,7 +205,7 @@ export default class SearchComponent extends PureComponent {
             // navigate to search results page
             this.props.history.push({
                 pathname: (
-                    this.props.location.pathname === routes.pathConfig.admin.unpublished
+                    this.props.isUnpublishedBufferPage
                         ? routes.pathConfig.admin.unpublished
                         : routes.pathConfig.records.search
                 ),
@@ -369,9 +374,9 @@ export default class SearchComponent extends PureComponent {
             .filter(item => item.searchField !== '0')
             .reduce((searchQueries, item) => {
                 const {searchField, ...rest} = item;
-                if (searchField === 'rek_status' && !!item.value) {
+                if (searchField === 'rek_status' && !!item.value && this.props.isAdmin) {
                     return {...searchQueries, [searchField]: {...rest, value: UNPUBLISHED_STATUS_MAP[item.value]}};
-                } else if (searchField === 'rek_created_date' || searchField === 'rek_updated_date') {
+                } else if (this.props.isAdmin && (searchField === 'rek_created_date' || searchField === 'rek_updated_date')) {
                     return {
                         ...searchQueries,
                         [searchField]: {
@@ -449,7 +454,7 @@ export default class SearchComponent extends PureComponent {
                         onAdvancedSearchReset={this._resetAdvancedSearch}
                         onAdvancedSearchRowChange={this._handleAdvancedSearchRowChange}
                         onSearch={this._handleAdvancedSearch}
-                        showUnpublishedFields={this.props.location.pathname === routes.pathConfig.admin.unpublished && this.props.isAdmin}
+                        showUnpublishedFields={this.props.isUnpublishedBufferPage && this.props.isAdmin}
                         isLoading={this.props.searchLoading}
                     />
                 }
