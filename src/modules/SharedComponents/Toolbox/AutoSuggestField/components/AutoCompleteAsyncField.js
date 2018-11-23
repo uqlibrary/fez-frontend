@@ -60,7 +60,8 @@ export class AutoCompleteAsyncField extends Component {
         required: false,
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
-            return !!anyKey && anyKey.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+            const regex = new RegExp(`(${searchText.split(' ').join('|')})`, 'gi');
+            return regex.test(anyKey);
         },
         MenuItemComponent: ({suggestion}) => (
             <ListItemText
