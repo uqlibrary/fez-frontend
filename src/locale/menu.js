@@ -22,7 +22,7 @@ export default {
         addMissingRecord: {
             primaryText: 'Add a missing publication'
         },
-        addDataset: {
+        addMissingDataset: {
             primaryText: 'Add a missing dataset'
         },
         masquerade: {

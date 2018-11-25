@@ -199,6 +199,154 @@ export default {
                 }
             }
         },
+        fundingBodyForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Funding body',
+                        inputFieldHint: 'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Funding body',
+                        reorderColumn: 'Reorder funding bodies',
+                        deleteAll: 'Remove all funding bodies',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all funding bodies?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move funding body up the order',
+                        moveDownHint: 'Move funding body down the order',
+                        deleteHint: 'Remove this funding body',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete funding body',
+                            confirmationMessage: 'Are you sure you want to delete this funding body?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        grantIdForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Grant IDs',
+                        inputFieldHint: 'Type grantID',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Grant ID',
+                        reorderColumn: 'Reorder grant IDs',
+                        deleteAll: 'Remove all grant IDs',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all grant IDs?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move grant ID up the order',
+                        moveDownHint: 'Move grant ID down the order',
+                        deleteHint: 'Remove this grant ID',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete grant ID',
+                            confirmationMessage: 'Are you sure you want to delete this grant ID?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        typeOfDataForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Type of data',
+                        inputFieldHint: 'Type type of data',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Type of data',
+                        reorderColumn: 'Reorder type of data',
+                        deleteAll: 'Remove all type of data',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all type of data?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move type of data up the order',
+                        moveDownHint: 'Move type of data down the order',
+                        deleteHint: 'Remove this type of data',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete type of data',
+                            confirmationMessage: 'Are you sure you want to delete this type of data?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        softwareRequiredForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Software required',
+                        inputFieldHint: 'Type software required',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Software required',
+                        reorderColumn: 'Reorder software required',
+                        deleteAll: 'Remove all software required',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all software required?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move software required up the order',
+                        moveDownHint: 'Move software required down the order',
+                        deleteHint: 'Remove this software required',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete software required',
+                            confirmationMessage: 'Are you sure you want to delete this software required?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         isbnForm: {
             title: 'ISBN',
             text: 'You can add up to five ISBN values',
@@ -434,6 +582,8 @@ export default {
                         ),
                         nameAsPublishedLabel: 'Enter each creator\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
+                        creatorRoleLabel: 'Enter creator\'s role',
+                        creatorRoleHint: 'Select role from list or type the role of the creator in relation to the dataset',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator'
                     }
@@ -445,6 +595,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Creator\'s name as published',
+                        roleColumn: 'Creator\'s role',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',

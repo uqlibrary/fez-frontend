@@ -346,6 +346,7 @@ export const FieldOfResearchVocabId = 451780;
 export const NEW_RECORD_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 2,
+    rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
     fez_record_search_key_ismemberof: [
         {
             rek_ismemberof: 'UQ:218198',
@@ -354,9 +355,20 @@ export const NEW_RECORD_DEFAULT_VALUES = {
     ]
 };
 
-export const HDR_THESIS_DEFAULT_VALUES = {
+export const NEW_DATASET_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {
+            rek_ismemberof: 'UQ:289097',
+            rek_ismemberof_order: 1
+        }
+    ]
+};
+
+export const HDR_THESIS_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 3,
     fez_record_search_key_ismemberof: [
         {rek_ismemberof: 'UQ:152694'}
     ],
@@ -366,7 +378,7 @@ export const HDR_THESIS_DEFAULT_VALUES = {
 
 export const SBS_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 2,
+    rek_status: 3,
     fez_record_search_key_ismemberof: [
         {rek_ismemberof: 'UQ:155729'}
     ],
@@ -423,3 +435,49 @@ export const UNPUBLISHED_STATUS_TEXT_MAP = {
     [SUBMITTED_FOR_APPROVAL]: 'Submitted for Approval',
     [UNPUBLISHED]: 'Unpublished'
 };
+export const DATA_COLLECTION_CREATOR_ROLES = [
+    {value: 'Project lead/Principal investigator'},
+    {value: 'Co-investigator'},
+    {value: 'Higher degree research student'},
+    {value: 'Research assistant'},
+    {value: 'Software engineer'},
+    {value: 'Statistician'},
+    {value: 'Technician'}
+];
+
+export const CLOSED_ACCESS_ID = 453619;
+export const MEDIATED_ACCESS_ID = 453618;
+export const licenses = [
+    {
+        value: 453608,
+        text: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US'
+    },
+    {
+        value: 453609,
+        text: 'Creative Commons Attribution no derivatives http://creativecommons.org/licenses/by-nd/3.0/deed.en_US'
+    },
+    {
+        value: 453610,
+        text: 'Creative Commons Attribution noncommercial http://creativecommons.org/licenses/by-nc/3.0/deed.en_US'
+    },
+    {
+        value: 453611,
+        text: 'Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US'
+    },
+    {
+        value: 453612,
+        text: 'Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US '
+    },
+    {
+        value: 453613,
+        text: 'Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US'
+    },
+    {
+        value: 453701,
+        text: 'UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+    },
+    {
+        value: 453702,
+        text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+    }
+];

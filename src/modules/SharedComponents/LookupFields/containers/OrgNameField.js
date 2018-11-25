@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         async: true,
         errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || null,
         error: props.meta ? !!props.meta.error : props.error && !!props.errorText || null,
-        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || '',
+        selectedValue: !!props.input && !!props.input.value && {value: props.input.value} || !!props.value && {value: props.value} || '',
         itemToString: (item) => !!item && String(item.value) || ''
     };
 };

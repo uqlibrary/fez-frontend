@@ -10,6 +10,7 @@ function setup(testProps, isShallow = true){
             setFixRecord: jest.fn(),
             setRecordToView: jest.fn()
         },
+        hideLinks: false,
         ...testProps
     };
     return getElement(PublicationCitation, props, isShallow);
@@ -18,6 +19,11 @@ function setup(testProps, isShallow = true){
 describe('PublicationCitation ', () => {
     it('should render component with default item', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default item without links to title and doi', () => {
+        const wrapper = setup({hideLinks: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

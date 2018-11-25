@@ -75,6 +75,8 @@ export class PublicationCitation extends PureComponent {
         hideCountDiff: PropTypes.bool,
         hideCountTotal: PropTypes.bool,
         hideViewFullStatisticsLink: PropTypes.bool,
+        hideCitationCounts: PropTypes.bool,
+        hideLinks: PropTypes.bool,
         classes: PropTypes.object
     };
 
@@ -84,9 +86,11 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: false,
         className: '',
         hideTitle: false,
+        hideLinks: false,
         hideCountDiff: false,
         hideCountTotal: false,
-        hideViewFullStatisticsLink: false
+        hideViewFullStatisticsLink: false,
+        hideCitationCounts: false
     };
 
     constructor(props) {
@@ -119,7 +123,7 @@ export class PublicationCitation extends PureComponent {
     };
 
     renderTitle = () => {
-        return this.props.publication.rek_pid
+        return this.props.publication.rek_pid && !this.props.hideLinks
             ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
             : (ReactHtmlParser(this.props.publication.rek_title));
     }
@@ -132,7 +136,7 @@ export class PublicationCitation extends PureComponent {
             : null;
 
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent
-            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication})
+            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication, hideDoiLink: this.props.hideLinks})
             : (<div>Citation display not available for {publicationTypeId}</div>);
     }
 
@@ -240,9 +244,12 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs={12} className={classes.citationText}>
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
-                            <Grid item xs={12} className={classes.citationCounts}>
-                                <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
-                            </Grid>
+                            {
+                                !this.props.hideCitationCounts &&
+                                <Grid item xs={12} className={classes.citationCounts}>
+                                    <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
+                                </Grid>
+                            }
                             {this.props.showSources && this.props.publication.sources &&
                                 <Grid item xs={12}>
                                     <Typography variant={'caption'}>{this.renderSources()}</Typography>

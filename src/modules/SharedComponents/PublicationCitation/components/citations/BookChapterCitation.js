@@ -4,7 +4,8 @@ import * as Partials from './partials';
 
 export default class BookChapterCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        hideDoiLink: PropTypes.bool
     };
 
     constructor(props) {
@@ -54,7 +55,7 @@ export default class BookChapterCitation extends Component {
                 <Partials.PageRangeCitationView publication={this.props.publication} />
 
                 {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} />
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
             </div>
         );
     }

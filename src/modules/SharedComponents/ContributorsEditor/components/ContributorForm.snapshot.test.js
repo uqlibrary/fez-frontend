@@ -6,6 +6,7 @@ function setup(testProps, isShallow = true) {
         authorsList: [],
         onAdd: jest.fn(),
         showIdentifierLookup: false,
+        showRoleInput: false,
         actions: {},
         disabled: false,
         ...testProps,
@@ -21,6 +22,11 @@ describe('Component ContributorForm', () => {
 
     it('should render display name field and identifier field', () => {
         const wrapper = setup({ showIdentifierLookup: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render display name field and role field', () => {
+        const wrapper = setup({ showRoleInput: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

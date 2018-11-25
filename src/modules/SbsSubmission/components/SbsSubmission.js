@@ -55,7 +55,7 @@ export default class SbsSubmission extends Component {
     }
 
     cancelSubmit = () => {
-        window.location.assign(formLocale.thesisSubmission.cancelLink);
+        window.location.reload();
     }
 
     afterSubmit = () => {
@@ -226,9 +226,7 @@ export default class SbsSubmission extends Component {
                                 <Field
                                     component={ListEditorField}
                                     name="fez_record_search_key_keywords"
-                                    required
                                     maxCount={10}
-                                    validate={[validation.requiredList]}
                                     searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
                                     locale={locale.components.keywordsForm.field}
                                     disabled={this.props.submitting}/>

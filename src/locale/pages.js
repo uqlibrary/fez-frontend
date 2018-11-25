@@ -219,7 +219,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
+                    Add to this list by <a href={`${pathConfig.dataset.add}`}>adding a missing dataset</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your datasets',
@@ -228,7 +228,7 @@ export default {
                 title: 'No datasets found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`}>add a missing dataset</a>.
                     </div>
                 ),
             },
@@ -236,6 +236,26 @@ export default {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
                 renameFacetsList: {}
+            }
+        },
+        addDataset: {
+            pageTitle: 'Add data collection',
+            depositAgreement: 'Lorem ipsum',
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your dataset has been submitted',
+                datasetSuccessConfirmationMessage: (
+                    <p>
+                        Your dataset has been saved.<br/><br/>
+                        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                        record.
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'File upload and/or notes post failed',
+                    message: 'lorem ipsum',
+                    type: 'warning'
+                },
+                cancelButtonLabel: 'Add another missing dataset',
+                confirmButtonLabel: 'Go to my datasets'
             }
         },
         claimPublications: {
@@ -437,10 +457,13 @@ export default {
                 ),
                 buttonLabel: 'OK'
             },
-            description: (<p>
-                <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here,
-                and changes you make will apply to their account!
-            </p>),
+            description: (account) => account && account.canMasqueradeType && account.canMasqueradeType === 'readonly' ?
+                (<p>
+                    <strong>NOTE:</strong> As a read-only masquerader, you can view all parts of the profile, but you are not able to make any changes to the account.
+                </p>) :
+                (<p>
+                    <strong>WARNING!!</strong> When masquerading as a user, you will effectively become that user, and changes you make will apply to the account!
+                </p>),
             labels: {
                 submit: 'Masquerade',
                 hint: 'Enter a UQ staff or student username (eg. uqjsmith1 or s123456)'

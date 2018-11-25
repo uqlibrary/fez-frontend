@@ -19,7 +19,75 @@ exports[`Component Masquerade Should render form as expected 1`] = `
         <strong>
           WARNING!!
         </strong>
-         Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+         When masquerading as a user, you will effectively become that user, and changes you make will apply to the account!
+      </p>
+    </WithStyles(Typography)>
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      spacing={24}
+      style={
+        Object {
+          "marginTop": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      >
+        <TextField
+          fullWidth={true}
+          id="userName"
+          label="Enter a UQ staff or student username (eg. uqjsmith1 or s123456)"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          required={false}
+          select={false}
+          value=""
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Masquerade
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </StandardCard>
+</StandardPage>
+`;
+
+exports[`Component Masquerade Should render readonly description 1`] = `
+<StandardPage>
+  <StandardCard
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": <div>
+          Masquerade as another user...
+        </div>,
+        "title": "Masquerade",
+      }
+    }
+    title="Masquerade"
+  >
+    <WithStyles(Typography)>
+      <p>
+        <strong>
+          NOTE:
+        </strong>
+         As a read-only masquerader, you can view all parts of the profile, but you are not able to make any changes to the account.
       </p>
     </WithStyles(Typography)>
     <WithStyles(Grid)

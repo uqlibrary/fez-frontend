@@ -118,6 +118,18 @@ export const getRecordAuthorsSearchKey = (authors) => {
     };
 };
 
+export const getDatasetCreatorRolesSearchKey = (creators) => {
+    if (!creators || creators.length === 0) return {};
+    return {
+        fez_record_search_key_author_role: creators.map((item, index) => (
+            !!item.creatorRole && {
+                rek_author_role: item.creatorRole,
+                rek_author_role_order: index + 1
+            } || {}
+        ))
+    };
+};
+
 export const getRecordSupervisorsSearchKey = (supervisors) => {
     if (!supervisors || supervisors.length === 0) return {};
     return {
@@ -305,4 +317,34 @@ export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = n
     }
 
     return patchRequest;
+};
+
+export const getDatasetContactDetailSearchKeys = (contact) => {
+    if (!contact) return {};
+    return {
+        fez_record_search_key_contributor: [{
+            rek_contributor: contact.contactName,
+            rek_contributor_id: null,
+            rek_contributor_order: 1
+        }],
+        fez_record_search_key_contributor_id: [{
+            rek_contributor_id: contact.contactNameId.id,
+            rek_contributor_id_order: 1
+        }],
+        fez_record_search_key_contact_details_email: [{
+            rek_contact_details_email: contact.contactEmail,
+            rek_contact_details_email_order: 1
+        }]
+    };
+};
+
+export const getGeographicAreaSearchKey = (area = null) => {
+    if (!area) return {};
+
+    return {
+        fez_record_search_key_geographic_area: [{
+            rek_geographic_area: area,
+            rek_geographic_area_order: 1
+        }]
+    };
 };
