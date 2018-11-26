@@ -18,10 +18,14 @@ export const getFacetsParams = (facets) => {
 
     if (facets.hasOwnProperty('ranges')) {
         Object.keys(facets.ranges).map(key => {
-            const {from, to} = facets.ranges[key];
-            const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
-            const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
-            facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
+            if (key === 'Year published') {
+                const {from, to} = facets.ranges[key];
+                const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
+                const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
+                facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
+            } else {
+                facetsParam[`ranges[facets][${key}]`] = facets.ranges[key];
+            }
         });
     }
 

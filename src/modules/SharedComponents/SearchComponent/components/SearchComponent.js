@@ -370,6 +370,7 @@ export default class SearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearch = () => {
+        let ranges = {};
         const searchQueryParams = this.state.advancedSearch.fieldRows
             .filter(item => item.searchField !== '0')
             .reduce((searchQueries, item) => {
@@ -377,23 +378,43 @@ export default class SearchComponent extends PureComponent {
                 if (searchField === 'rek_status' && !!item.value && this.props.isAdmin) {
                     return {...searchQueries, [searchField]: {...rest, value: UNPUBLISHED_STATUS_MAP[item.value]}};
                 } else if (this.props.isAdmin && (searchField === 'rek_created_date' || searchField === 'rek_updated_date')) {
+                    const rangeValue = `[${item.value.from.utc().format()} TO ${item.value.to.endOf('day').utc().format()}]`;
+                    const rangeKeys = {
+                        rek_created_date: 'Created date',
+                        rek_updated_date: 'Updated date'
+                    };
+                    ranges = {
+                        ...ranges,
+                        [rangeKeys[searchField]]: rangeValue
+                    };
                     return {
                         ...searchQueries,
                         [searchField]: {
                             ...rest,
                             label: `[${item.value.from.format('DD/MM/YYYY')} to ${item.value.to.format('DD/MM/YYYY')}]`,
-                            value: `[${item.value.from.utc().format()} TO ${item.value.to.endOf('day').utc().format()}]`
+                            value: rangeValue
                         }
                     };
                 } else {
                     return {...searchQueries, [searchField]: rest};
                 }
             }, {});
-        const searchQuery = this.getSearchQuery(searchQueryParams);
+
+        if (this.state.advancedSearch.yearFilter.from && this.state.advancedSearch.yearFilter.to) {
+            ranges = {
+                ...ranges,
+                'Year published': {
+                    from: this.state.advancedSearch.yearFilter.from,
+                    to: this.state.advancedSearch.yearFilter.to
+                }
+            };
+        }
+
+        const searchQuery = this.getSearchQuery(searchQueryParams, ranges);
         this.handleSearch(searchQuery);
     };
 
-    getSearchQuery = (searchQueryParams) => {
+    getSearchQuery = (searchQueryParams, ranges = {}) => {
         const {activeFacets} = defaultQueryParams;
         const docTypeParams = this.state.advancedSearch.docTypes;
 
@@ -406,12 +427,7 @@ export default class SearchComponent extends PureComponent {
             searchMode: locale.components.searchComponent.advancedSearch.mode,
             activeFacets: {
                 ...activeFacets,
-                ranges: this.state.advancedSearch.yearFilter.from && this.state.advancedSearch.yearFilter.to
-                    ? {'Year published': {
-                        from: this.state.advancedSearch.yearFilter.from,
-                        to: this.state.advancedSearch.yearFilter.to
-                    }}
-                    : {},
+                ranges: ranges,
                 ...(this.state.advancedSearch.isOpenAccess ? {showOpenAccessOnly: true} : {})
             }
         };

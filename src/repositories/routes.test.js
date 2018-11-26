@@ -49,7 +49,7 @@ describe('Backend routes method', () => {
                 three: 'three key'
             },
             ranges: {
-                four: {
+                'Year published': {
                     from: 2000,
                     to: 2013
                 }
@@ -60,7 +60,7 @@ describe('Backend routes method', () => {
             [`filters[facets][one]`]: 'one key',
             [`filters[facets][two]`]: 'two key',
             [`filters[facets][three]`]: 'three key',
-            ['ranges[facets][four]']: '[2000 TO 2013]'
+            ['ranges[facets][Year published]']: '[2000 TO 2013]'
         };
 
         expect(routes.getFacetsParams(testCases)).toEqual(expected);
