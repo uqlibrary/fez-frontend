@@ -54,7 +54,7 @@ export class UnpublishedBufferCitationView extends Component {
                         aria-haspopup="true"
                         onClick={this.handleClick}
                     >
-                        <MoreVertIcon />
+                        <MoreVertIcon fontSize="small"/>
                     </IconButton>
                     <Menu
                         id="long-menu"
