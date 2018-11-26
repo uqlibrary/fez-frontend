@@ -481,3 +481,30 @@ export const licenses = [
         text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
     }
 ];
+
+export const unpublishedBufferActionUrls = [
+    {
+        label: 'More options',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}`
+    },
+    {
+        label: 'Update selected record - Generic',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Edit author affiliations',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Edit security for selected record',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Manage thesis assessor access',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Delete selected record',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+    }
+];

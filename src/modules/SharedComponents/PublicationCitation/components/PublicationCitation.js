@@ -12,8 +12,6 @@ import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import {withStyles} from '@material-ui/core/styles';
 
-import {CitationView} from './citations/partials';
-
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
@@ -39,7 +37,7 @@ import ConferenceProceedingsCitation from './citations/ConferenceProceedingsCita
 import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
-import DateCitationView from './citations/partials/DateCitationView';
+import {UnpublishedBufferCitationView} from './citations/partials/UnpublishedBufferCitationView';
 
 const styles = theme => ({
     divider: {
@@ -192,16 +190,6 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    renderUnpublishedBufferFields = () => {
-        return (
-            <React.Fragment>
-                <i><CitationView suffix=", " value={this.props.publication.rek_status_lookup}/></i>
-                <DateCitationView format="DD/MM/YYYY" prefix="Created " suffix=", " date={this.props.publication.rek_created_date}/>
-                <DateCitationView format="DD/MM/YYYY" prefix="Updated " suffix="." date={this.props.publication.rek_updated_date}/>
-            </React.Fragment>
-        );
-    }
-
     render() {
         const {classes} = this.props;
         const txt = locale.components.publicationCitation;
@@ -273,7 +261,7 @@ export class PublicationCitation extends PureComponent {
                             {
                                 this.props.showUnpublishedBufferFields &&
                                 <Grid item xs={12}>
-                                    <Typography variant="caption">{this.renderUnpublishedBufferFields()}</Typography>
+                                    <UnpublishedBufferCitationView publication={this.props.publication}/>
                                 </Grid>
                             }
                         </Grid>
