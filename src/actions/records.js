@@ -25,7 +25,10 @@ export function createNewRecord(data) {
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch)
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+            ...transformers.getDatasetContactDetailSearchKeys(data.contact || null),
+            ...transformers.getGeographicAreaSearchKey(data.geographicArea || null),
+            ...transformers.getDatasetCreatorRolesSearchKey(data.authors || null)
         };
 
         // delete extra form values from request object
@@ -36,6 +39,8 @@ export function createNewRecord(data) {
         if (recordRequest.supervisors) delete recordRequest.supervisors;
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
         if (recordRequest.comments) delete recordRequest.comments;
+        if (recordRequest.contact) delete recordRequest.contact;
+        if (recordRequest.geographicArea) delete recordRequest.geographicArea;
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;

@@ -4,7 +4,8 @@ import * as Partials from './partials';
 
 export default class JournalArticleCitation extends PureComponent {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        hideDoiLink: PropTypes.bool
     };
 
     constructor(props) {
@@ -51,7 +52,7 @@ export default class JournalArticleCitation extends PureComponent {
                 <Partials.PageRangeCitationView publication={this.props.publication} suffix="" />
                 <span>. </span>
                 {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} />
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
             </div>
         );
     }

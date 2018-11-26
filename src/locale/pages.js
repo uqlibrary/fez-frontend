@@ -219,7 +219,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
+                    Add to this list by <a href={`${pathConfig.dataset.add}`}>adding a missing dataset</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your datasets',
@@ -228,7 +228,7 @@ export default {
                 title: 'No datasets found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`}>add a missing dataset</a>.
                     </div>
                 ),
             },
@@ -236,6 +236,26 @@ export default {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
                 renameFacetsList: {}
+            }
+        },
+        addDataset: {
+            pageTitle: 'Add data collection',
+            depositAgreement: 'Lorem ipsum',
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your dataset has been submitted',
+                datasetSuccessConfirmationMessage: (
+                    <p>
+                        Your dataset has been saved.<br/><br/>
+                        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                        record.
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'File upload and/or notes post failed',
+                    message: 'lorem ipsum',
+                    type: 'warning'
+                },
+                cancelButtonLabel: 'Add another missing dataset',
+                confirmButtonLabel: 'Go to my datasets'
             }
         },
         claimPublications: {

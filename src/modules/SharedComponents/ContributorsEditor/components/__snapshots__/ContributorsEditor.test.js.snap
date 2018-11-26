@@ -6,6 +6,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
+    showRoleInput={false}
   />
 </div>
 `;
@@ -16,6 +17,18 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={true}
+    showRoleInput={false}
+  />
+</div>
+`;
+
+exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
+<div>
+  <Connect(ContributorForm)
+    onAdd={[Function]}
+    showContributorAssignment={false}
+    showIdentifierLookup={false}
+    showRoleInput={true}
   />
 </div>
 `;
@@ -26,6 +39,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
+    showRoleInput={false}
   />
   <WithStyles(Grid)
     container={true}
@@ -41,6 +55,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -72,6 +87,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
@@ -90,6 +106,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
@@ -108,6 +125,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -121,6 +139,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
+    showRoleInput={false}
   />
   <WithStyles(Grid)
     container={true}
@@ -136,6 +155,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -167,6 +187,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
@@ -185,6 +206,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
@@ -203,6 +225,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
@@ -221,6 +244,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
           onMoveUp={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
+          showRoleInput={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -234,6 +258,7 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
+    showRoleInput={false}
   />
 </div>
 `;
@@ -244,6 +269,7 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
+    showRoleInput={false}
   />
   <WithStyles(Typography)
     color="error"

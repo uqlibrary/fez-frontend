@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) => {
         allowFreeText: true,
         async: true,
         onChange: (item) => props.onChange(item),
-        selectedValue: !!props.value && props.value || '',
+        selectedValue: !!props.value && {value: props.value} || '',
         itemToString: (item) => !!item && String(item.value) || ''
     };
 };
