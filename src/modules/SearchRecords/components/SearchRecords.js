@@ -194,7 +194,11 @@ class SearchRecords extends PureComponent {
 
     updateHistoryAndSearch = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.search}`,
+            pathname: (
+                this.props.location.pathname === routes.pathConfig.admin.unpublished
+                    ? routes.pathConfig.admin.unpublished
+                    : routes.pathConfig.records.search
+            ),
             search: param(this.state),
             state: {...this.state}
         });
