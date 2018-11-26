@@ -184,6 +184,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
             (key === 'rek_pid' && value.toLowerCase().indexOf('uq:') !== 0) && {...result, [key]: `UQ:${value}`}
             || (key === 'rek_genre_type') && {...result, [key]: value.map(item => `"${item}"`)}
             || (key === 'rek_status' && value < 0) && {...result, [key]: [UNPUBLISHED, SUBMITTED_FOR_APPROVAL, IN_CREATION,  IN_REVIEW, IN_DRAFT, RETRACTED]}
+            || (key === 'rek_created_date' || key === 'rek_updated_date') && result
             || (key === 'all' || !!value) && {...result, [key]: value}
             || {...result, [key]: searchQueryParams[key]}
         );
