@@ -894,6 +894,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           showMetrics={true}
           showSourceCountIcon={false}
           showSources={false}
+          showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
       </WithStyles(Grid)>
@@ -1848,6 +1849,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           showMetrics={true}
           showSourceCountIcon={false}
           showSources={false}
+          showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
       </WithStyles(Grid)>
@@ -2721,6 +2723,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           showMetrics={true}
           showSourceCountIcon={false}
           showSources={false}
+          showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
       </WithStyles(Grid)>

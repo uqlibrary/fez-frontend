@@ -327,7 +327,10 @@ class SearchRecords extends PureComponent {
                                 {
                                     !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                         <div style={{marginTop: 16}}>
-                                            <PublicationsList publicationsList={this.props.publicationsList} />
+                                            <PublicationsList
+                                                showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
+                                                publicationsList={this.props.publicationsList}
+                                            />
                                         </div>
                                 }
                                 <PublicationsListPaging

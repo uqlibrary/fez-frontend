@@ -6019,6 +6019,7 @@ exports[`PublicationCitation  should render component with publication from mult
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          gutterBottom={true}
           item={true}
           xs={12}
         >
@@ -6878,6 +6879,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
+          gutterBottom={true}
           item={true}
           xs={12}
         >

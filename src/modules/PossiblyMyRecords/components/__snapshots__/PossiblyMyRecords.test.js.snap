@@ -208,6 +208,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 showMetrics={false}
                 showSourceCountIcon={false}
                 showSources={false}
+                showUnpublishedBufferFields={false}
                 subsetCustomActions={
                   Array [
                     Object {

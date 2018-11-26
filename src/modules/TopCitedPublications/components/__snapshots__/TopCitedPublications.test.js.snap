@@ -954,6 +954,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
           showMetrics={true}
           showSourceCountIcon={false}
           showSources={false}
+          showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
       </WithStyles(Grid)>

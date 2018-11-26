@@ -137,6 +137,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               showMetrics={false}
               showSourceCountIcon={false}
               showSources={false}
+              showUnpublishedBufferFields={false}
               subsetCustomActions={Array []}
             />
           </WithStyles(Grid)>
@@ -260,6 +261,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               showMetrics={false}
               showSourceCountIcon={false}
               showSources={false}
+              showUnpublishedBufferFields={false}
               subsetCustomActions={Array []}
             />
           </WithStyles(Grid)>
