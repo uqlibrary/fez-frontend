@@ -27,6 +27,6 @@ export default class DateCitationView extends PureComponent {
         const {date, prefix, suffix, format, className} = this.props;
         // If there is no date, or it is invalid
         if (!date || !moment(date).isValid()) return (<span className="citationDate empty"/>);
-        return (<span className={className}>{prefix}{moment(date).format(format)}{suffix}</span>);
+        return (<span className={className}>{prefix}{moment.utc(date).local().format(format)}{suffix}</span>);
     }
 }
