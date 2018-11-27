@@ -21,7 +21,7 @@ export class UnpublishedBufferCitationView extends Component {
         anchorEl: null,
     };
 
-    handleClick = () => {
+    handleClick = (event) => {
         this.setState({anchorEl: event.currentTarget});
     };
 
