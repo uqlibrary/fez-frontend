@@ -30,7 +30,6 @@ export class UnpublishedBufferCitationView extends Component {
     };
 
     navigateToUrl = (url, target = '_blank') => () => {
-        console.log(url);
         window.open(url, target);
     };
 
