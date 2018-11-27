@@ -179,7 +179,7 @@ export class AutoCompleteAsyncField extends Component {
                     onChange={this.handleSelected}
                     itemToString={itemToString}
                     onStateChange={allowFreeText
-                        ? ({inputValue}) => !!inputValue && this.props.onChange({value: inputValue})
+                        ? ({inputValue}) => this.props.onChange({value: inputValue})
                         : () => {}
                     }
                 >
