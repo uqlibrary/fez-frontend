@@ -50,7 +50,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             inputProps: {
                 ...this.state.inputProps,
                 'error': !!this.runValidationRules(nextProps.value),
-                'helperText': this.runValidationRules(nextProps.value)
+                'errorText': this.runValidationRules(nextProps.value)
             }
         });
     }
@@ -92,7 +92,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'placeholder': this.props.inputField.hint,
             'aria-label': this.props.inputField.ariaLabel,
             'error': !!this.runValidationRules(this.props.value),
-            'helperText': this.runValidationRules(this.props.value),
+            'errorText': this.runValidationRules(this.props.value),
             'label': null,
         };
 
