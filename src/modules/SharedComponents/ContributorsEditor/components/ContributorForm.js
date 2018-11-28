@@ -142,12 +142,12 @@ export class ContributorForm extends PureComponent {
                 <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'} style={{marginTop: 8}}>
                     <Grid item xs={12} sm={2}>
                         <FormControl fullWidth>
-                            <InputLabel htmlFor="age-simple">Affiliation</InputLabel>
+                            <InputLabel htmlFor="age-simple">Org affiliation</InputLabel>
                             <Select
                                 value={this.state.affiliation}
                                 onChange={this.handleAffiliationChange}
                             >
-                                <MenuItem value={''} disabled>Select an affiliation</MenuItem>
+                                <MenuItem value={''} disabled>Organisational affiliation at time of publication</MenuItem>
                                 <MenuItem value={'UQ'}>UQ</MenuItem>
                                 <MenuItem value={'NotUQ'}>Not UQ</MenuItem>
                             </Select>
@@ -175,8 +175,8 @@ export class ContributorForm extends PureComponent {
                             <UqIdField
                                 disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
-                                floatingLabelText="UQ Identifier"
-                                hintText="Enter a UQ ID or username to search"
+                                floatingLabelText="UQ username (if known)"
+                                hintText="eg. uqjsmith"
                                 ref="identifierField"
                                 id="identifierField"
                             />
