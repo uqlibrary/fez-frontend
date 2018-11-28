@@ -12,8 +12,8 @@ const mapStateToProps = (state, props) => {
         onChange: (item) => {
             if (!item.id) {
                 !!props.input
-                    ? props.input.onChange({...item, id: item.value})
-                    : props.onChange({...item, id: item.value});
+                    ? props.input.onChange({...item, id: `${parseInt(item.value, 10)}`})
+                    : props.onChange({...item, id: `${parseInt(item.value, 10)}`});
             } else {
                 !!props.input
                     ? props.input.onChange(item)

@@ -3,6 +3,7 @@ import locale from 'locale/validationErrors';
 
 // Min Length
 export const maxLength = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLength9 = maxLength(9);
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
 export const maxLength1000 = maxLength(1000);

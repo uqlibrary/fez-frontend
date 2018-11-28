@@ -1123,7 +1123,7 @@ export default {
                         combiner: 'is',
                         type: 'AuthorIdLookup',
                         hint: 'Add an author id',
-                        validation: ['required'],
+                        validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list'
                     },
                     'rek_contributor_id': {
@@ -1133,7 +1133,7 @@ export default {
                         combiner: 'is',
                         type: 'ContributorIdLookup',
                         hint: 'Add a contributor id',
-                        validation: ['required'],
+                        validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an contributor ID to select an author from the list'
                     },
                     'rek_org_unit_name': {
