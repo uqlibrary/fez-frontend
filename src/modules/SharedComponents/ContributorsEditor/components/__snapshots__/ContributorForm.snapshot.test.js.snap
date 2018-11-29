@@ -22,48 +22,11 @@ exports[`Component ContributorForm should render display name field and identifi
   >
     <WithStyles(Grid)
       item={true}
-      sm={2}
-      xs={12}
-    >
-      <WithStyles(FormControl)
-        fullWidth={true}
-      >
-        <WithStyles(InputLabel)
-          htmlFor="age-simple"
-        >
-          Org affiliation
-        </WithStyles(InputLabel)>
-        <WithStyles(Select)
-          onChange={[Function]}
-          value=""
-        >
-          <WithStyles(MenuItem)
-            disabled={true}
-            value=""
-          >
-            Organisational affiliation at time of publication
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            value="UQ"
-          >
-            UQ
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            value="NotUQ"
-          >
-            Not UQ
-          </WithStyles(MenuItem)>
-        </WithStyles(Select)>
-      </WithStyles(FormControl)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
       sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={true}
         error={true}
         fullWidth={true}
         id="nameAsPublishedField"
@@ -72,6 +35,19 @@ exports[`Component ContributorForm should render display name field and identifi
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ username (if known)"
+        hintText="eg. uqjsmith"
+        id="identifierField"
+        onChange={[Function]}
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -119,48 +95,11 @@ exports[`Component ContributorForm should render display name field and role fie
   >
     <WithStyles(Grid)
       item={true}
-      sm={2}
-      xs={12}
-    >
-      <WithStyles(FormControl)
-        fullWidth={true}
-      >
-        <WithStyles(InputLabel)
-          htmlFor="age-simple"
-        >
-          Org affiliation
-        </WithStyles(InputLabel)>
-        <WithStyles(Select)
-          onChange={[Function]}
-          value=""
-        >
-          <WithStyles(MenuItem)
-            disabled={true}
-            value=""
-          >
-            Organisational affiliation at time of publication
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            value="UQ"
-          >
-            UQ
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            value="NotUQ"
-          >
-            Not UQ
-          </WithStyles(MenuItem)>
-        </WithStyles(Select)>
-      </WithStyles(FormControl)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
       sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={true}
         error={true}
         fullWidth={true}
         id="nameAsPublishedField"
@@ -169,19 +108,6 @@ exports[`Component ContributorForm should render display name field and role fie
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         value=""
-      />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <Connect(WithStyles(AutoCompleteAsyncField))
-        disabled={true}
-        floatingLabelText="UQ username (if known)"
-        hintText="eg. uqjsmith"
-        id="identifierField"
-        onChange={[Function]}
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -247,48 +173,11 @@ exports[`Component ContributorForm should render display name field only 1`] = `
   >
     <WithStyles(Grid)
       item={true}
-      sm={2}
-      xs={12}
-    >
-      <WithStyles(FormControl)
-        fullWidth={true}
-      >
-        <WithStyles(InputLabel)
-          htmlFor="age-simple"
-        >
-          Org affiliation
-        </WithStyles(InputLabel)>
-        <WithStyles(Select)
-          onChange={[Function]}
-          value=""
-        >
-          <WithStyles(MenuItem)
-            disabled={true}
-            value=""
-          >
-            Organisational affiliation at time of publication
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            value="UQ"
-          >
-            UQ
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            value="NotUQ"
-          >
-            Not UQ
-          </WithStyles(MenuItem)>
-        </WithStyles(Select)>
-      </WithStyles(FormControl)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
       sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={true}
         error={true}
         fullWidth={true}
         id="nameAsPublishedField"
@@ -297,19 +186,6 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         value=""
-      />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <Connect(WithStyles(AutoCompleteAsyncField))
-        disabled={true}
-        floatingLabelText="UQ username (if known)"
-        hintText="eg. uqjsmith"
-        id="identifierField"
-        onChange={[Function]}
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)

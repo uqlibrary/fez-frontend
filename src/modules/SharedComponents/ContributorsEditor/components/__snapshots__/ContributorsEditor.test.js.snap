@@ -3,6 +3,7 @@
 exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -14,6 +15,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
 exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={true}
@@ -25,6 +27,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -36,6 +39,7 @@ exports[`ContributorsEditor tests  rendering full component with role input 1`] 
 exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -52,6 +56,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
           isInfinite={false}
+          isNtro={false}
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -136,6 +141,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
 exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -152,6 +158,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
           isInfinite={true}
+          isNtro={false}
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -255,6 +262,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
 exports[`ContributorsEditor tests  renders no contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -266,6 +274,7 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
 exports[`ContributorsEditor tests  should show validation error 1`] = `
 <div>
   <Connect(ContributorForm)
+    isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
