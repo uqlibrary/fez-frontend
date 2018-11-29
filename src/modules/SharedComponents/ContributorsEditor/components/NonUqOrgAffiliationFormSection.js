@@ -7,10 +7,11 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import {orgAffiliationTypes} from 'config/general';
 
 export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType, onOrgAffiliationChange, onOrgTypeChange, locale}) {
-    const options = locale.fields.organisationType.options.map((option, index) => (
-        <MenuItem value={option} key={index}>{option}</MenuItem>
+    const options = orgAffiliationTypes.map(option => (
+        <MenuItem value={option.value} key={option.value}>{option.text}</MenuItem>
     ));
 
     return (
@@ -60,7 +61,6 @@ NonUqOrgAffiliationFormSection.defaultProps = {
             organisationType: {
                 inputLabel: 'Organisation type',
                 placeholder: 'Select an organisation type',
-                options: ['Museum', 'Gallery', 'Government', 'NGO', 'Corporate/Industry', 'University', 'Other']
             }
         }
     }
