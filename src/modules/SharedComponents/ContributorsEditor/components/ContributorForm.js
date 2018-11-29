@@ -121,18 +121,6 @@ export class ContributorForm extends PureComponent {
         });
     };
 
-    orgTpyeChanged = (event) => {
-        this.setState({
-            orgtype: event.target.value,
-        });
-    };
-
-    orgaffChanged = (event) => {
-        this.setState({
-            orgaff: event.target.value
-        });
-    };
-
     handleOrgAfflicationChange = (event) => {
         this.setState({
             orgaff: event.target.value
