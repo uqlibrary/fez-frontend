@@ -48,7 +48,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
         >
           <div>
             <p>
-              Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and accurately group all the citations of your publications into one pool. A profile generally lists your name, chosen keywords of research interest, generated citation metrics, and citations (including links to citing articles).
+              Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and accurately group all the citations of your works into one pool. A profile generally lists your name, chosen keywords of research interest, generated citation metrics, and citations (including links to citing articles).
             </p>
             <p>
               In order to create a Google Scholar Citation profile, you need a Google Account.
@@ -206,7 +206,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
         >
           <div>
             <p>
-              Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and accurately group all the citations of your publications into one pool. A profile generally lists your name, chosen keywords of research interest, generated citation metrics, and citations (including links to citing articles).
+              Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and accurately group all the citations of your works into one pool. A profile generally lists your name, chosen keywords of research interest, generated citation metrics, and citations (including links to citing articles).
             </p>
             <p>
               In order to create a Google Scholar Citation profile, you need a Google Account.
@@ -365,7 +365,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
         >
           <div>
             <p>
-              Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and accurately group all the citations of your publications into one pool. A profile generally lists your name, chosen keywords of research interest, generated citation metrics, and citations (including links to citing articles).
+              Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and accurately group all the citations of your works into one pool. A profile generally lists your name, chosen keywords of research interest, generated citation metrics, and citations (including links to citing articles).
             </p>
             <p>
               In order to create a Google Scholar Citation profile, you need a Google Account.

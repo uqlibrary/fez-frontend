@@ -24,14 +24,14 @@ exports[`Component PublicationForm should render component initialised with just
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <Field
           component={[Function]}
           disabled={false}
-          label="Publication type"
+          label="Work type"
           name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
+          placeholder="Select a Work type from the dropdown list"
           required={true}
         >
           <WithStyles(MenuItem)
@@ -252,14 +252,14 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <Field
           component={[Function]}
           disabled={false}
-          label="Publication type"
+          label="Work type"
           name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
+          placeholder="Select a Work type from the dropdown list"
           required={true}
           value={174}
         >
@@ -536,14 +536,14 @@ exports[`Component PublicationForm should render component with GenericDocument 
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <Field
           component={[Function]}
           disabled={false}
-          label="Publication type"
+          label="Work type"
           name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
+          placeholder="Select a Work type from the dropdown list"
           required={true}
           value={202}
         >
@@ -819,14 +819,14 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <Field
           component={[Function]}
           disabled={false}
-          label="Publication type"
+          label="Work type"
           name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
+          placeholder="Select a Work type from the dropdown list"
           required={true}
           value={179}
         >
@@ -1103,14 +1103,14 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <Field
           component={[Function]}
           disabled={false}
-          label="Publication type"
+          label="Work type"
           name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
+          placeholder="Select a Work type from the dropdown list"
           required={true}
           value={275}
         >
@@ -1386,14 +1386,14 @@ exports[`Component PublicationForm should render component with all fields disab
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <Field
           component={[Function]}
           disabled={true}
-          label="Publication type"
+          label="Work type"
           name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
+          placeholder="Select a Work type from the dropdown list"
           required={true}
         >
           <WithStyles(MenuItem)
@@ -1568,7 +1568,7 @@ exports[`Component PublicationForm should render component with all fields disab
       xs={12}
     >
       <WithStyles(Alert)
-        message="Creating new publication is in progress."
+        message="Creating new work is in progress."
         pushToTop={true}
         showLoader={true}
         title="Saving"

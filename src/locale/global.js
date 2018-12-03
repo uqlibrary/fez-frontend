@@ -155,7 +155,7 @@ export default {
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
         },
         embargoDateFormat: 'YYYY-MM-DD',
-        defaultLinkDescription: 'Link to publication',
+        defaultLinkDescription: 'Link to work',
         offlineSnackbar: {
             online: {
                 message: 'Your connection is back online',

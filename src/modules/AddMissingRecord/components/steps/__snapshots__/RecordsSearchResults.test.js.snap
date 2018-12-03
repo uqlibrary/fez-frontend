@@ -69,7 +69,7 @@ exports[`Search record results should render a single claimable item with no aut
               "title": "Repository search",
             }
           }
-          text="Claim a matching publication below, refine your search or create a new eSpace record."
+          text="Claim a matching work below, refine your search or create a new eSpace record."
           title="Possible matches found"
         >
           <WithStyles(Grid)
@@ -81,7 +81,7 @@ exports[`Search record results should render a single claimable item with no aut
               xs={12}
             >
               Top 1 potential match(es) displayed for "undefined".
-              Claim a matching publication below, refine your search or create a new eSpace record.
+              Claim a matching work below, refine your search or create a new eSpace record.
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
@@ -92,7 +92,7 @@ exports[`Search record results should render a single claimable item with no aut
                   Array [
                     Object {
                       "handleAction": [Function],
-                      "label": "Claim this publication",
+                      "label": "Claim this work",
                       "primary": true,
                     },
                   ]
@@ -548,7 +548,7 @@ exports[`Search record results should render a single unclaimable item with no a
               "title": "Repository search",
             }
           }
-          text="Claim a matching publication below, refine your search or create a new eSpace record."
+          text="Claim a matching work below, refine your search or create a new eSpace record."
           title="Possible matches found"
         >
           <WithStyles(Grid)
@@ -560,7 +560,7 @@ exports[`Search record results should render a single unclaimable item with no a
               xs={12}
             >
               Top 1 potential match(es) displayed for "undefined".
-              Claim a matching publication below, refine your search or create a new eSpace record.
+              Claim a matching work below, refine your search or create a new eSpace record.
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
@@ -571,7 +571,7 @@ exports[`Search record results should render a single unclaimable item with no a
                   Array [
                     Object {
                       "handleAction": [Function],
-                      "label": "Claim this publication",
+                      "label": "Claim this work",
                       "primary": true,
                     },
                   ]
@@ -800,7 +800,7 @@ exports[`Search record results should render publications list with one publicat
               "title": "Repository search",
             }
           }
-          text="Claim a matching publication below, refine your search or create a new eSpace record."
+          text="Claim a matching work below, refine your search or create a new eSpace record."
           title="Possible matches found"
         >
           <WithStyles(Grid)
@@ -812,7 +812,7 @@ exports[`Search record results should render publications list with one publicat
               xs={12}
             >
               Top 1 potential match(es) displayed for "undefined".
-              Claim a matching publication below, refine your search or create a new eSpace record.
+              Claim a matching work below, refine your search or create a new eSpace record.
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
@@ -823,7 +823,7 @@ exports[`Search record results should render publications list with one publicat
                   Array [
                     Object {
                       "handleAction": [Function],
-                      "label": "Claim this publication",
+                      "label": "Claim this work",
                       "primary": true,
                     },
                   ]
@@ -1003,7 +1003,7 @@ exports[`Search record results should render stepper and no results 1`] = `
       >
         <StandardCard
           text="We were unable to match any results to your search criteria. Please search again or create a new eSpace record."
-          title="No matching publications found"
+          title="No matching works found"
         >
           We were unable to match any results to your search criteria. Please search again or create a new eSpace record.
         </StandardCard>

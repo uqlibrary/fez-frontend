@@ -19,7 +19,7 @@ exports[`MyRecords test renders active filters 1`] = `
             <a
               href="/records/possible"
             >
-              claim publications we think may be yours
+              claim works we think may be yours
             </a>
              or 
             <a
@@ -29,14 +29,14 @@ exports[`MyRecords test renders active filters 1`] = `
             </a>
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results. You may be able to 
           <a
             href="/records/possible"
           >
-            claim publications we think may be yours
+            claim works we think may be yours
           </a>
            or 
           <a
@@ -567,7 +567,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Exporting your publications"
+                message="Exporting your works"
               />
             </div>
           </WithStyles(Grid)>
@@ -604,7 +604,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for your publications"
+        message="Searching for your works"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -687,7 +687,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Retrieving your publications"
+                message="Retrieving your works"
               />
             </div>
           </WithStyles(Grid)>
@@ -728,7 +728,7 @@ exports[`MyRecords test renders no results 1`] = `
             <a
               href="/records/possible"
             >
-              claim publications we think may be yours
+              claim works we think may be yours
             </a>
              or 
             <a
@@ -738,14 +738,14 @@ exports[`MyRecords test renders no results 1`] = `
             </a>
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results. You may be able to 
           <a
             href="/records/possible"
           >
-            claim publications we think may be yours
+            claim works we think may be yours
           </a>
            or 
           <a

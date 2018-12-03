@@ -8,11 +8,11 @@ exports[`Publication Details Component  should render component 1`] = `
   xs={12}
 >
   <StandardCard
-    title="Publication details"
+    title="Type & Collection"
   >
     <Component
       data="Journal Article"
-      heading="Publication type"
+      heading="Type of work"
     />
     <Component
       data="Article (original research)"
@@ -61,11 +61,11 @@ exports[`Publication Details Component  should render with publication without c
   xs={12}
 >
   <StandardCard
-    title="Publication details"
+    title="Type & Collection"
   >
     <Component
       data="Journal Article"
-      heading="Publication type"
+      heading="Type of work"
     />
   </StandardCard>
 </WithStyles(Grid)>
@@ -77,11 +77,11 @@ exports[`Publication Details Component  should render with publication without s
   xs={12}
 >
   <StandardCard
-    title="Publication details"
+    title="Type & Collection"
   >
     <Component
       data="Journal Article"
-      heading="Publication type"
+      heading="Type of work"
     />
     <Component
       data={
