@@ -3272,6 +3272,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -7529,6 +7530,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationDate"
               date={null}
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -11782,6 +11784,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -15857,6 +15860,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -20114,6 +20118,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -24352,6 +24357,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -27677,6 +27683,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -29597,6 +29604,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >

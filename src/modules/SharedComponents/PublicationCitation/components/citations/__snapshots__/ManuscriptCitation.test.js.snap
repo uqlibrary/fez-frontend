@@ -2316,6 +2316,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
               className="citationDate"
               date="1944-07-15T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -3301,6 +3302,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >

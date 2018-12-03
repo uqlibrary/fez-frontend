@@ -42,8 +42,8 @@ export class UnpublishedBufferCitationView extends Component {
                 <Grid item xs="auto" style={{flexGrow: 1}}>
                     <Typography variant="caption">
                         <i><CitationView suffix=", " value={this.props.publication.rek_status_lookup}/></i>
-                        <DateCitationView format="DD/MM/YYYY" prefix="Created " suffix=", " date={this.props.publication.rek_created_date}/>
-                        <DateCitationView format="DD/MM/YYYY" prefix="Updated " suffix="." date={this.props.publication.rek_updated_date}/>
+                        <DateCitationView isLocalised format="DD/MM/YYYY" prefix="Created " suffix=", " date={this.props.publication.rek_created_date}/>
+                        <DateCitationView isLocalised format="DD/MM/YYYY" prefix="Updated " suffix="." date={this.props.publication.rek_updated_date}/>
                     </Typography>
                 </Grid>
                 <Grid item>

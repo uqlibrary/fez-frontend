@@ -4,11 +4,7 @@ function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
         classes: {},
-        ...testProps,
-        date: testProps.date,
-        format: testProps.format,
-        prefix: testProps.prefix,
-        suffix: testProps.suffix
+        ...testProps
     };
     return getElement(DateCitationView, props, isShallow);
 }
@@ -55,4 +51,8 @@ describe('DateCitationView test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with date in user\'s timezone', () => {
+        const wrapper = setup({ date: '2017-06-30T22:00:00Z', format: 'YYYY-MM-DD', isLocalised: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

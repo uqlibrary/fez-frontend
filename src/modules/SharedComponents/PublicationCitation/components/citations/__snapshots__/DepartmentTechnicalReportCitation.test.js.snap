@@ -1587,6 +1587,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
               className="citationDate"
               date="2002-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -3281,6 +3282,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
               className="citationDate"
               date="2002-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -4311,6 +4313,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >

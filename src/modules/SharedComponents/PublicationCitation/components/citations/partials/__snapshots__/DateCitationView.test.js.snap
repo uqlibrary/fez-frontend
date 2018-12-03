@@ -28,6 +28,16 @@ exports[`DateCitationView test should render component with date in TZ format 1`
 </span>
 `;
 
+exports[`DateCitationView test should render component with date in user's timezone 1`] = `
+<span
+  className="citationDate"
+>
+  (
+  2017-07-01
+  ).
+</span>
+`;
+
 exports[`DateCitationView test should render component with date not in TZ format 1`] = `
 <span
   className="citationDate"

@@ -2255,6 +2255,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
               className="citationDate"
               date="2016-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -7265,6 +7266,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
