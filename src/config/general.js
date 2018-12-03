@@ -356,7 +356,7 @@ export const NEW_RECORD_DEFAULT_VALUES = {
 
 export const NEW_DATASET_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 2,
+    rek_status: 3,
     rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
     fez_record_search_key_ismemberof: [
         {
