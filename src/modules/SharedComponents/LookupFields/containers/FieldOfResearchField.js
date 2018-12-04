@@ -40,8 +40,9 @@ const filterFoRmapStateToProps = (state, props) => {
         itemToString: (item) => !!item && String(item.value) || '',
         filter: (searchText, key) => {
             if (searchText === '') return false;
-            const textMatchKey = !!key && key.toLowerCase().includes(!!searchText && searchText.toLowerCase());
-            return textMatchKey;
+            const textMatchKey = !!key && key.toString().toLowerCase().includes(!!searchText && searchText.toString().toLowerCase());
+            const testKey = new RegExp(/^[0-9]{4}\s.*/gi); // Only return items from the list that match this regex of 4 digits, then a space, then anything
+            return testKey.test(key.toString()) && textMatchKey;
         }
     };
 };
