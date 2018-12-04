@@ -15,6 +15,11 @@ export default {
         //     buttonLabel: 'OK'
         // }
     },
+    publicationSubtype: {
+        title: 'Publication subtype',
+        inputLabelText: 'Publication subtype',
+        hintText: 'Select a publication subtype from the dropdown list',
+    },
     generic: {
         information: {
             title: 'Generic document information',
