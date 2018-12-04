@@ -26,179 +26,343 @@ exports[`Component PublicationForm should render component initialised with just
       <StandardCard
         title="Publication type"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          label="Publication type"
-          name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
-          required={true}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
         >
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_0"
-            value={174}
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_1"
-            value={177}
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_2"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_3"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(Divider)
-            key="div_0"
-          />
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="0"
-            value={263}
-          >
-            Audio Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="1"
-            value={174}
-          >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="2"
-            value={177}
-          >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="3"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="4"
-            value={197}
-          >
-            Conference Proceedings
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="5"
-            value={313}
-          >
-            Creative Work
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="6"
-            value={181}
-          >
-            Department Technical Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="7"
-            value={316}
-          >
-            Design
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="8"
-            value={202}
-          >
-            Generic Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="9"
-            value={238}
-          >
-            Image
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="10"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="11"
-            value={191}
-          >
-            Newspaper Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="12"
-            value={185}
-          >
-            Patent
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="13"
-            value={204}
-          >
-            Preprint
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="14"
-            value={275}
-          >
-            Research Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="15"
-            value={189}
-          >
-            Seminar Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="16"
-            value={187}
-          >
-            Thesis
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="17"
-            value={310}
-          >
-            Video Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="18"
-            value={183}
-          >
-            Working Paper
-          </WithStyles(MenuItem)>
-        </Field>
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication subtype"
+              name="rek_subtype"
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                key="0"
+                value="Research book (original research)"
+              >
+                Research book (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="1"
+                value="Textbook"
+              >
+                Textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="2"
+                value="Edited book"
+              >
+                Edited book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="3"
+                value="Reference work, encyclopaedia, manual or handbook"
+              >
+                Reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="4"
+                value="Research book chapter (original research)"
+              >
+                Research book chapter (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="5"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="6"
+                value="Chapter in textbook"
+              >
+                Chapter in textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="7"
+                value="Chapter in reference work, encyclopaedia, manual or handbook"
+              >
+                Chapter in reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="8"
+                value="Introduction, foreword, editorial or appendix"
+              >
+                Introduction, foreword, editorial or appendix
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="9"
+                value="Conference paper"
+              >
+                Conference paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="10"
+                value="Fully published paper"
+              >
+                Fully published paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="11"
+                value="Published abstract"
+              >
+                Published abstract
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="12"
+                value="Poster"
+              >
+                Poster
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="13"
+                value="Oral presentation"
+              >
+                Oral presentation
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="14"
+                value="Article (original research)"
+              >
+                Article (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="15"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="16"
+                value="Letter to editor, brief commentary or brief communication"
+              >
+                Letter to editor, brief commentary or brief communication
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="17"
+                value="Correction/erratum"
+              >
+                Correction/erratum
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="18"
+                value="Review of book, film, TV, video, software, performance, music etc"
+              >
+                Review of book, film, TV, video, software, performance, music etc
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="19"
+                value="Editorial"
+              >
+                Editorial
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="20"
+                value="Discussion - responses, round table/panel discussions, Q&A, reply"
+              >
+                Discussion - responses, round table/panel discussions, Q&A, reply
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="21"
+                value="Creative work"
+              >
+                Creative work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="22"
+                value="Other"
+              >
+                Other
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -254,180 +418,344 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       <StandardCard
         title="Publication type"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          label="Publication type"
-          name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
-          required={true}
-          value={174}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
         >
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_0"
-            value={174}
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_1"
-            value={177}
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+              value={174}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_2"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_3"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(Divider)
-            key="div_0"
-          />
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="0"
-            value={263}
-          >
-            Audio Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="1"
-            value={174}
-          >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="2"
-            value={177}
-          >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="3"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="4"
-            value={197}
-          >
-            Conference Proceedings
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="5"
-            value={313}
-          >
-            Creative Work
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="6"
-            value={181}
-          >
-            Department Technical Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="7"
-            value={316}
-          >
-            Design
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="8"
-            value={202}
-          >
-            Generic Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="9"
-            value={238}
-          >
-            Image
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="10"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="11"
-            value={191}
-          >
-            Newspaper Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="12"
-            value={185}
-          >
-            Patent
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="13"
-            value={204}
-          >
-            Preprint
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="14"
-            value={275}
-          >
-            Research Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="15"
-            value={189}
-          >
-            Seminar Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="16"
-            value={187}
-          >
-            Thesis
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="17"
-            value={310}
-          >
-            Video Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="18"
-            value={183}
-          >
-            Working Paper
-          </WithStyles(MenuItem)>
-        </Field>
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication subtype"
+              name="rek_subtype"
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                key="0"
+                value="Research book (original research)"
+              >
+                Research book (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="1"
+                value="Textbook"
+              >
+                Textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="2"
+                value="Edited book"
+              >
+                Edited book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="3"
+                value="Reference work, encyclopaedia, manual or handbook"
+              >
+                Reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="4"
+                value="Research book chapter (original research)"
+              >
+                Research book chapter (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="5"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="6"
+                value="Chapter in textbook"
+              >
+                Chapter in textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="7"
+                value="Chapter in reference work, encyclopaedia, manual or handbook"
+              >
+                Chapter in reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="8"
+                value="Introduction, foreword, editorial or appendix"
+              >
+                Introduction, foreword, editorial or appendix
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="9"
+                value="Conference paper"
+              >
+                Conference paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="10"
+                value="Fully published paper"
+              >
+                Fully published paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="11"
+                value="Published abstract"
+              >
+                Published abstract
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="12"
+                value="Poster"
+              >
+                Poster
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="13"
+                value="Oral presentation"
+              >
+                Oral presentation
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="14"
+                value="Article (original research)"
+              >
+                Article (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="15"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="16"
+                value="Letter to editor, brief commentary or brief communication"
+              >
+                Letter to editor, brief commentary or brief communication
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="17"
+                value="Correction/erratum"
+              >
+                Correction/erratum
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="18"
+                value="Review of book, film, TV, video, software, performance, music etc"
+              >
+                Review of book, film, TV, video, software, performance, music etc
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="19"
+                value="Editorial"
+              >
+                Editorial
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="20"
+                value="Discussion - responses, round table/panel discussions, Q&A, reply"
+              >
+                Discussion - responses, round table/panel discussions, Q&A, reply
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="21"
+                value="Creative work"
+              >
+                Creative work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="22"
+                value="Other"
+              >
+                Other
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
     <React.Fragment>
@@ -538,180 +866,344 @@ exports[`Component PublicationForm should render component with GenericDocument 
       <StandardCard
         title="Publication type"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          label="Publication type"
-          name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
-          required={true}
-          value={202}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
         >
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_0"
-            value={174}
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_1"
-            value={177}
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+              value={202}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_2"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_3"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(Divider)
-            key="div_0"
-          />
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="0"
-            value={263}
-          >
-            Audio Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="1"
-            value={174}
-          >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="2"
-            value={177}
-          >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="3"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="4"
-            value={197}
-          >
-            Conference Proceedings
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="5"
-            value={313}
-          >
-            Creative Work
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="6"
-            value={181}
-          >
-            Department Technical Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="7"
-            value={316}
-          >
-            Design
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="8"
-            value={202}
-          >
-            Generic Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="9"
-            value={238}
-          >
-            Image
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="10"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="11"
-            value={191}
-          >
-            Newspaper Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="12"
-            value={185}
-          >
-            Patent
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="13"
-            value={204}
-          >
-            Preprint
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="14"
-            value={275}
-          >
-            Research Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="15"
-            value={189}
-          >
-            Seminar Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="16"
-            value={187}
-          >
-            Thesis
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="17"
-            value={310}
-          >
-            Video Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="18"
-            value={183}
-          >
-            Working Paper
-          </WithStyles(MenuItem)>
-        </Field>
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication subtype"
+              name="rek_subtype"
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                key="0"
+                value="Research book (original research)"
+              >
+                Research book (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="1"
+                value="Textbook"
+              >
+                Textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="2"
+                value="Edited book"
+              >
+                Edited book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="3"
+                value="Reference work, encyclopaedia, manual or handbook"
+              >
+                Reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="4"
+                value="Research book chapter (original research)"
+              >
+                Research book chapter (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="5"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="6"
+                value="Chapter in textbook"
+              >
+                Chapter in textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="7"
+                value="Chapter in reference work, encyclopaedia, manual or handbook"
+              >
+                Chapter in reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="8"
+                value="Introduction, foreword, editorial or appendix"
+              >
+                Introduction, foreword, editorial or appendix
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="9"
+                value="Conference paper"
+              >
+                Conference paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="10"
+                value="Fully published paper"
+              >
+                Fully published paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="11"
+                value="Published abstract"
+              >
+                Published abstract
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="12"
+                value="Poster"
+              >
+                Poster
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="13"
+                value="Oral presentation"
+              >
+                Oral presentation
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="14"
+                value="Article (original research)"
+              >
+                Article (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="15"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="16"
+                value="Letter to editor, brief commentary or brief communication"
+              >
+                Letter to editor, brief commentary or brief communication
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="17"
+                value="Correction/erratum"
+              >
+                Correction/erratum
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="18"
+                value="Review of book, film, TV, video, software, performance, music etc"
+              >
+                Review of book, film, TV, video, software, performance, music etc
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="19"
+                value="Editorial"
+              >
+                Editorial
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="20"
+                value="Discussion - responses, round table/panel discussions, Q&A, reply"
+              >
+                Discussion - responses, round table/panel discussions, Q&A, reply
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="21"
+                value="Creative work"
+              >
+                Creative work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="22"
+                value="Other"
+              >
+                Other
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
     <React.Fragment>
@@ -821,180 +1313,344 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       <StandardCard
         title="Publication type"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          label="Publication type"
-          name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
-          required={true}
-          value={179}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
         >
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_0"
-            value={174}
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_1"
-            value={177}
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+              value={179}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_2"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_3"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(Divider)
-            key="div_0"
-          />
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="0"
-            value={263}
-          >
-            Audio Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="1"
-            value={174}
-          >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="2"
-            value={177}
-          >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="3"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="4"
-            value={197}
-          >
-            Conference Proceedings
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="5"
-            value={313}
-          >
-            Creative Work
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="6"
-            value={181}
-          >
-            Department Technical Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="7"
-            value={316}
-          >
-            Design
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="8"
-            value={202}
-          >
-            Generic Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="9"
-            value={238}
-          >
-            Image
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="10"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="11"
-            value={191}
-          >
-            Newspaper Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="12"
-            value={185}
-          >
-            Patent
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="13"
-            value={204}
-          >
-            Preprint
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="14"
-            value={275}
-          >
-            Research Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="15"
-            value={189}
-          >
-            Seminar Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="16"
-            value={187}
-          >
-            Thesis
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="17"
-            value={310}
-          >
-            Video Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="18"
-            value={183}
-          >
-            Working Paper
-          </WithStyles(MenuItem)>
-        </Field>
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication subtype"
+              name="rek_subtype"
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                key="0"
+                value="Research book (original research)"
+              >
+                Research book (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="1"
+                value="Textbook"
+              >
+                Textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="2"
+                value="Edited book"
+              >
+                Edited book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="3"
+                value="Reference work, encyclopaedia, manual or handbook"
+              >
+                Reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="4"
+                value="Research book chapter (original research)"
+              >
+                Research book chapter (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="5"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="6"
+                value="Chapter in textbook"
+              >
+                Chapter in textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="7"
+                value="Chapter in reference work, encyclopaedia, manual or handbook"
+              >
+                Chapter in reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="8"
+                value="Introduction, foreword, editorial or appendix"
+              >
+                Introduction, foreword, editorial or appendix
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="9"
+                value="Conference paper"
+              >
+                Conference paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="10"
+                value="Fully published paper"
+              >
+                Fully published paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="11"
+                value="Published abstract"
+              >
+                Published abstract
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="12"
+                value="Poster"
+              >
+                Poster
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="13"
+                value="Oral presentation"
+              >
+                Oral presentation
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="14"
+                value="Article (original research)"
+              >
+                Article (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="15"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="16"
+                value="Letter to editor, brief commentary or brief communication"
+              >
+                Letter to editor, brief commentary or brief communication
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="17"
+                value="Correction/erratum"
+              >
+                Correction/erratum
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="18"
+                value="Review of book, film, TV, video, software, performance, music etc"
+              >
+                Review of book, film, TV, video, software, performance, music etc
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="19"
+                value="Editorial"
+              >
+                Editorial
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="20"
+                value="Discussion - responses, round table/panel discussions, Q&A, reply"
+              >
+                Discussion - responses, round table/panel discussions, Q&A, reply
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="21"
+                value="Creative work"
+              >
+                Creative work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="22"
+                value="Other"
+              >
+                Other
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
     <React.Fragment>
@@ -1105,180 +1761,344 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       <StandardCard
         title="Publication type"
       >
-        <Field
-          component={[Function]}
-          disabled={false}
-          label="Publication type"
-          name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
-          required={true}
-          value={275}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
         >
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_0"
-            value={174}
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_1"
-            value={177}
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+              value={275}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_2"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_3"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(Divider)
-            key="div_0"
-          />
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="0"
-            value={263}
-          >
-            Audio Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="1"
-            value={174}
-          >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="2"
-            value={177}
-          >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="3"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="4"
-            value={197}
-          >
-            Conference Proceedings
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="5"
-            value={313}
-          >
-            Creative Work
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="6"
-            value={181}
-          >
-            Department Technical Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="7"
-            value={316}
-          >
-            Design
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="8"
-            value={202}
-          >
-            Generic Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="9"
-            value={238}
-          >
-            Image
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="10"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="11"
-            value={191}
-          >
-            Newspaper Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="12"
-            value={185}
-          >
-            Patent
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="13"
-            value={204}
-          >
-            Preprint
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="14"
-            value={275}
-          >
-            Research Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="15"
-            value={189}
-          >
-            Seminar Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="16"
-            value={187}
-          >
-            Thesis
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="17"
-            value={310}
-          >
-            Video Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="18"
-            value={183}
-          >
-            Working Paper
-          </WithStyles(MenuItem)>
-        </Field>
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication subtype"
+              name="rek_subtype"
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                key="0"
+                value="Research book (original research)"
+              >
+                Research book (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="1"
+                value="Textbook"
+              >
+                Textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="2"
+                value="Edited book"
+              >
+                Edited book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="3"
+                value="Reference work, encyclopaedia, manual or handbook"
+              >
+                Reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="4"
+                value="Research book chapter (original research)"
+              >
+                Research book chapter (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="5"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="6"
+                value="Chapter in textbook"
+              >
+                Chapter in textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="7"
+                value="Chapter in reference work, encyclopaedia, manual or handbook"
+              >
+                Chapter in reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="8"
+                value="Introduction, foreword, editorial or appendix"
+              >
+                Introduction, foreword, editorial or appendix
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="9"
+                value="Conference paper"
+              >
+                Conference paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="10"
+                value="Fully published paper"
+              >
+                Fully published paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="11"
+                value="Published abstract"
+              >
+                Published abstract
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="12"
+                value="Poster"
+              >
+                Poster
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="13"
+                value="Oral presentation"
+              >
+                Oral presentation
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="14"
+                value="Article (original research)"
+              >
+                Article (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="15"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="16"
+                value="Letter to editor, brief commentary or brief communication"
+              >
+                Letter to editor, brief commentary or brief communication
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="17"
+                value="Correction/erratum"
+              >
+                Correction/erratum
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="18"
+                value="Review of book, film, TV, video, software, performance, music etc"
+              >
+                Review of book, film, TV, video, software, performance, music etc
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="19"
+                value="Editorial"
+              >
+                Editorial
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="20"
+                value="Discussion - responses, round table/panel discussions, Q&A, reply"
+              >
+                Discussion - responses, round table/panel discussions, Q&A, reply
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="21"
+                value="Creative work"
+              >
+                Creative work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="22"
+                value="Other"
+              >
+                Other
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
     <React.Fragment>
@@ -1388,179 +2208,343 @@ exports[`Component PublicationForm should render component with all fields disab
       <StandardCard
         title="Publication type"
       >
-        <Field
-          component={[Function]}
-          disabled={true}
-          label="Publication type"
-          name="rek_display_type"
-          placeholder="Select a publication type from the dropdown list"
-          required={true}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
         >
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_0"
-            value={174}
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_1"
-            value={177}
+            <Field
+              component={[Function]}
+              disabled={true}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={6}
+            xs={12}
           >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_2"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="fav_3"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(Divider)
-            key="div_0"
-          />
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="0"
-            value={263}
-          >
-            Audio Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="1"
-            value={174}
-          >
-            Book
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="2"
-            value={177}
-          >
-            Book Chapter
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="3"
-            value={130}
-          >
-            Conference Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="4"
-            value={197}
-          >
-            Conference Proceedings
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="5"
-            value={313}
-          >
-            Creative Work
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="6"
-            value={181}
-          >
-            Department Technical Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="7"
-            value={316}
-          >
-            Design
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="8"
-            value={202}
-          >
-            Generic Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="9"
-            value={238}
-          >
-            Image
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="10"
-            value={179}
-          >
-            Journal Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="11"
-            value={191}
-          >
-            Newspaper Article
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="12"
-            value={185}
-          >
-            Patent
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="13"
-            value={204}
-          >
-            Preprint
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="14"
-            value={275}
-          >
-            Research Report
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="15"
-            value={189}
-          >
-            Seminar Paper
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="16"
-            value={187}
-          >
-            Thesis
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="17"
-            value={310}
-          >
-            Video Document
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
-            disabled={false}
-            key="18"
-            value={183}
-          >
-            Working Paper
-          </WithStyles(MenuItem)>
-        </Field>
+            <Field
+              component={[Function]}
+              disabled={true}
+              label="Publication subtype"
+              name="rek_subtype"
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
+            >
+              <WithStyles(MenuItem)
+                key="0"
+                value="Research book (original research)"
+              >
+                Research book (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="1"
+                value="Textbook"
+              >
+                Textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="2"
+                value="Edited book"
+              >
+                Edited book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="3"
+                value="Reference work, encyclopaedia, manual or handbook"
+              >
+                Reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="4"
+                value="Research book chapter (original research)"
+              >
+                Research book chapter (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="5"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="6"
+                value="Chapter in textbook"
+              >
+                Chapter in textbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="7"
+                value="Chapter in reference work, encyclopaedia, manual or handbook"
+              >
+                Chapter in reference work, encyclopaedia, manual or handbook
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="8"
+                value="Introduction, foreword, editorial or appendix"
+              >
+                Introduction, foreword, editorial or appendix
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="9"
+                value="Conference paper"
+              >
+                Conference paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="10"
+                value="Fully published paper"
+              >
+                Fully published paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="11"
+                value="Published abstract"
+              >
+                Published abstract
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="12"
+                value="Poster"
+              >
+                Poster
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="13"
+                value="Oral presentation"
+              >
+                Oral presentation
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="14"
+                value="Article (original research)"
+              >
+                Article (original research)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="15"
+                value="Critical review of research, literature review, critical commentary"
+              >
+                Critical review of research, literature review, critical commentary
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="16"
+                value="Letter to editor, brief commentary or brief communication"
+              >
+                Letter to editor, brief commentary or brief communication
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="17"
+                value="Correction/erratum"
+              >
+                Correction/erratum
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="18"
+                value="Review of book, film, TV, video, software, performance, music etc"
+              >
+                Review of book, film, TV, video, software, performance, music etc
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="19"
+                value="Editorial"
+              >
+                Editorial
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="20"
+                value="Discussion - responses, round table/panel discussions, Q&A, reply"
+              >
+                Discussion - responses, round table/panel discussions, Q&A, reply
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="21"
+                value="Creative work"
+              >
+                Creative work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="22"
+                value="Other"
+              >
+                Other
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
     <WithStyles(Grid)

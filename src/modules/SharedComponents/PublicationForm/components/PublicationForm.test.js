@@ -62,7 +62,7 @@ describe('Component PublicationForm', () => {
     it('should render component initialised with just one field - publication type', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
+        expect(wrapper.find('Field').length).toEqual(2);
         
     });
 
