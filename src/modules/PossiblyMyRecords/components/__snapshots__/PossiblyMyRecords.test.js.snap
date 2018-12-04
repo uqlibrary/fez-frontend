@@ -80,8 +80,8 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={false}
@@ -324,8 +324,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={false}

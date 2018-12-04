@@ -92,7 +92,7 @@ export default {
                     month: 'Month',
                     year: 'Year'
                 },
-                subtype: 'Publication subtype'
+                subtype: 'Work subtype'
             }
         },
         authors: txt.components.authors,
@@ -124,7 +124,7 @@ export default {
             // },
             fieldLabels: {
                 bookTitle: 'Book title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 date: {
@@ -162,7 +162,7 @@ export default {
             fieldLabels: {
                 bookChapterTitle: 'Book chapter title',
                 bookTitle: 'Book title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 date: {
@@ -205,7 +205,7 @@ export default {
                 conferenceLocation: 'Conference location',
                 conferenceDates: 'Conference dates (eg 13-15 December 2011)',
                 proceedingsTitle: 'Proceedings title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 journalName: 'Journal name',

@@ -57,7 +57,7 @@ export class AuthorLinking extends PureComponent {
     static defaultProps = {
         disabled: false,
         locale: {
-            confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me'
+            confirmation: 'I confirm and understand that I am claiming this work under the above name, and confirm this is me'
         },
         authorList: [],
         linkedAuthorIdList: []

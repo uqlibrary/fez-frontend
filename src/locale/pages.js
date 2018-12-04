@@ -145,7 +145,7 @@ export default {
                 // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
-                    countTitle: 'eSpace articles from'
+                    countTitle: 'eSpace works from'
                 },
                 dashboardAuthorAvatar: {
                     ariaPrefix: 'Photograph of '
@@ -196,7 +196,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
+                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a work</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing work</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -387,8 +387,7 @@ export default {
                 recordSuccessConfirmationMessage: (
                     <p>
                         Your work has been saved.<br/><br/>
-                        Your work will be published immediately and an UQ eSpace Research Outputs Officer will review the
-                        record.
+                        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
                     </p>),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or notes post failed',
@@ -409,11 +408,11 @@ export default {
             actionsOptions: [
                 {
                     action: 'fix',
-                    title: 'I am the author/editor/contributor of this record - I would like to make a correction, or upload files'
+                    title: 'I am the author/editor/contributor of this work - I would like to make a correction, or upload files'
                 },
                 {
                     action: 'unclaim',
-                    title: 'I am not the author/editor/contributor of this record - I would like this record removed from my profile'
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile'
                 }
             ],
             cancel: 'Cancel',

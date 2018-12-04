@@ -90,7 +90,7 @@ exports[`BookForm renders  component 1`] = `
             fullWidth={true}
             locale={
               Object {
-                "label": "Publication subtype",
+                "label": "Work subtype",
                 "loading": "Loading",
               }
             }

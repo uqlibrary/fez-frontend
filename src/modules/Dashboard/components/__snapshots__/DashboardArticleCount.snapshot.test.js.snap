@@ -14,7 +14,7 @@ exports[`Dashboard Article Count test Render the authors article counts as expec
     <WithStyles(Grid)
       item={true}
     >
-      eSpace articles from
+      eSpace works from
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}

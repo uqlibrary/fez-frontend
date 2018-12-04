@@ -3,11 +3,11 @@ import React from 'react';
 export default {
     forms: {
         claimPublicationForm: {
-            title: 'Claim a publication',
+            title: 'Claim a work',
             cancel: 'Cancel this claim',
-            submit: 'Claim this publication',
+            submit: 'Claim this work',
             claimingInformation: {
-                title: 'You are claiming to be an author for the following item:',
+                title: 'You are claiming to be an author for the following work:',
                 // help: {
                 //     title: 'Claiming a publication',
                 //     text: 'Enter the text that will help people here',
@@ -16,7 +16,7 @@ export default {
             },
             authorLinking: {
                 title: 'Author linking',
-                text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below: ',
+                text: 'We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: ',
                 // help: {
                 //     title: 'Author linking',
                 //     text: '...',
@@ -25,7 +25,7 @@ export default {
             },
             contributorLinking: {
                 title: 'Editor linking',
-                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please select your name from the list below: ',
+                text: 'We were unable to automatically detect who you are from the list of editors on this work. Please select your name from the list below: ',
                 // help: {
                 //     title: 'Editor linking',
                 //     text: '...',
@@ -33,7 +33,7 @@ export default {
                 // }
             },
             comments: {
-                title: 'Optional: Suggest changes or add links to this record',
+                title: 'Optional: Suggest changes or add links to this work',
                 // help: {
                 //     title: 'Additional information',
                 //     text: '...',
@@ -54,7 +54,7 @@ export default {
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel claiming a publication',
-                confirmationMessage: 'Are you sure you want to cancel claiming this publication?',
+                confirmationMessage: 'Are you sure you want to cancel claiming this work?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },

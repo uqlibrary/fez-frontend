@@ -21,7 +21,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
               Your work has been saved.
               <br />
               <br />
-              Your work will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
             </p>
           </WithStyles(Grid)>
         </WithStyles(Grid)>,
@@ -35,7 +35,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
           Your work has been saved.
           <br />
           <br />
-          Your work will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
         </p>,
       }
     }
@@ -81,7 +81,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
             Your work has been saved.
             <br />
             <br />
-            Your work will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+            Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
           </p>
         </WithStyles(Grid)>
       </WithStyles(Grid)>,
@@ -95,7 +95,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
         Your work has been saved.
         <br />
         <br />
-        Your work will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
       </p>,
     }
   }

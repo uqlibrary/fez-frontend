@@ -99,8 +99,8 @@ exports[`MyRecords test renders active filters 1`] = `
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={true}
@@ -144,13 +144,13 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -278,13 +278,13 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -478,8 +478,8 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={true}
@@ -520,13 +520,13 @@ exports[`MyRecords test renders loading screen while export publications loading
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -640,13 +640,13 @@ exports[`MyRecords test renders loading screen while loading publications while 
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>

@@ -80,7 +80,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -534,7 +534,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_8"
-        pageTitle="Claim a publication"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -729,7 +729,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -1161,7 +1161,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_8"
-        pageTitle="Claim a publication"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -1701,7 +1701,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -2133,7 +2133,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
-        pageTitle="Claim a publication"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -2328,7 +2328,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -2784,7 +2784,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
-        pageTitle="Claim a publication"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -2979,7 +2979,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -3291,7 +3291,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
-        pageTitle="Claim a publication"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -3486,7 +3486,7 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
