@@ -43,7 +43,7 @@
     "jsdom": "11.10.0",
     "jsdom-global": "^3.0.2",
     "mockdate": "^2.0.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.10.0",
     "postcss-loader": "^2.1.4",
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
     "progress-bar-webpack-plugin": "^1.11.0",
@@ -127,8 +127,8 @@
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {
-    "npm": ">=4",
-    "node": ">=7.2.0"
+    "npm": "^6.4.1",
+    "node": "^11.3.0"
   },
   "babel": {
     "presets": [
