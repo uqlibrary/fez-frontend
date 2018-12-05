@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
         ...(state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer') : {}),
         ...state.get('accountReducer'),
         accountLoading: state && state.get('accountReducer') ? state.get('accountReducer').accountLoading : false,
-        canUseExport: state.get('accountReducer').account.hasSession
+        canUseExport: !!state.get('accountReducer').account.hasSession
     };
 };
 
