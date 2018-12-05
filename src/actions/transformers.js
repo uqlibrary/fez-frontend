@@ -328,7 +328,7 @@ export const getDatasetContactDetailSearchKeys = (contact) => {
             rek_contributor_order: 1
         }],
         fez_record_search_key_contributor_id: [{
-            rek_contributor_id: contact.contactNameId.id,
+            rek_contributor_id: isNaN(contact.contactNameId.id) ? 0 : parseInt(contact.contactNameId.id, 10),
             rek_contributor_id_order: 1
         }],
         fez_record_search_key_contact_details_email: [{
