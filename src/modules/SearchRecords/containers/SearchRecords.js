@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     return {
         ...state.get('searchRecordsReducer'),
         ...state.get('exportPublicationsReducer'),
-        canUseExport: true
+        canUseExport: state.get('accountReducer').account.hasSession
     };
 };
 
