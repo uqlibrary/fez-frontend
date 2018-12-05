@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
         ...state.get('exportPublicationsReducer'),
         localePages: locale.pages.myResearch,
         thisUrl: routes.pathConfig.records.mine,
-        canUseExport: !!state.get('accountReducer').account.hasSession
+        canUseExport: state.get('accountReducer') && state.get('accountReducer').account && !!state.get('accountReducer').account.hasSession
     };
 };
 
