@@ -1,11 +1,13 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
-import {general} from 'config';
+import {general, publicationTypes} from 'config';
 import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+
+import * as recordForms from '../components/Forms';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -70,13 +72,26 @@ let PublicationFormContainer = reduxForm({
     onSubmit
 })(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
+const selector = formValueSelector(FORM_NAME);
+
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-
+    const displayType = selector(state, 'rek_display_type');
+    const publicationSubtype = selector(state, 'rek_subtype');
+    const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
+        type.id === displayType
+    );
+    const hasSubtypes = !!selectedPublicationType && !!selectedPublicationType[0].subtypeVocabId || false;
+    const subtypeVocabId = hasSubtypes && !!selectedPublicationType && selectedPublicationType[0].subtypeVocabId || null;
+    const formComponent = selectedPublicationType && selectedPublicationType[0].formComponent;
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        selectedPublicationType: selectedPublicationType,
+        hasSubtypes: hasSubtypes,
+        subtypeVocabId: subtypeVocabId,
+        formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null
     };
 };
 

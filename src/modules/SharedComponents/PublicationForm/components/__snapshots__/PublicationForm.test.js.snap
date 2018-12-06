@@ -32,7 +32,6 @@ exports[`Component PublicationForm should render component initialised with just
         >
           <WithStyles(Grid)
             item={true}
-            sm={6}
             xs={12}
           >
             <Field
@@ -209,159 +208,6 @@ exports[`Component PublicationForm should render component initialised with just
               </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            sm={6}
-            xs={12}
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              label="Publication subtype"
-              name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
-              required={true}
-            >
-              <WithStyles(MenuItem)
-                key="0"
-                value="Research book (original research)"
-              >
-                Research book (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="1"
-                value="Textbook"
-              >
-                Textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="2"
-                value="Edited book"
-              >
-                Edited book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="3"
-                value="Reference work, encyclopaedia, manual or handbook"
-              >
-                Reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="4"
-                value="Research book chapter (original research)"
-              >
-                Research book chapter (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="5"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="6"
-                value="Chapter in textbook"
-              >
-                Chapter in textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="7"
-                value="Chapter in reference work, encyclopaedia, manual or handbook"
-              >
-                Chapter in reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="8"
-                value="Introduction, foreword, editorial or appendix"
-              >
-                Introduction, foreword, editorial or appendix
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="9"
-                value="Conference paper"
-              >
-                Conference paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="10"
-                value="Fully published paper"
-              >
-                Fully published paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="11"
-                value="Published abstract"
-              >
-                Published abstract
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="12"
-                value="Poster"
-              >
-                Poster
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="13"
-                value="Oral presentation"
-              >
-                Oral presentation
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="14"
-                value="Article (original research)"
-              >
-                Article (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="15"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="16"
-                value="Letter to editor, brief commentary or brief communication"
-              >
-                Letter to editor, brief commentary or brief communication
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="17"
-                value="Correction/erratum"
-              >
-                Correction/erratum
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="18"
-                value="Review of book, film, TV, video, software, performance, music etc"
-              >
-                Review of book, film, TV, video, software, performance, music etc
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="19"
-                value="Editorial"
-              >
-                Editorial
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="20"
-                value="Discussion - responses, round table/panel discussions, Q&A, reply"
-              >
-                Discussion - responses, round table/panel discussions, Q&A, reply
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="21"
-                value="Creative work"
-              >
-                Creative work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="22"
-                value="Other"
-              >
-                Other
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
@@ -392,7 +238,7 @@ exports[`Component PublicationForm should render component initialised with just
 </form>
 `;
 
-exports[`Component PublicationForm should render component with BookForm 1`] = `
+exports[`Component PublicationForm should render component initialised with two fields - publication type and subtype 1`] = `
 <form
   onSubmit={[Function]}
 >
@@ -424,902 +270,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         >
           <WithStyles(Grid)
             item={true}
-            sm={6}
-            xs={12}
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              label="Publication type"
-              name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
-              required={true}
-              value={174}
-            >
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_0"
-                value={174}
-              >
-                Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_1"
-                value={177}
-              >
-                Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_2"
-                value={130}
-              >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_3"
-                value={179}
-              >
-                Journal Article
-              </WithStyles(MenuItem)>
-              <WithStyles(Divider)
-                key="div_0"
-              />
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="0"
-                value={263}
-              >
-                Audio Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="1"
-                value={174}
-              >
-                Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="2"
-                value={177}
-              >
-                Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="3"
-                value={130}
-              >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="4"
-                value={197}
-              >
-                Conference Proceedings
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="5"
-                value={313}
-              >
-                Creative Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="6"
-                value={181}
-              >
-                Department Technical Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="7"
-                value={316}
-              >
-                Design
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="8"
-                value={202}
-              >
-                Generic Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="9"
-                value={238}
-              >
-                Image
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="10"
-                value={179}
-              >
-                Journal Article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="11"
-                value={191}
-              >
-                Newspaper Article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="12"
-                value={185}
-              >
-                Patent
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="13"
-                value={204}
-              >
-                Preprint
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="14"
-                value={275}
-              >
-                Research Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="15"
-                value={189}
-              >
-                Seminar Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="16"
-                value={187}
-              >
-                Thesis
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="17"
-                value={310}
-              >
-                Video Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="18"
-                value={183}
-              >
-                Working Paper
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            sm={6}
-            xs={12}
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              label="Publication subtype"
-              name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
-              required={true}
-            >
-              <WithStyles(MenuItem)
-                key="0"
-                value="Research book (original research)"
-              >
-                Research book (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="1"
-                value="Textbook"
-              >
-                Textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="2"
-                value="Edited book"
-              >
-                Edited book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="3"
-                value="Reference work, encyclopaedia, manual or handbook"
-              >
-                Reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="4"
-                value="Research book chapter (original research)"
-              >
-                Research book chapter (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="5"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="6"
-                value="Chapter in textbook"
-              >
-                Chapter in textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="7"
-                value="Chapter in reference work, encyclopaedia, manual or handbook"
-              >
-                Chapter in reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="8"
-                value="Introduction, foreword, editorial or appendix"
-              >
-                Introduction, foreword, editorial or appendix
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="9"
-                value="Conference paper"
-              >
-                Conference paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="10"
-                value="Fully published paper"
-              >
-                Fully published paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="11"
-                value="Published abstract"
-              >
-                Published abstract
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="12"
-                value="Poster"
-              >
-                Poster
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="13"
-                value="Oral presentation"
-              >
-                Oral presentation
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="14"
-                value="Article (original research)"
-              >
-                Article (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="15"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="16"
-                value="Letter to editor, brief commentary or brief communication"
-              >
-                Letter to editor, brief commentary or brief communication
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="17"
-                value="Correction/erratum"
-              >
-                Correction/erratum
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="18"
-                value="Review of book, film, TV, video, software, performance, music etc"
-              >
-                Review of book, film, TV, video, software, performance, music etc
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="19"
-                value="Editorial"
-              >
-                Editorial
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="20"
-                value="Discussion - responses, round table/panel discussions, Q&A, reply"
-              >
-                Discussion - responses, round table/panel discussions, Q&A, reply
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="21"
-                value="Creative work"
-              >
-                Creative work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="22"
-                value="Other"
-              >
-                Other
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </StandardCard>
-    </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <BookForm
-          formValues={
-            Immutable.Map {
-              "rek_display_type": 174,
-            }
-          }
-          submitting={false}
-          subtypeVocabId={453581}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="files"
-            requireOpenAccessStatus={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="secondary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[MockFunction]}
-      >
-        Abandon and search again
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</form>
-`;
-
-exports[`Component PublicationForm should render component with GenericDocument 1`] = `
-<form
-  onSubmit={[Function]}
->
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to abandon workflow?",
-          "confirmationTitle": "Abandon workflow",
-        }
-      }
-      when={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="Publication type"
-      >
-        <WithStyles(Grid)
-          container={true}
-          spacing={8}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={6}
-            xs={12}
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              label="Publication type"
-              name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
-              required={true}
-              value={202}
-            >
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_0"
-                value={174}
-              >
-                Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_1"
-                value={177}
-              >
-                Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_2"
-                value={130}
-              >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_3"
-                value={179}
-              >
-                Journal Article
-              </WithStyles(MenuItem)>
-              <WithStyles(Divider)
-                key="div_0"
-              />
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="0"
-                value={263}
-              >
-                Audio Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="1"
-                value={174}
-              >
-                Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="2"
-                value={177}
-              >
-                Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="3"
-                value={130}
-              >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="4"
-                value={197}
-              >
-                Conference Proceedings
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="5"
-                value={313}
-              >
-                Creative Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="6"
-                value={181}
-              >
-                Department Technical Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="7"
-                value={316}
-              >
-                Design
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="8"
-                value={202}
-              >
-                Generic Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="9"
-                value={238}
-              >
-                Image
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="10"
-                value={179}
-              >
-                Journal Article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="11"
-                value={191}
-              >
-                Newspaper Article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="12"
-                value={185}
-              >
-                Patent
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="13"
-                value={204}
-              >
-                Preprint
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="14"
-                value={275}
-              >
-                Research Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="15"
-                value={189}
-              >
-                Seminar Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="16"
-                value={187}
-              >
-                Thesis
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="17"
-                value={310}
-              >
-                Video Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="18"
-                value={183}
-              >
-                Working Paper
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            sm={6}
-            xs={12}
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              label="Publication subtype"
-              name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
-              required={true}
-            >
-              <WithStyles(MenuItem)
-                key="0"
-                value="Research book (original research)"
-              >
-                Research book (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="1"
-                value="Textbook"
-              >
-                Textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="2"
-                value="Edited book"
-              >
-                Edited book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="3"
-                value="Reference work, encyclopaedia, manual or handbook"
-              >
-                Reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="4"
-                value="Research book chapter (original research)"
-              >
-                Research book chapter (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="5"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="6"
-                value="Chapter in textbook"
-              >
-                Chapter in textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="7"
-                value="Chapter in reference work, encyclopaedia, manual or handbook"
-              >
-                Chapter in reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="8"
-                value="Introduction, foreword, editorial or appendix"
-              >
-                Introduction, foreword, editorial or appendix
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="9"
-                value="Conference paper"
-              >
-                Conference paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="10"
-                value="Fully published paper"
-              >
-                Fully published paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="11"
-                value="Published abstract"
-              >
-                Published abstract
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="12"
-                value="Poster"
-              >
-                Poster
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="13"
-                value="Oral presentation"
-              >
-                Oral presentation
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="14"
-                value="Article (original research)"
-              >
-                Article (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="15"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="16"
-                value="Letter to editor, brief commentary or brief communication"
-              >
-                Letter to editor, brief commentary or brief communication
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="17"
-                value="Correction/erratum"
-              >
-                Correction/erratum
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="18"
-                value="Review of book, film, TV, video, software, performance, music etc"
-              >
-                Review of book, film, TV, video, software, performance, music etc
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="19"
-                value="Editorial"
-              >
-                Editorial
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="20"
-                value="Discussion - responses, round table/panel discussions, Q&A, reply"
-              >
-                Discussion - responses, round table/panel discussions, Q&A, reply
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="21"
-                value="Creative work"
-              >
-                Creative work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="22"
-                value="Other"
-              >
-                Other
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </StandardCard>
-    </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <GenericDocumentForm
-          formValues={
-            Immutable.Map {
-              "rek_display_type": 202,
-            }
-          }
-          submitting={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="files"
-            requireOpenAccessStatus={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="secondary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[MockFunction]}
-      >
-        Abandon and search again
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</form>
-`;
-
-exports[`Component PublicationForm should render component with JournalArticleForm 1`] = `
-<form
-  onSubmit={[Function]}
->
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to abandon workflow?",
-          "confirmationTitle": "Abandon workflow",
-        }
-      }
-      when={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="Publication type"
-      >
-        <WithStyles(Grid)
-          container={true}
-          spacing={8}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={6}
             xs={12}
           >
             <Field
@@ -1499,156 +449,1057 @@ exports[`Component PublicationForm should render component with JournalArticleFo
           </WithStyles(Grid)>
           <WithStyles(Grid)
             item={true}
-            sm={6}
+            xs={12}
+          >
+            <Field
+              className="requiredField"
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "label": "Publication subtype",
+                  "loading": "Loading",
+                }
+              }
+              name="rek_subtype"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+              vocabId={453573}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="secondary"
+        disabled={false}
+        fullWidth={true}
+        onClick={[MockFunction]}
+      >
+        Abandon and search again
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        fullWidth={true}
+        onClick={[MockFunction]}
+        style={
+          Object {
+            "whiteSpace": "nowrap",
+          }
+        }
+        variant="contained"
+      >
+        Submit for approval
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
+`;
+
+exports[`Component PublicationForm should render component with BookForm 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to abandon workflow?",
+          "confirmationTitle": "Abandon workflow",
+        }
+      }
+      when={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Publication type"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
+        >
+          <WithStyles(Grid)
+            item={true}
             xs={12}
           >
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
-              name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
               required={true}
+              value={174}
             >
               <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
                 key="0"
-                value="Research book (original research)"
+                value={263}
               >
-                Research book (original research)
+                Audio Document
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="1"
-                value="Textbook"
+                value={174}
               >
-                Textbook
+                Book
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="2"
-                value="Edited book"
+                value={177}
               >
-                Edited book
+                Book Chapter
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="3"
-                value="Reference work, encyclopaedia, manual or handbook"
+                value={130}
               >
-                Reference work, encyclopaedia, manual or handbook
+                Conference Paper
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="4"
-                value="Research book chapter (original research)"
+                value={197}
               >
-                Research book chapter (original research)
+                Conference Proceedings
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="5"
-                value="Critical review of research, literature review, critical commentary"
+                value={313}
               >
-                Critical review of research, literature review, critical commentary
+                Creative Work
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="6"
-                value="Chapter in textbook"
+                value={181}
               >
-                Chapter in textbook
+                Department Technical Report
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="7"
-                value="Chapter in reference work, encyclopaedia, manual or handbook"
+                value={316}
               >
-                Chapter in reference work, encyclopaedia, manual or handbook
+                Design
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="8"
-                value="Introduction, foreword, editorial or appendix"
+                value={202}
               >
-                Introduction, foreword, editorial or appendix
+                Generic Document
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="9"
-                value="Conference paper"
+                value={238}
               >
-                Conference paper
+                Image
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="10"
-                value="Fully published paper"
+                value={179}
               >
-                Fully published paper
+                Journal Article
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="11"
-                value="Published abstract"
+                value={191}
               >
-                Published abstract
+                Newspaper Article
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="12"
-                value="Poster"
+                value={185}
               >
-                Poster
+                Patent
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="13"
-                value="Oral presentation"
+                value={204}
               >
-                Oral presentation
+                Preprint
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="14"
-                value="Article (original research)"
+                value={275}
               >
-                Article (original research)
+                Research Report
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="15"
-                value="Critical review of research, literature review, critical commentary"
+                value={189}
               >
-                Critical review of research, literature review, critical commentary
+                Seminar Paper
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="16"
-                value="Letter to editor, brief commentary or brief communication"
+                value={187}
               >
-                Letter to editor, brief commentary or brief communication
+                Thesis
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="17"
-                value="Correction/erratum"
+                value={310}
               >
-                Correction/erratum
+                Video Document
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
+                disabled={false}
                 key="18"
-                value="Review of book, film, TV, video, software, performance, music etc"
+                value={183}
               >
-                Review of book, film, TV, video, software, performance, music etc
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="19"
-                value="Editorial"
-              >
-                Editorial
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="20"
-                value="Discussion - responses, round table/panel discussions, Q&A, reply"
-              >
-                Discussion - responses, round table/panel discussions, Q&A, reply
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="21"
-                value="Creative work"
-              >
-                Creative work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="22"
-                value="Other"
-              >
-                Other
+                Working Paper
               </WithStyles(MenuItem)>
             </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              className="requiredField"
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "label": "Publication subtype",
+                  "loading": "Loading",
+                }
+              }
+              name="rek_subtype"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+              vocabId={1111}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <BookForm
+          actions={Object {}}
+          anyTouched={true}
+          array={
+            Object {
+              "insert": [MockFunction],
+              "move": [MockFunction],
+              "pop": [MockFunction],
+              "push": [MockFunction],
+              "remove": [MockFunction],
+              "removeAll": [MockFunction],
+              "shift": [MockFunction],
+              "splice": [MockFunction],
+              "swap": [MockFunction],
+              "unshift": [MockFunction],
+            }
+          }
+          asyncValidate={[MockFunction]}
+          asyncValidating={false}
+          author={null}
+          autofill={[MockFunction]}
+          blur={[MockFunction]}
+          change={[MockFunction]}
+          clearAsyncError={[MockFunction]}
+          clearFields={[MockFunction]}
+          clearSubmit={[MockFunction]}
+          clearSubmitErrors={[MockFunction]}
+          destroy={[MockFunction]}
+          dirty={true}
+          dispatch={[MockFunction]}
+          form="form"
+          formComponent={[Function]}
+          formValues={
+            Immutable.Map {
+              "rek_display_type": 174,
+            }
+          }
+          handleSubmit={[MockFunction]}
+          hasSubtypes={true}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          initialValues={
+            Object {
+              "rek_display_type": 174,
+            }
+          }
+          initialize={[MockFunction]}
+          initialized={false}
+          invalid={false}
+          onFormCancel={[MockFunction]}
+          onFormSubmitSuccess={[MockFunction]}
+          pristine={false}
+          pure={true}
+          reset={[MockFunction]}
+          resetSection={[MockFunction]}
+          submit={[MockFunction]}
+          submitFailed={false}
+          submitSucceeded={false}
+          submitting={false}
+          subtypeVocabId={1111}
+          touch={[MockFunction]}
+          untouch={[MockFunction]}
+          valid={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="files"
+            requireOpenAccessStatus={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </React.Fragment>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="secondary"
+        disabled={false}
+        fullWidth={true}
+        onClick={[MockFunction]}
+      >
+        Abandon and search again
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        fullWidth={true}
+        onClick={[MockFunction]}
+        style={
+          Object {
+            "whiteSpace": "nowrap",
+          }
+        }
+        variant="contained"
+      >
+        Submit for approval
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
+`;
+
+exports[`Component PublicationForm should render component with GenericDocument 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to abandon workflow?",
+          "confirmationTitle": "Abandon workflow",
+        }
+      }
+      when={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Publication type"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+              value={202}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              className="requiredField"
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "label": "Publication subtype",
+                  "loading": "Loading",
+                }
+              }
+              name="rek_subtype"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+              vocabId={2222}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <React.Fragment>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <GenericDocumentForm
+          actions={Object {}}
+          anyTouched={true}
+          array={
+            Object {
+              "insert": [MockFunction],
+              "move": [MockFunction],
+              "pop": [MockFunction],
+              "push": [MockFunction],
+              "remove": [MockFunction],
+              "removeAll": [MockFunction],
+              "shift": [MockFunction],
+              "splice": [MockFunction],
+              "swap": [MockFunction],
+              "unshift": [MockFunction],
+            }
+          }
+          asyncValidate={[MockFunction]}
+          asyncValidating={false}
+          author={null}
+          autofill={[MockFunction]}
+          blur={[MockFunction]}
+          change={[MockFunction]}
+          clearAsyncError={[MockFunction]}
+          clearFields={[MockFunction]}
+          clearSubmit={[MockFunction]}
+          clearSubmitErrors={[MockFunction]}
+          destroy={[MockFunction]}
+          dirty={true}
+          dispatch={[MockFunction]}
+          form="form"
+          formComponent={[Function]}
+          formValues={
+            Immutable.Map {
+              "rek_display_type": 202,
+            }
+          }
+          handleSubmit={[MockFunction]}
+          hasSubtypes={true}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          initialValues={
+            Object {
+              "rek_display_type": 202,
+            }
+          }
+          initialize={[MockFunction]}
+          initialized={false}
+          invalid={false}
+          onFormCancel={[MockFunction]}
+          onFormSubmitSuccess={[MockFunction]}
+          pristine={false}
+          pure={true}
+          reset={[MockFunction]}
+          resetSection={[MockFunction]}
+          submit={[MockFunction]}
+          submitFailed={false}
+          submitSucceeded={false}
+          submitting={false}
+          subtypeVocabId={2222}
+          touch={[MockFunction]}
+          untouch={[MockFunction]}
+          valid={true}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="files"
+            requireOpenAccessStatus={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </React.Fragment>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="secondary"
+        disabled={false}
+        fullWidth={true}
+        onClick={[MockFunction]}
+      >
+        Abandon and search again
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        fullWidth={true}
+        onClick={[MockFunction]}
+        style={
+          Object {
+            "whiteSpace": "nowrap",
+          }
+        }
+        variant="contained"
+      >
+        Submit for approval
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</form>
+`;
+
+exports[`Component PublicationForm should render component with JournalArticleForm 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to abandon workflow?",
+          "confirmationTitle": "Abandon workflow",
+        }
+      }
+      when={true}
+    />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Publication type"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              label="Publication type"
+              name="rek_display_type"
+              placeholder="Select a publication type from the dropdown list"
+              required={true}
+              value={179}
+            >
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_0"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_2"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_3"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(Divider)
+                key="div_0"
+              />
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="0"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="1"
+                value={174}
+              >
+                Book
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="2"
+                value={177}
+              >
+                Book Chapter
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="3"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="4"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="5"
+                value={313}
+              >
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
+                value={181}
+              >
+                Department Technical Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="7"
+                value={316}
+              >
+                Design
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="8"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={179}
+              >
+                Journal Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={185}
+              >
+                Patent
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
+                value={187}
+              >
+                Thesis
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="17"
+                value={310}
+              >
+                Video Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+            </Field>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <Field
+              className="requiredField"
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "label": "Publication subtype",
+                  "loading": "Loading",
+                }
+              }
+              name="rek_subtype"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+              vocabId={453573}
+            />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
@@ -1659,13 +1510,71 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         xs={12}
       >
         <JournalArticleForm
+          actions={Object {}}
+          anyTouched={true}
+          array={
+            Object {
+              "insert": [MockFunction],
+              "move": [MockFunction],
+              "pop": [MockFunction],
+              "push": [MockFunction],
+              "remove": [MockFunction],
+              "removeAll": [MockFunction],
+              "shift": [MockFunction],
+              "splice": [MockFunction],
+              "swap": [MockFunction],
+              "unshift": [MockFunction],
+            }
+          }
+          asyncValidate={[MockFunction]}
+          asyncValidating={false}
+          author={null}
+          autofill={[MockFunction]}
+          blur={[MockFunction]}
+          change={[MockFunction]}
+          clearAsyncError={[MockFunction]}
+          clearFields={[MockFunction]}
+          clearSubmit={[MockFunction]}
+          clearSubmitErrors={[MockFunction]}
+          destroy={[MockFunction]}
+          dirty={true}
+          dispatch={[MockFunction]}
+          form="form"
+          formComponent={[Function]}
           formValues={
             Immutable.Map {
               "rek_display_type": 179,
             }
           }
+          handleSubmit={[MockFunction]}
+          hasSubtypes={true}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          initialValues={
+            Object {
+              "rek_display_type": 179,
+            }
+          }
+          initialize={[MockFunction]}
+          initialized={false}
+          invalid={false}
+          onFormCancel={[MockFunction]}
+          onFormSubmitSuccess={[MockFunction]}
+          pristine={false}
+          pure={true}
+          reset={[MockFunction]}
+          resetSection={[MockFunction]}
+          submit={[MockFunction]}
+          submitFailed={false}
+          submitSucceeded={false}
           submitting={false}
           subtypeVocabId={453573}
+          touch={[MockFunction]}
+          untouch={[MockFunction]}
+          valid={true}
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -1767,7 +1676,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         >
           <WithStyles(Grid)
             item={true}
-            sm={6}
             xs={12}
           >
             <Field
@@ -1947,156 +1855,26 @@ exports[`Component PublicationForm should render component with ResearchReportFo
           </WithStyles(Grid)>
           <WithStyles(Grid)
             item={true}
-            sm={6}
             xs={12}
           >
             <Field
+              className="requiredField"
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              locale={
+                Object {
+                  "label": "Publication subtype",
+                  "loading": "Loading",
+                }
+              }
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
-              required={true}
-            >
-              <WithStyles(MenuItem)
-                key="0"
-                value="Research book (original research)"
-              >
-                Research book (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="1"
-                value="Textbook"
-              >
-                Textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="2"
-                value="Edited book"
-              >
-                Edited book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="3"
-                value="Reference work, encyclopaedia, manual or handbook"
-              >
-                Reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="4"
-                value="Research book chapter (original research)"
-              >
-                Research book chapter (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="5"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="6"
-                value="Chapter in textbook"
-              >
-                Chapter in textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="7"
-                value="Chapter in reference work, encyclopaedia, manual or handbook"
-              >
-                Chapter in reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="8"
-                value="Introduction, foreword, editorial or appendix"
-              >
-                Introduction, foreword, editorial or appendix
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="9"
-                value="Conference paper"
-              >
-                Conference paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="10"
-                value="Fully published paper"
-              >
-                Fully published paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="11"
-                value="Published abstract"
-              >
-                Published abstract
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="12"
-                value="Poster"
-              >
-                Poster
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="13"
-                value="Oral presentation"
-              >
-                Oral presentation
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="14"
-                value="Article (original research)"
-              >
-                Article (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="15"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="16"
-                value="Letter to editor, brief commentary or brief communication"
-              >
-                Letter to editor, brief commentary or brief communication
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="17"
-                value="Correction/erratum"
-              >
-                Correction/erratum
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="18"
-                value="Review of book, film, TV, video, software, performance, music etc"
-              >
-                Review of book, film, TV, video, software, performance, music etc
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="19"
-                value="Editorial"
-              >
-                Editorial
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="20"
-                value="Discussion - responses, round table/panel discussions, Q&A, reply"
-              >
-                Discussion - responses, round table/panel discussions, Q&A, reply
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="21"
-                value="Creative work"
-              >
-                Creative work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="22"
-                value="Other"
-              >
-                Other
-              </WithStyles(MenuItem)>
-            </Field>
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+              vocabId={1111}
+            />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
@@ -2107,12 +1885,71 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         xs={12}
       >
         <ResearchReportForm
+          actions={Object {}}
+          anyTouched={true}
+          array={
+            Object {
+              "insert": [MockFunction],
+              "move": [MockFunction],
+              "pop": [MockFunction],
+              "push": [MockFunction],
+              "remove": [MockFunction],
+              "removeAll": [MockFunction],
+              "shift": [MockFunction],
+              "splice": [MockFunction],
+              "swap": [MockFunction],
+              "unshift": [MockFunction],
+            }
+          }
+          asyncValidate={[MockFunction]}
+          asyncValidating={false}
+          author={null}
+          autofill={[MockFunction]}
+          blur={[MockFunction]}
+          change={[MockFunction]}
+          clearAsyncError={[MockFunction]}
+          clearFields={[MockFunction]}
+          clearSubmit={[MockFunction]}
+          clearSubmitErrors={[MockFunction]}
+          destroy={[MockFunction]}
+          dirty={true}
+          dispatch={[MockFunction]}
+          form="form"
+          formComponent={[Function]}
           formValues={
             Immutable.Map {
               "rek_display_type": 275,
             }
           }
+          handleSubmit={[MockFunction]}
+          hasSubtypes={true}
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+          initialValues={
+            Object {
+              "rek_display_type": 275,
+            }
+          }
+          initialize={[MockFunction]}
+          initialized={false}
+          invalid={false}
+          onFormCancel={[MockFunction]}
+          onFormSubmitSuccess={[MockFunction]}
+          pristine={false}
+          pure={true}
+          reset={[MockFunction]}
+          resetSection={[MockFunction]}
+          submit={[MockFunction]}
+          submitFailed={false}
+          submitSucceeded={false}
           submitting={false}
+          subtypeVocabId={1111}
+          touch={[MockFunction]}
+          untouch={[MockFunction]}
+          valid={true}
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -2214,7 +2051,6 @@ exports[`Component PublicationForm should render component with all fields disab
         >
           <WithStyles(Grid)
             item={true}
-            sm={6}
             xs={12}
           >
             <Field
@@ -2391,173 +2227,8 @@ exports[`Component PublicationForm should render component with all fields disab
               </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            sm={6}
-            xs={12}
-          >
-            <Field
-              component={[Function]}
-              disabled={true}
-              label="Publication subtype"
-              name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
-              required={true}
-            >
-              <WithStyles(MenuItem)
-                key="0"
-                value="Research book (original research)"
-              >
-                Research book (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="1"
-                value="Textbook"
-              >
-                Textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="2"
-                value="Edited book"
-              >
-                Edited book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="3"
-                value="Reference work, encyclopaedia, manual or handbook"
-              >
-                Reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="4"
-                value="Research book chapter (original research)"
-              >
-                Research book chapter (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="5"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="6"
-                value="Chapter in textbook"
-              >
-                Chapter in textbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="7"
-                value="Chapter in reference work, encyclopaedia, manual or handbook"
-              >
-                Chapter in reference work, encyclopaedia, manual or handbook
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="8"
-                value="Introduction, foreword, editorial or appendix"
-              >
-                Introduction, foreword, editorial or appendix
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="9"
-                value="Conference paper"
-              >
-                Conference paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="10"
-                value="Fully published paper"
-              >
-                Fully published paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="11"
-                value="Published abstract"
-              >
-                Published abstract
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="12"
-                value="Poster"
-              >
-                Poster
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="13"
-                value="Oral presentation"
-              >
-                Oral presentation
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="14"
-                value="Article (original research)"
-              >
-                Article (original research)
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="15"
-                value="Critical review of research, literature review, critical commentary"
-              >
-                Critical review of research, literature review, critical commentary
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="16"
-                value="Letter to editor, brief commentary or brief communication"
-              >
-                Letter to editor, brief commentary or brief communication
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="17"
-                value="Correction/erratum"
-              >
-                Correction/erratum
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="18"
-                value="Review of book, film, TV, video, software, performance, music etc"
-              >
-                Review of book, film, TV, video, software, performance, music etc
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="19"
-                value="Editorial"
-              >
-                Editorial
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="20"
-                value="Discussion - responses, round table/panel discussions, Q&A, reply"
-              >
-                Discussion - responses, round table/panel discussions, Q&A, reply
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="21"
-                value="Creative work"
-              >
-                Creative work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="22"
-                value="Other"
-              >
-                Other
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(Alert)
-        message="Creating new publication is in progress."
-        pushToTop={true}
-        showLoader={true}
-        title="Saving"
-        type="info_outline"
-      />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
