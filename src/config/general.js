@@ -104,6 +104,7 @@ export const publicationTypes = (components) => [
         citationComponent: components ? components.CreativeWorkCitation : null,
         formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
+        subtypeVocabId: 453639,
         hasFormComponent: true
     },
     {
@@ -127,7 +128,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        isNtro: true,
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
