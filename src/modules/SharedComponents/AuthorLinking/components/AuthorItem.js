@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import {numberToWords} from 'config';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -7,7 +8,6 @@ import {withStyles} from '@material-ui/core/styles';
 import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
 import Link from '@material-ui/icons/Link';
-const converter = require('number-to-words');
 
 const styles = (theme) => ({
     authorLinkIcon: {
@@ -50,10 +50,6 @@ export class AuthorItem extends PureComponent {
         if (this.props.onAuthorSelected) this.props.onAuthorSelected(this.props.author);
     };
 
-    _ucfirst = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
     /**
      * Get status icon for an author based on attributes
      *
@@ -74,7 +70,7 @@ export class AuthorItem extends PureComponent {
     render() {
         const {linked, author, selected, index} = this.props;
         const {suffix} = this.props.locale;
-        const authorOrder = this._ucfirst(converter.toWordsOrdinal((index + 1))) + ' ' + suffix.replace('[type]', this.props.type);
+        const authorOrder = `${numberToWords(index + 1)} ${suffix.replace('[type]', this.props.type)}`;
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;
 

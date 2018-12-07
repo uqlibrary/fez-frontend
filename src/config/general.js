@@ -1,8 +1,14 @@
 import locale from 'locale/components';
+const converter = require('number-to-words');
 
 const getValue = (value) => (
     typeof(value) !== 'undefined' && !!value ? value : null
 );
+
+export const numberToWords = (value) => {
+    const ordinal = converter.toWordsOrdinal(value);
+    return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
+};
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
