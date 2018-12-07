@@ -8,10 +8,8 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 
 import {validation} from 'config';
-import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -20,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 export default class JournalArticleForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -30,7 +28,6 @@ export default class JournalArticleForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;
-
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -76,34 +73,28 @@ export default class JournalArticleForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={PublicationSubtypeField}
-                                    name="rek_subtype"
-                                    required
-                                    disabled={this.props.submitting}
-                                    vocabId={this.props.subtypeVocabId}
-                                    className="requiredField"
-                                    locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
                         </Grid>
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Typography>{txt.authors.description}</Typography>
-                        <Field
-                            component={ContributorsEditorField}
-                            showContributorAssignment
-                            className="requiredField"
-                            name="authors"
-                            locale={txt.authors.field}
-                            disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Typography>{txt.authors.description}</Typography>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    showContributorAssignment
+                                    className="requiredField"
+                                    name="authors"
+                                    locale={txt.authors.field}
+                                    disabled={this.props.submitting}
+                                    validate={[validation.authorRequired]}/>
+                            </Grid>
+                        </Grid>
                     </StandardCard>
                 </Grid>
+
+
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

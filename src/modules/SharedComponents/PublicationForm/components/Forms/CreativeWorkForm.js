@@ -12,17 +12,15 @@ import {default as formLocale} from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
+import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import MenuItem from '@material-ui/core/MenuItem';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         subtypeVocabId: PropTypes.number,
-        isNTRO: PropTypes.bool,
-        subtype: PropTypes.string
-    };
-
-    static defaultProps = {
-        isNTRO: true,
+        isNtro: PropTypes.bool,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -30,15 +28,16 @@ export default class CreativeWorkForm extends Component {
     }
 
     render() {
-        // path to the locale data for each of the sections
         const txt = formLocale.creativeWork;
-        const subtypeInfo = txt.information.subtypeInfo.find(obj => {return obj.subtype.toLowerCase().indexOf(this.props.subtype.toLowerCase()) > -1;});
+        const subtype = !!this.props.formValues && this.props.formValues.get('rek_subtype');
+        const subtypeInfo = subtype && txt.information.subtypeInfo.find(obj => {return obj.title.toLowerCase().indexOf(subtype.toLowerCase()) > -1;});
+        const isAuthorSelected = !!this.props.formValues && this.props.formValues.get('authors') && this.props.formValues.get('authors').some((object) => {return object.selected === true;}) || false;
         return (
             <Grid container spacing={24}>
                 {
-                    this.props.isNTRO && subtypeInfo &&
+                    this.props.isNtro && subtypeInfo &&
                     <Grid item xs={12}>
-                        <Alert title={subtypeInfo.subtype} message={subtypeInfo.info} type={'info_outline'}/>
+                        <Alert {...subtypeInfo} type={'info_outline'}/>
                     </Grid>
                 }
                 <Grid item xs={12}>
@@ -115,9 +114,56 @@ export default class CreativeWorkForm extends Component {
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
                             validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
                         />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro && isAuthorSelected &&
+                    <Grid item xs={12}>
+                        <StandardCard title={'Author/Creator contribution statement'}>
+                            <Grid container spacing={8}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SelectField}
+                                        disabled={this.props.submitting}
+                                        name="impactSize"
+                                        label={'Scale/Significance of work'}
+                                        required>
+                                        <MenuItem value={'minor'}>Minor</MenuItem>
+                                        <MenuItem value={'major'}>Major</MenuItem>
+                                    </Field>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        name="impactStatement"
+                                        value={'Hello\n How are you?'}
+                                        type="text"
+                                        multiline
+                                        rows={8}
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Creator contribution statement'}
+                                        placeholder={'Type or cut and paste your impact statement here'}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                }
+                {
+                    this.props.isNtro && subtypeInfo &&
+                    <Grid item xs={12}>
+                        <StandardCard title={'NTRO metadata'}>
+                            <Grid container spacing={16}>
+                                <Grid item xs={12}>
+                                    NTRO stuffs will go here.
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

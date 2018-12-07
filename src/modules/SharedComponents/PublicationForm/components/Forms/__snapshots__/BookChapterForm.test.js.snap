@@ -101,31 +101,6 @@ exports[`BookChapterForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "label": "Publication subtype",
-                "loading": "Loading",
-              }
-            }
-            name="rek_subtype"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-            vocabId={0}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
           xs={12}
         >
           <Field
@@ -152,6 +127,13 @@ exports[`BookChapterForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": "Help text...",
+          "title": "NTRO Publication Authors/Creators/Contributors",
+        }
+      }
       title="Authors"
     >
       <Field

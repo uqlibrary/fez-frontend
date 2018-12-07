@@ -50,6 +50,29 @@ export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
+export const NTRO_SUBTYPES = [
+    'Original Creative Work - Design/Architectural Work',
+    'Original Creative Work - Textual Work',
+    'Original Creative Work - Visual Work',
+    'Original Creative Work - Musical Composition',
+    'Original Creative Work - Other',
+    'Live Performance - Music',
+    'Live Performance - Dance',
+    'Live Performance - Plays/Dramas/Theatre',
+    'Live Performance - Interarts',
+    'Live Performance - Other',
+    'Recorded or Rendered Work - Music, Dance, Theatre',
+    'Recorded or Rendered Work - Audio/Visual Recording',
+    'Recorded or Rendered Work - Digital Creative Works',
+    'Recorded or Rendered Work - Interarts',
+    'Recorded or Rendered Work - Website/Exhibition',
+    'Recorded or Rendered Work - Other',
+    'Curated or Produced Exhibition or Event - Exhibition or Event',
+    'Curated or Produced Exhibition or Event - Festival',
+    'Curated or Produced Exhibition or Event - Web Based Exhibition',
+    'Curated or Produced Exhibition or Event - Other Exhibition (Scholarly disciplines)'
+];
+
 export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
@@ -67,7 +90,18 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
         citationComponent: components ? components.BookCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Research book (original research)',
+            'Textbook',
+            'Edited book',
+            'Reference work, encyclopaedia, manual or handbook',
+            'Original Creative Work - Design/Architectural Work',
+            'Original Creative Work - Textual Work',
+            'Original Creative Work - Visual Work',
+            'Original Creative Work - Musical Composition',
+            'Original Creative Work - Other',
+        ]
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
@@ -77,7 +111,19 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
         citationComponent: components ? components.BookChapterCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Research book chapter (original research)',
+            'Critical review of research, literature review, critical commentary',
+            'Chapter in textbook',
+            'Chapter in reference work, encyclopaedia, manual or handbook',
+            'Introduction, foreword, editorial or appendix',
+            'Original Creative Work - Design/Architectural Work',
+            'Original Creative Work - Textual Work',
+            'Original Creative Work - Visual Work',
+            'Original Creative Work - Musical Composition',
+            'Original Creative Work - Other',
+        ]
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
@@ -87,7 +133,14 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Fully published paper',
+            'Published abstract',
+            'Poster',
+            'Oral presentation',
+            'Other'
+        ]
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -105,7 +158,8 @@ export const publicationTypes = (components) => [
         formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
         subtypeVocabId: 453639,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: NTRO_SUBTYPES
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -169,7 +223,21 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
         citationComponent: components ? components.JournalArticleCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Article (original research)',
+            'Critical review of research, literature review, critical commentary',
+            'Review of book, film, TV, video, software, performance, music etc',
+            'Letter to editor, brief commentary or brief communication',
+            'Correction/erratum',
+            'Editorial',
+            'Discussion - responses, round table/panel discussions, Q&A, reply',
+            'Original Creative Work - Design/Architectural Work',
+            'Original Creative Work - Textual Work',
+            'Original Creative Work - Visual Work',
+            'Original Creative Work - Musical Composition',
+            'Original Creative Work - Other'
+        ]
     },
     {
         id: PUBLICATION_TYPE_MANUSCRIPT,
@@ -421,25 +489,37 @@ export const licenses = [
     }
 ];
 
-export const NTRO_SUBTYPES = [
-    'Original Creative Work - Design/Architectural Work',
-    'Original Creative Work - Textual Work',
-    'Original Creative Work - Visual Work',
-    'Original Creative Work - Musical Composition',
-    'Original Creative Work - Other',
-    'Live Performance - Music',
-    'Live Performance - Dance',
-    'Live Performance - Plays/Dramas/Theatre',
-    'Live Performance - Interarts',
-    'Live Performance - Other',
-    'Recorded or Rendered Work - Music, Dance, Theatre',
-    'Recorded or Rendered Work - Audio/Visual Recording',
-    'Recorded or Rendered Work - Digital Creative Works',
-    'Recorded or Rendered Work - Interarts',
-    'Recorded or Rendered Work - Website/Exhibition',
-    'Recorded or Rendered Work - Other',
-    'Curated or Produced Exhibition or Event - Exhibition or Event',
-    'Curated or Produced Exhibition or Event - Festival',
-    'Curated or Produced Exhibition or Event - Web Based Exhibition',
-    'Curated or Produced Exhibition or Event - Other Exhibition (Scholarly disciplines)'
+export const orgAffiliationTypes = [
+    {
+        value: 453983,
+        text: 'Museum'
+    },
+    {
+        value: 453984,
+        text: 'Gallery'
+    },
+    {
+        value: 453985,
+        text: 'Government'
+    },
+    {
+        value: 453986,
+        text: 'NGO'
+    },
+    {
+        value: 453987,
+        text: 'Foundation'
+    },
+    {
+        value: 453988,
+        text: 'Corporate/Industry'
+    },
+    {
+        value: 453989,
+        text: 'University'
+    },
+    {
+        value: 453990,
+        text: 'Other'
+    }
 ];

@@ -12,23 +12,23 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {publicationTypes, validation} from 'config';
-import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {default as txt} from 'locale/publicationForm';
-
-import {locale} from 'locale';
 import * as recordForms from './Forms';
 
 export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         hasSubtypes: PropTypes.bool,
+        subtypes: PropTypes.array,
         needToChangeDisplayType: PropTypes.bool,
         subtypeVocabId: PropTypes.number,
         formComponent: PropTypes.func,
         disableSubmit: PropTypes.bool,
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired,
-        changeDisplayType: PropTypes.func
+        changeDisplayType: PropTypes.func,
+        resetSubtype: PropTypes.func,
+        isNtro: PropTypes.bool
     };
 
     constructor(props) {
@@ -52,6 +52,12 @@ export default class PublicationForm extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
+        }
+
+        if (nextProps.subtypes !== this.props.subtypes) {
+            this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
+                <MenuItem value={item} key={index}>{item}</MenuItem>
+            ));
         }
 
         if (nextProps.needToChangeDisplayType) {
@@ -79,6 +85,7 @@ export default class PublicationForm extends Component {
                                         name="rek_display_type"
                                         value={this.props.formValues.get('rek_display_type')}
                                         label={txt.publicationType.inputLabelText}
+                                        onChange={this.props.resetSubtype}
                                         required
                                         placeholder={txt.publicationType.hintText}>
                                         {this.publicationTypeItems}
@@ -88,14 +95,15 @@ export default class PublicationForm extends Component {
                                     this.props.hasSubtypes &&
                                     <Grid item xs={12}>
                                         <Field
-                                            component={PublicationSubtypeField}
-                                            name="rek_subtype"
+                                            component={SelectField}
                                             disabled={this.props.submitting}
-                                            vocabId={this.props.subtypeVocabId}
-                                            className="requiredField"
-                                            locale={{label: txt.publicationSubtype.inputLabelText, loading: locale.global.loading}}
-                                            validate={[validation.required]}
-                                        />
+                                            name="rek_subtype"
+                                            value={this.props.formValues.get('rek_subtype')}
+                                            label={txt.publicationSubtype.inputLabelText}
+                                            required
+                                            placeholder={txt.publicationSubtype.hintText}>
+                                            {this.publicationSubtypeItems}
+                                        </Field>
                                     </Grid>
                                 }
                             </Grid>

@@ -177,6 +177,40 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
+export const getRecordAuthorAffiliationSearchKey = (authors) => {
+    if ((!authors || authors.length === 0)) return {};
+
+    return {
+        fez_record_search_key_author_affiliation_name: authors
+            .map(
+                (item, index) => (
+                    {
+                        rek_author_affiliation_name: item.orgaff,
+                        rek_author_affiliation_name_order: index + 1
+                    }
+                )
+            )
+            .filter(item => item.rek_author_affiliation_name !== '')
+    };
+};
+
+export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
+    if ((!authors || authors.length === 0)) return {};
+
+    return {
+        fez_record_search_key_author_affiliation_type: authors
+            .map(
+                (item, index) => (
+                    {
+                        rek_author_affiliation_type: item.orgtype,
+                        rek_author_affiliation_type_order: index + 1
+                    }
+                )
+            )
+            .filter(item => item.rek_author_affiliation_type !== '')
+    };
+};
+
 /* unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
 * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}

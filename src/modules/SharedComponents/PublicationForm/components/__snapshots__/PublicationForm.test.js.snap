@@ -452,22 +452,12 @@ exports[`Component PublicationForm should render component initialised with two 
             xs={12}
           >
             <Field
-              className="requiredField"
               component={[Function]}
               disabled={false}
-              locale={
-                Object {
-                  "label": "Publication subtype",
-                  "loading": "Loading",
-                }
-              }
+              label="Publication subtype"
               name="rek_subtype"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-              vocabId={453573}
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -733,22 +723,12 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
             xs={12}
           >
             <Field
-              className="requiredField"
               component={[Function]}
               disabled={false}
-              locale={
-                Object {
-                  "label": "Publication subtype",
-                  "loading": "Loading",
-                }
-              }
+              label="Publication subtype"
               name="rek_subtype"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-              vocabId={1111}
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -1108,22 +1088,12 @@ exports[`Component PublicationForm should render component with GenericDocument 
             xs={12}
           >
             <Field
-              className="requiredField"
               component={[Function]}
               disabled={false}
-              locale={
-                Object {
-                  "label": "Publication subtype",
-                  "loading": "Loading",
-                }
-              }
+              label="Publication subtype"
               name="rek_subtype"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-              vocabId={2222}
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -1483,22 +1453,12 @@ exports[`Component PublicationForm should render component with JournalArticleFo
             xs={12}
           >
             <Field
-              className="requiredField"
               component={[Function]}
               disabled={false}
-              locale={
-                Object {
-                  "label": "Publication subtype",
-                  "loading": "Loading",
-                }
-              }
+              label="Publication subtype"
               name="rek_subtype"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-              vocabId={453573}
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -1858,22 +1818,12 @@ exports[`Component PublicationForm should render component with ResearchReportFo
             xs={12}
           >
             <Field
-              className="requiredField"
               component={[Function]}
               disabled={false}
-              locale={
-                Object {
-                  "label": "Publication subtype",
-                  "loading": "Loading",
-                }
-              }
+              label="Publication subtype"
               name="rek_subtype"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-              vocabId={1111}
+              placeholder="Select a publication subtype from the dropdown list"
+              required={true}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
