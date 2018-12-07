@@ -24,6 +24,7 @@ export default class MyRecords extends PureComponent {
         accountLoading: PropTypes.bool,
         localePages: PropTypes.object,
         thisUrl: PropTypes.string,
+        canUseExport: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -207,11 +208,11 @@ export default class MyRecords extends PureComponent {
                                             sortDirection={this.state.sortDirection}
                                             pageSize={this.state.pageSize}
                                             pagingData={pagingData}
-                                            canUseExport
                                             onSortByChanged={this.sortByChanged}
                                             onPageSizeChanged={this.pageSizeChanged}
                                             onExportPublications={this.handleExportPublications}
-                                            disabled={isLoadingOrExporting} />
+                                            canUseExport={this.props.canUseExport}
+                                            disabled={isLoadingOrExporting}/>
                                     </Grid>
                                     <Grid item xs={12}>
                                         <PublicationsListPaging

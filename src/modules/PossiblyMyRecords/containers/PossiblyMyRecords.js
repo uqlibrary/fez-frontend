@@ -7,7 +7,9 @@ import {withRouter} from 'react-router-dom';
 const mapStateToProps = (state) => {
     return {
         ...(state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer') : {}),
-        accountLoading: state && state.get('accountReducer') ? state.get('accountReducer').accountLoading : false
+        ...state.get('accountReducer'),
+        accountLoading: state && state.get('accountReducer') ? state.get('accountReducer').accountLoading : false,
+        canUseExport: state.get('accountReducer') && state.get('accountReducer').account && !!state.get('accountReducer').account.hasSession
     };
 };
 

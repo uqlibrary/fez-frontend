@@ -218,6 +218,7 @@ class SearchRecords extends PureComponent {
     };
 
     render() {
+        console.log(this.props);
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;

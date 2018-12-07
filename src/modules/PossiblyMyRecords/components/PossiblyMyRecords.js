@@ -25,6 +25,7 @@ export default class PossiblyMyRecords extends PureComponent {
         possiblePublicationsPagingData: PropTypes.object,
 
         accountLoading: PropTypes.bool,
+        canUseExport: PropTypes.bool,
 
         possibleCounts: PropTypes.number,
         loadingPossibleCounts: PropTypes.bool,
@@ -247,7 +248,9 @@ export default class PossiblyMyRecords extends PureComponent {
                                                                     onSortByChanged={this.sortByChanged}
                                                                     onPageSizeChanged={this.pageSizeChanged}
                                                                     onExportPublications={this.handleExportPublications}
-                                                                    disabled={this.props.loadingPossiblePublicationsList}/>
+                                                                    disabled={this.props.loadingPossiblePublicationsList}
+                                                                    canUseExport={this.props.canUseExport}
+                                                                />
                                                             </Grid>
                                                             <Grid item xs>
                                                                 <PublicationsListPaging
