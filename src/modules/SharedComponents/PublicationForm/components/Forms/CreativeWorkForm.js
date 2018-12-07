@@ -11,12 +11,18 @@ import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-
+import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        subtypeVocabId: PropTypes.number,
+        isNTRO: PropTypes.bool,
+        subtype: PropTypes.string
+    };
+
+    static defaultProps = {
+        isNTRO: true,
     };
 
     constructor(props) {
@@ -26,9 +32,15 @@ export default class CreativeWorkForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.creativeWork;
-
+        const subtypeInfo = txt.information.subtypeInfo.find(obj => {return obj.subtype.toLowerCase().indexOf(this.props.subtype.toLowerCase()) > -1;});
         return (
             <Grid container spacing={24}>
+                {
+                    this.props.isNTRO && subtypeInfo &&
+                    <Grid item xs={12}>
+                        <Alert title={subtypeInfo.subtype} message={subtypeInfo.info} type={'info_outline'}/>
+                    </Grid>
+                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={16}>
