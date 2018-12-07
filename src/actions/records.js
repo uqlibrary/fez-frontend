@@ -28,7 +28,9 @@ export function createNewRecord(data) {
             ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
             ...transformers.getDatasetContactDetailSearchKeys(data.contact || null),
             ...transformers.getGeographicAreaSearchKey(data.geographicArea || null),
-            ...transformers.getDatasetCreatorRolesSearchKey(data.authors || null)
+            ...transformers.getDatasetCreatorRolesSearchKey(data.authors || null),
+            ...transformers.getRecordAuthorAffiliationSearchKey(data.isNtro && data.authors || null),
+            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.isNtro && data.authors || null)
         };
 
         // delete extra form values from request object

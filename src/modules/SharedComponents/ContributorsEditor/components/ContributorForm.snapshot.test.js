@@ -7,6 +7,7 @@ function setup(testProps, isShallow = true) {
         onAdd: jest.fn(),
         showIdentifierLookup: false,
         showRoleInput: false,
+        isNtro: false,
         actions: {},
         disabled: false,
         ...testProps,
@@ -27,6 +28,11 @@ describe('Component ContributorForm', () => {
 
     it('should render display name field and role field', () => {
         const wrapper = setup({ showRoleInput: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render NTRO fields', () => {
+        const wrapper = setup({ isNtro: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

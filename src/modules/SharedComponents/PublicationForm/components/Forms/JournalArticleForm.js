@@ -17,7 +17,8 @@ import Typography from '@material-ui/core/Typography';
 
 export default class JournalArticleForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -27,7 +28,6 @@ export default class JournalArticleForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;
-
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -78,17 +78,23 @@ export default class JournalArticleForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Typography>{txt.authors.description}</Typography>
-                        <Field
-                            component={ContributorsEditorField}
-                            showContributorAssignment
-                            className="requiredField"
-                            name="authors"
-                            locale={txt.authors.field}
-                            disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Typography>{txt.authors.description}</Typography>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    showContributorAssignment
+                                    className="requiredField"
+                                    name="authors"
+                                    locale={txt.authors.field}
+                                    disabled={this.props.submitting}
+                                    validate={[validation.authorRequired]}/>
+                            </Grid>
+                        </Grid>
                     </StandardCard>
                 </Grid>
+
+
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

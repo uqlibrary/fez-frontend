@@ -103,11 +103,6 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
-            // help: {
-            //     title: 'Optional publication details',
-            //     text: 'some help',
-            //     buttonLabel: 'OK'
-            // },
             fieldLabels: {
                 volume: 'Volume',
                 issue: 'Issue',

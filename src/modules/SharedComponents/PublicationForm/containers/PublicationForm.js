@@ -103,7 +103,10 @@ const mapStateToProps = (state) => {
         subtypes: subtypes,
         needToChangeDisplayType: needToChangeDisplayType,
         formComponent: !needToChangeDisplayType && ((!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent)) || null,
-        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype)
+        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
+        initialValues: {
+            impactStatement: 'Background:\nType/paste the bacground of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.'
+        }
     };
 };
 
