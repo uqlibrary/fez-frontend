@@ -7,6 +7,7 @@ import {withStyles} from '@material-ui/core/styles';
 import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
 import Link from '@material-ui/icons/Link';
+const converter = require('number-to-words');
 
 const styles = (theme) => ({
     authorLinkIcon: {
@@ -36,7 +37,6 @@ export class AuthorItem extends PureComponent {
 
     static defaultProps = {
         locale: {
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             suffix: ' listed [type]'
         }
     };
@@ -49,6 +49,10 @@ export class AuthorItem extends PureComponent {
     _selectAuthor = () => {
         if (this.props.onAuthorSelected) this.props.onAuthorSelected(this.props.author);
     };
+
+    _ucfirst = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
     /**
      * Get status icon for an author based on attributes
@@ -69,8 +73,8 @@ export class AuthorItem extends PureComponent {
 
     render() {
         const {linked, author, selected, index} = this.props;
-        const {ordinalData, suffix} = this.props.locale;
-        const authorOrder = (index < ordinalData.length ? ordinalData[index] : (index + 1)) + ' ' + suffix.replace('[type]', this.props.type);
+        const {suffix} = this.props.locale;
+        const authorOrder = this._ucfirst(converter.toWordsOrdinal((index + 1))) + ' ' + suffix.replace('[type]', this.props.type);
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;
 
