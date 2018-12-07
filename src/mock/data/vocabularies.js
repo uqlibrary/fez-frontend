@@ -1,4 +1,6 @@
 /* eslint-disable */
+import {creativeWorkVocabIds} from './vocabulariesCreativeWork';
+
 export const vocabulariesList = {
     // book
     453581: {
@@ -773,6 +775,9 @@ export const vocabulariesList = {
                 }
             }
         ]
+    },
+    453639: {
+        ...creativeWorkVocabIds
     },
     // org units
     453703: {

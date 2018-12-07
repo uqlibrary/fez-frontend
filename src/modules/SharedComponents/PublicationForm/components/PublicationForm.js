@@ -22,11 +22,13 @@ export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         hasSubtypes: PropTypes.bool,
+        needToChangeDisplayType: PropTypes.bool,
         subtypeVocabId: PropTypes.number,
         formComponent: PropTypes.func,
         disableSubmit: PropTypes.bool,
         onFormSubmitSuccess: PropTypes.func.isRequired,
-        onFormCancel: PropTypes.func.isRequired
+        onFormCancel: PropTypes.func.isRequired,
+        changeDisplayType: PropTypes.func
     };
 
     constructor(props) {
@@ -50,6 +52,10 @@ export default class PublicationForm extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
+        }
+
+        if (nextProps.needToChangeDisplayType) {
+            this.props.changeDisplayType(nextProps.formValues.get('rek_subtype'));
         }
     }
 

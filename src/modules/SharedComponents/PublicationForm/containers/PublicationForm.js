@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector, change} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
@@ -78,12 +78,23 @@ const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
+
+    let needToChangeDisplayType = false;
+    if (!!displayType && [
+        general.PUBLICATION_TYPE_BOOK,
+        general.PUBLICATION_TYPE_BOOK_CHAPTER,
+        general.PUBLICATION_TYPE_JOURNAL_ARTICLE
+    ].includes(displayType) && !!publicationSubtype && general.NTRO_SUBTYPES.includes(publicationSubtype)) {
+        needToChangeDisplayType = true;
+    }
+
     const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
         type.id === displayType
     );
     const hasSubtypes = !!selectedPublicationType && !!selectedPublicationType[0].subtypeVocabId || false;
     const subtypeVocabId = hasSubtypes && !!selectedPublicationType && selectedPublicationType[0].subtypeVocabId || null;
     const formComponent = selectedPublicationType && selectedPublicationType[0].formComponent;
+
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
@@ -91,10 +102,20 @@ const mapStateToProps = (state) => {
         selectedPublicationType: selectedPublicationType,
         hasSubtypes: hasSubtypes,
         subtypeVocabId: subtypeVocabId,
-        formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null
+        needToChangeDisplayType: needToChangeDisplayType,
+        formComponent: !needToChangeDisplayType && ((!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent)) || null
     };
 };
 
-PublicationFormContainer = connect(mapStateToProps)(PublicationFormContainer);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeDisplayType: (subtype) => {
+            dispatch(change(FORM_NAME, 'rek_display_type', general.PUBLICATION_TYPE_CREATIVE_WORK));
+            dispatch(change(FORM_NAME, 'rek_subtype', subtype));
+        }
+    };
+};
+
+PublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationFormContainer);
 
 export default PublicationFormContainer;

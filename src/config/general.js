@@ -278,32 +278,6 @@ export const documentTypesLookup = {
     272: 'Reference entry'
 };
 
-export const publicationSubtypes = [
-    'Research book (original research)',
-    'Textbook',
-    'Edited book',
-    'Reference work, encyclopaedia, manual or handbook',
-    'Research book chapter (original research)',
-    'Critical review of research, literature review, critical commentary',
-    'Chapter in textbook',
-    'Chapter in reference work, encyclopaedia, manual or handbook',
-    'Introduction, foreword, editorial or appendix',
-    'Conference paper',
-    'Fully published paper',
-    'Published abstract',
-    'Poster',
-    'Oral presentation',
-    'Article (original research)',
-    'Critical review of research, literature review, critical commentary',
-    'Letter to editor, brief commentary or brief communication',
-    'Correction/erratum',
-    'Review of book, film, TV, video, software, performance, music etc',
-    'Editorial',
-    'Discussion - responses, round table/panel discussions, Q&A, reply',
-    'Creative work',
-    'Other',
-];
-
 export const QuickTemplates = {
     UQ_STAFF_STUDENTS_VIEW: 1,
     UQ_STAFF_STUDENTS_PRINTERY_VIEW: 6,
@@ -445,4 +419,27 @@ export const licenses = [
         value: 453702,
         text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
     }
+];
+
+export const NTRO_SUBTYPES = [
+    'Original Creative Work - Design/Architectural Work',
+    'Original Creative Work - Textual Work',
+    'Original Creative Work - Visual Work',
+    'Original Creative Work - Musical Composition',
+    'Original Creative Work - Other',
+    'Live Performance - Music',
+    'Live Performance - Dance',
+    'Live Performance - Plays/Dramas/Theatre',
+    'Live Performance - Interarts',
+    'Live Performance - Other',
+    'Recorded or Rendered Work - Music, Dance, Theatre',
+    'Recorded or Rendered Work - Audio/Visual Recording',
+    'Recorded or Rendered Work - Digital Creative Works',
+    'Recorded or Rendered Work - Interarts',
+    'Recorded or Rendered Work - Website/Exhibition',
+    'Recorded or Rendered Work - Other',
+    'Curated or Produced Exhibition or Event - Exhibition or Event',
+    'Curated or Produced Exhibition or Event - Festival',
+    'Curated or Produced Exhibition or Event - Web Based Exhibition',
+    'Curated or Produced Exhibition or Event - Other Exhibition (Scholarly disciplines)'
 ];
