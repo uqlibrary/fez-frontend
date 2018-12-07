@@ -91,19 +91,19 @@ const mapStateToProps = (state) => {
     const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
         type.id === displayType
     );
-    const hasSubtypes = !!selectedPublicationType && !!selectedPublicationType[0].subtypeVocabId || false;
-    const subtypeVocabId = hasSubtypes && !!selectedPublicationType && selectedPublicationType[0].subtypeVocabId || null;
+    const hasSubtypes = !!selectedPublicationType && !!selectedPublicationType[0].subtypes || false;
+    const subtypes = !!selectedPublicationType && selectedPublicationType[0].subtypes || null;
     const formComponent = selectedPublicationType && selectedPublicationType[0].formComponent;
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        selectedPublicationType: selectedPublicationType,
         hasSubtypes: hasSubtypes,
-        subtypeVocabId: subtypeVocabId,
+        subtypes: subtypes,
         needToChangeDisplayType: needToChangeDisplayType,
-        formComponent: !needToChangeDisplayType && ((!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent)) || null
+        formComponent: !needToChangeDisplayType && ((!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent)) || null,
+        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype)
     };
 };
 
@@ -112,7 +112,8 @@ const mapDispatchToProps = (dispatch) => {
         changeDisplayType: (subtype) => {
             dispatch(change(FORM_NAME, 'rek_display_type', general.PUBLICATION_TYPE_CREATIVE_WORK));
             dispatch(change(FORM_NAME, 'rek_subtype', subtype));
-        }
+        },
+        resetSubtype: () => dispatch(change(FORM_NAME, 'rek_subtype', null))
     };
 };
 

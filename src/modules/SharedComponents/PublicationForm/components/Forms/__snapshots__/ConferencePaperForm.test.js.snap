@@ -159,30 +159,6 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "label": "Publication subtype",
-                "loading": "Loading",
-              }
-            }
-            name="rek_subtype"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-            vocabId={0}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
             allowPartial={true}
             className="requiredHintField"
             component={[Function]}

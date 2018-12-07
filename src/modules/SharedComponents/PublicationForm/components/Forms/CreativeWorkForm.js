@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        isNtro: PropTypes.bool
     };
 
     constructor(props) {
@@ -103,6 +103,7 @@ export default class CreativeWorkForm extends Component {
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
                             validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
                         />
                     </StandardCard>
                 </Grid>
