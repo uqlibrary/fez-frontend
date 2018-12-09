@@ -17,7 +17,7 @@ export {api, generateCancelToken, cache, sessionApi} from './axios';
 export {default as theme} from './theme';
 export * as validation from './validation';
 export * as general from './general';
-export {publicationTypes} from './general';
+export {publicationTypes, numberToWords} from './general';
 export * as routes from './routes';
 export * as openAccessConfig from './openAccess';
 export {viewRecordsConfig} from './viewRecord';
