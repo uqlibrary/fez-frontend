@@ -1,5 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
+import {numberToWords} from 'config';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -76,7 +77,6 @@ export class ContributorRow extends PureComponent {
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             selectHint: 'Select this record ([name]) to assign it to you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
@@ -145,8 +145,8 @@ export class ContributorRow extends PureComponent {
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
         const {index, contributor, classes, width} = this.props;
-        const {ordinalData, suffix} = this.props.locale;
-        const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
+        const {suffix} = this.props.locale;
+        const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
             <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
