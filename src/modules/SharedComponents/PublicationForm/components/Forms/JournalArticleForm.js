@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import MenuItem from '@material-ui/core/MenuItem';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 
@@ -20,7 +22,8 @@ import Typography from '@material-ui/core/Typography';
 export default class JournalArticleForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        subtypeVocabId: PropTypes.number,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -30,7 +33,7 @@ export default class JournalArticleForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;
-
+        const isAuthorSelected = this.props.formValues.get('authors') && this.props.formValues.get('authors').some((object) => {return object.selected === true;}) || false;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -93,17 +96,56 @@ export default class JournalArticleForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Typography>{txt.authors.description}</Typography>
-                        <Field
-                            component={ContributorsEditorField}
-                            showContributorAssignment
-                            className="requiredField"
-                            name="authors"
-                            locale={txt.authors.field}
-                            disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Typography>{txt.authors.description}</Typography>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    showContributorAssignment
+                                    className="requiredField"
+                                    name="authors"
+                                    locale={txt.authors.field}
+                                    disabled={this.props.submitting}
+                                    validate={[validation.authorRequired]}/>
+                            </Grid>
+                        </Grid>
                     </StandardCard>
                 </Grid>
+                {
+                    isAuthorSelected &&
+                    <Grid item xs={12}>
+                        <StandardCard title={'Author/Creator contribution statement'}>
+                            <Grid container spacing={8}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SelectField}
+                                        disabled={this.props.submitting}
+                                        name="impactSize"
+                                        label={'Scale/Significance of work'}
+                                        required>
+                                        <MenuItem value={'minor'}>Minor</MenuItem>
+                                        <MenuItem value={'major'}>Major</MenuItem>
+                                    </Field>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        name="impactStatement"
+                                        value={'Hello\n How are you?'}
+                                        type="text"
+                                        multiline
+                                        rows={8}
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Creator contribution statement'}
+                                        placeholder={'Type or cut and paste your impact statement here'}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                }
+
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

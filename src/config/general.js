@@ -512,3 +512,38 @@ export const licenses = [
         text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
     }
 ];
+
+export const orgAffiliationTypes = [
+    {
+        value: 453983,
+        text: 'Museum'
+    },
+    {
+        value: 453984,
+        text: 'Gallery'
+    },
+    {
+        value: 453985,
+        text: 'Government'
+    },
+    {
+        value: 453986,
+        text: 'NGO'
+    },
+    {
+        value: 453987,
+        text: 'Foundation'
+    },
+    {
+        value: 453988,
+        text: 'Corporate/Industry'
+    },
+    {
+        value: 453989,
+        text: 'University'
+    },
+    {
+        value: 453990,
+        text: 'Other'
+    }
+];
