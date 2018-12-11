@@ -56,6 +56,68 @@ export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
+export const NTRO_SUBTYPE_OCW_DESIGN_ARCHITECTURAL_WORK = 'Original Creative Work - Design/Architectural Work';
+export const NTRO_SUBTYPE_OCW_TEXTUAL_WORK = 'Original Creative Work - Textual Work';
+export const NTRO_SUBTYPE_OCW_VISUAL_WORK = 'Original Creative Work - Visual Work';
+export const NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION = 'Original Creative Work - Musical Composition';
+export const NTRO_SUBTYPE_OCW_OTHER = 'Original Creative Work - Other';
+export const NTRO_SUBTYPE_LP_MUSIC = 'Live Performance - Music';
+export const NTRO_SUBTYPE_LP_DANCE = 'Live Performance - Dance';
+export const NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE = 'Live Performance - Plays/Dramas/Theatre';
+export const NTRO_SUBTYPE_LP_INTERARTS = 'Live Performance - Interarts';
+export const NTRO_SUBTYPE_LP_OTHER = 'Live Performance - Other';
+export const NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE = 'Recorded or Rendered Work - Music, Dance, Theatre';
+export const NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING = 'Recorded or Rendered Work - Audio/Visual Recording';
+export const NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS = 'Recorded or Rendered Work - Digital Creative Works';
+export const NTRO_SUBTYPE_RRW_INTERARTS = 'Recorded or Rendered Work - Interarts';
+export const NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION = 'Recorded or Rendered Work - Website/Exhibition';
+export const NTRO_SUBTYPE_RRW_OTHER = 'Recorded or Rendered Work - Other';
+export const NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT = 'Curated or Produced Exhibition or Event - Exhibition or Event';
+export const NTRO_SUBTYPE_CPEE_FESTIVAL = 'Curated or Produced Exhibition or Event - Festival';
+export const NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION = 'Curated or Produced Exhibition or Event - Web Based Exhibition';
+export const NTRO_SUBTYPE_CPEE_OTHER = 'Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)';
+export const NTRO_SUBTYPE_RREB_PUBLIC_SECTOR = 'Research Report for an External Body - Public Sector';
+export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body - Industry';
+export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
+export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
+export const NTRO_SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+
+export const CREATIVE_WORK_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_OCW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_OCW_TEXTUAL_WORK,
+    NTRO_SUBTYPE_OCW_VISUAL_WORK,
+    NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_OCW_OTHER,
+    NTRO_SUBTYPE_LP_MUSIC,
+    NTRO_SUBTYPE_LP_DANCE,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    NTRO_SUBTYPE_LP_INTERARTS,
+    NTRO_SUBTYPE_LP_OTHER,
+    NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+    NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+    NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+    NTRO_SUBTYPE_RRW_INTERARTS,
+    NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+    NTRO_SUBTYPE_RRW_OTHER,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CPEE_FESTIVAL,
+    NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    NTRO_SUBTYPE_CPEE_OTHER,
+];
+
+export const RESEARCH_REPORT_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+    NTRO_SUBTYPE_RREB_INDUSTRY,
+    NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
+    NTRO_SUBTYPE_RREB_OTHER,
+    NTRO_SUBTYPE_RR_INTERNAL_OTHER,
+];
+
+export const NTRO_SUBTYPES = [
+    ...CREATIVE_WORK_NTRO_SUBTYPES,
+    ...RESEARCH_REPORT_NTRO_SUBTYPES
+];
+
 export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
