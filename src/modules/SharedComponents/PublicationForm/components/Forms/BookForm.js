@@ -6,11 +6,14 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
+import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
+import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation} from 'config';
 import {locale} from 'locale';
+import {NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -20,7 +23,14 @@ export default class BookForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         subtypeVocabId: PropTypes.number,
-        formValues: PropTypes.object
+        formValues: PropTypes.object,
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool
+    };
+
+    static defaultProps = {
+        isNtro: false,
+        subtype: null
     };
 
     constructor(props) {
@@ -108,7 +118,9 @@ export default class BookForm extends Component {
                             locale={txt.authors.field}
                             showContributorAssignment={!editorSelected}
                             required
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -121,6 +133,42 @@ export default class BookForm extends Component {
                             disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.ntro.title} help={txt.ntro.help}>
+                            <Grid container spacing={16}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SeriesField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_series.rek_series"
+                                        {...txt.information.fieldLabels.series} />
+                                </Grid>
+                                {
+                                    this.props.subtype === NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION &&
+                                    <React.Fragment>
+                                        <Grid item xs={12}>
+                                            <Divider />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Typography>{locale.components.ismnForm.text}</Typography>
+                                            <Field
+                                                component={ListEditorField}
+                                                remindToAdd
+                                                name="fez_record_search_key_ismn"
+                                                isValid={validation.isValidIsmn}
+                                                maxCount={5}
+                                                searchKey={{value: 'rek_ismn', order: 'rek_ismn_order'}}
+                                                locale={locale.components.ismnForm.field}
+                                                disabled={this.props.submitting} />
+                                        </Grid>
+                                    </React.Fragment>
+                                }
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                }
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>

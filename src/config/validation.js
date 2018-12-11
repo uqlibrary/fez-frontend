@@ -95,6 +95,11 @@ export const isValidIsbn = subject => {
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
+export const isValidIsmn = subject => {
+    const regex = /^(?:ISMN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
+    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
+};
+
 export const isValidAuthorLink = (link) => {
     return link && link.valid ? '' : locale.validationErrors.authorLinking;
 };

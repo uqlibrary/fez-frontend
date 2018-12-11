@@ -137,6 +137,7 @@ exports[`BookForm renders  component 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        isNtro={false}
         locale={
           Object {
             "form": Object {

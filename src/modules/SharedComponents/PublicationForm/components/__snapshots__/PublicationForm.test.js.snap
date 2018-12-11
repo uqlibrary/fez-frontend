@@ -441,7 +441,9 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               "rek_display_type": 174,
             }
           }
+          isNtro={false}
           submitting={false}
+          subtype={null}
           subtypeVocabId={453581}
         />
       </WithStyles(Grid)>

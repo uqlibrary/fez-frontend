@@ -132,6 +132,10 @@ export default {
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
+                },
+                series: {
+                    floatingLabelText: 'Series',
+                    placeholder: ''
                 }
             }
         },
@@ -149,6 +153,14 @@ export default {
                 notes: 'Notes (not publicly viewable)',
                 url: 'Link (URL)'
             }
+        },
+        ntro: {
+            title: 'NTRO metadata',
+            // help: {
+            //     title: 'Non-traditional Research Output details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // }
         }
     },
     bookChapter: {

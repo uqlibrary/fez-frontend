@@ -392,6 +392,52 @@ export default {
                 }
             }
         },
+
+        ismnForm: {
+            title: 'ISMN',
+            text: 'You can add up to five ISMN values',
+            // help: {
+            //     title: 'ISMN value',
+            //     text: 'Acceptable ISMN formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISMN value',
+                        inputFieldHint: 'Type ISMN value',
+                        addButtonLabel: 'Add ISMN',
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISMN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         issnForm: {
             title: 'ISSN',
             text: 'You can add up to five ISSN values',
