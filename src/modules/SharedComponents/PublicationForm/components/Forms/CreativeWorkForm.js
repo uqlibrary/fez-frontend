@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import MenuItem from '@material-ui/core/MenuItem';
+import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
@@ -56,7 +57,7 @@ export default class CreativeWorkForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -66,7 +67,7 @@ export default class CreativeWorkForm extends Component {
                                     {...txt.information.fieldLabels.placeOfPublication}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -74,6 +75,18 @@ export default class CreativeWorkForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publisher}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="rek_doi"
+                                    type="text"
+                                    fullWidth
+                                    label={'DOI'}
+                                    placeholder={'Please enter a valid DOI.'}
+                                    validate={[validation.doi]}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -88,6 +101,16 @@ export default class CreativeWorkForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={PartialDateField}
+                                    disabled={this.props.submitting}
+                                    name="rek_end_date"
+                                    allowPartial
+                                    floatingTitle={txt.information.fieldLabels.enddate.title}
+                                    floatingTitleRequired
+                                />
+                            </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -97,6 +120,8 @@ export default class CreativeWorkForm extends Component {
                                     fullWidth
                                     rows={3}
                                     multiline
+                                    required
+                                    validate={[validation.required]}
                                     {...txt.information.fieldLabels.abstract}
                                 />
                             </Grid>
@@ -138,7 +163,6 @@ export default class CreativeWorkForm extends Component {
                                     <Field
                                         component={TextField}
                                         name="impactStatement"
-                                        value={'Hello\n How are you?'}
                                         type="text"
                                         multiline
                                         rows={8}
@@ -155,10 +179,144 @@ export default class CreativeWorkForm extends Component {
                 {
                     this.props.isNtro && subtypeInfo &&
                     <Grid item xs={12}>
-                        <StandardCard title={'NTRO metadata'}>
+                        <StandardCard title={'Non-traditional research output metadata'}>
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
-                                    NTRO stuffs will go here.
+                                    <Field
+                                        component={ListEditorField}
+                                        remindToAdd
+                                        name="fez_record_search_key_ismc"
+                                        isValid={validation.isValidIsmc}
+                                        maxCount={5}
+                                        searchKey={{value: 'rek_ismc', order: 'rek_ismc_order'}}
+                                        locale={{form: {
+                                            locale: {
+                                                inputFieldLabel: 'ISMC value',
+                                                inputFieldHint: 'eg. 979-0-XXX-XXXXX-X',
+                                                addButtonLabel: <span>Add&nbsp;ISMC</span>,
+                                                remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                                            }
+                                        }}}
+                                        disabled={this.props.submitting}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={ListEditorField}
+                                        remindToAdd
+                                        name="fez_record_search_key_isrc"
+                                        isValid={validation.isValidIsmc}
+                                        maxCount={5}
+                                        searchKey={{value: 'rek_isrc', order: 'rek_isrc_order'}}
+                                        locale={{form: {
+                                            locale: {
+                                                inputFieldLabel: 'ISRC value',
+                                                inputFieldHint: 'eg. BRBMG0300729',
+                                                addButtonLabel: <span>Add&nbsp;ISRC</span>,
+                                                remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                                            }
+                                        }}}
+                                        disabled={this.props.submitting}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={2}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_volume"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Volume'}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={2}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_issue"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Issue'}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={2}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_startpage"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Start page'}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={2}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_endpage"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'End page'}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_extent"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Extent'}
+                                        placeholder={'Enter total pages, size or duration of work'}
+                                        required
+                                        validate={[validation.required]}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_originalformat"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Physical Description'}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_audiencesize"
+                                        type="text"
+                                        fullWidth
+                                        disabled={this.props.submitting}
+                                        label={'Audience size'}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={SelectField}
+                                        disabled={this.props.submitting}
+                                        name="rek_peerreviewactivity"
+                                        label={'Peer review activity'}
+                                        multiple
+                                        required>
+                                        <MenuItem value={1}>Option 1</MenuItem>
+                                        <MenuItem value={2}>Option 2</MenuItem>
+                                        <MenuItem value={3}>Option 3</MenuItem>
+                                        <MenuItem value={4}>Option 4</MenuItem>
+                                        <MenuItem value={5}>Option 5</MenuItem>
+                                        <MenuItem value={6}>Option 6</MenuItem>
+                                    </Field>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="rek_notes"
+                                        type="text"
+                                        fullWidth
+                                        label={'Notes'}
+                                    />
                                 </Grid>
                             </Grid>
                         </StandardCard>
@@ -187,6 +345,16 @@ export default class CreativeWorkForm extends Component {
                                     fullWidth
                                     {...txt.optional.fieldLabels.url}
                                     validate={[validation.url]}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_link_description"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    label={'Link description'}
                                 />
                             </Grid>
                         </Grid>
