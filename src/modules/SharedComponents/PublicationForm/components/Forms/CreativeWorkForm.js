@@ -19,7 +19,6 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number,
         isNtro: PropTypes.bool,
         formValues: PropTypes.object
     };

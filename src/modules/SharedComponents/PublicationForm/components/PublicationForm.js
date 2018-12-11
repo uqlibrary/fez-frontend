@@ -54,7 +54,7 @@ export default class PublicationForm extends Component {
             this.props.onFormSubmitSuccess();
         }
 
-        if (nextProps.subtypes !== this.props.subtypes) {
+        if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
             this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
                 <MenuItem value={item} key={index}>{item}</MenuItem>
             ));

@@ -50,7 +50,7 @@ export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
-export const NTRO_SUBTYPES = [
+export const CREATIVE_WORK_NTRO_SUBTYPES = [
     'Original Creative Work - Design/Architectural Work',
     'Original Creative Work - Textual Work',
     'Original Creative Work - Visual Work',
@@ -71,6 +71,19 @@ export const NTRO_SUBTYPES = [
     'Curated or Produced Exhibition or Event - Festival',
     'Curated or Produced Exhibition or Event - Web Based Exhibition',
     'Curated or Produced Exhibition or Event - Other Exhibition (Scholarly disciplines)'
+];
+
+export const RESEARCH_REPORT_NTRO_SUBTYPES = [
+    'Research Report for an External Body - Public Sector',
+    'Research Report for an External Body - Industry',
+    'Research Report for an External Body - Not-for-profit',
+    'Research Report for an External Body - Other',
+    'Research Report - Internal or Other*'
+];
+
+export const NTRO_SUBTYPES = [
+    ...CREATIVE_WORK_NTRO_SUBTYPES,
+    ...RESEARCH_REPORT_NTRO_SUBTYPES
 ];
 
 export const publicationTypes = (components) => [
@@ -159,7 +172,7 @@ export const publicationTypes = (components) => [
         vocabId: 453594,
         subtypeVocabId: 453639,
         hasFormComponent: true,
-        subtypes: NTRO_SUBTYPES
+        subtypes: CREATIVE_WORK_NTRO_SUBTYPES
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -276,7 +289,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: RESEARCH_REPORT_NTRO_SUBTYPES
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,

@@ -17,7 +17,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         spacing={16}
       >
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -113,7 +113,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -405,7 +405,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         spacing={16}
       >
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -421,7 +421,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -436,7 +436,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
