@@ -487,11 +487,11 @@ export default {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Adding contributors',
-            //     text: 'Help text...',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'NTRO Publication Authors/Creators/Contributors',
+                text: 'Help text...',
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {

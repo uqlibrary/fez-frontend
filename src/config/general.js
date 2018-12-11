@@ -82,6 +82,42 @@ export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const NTRO_SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
 
+export const CREATIVE_WORK_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_OCW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_OCW_TEXTUAL_WORK,
+    NTRO_SUBTYPE_OCW_VISUAL_WORK,
+    NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_OCW_OTHER,
+    NTRO_SUBTYPE_LP_MUSIC,
+    NTRO_SUBTYPE_LP_DANCE,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    NTRO_SUBTYPE_LP_INTERARTS,
+    NTRO_SUBTYPE_LP_OTHER,
+    NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+    NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+    NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+    NTRO_SUBTYPE_RRW_INTERARTS,
+    NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+    NTRO_SUBTYPE_RRW_OTHER,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CPEE_FESTIVAL,
+    NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    NTRO_SUBTYPE_CPEE_OTHER,
+];
+
+export const RESEARCH_REPORT_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+    NTRO_SUBTYPE_RREB_INDUSTRY,
+    NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
+    NTRO_SUBTYPE_RREB_OTHER,
+    NTRO_SUBTYPE_RR_INTERNAL_OTHER,
+];
+
+export const NTRO_SUBTYPES = [
+    ...CREATIVE_WORK_NTRO_SUBTYPES,
+    ...RESEARCH_REPORT_NTRO_SUBTYPES
+];
+
 export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
@@ -474,5 +510,40 @@ export const licenses = [
     {
         value: 453702,
         text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+    }
+];
+
+export const orgAffiliationTypes = [
+    {
+        value: 453983,
+        text: 'Museum'
+    },
+    {
+        value: 453984,
+        text: 'Gallery'
+    },
+    {
+        value: 453985,
+        text: 'Government'
+    },
+    {
+        value: 453986,
+        text: 'NGO'
+    },
+    {
+        value: 453987,
+        text: 'Foundation'
+    },
+    {
+        value: 453988,
+        text: 'Corporate/Industry'
+    },
+    {
+        value: 453989,
+        text: 'University'
+    },
+    {
+        value: 453990,
+        text: 'Other'
     }
 ];

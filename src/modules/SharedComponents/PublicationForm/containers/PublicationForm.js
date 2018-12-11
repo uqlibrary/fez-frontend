@@ -76,7 +76,10 @@ const mapStateToProps = (state) => {
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        initialValues: {
+            impactStatement: 'Background:\nType/paste the bacground of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.'
+        }
     };
 };
 
