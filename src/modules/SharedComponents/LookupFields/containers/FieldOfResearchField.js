@@ -20,6 +20,7 @@ const mapStateToProps = (state, props) => {
         async: true,
         itemToString: (item) => !!item && String(item.value) || '',
         filter: props.filter || ((searchText, key) => {
+            if (searchText === '') return false;
             return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
         })
     };
@@ -39,15 +40,18 @@ const filterFoRmapStateToProps = (state, props) => {
         itemToString: (item) => !!item && String(item.value) || '',
         filter: (searchText, key) => {
             if (searchText === '') return false;
-            const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRegExp(searchText)}.*`, 'gi');
-            return testKey.test(key);
+            const textMatchKey = !!key && key.toString().toLowerCase().includes(!!searchText && searchText.toString().toLowerCase());
+            const testKey = new RegExp(/^[0-9]{4}\s.*/gi); // Only return items from the list that match this regex of 4 digits, then a space, then anything
+            return testKey.test(key.toString()) && textMatchKey;
         }
     };
 };
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (category) => dispatch(actions.loadVocabulariesList(category))
+        loadSuggestions: (category) => {
+            dispatch(actions.loadVocabulariesList(category));
+        }
     }
 );
 

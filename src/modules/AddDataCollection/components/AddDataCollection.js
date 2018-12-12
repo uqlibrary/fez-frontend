@@ -9,7 +9,7 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -205,7 +205,7 @@ export default class AddDataCollection extends Component {
                             <StandardCard title={txt.information.dataset.fieldLabels.fieldOfResearchCodes.title} help={txtFoR.help}>
                                 <Typography>{txt.information.fieldOfResearchCodes.text}</Typography>
                                 <Field
-                                    component={FilteredFieldOfResearchListField}
+                                    component={FieldOfResearchListField}
                                     name="fieldOfResearch"
                                     required
                                     validate={[validation.forRequired]}

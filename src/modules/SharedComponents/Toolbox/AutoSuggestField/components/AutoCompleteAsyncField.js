@@ -208,7 +208,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 <Paper className={classes.paper} square style={{width: this.textInputRef ? this.textInputRef.clientWidth : null}}>
                                                     {
                                                         itemsList
-                                                            .filter(suggestion => this.props.filter(inputValue, isNaN(inputValue) ? suggestion.value : suggestion.id))
+                                                            .filter(suggestion => this.props.filter(inputValue, isNaN(inputValue) ? suggestion.value : suggestion.id || suggestion.value.toString()))
                                                             .slice(0, maxResults).map((suggestion, index) => {
                                                                 return !!suggestion && this.renderSuggestion({
                                                                     suggestion,
