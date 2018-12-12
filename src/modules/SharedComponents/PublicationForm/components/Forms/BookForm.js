@@ -21,7 +21,6 @@ import Typography from '@material-ui/core/Typography';
 export default class BookForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number,
         formValues: PropTypes.object,
         subtype: PropTypes.string,
         isNtro: PropTypes.bool

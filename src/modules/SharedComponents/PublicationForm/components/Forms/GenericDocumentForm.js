@@ -16,8 +16,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default class GenericDocumentForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     };
 
     constructor(props) {

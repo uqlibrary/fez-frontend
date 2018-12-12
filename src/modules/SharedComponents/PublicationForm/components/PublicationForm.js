@@ -20,6 +20,7 @@ export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         hasSubtypes: PropTypes.bool,
+        subtype: PropTypes.string,
         subtypes: PropTypes.array,
         formComponent: PropTypes.func,
         disableSubmit: PropTypes.bool,
@@ -74,6 +75,13 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        const formProps = {
+            submitting: this.props.submitting,
+            formValues: this.props.formValues,
+            subtype: this.props.subtype,
+            isNtro: this.props.isNtro
+        };
+
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
@@ -116,7 +124,7 @@ export default class PublicationForm extends Component {
                         <React.Fragment>
                             <Grid item xs={12}>
                                 <this.props.formComponent
-                                    {...this.props}
+                                    {...formProps}
                                 />
                             </Grid>
                             <Grid item xs={12}>

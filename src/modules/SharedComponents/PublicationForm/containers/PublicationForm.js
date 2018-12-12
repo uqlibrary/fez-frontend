@@ -103,6 +103,7 @@ const mapStateToProps = (state) => {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         hasSubtypes: hasSubtypes,
         subtypes: subtypes,
+        subtype: publicationSubtype,
         formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null,
         isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
         hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
