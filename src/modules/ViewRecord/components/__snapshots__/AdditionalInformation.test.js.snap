@@ -29374,7 +29374,7 @@ exports[`Additional Information Component  should render component with referenc
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Parent publication"
+        key="additional-info-Parent work"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -29391,7 +29391,7 @@ exports[`Additional Information Component  should render component with referenc
             component="span"
             variant="body2"
           >
-            Parent publication
+            Parent work
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)

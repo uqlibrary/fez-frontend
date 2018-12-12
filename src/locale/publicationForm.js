@@ -6,9 +6,9 @@ export default {
     cancel: 'Abandon and search again',
     submit: 'Submit for approval',
     publicationType: {
-        title: 'Publication type',
-        inputLabelText: 'Publication type',
-        hintText: 'Select a publication type from the dropdown list',
+        title: 'Work type',
+        inputLabelText: 'Work type',
+        hintText: 'Select a Work type from the dropdown list',
         // help: {
         //     title: 'Publication type',
         //     text: 'Help about publication types, eg journal article, book, conference paper etc',
@@ -63,7 +63,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter URL for this publication'
+                    placeholder: 'Enter URL for this work'
                 }
             }
 
@@ -92,12 +92,17 @@ export default {
                     month: 'Month',
                     year: 'Year'
                 },
-                subtype: 'Publication subtype'
+                subtype: 'Work subtype'
             }
         },
         authors: txt.components.authors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
+            // help: {
+            //     title: 'Optional details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 volume: 'Volume',
                 issue: 'Issue',
@@ -119,7 +124,7 @@ export default {
             // },
             fieldLabels: {
                 bookTitle: 'Book title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 date: {
@@ -133,9 +138,9 @@ export default {
         authors: txt.components.authors,
         editors: txt.components.editors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Optional publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -157,7 +162,7 @@ export default {
             fieldLabels: {
                 bookChapterTitle: 'Book chapter title',
                 bookTitle: 'Book title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 date: {
@@ -171,9 +176,9 @@ export default {
         authors: txt.components.authors,
         editors: txt.components.editors,
         other: {
-            title: 'Other publication details',
+            title: 'Other work details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -200,7 +205,7 @@ export default {
                 conferenceLocation: 'Conference location',
                 conferenceDates: 'Conference dates (eg 13-15 December 2011)',
                 proceedingsTitle: 'Proceedings title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 journalName: 'Journal name',
@@ -214,9 +219,9 @@ export default {
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Other work details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -261,15 +266,15 @@ export default {
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Type total number of pages in the publication'
+                    placeholder: 'Type total number of pages'
                 }
             }
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Other work details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -284,7 +289,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -436,7 +441,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter a valid URL for this publication'
+                    placeholder: 'Enter a valid URL for this work'
                 }
             }
         },
@@ -549,9 +554,9 @@ export default {
         },
         authors: txt.components.authors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Optional publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -562,7 +567,7 @@ export default {
                 },
                 url: {
                     label: 'Link (URL)',
-                    placeholder: 'Enter URL for this publication'
+                    placeholder: 'Enter URL for this work'
                 }
             }
         }
@@ -825,9 +830,9 @@ export default {
         },
         authors: txt.components.authors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Optional publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -838,7 +843,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -880,7 +885,7 @@ export default {
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Type total number of pages in the publication'
+                    placeholder: 'Type total number of pages'
                 },
                 abstract: {
                     label: 'Abstract',
@@ -890,9 +895,9 @@ export default {
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Other details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -903,7 +908,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -955,9 +960,9 @@ export default {
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -968,7 +973,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -1020,9 +1025,9 @@ export default {
         },
         editors: txt.components.editors,
         other: {
-            title: 'Other publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -1033,7 +1038,7 @@ export default {
                 },
                 link: {
                     label: 'Link (URL)',
-                    placeholder: 'Enter URL for this publication'
+                    placeholder: 'Enter URL for this work'
                 }
             }
         }
@@ -1066,13 +1071,13 @@ export default {
     progressAlert: {
         type: 'info_outline',
         title: 'Saving',
-        message: 'Creating new publication is in progress.',
+        message: 'Creating new work is in progress.',
         showLoader: true
     },
     successAlert: {
         type: 'done',
         title: 'Success',
-        message: 'New publication has been saved successfully.'
+        message: 'New work has been saved successfully.'
     },
     thesisSubmission: {
         hdrTitle: 'Higher degree by research thesis deposit',
@@ -1349,9 +1354,9 @@ export default {
                         description: 'Use this tool to specify the geographic co-ordinates the data relates to'
                     },
                     relatedDatasets: {
-                        title: 'Related datasets/publications',
-                        inputFieldLabel: 'Dataset/publication title',
-                        inputFieldHint: 'Please type the dataset or publication title then select from the list'
+                        title: 'Related datasets/work',
+                        inputFieldLabel: 'Dataset/Work title',
+                        inputFieldHint: 'Please type the dataset or work title then select from the list'
                     }
                 }
             },

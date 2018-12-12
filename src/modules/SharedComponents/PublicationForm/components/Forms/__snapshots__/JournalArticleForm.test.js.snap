@@ -91,7 +91,7 @@ exports[`JournalArticleForm renders  component 1`] = `
             disabled={false}
             locale={
               Object {
-                "label": "Publication subtype",
+                "label": "Work subtype",
                 "loading": "Loading",
               }
             }
@@ -212,7 +212,7 @@ exports[`JournalArticleForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Optional publication details"
+      title="Optional details"
     >
       <WithStyles(Grid)
         container={true}

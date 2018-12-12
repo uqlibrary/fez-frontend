@@ -7,7 +7,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
-        "cancelButtonLabel": "Add another missing record",
+        "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(Grid)
           container={true}
@@ -18,24 +18,24 @@ exports[`Add new record should render stepper and a publication form 1`] = `
             xs={12}
           >
             <p>
-              Your record has been saved.
+              Your work has been saved.
               <br />
               <br />
-              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
             </p>
           </WithStyles(Grid)>
         </WithStyles(Grid)>,
-        "confirmationTitle": "Your record has been submitted",
+        "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
         "recordSuccessConfirmationMessage": <p>
-          Your record has been saved.
+          Your work has been saved.
           <br />
           <br />
-          Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
         </p>,
       }
     }
@@ -67,7 +67,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
   hideCancelButton={false}
   locale={
     Object {
-      "cancelButtonLabel": "Add another missing record",
+      "cancelButtonLabel": "Add another missing work",
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(Grid)
         container={true}
@@ -78,24 +78,24 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           xs={12}
         >
           <p>
-            Your record has been saved.
+            Your work has been saved.
             <br />
             <br />
-            Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+            Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
           </p>
         </WithStyles(Grid)>
       </WithStyles(Grid)>,
-      "confirmationTitle": "Your record has been submitted",
+      "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },
       "recordSuccessConfirmationMessage": <p>
-        Your record has been saved.
+        Your work has been saved.
         <br />
         <br />
-        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
       </p>,
     }
   }

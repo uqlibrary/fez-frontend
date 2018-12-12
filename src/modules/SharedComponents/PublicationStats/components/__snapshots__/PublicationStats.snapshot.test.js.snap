@@ -14,7 +14,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
         gutterBottom={true}
         variant="body2"
       >
-        eSpace publications
+        eSpace works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -63,7 +63,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <WithStyles(Typography)
         variant="body2"
       >
-        Total publications
+        Total works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -109,7 +109,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <WithStyles(Typography)
         variant="body2"
       >
-        Publication range
+        Works year range
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -201,7 +201,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <WithStyles(Typography)
         variant="body2"
       >
-        Average citation count per publication
+        Average citation count per work
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -298,7 +298,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
         gutterBottom={true}
         variant="body2"
       >
-        eSpace publications
+        eSpace works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -347,7 +347,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <WithStyles(Typography)
         variant="body2"
       >
-        Total publications
+        Total works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -393,7 +393,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <WithStyles(Typography)
         variant="body2"
       >
-        Publication range
+        Works year range
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -485,7 +485,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <WithStyles(Typography)
         variant="body2"
       >
-        Average citation count per publication
+        Average citation count per work
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -582,7 +582,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
         gutterBottom={true}
         variant="body2"
       >
-        eSpace publications
+        eSpace works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -631,7 +631,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <WithStyles(Typography)
         variant="body2"
       >
-        Total publications
+        Total works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -677,7 +677,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <WithStyles(Typography)
         variant="body2"
       >
-        Publication range
+        Works year range
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -769,7 +769,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <WithStyles(Typography)
         variant="body2"
       >
-        Average citation count per publication
+        Average citation count per work
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -866,7 +866,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
         gutterBottom={true}
         variant="body2"
       >
-        eSpace publications
+        eSpace works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -915,7 +915,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <WithStyles(Typography)
         variant="body2"
       >
-        Total publications
+        Total works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -961,7 +961,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <WithStyles(Typography)
         variant="body2"
       >
-        Publication range
+        Works year range
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1053,7 +1053,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <WithStyles(Typography)
         variant="body2"
       >
-        Average citation count per publication
+        Average citation count per work
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1156,7 +1156,7 @@ exports[`PublicationStats component should render statistics with table and data
         gutterBottom={true}
         variant="body2"
       >
-        eSpace publications
+        eSpace works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1205,7 +1205,7 @@ exports[`PublicationStats component should render statistics with table and data
       <WithStyles(Typography)
         variant="body2"
       >
-        Total publications
+        Total works
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1251,7 +1251,7 @@ exports[`PublicationStats component should render statistics with table and data
       <WithStyles(Typography)
         variant="body2"
       >
-        Publication range
+        Works year range
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1343,7 +1343,7 @@ exports[`PublicationStats component should render statistics with table and data
       <WithStyles(Typography)
         variant="body2"
       >
-        Average citation count per publication
+        Average citation count per work
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
