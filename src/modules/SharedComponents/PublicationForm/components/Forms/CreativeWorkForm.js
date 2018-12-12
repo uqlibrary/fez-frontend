@@ -11,7 +11,6 @@ import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import MenuItem from '@material-ui/core/MenuItem';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -29,17 +28,9 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         const txt = formLocale.creativeWork;
-        const subtype = !!this.props.formValues && this.props.formValues.get('rek_subtype');
-        const subtypeInfo = subtype && txt.information.subtypeInfo.find(obj => {return obj.title.toLowerCase().indexOf(subtype.toLowerCase()) > -1;});
         const isAuthorSelected = !!this.props.formValues && this.props.formValues.get('authors') && this.props.formValues.get('authors').some((object) => {return object.selected === true;}) || false;
         return (
             <Grid container spacing={24}>
-                {
-                    this.props.isNtro && subtypeInfo &&
-                    <Grid item xs={12}>
-                        <Alert {...subtypeInfo} type={'info_outline'}/>
-                    </Grid>
-                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={16}>
@@ -176,7 +167,7 @@ export default class CreativeWorkForm extends Component {
                     </Grid>
                 }
                 {
-                    this.props.isNtro && subtypeInfo &&
+                    this.props.isNtro &&
                     <Grid item xs={12}>
                         <StandardCard title="Non-traditional research output metadata">
                             <Grid container spacing={16}>
@@ -297,7 +288,6 @@ export default class CreativeWorkForm extends Component {
                                         disabled={this.props.submitting}
                                         name="rek_peerreviewactivity"
                                         label={'Peer review activity'}
-                                        multiple
                                         required>
                                         <MenuItem value={1}>Option 1</MenuItem>
                                         <MenuItem value={2}>Option 2</MenuItem>
