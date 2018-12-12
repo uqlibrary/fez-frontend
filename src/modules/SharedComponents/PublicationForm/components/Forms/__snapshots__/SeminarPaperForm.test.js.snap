@@ -233,7 +233,7 @@ exports[`SeminarPaperForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="fez_record_search_key_link[0].rek_link"
-            placeholder="Enter a valid URL for this publication"
+            placeholder="Enter a valid URL for this work"
             type="text"
             validate={
               Array [

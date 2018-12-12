@@ -2,7 +2,7 @@
 
 exports[`Component PossiblyMyRecords renders active filters 1`] = `
 <StandardPage
-  title="Claim possible publications"
+  title="Claim possible works"
 >
   <WithStyles(Grid)
     container={true}
@@ -16,15 +16,15 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
         text={
           <div>
             <p>
-              No publications were automatically matched for you to claim.
+              No works were automatically matched for you to claim.
             </p>
           </div>
         }
-        title="No matching publications found"
+        title="No matching works found"
       >
         <div>
           <p>
-            No publications were automatically matched for you to claim.
+            No works were automatically matched for you to claim.
           </p>
         </div>
       </StandardCard>
@@ -80,8 +80,8 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={false}
@@ -95,7 +95,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
 
 exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1`] = `
 <StandardPage
-  title="Claim possible publications"
+  title="Claim possible works"
 >
   <WithStyles(Alert)
     message="Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later."
@@ -114,15 +114,15 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
         text={
           <div>
             <p>
-              No publications were automatically matched for you to claim.
+              No works were automatically matched for you to claim.
             </p>
           </div>
         }
-        title="No matching publications found"
+        title="No matching works found"
       >
         <div>
           <p>
-            No publications were automatically matched for you to claim.
+            No works were automatically matched for you to claim.
           </p>
         </div>
       </StandardCard>
@@ -133,15 +133,15 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
 
 exports[`Component PossiblyMyRecords renders list of publications and counts and facets 1`] = `
 <StandardPage
-  title="Claim possible publications"
+  title="Claim possible works"
 >
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
         "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to hide selected possibly your publication from this view?",
-        "confirmationTitle": "Hide publication",
+        "confirmationMessage": "Are you sure you want to hide selected possible work from this view?",
+        "confirmationTitle": "Hide work",
       }
     }
     onAction={[Function]}
@@ -186,7 +186,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   Array [
                     Object {
                       "handleAction": [Function],
-                      "label": "Claim this publication",
+                      "label": "Claim this work",
                       "primary": true,
                     },
                     Object {
@@ -324,8 +324,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={false}
@@ -339,7 +339,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
 
 exports[`Component PossiblyMyRecords renders loading component while loading publication data 1`] = `
 <StandardPage
-  title="Claim possible publications"
+  title="Claim possible works"
 >
   <WithStyles(Grid)
     container={true}
@@ -352,7 +352,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
       item={true}
     >
       <WithStyles(InlineLoader)
-        message="Searching for possibly your publications"
+        message="Searching for possibly your works"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -369,7 +369,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
 
 exports[`Component PossiblyMyRecords renders loading screen while loading publication counts 1`] = `
 <StandardPage
-  title="Claim possible publications"
+  title="Claim possible works"
 >
   <WithStyles(Grid)
     container={true}
@@ -382,7 +382,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
       item={true}
     >
       <WithStyles(InlineLoader)
-        message="Searching for possibly your publications"
+        message="Searching for possibly your works"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -399,7 +399,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
 
 exports[`Component PossiblyMyRecords renders no results 1`] = `
 <StandardPage
-  title="Claim possible publications"
+  title="Claim possible works"
 >
   <WithStyles(Grid)
     container={true}
@@ -413,15 +413,15 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
         text={
           <div>
             <p>
-              No publications were automatically matched for you to claim.
+              No works were automatically matched for you to claim.
             </p>
           </div>
         }
-        title="No matching publications found"
+        title="No matching works found"
       >
         <div>
           <p>
-            No publications were automatically matched for you to claim.
+            No works were automatically matched for you to claim.
           </p>
         </div>
       </StandardCard>

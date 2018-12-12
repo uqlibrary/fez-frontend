@@ -61,8 +61,8 @@ exports[`Dashboard test does render latest and trending publications tabs correc
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -88,12 +88,12 @@ exports[`Dashboard test does render latest and trending publications tabs correc
         >
           <WithStyles(Tab)
             key="1"
-            label="My publications"
+            label="My works"
             value={1}
           />
           <WithStyles(Tab)
             key="2"
-            label="My trending publications"
+            label="My trending works"
             value={2}
           />
         </WithStyles(Tabs)>
@@ -192,8 +192,8 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -219,7 +219,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
         >
           <WithStyles(Tab)
             key="1"
-            label="My publications"
+            label="My works"
             value={1}
           />
         </WithStyles(Tabs)>
@@ -307,8 +307,8 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -324,7 +324,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           className="barChart"
           customBackgroundColor="#1e7d94"
           customTitleColor="#FFFFFF"
-          title="eSpace publications per year"
+          title="eSpace works per year"
         >
           <AuthorsPublicationsPerYearChart
             categories={
@@ -604,7 +604,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           customTitleColor="#FFFFFF"
           fullHeight={true}
           noPadding={true}
-          title="Publication types overview"
+          title="Work types overview"
         >
           <AuthorsPublicationTypesCountChart
             className="donutChart"
@@ -633,7 +633,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                       1,
                     ],
                   ],
-                  "name": "Publication types overview",
+                  "name": "Work types overview",
                 },
               ]
             }
@@ -706,8 +706,8 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -733,7 +733,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
         >
           <WithStyles(Tab)
             key="2"
-            label="My trending publications"
+            label="My trending works"
             value={2}
           />
         </WithStyles(Tabs)>
@@ -880,8 +880,8 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -1007,8 +1007,8 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -1088,8 +1088,8 @@ exports[`Dashboard test renders dashboard header only 1`] = `
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Add a publication"
-          message="We found nothing new for you to claim, but you may add a publication any time."
+          actionButtonLabel="Add a missing work"
+          message="We found nothing new for you to claim, but you may add a work any time."
           title="Add your work to eSpace"
           type="info_outline"
         />
@@ -1160,9 +1160,9 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="Claim your publications now"
+          actionButtonLabel="Claim your works now"
           allowDismiss={true}
-          message="We have found 5 record(s) that could possibly be your work."
+          message="We have found 5 record(s) that could possibly be your works."
           title="Claim now!"
           type="info_outline"
         />
