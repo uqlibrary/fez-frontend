@@ -10,14 +10,14 @@ export default {
             eraJournalListed: '(ERA [year] Journal(s) Listed)'
         },
         sections: {
-            publicationDetails: 'Publication details',
+            publicationDetails: 'Type & Collection',
             grantInformation: 'Grant information',
             additionalInformation: {
                 title: 'Additional information',
                 licenseLinkText: 'View license details'
             },
             relatedPublications: {
-                title: 'Related publications and datasets',
+                title: 'Related works and datasets',
                 depositedBy: 'deposited',
                 currentRecord: 'Current Record'
             },
@@ -149,8 +149,8 @@ export default {
                 fez_record_search_key_acknowledgements: 'Acknowledgements',
                 fez_record_search_key_advisory_statement: 'Advisory statement',
                 fez_record_search_key_report_number: 'Report number',
-                fez_record_search_key_parent_publication: 'Parent publication',
-                fez_record_search_key_related_publications: 'Related publications',
+                fez_record_search_key_parent_publication: 'Parent work',
+                fez_record_search_key_related_publications: 'Related works',
                 fez_record_search_key_time_period_start_date: 'Time coverage start date',
                 fez_record_search_key_time_period_end_date: 'Time coverage end date',
                 fez_record_search_key_start_date: 'Collection start date',
@@ -182,7 +182,7 @@ export default {
                     fez_record_search_key_grant_text: 'Grant text'
                 },
                 publicationDetails: {
-                    rek_display_type: 'Publication type',
+                    rek_display_type: 'Type of work',
                     rek_subtype: 'Sub-type',
                     fez_record_search_key_ismemberof: 'Collections'
                 }

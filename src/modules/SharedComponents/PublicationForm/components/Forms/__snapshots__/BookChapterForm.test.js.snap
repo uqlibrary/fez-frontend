@@ -467,7 +467,7 @@ exports[`BookChapterForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Other work details"
     >
       <WithStyles(Grid)
         container={true}
