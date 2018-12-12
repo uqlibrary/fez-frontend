@@ -418,7 +418,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Optional details"
     >
       <WithStyles(Grid)
         container={true}
@@ -449,7 +449,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
-            placeholder="Enter URL for this publication"
+            placeholder="Enter URL for this work"
             type="text"
             validate={
               Array [

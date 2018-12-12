@@ -6,6 +6,7 @@ import {createNewRecord} from 'actions';
 import {general, publicationTypes} from 'config';
 import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
 
 import * as recordForms from '../components/Forms';
 
@@ -70,6 +71,7 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
+
 })(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
 const selector = formValueSelector(FORM_NAME);
@@ -79,21 +81,21 @@ const mapStateToProps = (state) => {
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
 
-    let needToChangeDisplayType = false;
-    if (!!displayType && [
-        general.PUBLICATION_TYPE_BOOK,
-        general.PUBLICATION_TYPE_BOOK_CHAPTER,
-        general.PUBLICATION_TYPE_JOURNAL_ARTICLE
-    ].includes(displayType) && !!publicationSubtype && general.NTRO_SUBTYPES.includes(publicationSubtype)) {
-        needToChangeDisplayType = true;
+    let hasDefaultDocTypeSubType = false;
+    let docTypeSubTypeCombo = null;
+
+    if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
+        hasDefaultDocTypeSubType = true;
+        docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
     }
 
     const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
         type.id === displayType
     );
-    const hasSubtypes = !!selectedPublicationType && !!selectedPublicationType[0].subtypes || false;
-    const subtypes = !!selectedPublicationType && selectedPublicationType[0].subtypes || null;
-    const formComponent = selectedPublicationType && selectedPublicationType[0].formComponent;
+
+    const hasSubtypes = !!selectedPublicationType && selectedPublicationType.length > 0 && !!selectedPublicationType[0].subtypes || false;
+    const subtypes = !!selectedPublicationType && selectedPublicationType.length > 0 && selectedPublicationType[0].subtypes || null;
+    const formComponent = selectedPublicationType && selectedPublicationType.length > 0 && selectedPublicationType[0].formComponent;
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
@@ -101,9 +103,10 @@ const mapStateToProps = (state) => {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         hasSubtypes: hasSubtypes,
         subtypes: subtypes,
-        needToChangeDisplayType: needToChangeDisplayType,
-        formComponent: !needToChangeDisplayType && ((!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent)) || null,
+        formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null,
         isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
+        hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
+        docTypeSubTypeCombo: docTypeSubTypeCombo,
         initialValues: {
             impactStatement: 'Background:\nType/paste the bacground of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.',
         }
@@ -112,11 +115,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeDisplayType: (subtype) => {
-            dispatch(change(FORM_NAME, 'rek_display_type', general.PUBLICATION_TYPE_CREATIVE_WORK));
-            dispatch(change(FORM_NAME, 'rek_subtype', subtype));
+        changeDisplayType: (docTypeSubType) => {
+            dispatch(change(FORM_NAME, 'rek_display_type', docTypeSubType.docTypeId));
+            dispatch(change(FORM_NAME, 'rek_subtype', docTypeSubType.subtype));
         },
-        resetSubtype: () => dispatch(change(FORM_NAME, 'rek_subtype', null))
     };
 };
 

@@ -258,7 +258,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Optional details"
     >
       <WithStyles(Grid)
         container={true}
@@ -295,7 +295,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Type URL for this publication"
+            placeholder="Type URL for this work"
             type="text"
             validate={
               Array [

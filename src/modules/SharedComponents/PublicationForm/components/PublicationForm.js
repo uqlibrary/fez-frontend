@@ -14,21 +14,21 @@ import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPr
 import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
 import * as recordForms from './Forms';
+import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
 
 export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         hasSubtypes: PropTypes.bool,
         subtypes: PropTypes.array,
-        needToChangeDisplayType: PropTypes.bool,
-        subtypeVocabId: PropTypes.number,
         formComponent: PropTypes.func,
         disableSubmit: PropTypes.bool,
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired,
         changeDisplayType: PropTypes.func,
-        resetSubtype: PropTypes.func,
-        isNtro: PropTypes.bool
+        isNtro: PropTypes.bool,
+        hasDefaultDocTypeSubType: PropTypes.bool,
+        docTypeSubTypeCombo: PropTypes.object
     };
 
     constructor(props) {
@@ -45,7 +45,10 @@ export default class PublicationForm extends Component {
                 return item.hasFormComponent;
             }).map((item, index) => {
                 return <MenuItem value={item.id} key={index} disabled={!item.formComponent}>{item.name}</MenuItem>;
-            })
+            }),
+            ...NEW_DOCTYPES_OPTIONS.map((item, index) => (
+                <MenuItem value={item} key={`ntro-${index}`}>{!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}</MenuItem>
+            ))
         ];
     }
 
@@ -60,8 +63,8 @@ export default class PublicationForm extends Component {
             ));
         }
 
-        if (nextProps.needToChangeDisplayType) {
-            this.props.changeDisplayType(nextProps.formValues.get('rek_subtype'));
+        if (nextProps.hasDefaultDocTypeSubType) {
+            this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
         }
     }
 
@@ -85,14 +88,13 @@ export default class PublicationForm extends Component {
                                         name="rek_display_type"
                                         value={this.props.formValues.get('rek_display_type')}
                                         label={txt.publicationType.inputLabelText}
-                                        onChange={this.props.resetSubtype}
                                         required
                                         placeholder={txt.publicationType.hintText}>
                                         {this.publicationTypeItems}
                                     </Field>
                                 </Grid>
                                 {
-                                    this.props.hasSubtypes &&
+                                    (this.props.hasSubtypes || this.props.hasDefaultDocTypeSubType) &&
                                     <Grid item xs={12}>
                                         <Field
                                             component={SelectField}

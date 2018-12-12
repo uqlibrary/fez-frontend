@@ -1,15 +1,14 @@
 import React from 'react';
 import {default as txt} from './components';
 import {fileUploaderLocale, CLOSED_ACCESS_ID} from 'modules/SharedComponents/Toolbox/FileUploader';
-import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 
 export default {
     cancel: 'Abandon and search again',
     submit: 'Submit for approval',
     publicationType: {
-        title: 'Publication type',
-        inputLabelText: 'Publication type',
-        hintText: 'Select a publication type from the dropdown list',
+        title: 'Work type',
+        inputLabelText: 'Work type',
+        hintText: 'Select a Work type from the dropdown list',
         // help: {
         //     title: 'Publication type',
         //     text: 'Help about publication types, eg journal article, book, conference paper etc',
@@ -69,7 +68,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter URL for this publication'
+                    placeholder: 'Enter URL for this work'
                 }
             }
 
@@ -98,12 +97,17 @@ export default {
                     month: 'Month',
                     year: 'Year'
                 },
-                subtype: 'Publication subtype'
+                subtype: 'Work subtype'
             }
         },
         authors: txt.components.authors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
+            // help: {
+            //     title: 'Optional details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 volume: 'Volume',
                 issue: 'Issue',
@@ -125,7 +129,7 @@ export default {
             // },
             fieldLabels: {
                 bookTitle: 'Book title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 date: {
@@ -139,9 +143,9 @@ export default {
         authors: txt.components.authors,
         editors: txt.components.editors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Optional publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -163,7 +167,7 @@ export default {
             fieldLabels: {
                 bookChapterTitle: 'Book chapter title',
                 bookTitle: 'Book title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 date: {
@@ -177,9 +181,9 @@ export default {
         authors: txt.components.authors,
         editors: txt.components.editors,
         other: {
-            title: 'Other publication details',
+            title: 'Other work details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -206,7 +210,7 @@ export default {
                 conferenceLocation: 'Conference location',
                 conferenceDates: 'Conference dates (eg 13-15 December 2011)',
                 proceedingsTitle: 'Proceedings title',
-                subtype: 'Publication subtype',
+                subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
                 journalName: 'Journal name',
@@ -220,9 +224,9 @@ export default {
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Other work details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -267,15 +271,15 @@ export default {
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Type total number of pages in the publication'
+                    placeholder: 'Type total number of pages'
                 }
             }
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Other work details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -290,7 +294,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -442,7 +446,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter a valid URL for this publication'
+                    placeholder: 'Enter a valid URL for this work'
                 }
             }
         },
@@ -555,9 +559,9 @@ export default {
         },
         authors: txt.components.authors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Optional publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -568,7 +572,7 @@ export default {
                 },
                 url: {
                     label: 'Link (URL)',
-                    placeholder: 'Enter URL for this publication'
+                    placeholder: 'Enter URL for this work'
                 }
             }
         }
@@ -576,28 +580,6 @@ export default {
     creativeWork: {
         information: {
             title: 'Creative work information',
-            subtypeInfo: [
-                {title: 'Original Creative Work - Design/Architectural Work', message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Original Creative Work - Textual Work',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Original Creative Work - Visual Work',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Original Creative Work - Musical Composition',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Original Creative Work - Other',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Live Performance - Music',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Live Performance - Dance',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Live Performance - Plays/Dramas/Theatre',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Live Performance - Interarts',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Live Performance - Other',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Recorded or Rendered Work - Music, Dance, Theatre',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Recorded or Rendered Work - Audio/Visual Recording',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Recorded or Rendered Work - Digital Creative Works',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Recorded or Rendered Work - Interarts',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Recorded or Rendered Work - Website/Exhibition',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Recorded or Rendered Work - Other',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Curated or Produced Exhibition or Event - Exhibition or Event',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Curated or Produced Exhibition or Event - Festival',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Curated or Produced Exhibition or Event - Web Based Exhibition',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-                {title: 'Curated or Produced Exhibition or Event - Other Exhibition (Scholarly disciplines)',  message: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar dolor sit amet finibus cursus. Sed pretium quam sit amet justo porttitor dictum. Nullam ac tincidunt odio. Nunc et efficitur elit. Nam ac massa nisl. Nunc lacus tortor, dapibus et convallis in, molestie a justo. Mauris sit amet tellus faucibus, rutrum ligula id, tempor magna. <ExternalLink style={{color: 'inherit'}} href={'http://www.google.com'} >Learn more</ExternalLink></span>},
-            ],
             fieldLabels: {
                 articleTitle: {
                     label: 'Title',
@@ -854,9 +836,9 @@ export default {
         },
         authors: txt.components.authors,
         optional: {
-            title: 'Optional publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Optional publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -867,7 +849,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -909,7 +891,7 @@ export default {
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Type total number of pages in the publication'
+                    placeholder: 'Type total number of pages'
                 },
                 abstract: {
                     label: 'Abstract',
@@ -919,9 +901,9 @@ export default {
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Other details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -932,7 +914,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -984,9 +966,9 @@ export default {
         },
         authors: txt.components.authors,
         other: {
-            title: 'Other publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -997,7 +979,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this publication'
+                    placeholder: 'Type URL for this work'
                 }
             }
         }
@@ -1049,9 +1031,9 @@ export default {
         },
         editors: txt.components.editors,
         other: {
-            title: 'Other publication details',
+            title: 'Optional details',
             // help: {
-            //     title: 'Other publication details',
+            //     title: 'Optional details',
             //     text: 'some help',
             //     buttonLabel: 'OK'
             // },
@@ -1062,7 +1044,7 @@ export default {
                 },
                 link: {
                     label: 'Link (URL)',
-                    placeholder: 'Enter URL for this publication'
+                    placeholder: 'Enter URL for this work'
                 }
             }
         }
@@ -1095,13 +1077,13 @@ export default {
     progressAlert: {
         type: 'info_outline',
         title: 'Saving',
-        message: 'Creating new publication is in progress.',
+        message: 'Creating new work is in progress.',
         showLoader: true
     },
     successAlert: {
         type: 'done',
         title: 'Success',
-        message: 'New publication has been saved successfully.'
+        message: 'New work has been saved successfully.'
     },
     thesisSubmission: {
         hdrTitle: 'Higher degree by research thesis deposit',
@@ -1378,9 +1360,9 @@ export default {
                         description: 'Use this tool to specify the geographic co-ordinates the data relates to'
                     },
                     relatedDatasets: {
-                        title: 'Related datasets/publications',
-                        inputFieldLabel: 'Dataset/publication title',
-                        inputFieldHint: 'Please type the dataset or publication title then select from the list'
+                        title: 'Related datasets/work',
+                        inputFieldLabel: 'Dataset/Work title',
+                        inputFieldHint: 'Please type the dataset or work title then select from the list'
                     }
                 }
             },
