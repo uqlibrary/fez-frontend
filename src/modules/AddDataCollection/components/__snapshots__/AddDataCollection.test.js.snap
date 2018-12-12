@@ -967,7 +967,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Related datasets/publications"
+          title="Related datasets/work"
         >
           <Field
             component={[Function]}
@@ -976,9 +976,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Please type the dataset or publication title then select from the list",
-                  "inputFieldLabel": "Dataset/publication title",
-                  "title": "Related datasets/publications",
+                  "inputFieldHint": "Please type the dataset or work title then select from the list",
+                  "inputFieldLabel": "Dataset/Work title",
+                  "title": "Related datasets/work",
                 },
               }
             }
