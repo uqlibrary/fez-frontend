@@ -12,7 +12,7 @@ import DeleteForever from '@material-ui/icons/DeleteForever';
 import People from '@material-ui/icons/People';
 import {withStyles} from '@material-ui/core/styles';
 
-export class LinkedFieldHeader extends PureComponent {
+export class GrantListEditorHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
@@ -124,4 +124,4 @@ const styles = () => ({
     }
 });
 
-export default withStyles(styles)(LinkedFieldHeader);
+export default withStyles(styles)(GrantListEditorHeader);

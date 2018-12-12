@@ -51,7 +51,7 @@ const styles = (theme) => ({
     }
 });
 
-export class LinkedFieldRow extends PureComponent {
+export class GrantListEditorRow extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         contributor: PropTypes.object.isRequired,
@@ -268,4 +268,4 @@ export class LinkedFieldRow extends PureComponent {
     }
 }
 
-export default withStyles(styles)(withWidth()(LinkedFieldRow));
+export default withStyles(styles)(withWidth()(GrantListEditorRow));

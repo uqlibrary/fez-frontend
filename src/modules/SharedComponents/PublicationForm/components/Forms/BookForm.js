@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
-
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {validation} from 'config';
 import {locale} from 'locale';
@@ -39,6 +38,16 @@ export default class BookForm extends Component {
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={16}>
                             <Grid item xs={12}>
+                                <Field
+                                    component={GrantListEditorField}
+                                    name="testing"
+                                    locale={{title: 'Grant information',
+                                        description: 'Please provide a list of authors and then select your name from the list.',
+                                        descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
+                                    }}
+                                    disabled={this.props.submitting}
+                                />
+
                                 <Field
                                     component={TextField}
                                     autoFocus

@@ -21,6 +21,18 @@ exports[`BookForm renders  component 1`] = `
           xs={12}
         >
           <Field
+            component={[Function]}
+            disabled={false}
+            locale={
+              Object {
+                "description": "Please provide a list of authors and then select your name from the list.",
+                "descriptionAuthorOrEditor": "Please provide a list of authors and then select your name once from the list of authors or editors.",
+                "title": "Grant information",
+              }
+            }
+            name="testing"
+          />
+          <Field
             autoFocus={true}
             component={[Function]}
             disabled={false}

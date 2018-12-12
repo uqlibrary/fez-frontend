@@ -3,21 +3,17 @@ import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
-import ContributorRowHeader from './ContributorRowHeader';
-import ContributorRow from './ContributorRow';
-import ContributorForm from './ContributorForm';
+import GrantListEditorRowHeader from './GrantListEditorHeader';
+import GrantListEditorRow from './GrantListEditorRow';
+import GrantListEditorForm from './GrantListEditorForm';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-export class LinkedFieldEditor extends PureComponent {
+export class GrantListEditor extends PureComponent {
     static propTypes = {
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        isNtro: PropTypes.bool,
         disabled: PropTypes.bool,
         meta: PropTypes.object,
         author: PropTypes.object,
@@ -28,16 +24,7 @@ export class LinkedFieldEditor extends PureComponent {
         required: PropTypes.bool
     };
 
-    static defaultProps = {
-        showIdentifierLookup: false,
-        showRoleInput: false,
-        showContributorAssignment: false,
-        isNtro: false,
-        locale: {
-            errorTitle: 'Error',
-            errorMessage: 'Unable to add an item with the same identifier.'
-        }
-    };
+    static defaultProps = {};
 
     constructor(props) {
         super(props);
@@ -138,11 +125,11 @@ export class LinkedFieldEditor extends PureComponent {
     };
 
     render() {
-        const {classes, showIdentifierLookup, showContributorAssignment, disabled, showRoleInput, required, isNtro} = this.props;
+        const {classes, disabled, required} = this.props;
         const {contributors, isCurrentAuthorSelected, errorMessage} = this.state;
 
         const renderContributorsRows = contributors.map((contributor, index) => (
-            <ContributorRow
+            <GrantListEditorRow
                 key={`ContributorRow_${index}`}
                 index={index}
                 disabled={disabled}
@@ -153,9 +140,6 @@ export class LinkedFieldEditor extends PureComponent {
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
                 onContributorAssigned={this.assignContributor}
-                showIdentifierLookup={showIdentifierLookup}
-                showRoleInput={showRoleInput}
-                showContributorAssignment={showContributorAssignment}
                 contributorSuffix={this.props.locale.contributorSuffix}
                 disabledContributorAssignment={isCurrentAuthorSelected}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
@@ -184,14 +168,10 @@ export class LinkedFieldEditor extends PureComponent {
                         message={errorMessage}
                         type="warning" />
                 }
-                <ContributorForm
+                <GrantListEditorForm
                     onAdd={this.addContributor}
                     required={required}
                     disabled={disabled}
-                    showRoleInput={showRoleInput}
-                    showIdentifierLookup={showIdentifierLookup}
-                    showContributorAssignment={showContributorAssignment}
-                    isNtro={isNtro}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                 />
                 {
@@ -199,14 +179,10 @@ export class LinkedFieldEditor extends PureComponent {
                     <Grid container spacing={8}>
                         <Grid item xs={12}>
                             <List>
-                                <ContributorRowHeader
+                                <GrantListEditorRowHeader
                                     onDeleteAll={this.deleteAllContributors}
                                     disabled={disabled}
                                     isInfinite={contributors.length > 3}
-                                    isNtro={isNtro}
-                                    showRoleInput={showRoleInput}
-                                    showIdentifierLookup={showIdentifierLookup}
-                                    showContributorAssignment={showContributorAssignment}
                                     {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                                 />
                             </List>
@@ -253,4 +229,4 @@ const styles = () => ({
 export default compose(
     withStyles(styles),
     connect(mapStateToProps)
-)(LinkedFieldEditor);
+)(GrantListEditor);
