@@ -1,12 +1,16 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions/authors';
+import {grantTypes} from 'config/general';
 
 export class GrantListEditorForm extends PureComponent {
     static propTypes = {
@@ -46,7 +50,7 @@ export class GrantListEditorForm extends PureComponent {
         };
     }
 
-    _addContributor = (event) => {
+    _addGrant = (event) => {
         if(
             this.props.disabled ||
             (event && event.key && (
@@ -90,7 +94,7 @@ export class GrantListEditorForm extends PureComponent {
             <React.Fragment>
                 {this.props.locale.description}
                 <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'} style={{marginTop: 8}}>
-                    <Grid item xs={12} sm={4} >
+                    <Grid item xs={12} sm>
                         <TextField
                             fullWidth
                             id="GrantName"
@@ -98,14 +102,13 @@ export class GrantListEditorForm extends PureComponent {
                             placeholder={this.props.locale.GrantNameHint}
                             value={this.state.GrantName}
                             onChange={this._onNameChanged}
-                            onKeyPress={this._addContributor}
                             disabled={disabled}
                             required={this.props.required}
                             autoComplete="off"
                             error={!this.state.GrantName}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={4} >
+                    <Grid item xs={12} sm={3} >
                         <TextField
                             fullWidth
                             id="GrantID"
@@ -113,35 +116,34 @@ export class GrantListEditorForm extends PureComponent {
                             placeholder={this.props.locale.GrantIDHint}
                             value={this.state.GrantID}
                             onChange={this._onIDChanged}
-                            onKeyPress={this._addContributor}
                             disabled={disabled || this.state.GrantName.trim().length === 0}
-                            required={this.props.required}
-                            autoComplete="off"
+                            required
                             error={!this.state.GrantName}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={4} >
-                        <TextField
-                            fullWidth
-                            id="GrantType"
-                            label={this.props.locale.GrantType}
-                            placeholder={this.props.locale.GrantTypeHint}
-                            value={this.state.GrantType}
-                            onChange={this._onTypeChanged}
-                            onKeyPress={this._addContributor}
-                            disabled={disabled || this.state.GrantName.trim().length === 0}
-                            required={this.props.required}
-                            autoComplete="off"
-                            error={!this.state.GrantName}
-                        />
+                    <Grid item xs={12} sm={3} >
+                        <FormControl fullWidth>
+                            <InputLabel>{this.props.locale.GrantType}</InputLabel>
+                            <Select
+                                label={this.props.locale.GrantType}
+                                placeholder={this.props.locale.GrantTypeHint}
+                                value={this.state.GrantType}
+                                onChange={this._onTypeChanged}
+                                disabled={disabled || this.state.GrantName.trim().length === 0 || this.state.GrantID.trim().length === 0}
+                                required
+                            >
+                                <MenuItem value={''} disabled>{this.props.locale.GrantTypeHint}</MenuItem>
+                                {grantTypes.map((item, index) => <MenuItem value={item} key={index}>{item}</MenuItem>)}
+                            </Select>
+                        </FormControl>
                     </Grid>
-                    <Grid item xs={12} style={{marginBottom: 8}}>
+                    <Grid item xs={3} sm={'auto'}>
                         <Button
                             variant="contained"
                             fullWidth
                             color="primary"
                             disabled={disabled || this.state.GrantName.trim().length === 0}
-                            onClick={this._addContributor}
+                            onClick={this._addGrant}
                         >
                             {this.props.locale.addButton}
                         </Button>

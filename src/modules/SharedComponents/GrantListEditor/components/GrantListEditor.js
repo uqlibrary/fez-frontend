@@ -140,7 +140,6 @@ export class GrantListEditor extends PureComponent {
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
                 onContributorAssigned={this.assignContributor}
-                contributorSuffix={this.props.locale.contributorSuffix}
                 disabledContributorAssignment={isCurrentAuthorSelected}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
             />

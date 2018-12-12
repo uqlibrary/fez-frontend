@@ -61,6 +61,7 @@ export default class PublicationForm extends Component {
     };
 
     render() {
+        console.log(this.props.formValues);
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;

@@ -40,11 +40,7 @@ export default class BookForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={GrantListEditorField}
-                                    name="testing"
-                                    locale={{title: 'Grant information',
-                                        description: 'Please provide a list of authors and then select your name from the list.',
-                                        descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
-                                    }}
+                                    name="grantInfo"
                                     disabled={this.props.submitting}
                                 />
 

@@ -371,6 +371,17 @@ export const documentTypesLookup = {
     272: 'Reference entry'
 };
 
+export const grantTypes = [
+    'Museum',
+    'Gallery',
+    'Government',
+    'NGO',
+    'Foundation',
+    'Corporate/Industry',
+    'University',
+    'Other',
+];
+
 export const publicationSubtypes = [
     'Research book (original research)',
     'Textbook',
