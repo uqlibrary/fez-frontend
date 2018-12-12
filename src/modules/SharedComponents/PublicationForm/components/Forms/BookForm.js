@@ -9,7 +9,6 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation} from 'config';
 import {locale} from 'locale';
@@ -84,18 +83,7 @@ export default class BookForm extends Component {
                                     label={txt.information.fieldLabels.publisher}
                                     validate={[validation.required]} />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PublicationSubtypeField}
-                                    fullWidth
-                                    name="rek_subtype"
-                                    disabled={this.props.submitting}
-                                    vocabId={this.props.subtypeVocabId}
-                                    className="requiredField"
-                                    locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
-                                    validate={[validation.required]} />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}

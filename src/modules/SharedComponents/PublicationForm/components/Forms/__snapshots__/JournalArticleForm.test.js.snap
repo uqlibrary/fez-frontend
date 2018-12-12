@@ -81,30 +81,6 @@ exports[`JournalArticleForm renders  component 1`] = `
             }
           />
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "label": "Publication subtype",
-                "loading": "Loading",
-              }
-            }
-            name="rek_subtype"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-            vocabId={0}
-          />
-        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>

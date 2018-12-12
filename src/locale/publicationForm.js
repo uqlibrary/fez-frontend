@@ -15,6 +15,11 @@ export default {
         //     buttonLabel: 'OK'
         // }
     },
+    publicationSubtype: {
+        title: 'Publication subtype',
+        inputLabelText: 'Publication subtype',
+        hintText: 'Select a publication subtype from the dropdown list',
+    },
     generic: {
         information: {
             title: 'Generic document information',
@@ -582,11 +587,6 @@ export default {
     creativeWork: {
         information: {
             title: 'Creative work information',
-            // help: {
-            //     title: 'Creative work information',
-            //     text: 'some help',
-            //     buttonLabel: 'OK'
-            // },
             fieldLabels: {
                 articleTitle: {
                     label: 'Title',

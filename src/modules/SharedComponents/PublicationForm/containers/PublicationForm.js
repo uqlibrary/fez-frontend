@@ -1,11 +1,13 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
-import {general} from 'config';
+import {general, publicationTypes} from 'config';
 import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+
+import * as recordForms from '../components/Forms';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -70,15 +72,30 @@ let PublicationFormContainer = reduxForm({
     onSubmit
 })(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
+const selector = formValueSelector(FORM_NAME);
+
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const displayType = selector(state, 'rek_display_type');
+    const publicationSubtype = selector(state, 'rek_subtype');
+
+    const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
+        type.id === displayType
+    );
+    const hasSubtypes = !!selectedPublicationType && !!selectedPublicationType[0].subtypes || false;
+    const subtypes = !!selectedPublicationType && selectedPublicationType[0].subtypes || null;
+    const formComponent = selectedPublicationType && selectedPublicationType[0].formComponent;
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        hasSubtypes: hasSubtypes,
+        subtypes: subtypes,
+        formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null,
+        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
         initialValues: {
-            impactStatement: 'Background:\nType/paste the bacground of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.'
+            impactStatement: 'Background:\nType/paste the bacground of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.',
         }
     };
 };
