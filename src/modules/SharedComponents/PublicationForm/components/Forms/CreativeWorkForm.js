@@ -178,21 +178,21 @@ export default class CreativeWorkForm extends Component {
                 {
                     this.props.isNtro && subtypeInfo &&
                     <Grid item xs={12}>
-                        <StandardCard title={'Non-traditional research output metadata'}>
+                        <StandardCard title="Non-traditional research output metadata">
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={ListEditorField}
                                         remindToAdd
-                                        name="fez_record_search_key_ismc"
-                                        isValid={validation.isValidIsmc}
+                                        name="fez_record_search_key_ismn"
+                                        isValid={validation.isValidIsmn}
                                         maxCount={5}
-                                        searchKey={{value: 'rek_ismc', order: 'rek_ismc_order'}}
+                                        searchKey={{value: 'rek_ismn', order: 'rek_ismn_order'}}
                                         locale={{form: {
                                             locale: {
-                                                inputFieldLabel: 'ISMC value',
+                                                inputFieldLabel: 'ISMN value',
                                                 inputFieldHint: 'eg. 979-0-XXX-XXXXX-X',
-                                                addButtonLabel: <span>Add&nbsp;ISMC</span>,
+                                                addButtonLabel: <span>Add&nbsp;ISMN</span>,
                                                 remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                                             }
                                         }}}
