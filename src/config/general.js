@@ -158,31 +158,58 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_BOOK,
         name: 'Book',
         class: 'Uqlibrary\\FezCore\\Types\\Book',
-        subtypeVocabId: 453581,
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
         citationComponent: components ? components.BookCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Research book (original research)',
+            'Textbook',
+            'Edited book',
+            'Reference work, encyclopaedia, manual or handbook',
+            NTRO_SUBTYPE_OCW_DESIGN_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_OCW_TEXTUAL_WORK,
+            NTRO_SUBTYPE_OCW_VISUAL_WORK,
+            NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION,
+            NTRO_SUBTYPE_OCW_OTHER,
+        ]
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
         name: 'Book Chapter',
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
-        subtypeVocabId: 453588,
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
         citationComponent: components ? components.BookChapterCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Research book chapter (original research)',
+            'Critical review of research, literature review, critical commentary',
+            'Chapter in textbook',
+            'Chapter in reference work, encyclopaedia, manual or handbook',
+            'Introduction, foreword, editorial or appendix',
+            NTRO_SUBTYPE_OCW_DESIGN_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_OCW_TEXTUAL_WORK,
+            NTRO_SUBTYPE_OCW_VISUAL_WORK,
+            NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION,
+            NTRO_SUBTYPE_OCW_OTHER,
+        ]
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
         name: 'Conference Paper',
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
-        subtypeVocabId: 453596,
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Fully published paper',
+            'Published abstract',
+            'Poster',
+            'Oral presentation',
+            'Other'
+        ]
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -199,7 +226,8 @@ export const publicationTypes = (components) => [
         citationComponent: components ? components.CreativeWorkCitation : null,
         formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: CREATIVE_WORK_NTRO_SUBTYPES
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -222,7 +250,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        isNtro: true,
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
@@ -258,11 +287,24 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
         name: 'Journal Article',
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
-        subtypeVocabId: 453573,
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
         citationComponent: components ? components.JournalArticleCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Article (original research)',
+            'Critical review of research, literature review, critical commentary',
+            'Review of book, film, TV, video, software, performance, music etc',
+            'Letter to editor, brief commentary or brief communication',
+            'Correction/erratum',
+            'Editorial',
+            'Discussion - responses, round table/panel discussions, Q&A, reply',
+            NTRO_SUBTYPE_OCW_DESIGN_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_OCW_TEXTUAL_WORK,
+            NTRO_SUBTYPE_OCW_VISUAL_WORK,
+            NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION,
+            NTRO_SUBTYPE_OCW_OTHER,
+        ]
     },
     {
         id: PUBLICATION_TYPE_MANUSCRIPT,
@@ -301,7 +343,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: RESEARCH_REPORT_NTRO_SUBTYPES
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
@@ -370,32 +413,6 @@ export const documentTypesLookup = {
     183: 'Working paper',
     272: 'Reference entry'
 };
-
-export const publicationSubtypes = [
-    'Research book (original research)',
-    'Textbook',
-    'Edited book',
-    'Reference work, encyclopaedia, manual or handbook',
-    'Research book chapter (original research)',
-    'Critical review of research, literature review, critical commentary',
-    'Chapter in textbook',
-    'Chapter in reference work, encyclopaedia, manual or handbook',
-    'Introduction, foreword, editorial or appendix',
-    'Conference paper',
-    'Fully published paper',
-    'Published abstract',
-    'Poster',
-    'Oral presentation',
-    'Article (original research)',
-    'Critical review of research, literature review, critical commentary',
-    'Letter to editor, brief commentary or brief communication',
-    'Correction/erratum',
-    'Review of book, film, TV, video, software, performance, music etc',
-    'Editorial',
-    'Discussion - responses, round table/panel discussions, Q&A, reply',
-    'Creative work',
-    'Other',
-];
 
 export const QuickTemplates = {
     UQ_STAFF_STUDENTS_VIEW: 1,

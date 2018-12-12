@@ -7,7 +7,6 @@ import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
@@ -18,8 +17,7 @@ import PropTypes from 'prop-types';
 
 export default class BookChapterForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     }
 
     constructor(props) {
@@ -82,17 +80,7 @@ export default class BookChapterForm extends Component {
                                     validate={[validation.required]}
                                     label={txt.information.fieldLabels.publisher} />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PublicationSubtypeField}
-                                    name="rek_subtype"
-                                    disabled={this.props.submitting}
-                                    vocabId={this.props.subtypeVocabId}
-                                    className="requiredField"
-                                    locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
-                                    validate={[validation.required]} />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}

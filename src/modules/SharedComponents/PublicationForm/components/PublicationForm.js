@@ -11,57 +11,28 @@ import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-
 import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
-
 import * as recordForms from './Forms';
 
 export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        hasSubtypes: PropTypes.bool,
+        subtypes: PropTypes.array,
+        formComponent: PropTypes.func,
         disableSubmit: PropTypes.bool,
         onFormSubmitSuccess: PropTypes.func.isRequired,
-        onFormCancel: PropTypes.func.isRequired
-    };
-
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
+        onFormCancel: PropTypes.func.isRequired,
+        changeDisplayType: PropTypes.func,
+        resetSubtype: PropTypes.func,
+        isNtro: PropTypes.bool
     };
 
     constructor(props) {
         super(props);
         this.publicationTypes = publicationTypes({...recordForms});
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
-            this.props.onFormSubmitSuccess();
-        }
-    }
-
-    _getPublicationTypeForm = (publicationTypeId) => {
-        const {formValues} = this.props;
-        const filteredPublicationType = publicationTypeId ?
-            this.publicationTypes.filter((item) => { return item.id === publicationTypeId; }) : null;
-        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].formComponent ?
-            React.createElement(
-                filteredPublicationType[0].formComponent,
-                {
-                    subtypeVocabId: filteredPublicationType[0].subtypeVocabId,
-                    submitting: this.props.submitting,
-                    formValues
-                })
-            :
-            null;
-    };
-
-    _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
-    };
-
-    render() {
-        const publicationTypeItems = [
+        this.publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
             }).map((item, index) => {
@@ -74,6 +45,25 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} key={index} disabled={!item.formComponent}>{item.name}</MenuItem>;
             })
         ];
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+            this.props.onFormSubmitSuccess();
+        }
+
+        if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
+            this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
+                <MenuItem value={item} key={index}>{item}</MenuItem>
+            ));
+        }
+    }
+
+    _handleDefaultSubmit = (event) => {
+        if(event) event.preventDefault();
+    };
+
+    render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <form onSubmit={this._handleDefaultSubmit}>
@@ -81,23 +71,45 @@ export default class PublicationForm extends Component {
                     <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                     <Grid item xs={12}>
                         <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
-                            <Field
-                                component={SelectField}
-                                disabled={this.props.submitting}
-                                name="rek_display_type"
-                                value={this.props.formValues.get('rek_display_type')}
-                                label={txt.publicationType.inputLabelText}
-                                required
-                                placeholder={txt.publicationType.hintText}>
-                                {publicationTypeItems}
-                            </Field>
+                            <Grid container spacing={8}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SelectField}
+                                        disabled={this.props.submitting}
+                                        name="rek_display_type"
+                                        value={this.props.formValues.get('rek_display_type')}
+                                        label={txt.publicationType.inputLabelText}
+                                        onChange={this.props.resetSubtype}
+                                        required
+                                        placeholder={txt.publicationType.hintText}>
+                                        {this.publicationTypeItems}
+                                    </Field>
+                                </Grid>
+                                {
+                                    this.props.hasSubtypes &&
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={SelectField}
+                                            disabled={this.props.submitting}
+                                            name="rek_subtype"
+                                            value={this.props.formValues.get('rek_subtype')}
+                                            label={txt.publicationSubtype.inputLabelText}
+                                            required
+                                            placeholder={txt.publicationSubtype.hintText}>
+                                            {this.publicationSubtypeItems}
+                                        </Field>
+                                    </Grid>
+                                }
+                            </Grid>
                         </StandardCard>
                     </Grid>
                     {
-                        this.props.formValues.get('rek_display_type') > 0 &&
+                        !!this.props.formComponent &&
                         <React.Fragment>
                             <Grid item xs={12}>
-                                {this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))}
+                                <this.props.formComponent
+                                    {...this.props}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
@@ -112,7 +124,7 @@ export default class PublicationForm extends Component {
                         </React.Fragment>
                     }
                     {
-                        alertProps &&
+                        !!this.props.formComponent && alertProps &&
                         <Grid item xs={12}>
                             <Alert pushToTop {...alertProps} />
                         </Grid>
