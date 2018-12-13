@@ -78,6 +78,7 @@ const selector = formValueSelector(FORM_NAME);
 
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
 
@@ -98,7 +99,7 @@ const mapStateToProps = (state) => {
     const formComponent = selectedPublicationType && selectedPublicationType.length > 0 && selectedPublicationType[0].formComponent;
 
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formValues: formValues,
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         hasSubtypes: hasSubtypes,
@@ -109,7 +110,8 @@ const mapStateToProps = (state) => {
         docTypeSubTypeCombo: docTypeSubTypeCombo,
         initialValues: {
             impactStatement: 'Background:\nType/paste the bacground of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.',
-        }
+        },
+        isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false
     };
 };
 
