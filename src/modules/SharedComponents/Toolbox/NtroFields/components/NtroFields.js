@@ -95,6 +95,17 @@ export default class NtroFields extends React.PureComponent {
         }
     };
 
+    constructor(props) {
+        super(props);
+        this.row3Width = this.getWidth([props.hideVolume, props.hideIssue, props.hideStartPage, props.hideEndPage]);
+        this.row4Width = this.getWidth([props.hideExtent, props.hideOriginalFormat, props.hideAudienceSize, props.hidePeerReviewActivity]);
+    }
+
+    getWidth = (fields) => {
+        const numberOfFieldsToDisplay = fields.filter(field => field === false).length;
+        return numberOfFieldsToDisplay > 0 && (12 / numberOfFieldsToDisplay) || 12;
+    };
+
     render() {
         const {contributionStatement, metadata} = this.props.locale;
 
@@ -168,7 +179,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideVolume &&
-                                <Grid item xs={12} sm={2}>
+                                <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_volume"
@@ -181,7 +192,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideIssue &&
-                                <Grid item xs={12} sm={2}>
+                                <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_issue"
@@ -194,7 +205,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideStartPage &&
-                                <Grid item xs={12} sm={2}>
+                                <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_startpage"
@@ -207,7 +218,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideEndPage &&
-                                <Grid item xs={12} sm={2}>
+                                <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_endpage"
@@ -220,7 +231,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideExtent &&
-                                <Grid item xs={12} sm={4}>
+                                <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_extent"
@@ -236,7 +247,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideOriginalFormat &&
-                                <Grid item xs={12} sm={4}>
+                                <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_originalformat"
@@ -249,7 +260,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideAudienceSize &&
-                                <Grid item xs={12} sm={4}>
+                                <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={TextField}
                                         name="rek_audiencesize"
@@ -262,7 +273,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hidePeerReviewActivity &&
-                                <Grid item xs={12} sm={4}>
+                                <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={SelectField}
                                         disabled={this.props.submitting}
