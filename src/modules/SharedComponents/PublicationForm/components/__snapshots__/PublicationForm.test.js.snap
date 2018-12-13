@@ -208,210 +208,138 @@ exports[`Component PublicationForm should render component initialised with just
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
@@ -657,210 +585,138 @@ exports[`Component PublicationForm should render component initialised with two 
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
@@ -1138,210 +994,138 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
@@ -1713,210 +1497,138 @@ exports[`Component PublicationForm should render component with GenericDocument 
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
@@ -2288,210 +2000,138 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
@@ -2863,210 +2503,138 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
@@ -3437,210 +3005,138 @@ exports[`Component PublicationForm should render component with all fields disab
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
-                value={1000}
+                value={1003}
               >
-                Original Creative Work - Design/Architectural Work - Book
+                Creative Work - Design/Architectural
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
-                value={1001}
+                value={1004}
               >
-                Original Creative Work - Design/Architectural Work - Book chapter
+                Creative Work - Textual (Book)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-2"
-                value={1002}
+                value={1005}
               >
-                Original Creative Work - Design/Architectural Work - Journal article
+                Creative Work - Textual (Book chapter)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-3"
-                value={1003}
+                value={1006}
               >
-                Original Creative Work - Design/Architectural Work
+                Creative Work - Textual (Journal article)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-4"
-                value={1004}
+                value={1007}
               >
-                Original Creative Work - Textual Work - Book
+                Creative Work - Textual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-5"
-                value={1005}
+                value={1011}
               >
-                Original Creative Work - Textual Work - Book chapter
+                Creative Work - Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
-                value={1006}
+                value={1015}
               >
-                Original Creative Work - Textual Work - Journal article
+                Creative Work - Musical Composition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-7"
-                value={1007}
+                value={1019}
               >
-                Original Creative Work - Textual Work
+                Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-8"
-                value={1008}
-              >
-                Original Creative Work - Visual Work - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-9"
-                value={1009}
-              >
-                Original Creative Work - Visual Work - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-10"
-                value={1010}
-              >
-                Original Creative Work - Visual Work - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-11"
-                value={1011}
-              >
-                Original Creative Work - Visual Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-12"
-                value={1012}
-              >
-                Original Creative Work - Musical Composition - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-13"
-                value={1013}
-              >
-                Original Creative Work - Musical Composition - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-14"
-                value={1014}
-              >
-                Original Creative Work - Musical Composition - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-15"
-                value={1015}
-              >
-                Original Creative Work - Musical Composition
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-16"
-                value={1016}
-              >
-                Original Creative Work - Other - Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-17"
-                value={1017}
-              >
-                Original Creative Work - Other - Book chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-18"
-                value={1018}
-              >
-                Original Creative Work - Other - Journal article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-19"
-                value={1019}
-              >
-                Original Creative Work - Other
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-20"
                 value={1020}
               >
                 Live Performance - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-21"
+                key="ntro-9"
                 value={1021}
               >
                 Live Performance - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-22"
+                key="ntro-10"
                 value={1022}
               >
                 Live Performance - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-23"
+                key="ntro-11"
                 value={1023}
               >
                 Live Performance - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-24"
+                key="ntro-12"
                 value={1024}
               >
                 Live Performance - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-25"
+                key="ntro-13"
                 value={1025}
               >
                 Recorded or Rendered Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-26"
+                key="ntro-14"
                 value={1026}
               >
                 Recorded or Rendered Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-27"
+                key="ntro-15"
                 value={1027}
               >
                 Recorded or Rendered Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-28"
+                key="ntro-16"
                 value={1028}
               >
                 Recorded or Rendered Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-29"
+                key="ntro-17"
                 value={1029}
               >
                 Recorded or Rendered Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-30"
+                key="ntro-18"
                 value={1030}
               >
                 Recorded or Rendered Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-31"
+                key="ntro-19"
                 value={1031}
               >
                 Curated or Produced Exhibition or Event - Exhibition or Event
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-32"
+                key="ntro-20"
                 value={1032}
               >
                 Curated or Produced Exhibition or Event - Festival
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-33"
+                key="ntro-21"
                 value={1033}
               >
                 Curated or Produced Exhibition or Event - Web Based Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
-                key="ntro-34"
+                key="ntro-22"
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)

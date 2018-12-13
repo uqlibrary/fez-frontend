@@ -206,7 +206,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -220,7 +220,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -234,7 +234,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -248,7 +248,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -262,7 +262,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -283,7 +283,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -297,7 +297,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -311,7 +311,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -578,7 +578,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -592,7 +592,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -606,7 +606,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -620,7 +620,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -634,7 +634,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -655,7 +655,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -669,7 +669,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -683,7 +683,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -897,7 +897,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -911,7 +911,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -925,7 +925,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -939,7 +939,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={2}
+          sm={3}
           xs={12}
         >
           <Field
@@ -953,7 +953,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -974,7 +974,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -988,7 +988,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
@@ -1002,7 +1002,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={3}
           xs={12}
         >
           <Field
