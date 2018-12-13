@@ -20,7 +20,7 @@ describe('BookForm renders ', () => {
 
     it('component with 10 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(10);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with 11 input fields for NTRO', () => {
@@ -30,7 +30,7 @@ describe('BookForm renders ', () => {
 
     it('component with 12 input fields for NTRO with musical composition subtype', () => {
         const wrapper = setup({isNtro: true, subtype: NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION});
-        expect(wrapper.find('Field').length).toEqual(12);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with 6 required input fields', () => {

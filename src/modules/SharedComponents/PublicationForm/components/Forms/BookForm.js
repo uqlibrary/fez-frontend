@@ -6,7 +6,7 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
@@ -23,12 +23,14 @@ export default class BookForm extends Component {
         submitting: PropTypes.bool,
         formValues: PropTypes.object,
         subtype: PropTypes.string,
-        isNtro: PropTypes.bool
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     static defaultProps = {
         isNtro: false,
-        subtype: null
+        subtype: null,
+        isAuthorSelected: false
     };
 
     constructor(props) {
@@ -122,39 +124,20 @@ export default class BookForm extends Component {
                 </Grid>
                 {
                     this.props.isNtro &&
-                    <Grid item xs={12}>
-                        <StandardCard title={txt.ntro.title} help={txt.ntro.help}>
-                            <Grid container spacing={16}>
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={SeriesField}
-                                        disabled={this.props.submitting}
-                                        name="fez_record_search_key_series.rek_series"
-                                        {...txt.information.fieldLabels.series} />
-                                </Grid>
-                                {
-                                    this.props.subtype === NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION &&
-                                    <React.Fragment>
-                                        <Grid item xs={12}>
-                                            <Divider />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <Typography>{locale.components.ismnForm.text}</Typography>
-                                            <Field
-                                                component={ListEditorField}
-                                                remindToAdd
-                                                name="fez_record_search_key_ismn"
-                                                isValid={validation.isValidIsmn}
-                                                maxCount={5}
-                                                searchKey={{value: 'rek_ismn', order: 'rek_ismn_order'}}
-                                                locale={locale.components.ismnForm.field}
-                                                disabled={this.props.submitting} />
-                                        </Grid>
-                                    </React.Fragment>
-                                }
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hidePhysicalDescription
+                        hideAudienceSize
+                        hideNotes
+                    />
                 }
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
@@ -187,6 +170,13 @@ export default class BookForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={SeriesField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_series.rek_series"
+                                    {...txt.information.fieldLabels.series} />
+                            </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

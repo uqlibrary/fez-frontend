@@ -4,7 +4,6 @@ export default {
     validationErrors: {
         publicationSearch: 'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
-        ismn: 'ISMN value is not valid',
         issn: 'ISSN value is not valid',
         ismn: 'ISMN value is not valid',
         isrc: 'ISRC value is not valid',
