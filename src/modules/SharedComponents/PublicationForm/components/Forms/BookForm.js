@@ -134,7 +134,7 @@ export default class BookForm extends Component {
                         hideStartPage
                         hideEndPage
                         hideExtent
-                        hidePhysicalDescription
+                        hideOriginalFormat
                         hideAudienceSize
                         hideNotes
                     />
