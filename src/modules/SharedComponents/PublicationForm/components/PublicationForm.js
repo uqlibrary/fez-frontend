@@ -29,7 +29,8 @@ export default class PublicationForm extends Component {
         changeDisplayType: PropTypes.func,
         isNtro: PropTypes.bool,
         hasDefaultDocTypeSubType: PropTypes.bool,
-        docTypeSubTypeCombo: PropTypes.object
+        docTypeSubTypeCombo: PropTypes.object,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -75,12 +76,6 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
-        const formProps = {
-            submitting: this.props.submitting,
-            formValues: this.props.formValues,
-            subtype: this.props.subtype,
-            isNtro: this.props.isNtro
-        };
 
         return (
             <form onSubmit={this._handleDefaultSubmit}>
@@ -124,7 +119,11 @@ export default class PublicationForm extends Component {
                         <React.Fragment>
                             <Grid item xs={12}>
                                 <this.props.formComponent
-                                    {...formProps}
+                                    formValues={this.props.formValues}
+                                    subtype={this.props.subtype}
+                                    isNtro={this.props.isNtro}
+                                    isAuthorSelected={this.props.isAuthorSelected}
+                                    submitting={this.props.submitting}
                                 />
                             </Grid>
                             <Grid item xs={12}>
