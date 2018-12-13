@@ -437,6 +437,96 @@ export default {
                 }
             }
         },
+        ismnForm: {
+            title: 'ISMN',
+            text: 'You can add up to five ISMN values',
+            // help: {
+            //     title: 'ISMN value',
+            //     text: 'Acceptable ISMN formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISMN value',
+                        inputFieldHint: 'eg. 979-0-XXX-XXXXX-X',
+                        addButtonLabel: <span>Add&nbsp;ISMN</span>,
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISMN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        isrcForm: {
+            title: 'ISRC',
+            text: 'You can add up to five ISRC values',
+            // help: {
+            //     title: 'ISRC value',
+            //     text: 'Acceptable ISRC formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISRC value',
+                        inputFieldHint: 'eg. BRBMG0300729',
+                        addButtonLabel: <span>Add&nbsp;ISRC</span>,
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISRC',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
