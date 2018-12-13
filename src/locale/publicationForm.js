@@ -594,13 +594,19 @@ export default {
                     placeholder: ''
                 },
                 date: {
-                    title: 'Publication date',
+                    title: 'Publication (start) date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                enddate: {
+                    title: 'Publication end date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
                 },
                 abstract: {
-                    label: 'Abstract',
+                    label: 'Abstract/Description',
                     placeholder: 'Provide an abstract or summary of the work.'
                 }
             }
