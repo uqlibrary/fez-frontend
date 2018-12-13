@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
-import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 
 import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
 import {validation} from 'config';
@@ -135,45 +133,8 @@ export default class CreativeWorkForm extends Component {
                     </StandardCard>
                 </Grid>
                 {
-                    this.props.isNtro && isAuthorSelected &&
-                    <Grid item xs={12}>
-                        <StandardCard title={'Author/Creator contribution statement'}>
-                            <Grid container spacing={8}>
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={SelectField}
-                                        disabled={this.props.submitting}
-                                        name="impactSize"
-                                        label={'Scale/Significance of work'}
-                                        required>
-                                        <MenuItem value={'minor'}>Minor</MenuItem>
-                                        <MenuItem value={'major'}>Major</MenuItem>
-                                    </Field>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={TextField}
-                                        name="impactStatement"
-                                        type="text"
-                                        multiline
-                                        rows={8}
-                                        fullWidth
-                                        disabled={this.props.submitting}
-                                        label={'Creator contribution statement'}
-                                        placeholder={'Type or cut and paste your impact statement here'}
-                                    />
-                                </Grid>
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                }
-                {
                     this.props.isNtro &&
-                    <Grid item xs={12}>
-                        <StandardCard title="Non-traditional research output metadata">
-                            <NtroFields submitting={this.props.submitting} />
-                        </StandardCard>
-                    </Grid>
+                    <NtroFields submitting={this.props.submitting} showContributionStatement={isAuthorSelected} />
                 }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
