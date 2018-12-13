@@ -158,7 +158,7 @@ export default class NtroFields extends React.PureComponent {
                                         component={ListEditorField}
                                         remindToAdd
                                         name="fez_record_search_key_isrc"
-                                        isValid={validation.isValidIsmc}
+                                        isValid={validation.isValidIsrc}
                                         maxCount={5}
                                         searchKey={{value: 'rek_isrc', order: 'rek_isrc_order'}}
                                         locale={{...componentLocale.components.isrcForm.field}}

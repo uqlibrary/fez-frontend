@@ -73,6 +73,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
+            isValid={[Function]}
             locale={
               Object {
                 "form": Object {
@@ -444,6 +445,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
+            isValid={[Function]}
             locale={
               Object {
                 "form": Object {
@@ -762,6 +764,7 @@ exports[`Component NtroFields should render default view 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            isValid={[Function]}
             locale={
               Object {
                 "form": Object {
