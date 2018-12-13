@@ -7,24 +7,15 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as actions from 'actions/authors';
 import {grantTypes} from 'config/general';
 
-export class GrantListEditorForm extends PureComponent {
+export default class GrantListEditorForm extends PureComponent {
     static propTypes = {
-        authorsList: PropTypes.array.isRequired,
         onAdd: PropTypes.func.isRequired,
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
         errorText: PropTypes.string,
-        actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
         required: PropTypes.bool,
-        isNtro: PropTypes.bool
     };
 
     static defaultProps = {
@@ -142,7 +133,7 @@ export class GrantListEditorForm extends PureComponent {
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.GrantName.trim().length === 0}
+                            disabled={disabled || this.state.GrantName.trim().length === 0 || this.state.GrantID.trim().length === 0 || this.state.GrantType.trim().length === 0}
                             onClick={this._addGrant}
                         >
                             {this.props.locale.addButton}
@@ -154,16 +145,3 @@ export class GrantListEditorForm extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        authorsList: state && state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
-    };
-};
-
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(GrantListEditorForm);
