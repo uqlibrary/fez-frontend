@@ -1,5 +1,6 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
+import {JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm} from './Forms';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -50,7 +51,8 @@ function setup(testProps, isShallow = true) {
         pristine: testProps.pristine || false,
         author: testProps.author || null,
         actions: testProps.actions || {},
-        history: testProps.history || {push: jest.fn()
+        history: testProps.history || {
+            push: jest.fn()
         },
         ...testProps,
     };
@@ -63,23 +65,51 @@ describe('Component PublicationForm', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
-        
+    });
+
+    it('should render component initialised with two fields - publication type and subtype', () => {
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 179
+            },
+            hasSubtypes: true,
+            subtypeVocabId: 453573
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(2);
     });
 
     it('should render component with JournalArticleForm', () => {
-        const wrapper = setup({initialValues: {rek_display_type: 179}});
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 179
+            },
+            hasSubtypes: true,
+            subtypeVocabId: 453573,
+            formComponent: JournalArticleForm
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('JournalArticleForm').length).toEqual(1);
-        
+
         let hasFilesComponent = false;
-        wrapper.find('Field').forEach(field => {hasFilesComponent = hasFilesComponent || field.props().name === 'files';});
+        wrapper.find('Field').forEach(field => {
+            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
+        });
         expect(hasFilesComponent).toEqual(true);
     });
 
     it('should render component with BookForm', () => {
-        const wrapper = setup({initialValues: {rek_display_type: 174}});
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 174
+            },
+            hasSubtypes: true,
+            subtypeVocabId: 1111,
+            formComponent: BookForm
+        });
         expect(wrapper.find('BookForm').length).toEqual(1);
-        
+
         let hasFilesComponent = false;
         wrapper.find('Field').forEach(field => {
             hasFilesComponent = hasFilesComponent || field.props().name === 'files';
@@ -89,9 +119,16 @@ describe('Component PublicationForm', () => {
     });
 
     it('should render component with GenericDocument', () => {
-        const wrapper = setup({initialValues: {rek_display_type: 202}});
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 202
+            },
+            hasSubtypes: true,
+            subtypeVocabId: 2222,
+            formComponent: GenericDocumentForm
+        });
         expect(wrapper.find('GenericDocumentForm').length).toEqual(1);
-        
+
         let hasFilesComponent = false;
         wrapper.find('Field').forEach(field => {
             hasFilesComponent = hasFilesComponent || field.props().name === 'files';
@@ -101,9 +138,16 @@ describe('Component PublicationForm', () => {
     });
 
     it('should render component with ResearchReportForm', () => {
-        const wrapper = setup({initialValues: {rek_display_type: 275}});
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 275
+            },
+            hasSubtypes: true,
+            subtypeVocabId: 1111,
+            formComponent: ResearchReportForm
+        });
         expect(wrapper.find('ResearchReportForm').length).toEqual(1);
-        
+
         let hasFilesComponent = false;
         wrapper.find('Field').forEach(field => {
             hasFilesComponent = hasFilesComponent || field.props().name === 'files';
@@ -113,7 +157,9 @@ describe('Component PublicationForm', () => {
     });
 
     it('should render component with all fields disabled', () => {
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({
+            submitting: true
+        });
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         });
@@ -122,8 +168,12 @@ describe('Component PublicationForm', () => {
 
     it('should call onFormSubmitSuccess method', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({onFormSubmitSuccess: testMethod});
-        wrapper.setProps({submitSucceeded: true});
+        const wrapper = setup({
+            onFormSubmitSuccess: testMethod
+        });
+        wrapper.setProps({
+            submitSucceeded: true
+        });
         expect(testMethod).toHaveBeenCalled();
     });
 

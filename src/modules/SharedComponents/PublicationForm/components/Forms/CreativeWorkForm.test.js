@@ -19,7 +19,7 @@ describe('CreativeWorkForm renders ', () => {
 
     it('component with 8 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(8);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with 3 required input fields', () => {

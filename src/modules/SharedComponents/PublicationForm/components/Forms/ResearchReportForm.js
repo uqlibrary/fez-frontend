@@ -19,7 +19,8 @@ import Typography from '@material-ui/core/Typography';
 
 export default class ResearchReportForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        isNtro: PropTypes.bool
     };
 
     constructor(props) {
@@ -37,7 +38,7 @@ export default class ResearchReportForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={16}>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     autoFocus
@@ -97,7 +98,7 @@ export default class ResearchReportForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={SeriesField}
                                     name="fez_record_search_key_series.rek_series"
@@ -114,6 +115,7 @@ export default class ResearchReportForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             name="authors"
+                            isNtro={this.props.isNtro}
                             locale={txt.authors.field}
                             showContributorAssignment
                             className="requiredField"
@@ -154,7 +156,7 @@ export default class ResearchReportForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
                         <Grid container spacing={16}>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="rek_description"
@@ -166,7 +168,7 @@ export default class ResearchReportForm extends Component {
                                     {...txt.other.fieldLabels.abstract}
                                 />
                             </Grid>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="comments"
@@ -177,7 +179,7 @@ export default class ResearchReportForm extends Component {
                                     {...txt.other.fieldLabels.notes}
                                 />
                             </Grid>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="rek_link"

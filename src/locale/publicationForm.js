@@ -15,6 +15,11 @@ export default {
         //     buttonLabel: 'OK'
         // }
     },
+    publicationSubtype: {
+        title: 'Publication subtype',
+        inputLabelText: 'Publication subtype',
+        hintText: 'Select a publication subtype from the dropdown list',
+    },
     generic: {
         information: {
             title: 'Generic document information',
@@ -575,11 +580,6 @@ export default {
     creativeWork: {
         information: {
             title: 'Creative work information',
-            // help: {
-            //     title: 'Creative work information',
-            //     text: 'some help',
-            //     buttonLabel: 'OK'
-            // },
             fieldLabels: {
                 articleTitle: {
                     label: 'Title',
@@ -594,13 +594,19 @@ export default {
                     placeholder: ''
                 },
                 date: {
-                    title: 'Publication date',
+                    title: 'Publication (start) date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                enddate: {
+                    title: 'Publication end date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
                 },
                 abstract: {
-                    label: 'Abstract',
+                    label: 'Abstract/Description',
                     placeholder: 'Provide an abstract or summary of the work.'
                 }
             }

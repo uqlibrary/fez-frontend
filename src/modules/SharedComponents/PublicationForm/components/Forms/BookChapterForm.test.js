@@ -17,9 +17,9 @@ describe('BookChapterForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 15 input fields', () => {
+    it('component with 14 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(15);
+        expect(wrapper.find('Field').length).toEqual(14);
     });
 
     it('component with 9 required input fields', () => {

@@ -85,32 +85,6 @@ exports[`BookForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            locale={
-              Object {
-                "label": "Work subtype",
-                "loading": "Loading",
-              }
-            }
-            name="rek_subtype"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-            vocabId={0}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
           xs={12}
         >
           <Field
