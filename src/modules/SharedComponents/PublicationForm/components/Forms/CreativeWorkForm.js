@@ -5,7 +5,6 @@ import {Field} from 'redux-form/immutable';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
@@ -16,9 +15,7 @@ import {default as formLocale} from 'locale/publicationForm';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        isNtro: PropTypes.bool,
-        formValues: PropTypes.object
+        submitting: PropTypes.bool
     };
 
     constructor(props) {
@@ -27,7 +24,6 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         const txt = formLocale.creativeWork;
-        const isAuthorSelected = !!this.props.formValues && this.props.formValues.get('authors') && this.props.formValues.get('authors').some((object) => {return object.selected === true;}) || false;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -128,14 +124,9 @@ export default class CreativeWorkForm extends Component {
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
                             validate={[validation.authorRequired]}
-                            isNtro={this.props.isNtro}
                         />
                     </StandardCard>
                 </Grid>
-                {
-                    this.props.isNtro &&
-                    <NtroFields submitting={this.props.submitting} showContributionStatement={isAuthorSelected} />
-                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
