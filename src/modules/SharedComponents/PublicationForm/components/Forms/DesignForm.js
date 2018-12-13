@@ -15,8 +15,7 @@ import Grid from '@material-ui/core/Grid';
 
 export default class DesignForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     };
 
     constructor(props) {
