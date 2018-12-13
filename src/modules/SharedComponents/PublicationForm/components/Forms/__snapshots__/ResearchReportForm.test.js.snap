@@ -17,7 +17,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         spacing={16}
       >
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -81,7 +81,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             normalize={[Function]}
-            placeholder="Type total number of pages in the publication"
+            placeholder="Type total number of pages"
             required={true}
             type="text"
             validate={
@@ -113,7 +113,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -386,14 +386,14 @@ exports[`ResearchReportForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Other work details"
     >
       <WithStyles(Grid)
         container={true}
         spacing={16}
       >
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -409,7 +409,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -424,7 +424,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -433,7 +433,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Type URL for this publication"
+            placeholder="Type URL for this work"
             type="text"
             validate={
               Array [

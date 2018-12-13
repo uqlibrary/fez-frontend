@@ -96,8 +96,15 @@ export const isValidIsbn = subject => {
 };
 
 export const isValidIsmn = subject => {
-    const regex = /^(?:ISMN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
-    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
+    // https://www.wikidata.org/wiki/Property:P1208
+    const regex = /979-0-\d{3}-\d{5}-\d/gi;
+    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.ismn;
+};
+
+export const isValidIsrc = subject => {
+    // https://www.wikidata.org/wiki/Property:P1243
+    const regex = /[A-Z]{2}[A-Z0-9]{3}[0-9]{7}/gi;
+    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isrc;
 };
 
 export const isValidAuthorLink = (link) => {

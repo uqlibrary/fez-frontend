@@ -24,7 +24,7 @@ exports[`Component PublicationForm should render component initialised with just
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -37,9 +37,9 @@ exports[`Component PublicationForm should render component initialised with just
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
             >
               <WithStyles(MenuItem)
@@ -472,7 +472,7 @@ exports[`Component PublicationForm should render component initialised with two 
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -485,9 +485,9 @@ exports[`Component PublicationForm should render component initialised with two 
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
               value={179}
             >
@@ -953,7 +953,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -966,9 +966,9 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
               value={174}
             >
@@ -1471,7 +1471,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -1484,9 +1484,9 @@ exports[`Component PublicationForm should render component with GenericDocument 
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
               value={202}
             >
@@ -1987,7 +1987,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -2000,9 +2000,9 @@ exports[`Component PublicationForm should render component with JournalArticleFo
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
               value={179}
             >
@@ -2503,7 +2503,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -2516,9 +2516,9 @@ exports[`Component PublicationForm should render component with ResearchReportFo
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
               value={275}
             >
@@ -3019,7 +3019,7 @@ exports[`Component PublicationForm should render component with all fields disab
       xs={12}
     >
       <StandardCard
-        title="Publication type"
+        title="Work type"
       >
         <WithStyles(Grid)
           container={true}
@@ -3032,9 +3032,9 @@ exports[`Component PublicationForm should render component with all fields disab
             <Field
               component={[Function]}
               disabled={true}
-              label="Publication type"
+              label="Work type"
               name="rek_display_type"
-              placeholder="Select a publication type from the dropdown list"
+              placeholder="Select a Work type from the dropdown list"
               required={true}
             >
               <WithStyles(MenuItem)

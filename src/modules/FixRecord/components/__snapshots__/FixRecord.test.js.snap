@@ -16,7 +16,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Record to be amended"
+          title="Work to be amended"
         >
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
@@ -430,13 +430,13 @@ exports[`Component FixRecord should render fix record form 1`] = `
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this record - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
               value="unclaim"
             >
-              I am not the author/editor/contributor of this record - I would like this record removed from my profile
+              I am not the author/editor/contributor of this work - I would like this work removed from my profile
             </WithStyles(MenuItem)>
           </Field>
         </StandardCard>
@@ -587,7 +587,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
 exports[`Component FixRecord should render loader when author is loading 1`] = `
 <React.Fragment>
   <WithStyles(InlineLoader)
-    message="Loading record"
+    message="Loading work"
   />
 </React.Fragment>
 `;
@@ -595,7 +595,7 @@ exports[`Component FixRecord should render loader when author is loading 1`] = `
 exports[`Component FixRecord should render loader when record is loading 1`] = `
 <React.Fragment>
   <WithStyles(InlineLoader)
-    message="Loading record"
+    message="Loading work"
   />
 </React.Fragment>
 `;
@@ -616,7 +616,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
         xs={12}
       >
         <StandardCard
-          title="Record to be amended"
+          title="Work to be amended"
         >
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
@@ -1030,13 +1030,13 @@ exports[`Component FixRecord should render record citation, two actions in selec
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this record - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
               value="unclaim"
             >
-              I am not the author/editor/contributor of this record - I would like this record removed from my profile
+              I am not the author/editor/contributor of this work - I would like this work removed from my profile
             </WithStyles(MenuItem)>
           </Field>
         </StandardCard>
@@ -1083,7 +1083,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         xs={12}
       >
         <StandardCard
-          title="Record to be amended"
+          title="Work to be amended"
         >
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
@@ -1497,13 +1497,13 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this record - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
               value="unclaim"
             >
-              I am not the author/editor/contributor of this record - I would like this record removed from my profile
+              I am not the author/editor/contributor of this work - I would like this work removed from my profile
             </WithStyles(MenuItem)>
           </Field>
         </StandardCard>
@@ -1672,7 +1672,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         xs={12}
       >
         <StandardCard
-          title="Record to be amended"
+          title="Work to be amended"
         >
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
@@ -2086,13 +2086,13 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this record - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
               value="unclaim"
             >
-              I am not the author/editor/contributor of this record - I would like this record removed from my profile
+              I am not the author/editor/contributor of this work - I would like this work removed from my profile
             </WithStyles(MenuItem)>
           </Field>
         </StandardCard>
@@ -2256,7 +2256,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Record to be amended"
+          title="Work to be amended"
         >
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
@@ -2670,13 +2670,13 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this record - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
               value="unclaim"
             >
-              I am not the author/editor/contributor of this record - I would like this record removed from my profile
+              I am not the author/editor/contributor of this work - I would like this work removed from my profile
             </WithStyles(MenuItem)>
           </Field>
         </StandardCard>

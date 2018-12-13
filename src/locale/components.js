@@ -17,7 +17,7 @@ export default {
                 activeFilter: 'Show only open access records'
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
-            renameFacetsList: {'Display type': 'Publication type', 'Subtype': 'Publication subtype'},
+            renameFacetsList: {'Display type': 'Work type', 'Subtype': 'Work subtype'},
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
@@ -30,15 +30,15 @@ export default {
             // },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace publications',
+            publicationStatsTitle1: 'eSpace works',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
             publicationStatsRowTitle1: 'h-index',
-            publicationStatsRowTitle2: 'Average citation count per publication',
+            publicationStatsRowTitle2: 'Average citation count per work',
             publicationStatsRowTitle3: 'Total citations',
-            publicationStatsRowTitle4: 'Total publications',
-            publicationStatsRowTitle5: 'Publication range',
+            publicationStatsRowTitle4: 'Total works',
+            publicationStatsRowTitle5: 'Works year range',
             publicationStatsNA: 'N/A'
         },
         publicationCitation: {
@@ -458,6 +458,96 @@ export default {
                 header: {
                     locale: {
                         nameColumn: 'ISSN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        ismnForm: {
+            title: 'ISMN',
+            text: 'You can add up to five ISMN values',
+            // help: {
+            //     title: 'ISMN value',
+            //     text: 'Acceptable ISMN formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISMN value',
+                        inputFieldHint: 'eg. 979-0-XXX-XXXXX-X',
+                        addButtonLabel: <span>Add&nbsp;ISMN</span>,
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISMN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        isrcForm: {
+            title: 'ISRC',
+            text: 'You can add up to five ISRC values',
+            // help: {
+            //     title: 'ISRC value',
+            //     text: 'Acceptable ISRC formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISRC value',
+                        inputFieldHint: 'eg. BRBMG0300729',
+                        addButtonLabel: <span>Add&nbsp;ISRC</span>,
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISRC',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -1187,8 +1277,8 @@ export default {
                     },
                     'rek_display_type': {
                         order: 20,
-                        map: 'Publication type',
-                        title: 'Publication type',
+                        map: 'Work type',
+                        title: 'Work type',
                         combiner: 'is one of',
                         type: null,
                         hint: 'Select document types',

@@ -251,7 +251,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Enter URL for this publication"
+            placeholder="Enter URL for this work"
             type="text"
             validate={
               Array [
