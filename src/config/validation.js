@@ -95,10 +95,10 @@ export const isValidIsbn = subject => {
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
-export const isValidIsmc = subject => {
+export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
     const regex = /979-0-\d{3}-\d{5}-\d/gi;
-    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.ismc;
+    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.ismn;
 };
 
 export const isValidIsrc = subject => {
