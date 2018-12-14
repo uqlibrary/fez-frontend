@@ -12,7 +12,7 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation} from 'config';
 import {locale} from 'locale';
-import {NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION} from 'config/general';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -127,7 +127,7 @@ export default class BookForm extends Component {
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
-                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_OCW_MUSICAL_COMPOSITION}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
                         hideIsrc
                         hideVolume
                         hideIssue

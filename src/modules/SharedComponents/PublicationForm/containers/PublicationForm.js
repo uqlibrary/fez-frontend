@@ -82,6 +82,10 @@ const mapStateToProps = (state) => {
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
 
+    const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
+        type.id === displayType
+    );
+
     let hasDefaultDocTypeSubType = false;
     let docTypeSubTypeCombo = null;
 
@@ -90,20 +94,16 @@ const mapStateToProps = (state) => {
         docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
     }
 
-    const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
-        type.id === displayType
-    );
-
     const hasSubtypes = !!selectedPublicationType && selectedPublicationType.length > 0 && !!selectedPublicationType[0].subtypes || false;
-    const subtypes = !!selectedPublicationType && selectedPublicationType.length > 0 && selectedPublicationType[0].subtypes || null;
-    const formComponent = selectedPublicationType && selectedPublicationType.length > 0 && selectedPublicationType[0].formComponent;
+    const subtypes = hasSubtypes && selectedPublicationType[0].subtypes || null;
+    const formComponent = !!publicationSubtype && selectedPublicationType[0].formComponent;
 
     return {
         formValues: formValues,
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         hasSubtypes: hasSubtypes,
-        subtypes: subtypes,
+        subtypes: !!publicationSubtype && general.NTRO_SUBTYPES.includes(publicationSubtype) && subtypes.filter(type => general.NTRO_SUBTYPES.includes(type)) || subtypes,
         subtype: publicationSubtype,
         formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null,
         isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
@@ -121,7 +121,7 @@ const mapDispatchToProps = (dispatch) => {
         changeDisplayType: (docTypeSubType) => {
             dispatch(change(FORM_NAME, 'rek_display_type', docTypeSubType.docTypeId));
             dispatch(change(FORM_NAME, 'rek_subtype', docTypeSubType.subtype));
-        },
+        }
     };
 };
 
