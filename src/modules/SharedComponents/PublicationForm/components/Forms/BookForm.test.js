@@ -19,7 +19,7 @@ describe('BookForm renders ', () => {
 
     it('component with 11 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(12);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with 6 required input fields', () => {

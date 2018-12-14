@@ -10,6 +10,8 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 
+import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
+
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
 
@@ -29,6 +31,7 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: PropTypes.bool,
         hideNotes: PropTypes.bool,
         hideSeries: PropTypes.bool,
+        hideGrant: PropTypes.bool,
         showContributionStatement: PropTypes.bool
     };
 
@@ -45,6 +48,7 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: false,
         hideNotes: false,
         hideSeries: false,
+        hideGrant: false,
         showContributionStatement: false,
         locale: {
             contributionStatement: {
@@ -299,6 +303,16 @@ export default class NtroFields extends React.PureComponent {
                                         type="text"
                                         fullWidth
                                         label={metadata.fields.notes.label}
+                                    />
+                                </Grid>
+                            }
+                            {
+                                !this.props.hideGrant &&
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={GrantListEditorField}
+                                        name="grants"
+                                        disabled={this.props.submitting}
                                     />
                                 </Grid>
                             }

@@ -366,6 +366,16 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             type="text"
           />
         </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={true}
+            name="grants"
+          />
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -738,6 +748,16 @@ exports[`Component NtroFields should render contribution statement fields as wel
             type="text"
           />
         </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -1055,6 +1075,16 @@ exports[`Component NtroFields should render default view 1`] = `
             label="Notes"
             name="rek_notes"
             type="text"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>

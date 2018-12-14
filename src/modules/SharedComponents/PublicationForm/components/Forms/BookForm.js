@@ -6,7 +6,6 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {validation} from 'config';
 import {locale} from 'locale';
@@ -32,23 +31,8 @@ export default class BookForm extends Component {
         const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
         const authors = this.props.formValues && this.props.formValues.get('authors');
         const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
-        console.log(this.props);
         return (
             <Grid container spacing={24}>
-                <Grid item xs={12}>
-                    <StandardCard title={'Grant Information'}>
-                        <Grid container spacing={16}>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={GrantListEditorField}
-                                    name="grantInfo"
-                                    disabled={this.props.submitting}
-                                />
-                            </Grid>
-                        </Grid>
-                    </StandardCard>
-                </Grid>
-
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={16}>
