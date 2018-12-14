@@ -1,28 +1,21 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import {numberToWords} from 'config';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import Hidden from '@material-ui/core/Hidden';
-import Person from '@material-ui/icons/Person';
-import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import Delete from '@material-ui/icons/Delete';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import Hidden from '@material-ui/core/Hidden';
 
 const styles = (theme) => ({
-    listItem: {
-        padding: '0'
-    },
     rowSelected: {
         backgroundColor: theme.palette.accent.light
     },
@@ -73,14 +66,13 @@ export class GrantListEditorRow extends PureComponent {
 
     static defaultProps = {
         locale: {
-            suffix: ' listed contributor',
-            moveUpHint: 'Move record up the order',
-            moveDownHint: 'Move record down the order',
-            deleteHint: 'Remove this record',
-            selectHint: 'Select this record ([name]) to assign it to you',
+            suffix: ' funder/sponsor',
+            moveUpHint: 'Move entry up the order',
+            moveDownHint: 'Move entry down the order',
+            deleteHint: 'Remove this entry',
             deleteRecordConfirmation: {
-                confirmationTitle: 'Delete record',
-                confirmationMessage: 'Are you sure you want to delete this record?',
+                confirmationTitle: 'Delete entry',
+                confirmationMessage: 'Are you sure you want to delete this entry?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             }
@@ -130,6 +122,7 @@ export class GrantListEditorRow extends PureComponent {
 
     getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
         <ListItemText
+            style={{padding: 0}}
             disableTypography
             primary={
                 <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
@@ -144,52 +137,35 @@ export class GrantListEditorRow extends PureComponent {
     );
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
-        const {index, contributor, classes, width} = this.props;
-        const {suffix} = this.props.locale;
-        const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
+        const {contributor, classes, width} = this.props;
         return (
-            <Grid container classes={{container: classes.listItem}}>
-                <Grid item xs={10} sm={5} md={5}>
+            <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
+                <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
                     {this.getListItemTypoGraphy(
-                        contributor.nameAsPublished,
-                        contributorOrder,
+                        contributor.GrantName,
+                        '',
                         `${classes.primary} ${selectedClass}`,
-                        `${selectedClass}`
+                        ''
                     )}
                 </Grid>
-                {
-                    showIdentifierLookup || !!contributor.aut_title &&
-                    <Grid item xs={10} sm={5} md={5}>
+                <Hidden xsDown>
+                    <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
                         {this.getListItemTypoGraphy(
-                            `${contributor.aut_title} ${contributor.aut_display_name}`,
-                            `${contributor.aut_org_username || contributor.aut_student_username}`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                        )}
-                    </Grid>
-                }
-                {
-                    contributor.affiliation === 'NotUQ' &&
-                    <Grid item xs={5}>
-                        {this.getListItemTypoGraphy(
-                            `${contributor.orgaff}`,
-                            `Organisation type: ${contributor.orgtype}`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                        )}
-                    </Grid>
-                }
-                {
-                    showRoleInput &&
-                    <Grid item xs={10} sm={5} md={5}>
-                        {this.getListItemTypoGraphy(
-                            contributor.creatorRole,
+                            `${contributor.GrantID}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                            ''
                         )}
                     </Grid>
-                }
+                    <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
+                        {this.getListItemTypoGraphy(
+                            `${contributor.GrantType}`,
+                            '',
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            ''
+                        )}
+                    </Grid>
+                </Hidden>
             </Grid>
         );
     };
@@ -197,12 +173,9 @@ export class GrantListEditorRow extends PureComponent {
     render() {
         const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
         const {contributor, canMoveDown, canMoveUp, disabled, classes} = this.props;
-
-
         const ariaLabel = selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', contributor.nameAsPublished) : null;
         const disableAssignment = this.props.showContributorAssignment && !this.props.disabledContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
-
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -211,57 +184,62 @@ export class GrantListEditorRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
-                    style={{cursor: 'pointer', width: '98%', margin: '0 1%'}}
                     divider
-                    classes={{root: contributor.selected ? classes.rowSelected : ''}}
-                    tabIndex={0}
+                    style={{padding: '8px 0 8px 0'}}
                     onClick={disableAssignment ? this._onContributorAssigned : () => {}}
                     onKeyDown={disableAssignment ? this._onContributorAssignedKeyboard : () => {}}
                     aria-label={ariaLabel}
                 >
-                    <Hidden xsDown>
-                        <ListItemIcon classes={{root: selectedClass}}>
-                            {contributor.selected ? <Person/> : <PersonOutlined/>}
-                        </ListItemIcon>
-                    </Hidden>
-                    {
-                        this.getContributorRowText(this.props.showIdentifierLookup, this.props.showRoleInput, selectedClass)
-                    }
-                    <ListItemSecondaryAction>
-                        {
-                            canMoveUp &&
-                            <Tooltip title={moveUpHint}>
-                                <IconButton
-                                    onClick={this._onMoveUp}
-                                    disabled={disabled}
-                                    aria-label={moveUpHint}
-                                >
-                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }}/>
-                                </IconButton>
-                            </Tooltip>
-                        }
-                        {
-                            canMoveDown &&
-                            <Tooltip title={moveDownHint}>
-                                <IconButton
-                                    onClick={this._onMoveDown}
-                                    disabled={disabled}
-                                    aria-label={moveDownHint}
-                                >
-                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }}/>
-                                </IconButton>
-                            </Tooltip>
-                        }
-                        <Tooltip title={deleteHint}>
-                            <IconButton
-                                aria-label={deleteHint}
-                                onClick={this._showConfirmation}
-                                disabled={disabled}
-                            >
-                                <Delete classes={{ root: `${selectedClass}` }}/>
-                            </IconButton>
-                        </Tooltip>
-                    </ListItemSecondaryAction>
+                    <Grid container spacing={0}>
+                        <Grid item xs={this.props.width === 'xs' ? 10 : 9}>
+                            {
+                                this.getContributorRowText(this.props.showIdentifierLookup, this.props.showRoleInput, selectedClass)
+                            }
+                        </Grid>
+                        <Grid item xs={this.props.width === 'xs' ? 2 : 3}>
+                            <ListItemSecondaryAction style={{position: 'relative', width: '100%', margin: '0 0 -32px 0'}}>
+                                <Grid container spacing={0}>
+                                    <Hidden smDown>
+                                        <Grid item xs={8} style={{textAlign: 'right'}}>
+                                            <Tooltip title={moveUpHint}>
+                                                <div style={{display: 'inline'}}>
+                                                    <IconButton
+                                                        onClick={this._onMoveUp}
+                                                        disabled={disabled || !canMoveUp}
+                                                        aria-label={moveUpHint}
+                                                    >
+                                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }}/>
+                                                    </IconButton>
+                                                </div>
+                                            </Tooltip>
+                                            <Tooltip title={moveDownHint}>
+                                                <div style={{display: 'inline'}}>
+                                                    <IconButton
+                                                        onClick={this._onMoveDown}
+                                                        disabled={disabled || !canMoveDown}
+                                                        aria-label={moveDownHint}
+                                                    >
+                                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }}/>
+                                                    </IconButton>
+                                                </div>
+                                            </Tooltip>
+                                        </Grid>
+                                    </Hidden>
+                                    <Grid item xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4} style={{textAlign: 'right'}}>
+                                        <Tooltip title={deleteHint}>
+                                            <IconButton
+                                                aria-label={deleteHint}
+                                                onClick={this._showConfirmation}
+                                                disabled={disabled}
+                                            >
+                                                <Delete/>
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Grid>
+                                </Grid>
+                            </ListItemSecondaryAction>
+                        </Grid>
+                    </Grid>
                 </ListItem>
             </Fragment>
         );

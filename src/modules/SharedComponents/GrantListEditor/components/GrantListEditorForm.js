@@ -85,7 +85,7 @@ export default class GrantListEditorForm extends PureComponent {
             <React.Fragment>
                 {this.props.locale.description}
                 <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'} style={{marginTop: 8}}>
-                    <Grid item xs={12} sm>
+                    <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
                             id="GrantName"
@@ -99,7 +99,7 @@ export default class GrantListEditorForm extends PureComponent {
                             error={!this.state.GrantName}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={3} >
+                    <Grid item xs={12} sm={12} md={3} >
                         <TextField
                             fullWidth
                             id="GrantID"
@@ -108,11 +108,11 @@ export default class GrantListEditorForm extends PureComponent {
                             value={this.state.GrantID}
                             onChange={this._onIDChanged}
                             disabled={disabled || this.state.GrantName.trim().length === 0}
-                            required
+                            required={this.props.required}
                             error={!this.state.GrantName}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={3} >
+                    <Grid item xs={12} sm={12} md={3} >
                         <FormControl fullWidth>
                             <InputLabel>{this.props.locale.GrantType}</InputLabel>
                             <Select
@@ -121,14 +121,14 @@ export default class GrantListEditorForm extends PureComponent {
                                 value={this.state.GrantType}
                                 onChange={this._onTypeChanged}
                                 disabled={disabled || this.state.GrantName.trim().length === 0 || this.state.GrantID.trim().length === 0}
-                                required
+                                required={this.props.required}
                             >
                                 <MenuItem value={''} disabled>{this.props.locale.GrantTypeHint}</MenuItem>
                                 {grantTypes.map((item, index) => <MenuItem value={item} key={index}>{item}</MenuItem>)}
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Grid item xs={3} sm={'auto'}>
+                    <Grid item xs={12} sm={12} md={'auto'}>
                         <Button
                             variant="contained"
                             fullWidth

@@ -3,42 +3,37 @@ import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import Hidden from '@material-ui/core/Hidden';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import DeleteForever from '@material-ui/icons/DeleteForever';
-import People from '@material-ui/icons/People';
 import {withStyles} from '@material-ui/core/styles';
+import withWidth from '@material-ui/core/withWidth';
+import Grid from '@material-ui/core/Grid/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 export class GrantListEditorHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        isInfinite: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        width: PropTypes.string
     };
 
     static defaultProps = {
         locale: {
-            contributorAssignmentColumn: 'Select your name',
-            nameColumn: 'Name as published',
-            identifierColumn: 'UQ identifier',
-            roleColumn: 'Role',
-            reorderColumn: 'Reorder records',
-            deleteAll: 'Remove all records',
+            GrantName: 'Funder/Sponsor name',
+            GrantID: 'Funder/sponsor ID',
+            GrantType: 'Funder/sponsor type',
+            reorderColumn: 'Reorder entries',
+            deleteAll: 'Remove all entries',
             deleteAllConfirmation: {
                 confirmationTitle: 'Delete all',
-                confirmationMessage: 'Are you sure you want to delete all records?',
+                confirmationMessage: 'Are you sure you want to delete all entries?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            descriptionStep2: 'Step 2 - Select your name from the list below'
         },
     };
 
@@ -51,8 +46,8 @@ export class GrantListEditorHeader extends PureComponent {
     };
 
     render() {
-        const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation, roleColumn} = this.props.locale;
-        const {classes, showIdentifierLookup, isInfinite, showRoleInput} = this.props;
+        const {GrantName, GrantID, GrantType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
+        const {classes} = this.props;
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -60,45 +55,45 @@ export class GrantListEditorHeader extends PureComponent {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                {
-                    this.props.showContributorAssignment &&
-                    <Fragment>
-                        <br/>
-                        {this.props.locale.descriptionStep2}
-                    </Fragment>
-                }
                 <ListItem classes={{root: classes.header}}>
-                    <Hidden xsDown>
-                        <ListItemIcon>
-                            <People/>
-                        </ListItemIcon>
-                    </Hidden>
-                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{variant: 'caption'}}/>
-                    {
-                        showIdentifierLookup &&
-                        <Hidden xsDown>
-                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
-                        </Hidden>
-                    }
-                    {
-                        showRoleInput &&
-                        <Hidden xsDown>
-                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{variant: 'caption'}}/>
-                        </Hidden>
-                    }
-                    <Hidden xsDown>
-                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
-                    </Hidden>
-                    <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
-                        <Tooltip title={deleteAll}>
-                            <IconButton
-                                onClick={this._showConfirmation}
-                                disabled={this.props.disabled}
-                            >
-                                <DeleteForever/>
-                            </IconButton>
-                        </Tooltip>
-                    </ListItemSecondaryAction>
+                    <Grid container spacing={0}>
+                        <Grid item xs={this.props.width === 'xs' ? 11 : 9}>
+                            <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
+                                <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
+                                    <ListItemText secondary={GrantName} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}}/>
+                                </Grid>
+                                <Hidden xsDown>
+                                    <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
+                                        <ListItemText secondary={GrantID} secondaryTypographyProps={{variant: 'caption'}}  style={{padding: 0}}/>
+                                    </Grid>
+                                    <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
+                                        <ListItemText secondary={GrantType} secondaryTypographyProps={{variant: 'caption'}}  style={{padding: 0}}/>
+                                    </Grid>
+                                </Hidden>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={this.props.width === 'xs' ? 1 : 3}>
+                            <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
+                                <Hidden smDown>
+                                    <Grid item xs={8}>
+                                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}} classes={{root: classes.right}}/>
+                                    </Grid>
+                                </Hidden>
+                                <Grid item xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4} style={{textAlign: 'right'}}>
+                                    <ListItemSecondaryAction style={{smarginTop: -4}}>
+                                        <Tooltip title={deleteAll}>
+                                            <IconButton
+                                                onClick={this._showConfirmation}
+                                                disabled={this.props.disabled}
+                                            >
+                                                <DeleteForever/>
+                                            </IconButton>
+                                        </Tooltip>
+                                    </ListItemSecondaryAction>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </ListItem>
             </Fragment>
         );
@@ -111,7 +106,9 @@ const styles = () => ({
     },
     header: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
-        marginTop: 8
+        marginTop: 8,
+        padding: 0,
+        paddingBottom: 6
     },
     paddingRight24: {
         paddingRight: 24
@@ -124,4 +121,5 @@ const styles = () => ({
     }
 });
 
-export default withStyles(styles)(GrantListEditorHeader);
+// const GrantListEditorHeaderClass = withWidth()(GrantListEditorHeader);
+export default withStyles(styles)(withWidth()(GrantListEditorHeader));

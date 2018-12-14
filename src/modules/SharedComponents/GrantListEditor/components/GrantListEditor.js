@@ -3,7 +3,7 @@ import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
-import GrantListEditorRowHeader from './GrantListEditorHeader';
+import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
 import GrantListEditorForm from './GrantListEditorForm';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
@@ -126,11 +126,11 @@ export class GrantListEditor extends PureComponent {
 
     render() {
         const {classes, disabled, required} = this.props;
-        const {contributors, isCurrentAuthorSelected, errorMessage} = this.state;
+        const {contributors, errorMessage} = this.state;
 
         const renderContributorsRows = contributors.map((contributor, index) => (
             <GrantListEditorRow
-                key={`ContributorRow_${index}`}
+                key={`GrantListRow_${index}`}
                 index={index}
                 disabled={disabled}
                 contributor={contributor}
@@ -139,9 +139,6 @@ export class GrantListEditor extends PureComponent {
                 onMoveUp={this.moveUpContributor}
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
-                onContributorAssigned={this.assignContributor}
-                disabledContributorAssignment={isCurrentAuthorSelected}
-                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
             />
         ));
 
@@ -157,7 +154,6 @@ export class GrantListEditor extends PureComponent {
                 }
             });
         }
-
         return (
             <div>
                 {
@@ -178,15 +174,13 @@ export class GrantListEditor extends PureComponent {
                     <Grid container spacing={8}>
                         <Grid item xs={12}>
                             <List>
-                                <GrantListEditorRowHeader
+                                <GrantListEditorHeader
                                     onDeleteAll={this.deleteAllContributors}
                                     disabled={disabled}
-                                    isInfinite={contributors.length > 3}
-                                    {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                                 />
                             </List>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} style={{marginTop: -8}}>
                             <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
                                 {renderContributorsRows}
                             </List>
@@ -214,11 +208,9 @@ const mapStateToProps = (state) => {
 
 const styles = () => ({
     list: {
-        width: '98%',
-        margin: '0 1%',
+        width: '100%',
         maxHeight: 200,
         overflow: 'hidden',
-        marginBottom: 8
     },
     scroll: {
         overflowY: 'scroll'

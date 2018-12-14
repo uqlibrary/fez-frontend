@@ -10,7 +10,7 @@ exports[`BookForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Book information"
+      title="Grant Information"
     >
       <WithStyles(Grid)
         container={true}
@@ -25,6 +25,25 @@ exports[`BookForm renders  component 1`] = `
             disabled={false}
             name="grantInfo"
           />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Book information"
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <Field
             autoFocus={true}
             component={[Function]}

@@ -15,9 +15,6 @@ import {withStyles} from '@material-ui/core/styles';
 export class GrantListEditorRowHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         isInfinite: PropTypes.bool,
@@ -26,19 +23,17 @@ export class GrantListEditorRowHeader extends PureComponent {
 
     static defaultProps = {
         locale: {
-            contributorAssignmentColumn: 'Select your name',
-            nameColumn: 'Name as published',
-            identifierColumn: 'UQ identifier',
-            roleColumn: 'Role',
-            reorderColumn: 'Reorder records',
-            deleteAll: 'Remove all records',
+            GrantName: 'Name as published',
+            GrantID: 'UQ identifier',
+            GrantType: 'Role',
+            reorderColumn: 'Reorder entries',
+            deleteAll: 'Remove all entries',
             deleteAllConfirmation: {
                 confirmationTitle: 'Delete all',
-                confirmationMessage: 'Are you sure you want to delete all records?',
+                confirmationMessage: 'Are you sure you want to delete all entries?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            descriptionStep2: 'Step 2 - Select your name from the list below'
         },
     };
 
@@ -51,8 +46,9 @@ export class GrantListEditorRowHeader extends PureComponent {
     };
 
     render() {
-        const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation, roleColumn} = this.props.locale;
-        const {classes, showIdentifierLookup, isInfinite, showRoleInput} = this.props;
+        console.log('GrantListEditorRowHeader');
+        const {GrantName, GrantID, GrantType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
+        const {classes, isInfinite} = this.props;
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -60,35 +56,16 @@ export class GrantListEditorRowHeader extends PureComponent {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                {
-                    this.props.showContributorAssignment &&
-                    <Fragment>
-                        <br/>
-                        {this.props.locale.descriptionStep2}
-                    </Fragment>
-                }
                 <ListItem classes={{root: classes.header}}>
                     <Hidden xsDown>
                         <ListItemIcon>
-                            <People/>
+                            <People/> Hello
                         </ListItemIcon>
                     </Hidden>
-                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{variant: 'caption'}}/>
-                    {
-                        showIdentifierLookup &&
-                        <Hidden xsDown>
-                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
-                        </Hidden>
-                    }
-                    {
-                        showRoleInput &&
-                        <Hidden xsDown>
-                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{variant: 'caption'}}/>
-                        </Hidden>
-                    }
-                    <Hidden xsDown>
-                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
-                    </Hidden>
+                    <ListItemText secondary={GrantName} secondaryTypographyProps={{variant: 'caption'}}/>
+                    <ListItemText secondary={GrantID} secondaryTypographyProps={{variant: 'caption'}}/>
+                    <ListItemText secondary={GrantType} secondaryTypographyProps={{variant: 'caption'}}/>
+                    <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
                     <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
                         <Tooltip title={deleteAll}>
                             <IconButton
