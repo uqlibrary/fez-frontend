@@ -25,7 +25,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    loadSuggestions: (searchQuery) => dispatch(actions.searchAuthors(searchQuery))
+    loadSuggestions: (searchKey, searchQuery = '') => dispatch(actions.searchAuthors(searchQuery))
 });
 
 export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
