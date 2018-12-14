@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
-
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-
 import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
-
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
 
@@ -306,8 +302,14 @@ export default class NtroFields extends React.PureComponent {
                                     />
                                 </Grid>
                             }
-                            {
-                                !this.props.hideGrant &&
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+                {
+                    !this.props.hideGrant &&
+                    <Grid item xs={12}>
+                        <StandardCard title={'Grant information'}>
+                            <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={GrantListEditorField}
@@ -315,10 +317,10 @@ export default class NtroFields extends React.PureComponent {
                                         disabled={this.props.submitting}
                                     />
                                 </Grid>
-                            }
-                        </Grid>
-                    </StandardCard>
-                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                }
             </React.Fragment>
         );
     }

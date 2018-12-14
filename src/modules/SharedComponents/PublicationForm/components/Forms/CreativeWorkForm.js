@@ -9,13 +9,16 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -24,6 +27,7 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         const txt = formLocale.creativeWork;
+        console.log(this.props);
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -127,6 +131,15 @@ export default class CreativeWorkForm extends Component {
                         />
                     </StandardCard>
                 </Grid>
+
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                    />
+                }
+
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
