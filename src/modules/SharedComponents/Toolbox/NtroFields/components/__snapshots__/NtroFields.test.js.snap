@@ -317,7 +317,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
-            label="Peer review activity"
+            label="Quality indicators"
             name="rek_peerreviewactivity"
             required={true}
           >
@@ -689,7 +689,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
-            label="Peer review activity"
+            label="Quality indicators"
             name="rek_peerreviewactivity"
             required={true}
           >
@@ -1008,7 +1008,7 @@ exports[`Component NtroFields should render default view 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            label="Peer review activity"
+            label="Quality indicators"
             name="rek_peerreviewactivity"
             required={true}
           >
