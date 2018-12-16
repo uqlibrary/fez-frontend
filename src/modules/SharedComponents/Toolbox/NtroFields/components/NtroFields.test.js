@@ -55,7 +55,7 @@ function setup(testProps, isShallow = true) {
                         label: 'Audience size',
                     },
                     peerReviewActivity: {
-                        label: 'Peer review activity',
+                        label: 'Quality indicators',
                     },
                     notes: {
                         label: 'Notes',
