@@ -1159,7 +1159,10 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               "rek_display_type": 174,
             }
           }
+          isAuthorSelected={false}
+          isNtro={false}
           submitting={false}
+          subtype={null}
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)

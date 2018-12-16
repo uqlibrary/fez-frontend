@@ -6,10 +6,13 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation} from 'config';
 import {locale} from 'locale';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -18,7 +21,16 @@ import Typography from '@material-ui/core/Typography';
 export default class BookForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        formValues: PropTypes.object
+        formValues: PropTypes.object,
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
+    };
+
+    static defaultProps = {
+        isNtro: false,
+        subtype: null,
+        isAuthorSelected: false
     };
 
     constructor(props) {
@@ -95,7 +107,9 @@ export default class BookForm extends Component {
                             locale={txt.authors.field}
                             showContributorAssignment={!editorSelected}
                             required
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -108,6 +122,23 @@ export default class BookForm extends Component {
                             disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hideOriginalFormat
+                        hideAudienceSize
+                        hideNotes
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
@@ -139,6 +170,13 @@ export default class BookForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={SeriesField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_series.rek_series"
+                                    {...txt.information.fieldLabels.series} />
+                            </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
