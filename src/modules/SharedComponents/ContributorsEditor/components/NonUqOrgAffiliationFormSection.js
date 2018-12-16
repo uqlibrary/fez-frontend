@@ -30,7 +30,6 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
                 <FormControl fullWidth required>
                     <InputLabel>{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select
-                        required
                         value={orgType}
                         onChange={onOrgTypeChange}
                         error={orgType === ''}

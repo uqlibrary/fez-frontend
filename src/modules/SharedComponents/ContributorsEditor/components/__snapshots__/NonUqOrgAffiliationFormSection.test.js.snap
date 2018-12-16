@@ -34,7 +34,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       <WithStyles(Select)
         error={false}
         onChange={[MockFunction]}
-        required={true}
         value={453987}
       >
         <WithStyles(MenuItem)
@@ -131,7 +130,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
       <WithStyles(Select)
         error={true}
         onChange={[MockFunction]}
-        required={true}
         value=""
       >
         <WithStyles(MenuItem)
@@ -228,7 +226,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       <WithStyles(Select)
         error={false}
         onChange={[MockFunction]}
-        required={true}
         value={453987}
       >
         <WithStyles(MenuItem)
@@ -325,7 +322,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       <WithStyles(Select)
         error={true}
         onChange={[MockFunction]}
-        required={true}
         value=""
       >
         <WithStyles(MenuItem)
