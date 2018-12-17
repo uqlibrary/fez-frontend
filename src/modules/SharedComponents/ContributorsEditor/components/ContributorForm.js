@@ -210,7 +210,7 @@ export class ContributorForm extends PureComponent {
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.nameAsPublished.trim().length === 0 || showRoleInput && this.state.creatorRole.length === 0 || this.state.affiliation === 'NotUQ' && this.state.orgaff === '' || this.state.affiliation === 'NotUQ' && this.state.orgtype === ''}
+                            disabled={disabled || this.state.nameAsPublished.trim().length === 0 || showRoleInput && this.state.creatorRole.length === 0 || this.state.affiliation === 'NotUQ' && this.state.orgaff === ''}
                             onClick={this._addContributor}
                         >
                             {this.props.locale.addButton}
