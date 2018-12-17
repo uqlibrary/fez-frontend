@@ -382,3 +382,44 @@ export const getGeographicAreaSearchKey = (area = null) => {
         }]
     };
 };
+
+// * getGrantsListSearchKey - returns the grant funder/sponsor details as mapped in search keys
+// Input:
+// "grants":[
+//  {"GrantName":"Funder 1","GrantID":"00001","GrantType":"Museum","disabled":false},
+//  {"GrantName":"Funder 2","GrantID":"00002","GrantType":"Gallery","disabled":false}
+// ]
+//
+// Output:
+// "fez_record_search_key_grant_agency": [
+//     {
+//         "rek_grant_agency_id": 00001,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 1",
+//         "rek_grant_agency_order": 1
+//     },
+//     {
+//         "rek_grant_agency_id": 00002,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 2",
+//         "rek_grant_agency_order": 2
+//     }
+// ]
+export const getGrantsListSearchKey = (grants, pid) => {
+    console.log('transformer.getGrantsListSearchKey');
+    return {
+        fez_record_search_key_grant_agency: [
+            grants.map((item, index) => {
+                return {
+                    rek_grant_agency_id: item.GrantID,
+                    rek_grant_agency_pid: pid,
+                    rek_grant_agency_xsdmf_id: 0,
+                    rek_grant_agency: item.GrantName,
+                    rek_grant_agency_order: index
+                };
+            })
+        ]
+    };
+};

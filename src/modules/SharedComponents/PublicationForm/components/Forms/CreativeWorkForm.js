@@ -18,7 +18,7 @@ export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         isNtro: PropTypes.bool,
-        isAuthorSelected: PropTypes.bool
+        isAuthorSelected: PropTypes.bool,
     };
 
     constructor(props) {
@@ -27,7 +27,6 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         const txt = formLocale.creativeWork;
-        console.log(this.props);
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
