@@ -258,67 +258,67 @@ exports[`Component PublicationForm should render component initialised with just
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
@@ -635,67 +635,67 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
@@ -1044,67 +1044,67 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
@@ -1491,67 +1491,67 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
@@ -1935,67 +1935,67 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
@@ -2379,67 +2379,67 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
@@ -2822,67 +2822,67 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="ntro-8"
                 value={1020}
               >
-                Live Performance - Music
+                Live Performance of Creative Work - Music
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-9"
                 value={1021}
               >
-                Live Performance - Dance
+                Live Performance of Creative Work - Dance
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays/Dramas/Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
                 value={1023}
               >
-                Live Performance - Interarts
+                Live Performance of Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-12"
                 value={1024}
               >
-                Live Performance - Other
+                Live Performance of Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-13"
                 value={1025}
               >
-                Recorded or Rendered Work - Music, Dance, Theatre
+                Recorded or Rendered Creative Work - Music, Dance, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio/Visual Recording
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital Creative Works
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
                 value={1028}
               >
-                Recorded or Rendered Work - Interarts
+                Recorded or Rendered Creative Work - Interarts
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website/Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
                 value={1030}
               >
-                Recorded or Rendered Work - Other
+                Recorded or Rendered Creative Work - Other
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-19"
