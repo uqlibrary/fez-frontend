@@ -15,6 +15,10 @@ export const minLength10 = minLength(10);
 // Public Search Validation rules
 export const maxLength500 = maxLength(500);
 
+// Max Words
+export const maxWords = () => undefined;
+export const maxWords100 = maxWords(100);
+
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {
     const regexGroup = [

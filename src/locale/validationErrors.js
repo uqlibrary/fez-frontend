@@ -54,6 +54,7 @@ export default {
         rek_genre_type: 'Thesis type is required',
         thesisTitle: 'Thesis title is required',
         thesisAbstract: 'Thesis abstract is required',
+        ntroAbstract: 'Abstract/Description is required',
         files: 'File submission to be completed',
         fieldOfResearch: 'Field of research (FoR) codes are required',
         fez_record_search_key_keywords: 'Keywords are required',
