@@ -15,6 +15,12 @@ export const resetValue = (state, action) => {
                     .deleteIn(['registeredFields', action.payload.name])
                     .deleteIn(['fields', key])
                 : null;
+        case actionTypes.CHANGE:
+            const field = action.meta.field;
+            if (field === 'rek_display_type' && (action.meta.touch === false)) {
+                return  state.deleteIn(['values', 'rek_subtype']);
+            }
+            return state;
         default:
             return state;
     }

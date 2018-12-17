@@ -70,6 +70,27 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Abstract/Description
+          </WithStyles(Typography)>
+          <Field
+            component={[Function]}
+            disabled={true}
+            fullWidth={true}
+            name="ntroAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <Field
             component={[Function]}
             disabled={true}
@@ -317,7 +338,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
-            label="Peer review activity"
+            label="Quality indicators"
             name="rek_peerreviewactivity"
             required={true}
           >
@@ -466,6 +487,27 @@ exports[`Component NtroFields should render contribution statement fields as wel
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Abstract/Description
+          </WithStyles(Typography)>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            name="ntroAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <Field
             component={[Function]}
             disabled={false}
@@ -713,7 +755,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
-            label="Peer review activity"
+            label="Quality indicators"
             name="rek_peerreviewactivity"
             required={true}
           >
@@ -809,6 +851,27 @@ exports[`Component NtroFields should render default view 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Abstract/Description
+          </WithStyles(Typography)>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            name="ntroAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <Field
             component={[Function]}
             disabled={false}
@@ -1056,7 +1119,7 @@ exports[`Component NtroFields should render default view 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            label="Peer review activity"
+            label="Quality indicators"
             name="rek_peerreviewactivity"
             required={true}
           >

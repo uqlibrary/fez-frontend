@@ -53,25 +53,13 @@ export const PUBLICATION_TYPE_THESIS = 187;
 export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
-// export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_BOOK = 1000;
-// export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_BOOK_CHAPTER = 1001;
-// export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_JOURNAL_ARTICLE = 1002;
 export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK = 1003;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK = 1004;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER = 1005;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE = 1006;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_CREATIVE_WORK = 1007;
-// export const PUBLICATION_TYPE_CW_VISUAL_WORK_BOOK = 1008;
-// export const PUBLICATION_TYPE_CW_VISUAL_WORK_BOOK_CHAPTER = 1009;
-// export const PUBLICATION_TYPE_CW_VISUAL_WORK_JOURNAL_ARTICLE = 1010;
 export const PUBLICATION_TYPE_CW_VISUAL_WORK_CREATIVE_WORK = 1011;
-// export const PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_BOOK = 1012;
-// export const PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_BOOK_CHAPTER = 1013;
-// export const PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_JOURNAL_ARTICLE = 1014;
 export const PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_CREATIVE_WORK = 1015;
-// export const PUBLICATION_TYPE_CW_OTHER_BOOK = 1016;
-// export const PUBLICATION_TYPE_CW_OTHER_BOOK_CHAPTER = 1017;
-// export const PUBLICATION_TYPE_CW_OTHER_JOURNAL_ARTICLE = 1018;
 export const PUBLICATION_TYPE_CW_OTHER_CREATIVE_WORK = 1019;
 export const PUBLICATION_TYPE_LP_MUSIC = 1020;
 export const PUBLICATION_TYPE_LP_DANCE = 1021;
@@ -96,17 +84,17 @@ export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';
 export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual';
 export const NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION = 'Creative Work - Musical Composition';
 export const NTRO_SUBTYPE_CW_OTHER = 'Creative Work - Other';
-export const NTRO_SUBTYPE_LP_MUSIC = 'Live Performance - Music';
-export const NTRO_SUBTYPE_LP_DANCE = 'Live Performance - Dance';
-export const NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE = 'Live Performance - Plays/Dramas/Theatre';
-export const NTRO_SUBTYPE_LP_INTERARTS = 'Live Performance - Interarts';
-export const NTRO_SUBTYPE_LP_OTHER = 'Live Performance - Other';
-export const NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE = 'Recorded or Rendered Work - Music, Dance, Theatre';
-export const NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING = 'Recorded or Rendered Work - Audio/Visual Recording';
-export const NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS = 'Recorded or Rendered Work - Digital Creative Works';
-export const NTRO_SUBTYPE_RRW_INTERARTS = 'Recorded or Rendered Work - Interarts';
-export const NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION = 'Recorded or Rendered Work - Website/Exhibition';
-export const NTRO_SUBTYPE_RRW_OTHER = 'Recorded or Rendered Work - Other';
+export const NTRO_SUBTYPE_LP_MUSIC = 'Live Performance of Creative Work - Music';
+export const NTRO_SUBTYPE_LP_DANCE = 'Live Performance of Creative Work - Dance';
+export const NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE = 'Live Performance of Creative Work - Plays/Dramas/Theatre';
+export const NTRO_SUBTYPE_LP_INTERARTS = 'Live Performance of Creative Work - Interarts';
+export const NTRO_SUBTYPE_LP_OTHER = 'Live Performance of Creative Work - Other';
+export const NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE = 'Recorded or Rendered Creative Work - Music, Dance, Theatre';
+export const NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING = 'Recorded or Rendered Creative Work - Audio/Visual Recording';
+export const NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS = 'Recorded or Rendered Creative Work - Digital Creative Works';
+export const NTRO_SUBTYPE_RRW_INTERARTS = 'Recorded or Rendered Creative Work - Interarts';
+export const NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION = 'Recorded or Rendered Creative Work - Website/Exhibition';
+export const NTRO_SUBTYPE_RRW_OTHER = 'Recorded or Rendered Creative Work - Other';
 export const NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT = 'Curated or Produced Exhibition or Event - Exhibition or Event';
 export const NTRO_SUBTYPE_CPEE_FESTIVAL = 'Curated or Produced Exhibition or Event - Festival';
 export const NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION = 'Curated or Produced Exhibition or Event - Web Based Exhibition';
@@ -665,25 +653,13 @@ export const orgAffiliationTypes = [
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
-    // PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_BOOK,
-    // PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_BOOK_CHAPTER,
-    // PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_CREATIVE_WORK,
-    // PUBLICATION_TYPE_CW_VISUAL_WORK_BOOK,
-    // PUBLICATION_TYPE_CW_VISUAL_WORK_BOOK_CHAPTER,
-    // PUBLICATION_TYPE_CW_VISUAL_WORK_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_CW_VISUAL_WORK_CREATIVE_WORK,
-    // PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_BOOK,
-    // PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_BOOK_CHAPTER,
-    // PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_CREATIVE_WORK,
-    // PUBLICATION_TYPE_CW_OTHER_BOOK,
-    // PUBLICATION_TYPE_CW_OTHER_BOOK_CHAPTER,
-    // PUBLICATION_TYPE_CW_OTHER_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_CW_OTHER_CREATIVE_WORK,
     PUBLICATION_TYPE_LP_MUSIC,
     PUBLICATION_TYPE_LP_DANCE,
@@ -703,21 +679,6 @@ export const NEW_DOCTYPES_OPTIONS = [
 ];
 
 export const DOCTYPE_SUBTYPE_MAPPING = {
-    // [PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_BOOK]: {
-    //     docTypeId: 174,
-    //     subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    //     name: `${NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK} - Book`,
-    // },
-    // [PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_BOOK_CHAPTER]: {
-    //     docTypeId: 177,
-    //     subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    //     name: `${NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK} - Book chapter`,
-    // },
-    // [PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_JOURNAL_ARTICLE]: {
-    //     docTypeId: 179,
-    //     subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    //     name: `${NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK} - Journal article`,
-    // },
     [PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK]: {
         docTypeId: 316,
         subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
@@ -743,61 +704,16 @@ export const DOCTYPE_SUBTYPE_MAPPING = {
         subtype: NTRO_SUBTYPE_CW_TEXTUAL_WORK,
         name: `${NTRO_SUBTYPE_CW_TEXTUAL_WORK}`,
     },
-    // [PUBLICATION_TYPE_CW_VISUAL_WORK_BOOK]: {
-    //     docTypeId: 174,
-    //     subtype: NTRO_SUBTYPE_CW_VISUAL_WORK,
-    //     name: `${NTRO_SUBTYPE_CW_VISUAL_WORK} - Book`,
-    // },
-    // [PUBLICATION_TYPE_CW_VISUAL_WORK_BOOK_CHAPTER]: {
-    //     docTypeId: 177,
-    //     subtype: NTRO_SUBTYPE_CW_VISUAL_WORK,
-    //     name: `${NTRO_SUBTYPE_CW_VISUAL_WORK} - Book chapter`,
-    // },
-    // [PUBLICATION_TYPE_CW_VISUAL_WORK_JOURNAL_ARTICLE]: {
-    //     docTypeId: 179,
-    //     subtype: NTRO_SUBTYPE_CW_VISUAL_WORK,
-    //     name: `${NTRO_SUBTYPE_CW_VISUAL_WORK} - Journal article`,
-    // },
     [PUBLICATION_TYPE_CW_VISUAL_WORK_CREATIVE_WORK]: {
         docTypeId: 313,
         subtype: NTRO_SUBTYPE_CW_VISUAL_WORK,
         name: NTRO_SUBTYPE_CW_VISUAL_WORK,
     },
-    // [PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_BOOK]: {
-    //     docTypeId: 174,
-    //     subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-    //     name: `${NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} - Book`,
-    // },
-    // [PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_BOOK_CHAPTER]: {
-    //     docTypeId: 177,
-    //     subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-    //     name: `${NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} - Book chapter`,
-    // },
-    // [PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_JOURNAL_ARTICLE]: {
-    //     docTypeId: 179,
-    //     subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-    //     name: `${NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} - Journal article`,
-    // },
     [PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_CREATIVE_WORK]: {
         docTypeId: 313,
         subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
         name: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     },
-    // [PUBLICATION_TYPE_CW_OTHER_BOOK]: {
-    //     docTypeId: 174,
-    //     subtype: NTRO_SUBTYPE_CW_OTHER,
-    //     name: `${NTRO_SUBTYPE_CW_OTHER} - Book`,
-    // },
-    // [PUBLICATION_TYPE_CW_OTHER_BOOK_CHAPTER]: {
-    //     docTypeId: 177,
-    //     subtype: NTRO_SUBTYPE_CW_OTHER,
-    //     name: `${NTRO_SUBTYPE_CW_OTHER} - Book chapter`,
-    // },
-    // [PUBLICATION_TYPE_CW_OTHER_JOURNAL_ARTICLE]: {
-    //     docTypeId: 179,
-    //     subtype: NTRO_SUBTYPE_CW_OTHER,
-    //     name: `${NTRO_SUBTYPE_CW_OTHER} - Journal article`,
-    // },
     [PUBLICATION_TYPE_CW_OTHER_CREATIVE_WORK]: {
         docTypeId: 313,
         subtype: NTRO_SUBTYPE_CW_OTHER,

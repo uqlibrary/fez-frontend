@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
+
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import Typography from '@material-ui/core/Typography';
+
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
+import {RichEditorField} from 'modules/SharedComponents/RichEditor';
+
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
 
@@ -27,7 +31,6 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: PropTypes.bool,
         hideNotes: PropTypes.bool,
         hideSeries: PropTypes.bool,
-        hideGrant: PropTypes.bool,
         showContributionStatement: PropTypes.bool
     };
 
@@ -44,7 +47,6 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: false,
         hideNotes: false,
         hideSeries: false,
-        hideGrant: false,
         showContributionStatement: false,
         locale: {
             contributionStatement: {
@@ -62,6 +64,9 @@ export default class NtroFields extends React.PureComponent {
             metadata: {
                 title: 'Non-traditional research output metadata',
                 fields: {
+                    abstract: {
+                        label: 'Abstract/Description'
+                    },
                     volume: {
                         label: 'Volume',
                     },
@@ -85,7 +90,7 @@ export default class NtroFields extends React.PureComponent {
                         label: 'Audience size',
                     },
                     peerReviewActivity: {
-                        label: 'Peer review activity',
+                        label: 'Quality indicators',
                     },
                     notes: {
                         label: 'Notes',
@@ -147,6 +152,15 @@ export default class NtroFields extends React.PureComponent {
                 <Grid item xs={12}>
                     <StandardCard title={metadata.title}>
                         <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Typography variant="caption" children={metadata.fields.abstract.label}/>
+                                <Field
+                                    component={RichEditorField}
+                                    name="ntroAbstract"
+                                    fullWidth
+                                    disabled={this.props.submitting}
+                                    validate={[validation.required]}/>
+                            </Grid>
                             {
                                 !this.props.hideIsmn &&
                                 <Grid item xs={12}>
@@ -305,22 +319,6 @@ export default class NtroFields extends React.PureComponent {
                         </Grid>
                     </StandardCard>
                 </Grid>
-                {
-                    !this.props.hideGrant &&
-                    <Grid item xs={12}>
-                        <StandardCard title={'Grant information'}>
-                            <Grid container spacing={16}>
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={GrantListEditorField}
-                                        name="grants"
-                                        disabled={this.props.submitting}
-                                    />
-                                </Grid>
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                }
             </React.Fragment>
         );
     }

@@ -26,15 +26,12 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
   >
     <WithStyles(FormControl)
       fullWidth={true}
-      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={false}
         onChange={[MockFunction]}
-        required={true}
         value={453987}
       >
         <WithStyles(MenuItem)
@@ -123,15 +120,12 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
   >
     <WithStyles(FormControl)
       fullWidth={true}
-      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={true}
         onChange={[MockFunction]}
-        required={true}
         value=""
       >
         <WithStyles(MenuItem)
@@ -220,15 +214,12 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   >
     <WithStyles(FormControl)
       fullWidth={true}
-      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={false}
         onChange={[MockFunction]}
-        required={true}
         value={453987}
       >
         <WithStyles(MenuItem)
@@ -317,15 +308,12 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   >
     <WithStyles(FormControl)
       fullWidth={true}
-      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={true}
         onChange={[MockFunction]}
-        required={true}
         value=""
       >
         <WithStyles(MenuItem)

@@ -20,6 +20,7 @@ export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         hasSubtypes: PropTypes.bool,
+        subtype: PropTypes.string,
         subtypes: PropTypes.array,
         formComponent: PropTypes.func,
         disableSubmit: PropTypes.bool,
@@ -75,6 +76,7 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
@@ -118,6 +120,7 @@ export default class PublicationForm extends Component {
                             <Grid item xs={12}>
                                 <this.props.formComponent
                                     formValues={this.props.formValues}
+                                    subtype={this.props.subtype}
                                     isNtro={this.props.isNtro}
                                     isAuthorSelected={this.props.isAuthorSelected}
                                     submitting={this.props.submitting}
@@ -130,7 +133,8 @@ export default class PublicationForm extends Component {
                                         component={ FileUploadField }
                                         disabled={this.props.submitting}
                                         requireOpenAccessStatus
-                                        validate={[validation.validFileUpload]} />
+                                        validate={this.props.isNtro ? [validation.fileUploadRequired, validation.validFileUpload] : [validation.validFileUpload]}
+                                    />
                                 </StandardCard>
                             </Grid>
                         </React.Fragment>
@@ -144,7 +148,7 @@ export default class PublicationForm extends Component {
                 </Grid>
                 <Grid container spacing={24}>
                     <Grid item xs />
-                    <Grid item xs={12} sm={'auto'}>
+                    <Grid item xs={12} sm="auto">
                         <Button
                             // variant={'text'}
                             color="secondary"
@@ -155,10 +159,10 @@ export default class PublicationForm extends Component {
                     </Grid>
                     {
                         this.props.formValues.get('rek_display_type') > 0 &&
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid item xs={12} sm="auto">
                             <Button
                                 style={{whiteSpace: 'nowrap'}}
-                                variant={'contained'}
+                                variant="contained"
                                 color="primary"
                                 fullWidth
                                 children={txt.submit}
