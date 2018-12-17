@@ -32,7 +32,6 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
                     <Select
                         value={orgType}
                         onChange={onOrgTypeChange}
-                        error={orgType === ''}
                     >
                         <MenuItem value="" disabled>{locale.fields.organisationType.placeholder}</MenuItem>
                         {options}

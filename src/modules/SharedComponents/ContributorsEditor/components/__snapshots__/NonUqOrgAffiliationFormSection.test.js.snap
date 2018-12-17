@@ -32,7 +32,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={false}
         onChange={[MockFunction]}
         value={453987}
       >
@@ -128,7 +127,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={true}
         onChange={[MockFunction]}
         value=""
       >
@@ -224,7 +222,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={false}
         onChange={[MockFunction]}
         value={453987}
       >
@@ -320,7 +317,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
-        error={true}
         onChange={[MockFunction]}
         value=""
       >
