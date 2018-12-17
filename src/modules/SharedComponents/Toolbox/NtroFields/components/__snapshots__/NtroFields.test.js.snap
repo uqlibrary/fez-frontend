@@ -390,30 +390,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      title="Grant information"
-    >
-      <WithStyles(Grid)
-        container={true}
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={true}
-            name="grants"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </StandardCard>
-  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
@@ -807,30 +783,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      title="Grant information"
-    >
-      <WithStyles(Grid)
-        container={true}
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="grants"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </StandardCard>
-  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
@@ -1166,30 +1118,6 @@ exports[`Component NtroFields should render default view 1`] = `
             label="Notes"
             name="rek_notes"
             type="text"
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      title="Grant information"
-    >
-      <WithStyles(Grid)
-        container={true}
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="grants"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
