@@ -50,6 +50,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             placeholder="Type or cut and paste your impact statement here"
             rows={8}
             type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -444,6 +449,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
             placeholder="Type or cut and paste your impact statement here"
             rows={8}
             type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
