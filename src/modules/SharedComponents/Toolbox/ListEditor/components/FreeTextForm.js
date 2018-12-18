@@ -22,12 +22,14 @@ export class FreeTextForm extends Component {
         disabled: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        maxInputLength: PropTypes.number
     };
 
     static defaultProps = {
         isValid: () => '',
         remindToAdd: false,
+        maxInputLength: 2000,
         locale: {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name',
@@ -72,7 +74,11 @@ export class FreeTextForm extends Component {
     render() {
         const {classes, locale, errorText, disabled} = this.props;
         const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
-
+        const inputLength = this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
+        console.log('inputLength', inputLength);
+        console.log('itemName', this.state.itemName);
+        console.log('itemName.length', this.state.itemName.length);
+        console.log('maxInputLength', this.props.maxInputLength);
         return (
             <Grid container spacing={16} display="row" alignItems="center">
                 <Grid item style={{flexGrow: 1}}>
@@ -84,9 +90,9 @@ export class FreeTextForm extends Component {
                         value={this.state.itemName}
                         onChange={this.onNameChanged}
                         onKeyPress={this.addItem}
-                        error={!!errorText || !!this.props.isValid(this.state.itemName)}
-                        helperText={this.props.isValid(this.state.itemName) || errorText
-                            ? `${errorText || ''} ${this.props.isValid(this.state.itemName)}`
+                        error={!!errorText || !!this.props.isValid(this.state.itemName) || inputLength}
+                        helperText={this.props.isValid(this.state.itemName) || errorText || inputLength
+                            ? `${!!errorText ? errorText : ''} ${!!errorText && !!inputLength ? ' - ' : ''} ${!!inputLength ? inputLength : ''} ${this.props.isValid(this.state.itemName)}`
                             : null}
                         disabled={disabled}
                     />
@@ -106,7 +112,7 @@ export class FreeTextForm extends Component {
                         color="primary"
                         variant="contained"
                         children={addButtonLabel}
-                        disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                        disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0 || !!inputLength}
                         onClick={this.addItem}
                     />
                 </Grid>

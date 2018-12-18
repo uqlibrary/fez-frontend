@@ -19,7 +19,8 @@ export default class ListsEditor extends Component {
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
         input: PropTypes.object,
-        transformFunction: PropTypes.func.isRequired
+        transformFunction: PropTypes.func.isRequired,
+        maxInputLength: PropTypes.number
     };
 
     static defaultProps = {
@@ -59,11 +60,22 @@ export default class ListsEditor extends Component {
         if (!!item
             && (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
             && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
-            this.setState({
-                itemList: [...this.state.itemList, item]
-            });
+            if (item.includes(',')) {
+                const commaSepListToArray = item.split(',');
+                const totalArray = [...this.state.itemList, ...commaSepListToArray];
+                if(totalArray.length > this.props.maxCount) {
+                    totalArray.length = this.props.maxCount;
+                }
+                this.setState({
+                    itemList: [...totalArray]
+                });
+            } else {
+                this.setState({
+                    itemList: [...this.state.itemList, item]
+                });
+            }
         }
-    }
+    };
 
     moveUpList = (item, index) => {
         if (index === 0) return;
@@ -126,6 +138,7 @@ export default class ListsEditor extends Component {
                     isValid={this.props.isValid}
                     disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}
                     errorText={this.props.errorText}
+                    maxInputLength={this.props.maxInputLength}
                 />
                 {
                     this.state.itemList.length > 0 &&

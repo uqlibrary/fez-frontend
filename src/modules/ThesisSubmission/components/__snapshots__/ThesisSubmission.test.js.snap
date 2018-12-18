@@ -421,6 +421,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               }
             }
             maxCount={10}
+            maxInputLength={111}
             name="fez_record_search_key_keywords"
             required={true}
             searchKey={
@@ -917,6 +918,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               }
             }
             maxCount={10}
+            maxInputLength={111}
             name="fez_record_search_key_keywords"
             required={true}
             searchKey={
