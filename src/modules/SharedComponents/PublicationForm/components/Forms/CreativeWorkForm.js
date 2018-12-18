@@ -96,20 +96,6 @@ export default class CreativeWorkForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="rek_description"
-                                    type="text"
-                                    fullWidth
-                                    rows={3}
-                                    multiline
-                                    required
-                                    validate={[validation.required]}
-                                    {...txt.information.fieldLabels.abstract}
-                                />
-                            </Grid>
                         </Grid>
                     </StandardCard>
                 </Grid>

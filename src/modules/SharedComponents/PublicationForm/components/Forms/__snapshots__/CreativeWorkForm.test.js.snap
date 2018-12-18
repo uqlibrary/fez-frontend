@@ -122,28 +122,6 @@ exports[`CreativeWorkForm renders  component 1`] = `
             name="rek_end_date"
           />
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Abstract/Description"
-            multiline={true}
-            name="rek_description"
-            placeholder="Provide an abstract or summary of the work."
-            required={true}
-            rows={3}
-            type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
