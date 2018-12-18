@@ -60,7 +60,7 @@ export default class ListsEditor extends Component {
         if (!!item
             && (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
             && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
-            if (item.includes(',')) {
+            if (item && item.includes(',')) {
                 const commaSepListToArray = item.split(',');
                 const totalArray = [...this.state.itemList, ...commaSepListToArray];
                 if(totalArray.length > this.props.maxCount) {
