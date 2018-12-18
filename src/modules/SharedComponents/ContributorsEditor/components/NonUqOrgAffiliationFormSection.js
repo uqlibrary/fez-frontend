@@ -44,7 +44,7 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
 
 NonUqOrgAffiliationFormSection.propTypes = {
     orgAffiliation: PropTypes.string,
-    orgType: PropTypes.number,
+    orgType: PropTypes.string,
     onOrgAffiliationChange: PropTypes.func,
     onOrgTypeChange: PropTypes.func,
     locale: PropTypes.object
