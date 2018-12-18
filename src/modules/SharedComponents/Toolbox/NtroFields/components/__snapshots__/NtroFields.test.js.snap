@@ -83,6 +83,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -476,6 +477,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -815,6 +817,7 @@ exports[`Component NtroFields should render default view 1`] = `
             name="ntroAbstract"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
