@@ -207,7 +207,7 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
                     }
                 )
             )
-            .filter(item => item.rek_author_affiliation_type !== '')
+            .filter(item => !isNaN(item.rek_author_affiliation_type))
     };
 };
 

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
