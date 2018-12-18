@@ -57,10 +57,11 @@ export default class ListsEditor extends Component {
     }
 
     addItem = (item) => {
+        console.log('FOR item', item);
         if (!!item
             && (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
             && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
-            if (item && item.includes(',')) {
+            if (!!item && (!item.key || !item.value) && !!item.includes(',')) {
                 const commaSepListToArray = item.split(',');
                 const totalArray = [...this.state.itemList, ...commaSepListToArray];
                 if(totalArray.length > this.props.maxCount) {
