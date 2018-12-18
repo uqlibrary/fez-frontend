@@ -18,6 +18,7 @@ export default {
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
+        maxWords: 'Must be [max] words or less',
         authorLinking: 'Please select and confirm an author',
         contributorLinking: 'Please select and confirm a contributor',
         authorRequired: (<span>Please <b>provide a list of authors/creators</b> of the work and <b>select an author/creator or editor/contributor</b> as you</span>),
