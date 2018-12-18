@@ -5,10 +5,12 @@ import {Field} from 'redux-form/immutable';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import Typography from '@material-ui/core/Typography';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
@@ -62,6 +64,9 @@ export default class NtroFields extends React.PureComponent {
             metadata: {
                 title: 'Non-traditional research output metadata',
                 fields: {
+                    abstract: {
+                        label: 'Abstract/Description'
+                    },
                     volume: {
                         label: 'Volume',
                     },
@@ -147,6 +152,15 @@ export default class NtroFields extends React.PureComponent {
                 <Grid item xs={12}>
                     <StandardCard title={metadata.title}>
                         <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Typography variant="caption" children={metadata.fields.abstract.label}/>
+                                <Field
+                                    component={RichEditorField}
+                                    name="ntroAbstract"
+                                    fullWidth
+                                    disabled={this.props.submitting}
+                                    validate={[validation.required, validation.maxWords100]}/>
+                            </Grid>
                             {
                                 !this.props.hideIsmn &&
                                 <Grid item xs={12}>

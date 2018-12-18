@@ -15,6 +15,21 @@ export const minLength10 = minLength(10);
 // Public Search Validation rules
 export const maxLength500 = maxLength(500);
 
+// Max Words
+export const maxWords = (max) => (value) => {
+    let valueToValidate = null;
+    if (typeof value === 'object' && value.hasOwnProperty('plainText')) {
+        valueToValidate = value.plainText;
+    } else {
+        valueToValidate = value;
+    }
+
+    const regExp = '^ *\\S+(?: +\\S+){[max],}$';
+    return (new RegExp(regExp.replace('[max]', max), 'gim')).test(valueToValidate.trim()) ?  locale.validationErrors.maxWords.replace('[max]', max) : undefined;
+};
+
+export const maxWords100 = maxWords(100);
+
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {
     const regexGroup = [
