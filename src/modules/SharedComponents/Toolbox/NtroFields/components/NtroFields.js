@@ -143,6 +143,7 @@ export default class NtroFields extends React.PureComponent {
                                         disabled={this.props.submitting}
                                         label={contributionStatement.fields.impactStatement.label}
                                         placeholder={contributionStatement.fields.impactStatement.placeholder}
+                                        validate={[validation.maxLength2000]}
                                     />
                                 </Grid>
                             </Grid>

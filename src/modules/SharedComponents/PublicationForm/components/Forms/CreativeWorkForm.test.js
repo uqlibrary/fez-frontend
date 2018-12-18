@@ -17,9 +17,9 @@ describe('CreativeWorkForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 8 input fields', () => {
+    it('component with 10 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(10);
     });
 
     it('component with 3 required input fields', () => {

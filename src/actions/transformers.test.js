@@ -1169,3 +1169,25 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getRecordAbstractDescriptionSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getRecordAbstractDescriptionSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = {
+            plainText: 'test',
+            htmlText: '<p>test</p>'
+        };
+        const expected = {
+            rek_description: 'test',
+            rek_formatted_abstract: '<p>test</p>'
+        };
+        const result = transformers.getRecordAbstractDescriptionSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});

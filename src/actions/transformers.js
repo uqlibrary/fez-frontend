@@ -382,3 +382,12 @@ export const getGeographicAreaSearchKey = (area = null) => {
         }]
     };
 };
+
+export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
+    if (!abstract) return {};
+
+    return {
+        rek_description: abstract.plainText,
+        rek_formatted_abstract: abstract.htmlText
+    };
+};
