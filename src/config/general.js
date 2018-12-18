@@ -582,35 +582,35 @@ export const licenses = [
 
 export const orgAffiliationTypes = [
     {
-        value: 453983,
+        value: '453983',
         text: 'Museum'
     },
     {
-        value: 453984,
+        value: '453984',
         text: 'Gallery'
     },
     {
-        value: 453985,
+        value: '453985',
         text: 'Government'
     },
     {
-        value: 453986,
+        value: '453986',
         text: 'NGO'
     },
     {
-        value: 453987,
+        value: '453987',
         text: 'Foundation'
     },
     {
-        value: 453988,
+        value: '453988',
         text: 'Corporate/Industry'
     },
     {
-        value: 453989,
+        value: '453989',
         text: 'University'
     },
     {
-        value: 453990,
+        value: '453990',
         text: 'Other'
     }
 ];

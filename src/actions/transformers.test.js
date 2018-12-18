@@ -1098,7 +1098,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'NotUQ',
                 orgaff: 'Test organisation',
-                orgtype: 453983,
+                orgtype: '453983',
                 disabled: false,
                 selected: true,
                 authorId: 410
@@ -1108,7 +1108,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'NotUQ',
                 orgaff: 'Some Organisation',
-                orgtype: 453987,
+                orgtype: '453987',
                 disabled: false,
                 selected: false,
                 authorId: null

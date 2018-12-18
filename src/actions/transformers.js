@@ -202,12 +202,12 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
             .map(
                 (item, index) => (
                     {
-                        rek_author_affiliation_type: item.orgtype,
+                        rek_author_affiliation_type: parseInt(item.orgtype, 10),
                         rek_author_affiliation_type_order: index + 1
                     }
                 )
             )
-            .filter(item => item.rek_author_affiliation_type !== '')
+            .filter(item => !isNaN(item.rek_author_affiliation_type))
     };
 };
 

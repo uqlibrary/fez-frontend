@@ -42,49 +42,49 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453983"
-          value={453983}
+          value="453983"
         >
           Museum
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
-          value={453984}
+          value="453984"
         >
           Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
-          value={453985}
+          value="453985"
         >
           Government
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453986"
-          value={453986}
+          value="453986"
         >
           NGO
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453987"
-          value={453987}
+          value="453987"
         >
           Foundation
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453988"
-          value={453988}
+          value="453988"
         >
           Corporate/Industry
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453989"
-          value={453989}
+          value="453989"
         >
           University
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453990"
-          value={453990}
+          value="453990"
         >
           Other
         </WithStyles(MenuItem)>
@@ -136,49 +136,49 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453983"
-          value={453983}
+          value="453983"
         >
           Museum
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
-          value={453984}
+          value="453984"
         >
           Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
-          value={453985}
+          value="453985"
         >
           Government
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453986"
-          value={453986}
+          value="453986"
         >
           NGO
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453987"
-          value={453987}
+          value="453987"
         >
           Foundation
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453988"
-          value={453988}
+          value="453988"
         >
           Corporate/Industry
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453989"
-          value={453989}
+          value="453989"
         >
           University
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453990"
-          value={453990}
+          value="453990"
         >
           Other
         </WithStyles(MenuItem)>
@@ -230,49 +230,49 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453983"
-          value={453983}
+          value="453983"
         >
           Museum
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
-          value={453984}
+          value="453984"
         >
           Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
-          value={453985}
+          value="453985"
         >
           Government
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453986"
-          value={453986}
+          value="453986"
         >
           NGO
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453987"
-          value={453987}
+          value="453987"
         >
           Foundation
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453988"
-          value={453988}
+          value="453988"
         >
           Corporate/Industry
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453989"
-          value={453989}
+          value="453989"
         >
           University
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453990"
-          value={453990}
+          value="453990"
         >
           Other
         </WithStyles(MenuItem)>
@@ -324,49 +324,49 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453983"
-          value={453983}
+          value="453983"
         >
           Museum
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
-          value={453984}
+          value="453984"
         >
           Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
-          value={453985}
+          value="453985"
         >
           Government
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453986"
-          value={453986}
+          value="453986"
         >
           NGO
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453987"
-          value={453987}
+          value="453987"
         >
           Foundation
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453988"
-          value={453988}
+          value="453988"
         >
           Corporate/Industry
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453989"
-          value={453989}
+          value="453989"
         >
           University
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453990"
-          value={453990}
+          value="453990"
         >
           Other
         </WithStyles(MenuItem)>
