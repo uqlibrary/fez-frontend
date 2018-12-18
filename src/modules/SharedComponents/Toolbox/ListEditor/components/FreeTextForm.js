@@ -75,10 +75,6 @@ export class FreeTextForm extends Component {
         const {classes, locale, errorText, disabled} = this.props;
         const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
         const inputLength = this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
-        console.log('inputLength', inputLength);
-        console.log('itemName', this.state.itemName);
-        console.log('itemName.length', this.state.itemName.length);
-        console.log('maxInputLength', this.props.maxInputLength);
         return (
             <Grid container spacing={16} display="row" alignItems="center">
                 <Grid item style={{flexGrow: 1}}>
