@@ -97,6 +97,9 @@ export default class NtroFields extends React.PureComponent {
                         label: 'Notes',
                     },
                 }
+            },
+            grantEditor: {
+                title: 'Funder/Sponser details'
             }
         }
     };
@@ -113,7 +116,7 @@ export default class NtroFields extends React.PureComponent {
     };
 
     render() {
-        const {contributionStatement, metadata} = this.props.locale;
+        const {contributionStatement, metadata, grantEditor} = this.props.locale;
 
         return (
             <React.Fragment>
@@ -323,7 +326,7 @@ export default class NtroFields extends React.PureComponent {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <StandardCard title={contributionStatement.title}>
+                    <StandardCard title={grantEditor.title}>
                         <Field
                             component={GrantListEditorField}
                             name="grants"
