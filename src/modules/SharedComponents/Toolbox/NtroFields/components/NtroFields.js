@@ -164,7 +164,7 @@ export default class NtroFields extends React.PureComponent {
                                     name="ntroAbstract"
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    validate={[validation.required, validation.maxWords100]}/>
+                                    validate={[validation.required, validation.maxListEditorTextLength800]}/>
                             </Grid>
                             {
                                 !this.props.hideIsmn &&
