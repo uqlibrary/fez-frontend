@@ -5,6 +5,7 @@ import locale from 'locale/validationErrors';
 export const maxLength = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
+export const maxLength800 = maxLength(800);
 export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
@@ -29,6 +30,19 @@ export const maxWords = (max) => (value) => {
 };
 
 export const maxWords100 = maxWords(100);
+
+export const maxListEditorTextLength = (max) => (value) => {
+    let valueToValidate = null;
+    if (typeof value === 'object' && value.hasOwnProperty('plainText')) {
+        valueToValidate = value.plainText;
+    } else {
+        valueToValidate = value;
+    }
+
+    return maxLength(max)(valueToValidate);
+};
+
+export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {

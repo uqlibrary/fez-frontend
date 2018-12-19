@@ -580,6 +580,20 @@ export const licenses = [
     }
 ];
 
+/**
+ * @todo Merge grantTypes and orgAffiliationTypes if possible
+ */
+export const grantTypes = [
+    'Museum',
+    'Gallery',
+    'Government',
+    'NGO',
+    'Foundation',
+    'Corporate/Industry',
+    'University',
+    'Other',
+];
+
 export const orgAffiliationTypes = [
     {
         value: '453983',
