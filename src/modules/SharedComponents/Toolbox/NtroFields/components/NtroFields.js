@@ -10,6 +10,7 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 
 import {validation} from 'config';
@@ -318,6 +319,16 @@ export default class NtroFields extends React.PureComponent {
                                 </Grid>
                             }
                         </Grid>
+                    </StandardCard>
+                </Grid>
+
+                <Grid item xs={12}>
+                    <StandardCard title={contributionStatement.title}>
+                        <Field
+                            component={GrantListEditorField}
+                            name="grants"
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
             </React.Fragment>
