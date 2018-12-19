@@ -417,6 +417,8 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 //     }
 // ]
 export const getGrantsListSearchKey = (grants) => {
+    if (!grants || grants.length === 0) return {};
+
     return {
         fez_record_search_key_grant_agency: [
             grants.map((item, index) => {
