@@ -396,6 +396,20 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Funder/Sponser details"
+    >
+      <Field
+        component={[Function]}
+        disabled={true}
+        name="grants"
+      />
+    </StandardCard>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
@@ -795,6 +809,20 @@ exports[`Component NtroFields should render contribution statement fields as wel
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Funder/Sponser details"
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        name="grants"
+      />
+    </StandardCard>
+  </WithStyles(Grid)>
 </React.Fragment>
 `;
 
@@ -1134,6 +1162,20 @@ exports[`Component NtroFields should render default view 1`] = `
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Funder/Sponser details"
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        name="grants"
+      />
     </StandardCard>
   </WithStyles(Grid)>
 </React.Fragment>
