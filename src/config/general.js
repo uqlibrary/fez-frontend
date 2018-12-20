@@ -76,6 +76,11 @@ export const PUBLICATION_TYPE_CPEE_EXHIBITION_EVENT = 1031;
 export const PUBLICATION_TYPE_CPEE_FESTIVAL = 1032;
 export const PUBLICATION_TYPE_CPEE_WEB_BASED_EXHIBITION = 1033;
 export const PUBLICATION_TYPE_CPEE_OTHER = 1034;
+export const PUBLICATION_TYPE_RREB_PUBLIC_SECTOR = 1035;
+export const PUBLICATION_TYPE_RREB_INDUSTRY = 1036;
+export const PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT = 1037;
+export const PUBLICATION_TYPE_RREB_OTHER = 1038;
+export const PUBLICATION_TYPE_RR_INTERNAL_OTHER = 1039;
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
@@ -103,7 +108,7 @@ export const NTRO_SUBTYPE_RREB_PUBLIC_SECTOR = 'Research Report for an External 
 export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body - Industry';
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
-export const NTRO_SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
 
 export const CREATIVE_WORK_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
@@ -133,7 +138,6 @@ export const RESEARCH_REPORT_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_RREB_INDUSTRY,
     NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
     NTRO_SUBTYPE_RREB_OTHER,
-    NTRO_SUBTYPE_RR_INTERNAL_OTHER,
 ];
 
 export const NTRO_SUBTYPES = [
@@ -367,7 +371,7 @@ export const publicationTypes = (components) => [
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true,
-        subtypes: RESEARCH_REPORT_NTRO_SUBTYPES
+        subtypes: [...RESEARCH_REPORT_NTRO_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER]
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
@@ -653,6 +657,11 @@ export const NEW_DOCTYPES_OPTIONS = [
     PUBLICATION_TYPE_CPEE_FESTIVAL,
     PUBLICATION_TYPE_CPEE_WEB_BASED_EXHIBITION,
     PUBLICATION_TYPE_CPEE_OTHER,
+    PUBLICATION_TYPE_RREB_PUBLIC_SECTOR,
+    PUBLICATION_TYPE_RREB_INDUSTRY,
+    PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT,
+    PUBLICATION_TYPE_RREB_OTHER,
+    PUBLICATION_TYPE_RR_INTERNAL_OTHER,
 ];
 
 export const DOCTYPE_SUBTYPE_MAPPING = {
@@ -770,5 +779,30 @@ export const DOCTYPE_SUBTYPE_MAPPING = {
         docTypeId: 313,
         subtype: NTRO_SUBTYPE_CPEE_OTHER,
         name: NTRO_SUBTYPE_CPEE_OTHER,
+    },
+    [PUBLICATION_TYPE_RREB_PUBLIC_SECTOR]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+        name: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR
+    },
+    [PUBLICATION_TYPE_RREB_INDUSTRY]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_INDUSTRY,
+        name: NTRO_SUBTYPE_RREB_INDUSTRY
+    },
+    [PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
+        name: NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT
+    },
+    [PUBLICATION_TYPE_RREB_OTHER]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_OTHER,
+        name: NTRO_SUBTYPE_RREB_OTHER
+    },
+    [PUBLICATION_TYPE_RR_INTERNAL_OTHER]: {
+        docTypeId: 275,
+        subtype: SUBTYPE_RR_INTERNAL_OTHER,
+        name: SUBTYPE_RR_INTERNAL_OTHER
     },
 };

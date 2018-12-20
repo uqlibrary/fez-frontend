@@ -344,6 +344,36 @@ exports[`Component PublicationForm should render component initialised with just
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
               </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
+              </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -720,6 +750,36 @@ exports[`Component PublicationForm should render component initialised with two 
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
               </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
@@ -1129,6 +1189,36 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
               </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
@@ -1577,6 +1667,36 @@ exports[`Component PublicationForm should render component with GenericDocument 
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
               </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
+              </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -2020,6 +2140,36 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
               </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
@@ -2465,6 +2615,36 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
               </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
+              </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -2907,6 +3087,36 @@ exports[`Component PublicationForm should render component with all fields disab
                 value={1034}
               >
                 Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-23"
+                value={1035}
+              >
+                Research Report for an External Body - Public Sector
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-24"
+                value={1036}
+              >
+                Research Report for an External Body - Industry
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-25"
+                value={1037}
+              >
+                Research Report for an External Body - Not-for-profit
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-26"
+                value={1038}
+              >
+                Research Report for an External Body - Other
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                key="ntro-27"
+                value={1039}
+              >
+                Research Report - Internal or Other
               </WithStyles(MenuItem)>
             </Field>
           </WithStyles(Grid)>
