@@ -326,6 +326,10 @@ export default class NtroFields extends React.PureComponent {
                                         <MenuItem value={4}>Option 4</MenuItem>
                                         <MenuItem value={5}>Option 5</MenuItem>
                                         <MenuItem value={6}>Option 6</MenuItem>
+                                        <MenuItem value={7}>Option 7</MenuItem>
+                                        <MenuItem value={8}>Option 8</MenuItem>
+                                        <MenuItem value={9}>Option 9</MenuItem>
+                                        <MenuItem value={10}>Option 10</MenuItem>
                                     </Field>
                                 </Grid>
                             }

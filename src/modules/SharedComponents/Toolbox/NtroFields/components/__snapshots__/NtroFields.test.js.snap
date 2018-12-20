@@ -390,6 +390,26 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             >
               Option 6
             </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={7}
+            >
+              Option 7
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={8}
+            >
+              Option 8
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={9}
+            >
+              Option 9
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={10}
+            >
+              Option 10
+            </WithStyles(MenuItem)>
           </Field>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -815,6 +835,26 @@ exports[`Component NtroFields should render contribution statement fields as wel
             >
               Option 6
             </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={7}
+            >
+              Option 7
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={8}
+            >
+              Option 8
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={9}
+            >
+              Option 9
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={10}
+            >
+              Option 10
+            </WithStyles(MenuItem)>
           </Field>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1181,6 +1221,26 @@ exports[`Component NtroFields should render default view 1`] = `
               value={6}
             >
               Option 6
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={7}
+            >
+              Option 7
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={8}
+            >
+              Option 8
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={9}
+            >
+              Option 9
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              value={10}
+            >
+              Option 10
             </WithStyles(MenuItem)>
           </Field>
         </WithStyles(Grid)>
