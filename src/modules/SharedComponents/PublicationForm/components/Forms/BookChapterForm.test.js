@@ -7,7 +7,6 @@ function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
-        subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
     return getElement(BookChapterForm, props, isShallow);
 }
