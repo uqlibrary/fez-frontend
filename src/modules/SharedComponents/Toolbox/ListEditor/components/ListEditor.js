@@ -57,21 +57,29 @@ export default class ListsEditor extends Component {
     }
 
     addItem = (item) => {
-        console.log('FOR item', item);
         if (!!item
             && (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
-            && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)
-            && item.trim() !== ',') {
-            if (!!item && (!item.key || !item.value) && !!item.includes(',')) {
-                const commaSepListToArray = item.split(',');
-                const totalArray = [...this.state.itemList, ...commaSepListToArray];
+            && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
+            // If when the item is submitted, there is no maxCount, its not exceeding the maxCount, is distinct and isnt already in the list...
+            if (!!item.key && !!item.value) {
+                // Item is an object with {key: 'something', value: 'something} - as per FoR codes
+                this.setState({
+                    itemList: [...this.state.itemList, item]
+                });
+            } else if (!!item && item.includes(',') && !item.key && !item.value) {
+                // Item is a string with commas in it - we will strip and separate the values to be individual keywords
+                const commaSepListToArray = item.split(','); // Convert the string to an array of values
+                const cleanArray = commaSepListToArray.filter(item => item.trim() !== ''); // Filter out empty array values
+                const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
                 if(totalArray.length > this.props.maxCount) {
+                    // If the final list is longer that maxCount, trim it back
                     totalArray.length = this.props.maxCount;
                 }
                 this.setState({
                     itemList: [...totalArray]
                 });
             } else {
+                // Item is just a string - so just add it
                 this.setState({
                     itemList: [...this.state.itemList, item]
                 });
