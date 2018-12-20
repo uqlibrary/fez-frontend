@@ -12,6 +12,7 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
+import {SeriesField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
@@ -67,6 +68,10 @@ export default class NtroFields extends React.PureComponent {
                 fields: {
                     abstract: {
                         label: 'Abstract/Description'
+                    },
+                    series: {
+                        floatingLabelText: 'Series',
+                        placeholder: ''
                     },
                     volume: {
                         label: 'Volume',
@@ -194,6 +199,17 @@ export default class NtroFields extends React.PureComponent {
                                         locale={{...componentLocale.components.isrcForm.field}}
                                         disabled={this.props.submitting}
                                     />
+                                </Grid>
+                            }
+                            {
+                                !this.props.hideSeries &&
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SeriesField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_series.rek_series"
+                                        {...metadata.fields.series} />
+
                                 </Grid>
                             }
                             {
