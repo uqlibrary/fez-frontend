@@ -9,6 +9,7 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {locale} from 'locale';
@@ -20,7 +21,8 @@ import Typography from '@material-ui/core/Typography';
 export default class ResearchReportForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        isNtro: PropTypes.bool
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -98,14 +100,17 @@ export default class ResearchReportForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={SeriesField}
-                                    name="fez_record_search_key_series.rek_series"
-                                    disabled={this.props.submitting}
-                                    {...txt.information.fieldLabels.series}
-                                />
-                            </Grid>
+                            {
+                                !this.props.isNtro &&
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SeriesField}
+                                        name="fez_record_search_key_series.rek_series"
+                                        disabled={this.props.submitting}
+                                        {...txt.information.fieldLabels.series}
+                                    />
+                                </Grid>
+                            }
                         </Grid>
                     </StandardCard>
                 </Grid>
@@ -120,9 +125,28 @@ export default class ResearchReportForm extends Component {
                             showContributorAssignment
                             className="requiredField"
                             validate={[validation.authorRequired]}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hideOriginalFormat
+                        hideAudienceSize
+                        hideNotes
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
@@ -156,18 +180,21 @@ export default class ResearchReportForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
                         <Grid container spacing={16}>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={TextField}
-                                    name="rek_description"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiline
-                                    rows={3}
-                                    {...txt.other.fieldLabels.abstract}
-                                />
-                            </Grid>
+                            {
+                                !this.props.isNtro &&
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_description"
+                                        type="text"
+                                        disabled={this.props.submitting}
+                                        fullWidth
+                                        multiline
+                                        rows={3}
+                                        {...txt.other.fieldLabels.abstract}
+                                    />
+                                </Grid>
+                            }
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
