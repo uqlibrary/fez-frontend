@@ -1112,6 +1112,16 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   "uploadInProgressText": "Uploading...",
                 },
                 "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+                "ntroSpecificInstructions": <span>
+                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+                  <a
+                    href="http://google.com"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  .
+                </span>,
                 "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
                 "successTitle": "Success",
                 "validation": Object {
