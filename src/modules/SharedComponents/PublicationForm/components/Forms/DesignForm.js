@@ -7,6 +7,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
@@ -15,7 +16,10 @@ import Grid from '@material-ui/core/Grid';
 
 export default class DesignForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -120,9 +124,26 @@ export default class DesignForm extends Component {
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                            validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideAudienceSize
+                        hideNotes
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
