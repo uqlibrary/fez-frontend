@@ -518,7 +518,7 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'OK'
             // },
-            description: 'Add up to 10 keywords that describe the content of the thesis'
+            description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.'
         },
         optional: {
             title: 'Optional information',

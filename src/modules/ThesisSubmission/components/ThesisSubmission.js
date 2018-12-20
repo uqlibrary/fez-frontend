@@ -220,6 +220,7 @@ export default class ThesisSubmission extends Component {
                                     required
                                     maxCount={10}
                                     validate={[validation.requiredList]}
+                                    maxInputLength={111}
                                     searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
                                     locale={locale.components.keywordsForm.field}
                                     disabled={this.props.submitting}/>
