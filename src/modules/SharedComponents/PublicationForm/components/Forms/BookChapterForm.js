@@ -5,10 +5,12 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation} from 'config';
 import {locale} from 'locale';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -17,7 +19,10 @@ import PropTypes from 'prop-types';
 
 export default class BookChapterForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     }
 
     constructor(props) {
@@ -104,7 +109,9 @@ export default class BookChapterForm extends Component {
                             showContributorAssignment
                             className="requiredField"
                             validate={[validation.authorRequired]}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -116,6 +123,23 @@ export default class BookChapterForm extends Component {
                             disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hideOriginalFormat
+                        hideAudienceSize
+                        hideNotes
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
