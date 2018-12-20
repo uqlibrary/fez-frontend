@@ -378,7 +378,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           title="Keywords"
         >
           <WithStyles(Typography)>
-            Add up to 10 keywords that describe the content of the thesis
+            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -881,7 +881,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           title="Keywords"
         >
           <WithStyles(Typography)>
-            Add up to 10 keywords that describe the content of the thesis
+            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
