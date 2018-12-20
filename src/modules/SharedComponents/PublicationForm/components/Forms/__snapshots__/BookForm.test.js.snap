@@ -456,18 +456,6 @@ exports[`BookForm renders  component 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            floatingLabelText="Series"
-            name="fez_record_search_key_series.rek_series"
-            placeholder=""
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
             multiline={true}

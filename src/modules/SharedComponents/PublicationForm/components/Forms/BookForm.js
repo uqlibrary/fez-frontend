@@ -9,7 +9,6 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
@@ -170,13 +169,6 @@ export default class BookForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={SeriesField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_series.rek_series"
-                                    {...txt.information.fieldLabels.series} />
-                            </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
