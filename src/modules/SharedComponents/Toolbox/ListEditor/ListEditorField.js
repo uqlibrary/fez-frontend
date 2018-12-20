@@ -7,5 +7,6 @@ export default function ListEditorField(fieldProps) {
         error={fieldProps.meta && fieldProps.meta.error}
         onChange={fieldProps.input.onChange}
         remindToAdd={fieldProps.remindToAdd}
+        maxInputLength={fieldProps.maxInputLength}
         {...fieldProps} />);
 }
