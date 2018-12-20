@@ -115,6 +115,11 @@ export default class NtroFields extends React.PureComponent {
         this.row4Width = this.getWidth([props.hideExtent, props.hideOriginalFormat, props.hideAudienceSize, props.hidePeerReviewActivity]);
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.row3Width = this.getWidth([nextProps.hideVolume, nextProps.hideIssue, nextProps.hideStartPage, nextProps.hideEndPage]);
+        this.row4Width = this.getWidth([nextProps.hideExtent, nextProps.hideOriginalFormat, nextProps.hideAudienceSize, nextProps.hidePeerReviewActivity]);
+    }
+
     getWidth = (fields) => {
         const numberOfFieldsToDisplay = fields.filter(field => field === false).length;
         return numberOfFieldsToDisplay > 0 && (12 / numberOfFieldsToDisplay) || 12;

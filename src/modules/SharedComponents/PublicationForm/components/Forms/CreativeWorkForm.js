@@ -13,10 +13,12 @@ import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
+import {RRW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES} from 'config/general';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
+        subtype: PropTypes.string,
         isNtro: PropTypes.bool,
         isAuthorSelected: PropTypes.bool,
     };
@@ -113,6 +115,7 @@ export default class CreativeWorkForm extends Component {
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
                             validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
                         />
                     </StandardCard>
                 </Grid>
@@ -122,6 +125,9 @@ export default class CreativeWorkForm extends Component {
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn
+                        hideIsrc={!RRW_NTRO_SUBTYPES.includes(this.props.subtype)}
+                        hideAudienceSize={![...LP_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
                     />
                 }
 
