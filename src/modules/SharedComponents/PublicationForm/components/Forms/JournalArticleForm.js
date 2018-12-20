@@ -6,11 +6,13 @@ import {Field} from 'redux-form/immutable';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -18,7 +20,9 @@ import Typography from '@material-ui/core/Typography';
 export default class JournalArticleForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        formValues: PropTypes.object
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -88,13 +92,30 @@ export default class JournalArticleForm extends Component {
                                     name="authors"
                                     locale={txt.authors.field}
                                     disabled={this.props.submitting}
-                                    validate={[validation.authorRequired]}/>
+                                    validate={[validation.authorRequired]}
+                                    isNtro={this.props.isNtro}
+                                />
                             </Grid>
                         </Grid>
                     </StandardCard>
                 </Grid>
-
-
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hideOriginalFormat
+                        hideAudienceSize
+                        hideNotes
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
