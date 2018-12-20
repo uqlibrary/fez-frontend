@@ -124,7 +124,9 @@ export default class DesignForm extends Component {
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                            validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
                 {
