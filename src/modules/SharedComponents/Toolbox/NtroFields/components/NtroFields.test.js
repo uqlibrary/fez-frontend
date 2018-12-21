@@ -15,6 +15,7 @@ function setup(testProps, isShallow = true) {
         hidePeerReviewActivity: false,
         hideNotes: false,
         hideSeries: false,
+        hideGrants: false,
         showContributionStatement: false,
         ...testProps,
     };
@@ -36,6 +37,12 @@ describe('Component NtroFields', () => {
 
     it('should render all fields as disabled', () => {
         const wrapper = setup({showContributionStatement: true, submitting: true});
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with grants component hidden', () => {
+        const wrapper = setup({showContributionStatement: true, hideGrants: true});
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });

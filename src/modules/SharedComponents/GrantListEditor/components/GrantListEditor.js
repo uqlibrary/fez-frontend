@@ -19,7 +19,12 @@ export class GrantListEditor extends PureComponent {
         locale: PropTypes.object,
         input: PropTypes.object,
         classes: PropTypes.object,
-        required: PropTypes.bool
+        required: PropTypes.bool,
+        hideType: PropTypes.bool
+    };
+
+    static defaultProps = {
+        hideType: false
     };
 
     constructor(props) {
@@ -130,6 +135,7 @@ export class GrantListEditor extends PureComponent {
                     onAdd={this.addGrant}
                     required={required}
                     disabled={disabled}
+                    hideType={this.props.hideType}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                 />
                 {
@@ -140,6 +146,7 @@ export class GrantListEditor extends PureComponent {
                                 <GrantListEditorHeader
                                     onDeleteAll={this.deleteAllGrants}
                                     disabled={disabled}
+                                    hideType={this.props.hideType}
                                 />
                             </List>
                         </Grid>

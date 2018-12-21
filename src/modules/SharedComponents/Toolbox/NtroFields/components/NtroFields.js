@@ -33,6 +33,7 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: PropTypes.bool,
         hideNotes: PropTypes.bool,
         hideSeries: PropTypes.bool,
+        hideGrants: PropTypes.bool,
         showContributionStatement: PropTypes.bool
     };
 
@@ -49,6 +50,7 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: false,
         hideNotes: false,
         hideSeries: false,
+        hideGrants: false,
         showContributionStatement: false,
         locale: {
             contributionStatement: {
@@ -349,16 +351,18 @@ export default class NtroFields extends React.PureComponent {
                         </Grid>
                     </StandardCard>
                 </Grid>
-
-                <Grid item xs={12}>
-                    <StandardCard title={grantEditor.title}>
-                        <Field
-                            component={GrantListEditorField}
-                            name="grants"
-                            disabled={this.props.submitting}
-                        />
-                    </StandardCard>
-                </Grid>
+                {
+                    !this.props.hideGrants &&
+                    <Grid item xs={12}>
+                        <StandardCard title={grantEditor.title}>
+                            <Field
+                                component={GrantListEditorField}
+                                name="grants"
+                                disabled={this.props.submitting}
+                            />
+                        </StandardCard>
+                    </Grid>
+                }
             </React.Fragment>
         );
     }

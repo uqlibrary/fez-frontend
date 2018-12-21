@@ -18,7 +18,8 @@ export class GrantListEditorHeader extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
-        width: PropTypes.string
+        width: PropTypes.string,
+        hideType: PropTypes.bool
     };
 
     static defaultProps = {
@@ -35,6 +36,7 @@ export class GrantListEditorHeader extends PureComponent {
                 confirmButtonLabel: 'Yes'
             },
         },
+        hideType: false
     };
 
     constructor(props) {
@@ -66,9 +68,12 @@ export class GrantListEditorHeader extends PureComponent {
                                     <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
                                         <ListItemText secondary={GrantID} secondaryTypographyProps={{variant: 'caption'}}  style={{padding: 0}}/>
                                     </Grid>
-                                    <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
-                                        <ListItemText secondary={GrantType} secondaryTypographyProps={{variant: 'caption'}}  style={{padding: 0}}/>
-                                    </Grid>
+                                    {
+                                        !this.props.hideType &&
+                                        <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
+                                            <ListItemText secondary={GrantType} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}}/>
+                                        </Grid>
+                                    }
                                 </Hidden>
                             </Grid>
                         </Grid>
@@ -121,5 +126,4 @@ const styles = () => ({
     }
 });
 
-// const GrantListEditorHeaderClass = withWidth()(GrantListEditorHeader);
 export default withStyles(styles)(withWidth()(GrantListEditorHeader));
