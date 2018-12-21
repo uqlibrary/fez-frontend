@@ -13,7 +13,14 @@ import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
-import {RRW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES} from 'config/general';
+import {
+    RRW_NTRO_SUBTYPES,
+    LP_NTRO_SUBTYPES,
+    CPEE_NTRO_SUBTYPES,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_CW_OTHER,
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK
+} from 'config/general';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
@@ -119,18 +126,19 @@ export default class CreativeWorkForm extends Component {
                         />
                     </StandardCard>
                 </Grid>
-
                 {
                     this.props.isNtro &&
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
-                        hideIsmn
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
                         hideIsrc={!RRW_NTRO_SUBTYPES.includes(this.props.subtype)}
                         hideAudienceSize={![...LP_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
+                        hideVolume={![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
+                        hideIssue={![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
+                        hideOriginalFormat={[CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
                     />
                 }
-
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
