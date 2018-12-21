@@ -21,7 +21,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             label="Scale/Significance of work"
-            name="impactSize"
+            name="fez_record_search_key_significance.rek_significance"
             required={true}
           >
             <WithStyles(MenuItem)
@@ -46,7 +46,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Creator contribution statement"
             multiline={true}
-            name="impactStatement"
+            name="fez_record_search_key_creator_contribution_statement.rek_creator_contribution_statement"
             placeholder="Type or cut and paste your impact statement here"
             rows={8}
             type="text"
@@ -253,7 +253,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             label="Volume"
-            name="rek_volume"
+            name="fez_record_search_key_volume_number.rek_volume_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -267,7 +267,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             label="Issue"
-            name="rek_issue"
+            name="fez_record_search_key_issue_number.rek_issue_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -281,7 +281,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             label="Start page"
-            name="rek_startpage"
+            name="fez_record_search_key_start_page.rek_start_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -295,7 +295,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             label="End page"
-            name="rek_endpage"
+            name="fez_record_search_key_end_page.rek_end_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -330,7 +330,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             label="Physical description"
-            name="rek_originalformat"
+            name="fez_record_search_key_original_format.rek_original_format"
             type="text"
           />
         </WithStyles(Grid)>
@@ -344,7 +344,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             label="Audience size"
-            name="rek_audiencesize"
+            name="fez_record_search_key_audience_size.rek_audience_size"
             type="text"
           />
         </WithStyles(Grid)>
@@ -357,7 +357,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             label="Quality indicators"
-            name="rek_peerreviewactivity"
+            name="qualityIndicators"
             required={true}
           >
             <WithStyles(MenuItem)
@@ -466,7 +466,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             label="Scale/Significance of work"
-            name="impactSize"
+            name="fez_record_search_key_significance.rek_significance"
             required={true}
           >
             <WithStyles(MenuItem)
@@ -491,7 +491,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Creator contribution statement"
             multiline={true}
-            name="impactStatement"
+            name="fez_record_search_key_creator_contribution_statement.rek_creator_contribution_statement"
             placeholder="Type or cut and paste your impact statement here"
             rows={8}
             type="text"
@@ -698,7 +698,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             label="Volume"
-            name="rek_volume"
+            name="fez_record_search_key_volume_number.rek_volume_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -712,7 +712,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             label="Issue"
-            name="rek_issue"
+            name="fez_record_search_key_issue_number.rek_issue_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -726,7 +726,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             label="Start page"
-            name="rek_startpage"
+            name="fez_record_search_key_start_page.rek_start_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -740,7 +740,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             label="End page"
-            name="rek_endpage"
+            name="fez_record_search_key_end_page.rek_end_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -775,7 +775,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             label="Physical description"
-            name="rek_originalformat"
+            name="fez_record_search_key_original_format.rek_original_format"
             type="text"
           />
         </WithStyles(Grid)>
@@ -789,7 +789,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             label="Audience size"
-            name="rek_audiencesize"
+            name="fez_record_search_key_audience_size.rek_audience_size"
             type="text"
           />
         </WithStyles(Grid)>
@@ -802,7 +802,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             label="Quality indicators"
-            name="rek_peerreviewactivity"
+            name="qualityIndicators"
             required={true}
           >
             <WithStyles(MenuItem)
@@ -1085,7 +1085,7 @@ exports[`Component NtroFields should render default view 1`] = `
             disabled={false}
             fullWidth={true}
             label="Volume"
-            name="rek_volume"
+            name="fez_record_search_key_volume_number.rek_volume_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1099,7 +1099,7 @@ exports[`Component NtroFields should render default view 1`] = `
             disabled={false}
             fullWidth={true}
             label="Issue"
-            name="rek_issue"
+            name="fez_record_search_key_issue_number.rek_issue_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1113,7 +1113,7 @@ exports[`Component NtroFields should render default view 1`] = `
             disabled={false}
             fullWidth={true}
             label="Start page"
-            name="rek_startpage"
+            name="fez_record_search_key_start_page.rek_start_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1127,7 +1127,7 @@ exports[`Component NtroFields should render default view 1`] = `
             disabled={false}
             fullWidth={true}
             label="End page"
-            name="rek_endpage"
+            name="fez_record_search_key_end_page.rek_end_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1162,7 +1162,7 @@ exports[`Component NtroFields should render default view 1`] = `
             disabled={false}
             fullWidth={true}
             label="Physical description"
-            name="rek_originalformat"
+            name="fez_record_search_key_original_format.rek_original_format"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1176,7 +1176,7 @@ exports[`Component NtroFields should render default view 1`] = `
             disabled={false}
             fullWidth={true}
             label="Audience size"
-            name="rek_audiencesize"
+            name="fez_record_search_key_audience_size.rek_audience_size"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1189,7 +1189,7 @@ exports[`Component NtroFields should render default view 1`] = `
             component={[Function]}
             disabled={false}
             label="Quality indicators"
-            name="rek_peerreviewactivity"
+            name="qualityIndicators"
             required={true}
           >
             <WithStyles(MenuItem)
@@ -1298,7 +1298,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             label="Scale/Significance of work"
-            name="impactSize"
+            name="fez_record_search_key_significance.rek_significance"
             required={true}
           >
             <WithStyles(MenuItem)
@@ -1323,7 +1323,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Creator contribution statement"
             multiline={true}
-            name="impactStatement"
+            name="fez_record_search_key_creator_contribution_statement.rek_creator_contribution_statement"
             placeholder="Type or cut and paste your impact statement here"
             rows={8}
             type="text"
@@ -1530,7 +1530,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             label="Volume"
-            name="rek_volume"
+            name="fez_record_search_key_volume_number.rek_volume_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1544,7 +1544,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             label="Issue"
-            name="rek_issue"
+            name="fez_record_search_key_issue_number.rek_issue_number"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1558,7 +1558,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             label="Start page"
-            name="rek_startpage"
+            name="fez_record_search_key_start_page.rek_start_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1572,7 +1572,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             label="End page"
-            name="rek_endpage"
+            name="fez_record_search_key_end_page.rek_end_page"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1607,7 +1607,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             label="Physical description"
-            name="rek_originalformat"
+            name="fez_record_search_key_original_format.rek_original_format"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1621,7 +1621,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             label="Audience size"
-            name="rek_audiencesize"
+            name="fez_record_search_key_audience_size.rek_audience_size"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1634,7 +1634,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             label="Quality indicators"
-            name="rek_peerreviewactivity"
+            name="qualityIndicators"
             required={true}
           >
             <WithStyles(MenuItem)

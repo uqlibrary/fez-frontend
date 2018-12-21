@@ -141,7 +141,7 @@ export default class NtroFields extends React.PureComponent {
                                     <Field
                                         component={SelectField}
                                         disabled={this.props.submitting}
-                                        name="impactSize"
+                                        name="fez_record_search_key_significance.rek_significance"
                                         label={contributionStatement.fields.scaleOfWork.label}
                                         required>
                                         <MenuItem value={'minor'}>Minor</MenuItem>
@@ -151,7 +151,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12}>
                                     <Field
                                         component={TextField}
-                                        name="impactStatement"
+                                        name="fez_record_search_key_creator_contribution_statement.rek_creator_contribution_statement"
                                         type="text"
                                         multiline
                                         rows={8}
@@ -224,7 +224,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
-                                        name="rek_volume"
+                                        name="fez_record_search_key_volume_number.rek_volume_number"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -237,7 +237,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
-                                        name="rek_issue"
+                                        name="fez_record_search_key_issue_number.rek_issue_number"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -250,7 +250,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
-                                        name="rek_startpage"
+                                        name="fez_record_search_key_start_page.rek_start_page"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -263,7 +263,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row3Width}>
                                     <Field
                                         component={TextField}
-                                        name="rek_endpage"
+                                        name="fez_record_search_key_end_page.rek_end_page"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -292,7 +292,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={TextField}
-                                        name="rek_originalformat"
+                                        name="fez_record_search_key_original_format.rek_original_format"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -305,7 +305,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={TextField}
-                                        name="rek_audiencesize"
+                                        name="fez_record_search_key_audience_size.rek_audience_size"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -319,7 +319,7 @@ export default class NtroFields extends React.PureComponent {
                                     <Field
                                         component={SelectField}
                                         disabled={this.props.submitting}
-                                        name="rek_peerreviewactivity"
+                                        name="qualityIndicators"
                                         label={metadata.fields.peerReviewActivity.label}
                                         required>
                                         <MenuItem value={1}>Option 1</MenuItem>
