@@ -75,20 +75,23 @@ export default class ResearchReportForm extends Component {
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={TextField}
-                                    name="fez_record_search_key_total_pages.rek_total_pages"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    required
-                                    {...txt.information.fieldLabels.totalPages}
-                                    normalize={this.getNumbersOnly}
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
+                            {
+                                !this.props.isNtro &&
+                                <Grid item xs={12} sm={6}>
+                                    <Field
+                                        component={TextField}
+                                        name="fez_record_search_key_total_pages.rek_total_pages"
+                                        type="text"
+                                        disabled={this.props.submitting}
+                                        fullWidth
+                                        required
+                                        {...txt.information.fieldLabels.totalPages}
+                                        normalize={this.getNumbersOnly}
+                                        validate={[validation.required]}
+                                    />
+                                </Grid>
+                            }
+                            <Grid item xs={12} sm={this.props.isNtro ? 12 : 6}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
@@ -141,7 +144,7 @@ export default class ResearchReportForm extends Component {
                         hideIssue
                         hideStartPage
                         hideEndPage
-                        hideExtent
+                        hideExtent={!this.props.isNtro}
                         hideOriginalFormat
                         hideAudienceSize
                         hideNotes
