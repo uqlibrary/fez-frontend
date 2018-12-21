@@ -240,7 +240,7 @@ exports[`Component PublicationForm should render component initialised with just
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
@@ -647,7 +647,7 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
@@ -1086,7 +1086,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
@@ -1563,7 +1563,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
@@ -2037,7 +2037,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
@@ -2511,7 +2511,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"
@@ -2984,7 +2984,7 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="ntro-5"
                 value={1011}
               >
-                Creative Work - Visual
+                Creative Work - Visual Art
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-6"

@@ -86,7 +86,7 @@ export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
 export const NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
 export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';
-export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual';
+export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual Art';
 export const NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION = 'Creative Work - Musical Composition';
 export const NTRO_SUBTYPE_CW_OTHER = 'Creative Work - Other';
 export const NTRO_SUBTYPE_LP_MUSIC = 'Live Performance of Creative Work - Music';
@@ -109,6 +109,14 @@ export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body 
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+
+export const CW_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    NTRO_SUBTYPE_CW_VISUAL_WORK,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_CW_OTHER
+];
 
 export const RRW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
@@ -135,11 +143,7 @@ export const LP_NTRO_SUBTYPES = [
 ];
 
 export const CREATIVE_WORK_NTRO_SUBTYPES = [
-    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-    NTRO_SUBTYPE_CW_VISUAL_WORK,
-    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-    NTRO_SUBTYPE_CW_OTHER,
+    ...CW_NTRO_SUBTYPES,
     ...LP_NTRO_SUBTYPES,
     ...RRW_NTRO_SUBTYPES,
     ...CPEE_NTRO_SUBTYPES

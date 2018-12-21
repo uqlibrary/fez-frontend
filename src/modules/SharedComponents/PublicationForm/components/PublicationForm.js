@@ -134,6 +134,7 @@ export default class PublicationForm extends Component {
                                         disabled={this.props.submitting}
                                         requireOpenAccessStatus
                                         validate={this.props.isNtro ? [validation.fileUploadRequired, validation.validFileUpload] : [validation.validFileUpload]}
+                                        isNtro={this.props.isNtro}
                                     />
                                 </StandardCard>
                             </Grid>
