@@ -151,7 +151,7 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12}>
                                     <Field
                                         component={TextField}
-                                        name="fez_record_search_key_creator_contribution_statement.rek_creator_contribution_statement"
+                                        name="fez_record_search_key_creator_contribution_statement.0.rek_creator_contribution_statement"
                                         type="text"
                                         multiline
                                         rows={8}
