@@ -1191,3 +1191,43 @@ describe('getRecordAbstractDescriptionSearchKey tests', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getGrantsListSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getGrantsListSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [{
+            grantName: 'test',
+            grantId: 'test123',
+            grantType: 'NGO'
+        }];
+
+        const expected = {
+            fez_record_search_key_grant_agency: [
+                {
+                    rek_grant_agency: 'test',
+                    rek_grant_agency_order: 1
+                }
+            ],
+            fez_record_search_key_grant_agency_id: [
+                {
+                    rek_grant_agency_id: 'test123',
+                    rek_grant_agency_id_order: 1
+                }
+            ],
+            fez_record_search_key_grant_type: [
+                {
+                    rek_grant_type: 'NGO',
+                    rek_grant_type_order: 1
+                }
+            ],
+        };
+        const result = transformers.getGrantsListSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+})

@@ -421,28 +421,22 @@ export const getGrantsListSearchKey = (grants) => {
 
     return {
         fez_record_search_key_grant_agency: [
-            grants.map((item, index) => {
-                return {
-                    rek_grant_agency: item.grantName,
-                    rek_grant_agency_order: index + 1
-                };
-            })
+            ...grants.map((item, index) => ({
+                rek_grant_agency: item.grantName,
+                rek_grant_agency_order: index + 1
+            }))
         ],
         fez_record_search_key_grant_agency_id: [
-            grants.map((item, index) => {
-                return {
-                    rek_grant_agency_id: item.grantId,
-                    rek_grant_agency_id_order: index + 1
-                };
-            })
+            ...grants.map((item, index) => ({
+                rek_grant_agency_id: item.grantId,
+                rek_grant_agency_id_order: index + 1
+            }))
         ],
         fez_record_search_key_grant_type: [
-            grants.map((item, index) => {
-                return {
-                    rek_grant_agency_type: item.grantType,
-                    rek_grant_agency_type_order: index + 1
-                };
-            })
+            ...grants.map((item, index) => ({
+                rek_grant_type: item.grantType,
+                rek_grant_type_order: index + 1
+            }))
         ]
     };
 };
