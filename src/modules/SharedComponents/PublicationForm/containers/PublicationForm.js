@@ -96,7 +96,9 @@ const mapStateToProps = (state) => {
 
     const hasSubtypes = !!selectedPublicationType && selectedPublicationType.length > 0 && !!selectedPublicationType[0].subtypes || false;
     const subtypes = hasSubtypes && selectedPublicationType[0].subtypes || null;
-    const formComponent = !!publicationSubtype && selectedPublicationType[0].formComponent;
+    const formComponent = hasSubtypes
+        ? !!publicationSubtype && selectedPublicationType[0].formComponent
+        : (selectedPublicationType.length > 0 && selectedPublicationType[0].formComponent || null);
 
     return {
         formValues: formValues,
