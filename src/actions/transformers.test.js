@@ -1230,4 +1230,61 @@ describe('getGrantsListSearchKey tests', () => {
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
     });
+
+    it('should return search key with data filtered empty values', () => {
+        const input = [
+            {
+                grantName: 'test',
+                grantId: 'test123',
+            },
+            {
+                grantName: 'testing',
+                grantId: 'testing123',
+                grantType: 'NGO'
+            },
+            {
+                grantName: 'tested',
+                grantType: 'XYZ'
+            }
+        ];
+
+        const expected = {
+            fez_record_search_key_grant_agency: [
+                {
+                    rek_grant_agency: 'test',
+                    rek_grant_agency_order: 1
+                },
+                {
+                    rek_grant_agency: 'testing',
+                    rek_grant_agency_order: 2
+                },
+                {
+                    rek_grant_agency: 'tested',
+                    rek_grant_agency_order: 3
+                }
+            ],
+            fez_record_search_key_grant_agency_id: [
+                {
+                    rek_grant_agency_id: 'test123',
+                    rek_grant_agency_id_order: 1
+                },
+                {
+                    rek_grant_agency_id: 'testing123',
+                    rek_grant_agency_id_order: 2
+                }
+            ],
+            fez_record_search_key_grant_type: [
+                {
+                    rek_grant_type: 'NGO',
+                    rek_grant_type_order: 2
+                },
+                {
+                    rek_grant_type: 'XYZ',
+                    rek_grant_type_order: 3
+                }
+            ],
+        };
+        const result = transformers.getGrantsListSearchKey(input);
+        expect(result).toEqual(expected);
+    });
 })
