@@ -431,3 +431,19 @@ export const getGrantsListSearchKey = (grants) => {
         ]
     };
 };
+
+export const getNtroMetadataSearchKeys = (data) => {
+    if (!data) return {};
+
+    const ntroMetadata = {};
+    if (!!data.impactStatement) {
+        ntroMetadata.fez_record_search_key_creator_contribution_statement = [
+            {
+                rek_creator_contribution_statement: data.impactStatement,
+                rek_creator_contribution_statement_order: 1
+            }
+        ];
+    }
+
+    return ntroMetadata;
+};
