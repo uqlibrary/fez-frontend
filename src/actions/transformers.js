@@ -395,8 +395,8 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 // * getGrantsListSearchKey - returns the grant funder/sponsor details as mapped in search keys
 // Input:
 // "grants":[
-//  {"GrantName":"Funder 1","GrantID":"00001","GrantType":"Museum","disabled":false},
-//  {"GrantName":"Funder 2","GrantID":"00002","GrantType":"Gallery","disabled":false}
+//  {"grantName":"Funder 1","grantID":"00001","grantType":"Museum","disabled":false},
+//  {"grantName":"Funder 2","grantID":"00002","grantType":"Gallery","disabled":false}
 // ]
 //
 // Output:
@@ -423,9 +423,24 @@ export const getGrantsListSearchKey = (grants) => {
         fez_record_search_key_grant_agency: [
             grants.map((item, index) => {
                 return {
-                    rek_grant_agency_id: item.GrantID,
-                    rek_grant_agency: item.GrantName,
+                    rek_grant_agency: item.grantName,
                     rek_grant_agency_order: index + 1
+                };
+            })
+        ],
+        fez_record_search_key_grant_agency_id: [
+            grants.map((item, index) => {
+                return {
+                    rek_grant_agency_id: item.grantId,
+                    rek_grant_agency_id_order: index + 1
+                };
+            })
+        ],
+        fez_record_search_key_grant_type: [
+            grants.map((item, index) => {
+                return {
+                    rek_grant_agency_type: item.grantType,
+                    rek_grant_agency_type_order: index + 1
                 };
             })
         ]
@@ -436,6 +451,15 @@ export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
 
     const ntroMetadata = {};
+    if (!!data.significance) {
+        ntroMetadata.fez_record_search_key_significance = [
+            {
+                rek_significance: data.significance,
+                rek_significance_order: 1
+            }
+        ];
+    }
+
     if (!!data.impactStatement) {
         ntroMetadata.fez_record_search_key_creator_contribution_statement = [
             {

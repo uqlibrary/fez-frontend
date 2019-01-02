@@ -21,16 +21,16 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             label="Scale/Significance of work"
-            name="fez_record_search_key_significance.rek_significance"
+            name="significance"
             required={true}
           >
             <WithStyles(MenuItem)
-              value="minor"
+              value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
-              value="major"
+              value={454026}
             >
               Major
             </WithStyles(MenuItem)>
@@ -466,16 +466,16 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             label="Scale/Significance of work"
-            name="fez_record_search_key_significance.rek_significance"
+            name="significance"
             required={true}
           >
             <WithStyles(MenuItem)
-              value="minor"
+              value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
-              value="major"
+              value={454026}
             >
               Major
             </WithStyles(MenuItem)>
@@ -1298,16 +1298,16 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             label="Scale/Significance of work"
-            name="fez_record_search_key_significance.rek_significance"
+            name="significance"
             required={true}
           >
             <WithStyles(MenuItem)
-              value="minor"
+              value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
-              value="major"
+              value={454026}
             >
               Major
             </WithStyles(MenuItem)>

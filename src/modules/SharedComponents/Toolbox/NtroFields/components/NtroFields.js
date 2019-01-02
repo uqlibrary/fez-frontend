@@ -16,6 +16,7 @@ import {SeriesField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
+import {SIGNIFICANCE_MAJOR, SIGNIFICANCE_MINOR} from 'config/general';
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
@@ -141,11 +142,11 @@ export default class NtroFields extends React.PureComponent {
                                     <Field
                                         component={SelectField}
                                         disabled={this.props.submitting}
-                                        name="fez_record_search_key_significance.rek_significance"
+                                        name="significance"
                                         label={contributionStatement.fields.scaleOfWork.label}
                                         required>
-                                        <MenuItem value={'minor'}>Minor</MenuItem>
-                                        <MenuItem value={'major'}>Major</MenuItem>
+                                        <MenuItem value={SIGNIFICANCE_MINOR}>Minor</MenuItem>
+                                        <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>
                                     </Field>
                                 </Grid>
                                 <Grid item xs={12}>

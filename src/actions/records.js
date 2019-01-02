@@ -48,6 +48,7 @@ export function createNewRecord(data) {
         if (recordRequest.geographicArea) delete recordRequest.geographicArea;
         if (recordRequest.ntroAbstract) delete recordRequest.ntroAbstract;
         if (recordRequest.grants) delete recordRequest.grants;
+        if (recordRequest.significance) delete recordRequest.significance;
         if (recordRequest.impactStatement) delete recordRequest.impactStatement;
 
         let newRecord = null;

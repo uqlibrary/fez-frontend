@@ -822,3 +822,6 @@ export const DOCTYPE_SUBTYPE_MAPPING = {
         name: SUBTYPE_RR_INTERNAL_OTHER
     },
 };
+
+export const SIGNIFICANCE_MAJOR = 454026;
+export const SIGNIFICANCE_MINOR = 454027;
