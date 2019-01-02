@@ -123,6 +123,9 @@ const mapDispatchToProps = (dispatch) => {
         changeDisplayType: (docTypeSubType) => {
             dispatch(change(FORM_NAME, 'rek_display_type', docTypeSubType.docTypeId));
             dispatch(change(FORM_NAME, 'rek_subtype', docTypeSubType.subtype));
+        },
+        changeFormType: (isNtro) => {
+            dispatch(change(FORM_NAME, 'isNtro', isNtro));
         }
     };
 };

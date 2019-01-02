@@ -27,6 +27,7 @@ export default class PublicationForm extends Component {
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired,
         changeDisplayType: PropTypes.func,
+        changeFormType: PropTypes.func,
         isNtro: PropTypes.bool,
         hasDefaultDocTypeSubType: PropTypes.bool,
         docTypeSubTypeCombo: PropTypes.object,
@@ -67,6 +68,10 @@ export default class PublicationForm extends Component {
 
         if (nextProps.hasDefaultDocTypeSubType) {
             this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
+        }
+
+        if (nextProps.isNtro !== this.props.isNtro) {
+            this.props.changeFormType(nextProps.isNtro);
         }
     }
 
