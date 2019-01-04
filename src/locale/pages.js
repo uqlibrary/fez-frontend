@@ -61,6 +61,23 @@ export default {
                 </StandardCard>
             )
         },
+        lookup: {
+            title: 'Lookup Tools',
+            children: (
+                <StandardCard>
+                    <form>
+                        <fieldset>
+                            <legend>Raw output we receive for Incites via their API</legend>
+                            <br />
+                            Enter one or more Incites UT, separated by a comma:
+                            <input type="text" name="incites" />
+                            <input type="submit" value="Submit Orcid" />
+                            <p>Calling this uses up the daily Incites allowance</p>
+                        </fieldset>
+                    </form>
+                </StandardCard>
+            )
+        },
         browse: {
             title: 'Browse eSpace',
             text: (

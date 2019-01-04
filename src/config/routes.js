@@ -29,6 +29,7 @@ export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
     contact: '/contact',
+    lookup: '/lookup',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
@@ -110,7 +111,7 @@ export const pathConfig = {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/lookup', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
@@ -133,6 +134,11 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             path: pathConfig.contact,
             render: () => components.StandardPage({...locale.pages.contact}),
             pageTitle: locale.pages.contact.title
+        },
+        {
+            path: pathConfig.lookup,
+            render: () => components.StandardPage({...locale.pages.lookup}),
+            pageTitle: locale.pages.lookup.title
         },
         {
             path: pathConfig.records.view(pid),
@@ -330,6 +336,11 @@ export const getMenuConfig = (account, disabled) => {
         {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
+            public: true
+        },
+        {
+            linkTo: pathConfig.lookup,
+            ...locale.menu.lookup,
             public: true
         }
     ];
