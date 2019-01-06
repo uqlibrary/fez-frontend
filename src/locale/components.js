@@ -273,6 +273,29 @@ export default {
                 }
             }
         },
+        adminLookupToolsForm: {
+            incites: {
+                tip: 'View raw output we receive for Incites via their API',
+                invalidText: 'I dunno', // not used yet
+                fromHint: '', // not used yet
+                lookupType: 'incites',
+                primaryField: {
+                    heading: 'UTs',
+                    fromAria: '',
+                    tip: '',
+                    inputPlaceholder: 'Enter one or more Incites UTs, separated by a comma',
+                },
+                secondaryField: {
+                    heading: 'API Key',
+                    fromAria: '',
+                    tip: '(if blank the main one will be used, which will use up the daily Incites allowance)',
+                    inputPlaceholder: 'Enter API key',
+                },
+                lookupLabel: 'Incites',
+                bottomTip: '',
+                submitButtonLabel: 'Submit to Incites',
+            }
+        },
         typeOfDataForm: {
             field: {
                 form: {
