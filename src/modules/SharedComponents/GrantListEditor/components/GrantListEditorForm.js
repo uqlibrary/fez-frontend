@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
-import {grantTypes} from 'config/general';
+import {orgAffiliationTypes} from 'config/general';
 
 export default class GrantListEditorForm extends PureComponent {
     static propTypes = {
@@ -128,7 +128,7 @@ export default class GrantListEditorForm extends PureComponent {
                                     required={this.props.required}
                                 >
                                     <MenuItem value={''} disabled>{this.props.locale.grantTypeHint}</MenuItem>
-                                    {grantTypes.map((item, index) => <MenuItem value={item} key={index}>{item}</MenuItem>)}
+                                    {orgAffiliationTypes.map((item, index) => <MenuItem value={item.value} key={index}>{item.text}</MenuItem>)}
                                 </Select>
                             </FormControl>
                         </Grid>

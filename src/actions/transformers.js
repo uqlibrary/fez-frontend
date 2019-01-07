@@ -439,7 +439,7 @@ export const getGrantsListSearchKey = (grants) => {
         fez_record_search_key_grant_type: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_type: item.grantType,
+                    rek_grant_type: parseInt(item.grantType, 10),
                     rek_grant_type_order: index + 1
                 }))
                 .filter(item => !!item.rek_grant_type)

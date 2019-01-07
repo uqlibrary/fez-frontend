@@ -1204,7 +1204,7 @@ describe('getGrantsListSearchKey tests', () => {
         const input = [{
             grantName: 'test',
             grantId: 'test123',
-            grantType: 'NGO'
+            grantType: '12345'
         }];
 
         const expected = {
@@ -1222,7 +1222,7 @@ describe('getGrantsListSearchKey tests', () => {
             ],
             fez_record_search_key_grant_type: [
                 {
-                    rek_grant_type: 'NGO',
+                    rek_grant_type: 12345,
                     rek_grant_type_order: 1
                 }
             ],
@@ -1240,11 +1240,11 @@ describe('getGrantsListSearchKey tests', () => {
             {
                 grantName: 'testing',
                 grantId: 'testing123',
-                grantType: 'NGO'
+                grantType: '12345'
             },
             {
                 grantName: 'tested',
-                grantType: 'XYZ'
+                grantType: '56465'
             }
         ];
 
@@ -1275,11 +1275,11 @@ describe('getGrantsListSearchKey tests', () => {
             ],
             fez_record_search_key_grant_type: [
                 {
-                    rek_grant_type: 'NGO',
+                    rek_grant_type: 12345,
                     rek_grant_type_order: 2
                 },
                 {
-                    rek_grant_type: 'XYZ',
+                    rek_grant_type: 56465,
                     rek_grant_type_order: 3
                 }
             ],
