@@ -283,7 +283,7 @@ export default {
                     heading: 'UTs',
                     fromAria: '',
                     tip: '',
-                    inputPlaceholder: 'Enter one or more Incites UTs, separated by a comma',
+                    inputPlaceholder: 'Enter one or more UTs, separated by a comma',
                 },
                 secondaryField: {
                     heading: 'API Key',
@@ -294,7 +294,13 @@ export default {
                 lookupLabel: 'Incites',
                 bottomTip: '',
                 submitButtonLabel: 'Submit to Incites',
-            }
+                resultsLabel: 'Results',
+            },
+            tooltip: {
+                show: 'Show form for Lookup',
+                hide: 'Hide form for Lookup'
+            },
+            resultsLabel: 'Results'
         },
         typeOfDataForm: {
             field: {

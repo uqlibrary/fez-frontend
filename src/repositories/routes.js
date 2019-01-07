@@ -236,3 +236,11 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({searchQuery}) => ({
         }
     }
 });
+
+export const ADMIN_LOOKUP_API_1FIELD = ({type, field1}) => (
+    {apiUrl: `adminLookup/${type}/${field1}`}
+);
+
+export const ADMIN_LOOKUP_API_2FIELD = ({type, field1, field2}) => (
+    {apiUrl: `adminLookup/${type}/${field1}/${field2}`}
+);

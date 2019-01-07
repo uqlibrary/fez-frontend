@@ -136,9 +136,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             pageTitle: locale.pages.contact.title
         },
         {
-            path: pathConfig.lookup,
-            component: components.AdminLookup, // render: () => components.StandardPage({...locale.pages.lookup}),
-            pageTitle: locale.pages.lookup.title
+            path: pathConfig.lookup, // only temporarily in public, to simplify dev
+            component: components.AdminLookup,
+            pageTitle: locale.pages.adminLookupToolsForm.title
         },
         {
             path: pathConfig.records.view(pid),

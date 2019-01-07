@@ -61,7 +61,7 @@ export default {
                 </StandardCard>
             )
         },
-        lookup: {
+        adminLookupToolsForm: {
             title: 'Lookup Tools',
             // children: (
             //     <StandardCard>
