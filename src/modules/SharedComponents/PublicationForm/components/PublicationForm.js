@@ -58,20 +58,18 @@ export default class PublicationForm extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
-        }
-
-        if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
-            this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
-                <MenuItem value={item} key={index}>{item}</MenuItem>
-            ));
-        }
-
-        if (nextProps.hasDefaultDocTypeSubType) {
-            this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
-        }
-
-        if (nextProps.isNtro !== this.props.isNtro) {
-            this.props.changeFormType(nextProps.isNtro);
+        } else {
+            if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
+                this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
+                    <MenuItem value={item} key={index}>{item}</MenuItem>
+                ));
+            }
+            if (nextProps.hasDefaultDocTypeSubType) {
+                this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
+            }
+            if (nextProps.isNtro !== this.props.isNtro) {
+                this.props.changeFormType(nextProps.isNtro);
+            }
         }
     }
 
