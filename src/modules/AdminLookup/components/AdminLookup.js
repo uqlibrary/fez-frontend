@@ -1,12 +1,10 @@
 import React, {Fragment, PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import {locale} from 'locale';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {routes} from 'config';
-import param from 'can-param';
 
-import {locale} from 'locale';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid/Grid';
@@ -22,15 +20,17 @@ export class AdminLookup extends PureComponent {
         actions: PropTypes.object,
         isMinimised: PropTypes.bool,
         lookupResults: PropTypes.object, // recordToFix
+        form: PropTypes.object,
 
         // Event handlers
         onToggleMinimise: PropTypes.func,
     };
     static defaultProps = {
         isMinimised: false,
+        form: locale.components.adminLookupToolsForm.incites, // when we break this out to a subcomponent, we need to instead make it required
 
         onToggleMinimise: () => {},
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -41,59 +41,47 @@ export class AdminLookup extends PureComponent {
         };
     }
 
+    // toggle form open or closed
     _toggleMinimise = () => {
         this.setState({
             isMinimised: !this.state.isMinimised
         });
     };
 
-    pageChanged = (page) => {
-        this.setState(
-            {
-                page: page
-            },
-            this.updateHistoryAndSearch
-        );
-    };
+    _handleSubmitLookup = () => {
+        console.log('_handleSubmitLookup');
+        const lookupType = this.props.form.lookupType; // locale.components.adminLookupToolsForm.incites.lookupType;
+        const primaryValue = this.state.primaryValue;
+        const secondaryValue = this.state.secondaryValue;
 
-    updateHistory = () => {
-        this.props.history.push({
-            pathname: `${routes.pathConfig.looku}`,
-            state: {...this.state}
-        });
-    };
-
-    _handleSubmit = () => {
-        console.log('_handleSubmit');
-        const lookupParams = {
-            lookupType: locale.components.adminLookupToolsForm.incites.lookupType,
-            primaryValue: this.state.primaryFieldValue,
-            secondaryValue: this.state.secondaryFieldValue
-        };
-        if (lookupParams && this.props.actions && this.props.actions.loadAdminLookup) {
-            this.props.actions.loadAdminLookup(lookupParams);
-
-            // navigate to search results page
-            this.props.history.push({
-                pathname: routes.pathConfig.records.search,
-                search: param(lookupParams),
-                state: {...lookupParams}
-            });
+        if (secondaryValue !== '' && primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
+            this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
+        } else if (primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
+            this.props.actions.loadAdminLookup(lookupType, primaryValue);
         }
+    };
 
-        // if (!!this.props.lookupResults) {
-        //     this._loadResults();
-        // }
+    _handleDefaultSubmit = (event) => {
+        console.log('_handleDefaultSubmit');
+        if(event) event.preventDefault();
+    };
+
+    // update state for the form fields on input
+    _onChange = (e) => {
+        if (typeof e !== 'undefined') {
+            this.setState({[e.target.name]: e.target.value});
+        }
     };
 
     render() {
         const txt = {
             title: locale.pages.adminLookupToolsForm.title,
-            form: locale.components.adminLookupToolsForm.incites // pass this in as props so we can pass in any form
+            form: this.props.form, // locale.components.adminLookupToolsForm.incites // in the subcomponent this will let us have a number of forms...
         };
+        const { primaryValue, secondaryValue } = this.state;
         return (
             <StandardPage title={locale.pages.adminLookupToolsForm.title}>
-                {/* extract this element to a repeating element */}
+                {/* extract this element to a sub element as we want to include several of them */}
                 <StandardCard className="searchComponent" noHeader>
                     <Grid container spacing={24}>
                         <Grid item style={{flexGrow: 1, width: 1}}>
@@ -120,50 +108,52 @@ export class AdminLookup extends PureComponent {
                         !this.state.isMinimised &&
                         <Fragment>
                             <Grid container>
-                                <form onSubmit={this._handleSubmit}>
+                                <form onSubmit={this._handleDefaultSubmit}>  {/* onSubmit={this._handleSubmitLookup} > */}
                                     <div>
                                         <h4>{txt.form.primaryField.heading}</h4>
                                         <p>{txt.form.primaryField.tip}</p>
                                         <TextField
                                             fullWidth
-                                            name={'lookup'}
+                                            name={'primaryValue'}
                                             placeholder={txt.form.primaryField.inputPlaceholder}
                                             aria-label={txt.form.primaryField.fromAria}
-                                            value={this.primaryFieldValue}
+                                            value={primaryValue}
+                                            onChange={this._onChange}
                                             required
                                         />
                                     </div>
                                     {
+                                        // not all forms will have a second field
                                         !!txt.form.secondaryField ?
                                             <div>
                                                 <h4>{txt.form.secondaryField.heading}</h4>
+                                                <p>{txt.form.secondaryField.tip}</p>
                                                 <TextField
                                                     fullWidth
-                                                    name={'lookup'}
+                                                    name={'secondaryValue'}
                                                     placeholder={txt.form.secondaryField.inputPlaceholder}
                                                     aria-label={txt.form.secondaryField.fromAria}
-                                                    value={this.secondaryFieldValue}
+                                                    value={secondaryValue}
+                                                    onChange={this._onChange}
                                                 />
-                                                <p>{txt.form.secondaryField.tip}</p>
                                             </div>
                                             :
                                             <div>&nbsp;</div>
                                     }
                                     <p>{txt.form.bottomTip}</p>
                                     <Button
-                                        children={txt.form.submitButtonLabel}
+                                        children= {txt.form.submitButtonLabel ? txt.form.submitButtonLabel : 'Submit'}
                                         variant="contained"
                                         aria-label={txt.form.submitButtonLabel}
                                         color={'primary'}
-                                        onClick={this._handleSubmit()}>
-                                        {txt.form.submitButtonLabel}
-                                    </Button>
+                                        onClick={() => this._handleSubmitLookup()}
+                                    />
                                 </form>
                                 {
                                     !!this.props.lookupResults ?
                                         <Grid item xs={12} md={8}>
                                             <StandardCard style={{marginTop: 10}} title={locale.components.adminLookupToolsForm.resultsLabel}>
-                                                xxx
+                                                tbd
                                             </StandardCard>
                                         </Grid>
                                         :
