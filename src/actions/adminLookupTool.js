@@ -38,6 +38,7 @@ export function getAdminLookupApi(type, field1, field2) {
 }
 
 export function loadAdminLookup(type, field1, field2) {
+    console.log('loadAdminLookup');
     return dispatch => {
         dispatch({type: actions.ADMIN_LOOKUP_TOOL_LOADING});
 

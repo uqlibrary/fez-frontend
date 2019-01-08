@@ -34,35 +34,17 @@ export class AdminLookup extends PureComponent {
 
     constructor(props) {
         super(props);
-        this.initState = {
-            page: 1,
-            pageSize: 20,
-            sortBy: locale.components.sorting.sortBy[1].value,
-            sortDirection: locale.components.sorting.sortDirection[0],
-            activeFacets: {
-                filters: {},
-                ranges: {}
-            },
-            advancedSearchFields: []
-        };
-
-        if (!!props.location && props.location.search.indexOf('?') >= 0) {
-            const providedSearchQuery = this.parseSearchQueryStringFromUrl(props.location.search.substr(1));
-            this.initState = {...this.initState, ...providedSearchQuery};
-        }
-
         this.state = {
-            // check if search has results
-            // facets filtering might return no results, but facets should still be visible
-            // hasResults: !props.searchLoading && props.publicationsList.length > 0,
-            ...this.initState,
+            isMinimised: props.isMinimised,
+            primaryValue: '',
+            secondaryValue: ''
         };
     }
 
     _toggleMinimise = () => {
-        if (!!this.props.onToggleMinimise) {
-            this.props.onToggleMinimise();
-        }
+        this.setState({
+            isMinimised: !this.state.isMinimised
+        });
     };
 
     pageChanged = (page) => {
@@ -76,28 +58,32 @@ export class AdminLookup extends PureComponent {
 
     updateHistory = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.search}`,
-            search: param(this.state),
+            pathname: `${routes.pathConfig.looku}`,
             state: {...this.state}
         });
     };
 
     _handleSubmit = () => {
-        const searchQueryParams = {
+        console.log('_handleSubmit');
+        const lookupParams = {
             lookupType: locale.components.adminLookupToolsForm.incites.lookupType,
             primaryValue: this.state.primaryFieldValue,
             secondaryValue: this.state.secondaryFieldValue
         };
-        if (searchQueryParams && this.props.actions && this.props.actions.searchEspacePublications) {
-            this.props.actions.searchEspacePublications(searchQueryParams);
+        if (lookupParams && this.props.actions && this.props.actions.loadAdminLookup) {
+            this.props.actions.loadAdminLookup(lookupParams);
 
             // navigate to search results page
             this.props.history.push({
                 pathname: routes.pathConfig.records.search,
-                search: param(searchQueryParams),
-                state: {...searchQueryParams}
+                search: param(lookupParams),
+                state: {...lookupParams}
             });
         }
+
+        // if (!!this.props.lookupResults) {
+        //     this._loadResults();
+        // }
     };
 
     render() {
@@ -107,6 +93,7 @@ export class AdminLookup extends PureComponent {
         };
         return (
             <StandardPage title={locale.pages.adminLookupToolsForm.title}>
+                {/* extract this element to a repeating element */}
                 <StandardCard className="searchComponent" noHeader>
                     <Grid container spacing={24}>
                         <Grid item style={{flexGrow: 1, width: 1}}>
@@ -115,23 +102,25 @@ export class AdminLookup extends PureComponent {
                         <Grid item>
                             <IconButton
                                 onClick={this._toggleMinimise}
-                                tooltip={this.props.isMinimised
+                                tooltip={!!this.state.isMinimised
                                     ? locale.components.adminLookupToolsForm.tooltip.show
                                     : locale.components.adminLookupToolsForm.tooltip.hide}>
                                 {
-                                    !!this.props.isMinimised
+                                    !!this.state.isMinimised
                                         ? <KeyboardArrowDown/>
                                         : <KeyboardArrowUp/>
                                 }
                             </IconButton>
                         </Grid>
                     </Grid>
+                    <Grid container>
+                        <p>{txt.form.tip}</p>
+                    </Grid>
                     {
-                        !this.props.isMinimised &&
+                        !this.state.isMinimised &&
                         <Fragment>
                             <Grid container>
                                 <form onSubmit={this._handleSubmit}>
-                                    <p>{txt.form.tip}</p>
                                     <div>
                                         <h4>{txt.form.primaryField.heading}</h4>
                                         <p>{txt.form.primaryField.tip}</p>
@@ -166,7 +155,7 @@ export class AdminLookup extends PureComponent {
                                         variant="contained"
                                         aria-label={txt.form.submitButtonLabel}
                                         color={'primary'}
-                                        onClick={this._loadResults}>
+                                        onClick={this._handleSubmit()}>
                                         {txt.form.submitButtonLabel}
                                     </Button>
                                 </form>

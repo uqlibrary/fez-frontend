@@ -62,23 +62,7 @@ export default {
             )
         },
         adminLookupToolsForm: {
-            title: 'Lookup Tools',
-            // children: (
-            //     <StandardCard>
-            //         <form>
-            //             <fieldset>
-            //                 <legend>Incites</legend>
-            //                 <p>Raw output we receive for Incites via their API</p>
-            //                 <div>
-            //                     Enter one or more Incites UT, separated by a comma:
-            //                     <input type="text" name="incites" />
-            //                     <input type="submit" value="Submit Orcid" />
-            //                 </div>
-            //                 <p>Calling this uses up the daily Incites allowance</p>
-            //             </fieldset>
-            //         </form>
-            //     </StandardCard>
-            // )
+            title: 'Admin Lookup Tools',
         },
         browse: {
             title: 'Browse eSpace',
