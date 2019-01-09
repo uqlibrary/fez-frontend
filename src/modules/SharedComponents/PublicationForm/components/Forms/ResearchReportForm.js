@@ -147,7 +147,6 @@ export default class ResearchReportForm extends Component {
                         hideExtent={!this.props.isNtro}
                         hideOriginalFormat
                         hideAudienceSize
-                        hideNotes
                     />
                 }
                 <Grid item xs={12}>

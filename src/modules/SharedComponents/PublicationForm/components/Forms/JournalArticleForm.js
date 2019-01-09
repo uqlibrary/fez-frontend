@@ -113,7 +113,6 @@ export default class JournalArticleForm extends Component {
                         hideExtent
                         hideOriginalFormat
                         hideAudienceSize
-                        hideNotes
                     />
                 }
                 <Grid item xs={12}>

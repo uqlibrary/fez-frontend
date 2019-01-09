@@ -141,7 +141,6 @@ export default class DesignForm extends Component {
                         hideStartPage
                         hideEndPage
                         hideAudienceSize
-                        hideNotes
                     />
                 }
                 <Grid item xs={12}>

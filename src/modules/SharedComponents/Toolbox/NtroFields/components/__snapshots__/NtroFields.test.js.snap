@@ -369,19 +369,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             }
           />
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={true}
-            fullWidth={true}
-            label="Notes"
-            name="rek_notes"
-            type="text"
-          />
-        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -771,19 +758,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
             }
           />
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Notes"
-            name="rek_notes"
-            type="text"
-          />
-        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -1113,19 +1087,6 @@ exports[`Component NtroFields should render default view 1`] = `
                 [Function],
               ]
             }
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Notes"
-            name="rek_notes"
-            type="text"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -1515,19 +1476,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                 [Function],
               ]
             }
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Notes"
-            name="rek_notes"
-            type="text"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>

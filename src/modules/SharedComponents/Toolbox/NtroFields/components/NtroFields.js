@@ -33,7 +33,6 @@ export default class NtroFields extends React.PureComponent {
         hideOriginalFormat: PropTypes.bool,
         hideAudienceSize: PropTypes.bool,
         hidePeerReviewActivity: PropTypes.bool,
-        hideNotes: PropTypes.bool,
         hideSeries: PropTypes.bool,
         hideGrants: PropTypes.bool,
         showContributionStatement: PropTypes.bool
@@ -50,7 +49,6 @@ export default class NtroFields extends React.PureComponent {
         hideOriginalFormat: false,
         hideAudienceSize: false,
         hidePeerReviewActivity: false,
-        hideNotes: false,
         hideSeries: false,
         hideGrants: false,
         showContributionStatement: false,
@@ -340,19 +338,6 @@ export default class NtroFields extends React.PureComponent {
                                         required
                                         multiple
                                         validate={[validation.requiredList]}
-                                    />
-                                </Grid>
-                            }
-                            {
-                                !this.props.hideNotes &&
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={TextField}
-                                        disabled={this.props.submitting}
-                                        name="rek_notes"
-                                        type="text"
-                                        fullWidth
-                                        label={metadata.fields.notes.label}
                                     />
                                 </Grid>
                             }

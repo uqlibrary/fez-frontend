@@ -13,7 +13,6 @@ function setup(testProps, isShallow = true) {
         hideOriginalFormat: false,
         hideAudienceSize: false,
         hidePeerReviewActivity: false,
-        hideNotes: false,
         hideSeries: false,
         hideGrants: false,
         showContributionStatement: false,

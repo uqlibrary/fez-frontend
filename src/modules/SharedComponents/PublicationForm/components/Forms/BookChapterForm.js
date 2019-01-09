@@ -137,7 +137,6 @@ export default class BookChapterForm extends Component {
                         hideExtent
                         hideOriginalFormat
                         hideAudienceSize
-                        hideNotes
                     />
                 }
                 <Grid item xs={12}>
