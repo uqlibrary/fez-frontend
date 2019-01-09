@@ -156,6 +156,7 @@ export default class NtroFields extends React.PureComponent {
                                         name="significance"
                                         label={contributionStatement.fields.scaleOfWork.label}
                                         required
+                                        validate={[validation.required]}
                                     >
                                         <MenuItem value={SIGNIFICANCE_MINOR}>Minor</MenuItem>
                                         <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>

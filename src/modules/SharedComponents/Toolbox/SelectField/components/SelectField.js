@@ -9,7 +9,7 @@ import propFilter from '../../helpers/_filterProps';
 import {HelpIcon} from '../../HelpDrawer';
 
 const SelectFieldWrapper = props => {
-    const filteredProps = propFilter(props, Select.propTypes);
+    const filteredProps = propFilter({...props, forceError: true}, Select.propTypes);
     filteredProps.onChange = (event) => props.input.onChange(event.target.value);
     filteredProps.onBlur = () => props.input.onBlur(props.input.value);
     const error = !!filteredProps.errorText || !!filteredProps.error;
@@ -17,7 +17,7 @@ const SelectFieldWrapper = props => {
     delete filteredProps.errorText;
     return (
         <React.Fragment>
-            <FormControl error={error} style={{width: '100%'}}>
+            <FormControl error={error} style={{width: '100%'}} required={filteredProps.required}>
                 <InputLabel>{filteredProps.label}</InputLabel>
                 <Select {...filteredProps} autoWidth />
                 {
