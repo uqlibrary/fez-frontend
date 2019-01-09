@@ -126,7 +126,7 @@ export const isValidIsbn = subject => {
 
 export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
-    const regex = /979-0-\d{3}-\d{5}-\d/gi;
+    const regex = /^979-0-\d{3}-\d{5}-\d$/gi;
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.ismn;
 };
 

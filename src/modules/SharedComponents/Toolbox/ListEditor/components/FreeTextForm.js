@@ -23,7 +23,8 @@ export class FreeTextForm extends Component {
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
         classes: PropTypes.object,
-        maxInputLength: PropTypes.number
+        maxInputLength: PropTypes.number,
+        normalize: PropTypes.func
     };
 
     static defaultProps = {
@@ -67,7 +68,7 @@ export class FreeTextForm extends Component {
 
     onNameChanged = (event) => {
         this.setState({
-            itemName: event.target.value
+            itemName: this.props.normalize(event.target.value)
         });
     };
 

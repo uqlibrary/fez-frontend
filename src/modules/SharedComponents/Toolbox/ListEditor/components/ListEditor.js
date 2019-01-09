@@ -20,7 +20,8 @@ export default class ListsEditor extends Component {
         remindToAdd: PropTypes.bool,
         input: PropTypes.object,
         transformFunction: PropTypes.func.isRequired,
-        maxInputLength: PropTypes.number
+        maxInputLength: PropTypes.number,
+        inputNormalizer: PropTypes.func
     };
 
     static defaultProps = {
@@ -34,7 +35,8 @@ export default class ListsEditor extends Component {
         transformFunction: (searchKey, item, index) => ({
             [searchKey.value]: item,
             [searchKey.order]: index + 1
-        })
+        }),
+        inputNormalizer: value => value
     };
 
     constructor(props) {
@@ -122,6 +124,7 @@ export default class ListsEditor extends Component {
     }
 
     render() {
+        console.log(this.props);
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
                 key={index}
@@ -149,6 +152,7 @@ export default class ListsEditor extends Component {
                     disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}
                     errorText={this.props.errorText}
                     maxInputLength={this.props.maxInputLength}
+                    normalize={this.props.inputNormalizer}
                 />
                 {
                     this.state.itemList.length > 0 &&
