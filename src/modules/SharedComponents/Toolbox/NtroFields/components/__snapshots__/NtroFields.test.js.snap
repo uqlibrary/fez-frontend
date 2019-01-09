@@ -53,6 +53,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -441,6 +442,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             type="text"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
@@ -1161,6 +1163,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             type="text"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }

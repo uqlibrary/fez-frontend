@@ -155,7 +155,8 @@ export default class NtroFields extends React.PureComponent {
                                         disabled={this.props.submitting}
                                         name="significance"
                                         label={contributionStatement.fields.scaleOfWork.label}
-                                        required>
+                                        required
+                                    >
                                         <MenuItem value={SIGNIFICANCE_MINOR}>Minor</MenuItem>
                                         <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>
                                     </Field>
@@ -171,7 +172,7 @@ export default class NtroFields extends React.PureComponent {
                                         disabled={this.props.submitting}
                                         label={contributionStatement.fields.impactStatement.label}
                                         placeholder={contributionStatement.fields.impactStatement.placeholder}
-                                        validate={[validation.maxLength2000]}
+                                        validate={[validation.required, validation.maxLength2000]}
                                     />
                                 </Grid>
                             </Grid>
