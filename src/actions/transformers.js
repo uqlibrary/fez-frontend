@@ -469,5 +469,12 @@ export const getNtroMetadataSearchKeys = (data) => {
         ];
     }
 
+    if (!!data.qualityIndicators) {
+        ntroMetadata.fez_record_search_key_quality_indicator = data.qualityIndicators.map((item, index) => ({
+            rek_quality_indicator: item,
+            rek_quality_indicator_order: index + 1
+        }));
+    }
+
     return ntroMetadata;
 };

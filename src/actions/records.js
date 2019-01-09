@@ -50,6 +50,7 @@ export function createNewRecord(data) {
         if (recordRequest.grants) delete recordRequest.grants;
         if (recordRequest.significance) delete recordRequest.significance;
         if (recordRequest.impactStatement) delete recordRequest.impactStatement;
+        if (recordRequest.qualityIndicators) delete recordRequest.qualityIndicators;
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;

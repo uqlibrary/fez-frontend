@@ -339,18 +339,6 @@ export default class NtroFields extends React.PureComponent {
                                         label={metadata.fields.peerReviewActivity.label}
                                         required
                                         multiple
-                                        itemsList={[
-                                            {text: 'Option 1', value: 1},
-                                            {text: 'Option 2', value: 2},
-                                            {text: 'Option 3', value: 3},
-                                            {text: 'Option 4', value: 4},
-                                            {text: 'Option 5', value: 5},
-                                            {text: 'Option 6', value: 6},
-                                            {text: 'Option 7', value: 7},
-                                            {text: 'Option 8', value: 8},
-                                            {text: 'Option 9', value: 9},
-                                            {text: 'Option 10', value: 10},
-                                        ]}
                                         validate={[validation.requiredList]}
                                     />
                                 </Grid>
