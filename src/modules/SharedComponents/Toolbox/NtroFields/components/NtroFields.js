@@ -136,6 +136,10 @@ export default class NtroFields extends React.PureComponent {
         return `${normalizedValue}`;
     };
 
+    normalizeIsrc = value => {
+        return value.toUpperCase();
+    };
+
     render() {
         const {contributionStatement, metadata, grantEditor} = this.props.locale;
 
@@ -215,6 +219,7 @@ export default class NtroFields extends React.PureComponent {
                                         searchKey={{value: 'rek_isrc', order: 'rek_isrc_order'}}
                                         locale={{...componentLocale.components.isrcForm.field}}
                                         disabled={this.props.submitting}
+                                        inputNormalizer={this.normalizeIsrc}
                                     />
                                 </Grid>
                             }

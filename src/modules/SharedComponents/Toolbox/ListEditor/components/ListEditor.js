@@ -124,7 +124,6 @@ export default class ListsEditor extends Component {
     }
 
     render() {
-        console.log(this.props);
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
                 key={index}
