@@ -137,8 +137,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         },
         {
             path: pathConfig.lookup, // only temporarily in public, to simplify dev
-            component: components.AdminLookup,
-            pageTitle: locale.pages.adminLookupToolsForm.title
+            component: components.AdminLookupTool,
+            pageTitle: locale.components.adminLookupTools.title
         },
         {
             path: pathConfig.records.view(pid),
@@ -340,7 +340,8 @@ export const getMenuConfig = (account, disabled) => {
         },
         {
             linkTo: pathConfig.lookup,
-            ...locale.menu.lookup,
+            ...locale.menu.adminLookupTools,
+            // access: [roles.admin],
             public: true
         }
     ];

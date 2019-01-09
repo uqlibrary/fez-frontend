@@ -37,8 +37,8 @@ export default {
             primaryText: 'Contact',
             secondaryText: ''
         },
-        lookup: {
-            primaryText: 'Lookup'
+        adminLookupTools: {
+            primaryText: 'Lookup Tools'
         },
         legacyEspace: {
             primaryText: 'Switch to old interface'

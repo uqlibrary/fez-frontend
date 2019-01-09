@@ -273,10 +273,11 @@ export default {
                 }
             }
         },
-        adminLookupToolsForm: {
+        adminLookupTools: {
+            title: 'Admin Lookup Tools',
             incites: {
                 tip: 'View raw output we receive from Incites via their API',
-                invalidText: 'I dunno', // not used yet
+                invalidText: '', // not used yet
                 fromHint: '', // not used yet
                 lookupType: 'incites',
                 primaryField: {
@@ -297,8 +298,8 @@ export default {
                 resultsLabel: 'Results',
             },
             tooltip: {
-                show: 'Show form for Lookup',
-                hide: 'Hide form for Lookup'
+                show: 'Show form',
+                hide: 'Hide form'
             },
             resultsLabel: 'Results'
         },

@@ -61,9 +61,6 @@ export default {
                 </StandardCard>
             )
         },
-        adminLookupToolsForm: {
-            title: 'Admin Lookup Tools',
-        },
         browse: {
             title: 'Browse eSpace',
             text: (

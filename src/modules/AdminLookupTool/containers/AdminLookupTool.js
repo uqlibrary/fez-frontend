@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import AdminLookup from '../components/AdminLookup';
+import AdminLookupTool from '../components/AdminLookupTool';
 import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 import {getFormSyncErrors, getFormValues} from 'redux-form/immutable';
@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let AdminLookupContainer = connect(mapStateToProps, mapDispatchToProps)(AdminLookup);
+let AdminLookupContainer = connect(mapStateToProps, mapDispatchToProps)(AdminLookupTool);
 AdminLookupContainer = withRouter(AdminLookupContainer);
 
 export default AdminLookupContainer;
