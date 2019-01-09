@@ -358,61 +358,60 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
+            itemsList={
+              Array [
+                Object {
+                  "text": "Option 1",
+                  "value": 1,
+                },
+                Object {
+                  "text": "Option 2",
+                  "value": 2,
+                },
+                Object {
+                  "text": "Option 3",
+                  "value": 3,
+                },
+                Object {
+                  "text": "Option 4",
+                  "value": 4,
+                },
+                Object {
+                  "text": "Option 5",
+                  "value": 5,
+                },
+                Object {
+                  "text": "Option 6",
+                  "value": 6,
+                },
+                Object {
+                  "text": "Option 7",
+                  "value": 7,
+                },
+                Object {
+                  "text": "Option 8",
+                  "value": 8,
+                },
+                Object {
+                  "text": "Option 9",
+                  "value": 9,
+                },
+                Object {
+                  "text": "Option 10",
+                  "value": 10,
+                },
+              ]
+            }
             label="Quality indicators"
+            multiple={true}
             name="qualityIndicators"
             required={true}
-          >
-            <WithStyles(MenuItem)
-              value={1}
-            >
-              Option 1
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={2}
-            >
-              Option 2
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={3}
-            >
-              Option 3
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={4}
-            >
-              Option 4
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={5}
-            >
-              Option 5
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={6}
-            >
-              Option 6
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={7}
-            >
-              Option 7
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={8}
-            >
-              Option 8
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={9}
-            >
-              Option 9
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={10}
-            >
-              Option 10
-            </WithStyles(MenuItem)>
-          </Field>
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -805,61 +804,60 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
+            itemsList={
+              Array [
+                Object {
+                  "text": "Option 1",
+                  "value": 1,
+                },
+                Object {
+                  "text": "Option 2",
+                  "value": 2,
+                },
+                Object {
+                  "text": "Option 3",
+                  "value": 3,
+                },
+                Object {
+                  "text": "Option 4",
+                  "value": 4,
+                },
+                Object {
+                  "text": "Option 5",
+                  "value": 5,
+                },
+                Object {
+                  "text": "Option 6",
+                  "value": 6,
+                },
+                Object {
+                  "text": "Option 7",
+                  "value": 7,
+                },
+                Object {
+                  "text": "Option 8",
+                  "value": 8,
+                },
+                Object {
+                  "text": "Option 9",
+                  "value": 9,
+                },
+                Object {
+                  "text": "Option 10",
+                  "value": 10,
+                },
+              ]
+            }
             label="Quality indicators"
+            multiple={true}
             name="qualityIndicators"
             required={true}
-          >
-            <WithStyles(MenuItem)
-              value={1}
-            >
-              Option 1
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={2}
-            >
-              Option 2
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={3}
-            >
-              Option 3
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={4}
-            >
-              Option 4
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={5}
-            >
-              Option 5
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={6}
-            >
-              Option 6
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={7}
-            >
-              Option 7
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={8}
-            >
-              Option 8
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={9}
-            >
-              Option 9
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={10}
-            >
-              Option 10
-            </WithStyles(MenuItem)>
-          </Field>
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -1194,61 +1192,60 @@ exports[`Component NtroFields should render default view 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            itemsList={
+              Array [
+                Object {
+                  "text": "Option 1",
+                  "value": 1,
+                },
+                Object {
+                  "text": "Option 2",
+                  "value": 2,
+                },
+                Object {
+                  "text": "Option 3",
+                  "value": 3,
+                },
+                Object {
+                  "text": "Option 4",
+                  "value": 4,
+                },
+                Object {
+                  "text": "Option 5",
+                  "value": 5,
+                },
+                Object {
+                  "text": "Option 6",
+                  "value": 6,
+                },
+                Object {
+                  "text": "Option 7",
+                  "value": 7,
+                },
+                Object {
+                  "text": "Option 8",
+                  "value": 8,
+                },
+                Object {
+                  "text": "Option 9",
+                  "value": 9,
+                },
+                Object {
+                  "text": "Option 10",
+                  "value": 10,
+                },
+              ]
+            }
             label="Quality indicators"
+            multiple={true}
             name="qualityIndicators"
             required={true}
-          >
-            <WithStyles(MenuItem)
-              value={1}
-            >
-              Option 1
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={2}
-            >
-              Option 2
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={3}
-            >
-              Option 3
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={4}
-            >
-              Option 4
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={5}
-            >
-              Option 5
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={6}
-            >
-              Option 6
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={7}
-            >
-              Option 7
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={8}
-            >
-              Option 8
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={9}
-            >
-              Option 9
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={10}
-            >
-              Option 10
-            </WithStyles(MenuItem)>
-          </Field>
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -1641,61 +1638,60 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            itemsList={
+              Array [
+                Object {
+                  "text": "Option 1",
+                  "value": 1,
+                },
+                Object {
+                  "text": "Option 2",
+                  "value": 2,
+                },
+                Object {
+                  "text": "Option 3",
+                  "value": 3,
+                },
+                Object {
+                  "text": "Option 4",
+                  "value": 4,
+                },
+                Object {
+                  "text": "Option 5",
+                  "value": 5,
+                },
+                Object {
+                  "text": "Option 6",
+                  "value": 6,
+                },
+                Object {
+                  "text": "Option 7",
+                  "value": 7,
+                },
+                Object {
+                  "text": "Option 8",
+                  "value": 8,
+                },
+                Object {
+                  "text": "Option 9",
+                  "value": 9,
+                },
+                Object {
+                  "text": "Option 10",
+                  "value": 10,
+                },
+              ]
+            }
             label="Quality indicators"
+            multiple={true}
             name="qualityIndicators"
             required={true}
-          >
-            <WithStyles(MenuItem)
-              value={1}
-            >
-              Option 1
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={2}
-            >
-              Option 2
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={3}
-            >
-              Option 3
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={4}
-            >
-              Option 4
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={5}
-            >
-              Option 5
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={6}
-            >
-              Option 6
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={7}
-            >
-              Option 7
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={8}
-            >
-              Option 8
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={9}
-            >
-              Option 9
-            </WithStyles(MenuItem)>
-            <WithStyles(MenuItem)
-              value={10}
-            >
-              Option 10
-            </WithStyles(MenuItem)>
-          </Field>
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}

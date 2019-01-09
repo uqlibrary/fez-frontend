@@ -71,6 +71,7 @@ export default {
         rek_license: 'Licensing and terms of access is required',
         rek_project_name: 'Project name is required',
         rek_project_description: 'Project description is required',
-        fez_record_search_key_grant_id: 'Grant information is required'
+        fez_record_search_key_grant_id: 'Grant information is required',
+        qualityIndicators: 'Quality indicator is required'
     }
 };

@@ -10,6 +10,7 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import {QualityIndicatorField} from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
@@ -332,22 +333,26 @@ export default class NtroFields extends React.PureComponent {
                                 !this.props.hidePeerReviewActivity &&
                                 <Grid item xs={12} sm={this.row4Width}>
                                     <Field
-                                        component={SelectField}
+                                        component={QualityIndicatorField}
                                         disabled={this.props.submitting}
                                         name="qualityIndicators"
                                         label={metadata.fields.peerReviewActivity.label}
-                                        required>
-                                        <MenuItem value={1}>Option 1</MenuItem>
-                                        <MenuItem value={2}>Option 2</MenuItem>
-                                        <MenuItem value={3}>Option 3</MenuItem>
-                                        <MenuItem value={4}>Option 4</MenuItem>
-                                        <MenuItem value={5}>Option 5</MenuItem>
-                                        <MenuItem value={6}>Option 6</MenuItem>
-                                        <MenuItem value={7}>Option 7</MenuItem>
-                                        <MenuItem value={8}>Option 8</MenuItem>
-                                        <MenuItem value={9}>Option 9</MenuItem>
-                                        <MenuItem value={10}>Option 10</MenuItem>
-                                    </Field>
+                                        required
+                                        multiple
+                                        itemsList={[
+                                            {text: 'Option 1', value: 1},
+                                            {text: 'Option 2', value: 2},
+                                            {text: 'Option 3', value: 3},
+                                            {text: 'Option 4', value: 4},
+                                            {text: 'Option 5', value: 5},
+                                            {text: 'Option 6', value: 6},
+                                            {text: 'Option 7', value: 7},
+                                            {text: 'Option 8', value: 8},
+                                            {text: 'Option 9', value: 9},
+                                            {text: 'Option 10', value: 10},
+                                        ]}
+                                        validate={[validation.requiredList]}
+                                    />
                                 </Grid>
                             }
                             {
