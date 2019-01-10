@@ -17,9 +17,11 @@ export class AdminLookupForm extends PureComponent {
         actions: PropTypes.object,
         form: PropTypes.object.isRequired,
         isMinimised: PropTypes.bool,
+        lookupResults: PropTypes.array,
     };
     static defaultProps = {
         isMinimised: true,
+        lookupResults: [],
 
         onToggleMinimise: () => {},
     };
@@ -30,7 +32,6 @@ export class AdminLookupForm extends PureComponent {
             isMinimised: props.isMinimised,
             primaryValue: '',
             secondaryValue: '',
-            lookupResults: false,
         };
     }
 
@@ -44,12 +45,10 @@ export class AdminLookupForm extends PureComponent {
     _handleSubmitLookup = () => {
         const lookupType = this.props.form.lookupType; // locale.components.adminLookupTools.incites.lookupType;
         const primaryValue = this.state.primaryValue;
-        const secondaryValue = this.state.secondaryValue;
+        const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
-        if (secondaryValue !== '' && primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
+        if (primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
             this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
-        } else if (primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
-            this.props.actions.loadAdminLookup(lookupType, primaryValue); // , undefined);
         }
     };
 
@@ -71,7 +70,7 @@ export class AdminLookupForm extends PureComponent {
         };
         const { primaryValue, secondaryValue } = this.state;
         return (
-            <StandardCard className="searchComponent" noHeader>
+            <StandardCard className="lookupComponent" noHeader>
                 <Grid container spacing={24}>
                     <Grid item style={{flexGrow: 1, width: 1}}>
                         <Typography variant={'headline'}>{txt.form.lookupLabel}</Typography>
@@ -141,9 +140,9 @@ export class AdminLookupForm extends PureComponent {
                             </form>
                         </Grid>
                         {
-                            !!this.state.lookupResults ?
+                            !!this.props.lookupResults && this.props.lookupResults.length > 0 ?
                                 <StandardCard style={{marginTop: 10}} title={locale.components.adminLookupTools.resultsLabel}>
-                                    tbd
+                                    {this.props.lookupResults}
                                 </StandardCard>
                                 :
                                 ''

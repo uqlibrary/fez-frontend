@@ -158,6 +158,10 @@ mock
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
     .reply(200, mockData.newsFeed)
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_LOOKUP_API_1FIELD({type: 'incites', field1: '.*'}).apiUrl)))
+    .reply(200, mockData.lookupToolIncites)
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_LOOKUP_API_2FIELD({type: 'incites', field1: '.*', field2: '.*'}).apiUrl)))
+    .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
         if (config.url.indexOf('UQ:164935') >= 0) {

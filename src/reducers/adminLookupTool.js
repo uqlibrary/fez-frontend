@@ -20,14 +20,6 @@ const handlers = {
             lookupResults: action.payload
         }
     ),
-    // [actions.VIEW_RECORD_LOADED]: (state, action) => (
-    //     {
-    //         ...initialState,
-    //         loadingRecordToView: false,
-    //         recordToView: action.payload,
-    //         hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
-    //     }
-    // ),
 
     [actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED]: (state, action) => (
         {

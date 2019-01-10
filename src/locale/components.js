@@ -275,27 +275,29 @@ export default {
         },
         adminLookupTools: {
             title: 'Admin Lookup Tools',
-            incites: {
-                tip: 'View raw output we receive from Incites via their API',
-                invalidText: '', // not used yet
-                fromHint: '', // not used yet
-                lookupType: 'incites',
-                primaryField: {
-                    heading: 'UTs',
-                    fromAria: '',
-                    tip: '',
-                    inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+            forms: {
+                incites: {
+                    tip: 'View raw output we receive from Incites via their API',
+                    invalidText: '', // not used yet
+                    fromHint: '', // not used yet
+                    lookupType: 'incites', // this value should match the 'type' in the path used in api
+                    primaryField: {
+                        heading: 'UTs',
+                        fromAria: '',
+                        tip: '',
+                        inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                    },
+                    secondaryField: {
+                        heading: 'API Key',
+                        fromAria: '',
+                        tip: '(optional, a default key is provided)',
+                        inputPlaceholder: 'Enter API key',
+                    },
+                    lookupLabel: 'Incites',
+                    bottomTip: '',
+                    submitButtonLabel: 'Submit to Incites',
+                    resultsLabel: 'Results',
                 },
-                secondaryField: {
-                    heading: 'API Key',
-                    fromAria: '',
-                    tip: '(if blank, the Production API Key will be used, which will use up the daily Incites allowance)',
-                    inputPlaceholder: 'Enter API key',
-                },
-                lookupLabel: 'Incites',
-                bottomTip: '',
-                submitButtonLabel: 'Submit to Incites',
-                resultsLabel: 'Results',
             },
             tooltip: {
                 show: 'Show form',

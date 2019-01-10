@@ -9,7 +9,7 @@ import {AdminLookupForm} from './AdminLookupForm';
  * This component is intended to replace https://espace.library.uq.edu.au/misc/api_view_info.php
  * but only a new form (incites) has been done at this point
  * As each form comes in:
- * - add an entry to locale/components.js under .adminLookupTools as a sibling to .incites;
+ * - add an entry to locale/components.js under .adminLookupTools.forms as a sibling to .incites;
  *          - match the contents of the incites entry
  *          - the secondary field is optional
  * - create a new api that returns the desired data, with a url of:
@@ -35,7 +35,7 @@ export class AdminLookupTool extends PureComponent {
                 {/* incites */}
                 <AdminLookupForm
                     isMinimised={false} // once we do more than one form here they should be loaded minimised, ie use the default
-                    form={locale.components.adminLookupTools.incites}
+                    form={locale.components.adminLookupTools.forms.incites}
                     actions={this.props.actions}
                 />
 
