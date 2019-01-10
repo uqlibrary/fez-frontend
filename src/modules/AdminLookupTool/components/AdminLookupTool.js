@@ -20,8 +20,8 @@ import {AdminLookupForm} from './AdminLookupForm';
  */
 export class AdminLookupTool extends PureComponent {
     static propTypes = {
-        location: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired,
+        location: PropTypes.object,
+        history: PropTypes.object,
         actions: PropTypes.object,
     };
     constructor(props) {
