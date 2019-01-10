@@ -29,7 +29,7 @@ export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
     contact: '/contact',
-    lookup: '/lookup',
+    adminLookupTools: '/lookup',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
@@ -134,11 +134,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             path: pathConfig.contact,
             render: () => components.StandardPage({...locale.pages.contact}),
             pageTitle: locale.pages.contact.title
-        },
-        {
-            path: pathConfig.lookup, // only temporarily in public, to simplify dev
-            component: components.AdminLookupTool,
-            pageTitle: locale.components.adminLookupTools.title
         },
         {
             path: pathConfig.records.view(pid),
@@ -299,6 +294,12 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.masquerade.title
+            },
+            {
+                path: pathConfig.adminLookupTools,
+                component: components.adminLookupTools,
+                access: [roles.admin],
+                pageTitle: locale.components.adminLookupTools.title
             }
         ] : []),
         ...publicPages,
@@ -336,12 +337,6 @@ export const getMenuConfig = (account, disabled) => {
         {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
-            public: true
-        },
-        {
-            linkTo: pathConfig.lookup,
-            ...locale.menu.adminLookupTools,
-            // access: [roles.admin],
             public: true
         }
     ];
@@ -408,6 +403,11 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
+            },
+            {
+                // maybe this should be in some admin bit? tbd
+                linkTo: pathConfig.lookup,
+                ...locale.menu.adminLookupTools,
             },
             {
                 linkTo: pathConfig.admin.legacyEspace,

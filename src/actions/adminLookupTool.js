@@ -28,13 +28,11 @@ export function loadAdminLookup(type, field1, field2) {
     return dispatch => {
         dispatch({type: actions.ADMIN_LOOKUP_TOOL_LOADING});
 
-        // console.log(getAdminLookupApiUrl(type, field1, field2).apiUrl);
-
         return get(getAdminLookupApiUrl(type, field1, field2))
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_LOOKUP_TOOL_SUCCESS,
-                    payload: response
+                    payload: response.data
                 });
 
                 return Promise.resolve(response.data);
