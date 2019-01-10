@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AdminLookupTool renders incites 1`] = `
+<StandardPage
+  title="Admin Lookup Tools"
+>
+  <AdminLookupForm
+    form={
+      Object {
+        "bottomTip": "",
+        "fromHint": "",
+        "invalidText": "",
+        "lookupLabel": "Incites",
+        "lookupType": "incites",
+        "primaryField": Object {
+          "fromAria": "",
+          "heading": "UTs",
+          "inputPlaceholder": "Enter one or more UTs, separated by a comma",
+          "tip": "",
+        },
+        "resultsLabel": "Results",
+        "secondaryField": Object {
+          "fromAria": "",
+          "heading": "API Key",
+          "inputPlaceholder": "Enter API key",
+          "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+        },
+        "submitButtonLabel": "Submit to Incites",
+        "tip": "View raw output we receive from Incites via their API",
+      }
+    }
+    isMinimised={false}
+    lookupResults={Array []}
+    onToggleMinimise={[Function]}
+  />
+</StandardPage>
+`;
