@@ -1214,10 +1214,10 @@ describe('getGrantsListSearchKey tests', () => {
                     rek_grant_agency_order: 1
                 }
             ],
-            fez_record_search_key_grant_agency_id: [
+            fez_record_search_key_grant_id: [
                 {
-                    rek_grant_agency_id: 'test123',
-                    rek_grant_agency_id_order: 1
+                    rek_grant_id: 'test123',
+                    rek_grant_id_order: 1
                 }
             ],
             fez_record_search_key_grant_type: [
@@ -1263,14 +1263,14 @@ describe('getGrantsListSearchKey tests', () => {
                     rek_grant_agency_order: 3
                 }
             ],
-            fez_record_search_key_grant_agency_id: [
+            fez_record_search_key_grant_id: [
                 {
-                    rek_grant_agency_id: 'test123',
-                    rek_grant_agency_id_order: 1
+                    rek_grant_id: 'test123',
+                    rek_grant_id_order: 1
                 },
                 {
-                    rek_grant_agency_id: 'testing123',
-                    rek_grant_agency_id_order: 2
+                    rek_grant_id: 'testing123',
+                    rek_grant_id_order: 2
                 }
             ],
             fez_record_search_key_grant_type: [

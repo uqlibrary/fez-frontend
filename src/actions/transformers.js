@@ -428,13 +428,13 @@ export const getGrantsListSearchKey = (grants) => {
                 }))
                 .filter(item => !!item.rek_grant_agency)
         ],
-        fez_record_search_key_grant_agency_id: [
+        fez_record_search_key_grant_id: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_agency_id: item.grantId,
-                    rek_grant_agency_id_order: index + 1
+                    rek_grant_id: item.grantId,
+                    rek_grant_id_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_agency_id)
+                .filter(item => !!item.rek_grant_id)
         ],
         fez_record_search_key_grant_type: [
             ...grants
