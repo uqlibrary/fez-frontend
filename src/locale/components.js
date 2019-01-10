@@ -290,7 +290,7 @@ export default {
                     secondaryField: {
                         heading: 'API Key',
                         fromAria: '',
-                        tip: '(optional, a default key is provided)',
+                        tip: '(optional, a default key is provided. Limit: 1,000 queries per day)',
                         inputPlaceholder: 'Enter API key',
                     },
                     lookupLabel: 'Incites',

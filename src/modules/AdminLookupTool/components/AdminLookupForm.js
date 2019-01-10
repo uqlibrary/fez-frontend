@@ -89,56 +89,52 @@ export class AdminLookupForm extends PureComponent {
                         </IconButton>
                     </Grid>
                 </Grid>
-                <Grid container>
-                    <p>{txt.form.tip}</p>
-                </Grid>
+                <p>{txt.form.tip}</p>
                 {
                     !this.state.isMinimised &&
                     <Fragment>
-                        <Grid container>
-                            <form onSubmit={this._handleDefaultSubmit}>
+                        <form onSubmit={this._handleDefaultSubmit}>
 
-                                <div>
-                                    <h4>{txt.form.primaryField.heading}</h4>
-                                    <p>{txt.form.primaryField.tip}</p>
-                                    <TextField
-                                        fullWidth
-                                        name={'primaryValue'}
-                                        placeholder={txt.form.primaryField.inputPlaceholder}
-                                        aria-label={txt.form.primaryField.fromAria}
-                                        value={primaryValue}
-                                        onChange={this._onChange}
-                                        required
-                                    />
-                                </div>
-                                {
-                                    // not all forms will have a second field
-                                    !!txt.form.secondaryField ?
-                                        <div>
-                                            <h4>{txt.form.secondaryField.heading}</h4>
-                                            <p>{txt.form.secondaryField.tip}</p>
-                                            <TextField
-                                                fullWidth
-                                                name={'secondaryValue'}
-                                                placeholder={txt.form.secondaryField.inputPlaceholder}
-                                                aria-label={txt.form.secondaryField.fromAria}
-                                                value={secondaryValue}
-                                                onChange={this._onChange}
-                                            />
-                                        </div>
-                                        :
-                                        <div>&nbsp;</div>
-                                }
-                                <p>{txt.form.bottomTip}</p>
-                                <Button
-                                    children= {txt.form.submitButtonLabel ? txt.form.submitButtonLabel : 'Submit'}
-                                    variant="contained"
-                                    aria-label={txt.form.submitButtonLabel}
-                                    color={'primary'}
-                                    onClick={() => this._handleSubmitLookup()}
+                            <div>
+                                <h4>{txt.form.primaryField.heading}</h4>
+                                <p>{txt.form.primaryField.tip}</p>
+                                <TextField
+                                    fullWidth
+                                    name={'primaryValue'}
+                                    placeholder={txt.form.primaryField.inputPlaceholder}
+                                    aria-label={txt.form.primaryField.fromAria}
+                                    value={primaryValue}
+                                    onChange={this._onChange}
+                                    required
                                 />
-                            </form>
-                        </Grid>
+                            </div>
+                            {
+                                // not all forms will have a second field
+                                !!txt.form.secondaryField ?
+                                    <div>
+                                        <h4>{txt.form.secondaryField.heading}</h4>
+                                        <p>{txt.form.secondaryField.tip}</p>
+                                        <TextField
+                                            fullWidth
+                                            name={'secondaryValue'}
+                                            placeholder={txt.form.secondaryField.inputPlaceholder}
+                                            aria-label={txt.form.secondaryField.fromAria}
+                                            value={secondaryValue}
+                                            onChange={this._onChange}
+                                        />
+                                    </div>
+                                    :
+                                    <div>&nbsp;</div>
+                            }
+                            <p>{txt.form.bottomTip}</p>
+                            <Button
+                                children= {txt.form.submitButtonLabel ? txt.form.submitButtonLabel : 'Submit'}
+                                variant="contained"
+                                aria-label={txt.form.submitButtonLabel}
+                                color={'primary'}
+                                onClick={() => this._handleSubmitLookup()}
+                            />
+                        </form>
                         {
                             !!this.props.lookupResults && this.props.lookupResults.length > 0 ?
                                 <StandardCard style={{marginTop: 10}} title={locale.components.adminLookupTools.resultsLabel}>
