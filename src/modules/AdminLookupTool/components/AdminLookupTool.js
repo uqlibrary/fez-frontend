@@ -18,7 +18,7 @@ import {AdminLookupForm} from './AdminLookupForm';
  *    "https://api.library.uq.edu.au/staging/admin/lookup/incites/A1979HY31900010,A1979HY31900068/[APIKEY]".
  * - and that should be all that is required (note the comment below about minimising components)
  */
-export default class AdminLookupTool extends PureComponent {
+export class AdminLookupTool extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
     };
@@ -41,3 +41,5 @@ export default class AdminLookupTool extends PureComponent {
         );
     }
 }
+
+export default AdminLookupTool;
