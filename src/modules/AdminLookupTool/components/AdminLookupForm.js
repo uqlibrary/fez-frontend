@@ -15,7 +15,7 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 export class AdminLookupForm extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
-        form: PropTypes.object.isRequired,
+        localeform: PropTypes.object.isRequired,
         isMinimised: PropTypes.bool,
         lookupResults: PropTypes.array,
     };
@@ -43,7 +43,7 @@ export class AdminLookupForm extends PureComponent {
     };
 
     _handleSubmitLookup = () => {
-        const lookupType = this.props.form.lookupType; // locale.components.adminLookupTools.incites.lookupType;
+        const lookupType = this.props.localeform.lookupType;
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
@@ -66,21 +66,21 @@ export class AdminLookupForm extends PureComponent {
     render() {
         const txt = {
             title: locale.components.adminLookupTools.title,
-            form: this.props.form,
+            thisForm: this.props.localeform,
         };
         const { primaryValue, secondaryValue } = this.state;
         return (
             <StandardCard className="lookupComponent" noHeader>
                 <Grid container spacing={24}>
                     <Grid item style={{flexGrow: 1, width: 1}}>
-                        <Typography variant={'headline'}>{txt.form.lookupLabel}</Typography>
+                        <Typography variant={'headline'}>{txt.thisForm.lookupLabel}</Typography>
                     </Grid>
                     <Grid item>
                         <IconButton
                             onClick={this._toggleMinimise}
                             tooltip={!!this.state.isMinimised
-                                ? locale.components.adminLookupTools.tooltip.show + ' for ' + txt.form.lookupLabel
-                                : locale.components.adminLookupTools.tooltip.hide + ' for ' + txt.form.lookupLabel}>
+                                ? locale.components.adminLookupTools.tooltip.show + ' for ' + txt.thisForm.lookupLabel
+                                : locale.components.adminLookupTools.tooltip.hide + ' for ' + txt.thisForm.lookupLabel}>
                             {
                                 !!this.state.isMinimised
                                     ? <KeyboardArrowDown/>
@@ -89,20 +89,20 @@ export class AdminLookupForm extends PureComponent {
                         </IconButton>
                     </Grid>
                 </Grid>
-                <p>{txt.form.tip}</p>
+                <p>{txt.thisForm.tip}</p>
                 {
                     !this.state.isMinimised &&
                     <Fragment>
                         <form onSubmit={this._handleDefaultSubmit}>
 
                             <div>
-                                <h4>{txt.form.primaryField.heading}</h4>
-                                <p>{txt.form.primaryField.tip}</p>
+                                <h4>{txt.thisForm.primaryField.heading}</h4>
+                                <p>{txt.thisForm.primaryField.tip}</p>
                                 <TextField
                                     fullWidth
                                     name={'primaryValue'}
-                                    placeholder={txt.form.primaryField.inputPlaceholder}
-                                    aria-label={txt.form.primaryField.fromAria}
+                                    placeholder={txt.thisForm.primaryField.inputPlaceholder}
+                                    aria-label={txt.thisForm.primaryField.fromAria}
                                     value={primaryValue}
                                     onChange={this._onChange}
                                     required
@@ -110,15 +110,15 @@ export class AdminLookupForm extends PureComponent {
                             </div>
                             {
                                 // not all forms will have a second field
-                                !!txt.form.secondaryField ?
+                                !!txt.thisForm.secondaryField ?
                                     <div>
-                                        <h4>{txt.form.secondaryField.heading}</h4>
-                                        <p>{txt.form.secondaryField.tip}</p>
+                                        <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                        <p>{txt.thisForm.secondaryField.tip}</p>
                                         <TextField
                                             fullWidth
                                             name={'secondaryValue'}
-                                            placeholder={txt.form.secondaryField.inputPlaceholder}
-                                            aria-label={txt.form.secondaryField.fromAria}
+                                            placeholder={txt.thisForm.secondaryField.inputPlaceholder}
+                                            aria-label={txt.thisForm.secondaryField.fromAria}
                                             value={secondaryValue}
                                             onChange={this._onChange}
                                         />
@@ -126,11 +126,11 @@ export class AdminLookupForm extends PureComponent {
                                     :
                                     <div>&nbsp;</div>
                             }
-                            <p>{txt.form.bottomTip}</p>
+                            <p>{txt.thisForm.bottomTip}</p>
                             <Button
-                                children= {txt.form.submitButtonLabel ? txt.form.submitButtonLabel : 'Submit'}
+                                children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
                                 variant="contained"
-                                aria-label={txt.form.submitButtonLabel}
+                                aria-label={txt.thisForm.submitButtonLabel}
                                 color={'primary'}
                                 onClick={() => this._handleSubmitLookup()}
                             />

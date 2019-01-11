@@ -5,7 +5,8 @@ exports[`Component AdminLookupTool renders incites 1`] = `
   title="Admin Lookup Tools"
 >
   <AdminLookupForm
-    form={
+    isMinimised={false}
+    localeform={
       Object {
         "bottomTip": "",
         "fromHint": "",
@@ -29,7 +30,6 @@ exports[`Component AdminLookupTool renders incites 1`] = `
         "tip": "View raw output we receive from Incites via their API",
       }
     }
-    isMinimised={false}
     lookupResults={Array []}
     onToggleMinimise={[Function]}
   />

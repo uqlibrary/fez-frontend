@@ -35,7 +35,7 @@ export class AdminLookupTool extends PureComponent {
                 {/* incites */}
                 <AdminLookupForm
                     isMinimised={false} // once we do more than one form here they should be loaded minimised, ie use the default
-                    form={locale.components.adminLookupTools.forms.incites}
+                    localeform={locale.components.adminLookupTools.forms.incites}
                     actions={this.props.actions}
                 />
 
