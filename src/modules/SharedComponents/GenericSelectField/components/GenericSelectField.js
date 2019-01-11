@@ -62,6 +62,12 @@ export class GenericSelectField extends Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (this.props.parentItemsId !== nextProps.parentItemsId) {
+            this.props.loadItemsList(nextProps.parentItemsId);
+        }
+    }
+
     _itemSelected = (event) => {
         let value = event.target.value;
         if(value[0] === -1 && value.length > 1) {

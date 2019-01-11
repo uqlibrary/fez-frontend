@@ -177,6 +177,40 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
+export const getRecordAuthorAffiliationSearchKey = (authors) => {
+    if ((!authors || authors.length === 0)) return {};
+
+    return {
+        fez_record_search_key_author_affiliation_name: authors
+            .map(
+                (item, index) => (
+                    {
+                        rek_author_affiliation_name: item.orgaff,
+                        rek_author_affiliation_name_order: index + 1
+                    }
+                )
+            )
+            .filter(item => item.rek_author_affiliation_name !== '')
+    };
+};
+
+export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
+    if ((!authors || authors.length === 0)) return {};
+
+    return {
+        fez_record_search_key_author_affiliation_type: authors
+            .map(
+                (item, index) => (
+                    {
+                        rek_author_affiliation_type: parseInt(item.orgtype, 10),
+                        rek_author_affiliation_type_order: index + 1
+                    }
+                )
+            )
+            .filter(item => !isNaN(item.rek_author_affiliation_type))
+    };
+};
+
 /* unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
 * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
@@ -347,4 +381,100 @@ export const getGeographicAreaSearchKey = (area = null) => {
             rek_geographic_area_order: 1
         }]
     };
+};
+
+export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
+    if (!abstract) return {};
+
+    return {
+        rek_description: abstract.plainText,
+        rek_formatted_abstract: abstract.htmlText
+    };
+};
+
+// * getGrantsListSearchKey - returns the grant funder/sponsor details as mapped in search keys
+// Input:
+// "grants":[
+//  {"grantName":"Funder 1","grantID":"00001","grantType":"Museum","disabled":false},
+//  {"grantName":"Funder 2","grantID":"00002","grantType":"Gallery","disabled":false}
+// ]
+//
+// Output:
+// "fez_record_search_key_grant_agency": [
+//     {
+//         "rek_grant_agency_id": 00001,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 1",
+//         "rek_grant_agency_order": 1
+//     },
+//     {
+//         "rek_grant_agency_id": 00002,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 2",
+//         "rek_grant_agency_order": 2
+//     }
+// ]
+export const getGrantsListSearchKey = (grants) => {
+    if (!grants || grants.length === 0) return {};
+
+    return {
+        fez_record_search_key_grant_agency: [
+            ...grants
+                .map((item, index) => ({
+                    rek_grant_agency: item.grantName,
+                    rek_grant_agency_order: index + 1
+                }))
+                .filter(item => !!item.rek_grant_agency)
+        ],
+        fez_record_search_key_grant_id: [
+            ...grants
+                .map((item, index) => ({
+                    rek_grant_id: item.grantId,
+                    rek_grant_id_order: index + 1
+                }))
+                .filter(item => !!item.rek_grant_id)
+        ],
+        fez_record_search_key_grant_type: [
+            ...grants
+                .map((item, index) => ({
+                    rek_grant_type: parseInt(item.grantType, 10),
+                    rek_grant_type_order: index + 1
+                }))
+                .filter(item => !!item.rek_grant_type)
+        ]
+    };
+};
+
+export const getNtroMetadataSearchKeys = (data) => {
+    if (!data) return {};
+
+    const ntroMetadata = {};
+    if (!!data.significance) {
+        ntroMetadata.fez_record_search_key_significance = [
+            {
+                rek_significance: data.significance,
+                rek_significance_order: 1
+            }
+        ];
+    }
+
+    if (!!data.impactStatement) {
+        ntroMetadata.fez_record_search_key_creator_contribution_statement = [
+            {
+                rek_creator_contribution_statement: data.impactStatement,
+                rek_creator_contribution_statement_order: 1
+            }
+        ];
+    }
+
+    if (!!data.qualityIndicators) {
+        ntroMetadata.fez_record_search_key_quality_indicator = data.qualityIndicators.map((item, index) => ({
+            rek_quality_indicator: item,
+            rek_quality_indicator_order: index + 1
+        }));
+    }
+
+    return ntroMetadata;
 };

@@ -2,21 +2,32 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation} from 'config';
-import {default as formLocale} from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
+import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
+
+import {validation} from 'config';
+import {default as formLocale} from 'locale/publicationForm';
+import {
+    RRW_NTRO_SUBTYPES,
+    LP_NTRO_SUBTYPES,
+    CPEE_NTRO_SUBTYPES,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_CW_OTHER,
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK
+} from 'config/general';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool,
     };
 
     constructor(props) {
@@ -24,9 +35,7 @@ export default class CreativeWorkForm extends Component {
     }
 
     render() {
-        // path to the locale data for each of the sections
         const txt = formLocale.creativeWork;
-
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -45,7 +54,7 @@ export default class CreativeWorkForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -55,7 +64,7 @@ export default class CreativeWorkForm extends Component {
                                     {...txt.information.fieldLabels.placeOfPublication}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -63,6 +72,18 @@ export default class CreativeWorkForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publisher}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="rek_doi"
+                                    type="text"
+                                    fullWidth
+                                    label={'DOI'}
+                                    placeholder={'Please enter a valid DOI.'}
+                                    validate={[validation.doi]}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -77,16 +98,14 @@ export default class CreativeWorkForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
-                                    component={TextField}
+                                    component={PartialDateField}
                                     disabled={this.props.submitting}
-                                    name="rek_description"
-                                    type="text"
-                                    fullWidth
-                                    rows={3}
-                                    multiline
-                                    {...txt.information.fieldLabels.abstract}
+                                    name="rek_end_date"
+                                    allowPartial
+                                    floatingTitle={txt.information.fieldLabels.enddate.title}
+                                    floatingTitleRequired
                                 />
                             </Grid>
                         </Grid>
@@ -103,9 +122,23 @@ export default class CreativeWorkForm extends Component {
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
                             validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
                         />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc={!RRW_NTRO_SUBTYPES.includes(this.props.subtype)}
+                        hideAudienceSize={![...LP_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
+                        hideVolume={![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
+                        hideIssue={![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
+                        hideOriginalFormat={[CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
@@ -129,6 +162,16 @@ export default class CreativeWorkForm extends Component {
                                     fullWidth
                                     {...txt.optional.fieldLabels.url}
                                     validate={[validation.url]}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_link_description"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    label={'Link description'}
                                 />
                             </Grid>
                         </Grid>

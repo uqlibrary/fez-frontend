@@ -39,5 +39,11 @@ describe('ResearchReportForm renders ', () => {
         expect(wrapper.instance().getNumbersOnly('12Three')).toBe('12');
         expect(wrapper.instance().getNumbersOnly('  01Three')).toBe('01');
         expect(wrapper.instance().getNumbersOnly('124')).toBe('124');
-    })
+    });
+
+    it('component with 4 input fields for NTRO', () => {
+        const wrapper = setup({isNtro: true});
+        expect(wrapper.find('Field').length).toEqual(9);
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(5);
+    });
 });

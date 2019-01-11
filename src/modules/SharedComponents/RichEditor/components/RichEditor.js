@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import Typography from '@material-ui/core/Typography';
 import 'ckeditor';
 
 export default class RichEditor extends PureComponent {
@@ -9,7 +10,8 @@ export default class RichEditor extends PureComponent {
         className: PropTypes.string,
         onChange: PropTypes.func.isRequired,
         disabled: PropTypes.bool,
-        height: PropTypes.number
+        height: PropTypes.number,
+        meta: PropTypes.object,
     };
 
     static defaultProps = {
@@ -56,6 +58,30 @@ export default class RichEditor extends PureComponent {
     }
 
     render() {
-        return <div className={this.props.className} />;
+        let error = null;
+        if (this.props.meta && this.props.meta.error) {
+            error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {
+                        key: index
+                    });
+                } else {
+                    return child;
+                }
+            });
+        }
+        return (
+            <React.Fragment>
+                <div className={this.props.className} />
+                {
+                    this.props.meta && this.props.meta.error &&
+                    <Typography color="error" variant="caption">
+                        {
+                            error || this.props.meta.error
+                        }
+                    </Typography>
+                }
+            </React.Fragment>
+        );
     }
 }

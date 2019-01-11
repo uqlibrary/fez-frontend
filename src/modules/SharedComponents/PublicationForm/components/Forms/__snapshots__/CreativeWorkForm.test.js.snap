@@ -39,6 +39,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -53,7 +54,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={4}
           xs={12}
         >
           <Field
@@ -68,6 +69,26 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="DOI"
+            name="rek_doi"
+            placeholder="Please enter a valid DOI."
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
           sm={6}
           xs={12}
         >
@@ -76,7 +97,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             className="requiredHintField"
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication date"
+            floatingTitle="Publication (start) date"
             floatingTitleRequired={true}
             name="rek_date"
             required={true}
@@ -89,18 +110,16 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
+          sm={6}
           xs={12}
         >
           <Field
+            allowPartial={true}
             component={[Function]}
             disabled={false}
-            fullWidth={true}
-            label="Abstract"
-            multiline={true}
-            name="rek_description"
-            placeholder="Provide an abstract or summary of the work."
-            rows={3}
-            type="text"
+            floatingTitle="Publication end date"
+            floatingTitleRequired={true}
+            name="rek_end_date"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -111,6 +130,13 @@ exports[`CreativeWorkForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": "Help text...",
+          "title": "NTRO Publication Authors/Creators/Contributors",
+        }
+      }
       title="Authors"
     >
       <WithStyles(Typography)>
@@ -248,6 +274,19 @@ exports[`CreativeWorkForm renders  component 1`] = `
                 [Function],
               ]
             }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Link description"
+            name="rek_link_description"
+            type="text"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>

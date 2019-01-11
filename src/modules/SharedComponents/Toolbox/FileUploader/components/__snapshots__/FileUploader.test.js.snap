@@ -73,6 +73,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -258,6 +268,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -455,6 +475,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -652,6 +682,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -840,6 +880,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1087,6 +1137,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1336,6 +1396,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1589,6 +1659,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1957,6 +2037,16 @@ exports[`Component FileUploader should render default component 1`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2044,6 +2134,16 @@ exports[`Component FileUploader should render disabled component 1`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2130,6 +2230,16 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2221,6 +2331,16 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2467,6 +2587,16 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2648,6 +2778,16 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2734,6 +2874,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2825,6 +2975,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3071,6 +3231,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3162,6 +3332,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3409,6 +3589,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3658,6 +3848,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3917,6 +4117,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -4171,6 +4381,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -4262,6 +4482,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          <a
+            href="http://google.com"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
