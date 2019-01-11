@@ -270,7 +270,7 @@ exports[`Component PublicationForm should render component initialised with just
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -294,13 +294,13 @@ exports[`Component PublicationForm should render component initialised with just
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -312,7 +312,7 @@ exports[`Component PublicationForm should render component initialised with just
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -336,13 +336,13 @@ exports[`Component PublicationForm should render component initialised with just
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
@@ -677,7 +677,7 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -701,13 +701,13 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -719,7 +719,7 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -743,13 +743,13 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
@@ -1116,7 +1116,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -1140,13 +1140,13 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -1158,7 +1158,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -1182,13 +1182,13 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
@@ -1593,7 +1593,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -1617,13 +1617,13 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -1635,7 +1635,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -1659,13 +1659,13 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
@@ -2067,7 +2067,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -2091,13 +2091,13 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -2109,7 +2109,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -2133,13 +2133,13 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
@@ -2541,7 +2541,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -2565,13 +2565,13 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -2583,7 +2583,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -2607,13 +2607,13 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
@@ -3014,7 +3014,7 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="ntro-10"
                 value={1022}
               >
-                Live Performance of Creative Work - Plays/Dramas/Theatre
+                Live Performance of Creative Work - Plays, Dramas, Theatre
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-11"
@@ -3038,13 +3038,13 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="ntro-14"
                 value={1026}
               >
-                Recorded or Rendered Creative Work - Audio/Visual Recording
+                Recorded or Rendered Creative Work - Audio or Visual
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-15"
                 value={1027}
               >
-                Recorded or Rendered Creative Work - Digital Creative Works
+                Recorded or Rendered Creative Work - Digital
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-16"
@@ -3056,7 +3056,7 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="ntro-17"
                 value={1029}
               >
-                Recorded or Rendered Creative Work - Website/Exhibition
+                Recorded or Rendered Creative Work - Website Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-18"
@@ -3080,13 +3080,13 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="ntro-21"
                 value={1033}
               >
-                Curated or Produced Exhibition or Event - Web Based Exhibition
+                Curated or Produced Exhibition or Event - Web Exhibition
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-22"
                 value={1034}
               >
-                Curated or Produced Exhibition or Event - Other Exhibition or Event (Scholarly Disciplines)
+                Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-23"
