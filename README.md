@@ -31,7 +31,7 @@ This project is using `npm` for dependency management.  Make sure `npm` is insta
 - `npm run start:mock` - The website is now running on `http://localhost:3000/` on mock data
 - `npm run start:url` - The website is now running on `http://dev-espace.library.uq.edu.au:3000` using staging as a backend (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
 - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url
+- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url (you may need to block CORS errors - eg with Moesif Origin & CORS Changer Chrome Extension)
 - `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000`
 - `npm run start:build:e2e` will run production build version on `http://localhost:9000` with mock data (async loading is not working since chuncks are not saved, navigate directly to required routes)
 

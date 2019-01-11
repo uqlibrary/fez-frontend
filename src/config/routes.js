@@ -29,7 +29,6 @@ export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
     contact: '/contact',
-    adminLookupTools: '/lookup',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
@@ -89,6 +88,7 @@ export const pathConfig = {
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: {all: herdcStatus}}),
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}})
     },
+    adminLookupTools: '/lookup',
     admin: {
         masquerade: '/admin/masquerade',
         legacyEspace: `${fullPath}/my_upo_tools.php`
@@ -297,7 +297,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             },
             {
                 path: pathConfig.adminLookupTools,
-                component: components.adminLookupTools,
+                // component: components.adminLookupTools,
+                render: () => components.StandardPage({...locale.pages.lookup}),
+                exact: true,
                 access: [roles.admin],
                 pageTitle: locale.components.adminLookupTools.title
             }
