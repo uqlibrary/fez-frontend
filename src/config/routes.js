@@ -88,8 +88,8 @@ export const pathConfig = {
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: {all: herdcStatus}}),
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}})
     },
-    adminLookupTools: '/lookup',
     admin: {
+        lookupTools: '/admin/lookup',
         masquerade: '/admin/masquerade',
         legacyEspace: `${fullPath}/my_upo_tools.php`
     },
@@ -296,9 +296,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 pageTitle: locale.pages.masquerade.title
             },
             {
-                path: pathConfig.adminLookupTools,
-                // component: components.adminLookupTools,
-                render: () => components.StandardPage({...locale.pages.lookup}),
+                path: pathConfig.admin.lookupTools,
+                component: components.AdminLookupTool,
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.components.adminLookupTools.title
@@ -408,7 +407,7 @@ export const getMenuConfig = (account, disabled) => {
             },
             {
                 // maybe this should be in some admin bit? tbd
-                linkTo: pathConfig.lookup,
+                linkTo: pathConfig.admin.lookupTools,
                 ...locale.menu.adminLookupTools,
             },
             {

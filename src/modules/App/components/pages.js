@@ -21,4 +21,3 @@ export {Masquerade} from 'modules/Masquerade';
 export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 export {SearchRecords} from 'modules/SearchRecords';
 export {MyRecords, MyDataCollections} from 'modules/MyRecords';
-

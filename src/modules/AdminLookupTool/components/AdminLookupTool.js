@@ -12,13 +12,13 @@ import {AdminLookupForm} from './AdminLookupForm';
  * - add an entry to locale/components.js under .adminLookupTools.forms as a sibling to .incites;
  *          - match the contents of the incites entry
  *          - the secondary field is optional
- * - create a new api that returns the desired data, with a url of:
- *    admin/lookup/[components.adminLookupTools.sibling]/[keys to search for]/[possible other field you need]
+ * - create a new api (use FezCoreLookupController) that returns the desired data, with a url of:
+ *    admin/lookup/[components.adminLookupTools.forms.sibling]/[keys to search for]/[possible other field you need]
  * ie the api url that incites calls is: eg
  *    "https://api.library.uq.edu.au/staging/admin/lookup/incites/A1979HY31900010,A1979HY31900068/[APIKEY]".
  * - and that should be all that is required (note the comment below about minimising components)
  */
-export class AdminLookupTool extends PureComponent {
+export default class AdminLookupTool extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
     };
@@ -41,5 +41,3 @@ export class AdminLookupTool extends PureComponent {
         );
     }
 }
-
-export default AdminLookupTool;
