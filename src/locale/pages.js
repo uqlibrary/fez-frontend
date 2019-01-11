@@ -445,6 +445,14 @@ export default {
                 message: (message) => message
             },
         },
+        lookup: {
+            title: 'New menu item',
+            children: (
+                <StandardCard>
+                    <p>new page</p>
+                </StandardCard>
+            )
+        },
         masquerade: {
             title: 'Masquerade',
             help: {
