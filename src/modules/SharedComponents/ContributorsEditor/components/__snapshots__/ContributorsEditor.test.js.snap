@@ -925,6 +925,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                     </WithStyles(InputLabel)>
                                     <WithStyles(Select)
                                       onChange={[Function]}
+                                      required={true}
                                       value=""
                                     >
                                       <Select
@@ -946,6 +947,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                         multiple={false}
                                         native={false}
                                         onChange={[Function]}
+                                        required={true}
                                         value=""
                                       >
                                         <WithStyles(Input)
@@ -996,6 +998,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                             }
                                           }
                                           onChange={[Function]}
+                                          required={true}
                                           value=""
                                         >
                                           <Input
@@ -1063,6 +1066,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                               }
                                             }
                                             onChange={[Function]}
+                                            required={true}
                                             value=""
                                           >
                                             <WithStyles(InputBase)
@@ -1132,6 +1136,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                               }
                                               multiline={false}
                                               onChange={[Function]}
+                                              required={true}
                                               type="text"
                                               value=""
                                             >
@@ -1206,12 +1211,14 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                 }
                                                 multiline={false}
                                                 onChange={[Function]}
+                                                required={true}
                                                 type="text"
                                                 value=""
                                               >
                                                 <div
                                                   className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-formControl-137 MuiInput-formControl-124"
                                                   onClick={[Function]}
+                                                  required={true}
                                                 >
                                                   <SelectInput
                                                     IconComponent={[Function]}
@@ -1236,7 +1243,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onFocus={[Function]}
-                                                    required={false}
+                                                    required={true}
                                                     value=""
                                                     variant="standard"
                                                   >

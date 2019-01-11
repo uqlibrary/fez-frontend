@@ -12,6 +12,7 @@ export default function OrgAffilicationTypeSelector({affiliation, onAffiliationC
             <Select
                 value={affiliation}
                 onChange={onAffiliationChange}
+                required
             >
                 <MenuItem value="" disabled>{locale.placeholder}</MenuItem>
                 {

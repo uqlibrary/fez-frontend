@@ -9,6 +9,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     onChange={[MockFunction]}
+    required={true}
     value="NotUQ"
   >
     <WithStyles(MenuItem)
@@ -42,6 +43,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     onChange={[MockFunction]}
+    required={true}
     value="UQ"
   >
     <WithStyles(MenuItem)
@@ -75,6 +77,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
   </WithStyles(InputLabel)>
   <WithStyles(Select)
     onChange={[MockFunction]}
+    required={true}
     value=""
   >
     <WithStyles(MenuItem)
