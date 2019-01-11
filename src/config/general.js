@@ -215,6 +215,7 @@ export const publicationTypes = (components) => [
             NTRO_SUBTYPE_CW_VISUAL_WORK,
             NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
             NTRO_SUBTYPE_CW_OTHER,
+            'Other'
         ]
     },
     {
@@ -236,6 +237,7 @@ export const publicationTypes = (components) => [
             NTRO_SUBTYPE_CW_VISUAL_WORK,
             NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
             NTRO_SUBTYPE_CW_OTHER,
+            'Other'
         ]
     },
     {
@@ -347,6 +349,7 @@ export const publicationTypes = (components) => [
             NTRO_SUBTYPE_CW_VISUAL_WORK,
             NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
             NTRO_SUBTYPE_CW_OTHER,
+            'Other'
         ]
     },
     {
