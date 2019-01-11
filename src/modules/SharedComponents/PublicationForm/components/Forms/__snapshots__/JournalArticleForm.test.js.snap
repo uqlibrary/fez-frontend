@@ -81,6 +81,10 @@ exports[`JournalArticleForm renders  component 1`] = `
             }
           />
         </WithStyles(Grid)>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
         <WithStyles(Grid)
           item={true}
           xs={12}
@@ -105,6 +109,8 @@ exports[`JournalArticleForm renders  component 1`] = `
             vocabId={0}
           />
         </WithStyles(Grid)>
+>>>>>>> master
+>>>>>>> feature-ntro
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>

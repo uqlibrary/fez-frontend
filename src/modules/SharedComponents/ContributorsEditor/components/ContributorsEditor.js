@@ -17,6 +17,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
+        isNtro: PropTypes.bool,
         disabled: PropTypes.bool,
         meta: PropTypes.object,
         author: PropTypes.object,
@@ -31,6 +32,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: false,
         showRoleInput: false,
         showContributorAssignment: false,
+        isNtro: false,
         locale: {
             errorTitle: 'Error',
             errorMessage: 'Unable to add an item with the same identifier.'
@@ -42,7 +44,8 @@ export class ContributorsEditor extends PureComponent {
         this.state = {
             contributors: this.getContributorsFromProps(props),
             isCurrentAuthorSelected: false,
-            errorMessage: ''
+            errorMessage: '',
+            showIdentifierLookup: false
         };
     }
 
@@ -135,27 +138,28 @@ export class ContributorsEditor extends PureComponent {
     };
 
     render() {
-        const {classes, showIdentifierLookup, showContributorAssignment, disabled, showRoleInput} = this.props;
+        const {classes, showIdentifierLookup, showContributorAssignment, disabled, showRoleInput, required, isNtro} = this.props;
         const {contributors, isCurrentAuthorSelected, errorMessage} = this.state;
 
         const renderContributorsRows = contributors.map((contributor, index) => (
             <ContributorRow
                 key={`ContributorRow_${index}`}
                 index={index}
+                disabled={disabled}
                 contributor={contributor}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 onMoveUp={this.moveUpContributor}
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
+                onContributorAssigned={this.assignContributor}
                 showIdentifierLookup={showIdentifierLookup}
                 showRoleInput={showRoleInput}
-                contributorSuffix={this.props.locale.contributorSuffix}
-                disabled={disabled}
                 showContributorAssignment={showContributorAssignment}
+                contributorSuffix={this.props.locale.contributorSuffix}
                 disabledContributorAssignment={isCurrentAuthorSelected}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
-                onContributorAssigned={this.assignContributor} />
+            />
         ));
 
         let error = null;
@@ -182,12 +186,13 @@ export class ContributorsEditor extends PureComponent {
                 }
                 <ContributorForm
                     onAdd={this.addContributor}
-                    showIdentifierLookup={showIdentifierLookup}
-                    showRoleInput={showRoleInput}
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    required={required}
                     disabled={disabled}
+                    showRoleInput={showRoleInput}
+                    showIdentifierLookup={showIdentifierLookup}
                     showContributorAssignment={showContributorAssignment}
-                    required={this.props.required}
+                    isNtro={isNtro}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                 />
                 {
                     contributors.length > 0 &&
@@ -196,12 +201,13 @@ export class ContributorsEditor extends PureComponent {
                             <List>
                                 <ContributorRowHeader
                                     onDeleteAll={this.deleteAllContributors}
-                                    {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
-                                    showIdentifierLookup={showIdentifierLookup}
-                                    showRoleInput={showRoleInput}
                                     disabled={disabled}
-                                    showContributorAssignment={showContributorAssignment}
                                     isInfinite={contributors.length > 3}
+                                    isNtro={isNtro}
+                                    showRoleInput={showRoleInput}
+                                    showIdentifierLookup={showIdentifierLookup}
+                                    showContributorAssignment={showContributorAssignment}
+                                    {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                                 />
                             </List>
                         </Grid>

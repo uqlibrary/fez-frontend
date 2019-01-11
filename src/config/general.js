@@ -53,8 +53,140 @@ export const PUBLICATION_TYPE_THESIS = 187;
 export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
+export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK = 1003;
+export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK = 1004;
+export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER = 1005;
+export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE = 1006;
+export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_CREATIVE_WORK = 1007;
+export const PUBLICATION_TYPE_CW_VISUAL_WORK_CREATIVE_WORK = 1011;
+export const PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_CREATIVE_WORK = 1015;
+export const PUBLICATION_TYPE_CW_OTHER_CREATIVE_WORK = 1019;
+export const PUBLICATION_TYPE_LP_MUSIC = 1020;
+export const PUBLICATION_TYPE_LP_DANCE = 1021;
+export const PUBLICATION_TYPE_LP_PLAYS_DRAMAS_THEATRE = 1022;
+export const PUBLICATION_TYPE_LP_INTERARTS = 1023;
+export const PUBLICATION_TYPE_LP_OTHER = 1024;
+export const PUBLICATION_TYPE_RRW_MUSIC_DANCE_THEATRE = 1025;
+export const PUBLICATION_TYPE_RRW_AUDIO_VISUAL_RECORDING = 1026;
+export const PUBLICATION_TYPE_RRW_DIGITAL_CREATIVE_WORKS = 1027;
+export const PUBLICATION_TYPE_RRW_INTERARTS = 1028;
+export const PUBLICATION_TYPE_RRW_WEBSITE_EXHIBITION = 1029;
+export const PUBLICATION_TYPE_RRW_OTHER = 1030;
+export const PUBLICATION_TYPE_CPEE_EXHIBITION_EVENT = 1031;
+export const PUBLICATION_TYPE_CPEE_FESTIVAL = 1032;
+export const PUBLICATION_TYPE_CPEE_WEB_BASED_EXHIBITION = 1033;
+export const PUBLICATION_TYPE_CPEE_OTHER = 1034;
+export const PUBLICATION_TYPE_RREB_PUBLIC_SECTOR = 1035;
+export const PUBLICATION_TYPE_RREB_INDUSTRY = 1036;
+export const PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT = 1037;
+export const PUBLICATION_TYPE_RREB_OTHER = 1038;
+export const PUBLICATION_TYPE_RR_INTERNAL_OTHER = 1039;
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
+
+export const NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
+export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';
+export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual Art';
+export const NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION = 'Creative Work - Musical Composition';
+export const NTRO_SUBTYPE_CW_OTHER = 'Creative Work - Other';
+export const NTRO_SUBTYPE_LP_MUSIC = 'Live Performance of Creative Work - Music';
+export const NTRO_SUBTYPE_LP_DANCE = 'Live Performance of Creative Work - Dance';
+export const NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE = 'Live Performance of Creative Work - Plays, Dramas, Theatre';
+export const NTRO_SUBTYPE_LP_INTERARTS = 'Live Performance of Creative Work - Interarts';
+export const NTRO_SUBTYPE_LP_OTHER = 'Live Performance of Creative Work - Other';
+export const NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE = 'Recorded or Rendered Creative Work - Music, Dance, Theatre';
+export const NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING = 'Recorded or Rendered Creative Work - Audio or Visual';
+export const NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS = 'Recorded or Rendered Creative Work - Digital';
+export const NTRO_SUBTYPE_RRW_INTERARTS = 'Recorded or Rendered Creative Work - Interarts';
+export const NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION = 'Recorded or Rendered Creative Work - Website Exhibition';
+export const NTRO_SUBTYPE_RRW_OTHER = 'Recorded or Rendered Creative Work - Other';
+export const NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT = 'Curated or Produced Exhibition or Event - Exhibition or Event';
+export const NTRO_SUBTYPE_CPEE_FESTIVAL = 'Curated or Produced Exhibition or Event - Festival';
+export const NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION = 'Curated or Produced Exhibition or Event - Web Exhibition';
+export const NTRO_SUBTYPE_CPEE_OTHER = 'Curated or Produced Exhibition or Event - Other (Scholarly Disciplines)';
+export const NTRO_SUBTYPE_RREB_PUBLIC_SECTOR = 'Research Report for an External Body - Public Sector';
+export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body - Industry';
+export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
+export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
+export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+
+export const CW_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    NTRO_SUBTYPE_CW_VISUAL_WORK,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_CW_OTHER
+];
+
+export const RRW_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+    NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+    NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+    NTRO_SUBTYPE_RRW_INTERARTS,
+    NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+    NTRO_SUBTYPE_RRW_OTHER,
+];
+
+export const CPEE_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CPEE_FESTIVAL,
+    NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    NTRO_SUBTYPE_CPEE_OTHER,
+];
+
+export const LP_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_LP_MUSIC,
+    NTRO_SUBTYPE_LP_DANCE,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    NTRO_SUBTYPE_LP_INTERARTS,
+    NTRO_SUBTYPE_LP_OTHER,
+];
+
+export const CREATIVE_WORK_NTRO_SUBTYPES = [
+    ...CW_NTRO_SUBTYPES,
+    ...LP_NTRO_SUBTYPES,
+    ...RRW_NTRO_SUBTYPES,
+    ...CPEE_NTRO_SUBTYPES
+];
+
+export const RESEARCH_REPORT_NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+    NTRO_SUBTYPE_RREB_INDUSTRY,
+    NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
+    NTRO_SUBTYPE_RREB_OTHER,
+];
+
+export const NTRO_SUBTYPES = [
+    ...CREATIVE_WORK_NTRO_SUBTYPES,
+    ...RESEARCH_REPORT_NTRO_SUBTYPES
+];
+
+export const NTRO_SUBTYPES_CATEGORY_CODE = {
+    [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK]: 'CW1',
+    [NTRO_SUBTYPE_CW_TEXTUAL_WORK]: 'CW1',
+    [NTRO_SUBTYPE_CW_VISUAL_WORK]: 'CW1',
+    [NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION]: 'CW1',
+    [NTRO_SUBTYPE_CW_OTHER]: 'CW1',
+    [NTRO_SUBTYPE_LP_MUSIC]: 'CW2',
+    [NTRO_SUBTYPE_LP_DANCE]: 'CW2',
+    [NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE]: 'CW2',
+    [NTRO_SUBTYPE_LP_INTERARTS]: 'CW2',
+    [NTRO_SUBTYPE_LP_OTHER]: 'CW2',
+    [NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE]: 'CW3',
+    [NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING]: 'CW3',
+    [NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS]: 'CW3',
+    [NTRO_SUBTYPE_RRW_INTERARTS]: 'CW3',
+    [NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION]: 'CW3',
+    [NTRO_SUBTYPE_RRW_OTHER]: 'CW3',
+    [NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT]: 'CW4',
+    [NTRO_SUBTYPE_CPEE_FESTIVAL]: 'CW4',
+    [NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION]: 'CW4',
+    [NTRO_SUBTYPE_CPEE_OTHER]: 'CW4',
+    [NTRO_SUBTYPE_RREB_PUBLIC_SECTOR]: 'CW5',
+    [NTRO_SUBTYPE_RREB_INDUSTRY]: 'CW5',
+    [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5',
+    [NTRO_SUBTYPE_RREB_OTHER]: 'CW5'
+};
 
 export const publicationTypes = (components) => [
     {
@@ -69,31 +201,58 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_BOOK,
         name: 'Book',
         class: 'Uqlibrary\\FezCore\\Types\\Book',
-        subtypeVocabId: 453581,
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
         citationComponent: components ? components.BookCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Research book (original research)',
+            'Textbook',
+            'Edited book',
+            'Reference work, encyclopaedia, manual or handbook',
+            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+            NTRO_SUBTYPE_CW_VISUAL_WORK,
+            NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+            NTRO_SUBTYPE_CW_OTHER,
+        ]
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
         name: 'Book Chapter',
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
-        subtypeVocabId: 453588,
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
         citationComponent: components ? components.BookChapterCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Research book chapter (original research)',
+            'Critical review of research, literature review, critical commentary',
+            'Chapter in textbook',
+            'Chapter in reference work, encyclopaedia, manual or handbook',
+            'Introduction, foreword, editorial or appendix',
+            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+            NTRO_SUBTYPE_CW_VISUAL_WORK,
+            NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+            NTRO_SUBTYPE_CW_OTHER,
+        ]
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
         name: 'Conference Paper',
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
-        subtypeVocabId: 453596,
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Fully published paper',
+            'Published abstract',
+            'Poster',
+            'Oral presentation',
+            'Other'
+        ]
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -110,7 +269,8 @@ export const publicationTypes = (components) => [
         citationComponent: components ? components.CreativeWorkCitation : null,
         formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: CREATIVE_WORK_NTRO_SUBTYPES
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -133,7 +293,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK]
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
@@ -169,11 +330,24 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
         name: 'Journal Article',
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
-        subtypeVocabId: 453573,
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
         citationComponent: components ? components.JournalArticleCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [
+            'Article (original research)',
+            'Critical review of research, literature review, critical commentary',
+            'Review of book, film, TV, video, software, performance, music etc',
+            'Letter to editor, brief commentary or brief communication',
+            'Correction/erratum',
+            'Editorial',
+            'Discussion - responses, round table/panel discussions, Q&A, reply',
+            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+            NTRO_SUBTYPE_CW_VISUAL_WORK,
+            NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+            NTRO_SUBTYPE_CW_OTHER,
+        ]
     },
     {
         id: PUBLICATION_TYPE_MANUSCRIPT,
@@ -212,7 +386,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
-        hasFormComponent: true
+        hasFormComponent: true,
+        subtypes: [...RESEARCH_REPORT_NTRO_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER]
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
@@ -281,32 +456,6 @@ export const documentTypesLookup = {
     183: 'Working paper',
     272: 'Reference entry'
 };
-
-export const publicationSubtypes = [
-    'Research book (original research)',
-    'Textbook',
-    'Edited book',
-    'Reference work, encyclopaedia, manual or handbook',
-    'Research book chapter (original research)',
-    'Critical review of research, literature review, critical commentary',
-    'Chapter in textbook',
-    'Chapter in reference work, encyclopaedia, manual or handbook',
-    'Introduction, foreword, editorial or appendix',
-    'Conference paper',
-    'Fully published paper',
-    'Published abstract',
-    'Poster',
-    'Oral presentation',
-    'Article (original research)',
-    'Critical review of research, literature review, critical commentary',
-    'Letter to editor, brief commentary or brief communication',
-    'Correction/erratum',
-    'Review of book, film, TV, video, software, performance, music etc',
-    'Editorial',
-    'Discussion - responses, round table/panel discussions, Q&A, reply',
-    'Creative work',
-    'Other',
-];
 
 export const QuickTemplates = {
     UQ_STAFF_STUDENTS_VIEW: 1,
@@ -449,4 +598,243 @@ export const licenses = [
         value: 453702,
         text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
     }
+];
+
+/**
+ * @todo Merge grantTypes and orgAffiliationTypes if possible
+ */
+export const grantTypes = [
+    'Museum',
+    'Gallery',
+    'Government',
+    'NGO',
+    'Foundation',
+    'Corporate/Industry',
+    'University',
+    'Other',
+];
+
+export const orgAffiliationTypes = [
+    {
+        value: '453983',
+        text: 'Museum'
+    },
+    {
+        value: '453984',
+        text: 'Gallery'
+    },
+    {
+        value: '453985',
+        text: 'Government'
+    },
+    {
+        value: '453986',
+        text: 'NGO'
+    },
+    {
+        value: '453987',
+        text: 'Foundation'
+    },
+    {
+        value: '453988',
+        text: 'Corporate/Industry'
+    },
+    {
+        value: '453989',
+        text: 'University'
+    },
+    {
+        value: '453990',
+        text: 'Other'
+    }
+];
+
+export const NEW_DOCTYPES_OPTIONS = [
+    PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK,
+    PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK,
+    PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER,
+    PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_CW_TEXTUAL_WORK_CREATIVE_WORK,
+    PUBLICATION_TYPE_CW_VISUAL_WORK_CREATIVE_WORK,
+    PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_CREATIVE_WORK,
+    PUBLICATION_TYPE_CW_OTHER_CREATIVE_WORK,
+    PUBLICATION_TYPE_LP_MUSIC,
+    PUBLICATION_TYPE_LP_DANCE,
+    PUBLICATION_TYPE_LP_PLAYS_DRAMAS_THEATRE,
+    PUBLICATION_TYPE_LP_INTERARTS,
+    PUBLICATION_TYPE_LP_OTHER,
+    PUBLICATION_TYPE_RRW_MUSIC_DANCE_THEATRE,
+    PUBLICATION_TYPE_RRW_AUDIO_VISUAL_RECORDING,
+    PUBLICATION_TYPE_RRW_DIGITAL_CREATIVE_WORKS,
+    PUBLICATION_TYPE_RRW_INTERARTS,
+    PUBLICATION_TYPE_RRW_WEBSITE_EXHIBITION,
+    PUBLICATION_TYPE_RRW_OTHER,
+    PUBLICATION_TYPE_CPEE_EXHIBITION_EVENT,
+    PUBLICATION_TYPE_CPEE_FESTIVAL,
+    PUBLICATION_TYPE_CPEE_WEB_BASED_EXHIBITION,
+    PUBLICATION_TYPE_CPEE_OTHER,
+    PUBLICATION_TYPE_RREB_PUBLIC_SECTOR,
+    PUBLICATION_TYPE_RREB_INDUSTRY,
+    PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT,
+    PUBLICATION_TYPE_RREB_OTHER,
+    PUBLICATION_TYPE_RR_INTERNAL_OTHER,
+];
+
+export const DOCTYPE_SUBTYPE_MAPPING = {
+    [PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK]: {
+        docTypeId: 316,
+        subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+        name: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    },
+    [PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK]: {
+        docTypeId: 174,
+        subtype: NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+        name: `${NTRO_SUBTYPE_CW_TEXTUAL_WORK} (Book)`,
+    },
+    [PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER]: {
+        docTypeId: 177,
+        subtype: NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+        name: `${NTRO_SUBTYPE_CW_TEXTUAL_WORK} (Book chapter)`,
+    },
+    [PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE]: {
+        docTypeId: 179,
+        subtype: NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+        name: `${NTRO_SUBTYPE_CW_TEXTUAL_WORK} (Journal article)`,
+    },
+    [PUBLICATION_TYPE_CW_TEXTUAL_WORK_CREATIVE_WORK]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+        name: `${NTRO_SUBTYPE_CW_TEXTUAL_WORK}`,
+    },
+    [PUBLICATION_TYPE_CW_VISUAL_WORK_CREATIVE_WORK]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CW_VISUAL_WORK,
+        name: NTRO_SUBTYPE_CW_VISUAL_WORK,
+    },
+    [PUBLICATION_TYPE_CW_MUSICAL_COMPOSITION_CREATIVE_WORK]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+        name: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    },
+    [PUBLICATION_TYPE_CW_OTHER_CREATIVE_WORK]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CW_OTHER,
+        name: NTRO_SUBTYPE_CW_OTHER,
+    },
+    [PUBLICATION_TYPE_LP_MUSIC]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_LP_MUSIC,
+        name: NTRO_SUBTYPE_LP_MUSIC,
+    },
+    [PUBLICATION_TYPE_LP_DANCE]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_LP_DANCE,
+        name: NTRO_SUBTYPE_LP_DANCE,
+    },
+    [PUBLICATION_TYPE_LP_PLAYS_DRAMAS_THEATRE]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+        name: NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    },
+    [PUBLICATION_TYPE_LP_INTERARTS]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_LP_INTERARTS,
+        name: NTRO_SUBTYPE_LP_INTERARTS,
+    },
+    [PUBLICATION_TYPE_LP_OTHER]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_LP_OTHER,
+        name: NTRO_SUBTYPE_LP_OTHER,
+    },
+    [PUBLICATION_TYPE_RRW_MUSIC_DANCE_THEATRE]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+        name: NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+    },
+    [PUBLICATION_TYPE_RRW_AUDIO_VISUAL_RECORDING]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+        name: NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+    },
+    [PUBLICATION_TYPE_RRW_DIGITAL_CREATIVE_WORKS]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+        name: NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+    },
+    [PUBLICATION_TYPE_RRW_INTERARTS]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_RRW_INTERARTS,
+        name: NTRO_SUBTYPE_RRW_INTERARTS,
+    },
+    [PUBLICATION_TYPE_RRW_WEBSITE_EXHIBITION]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+        name: NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+    },
+    [PUBLICATION_TYPE_RRW_OTHER]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_RRW_OTHER,
+        name: NTRO_SUBTYPE_RRW_OTHER,
+    },
+    [PUBLICATION_TYPE_CPEE_EXHIBITION_EVENT]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+        name: NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    },
+    [PUBLICATION_TYPE_CPEE_FESTIVAL]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CPEE_FESTIVAL,
+        name: NTRO_SUBTYPE_CPEE_FESTIVAL,
+    },
+    [PUBLICATION_TYPE_CPEE_WEB_BASED_EXHIBITION]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+        name: NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    },
+    [PUBLICATION_TYPE_CPEE_OTHER]: {
+        docTypeId: 313,
+        subtype: NTRO_SUBTYPE_CPEE_OTHER,
+        name: NTRO_SUBTYPE_CPEE_OTHER,
+    },
+    [PUBLICATION_TYPE_RREB_PUBLIC_SECTOR]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+        name: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR
+    },
+    [PUBLICATION_TYPE_RREB_INDUSTRY]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_INDUSTRY,
+        name: NTRO_SUBTYPE_RREB_INDUSTRY
+    },
+    [PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
+        name: NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT
+    },
+    [PUBLICATION_TYPE_RREB_OTHER]: {
+        docTypeId: 275,
+        subtype: NTRO_SUBTYPE_RREB_OTHER,
+        name: NTRO_SUBTYPE_RREB_OTHER
+    },
+    [PUBLICATION_TYPE_RR_INTERNAL_OTHER]: {
+        docTypeId: 275,
+        subtype: SUBTYPE_RR_INTERNAL_OTHER,
+        name: SUBTYPE_RR_INTERNAL_OTHER
+    },
+};
+
+export const SIGNIFICANCE_MAJOR = 454026;
+export const SIGNIFICANCE_MINOR = 454027;
+
+export const QUALITY_INDICATORS = [
+    {text: 'Option 1', value: 1},
+    {text: 'Option 2', value: 2},
+    {text: 'Option 3', value: 3},
+    {text: 'Option 4', value: 4},
+    {text: 'Option 5', value: 5},
+    {text: 'Option 6', value: 6},
+    {text: 'Option 7', value: 7},
+    {text: 'Option 8', value: 8},
+    {text: 'Option 9', value: 9},
+    {text: 'Option 10', value: 10},
 ];
