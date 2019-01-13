@@ -841,3 +841,9 @@ export const QUALITY_INDICATORS = [
     {text: 'Option 9', value: 454039},
     {text: 'Option 10', value: 454040},
 ];
+
+export const AUDIENCE_SIZE = [
+    {text: 'Less than 100', value: 453992},
+    {text: '100 - 500', value: 453993},
+    {text: 'Greater than 500', value: 453994},
+];

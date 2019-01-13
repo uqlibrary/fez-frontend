@@ -350,11 +350,34 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
-            fullWidth={true}
             label="Audience size"
             name="fez_record_search_key_audience_size.rek_audience_size"
-            type="text"
-          />
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          >
+            <WithStyles(MenuItem)
+              key="453992"
+              value={453992}
+            >
+              Less than 100
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453993"
+              value={453993}
+            >
+              100 - 500
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453994"
+              value={453994}
+            >
+              Greater than 500
+            </WithStyles(MenuItem)>
+          </Field>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -745,11 +768,34 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
-            fullWidth={true}
             label="Audience size"
             name="fez_record_search_key_audience_size.rek_audience_size"
-            type="text"
-          />
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          >
+            <WithStyles(MenuItem)
+              key="453992"
+              value={453992}
+            >
+              Less than 100
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453993"
+              value={453993}
+            >
+              100 - 500
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453994"
+              value={453994}
+            >
+              Greater than 500
+            </WithStyles(MenuItem)>
+          </Field>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -1076,11 +1122,34 @@ exports[`Component NtroFields should render default view 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            fullWidth={true}
             label="Audience size"
             name="fez_record_search_key_audience_size.rek_audience_size"
-            type="text"
-          />
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          >
+            <WithStyles(MenuItem)
+              key="453992"
+              value={453992}
+            >
+              Less than 100
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453993"
+              value={453993}
+            >
+              100 - 500
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453994"
+              value={453994}
+            >
+              Greater than 500
+            </WithStyles(MenuItem)>
+          </Field>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -1471,11 +1540,34 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            fullWidth={true}
             label="Audience size"
             name="fez_record_search_key_audience_size.rek_audience_size"
-            type="text"
-          />
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          >
+            <WithStyles(MenuItem)
+              key="453992"
+              value={453992}
+            >
+              Less than 100
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453993"
+              value={453993}
+            >
+              100 - 500
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="453994"
+              value={453994}
+            >
+              Greater than 500
+            </WithStyles(MenuItem)>
+          </Field>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
