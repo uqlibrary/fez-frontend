@@ -215,6 +215,7 @@ export const publicationTypes = (components) => [
             NTRO_SUBTYPE_CW_VISUAL_WORK,
             NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
             NTRO_SUBTYPE_CW_OTHER,
+            'Other'
         ]
     },
     {
@@ -236,6 +237,7 @@ export const publicationTypes = (components) => [
             NTRO_SUBTYPE_CW_VISUAL_WORK,
             NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
             NTRO_SUBTYPE_CW_OTHER,
+            'Other'
         ]
     },
     {
@@ -347,6 +349,7 @@ export const publicationTypes = (components) => [
             NTRO_SUBTYPE_CW_VISUAL_WORK,
             NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
             NTRO_SUBTYPE_CW_OTHER,
+            'Other'
         ]
     },
     {
@@ -837,4 +840,10 @@ export const QUALITY_INDICATORS = [
     {text: 'Option 8', value: 454038},
     {text: 'Option 9', value: 454039},
     {text: 'Option 10', value: 454040},
+];
+
+export const AUDIENCE_SIZE = [
+    {text: 'Less than 100', value: 453992},
+    {text: '100 - 500', value: 453993},
+    {text: 'Greater than 500', value: 453994},
 ];
