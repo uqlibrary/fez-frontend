@@ -603,6 +603,26 @@ export const licenses = [
     }
 ];
 
+export const ORG_TYPE_ID_MUSEUM = '453983';
+export const ORG_TYPE_ID_GALLERY = '453984';
+export const ORG_TYPE_ID_GOVERNMENT = '453985';
+export const ORG_TYPE_ID_NGO = '453986';
+export const ORG_TYPE_ID_FOUNDATION = '453987';
+export const ORG_TYPE_ID_CORPORATE = '453988';
+export const ORG_TYPE_ID_UNIVERSITY = '453989';
+export const ORG_TYPE_ID_OTHER = '453990';
+
+export const ORG_TYPES_LOOKUP = {
+    [ORG_TYPE_ID_MUSEUM]: 'Museum',
+    [ORG_TYPE_ID_GALLERY]: 'Gallery',
+    [ORG_TYPE_ID_GOVERNMENT]: 'Government',
+    [ORG_TYPE_ID_NGO]: 'NGO',
+    [ORG_TYPE_ID_FOUNDATION]: 'Foundation',
+    [ORG_TYPE_ID_CORPORATE]: 'Corporate/Industry',
+    [ORG_TYPE_ID_UNIVERSITY]: 'University',
+    [ORG_TYPE_ID_OTHER]: 'Other',
+};
+
 /**
  * @todo Merge grantTypes and orgAffiliationTypes if possible
  */
@@ -618,38 +638,14 @@ export const grantTypes = [
 ];
 
 export const orgAffiliationTypes = [
-    {
-        value: '453983',
-        text: 'Museum'
-    },
-    {
-        value: '453984',
-        text: 'Gallery'
-    },
-    {
-        value: '453985',
-        text: 'Government'
-    },
-    {
-        value: '453986',
-        text: 'NGO'
-    },
-    {
-        value: '453987',
-        text: 'Foundation'
-    },
-    {
-        value: '453988',
-        text: 'Corporate/Industry'
-    },
-    {
-        value: '453989',
-        text: 'University'
-    },
-    {
-        value: '453990',
-        text: 'Other'
-    }
+    {value: '453983', text: 'Museum'},
+    {value: '453984', text: 'Gallery'},
+    {value: '453985', text: 'Government'},
+    {value: '453986', text: 'NGO'},
+    {value: '453987', text: 'Foundation'},
+    {value: '453988', text: 'Corporate/Industry'},
+    {value: '453989', text: 'University'},
+    {value: '453990', text: 'Other'}
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
