@@ -1,6 +1,7 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {numberToWords} from 'config';
+import {ORG_TYPES_LOOKUP} from 'config/general';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -173,7 +174,7 @@ export class ContributorRow extends PureComponent {
                     <Grid item xs={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.orgaff}`,
-                            `Organisation type: ${contributor.orgtype}`,
+                            `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}

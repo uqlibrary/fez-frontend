@@ -14,6 +14,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import Hidden from '@material-ui/core/Hidden';
+import {ORG_TYPES_LOOKUP} from 'config/general';
 
 const styles = (theme) => ({
     rowSelected: {
@@ -133,7 +134,7 @@ export class GrantListEditorRow extends PureComponent {
                     </Grid>
                     <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
                         {this.getListItemTypoGraphy(
-                            `${grant.grantType}`,
+                            `${ORG_TYPES_LOOKUP[grant.grantType]}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             ''
