@@ -17,7 +17,7 @@ import {SeriesField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
-import {SIGNIFICANCE_MAJOR, SIGNIFICANCE_MINOR} from 'config/general';
+import {SIGNIFICANCE_MAJOR, SIGNIFICANCE_MINOR, AUDIENCE_SIZE} from 'config/general';
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
@@ -320,13 +320,19 @@ export default class NtroFields extends React.PureComponent {
                                 !this.props.hideAudienceSize &&
                                 <Grid item xs={12} sm={this.row4Width}>
                                     <Field
-                                        component={TextField}
+                                        component={SelectField}
                                         name="fez_record_search_key_audience_size.rek_audience_size"
-                                        type="text"
-                                        fullWidth
                                         disabled={this.props.submitting}
                                         label={metadata.fields.audienceSize.label}
-                                    />
+                                        required
+                                        validate={[validation.required]}
+                                    >
+                                        {
+                                            AUDIENCE_SIZE.map(item => (
+                                                <MenuItem key={item.value} value={item.value}>{item.text}</MenuItem>
+                                            ))
+                                        }
+                                    </Field>
                                 </Grid>
                             }
                             {
