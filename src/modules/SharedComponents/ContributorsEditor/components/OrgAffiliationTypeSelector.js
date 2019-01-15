@@ -5,13 +5,14 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
-export default function OrgAffilicationTypeSelector({affiliation, onAffiliationChange, locale}) {
+export default function OrgAffilicationTypeSelector({affiliation, onAffiliationChange, locale, error}) {
     return (
         <FormControl fullWidth>
             <InputLabel>{locale.inputLabel}</InputLabel>
             <Select
                 value={affiliation}
                 onChange={onAffiliationChange}
+                error={error}
                 required
             >
                 <MenuItem value="" disabled>{locale.placeholder}</MenuItem>
@@ -26,7 +27,10 @@ export default function OrgAffilicationTypeSelector({affiliation, onAffiliationC
 OrgAffilicationTypeSelector.propTypes = {
     affiliation: PropTypes.string,
     onAffiliationChange: PropTypes.func.isRequired,
-    locale: PropTypes.object
+    locale: PropTypes.object,
+    required: PropTypes.bool,
+    error: PropTypes.bool,
+    helperText: PropTypes.any
 };
 
 OrgAffilicationTypeSelector.defaultProps = {
@@ -37,5 +41,7 @@ OrgAffilicationTypeSelector.defaultProps = {
             {key: 'UQ', value: 'UQ'},
             {key: 'NotUQ', value: 'Not UQ'}
         ]
-    }
+    },
+    error: false,
+    helperText: undefined
 };

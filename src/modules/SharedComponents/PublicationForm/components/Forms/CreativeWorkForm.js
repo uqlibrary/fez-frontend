@@ -117,12 +117,13 @@ export default class CreativeWorkForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
                             validate={[validation.authorRequired]}
                             isNtro={this.props.isNtro}
+                            required
                         />
                     </StandardCard>
                 </Grid>

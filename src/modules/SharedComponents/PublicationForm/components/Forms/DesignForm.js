@@ -120,7 +120,7 @@ export default class DesignForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}

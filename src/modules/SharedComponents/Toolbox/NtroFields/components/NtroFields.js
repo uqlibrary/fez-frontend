@@ -43,8 +43,8 @@ export default class NtroFields extends React.PureComponent {
         hideIsrc: false,
         hideVolume: false,
         hideIssue: false,
-        hideStartPage: false,
-        hideEndPage: false,
+        hideStartPage: true,
+        hideEndPage: true,
         hideExtent: false,
         hideOriginalFormat: false,
         hideAudienceSize: false,
@@ -162,7 +162,7 @@ export default class NtroFields extends React.PureComponent {
                                         <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>
                                     </Field>
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} style={{marginTop: 24}}>
                                     <Field
                                         component={TextField}
                                         name="impactStatement"

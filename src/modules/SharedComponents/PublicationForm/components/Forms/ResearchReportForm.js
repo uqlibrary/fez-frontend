@@ -126,7 +126,7 @@ export default class ResearchReportForm extends Component {
                             isNtro={this.props.isNtro}
                             locale={txt.authors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.authorRequired]}
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}
