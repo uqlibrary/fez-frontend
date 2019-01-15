@@ -124,10 +124,20 @@ export const isValidIsbn = subject => {
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
+export const checkDigit = subject => {
+    const check = parseInt(subject.slice(-1), 10);
+    const ismn = subject.replace(/-/g, '');
+    let checksum = null;
+    for (let i = 0; i < ismn.length - 1; i++) {
+        checksum += parseInt(ismn.charAt(i), 10) * (i % 2 === 0 ? 1 : 3);
+    }
+    return (checksum + check) % 10 === 0;
+};
+
 export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
     const regex = /^979-0-\d{3}-\d{5}-\d$/gi;
-    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.ismn;
+    return subject.trim().length === 0 || (regex.test(subject) && checkDigit(subject)) ? '' : locale.validationErrors.ismn;
 };
 
 export const isValidIsrc = subject => {
