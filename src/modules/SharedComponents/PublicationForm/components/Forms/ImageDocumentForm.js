@@ -83,7 +83,7 @@ export default class ImageDocumentForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.creator.field}
                             disabled={this.props.submitting}

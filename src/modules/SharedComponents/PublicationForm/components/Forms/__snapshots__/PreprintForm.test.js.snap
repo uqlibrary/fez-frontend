@@ -22,7 +22,6 @@ exports[`PreprintForm renders  component 1`] = `
         >
           <Field
             autoFocus={true}
-            className="requiredField"
             component={[Function]}
             disabled={false}
             fullWidth={true}
@@ -30,6 +29,7 @@ exports[`PreprintForm renders  component 1`] = `
             multiline={true}
             name="rek_title"
             placeholder="Title of report"
+            required={true}
             rows={1}
             type="text"
             validate={
@@ -80,7 +80,6 @@ exports[`PreprintForm renders  component 1`] = `
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -159,6 +158,7 @@ exports[`PreprintForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [

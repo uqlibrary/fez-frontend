@@ -55,7 +55,7 @@ export default class ResearchReportForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -65,7 +65,7 @@ export default class ResearchReportForm extends Component {
                                     {...txt.information.fieldLabels.publicationPlace}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -73,6 +73,16 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publisher}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_report_number"
+                                    type="text"
+                                    fullWidth
+                                    {...txt.information.fieldLabels.reportNumber}
                                 />
                             </Grid>
                             {
@@ -126,7 +136,7 @@ export default class ResearchReportForm extends Component {
                             isNtro={this.props.isNtro}
                             locale={txt.authors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.authorRequired]}
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}

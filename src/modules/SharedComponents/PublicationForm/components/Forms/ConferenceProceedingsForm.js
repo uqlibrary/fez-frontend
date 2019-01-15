@@ -122,7 +122,7 @@ export default class ConferenceProceedingsForm extends Component {
                             name="editors"
                             locale={txt.editors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.editorRequired]}
                             disabled={this.props.submitting} />
                     </StandardCard>

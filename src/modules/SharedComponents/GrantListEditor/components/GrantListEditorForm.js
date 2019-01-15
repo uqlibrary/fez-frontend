@@ -7,7 +7,10 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import {orgAffiliationTypes} from 'config/general';
+
+import locale from 'locale/validationErrors';
 
 export default class GrantListEditorForm extends PureComponent {
     static propTypes = {
@@ -86,7 +89,7 @@ export default class GrantListEditorForm extends PureComponent {
         return (
             <React.Fragment>
                 {this.props.locale.description}
-                <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'} style={{marginTop: 8}}>
+                <Grid container spacing={8} style={{marginTop: 8}}>
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
@@ -98,7 +101,8 @@ export default class GrantListEditorForm extends PureComponent {
                             disabled={disabled}
                             required={this.props.required}
                             autoComplete="off"
-                            error={!this.state.grantName}
+                            error={this.props.required && !this.state.grantName}
+                            errorText={this.props.required && !this.state.grantName && locale.validationErrors.required}
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={!this.props.hideType ? 3 : 4} >
@@ -110,14 +114,19 @@ export default class GrantListEditorForm extends PureComponent {
                             value={this.state.grantId}
                             onChange={this._onIDChanged}
                             disabled={disabled || this.state.grantName.trim().length === 0}
-                            required={this.props.required}
-                            error={!this.state.grantName}
+                            required={this.props.required || this.state.grantName.trim().length > 0}
+                            error={this.state.grantName.trim().length > 0 && this.state.grantId.trim().length === 0}
+                            errorText={this.state.grantName.trim().length > 0 && this.state.grantId.trim().length === 0 && locale.validationErrors.required}
                         />
                     </Grid>
                     {
                         !this.props.hideType &&
                         <Grid item xs={12} sm={12} md={3}>
-                            <FormControl fullWidth>
+                            <FormControl
+                                fullWidth
+                                required={this.props.required || this.state.grantName.trim().length > 0 && this.state.grantId.trim().length > 0}
+                                error={this.state.grantName.trim().length > 0 && this.state.grantId.trim().length > 0 && this.state.grantType.trim().length === 0}
+                            >
                                 <InputLabel>{this.props.locale.grantType}</InputLabel>
                                 <Select
                                     label={this.props.locale.grantType}
@@ -125,11 +134,14 @@ export default class GrantListEditorForm extends PureComponent {
                                     value={this.state.grantType}
                                     onChange={this._onTypeChanged}
                                     disabled={disabled || this.state.grantName.trim().length === 0 || this.state.grantId.trim().length === 0}
-                                    required={this.props.required}
                                 >
                                     <MenuItem value={''} disabled>{this.props.locale.grantTypeHint}</MenuItem>
                                     {orgAffiliationTypes.map((item, index) => <MenuItem value={item.value} key={index}>{item.text}</MenuItem>)}
                                 </Select>
+                                {
+                                    this.props.required || this.state.grantName.trim().length > 0 && this.state.grantId.trim().length > 0 && this.state.grantType.trim().length === 0 &&
+                                    <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
+                                }
                             </FormControl>
                         </Grid>
                     }

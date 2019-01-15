@@ -177,7 +177,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         Please provide a list of editors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -256,6 +255,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           }
         }
         name="editors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [

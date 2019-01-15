@@ -509,6 +509,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
         >
           <div>
             <Connect(ContributorForm)
+              isContributorAssigned={false}
               isNtro={true}
               onAdd={[Function]}
               showContributorAssignment={false}
@@ -525,6 +526,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                   }
                 }
                 authorsList={Array []}
+                isContributorAssigned={false}
                 isNtro={true}
                 locale={
                   Object {
@@ -556,6 +558,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                   }
                 }
                 onAdd={[Function]}
+                required={false}
                 showContributorAssignment={false}
                 showIdentifierLookup={false}
                 showRoleInput={false}
@@ -568,8 +571,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                   , in the format and order that they are published.
                 </div>
                 <WithStyles(Grid)
-                  alignContent="flex-end"
-                  alignItems="flex-end"
                   container={true}
                   spacing={8}
                   style={
@@ -579,8 +580,8 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                   }
                 >
                   <Grid
-                    alignContent="flex-end"
-                    alignItems="flex-end"
+                    alignContent="stretch"
+                    alignItems="stretch"
                     classes={
                       Object {
                         "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
@@ -702,7 +703,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                     zeroMinWidth={false}
                   >
                     <div
-                      className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-flex-end-11 MuiGrid-align-content-xs-flex-end-15"
+                      className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23"
                       style={
                         Object {
                           "marginTop": 8,
@@ -837,6 +838,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                           >
                             <OrgAffilicationTypeSelector
                               affiliation=""
+                              error={false}
                               locale={
                                 Object {
                                   "inputLabel": "Org affiliation",
@@ -924,6 +926,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                       </InputLabel>
                                     </WithStyles(InputLabel)>
                                     <WithStyles(Select)
+                                      error={false}
                                       onChange={[Function]}
                                       required={true}
                                       value=""
@@ -943,6 +946,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                           }
                                         }
                                         displayEmpty={false}
+                                        error={false}
                                         input={<WithStyles(Input) />}
                                         multiple={false}
                                         native={false}
@@ -951,6 +955,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                         value=""
                                       >
                                         <WithStyles(Input)
+                                          error={false}
                                           inputComponent={[Function]}
                                           inputProps={
                                             Object {
@@ -1019,6 +1024,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                 "underline": "MuiInput-underline-127",
                                               }
                                             }
+                                            error={false}
                                             inputComponent={[Function]}
                                             inputProps={
                                               Object {
@@ -1087,6 +1093,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   "underline": null,
                                                 }
                                               }
+                                              error={false}
                                               fullWidth={false}
                                               inputComponent={[Function]}
                                               inputProps={
@@ -1162,6 +1169,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                     "root": "MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127",
                                                   }
                                                 }
+                                                error={false}
                                                 fullWidth={false}
                                                 inputComponent={[Function]}
                                                 inputProps={
@@ -2041,26 +2049,28 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                             <WithStyles(TextFieldWrapper)
                               autoComplete="off"
                               disabled={true}
-                              error={true}
+                              error={false}
                               fullWidth={true}
                               id="nameAsPublishedField"
                               label="Name as published"
                               onChange={[Function]}
                               onKeyPress={[Function]}
                               placeholder="Please type the name exactly as published"
+                              required={false}
                               value=""
                             >
                               <TextFieldWrapper
                                 autoComplete="off"
                                 classes={Object {}}
                                 disabled={true}
-                                error={true}
+                                error={false}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
                                 label="Name as published"
                                 onChange={[Function]}
                                 onKeyPress={[Function]}
                                 placeholder="Please type the name exactly as published"
+                                required={false}
                                 theme={
                                   Object {
                                     "breakpoints": Object {
@@ -4646,6 +4656,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
 exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
@@ -4658,6 +4669,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
 exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
@@ -4670,6 +4682,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
@@ -4682,6 +4695,7 @@ exports[`ContributorsEditor tests  rendering full component with role input 1`] 
 exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
@@ -4784,6 +4798,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
 exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
@@ -4905,6 +4920,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
 exports[`ContributorsEditor tests  renders no contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
@@ -4917,6 +4933,7 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
 exports[`ContributorsEditor tests  should show validation error 1`] = `
 <div>
   <Connect(ContributorForm)
+    isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
     showContributorAssignment={false}
