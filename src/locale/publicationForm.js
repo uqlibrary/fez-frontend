@@ -271,6 +271,10 @@ export default {
                     label: 'Publisher',
                     placeholder: 'Type the name of the publisher'
                 },
+                reportNumber: {
+                    label: 'Report number',
+                    placeholder: 'Type the report number'
+                },
                 date: {
                     title: 'Date published',
                     day: 'Day',
