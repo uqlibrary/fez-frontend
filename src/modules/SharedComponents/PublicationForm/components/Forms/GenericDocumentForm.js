@@ -99,7 +99,7 @@ export default class GenericDocumentForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             validate={[validation.authorRequired]}

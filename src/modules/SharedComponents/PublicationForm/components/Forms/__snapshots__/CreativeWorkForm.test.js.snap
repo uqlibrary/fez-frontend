@@ -143,7 +143,6 @@ exports[`CreativeWorkForm renders  component 1`] = `
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -222,6 +221,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [

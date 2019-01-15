@@ -146,7 +146,6 @@ exports[`DesignForm renders  component 1`] = `
       title="Designer name"
     >
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -225,6 +224,7 @@ exports[`DesignForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [

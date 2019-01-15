@@ -191,6 +191,7 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     showIdentifierLookup={showIdentifierLookup}
                     showContributorAssignment={showContributorAssignment}
+                    isContributorAssigned={this.state.contributors.length > 0}
                     isNtro={isNtro}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                 />

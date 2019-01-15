@@ -2,7 +2,7 @@ import React from 'react';
 import locale from 'locale/validationErrors';
 
 // Min Length
-export const maxLength = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLength = max => value => value && value.replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
 export const maxLength800 = maxLength(800);

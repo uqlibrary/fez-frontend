@@ -25,10 +25,12 @@ export class ContributorForm extends PureComponent {
         disabled: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         required: PropTypes.bool,
-        isNtro: PropTypes.bool
+        isNtro: PropTypes.bool,
+        isContributorAssigned: PropTypes.bool
     };
 
     static defaultProps = {
+        required: false,
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
@@ -139,13 +141,14 @@ export class ContributorForm extends PureComponent {
         return (
             <React.Fragment>
                 {description}
-                <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'} style={{marginTop: 8}}>
+                <Grid container spacing={8} style={{marginTop: 8}}>
                     {
                         isNtro &&
                         <Grid item xs={12} sm={2}>
                             <OrgAffilicationTypeSelector
                                 affiliation={this.state.affiliation}
                                 onAffiliationChange={this.handleAffiliationChange}
+                                error={this.props.required && !this.state.affiliation && !this.props.isContributorAssigned}
                             />
                         </Grid>
                     }
@@ -161,7 +164,8 @@ export class ContributorForm extends PureComponent {
                             disabled={disabled || isNtro && this.state.affiliation.length === 0}
                             required={this.props.required}
                             autoComplete="off"
-                            error={!this.state.nameAsPublished}
+                            error={!!(!isNtro && this.props.required && !this.props.isContributorAssigned && !this.state.nameAsPublished) ||
+                            !!(isNtro && this.state.affiliation && !this.state.nameAsPublished)}
                         />
                     </Grid>
                     {
