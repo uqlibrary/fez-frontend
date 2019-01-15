@@ -32,11 +32,6 @@ describe('BookForm renders ', () => {
         expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(5);
     });
 
-    it('component with 6 required input fields', () => {
-        const wrapper = setup({});
-        expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
-    });
-
     it('component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
         wrapper.find('Field').forEach(field => {

@@ -10,8 +10,6 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignContent="flex-end"
-    alignItems="flex-end"
     container={true}
     spacing={8}
     style={
@@ -27,6 +25,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        error={false}
         locale={
           Object {
             "inputLabel": "Org affiliation",
@@ -54,13 +53,14 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -97,8 +97,6 @@ exports[`Component ContributorForm should render display name field and identifi
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignContent="flex-end"
-    alignItems="flex-end"
     container={true}
     spacing={8}
     style={
@@ -115,13 +113,14 @@ exports[`Component ContributorForm should render display name field and identifi
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -171,8 +170,6 @@ exports[`Component ContributorForm should render display name field and role fie
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignContent="flex-end"
-    alignItems="flex-end"
     container={true}
     spacing={8}
     style={
@@ -189,13 +186,14 @@ exports[`Component ContributorForm should render display name field and role fie
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -214,6 +212,7 @@ exports[`Component ContributorForm should render display name field and role fie
         hintText="Role of the creator in relation to the dataset"
         if="creatorRoleField"
         onChange={[Function]}
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -250,8 +249,6 @@ exports[`Component ContributorForm should render display name field only 1`] = `
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignContent="flex-end"
-    alignItems="flex-end"
     container={true}
     spacing={8}
     style={
@@ -268,13 +265,14 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>

@@ -137,7 +137,6 @@ exports[`BookChapterForm renders  component 1`] = `
       title="Authors"
     >
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -216,6 +215,7 @@ exports[`BookChapterForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
