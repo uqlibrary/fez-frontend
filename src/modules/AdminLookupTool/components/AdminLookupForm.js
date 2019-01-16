@@ -1,4 +1,4 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 
@@ -17,11 +17,13 @@ export class AdminLookupForm extends PureComponent {
         actions: PropTypes.object,
         localeform: PropTypes.object.isRequired,
         isMinimised: PropTypes.bool,
-        lookupResults: PropTypes.array,
+        lookupType: PropTypes.string,
+        loadingResults: PropTypes.bool,
     };
     static defaultProps = {
+        lookupType: '',
         isMinimised: true,
-        lookupResults: [],
+        loadingResults: false,
 
         onToggleMinimise: () => {},
     };
@@ -43,13 +45,13 @@ export class AdminLookupForm extends PureComponent {
     };
 
     _handleSubmitLookup = () => {
+        if (event && event.key && (event.key !== 'Enter')) return;
+
         const lookupType = this.props.localeform.lookupType;
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
-        console.log('in _handleSubmitLookup');
-
-        if (primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
+        if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
             this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
         }
     };
@@ -94,60 +96,47 @@ export class AdminLookupForm extends PureComponent {
                 <p>{txt.thisForm.tip}</p>
                 {
                     !this.state.isMinimised &&
-                    <Fragment>
-                        <form onSubmit={this._handleDefaultSubmit}>
+                    <form onSubmit={this._handleDefaultSubmit}>
 
-                            <div>
-                                <h4>{txt.thisForm.primaryField.heading}</h4>
-                                <p>{txt.thisForm.primaryField.tip}</p>
-                                <TextField
-                                    fullWidth
-                                    name={'primaryValue'}
-                                    placeholder={txt.thisForm.primaryField.inputPlaceholder}
-                                    aria-label={txt.thisForm.primaryField.fromAria}
-                                    value={primaryValue}
-                                    onChange={this._onChange}
-                                    required
-                                />
-                            </div>
-                            {
-                                // not all forms will have a second field
-                                !!txt.thisForm.secondaryField ?
-                                    <div>
-                                        <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                        <p>{txt.thisForm.secondaryField.tip}</p>
-                                        <TextField
-                                            fullWidth
-                                            name={'secondaryValue'}
-                                            placeholder={txt.thisForm.secondaryField.inputPlaceholder}
-                                            aria-label={txt.thisForm.secondaryField.fromAria}
-                                            value={secondaryValue}
-                                            onChange={this._onChange}
-                                        />
-                                    </div>
-                                    :
-                                    <div>&nbsp;</div>
-                            }
-                            <p>{txt.thisForm.bottomTip}</p>
-                            <Button
-                                children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
-                                variant="contained"
-                                aria-label={txt.thisForm.submitButtonLabel}
-                                color={'primary'}
-                                onClick={() => this._handleSubmitLookup()}
+                        <div>
+                            <h4>{txt.thisForm.primaryField.heading}</h4>
+                            <p>{txt.thisForm.primaryField.tip}</p>
+                            <TextField
+                                fullWidth
+                                name={'primaryValue'}
+                                placeholder={txt.thisForm.primaryField.inputPlaceholder}
+                                aria-label={txt.thisForm.primaryField.fromAria}
+                                value={primaryValue}
+                                onChange={this._onChange}
+                                required
                             />
-                        </form>
+                        </div>
                         {
-                            this.props.lookupResults.length > 0 ?
-                                <StandardCard style={{marginTop: 10}} title={locale.components.adminLookupTools.resultsLabel}>
-                                    <pre>
-                                        {JSON.stringify(this.props.lookupResults, null, 2)}
-                                    </pre>
-                                </StandardCard>
-                                :
-                                'no results yet' // use blank when working
+                            // not all forms will have a second field
+                            !!txt.thisForm.secondaryField &&
+                                <div>
+                                    <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                    <p>{txt.thisForm.secondaryField.tip}</p>
+                                    <TextField
+                                        fullWidth
+                                        name={'secondaryValue'}
+                                        placeholder={txt.thisForm.secondaryField.inputPlaceholder}
+                                        aria-label={txt.thisForm.secondaryField.fromAria}
+                                        value={secondaryValue}
+                                        onChange={this._onChange}
+                                    />
+                                </div>
                         }
-                    </Fragment>
+                        <p>{txt.thisForm.bottomTip}</p>
+                        <Button
+                            children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
+                            variant="contained"
+                            aria-label={txt.thisForm.submitButtonLabel}
+                            color={'primary'}
+                            onClick={() => this._handleSubmitLookup()}
+                            disabled={this.props.loadingResults}
+                        />
+                    </form>
                 }
             </StandardCard>
         );

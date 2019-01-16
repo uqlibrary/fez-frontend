@@ -292,6 +292,7 @@ export default {
                         fromAria: '',
                         tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
                         inputPlaceholder: 'Enter API key',
+                        reportInOutput: false, // should we report this field in the results page?
                     },
                     lookupLabel: 'Incites',
                     bottomTip: '',
@@ -303,7 +304,11 @@ export default {
                 show: 'Show form',
                 hide: 'Hide form'
             },
-            resultsLabel: 'Results'
+            resultsLabel: 'Results',
+            noResultsFound: {
+                text: 'No results found'
+            },
+            clearButtonLabel: 'New Search'
         },
         typeOfDataForm: {
             field: {

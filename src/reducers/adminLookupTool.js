@@ -1,22 +1,22 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    lookupResults: null,
-    loadingRecord: true,
-    loadingError: null
+    lookupResults: [],
+    loadingResults: false,
 };
 
 const handlers = {
     [actions.ADMIN_LOOKUP_TOOL_LOADING]: () => (
         {
-            ...initialState
+            ...initialState,
+            loadingResults: true,
         }
     ),
 
     [actions.ADMIN_LOOKUP_TOOL_SUCCESS]: (state, action) => (
         {
             ...initialState,
-            loadingRecord: false,
+            loadingResults: false,
             lookupResults: action.payload
         }
     ),
@@ -24,28 +24,30 @@ const handlers = {
     [actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED]: (state, action) => (
         {
             ...initialState,
-            loadingRecord: false,
-            lookupResults: [],
-            loadingError: action.payload
+            loadingResults: false,
+            lookupResults: action.payload,
         }
     ),
 
     [actions.ADMIN_LOOKUP_TOOL_SET]: (state, action) => (
         {
             ...initialState,
-            loadingRecord: false,
+            loadingResults: false,
             lookupResults: action.payload
         }
     ),
 
     [actions.ADMIN_LOOKUP_TOOL_CLEAR]: () => (
         {
-            ...initialState
+            ...initialState,
+            lookupResults: []
         }
     )
 };
 
 export default function adminLookupToolReducer(state = initialState, action) {
+    console.log('reducer');
+    console.log(action);
     const handler = handlers[action.type];
     if (!handler) {
         return state;

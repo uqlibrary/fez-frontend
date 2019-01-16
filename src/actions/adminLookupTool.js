@@ -25,18 +25,23 @@ export function getAdminLookupApiUrl(type, field1, field2) {
  * @returns {function(*): (*|void|Promise<T | never>)}
  */
 export function loadAdminLookup(type, field1, field2) {
-    console.log('loadAdminLookup');
+    console.log('action: loadAdminLookup');
     return dispatch => {
         dispatch({type: actions.ADMIN_LOOKUP_TOOL_LOADING});
 
         return get(getAdminLookupApiUrl(type, field1, field2))
             .then(response => {
-                dispatch({
-                    type: actions.ADMIN_LOOKUP_TOOL_SUCCESS,
-                    payload: response.data
-                });
-                console.log('action returning with payload');
-                console.log(response.data);
+                if (response.data.length === 0) {
+                    dispatch({
+                        type: actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED,
+                        payload: ['No Results']
+                    });
+                } else {
+                    dispatch({
+                        type: actions.ADMIN_LOOKUP_TOOL_SUCCESS,
+                        payload: response.data
+                    });
+                }
 
                 // return Promise.resolve(response.data);
             })
@@ -45,8 +50,15 @@ export function loadAdminLookup(type, field1, field2) {
                     type: actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED,
                     payload: error.message
                 });
-                console.log('action returning with error');
-                console.log(error);
             });
+    };
+}
+
+export function clearAdminLookup() {
+    console.log('action: clearAdminLookup');
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_LOOKUP_TOOL_CLEAR
+        });
     };
 }
