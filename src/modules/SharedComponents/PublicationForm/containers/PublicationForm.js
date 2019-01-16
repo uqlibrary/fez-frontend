@@ -111,9 +111,6 @@ const mapStateToProps = (state) => {
         isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
         hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
         docTypeSubTypeCombo: docTypeSubTypeCombo,
-        initialValues: {
-            impactStatement: 'Background:\nType/paste the background of your research here.\n\nContribution:\nType/paste the contributions your research have made here\n\nSignificance:\nType/paste the significance of your research here.',
-        },
         isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false
     };
 };

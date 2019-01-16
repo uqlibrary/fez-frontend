@@ -61,7 +61,7 @@ export default class NtroFields extends React.PureComponent {
                     },
                     impactStatement: {
                         label: 'Creator contribution statement',
-                        placeholder: 'Type or cut and paste your impact statement here'
+                        placeholder: 'Enter your statement in three sections: Background, Contribution, Significance'
                     },
                 }
             },
@@ -182,6 +182,7 @@ export default class NtroFields extends React.PureComponent {
                                         label={contributionStatement.fields.impactStatement.label}
                                         placeholder={contributionStatement.fields.impactStatement.placeholder}
                                         validate={[validation.required, validation.maxLength2000]}
+                                        errorText={'What?'}
                                     />
                                 </Grid>
                             </Grid>
