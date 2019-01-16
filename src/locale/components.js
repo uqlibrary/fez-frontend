@@ -449,7 +449,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISMN value',
-                        inputFieldHint: 'eg. 979-0-XXX-XXXXX-X',
+                        inputFieldHint: 'eg. 979-0-XXX-XXXXX-X (automatic hyphenation)',
                         addButtonLabel: <span>Add&nbsp;ISMN</span>,
                         remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
@@ -494,7 +494,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISRC value',
-                        inputFieldHint: 'eg. BRBMG0300729',
+                        inputFieldHint: 'eg. BR-BMG-03-00729 (automatic hyphenation)',
                         addButtonLabel: <span>Add&nbsp;ISRC</span>,
                         remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }

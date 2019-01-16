@@ -136,8 +136,16 @@ export default class NtroFields extends React.PureComponent {
     };
 
     normalizeIsrc = value => {
-        return value.toUpperCase();
+        const normalizedValue = value.replace(/([A-Z]{2})?-?(\w{3})?-?(\d{2})?-?(\d{5})?/g, (m, ...groups) => {
+            return groups.slice(0, 4).filter(token => !!token).join('-');
+        });
+        return normalizedValue.toUpperCase();
     };
+
+    transformIsrc = (searchKey, item, index) => ({
+        [searchKey.value]: item.replace(/-/g, ''),
+        [searchKey.order]: index + 1
+    });
 
     render() {
         const {contributionStatement, metadata, grantEditor} = this.props.locale;
@@ -221,6 +229,7 @@ export default class NtroFields extends React.PureComponent {
                                         locale={{...componentLocale.components.isrcForm.field}}
                                         disabled={this.props.submitting}
                                         inputNormalizer={this.normalizeIsrc}
+                                        transformFunction={this.transformIsrc}
                                     />
                                 </Grid>
                             }
