@@ -142,7 +142,7 @@ export const isValidIsmn = subject => {
 
 export const isValidIsrc = subject => {
     // https://www.wikidata.org/wiki/Property:P1243
-    const regex = /^[A-Z]{2}[A-Z0-9]{3}[0-9]{7}$/gi;
+    const regex = /^[A-Z]{2}-[A-Z0-9]{3}-[0-9]{2}-[0-9]{5}$/gi;
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isrc;
 };
 

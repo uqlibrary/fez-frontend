@@ -120,7 +120,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X",
+                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X (automatic hyphenation)",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Please, press 
@@ -190,7 +190,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BRBMG0300729",
+                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Please, press 
@@ -242,6 +242,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                 "value": "rek_isrc",
               }
             }
+            transformFunction={[Function]}
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -543,7 +544,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X",
+                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X (automatic hyphenation)",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Please, press 
@@ -613,7 +614,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BRBMG0300729",
+                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Please, press 
@@ -665,6 +666,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                 "value": "rek_isrc",
               }
             }
+            transformFunction={[Function]}
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -897,7 +899,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X",
+                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X (automatic hyphenation)",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Please, press 
@@ -967,7 +969,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BRBMG0300729",
+                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Please, press 
@@ -1019,6 +1021,7 @@ exports[`Component NtroFields should render default view 1`] = `
                 "value": "rek_isrc",
               }
             }
+            transformFunction={[Function]}
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1320,7 +1323,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X",
+                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X (automatic hyphenation)",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Please, press 
@@ -1390,7 +1393,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BRBMG0300729",
+                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Please, press 
@@ -1442,6 +1445,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                 "value": "rek_isrc",
               }
             }
+            transformFunction={[Function]}
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
