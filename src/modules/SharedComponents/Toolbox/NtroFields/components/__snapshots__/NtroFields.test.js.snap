@@ -53,11 +53,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
+            errorText="Remember to enter your statement in three sections: Background, Contribution, Significance"
             fullWidth={true}
             label="Creator contribution statement"
             multiline={true}
             name="impactStatement"
-            placeholder="Type or cut and paste your impact statement here"
+            placeholder="Enter your statement in three sections: Background, Contribution, Significance"
             rows={8}
             type="text"
             validate={
@@ -477,11 +478,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
+            errorText="Remember to enter your statement in three sections: Background, Contribution, Significance"
             fullWidth={true}
             label="Creator contribution statement"
             multiline={true}
             name="impactStatement"
-            placeholder="Type or cut and paste your impact statement here"
+            placeholder="Enter your statement in three sections: Background, Contribution, Significance"
             rows={8}
             type="text"
             validate={
@@ -1256,11 +1258,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            errorText="Remember to enter your statement in three sections: Background, Contribution, Significance"
             fullWidth={true}
             label="Creator contribution statement"
             multiline={true}
             name="impactStatement"
-            placeholder="Type or cut and paste your impact statement here"
+            placeholder="Enter your statement in three sections: Background, Contribution, Significance"
             rows={8}
             type="text"
             validate={
