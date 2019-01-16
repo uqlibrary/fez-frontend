@@ -449,7 +449,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISMN value',
-                        inputFieldHint: 'eg. 979-0-XXX-XXXXX-X (automatic hyphenation)',
+                        inputFieldHint: 'eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X',
                         addButtonLabel: <span>Add&nbsp;ISMN</span>,
                         remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
