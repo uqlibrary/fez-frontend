@@ -5161,7 +5161,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                         </WithStyles(CitationCountView)>
                         <WithStyles(CitationCountView)
                           count={1}
-                          link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                          link="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                           source="google"
                           title="Full citation in Google scholar will open in a new window"
                         >
@@ -5172,7 +5172,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               }
                             }
                             count={1}
-                            link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                            link="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                             source="google"
                             theme={
                               Object {
@@ -5598,7 +5598,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <WithStyles(ExternalLink)
                               aria-label="Full citation in Google scholar will open in a new window"
                               className="googleCitationCount CitationCountView-citationCount-99"
-                              href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                              href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                               openInNewIcon={false}
                               title="Full citation in Google scholar will open in a new window"
                             >
@@ -5611,7 +5611,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
                                   }
                                 }
-                                href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                                href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -6039,7 +6039,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
                                   className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
-                                  href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                                  href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                   rel="noopener noreferrer"
                                   tabIndex="0"
                                   target="_blank"
@@ -12723,7 +12723,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                         </WithStyles(CitationCountView)>
                         <WithStyles(CitationCountView)
                           count={null}
-                          link="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                          link="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                           source="google"
                           title="Full citation in Google scholar will open in a new window"
                         >
@@ -12734,7 +12734,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               }
                             }
                             count={null}
-                            link="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                            link="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                             source="google"
                             theme={
                               Object {
@@ -13160,7 +13160,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <WithStyles(ExternalLink)
                               aria-label="Full citation in Google scholar will open in a new window"
                               className="googleCitationCount CitationCountView-citationCount-99"
-                              href="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                              href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                               openInNewIcon={false}
                               title="Full citation in Google scholar will open in a new window"
                             >
@@ -13173,7 +13173,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
                                   }
                                 }
-                                href="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                                href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                 openInNewIcon={false}
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -13601,7 +13601,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
                                   className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
-                                  href="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                                  href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                   rel="noopener noreferrer"
                                   tabIndex="0"
                                   target="_blank"
@@ -20868,7 +20868,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                         </WithStyles(CitationCountView)>
                         <WithStyles(CitationCountView)
                           count={1}
-                          link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                          link="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                           source="google"
                           title="Full citation in Google scholar will open in a new window"
                         >
@@ -20879,7 +20879,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               }
                             }
                             count={1}
-                            link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                            link="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                             source="google"
                             theme={
                               Object {
@@ -21305,7 +21305,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <WithStyles(ExternalLink)
                               aria-label="Full citation in Google scholar will open in a new window"
                               className="googleCitationCount CitationCountView-citationCount-99"
-                              href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                              href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                               openInNewIcon={false}
                               title="Full citation in Google scholar will open in a new window"
                             >
@@ -21318,7 +21318,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
                                   }
                                 }
-                                href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                                href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -21746,7 +21746,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
                                   className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
-                                  href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                                  href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                   rel="noopener noreferrer"
                                   tabIndex="0"
                                   target="_blank"
