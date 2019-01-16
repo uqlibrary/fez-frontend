@@ -7,7 +7,7 @@ import AdminLookupTool from '../components/AdminLookupTool';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('accountReducer'),
+        ...state.get('adminLookupToolReducer'),
     };
 };
 

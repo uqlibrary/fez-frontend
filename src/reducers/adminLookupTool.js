@@ -25,6 +25,7 @@ const handlers = {
         {
             ...initialState,
             loadingRecord: false,
+            lookupResults: [],
             loadingError: action.payload
         }
     ),
@@ -44,7 +45,7 @@ const handlers = {
     )
 };
 
-export default function adminLookupToolReducer(state = {...initialState}, action) {
+export default function adminLookupToolReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

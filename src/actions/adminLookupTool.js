@@ -25,6 +25,7 @@ export function getAdminLookupApiUrl(type, field1, field2) {
  * @returns {function(*): (*|void|Promise<T | never>)}
  */
 export function loadAdminLookup(type, field1, field2) {
+    console.log('loadAdminLookup');
     return dispatch => {
         dispatch({type: actions.ADMIN_LOOKUP_TOOL_LOADING});
 
@@ -34,14 +35,18 @@ export function loadAdminLookup(type, field1, field2) {
                     type: actions.ADMIN_LOOKUP_TOOL_SUCCESS,
                     payload: response.data
                 });
+                console.log('action returning with payload');
+                console.log(response.data);
 
-                return Promise.resolve(response.data);
+                // return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED,
                     payload: error.message
                 });
+                console.log('action returning with error');
+                console.log(error);
             });
     };
 }

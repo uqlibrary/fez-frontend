@@ -7,7 +7,7 @@ import {AdminLookupForm} from './AdminLookupForm';
 
 /**
  * This component is intended to replace https://espace.library.uq.edu.au/misc/api_view_info.php
- * but only a new form (incites) has been done at this point
+ * but only an additional form (incites) has been done at this point
  * As each form comes in:
  * - add an entry to locale/components.js under .adminLookupTools.forms as a sibling to .incites;
  *          - match the contents of the incites entry
@@ -16,7 +16,8 @@ import {AdminLookupForm} from './AdminLookupForm';
  *    admin/lookup/[components.adminLookupTools.forms.sibling]/[keys to search for]/[possible other field you need]
  * ie the api url that incites calls is: eg
  *    "https://api.library.uq.edu.au/staging/admin/lookup/incites/A1979HY31900010,A1979HY31900068/[APIKEY]".
- * - and that should be all that is required (note the comment below about minimising components)
+ * - and that should be all that is required (but do examine how the result is displayed...)
+ * (once we have more than one component use the default isMinimised value so they load minimised)
  */
 export class AdminLookupTool extends PureComponent {
     static propTypes = {
@@ -32,7 +33,7 @@ export class AdminLookupTool extends PureComponent {
 
                 {/* incites */}
                 <AdminLookupForm
-                    isMinimised={false} // once we do more than one form here they should be loaded minimised, ie use the default
+                    isMinimised={false}
                     localeform={locale.components.adminLookupTools.forms.incites}
                     actions={this.props.actions}
                 />

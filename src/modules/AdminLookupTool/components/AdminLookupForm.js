@@ -47,6 +47,8 @@ export class AdminLookupForm extends PureComponent {
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
+        console.log('in _handleSubmitLookup');
+
         if (primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
             this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
         }
@@ -136,12 +138,14 @@ export class AdminLookupForm extends PureComponent {
                             />
                         </form>
                         {
-                            !!this.props.lookupResults && this.props.lookupResults.length > 0 ?
+                            this.props.lookupResults.length > 0 ?
                                 <StandardCard style={{marginTop: 10}} title={locale.components.adminLookupTools.resultsLabel}>
-                                    {this.props.lookupResults}
+                                    <pre>
+                                        {JSON.stringify(this.props.lookupResults, null, 2)}
+                                    </pre>
                                 </StandardCard>
                                 :
-                                ''
+                                'no results yet' // use blank when working
                         }
                     </Fragment>
                 }
