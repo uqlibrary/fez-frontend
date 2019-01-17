@@ -11,7 +11,6 @@ export class AdminLookupFormResult extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
         lookupResults: PropTypes.array,
-        // history: PropTypes.object.isRequired,
         primaryValue: PropTypes.string.isRequired,
         secondaryValue: PropTypes.string,
         localeform: PropTypes.object.isRequired,
