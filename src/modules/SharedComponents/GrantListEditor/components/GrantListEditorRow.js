@@ -62,7 +62,7 @@ export class GrantListEditorRow extends PureComponent {
 
     static defaultProps = {
         locale: {
-            suffix: ' funder/sponsor',
+            suffix: ' grant',
             moveUpHint: 'Move entry up the order',
             moveDownHint: 'Move entry down the order',
             deleteHint: 'Remove this entry',

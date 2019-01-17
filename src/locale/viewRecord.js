@@ -937,59 +937,59 @@ export default {
                     order: 8
                 },
                 {
-                    field: 'fez_record_search_key_date_available',
+                    field: 'fez_record_search_key_start_date',
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_series',
+                    field: 'fez_record_search_key_end_date',
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_edition',
+                    field: 'fez_record_search_key_date_available',
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_series',
                     order: 12
                 },
                 {
-                    field: 'fez_record_search_key_isbn',
+                    field: 'fez_record_search_key_edition',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_issn',
+                    field: 'fez_record_search_key_contributor',
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_isbn',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_issn',
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_start_page',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_end_page',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_total_pages',
                     order: 19
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_start_date',
+                    field: 'fez_record_search_key_language',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_keywords',
                     order: 22
                 },
             ],

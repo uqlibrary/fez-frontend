@@ -8673,7 +8673,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -8720,7 +8720,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -8781,7 +8781,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -8837,7 +8837,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="21"
       style={
         Object {
           "padding": 8,
