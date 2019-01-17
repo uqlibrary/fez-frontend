@@ -21,7 +21,6 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
                     required
                     fullWidth
                     value={orgAffiliation}
-                    error={orgAffiliation === ''}
                     onChange={onOrgAffiliationChange}
                     label={locale.fields.organisation.inputLabel}
                 />
@@ -33,7 +32,7 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
                         value={orgType}
                         onChange={onOrgTypeChange}
                     >
-                        <MenuItem value="" disabled>{locale.fields.organisationType.placeholder}</MenuItem>
+                        <MenuItem disabled>{locale.fields.organisationType.placeholder}</MenuItem>
                         {options}
                     </Select>
                 </FormControl>

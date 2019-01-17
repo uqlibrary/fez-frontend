@@ -46,7 +46,6 @@ export class GrantListEditorRowHeader extends PureComponent {
     };
 
     render() {
-        console.log('GrantListEditorRowHeader');
         const {GrantName, GrantID, GrantType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
         const {classes, isInfinite} = this.props;
         return (

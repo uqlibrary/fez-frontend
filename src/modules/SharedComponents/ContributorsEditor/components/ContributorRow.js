@@ -174,7 +174,7 @@ export class ContributorRow extends PureComponent {
                     <Grid item xs={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.orgaff}`,
-                            `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`,
+                            `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}
