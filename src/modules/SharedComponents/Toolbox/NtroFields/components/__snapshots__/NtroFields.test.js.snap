@@ -123,7 +123,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -194,7 +194,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -548,7 +548,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -619,7 +619,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -903,7 +903,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -974,7 +974,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -1328,7 +1328,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
@@ -1399,7 +1399,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Please, press 
+                      Pleasepress 
                       <b>
                         ENTER
                       </b>
