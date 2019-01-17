@@ -21234,7 +21234,7 @@ exports[`Additional Information Component  should render component with journal 
                   "rek_display_type": 179,
                   "rek_display_type_lookup": "Journal Article",
                   "rek_file_downloads": 0,
-                  "rek_formatted_abstract": null,
+                  "rek_formatted_abstract": "This is a&nbsp;test",
                   "rek_formatted_title": null,
                   "rek_genre": "Journal Article",
                   "rek_genre_type": "Article (original research)",
@@ -22395,7 +22395,7 @@ exports[`Additional Information Component  should render component with journal 
                   "rek_display_type": 179,
                   "rek_display_type_lookup": "Journal Article",
                   "rek_file_downloads": 0,
-                  "rek_formatted_abstract": null,
+                  "rek_formatted_abstract": "This is a&nbsp;test",
                   "rek_formatted_title": null,
                   "rek_genre": "Journal Article",
                   "rek_genre_type": "Article (original research)",
@@ -23229,7 +23229,7 @@ exports[`Additional Information Component  should render component with journal 
             component="span"
             variant="body2"
           >
-            Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.
+            This is a test
           </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
