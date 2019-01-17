@@ -10,7 +10,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
     xs={6}
   >
     <TextField
-      error={false}
       fullWidth={true}
       label="Organisation"
       onChange={[MockFunction]}
@@ -36,7 +35,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       >
         <WithStyles(MenuItem)
           disabled={true}
-          value=""
         >
           Select an organisation type
         </WithStyles(MenuItem)>
@@ -104,7 +102,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
     xs={6}
   >
     <TextField
-      error={true}
       fullWidth={true}
       label="Organisation"
       onChange={[MockFunction]}
@@ -130,7 +127,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
       >
         <WithStyles(MenuItem)
           disabled={true}
-          value=""
         >
           Select an organisation type
         </WithStyles(MenuItem)>
@@ -198,7 +194,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
     xs={6}
   >
     <TextField
-      error={true}
       fullWidth={true}
       label="Organisation"
       onChange={[MockFunction]}
@@ -224,7 +219,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       >
         <WithStyles(MenuItem)
           disabled={true}
-          value=""
         >
           Select an organisation type
         </WithStyles(MenuItem)>
@@ -292,7 +286,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
     xs={6}
   >
     <TextField
-      error={false}
       fullWidth={true}
       label="Organisation"
       onChange={[MockFunction]}
@@ -318,7 +311,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       >
         <WithStyles(MenuItem)
           disabled={true}
-          value=""
         >
           Select an organisation type
         </WithStyles(MenuItem)>

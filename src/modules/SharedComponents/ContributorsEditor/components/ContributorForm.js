@@ -130,6 +130,7 @@ export class ContributorForm extends PureComponent {
     };
 
     handleOrgTypeChange = (event) => {
+        console.log(event);
         this.setState({
             orgtype: event.target.value,
         });
