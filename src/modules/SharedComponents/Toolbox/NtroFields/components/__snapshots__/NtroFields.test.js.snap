@@ -7,7 +7,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Author/Creator contribution statement"
+      title="Author/Creator contribution statement (not for public view)"
     >
       <WithStyles(Grid)
         container={true}
@@ -90,7 +90,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description
+            Abstract/Description (for public view)
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -413,7 +413,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Funder/Sponser details"
+      title="Grant details"
     >
       <Field
         component={[Function]}
@@ -432,7 +432,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
     xs={12}
   >
     <StandardCard
-      title="Author/Creator contribution statement"
+      title="Author/Creator contribution statement (not for public view)"
     >
       <WithStyles(Grid)
         container={true}
@@ -515,7 +515,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description
+            Abstract/Description (for public view)
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -838,7 +838,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
     xs={12}
   >
     <StandardCard
-      title="Funder/Sponser details"
+      title="Grant details"
     >
       <Field
         component={[Function]}
@@ -870,7 +870,7 @@ exports[`Component NtroFields should render default view 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description
+            Abstract/Description (for public view)
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -1193,7 +1193,7 @@ exports[`Component NtroFields should render default view 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Funder/Sponser details"
+      title="Grant details"
     >
       <Field
         component={[Function]}
@@ -1212,7 +1212,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Author/Creator contribution statement"
+      title="Author/Creator contribution statement (not for public view)"
     >
       <WithStyles(Grid)
         container={true}
@@ -1295,7 +1295,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description
+            Abstract/Description (for public view)
           </WithStyles(Typography)>
           <Field
             component={[Function]}

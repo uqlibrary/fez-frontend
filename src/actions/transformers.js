@@ -392,7 +392,7 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
     };
 };
 
-// * getGrantsListSearchKey - returns the grant funder/sponsor details as mapped in search keys
+// * getGrantsListSearchKey - returns the grant grant details as mapped in search keys
 // Input:
 // "grants":[
 //  {"grantName":"Funder 1","grantID":"00001","grantType":"Museum","disabled":false},
