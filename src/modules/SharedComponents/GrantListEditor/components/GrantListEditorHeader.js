@@ -24,7 +24,7 @@ export class GrantListEditorHeader extends PureComponent {
 
     static defaultProps = {
         locale: {
-            GrantName: 'Funder/Sponsor name',
+            GrantName: 'Grant name',
             GrantID: 'Funder/sponsor ID',
             GrantType: 'Funder/sponsor type',
             reorderColumn: 'Reorder entries',

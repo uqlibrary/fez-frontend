@@ -54,7 +54,7 @@ export default class NtroFields extends React.PureComponent {
         showContributionStatement: false,
         locale: {
             contributionStatement: {
-                title: 'Author/Creator contribution statement',
+                title: 'Author/Creator contribution statement (not for public view)',
                 fields: {
                     scaleOfWork: {
                         label: 'Scale/Significance of work'
@@ -70,7 +70,7 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Non-traditional research output metadata',
                 fields: {
                     abstract: {
-                        label: 'Abstract/Description'
+                        label: 'Abstract/Description (for public view)'
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -107,7 +107,7 @@ export default class NtroFields extends React.PureComponent {
                 }
             },
             grantEditor: {
-                title: 'Funder/Sponser details'
+                title: 'Grant details'
             }
         }
     };

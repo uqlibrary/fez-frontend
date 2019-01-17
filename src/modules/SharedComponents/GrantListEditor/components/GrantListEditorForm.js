@@ -24,14 +24,14 @@ export default class GrantListEditorForm extends PureComponent {
 
     static defaultProps = {
         locale: {
-            grantName: 'Funder/Sponsor name',
-            grantNameHint: 'Enter the funder/sponsors name',
-            grantId: 'Funder/Sponsor ID',
-            grantIdHint: 'Enter the funder/sponsors ID',
-            grantType: 'Funder/Sponsor type',
-            grantTypeHint: 'Select the funder/sponsors type',
-            addButton: 'Add funder/sponsor',
-            description: 'Add the funder/sponsor\'s name, id and type - then add each funder/sponsor to the list'
+            grantName: 'Grant name',
+            grantNameHint: 'Enter the grants name',
+            grantId: 'Grant ID',
+            grantIdHint: 'Enter the grants ID',
+            grantType: 'Grant type',
+            grantTypeHint: 'Select the grants type',
+            addButton: 'Add grant',
+            description: 'Add the grant\'s name, id and type - then add each grant to the list'
         },
         hideType: false
     };
@@ -114,9 +114,7 @@ export default class GrantListEditorForm extends PureComponent {
                             value={this.state.grantId}
                             onChange={this._onIDChanged}
                             disabled={disabled || this.state.grantName.trim().length === 0}
-                            required={this.props.required || this.state.grantName.trim().length > 0}
-                            error={this.state.grantName.trim().length > 0 && this.state.grantId.trim().length === 0}
-                            errorText={this.state.grantName.trim().length > 0 && this.state.grantId.trim().length === 0 && locale.validationErrors.required}
+                            required={this.props.required}
                         />
                     </Grid>
                     {
@@ -124,8 +122,8 @@ export default class GrantListEditorForm extends PureComponent {
                         <Grid item xs={12} sm={12} md={3}>
                             <FormControl
                                 fullWidth
-                                required={this.props.required || this.state.grantName.trim().length > 0 && this.state.grantId.trim().length > 0}
-                                error={this.state.grantName.trim().length > 0 && this.state.grantId.trim().length > 0 && this.state.grantType.trim().length === 0}
+                                required={this.props.required || this.state.grantName.trim().length > 0}
+                                error={this.state.grantName.trim().length > 0 && this.state.grantType.trim().length === 0}
                             >
                                 <InputLabel>{this.props.locale.grantType}</InputLabel>
                                 <Select
@@ -133,7 +131,7 @@ export default class GrantListEditorForm extends PureComponent {
                                     placeholder={this.props.locale.grantTypeHint}
                                     value={this.state.grantType}
                                     onChange={this._onTypeChanged}
-                                    disabled={disabled || this.state.grantName.trim().length === 0 || this.state.grantId.trim().length === 0}
+                                    disabled={disabled || this.state.grantName.trim().length === 0}
                                 >
                                     <MenuItem value={''} disabled>{this.props.locale.grantTypeHint}</MenuItem>
                                     {orgAffiliationTypes.map((item, index) => <MenuItem value={item.value} key={index}>{item.text}</MenuItem>)}
@@ -150,7 +148,7 @@ export default class GrantListEditorForm extends PureComponent {
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.grantName.trim().length === 0 || this.state.grantId.trim().length === 0 || (!this.props.hideType && this.state.grantType.trim().length === 0)}
+                            disabled={disabled || this.state.grantName.trim().length === 0 || (!this.props.hideType && this.state.grantType.trim().length === 0)}
                             onClick={this._addGrant}
                         >
                             {this.props.locale.addButton}
