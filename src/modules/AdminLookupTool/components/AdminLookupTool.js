@@ -41,7 +41,7 @@ export class AdminLookupTool extends PureComponent {
         };
     }
 
-    recordInput  = (primaryValue, secondaryValue) => {
+    recordInputs = (primaryValue, secondaryValue) => {
         this.state.primaryValue = primaryValue;
         this.state.secondaryValue = secondaryValue;
     };
@@ -73,7 +73,7 @@ export class AdminLookupTool extends PureComponent {
                                 isMinimised={false}
                                 localeform={locale.components.adminLookupTools.forms.incites}
                                 actions={this.props.actions}
-                                recordInput={this.recordInput}
+                                sendInputsToResultComponent={this.recordInputs} // function
                             />
 
                             {/* put more forms here */}

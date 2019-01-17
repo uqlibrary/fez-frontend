@@ -277,10 +277,9 @@ export default {
             title: 'Admin Lookup Tools',
             forms: {
                 incites: {
-                    tip: 'View raw output we receive from Incites via their API',
-                    invalidText: '', // not used yet
-                    fromHint: '', // not used yet
                     lookupType: 'incites', // this value should match the 'type' in the path used in api
+                    lookupLabel: 'Incites',
+                    tip: 'View raw output we receive from Incites via their API',
                     primaryField: {
                         heading: 'UTs',
                         fromAria: '',
@@ -292,12 +291,10 @@ export default {
                         fromAria: '',
                         tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
                         inputPlaceholder: 'Enter API key',
-                        reportInOutput: false, // should we report this field in the results page?
+                        reportInOutput: false, // determines if secondaryField will apear in the results page
                     },
-                    lookupLabel: 'Incites',
                     bottomTip: '',
                     submitButtonLabel: 'Submit to Incites',
-                    resultsLabel: 'Results',
                 },
             },
             tooltip: {

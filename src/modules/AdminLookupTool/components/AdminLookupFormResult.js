@@ -57,13 +57,14 @@ export class AdminLookupFormResult extends PureComponent {
                             </StandardCard>
                         </Grid>
                     }
-                    <Button
-                        children= {txt.tools.clearButtonLabel ? txt.tools.clearButtonLabel : 'New Search'}
-                        variant="contained"
-                        color={'primary'}
-                        onClick={() => this._handleClear()}
-                    />
                 </StandardCard>
+                <Button
+                    children= {txt.tools.clearButtonLabel ? txt.tools.clearButtonLabel : 'New Search'}
+                    variant="contained"
+                    color={'primary'}
+                    onClick={() => this._handleClear()}
+                    style={{marginTop: 20}}
+                />
             </StandardCard>
         );
     }

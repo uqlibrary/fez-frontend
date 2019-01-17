@@ -294,7 +294,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.masquerade.title
-            },
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [ // this should check if the user is an admin
             {
                 path: pathConfig.admin.lookupTools,
                 component: components.AdminLookupTool,

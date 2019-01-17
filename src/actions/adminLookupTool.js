@@ -26,7 +26,6 @@ export function getAdminLookupApiUrl(type, field1, field2) {
  * @returns {function(*): (*|void|Promise<T | never>)}
  */
 export function loadAdminLookup(type, field1, field2) {
-    console.log('action: loadAdminLookup');
     return dispatch => {
         dispatch({type: actions.ADMIN_LOOKUP_TOOL_LOADING});
 
@@ -62,7 +61,6 @@ export function loadAdminLookup(type, field1, field2) {
 }
 
 export function clearAdminLookup() {
-    console.log('action: clearAdminLookup');
     return dispatch => {
         dispatch({
             type: actions.ADMIN_LOOKUP_TOOL_CLEAR

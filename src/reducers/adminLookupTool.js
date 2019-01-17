@@ -15,7 +15,7 @@ const handlers = {
 
     [actions.ADMIN_LOOKUP_TOOL_SUCCESS]: (state, action) => (
         {
-            ...initialState,
+            ...state,
             loadingResults: false,
             lookupResults: action.payload
         }
@@ -23,17 +23,9 @@ const handlers = {
 
     [actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED]: (state, action) => (
         {
-            ...initialState,
+            ...state,
             loadingResults: false,
             lookupResults: action.payload,
-        }
-    ),
-
-    [actions.ADMIN_LOOKUP_TOOL_SET]: (state, action) => (
-        {
-            ...initialState,
-            loadingResults: false,
-            lookupResults: action.payload
         }
     ),
 
@@ -46,8 +38,6 @@ const handlers = {
 };
 
 export default function adminLookupToolReducer(state = initialState, action) {
-    console.log('adminLookupToolReducer sees:');
-    console.log(action);
     const handler = handlers[action.type];
     if (!handler) {
         return state;

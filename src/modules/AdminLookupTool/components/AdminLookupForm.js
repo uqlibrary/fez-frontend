@@ -14,15 +14,13 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 
 export class AdminLookupForm extends PureComponent {
     static propTypes = {
-        actions: PropTypes.object,
+        actions: PropTypes.object.isRequired,
         localeform: PropTypes.object.isRequired,
+        sendInputsToResultComponent: PropTypes.func.isRequired,
         isMinimised: PropTypes.bool,
-        recordInput: PropTypes.func.isRequired
     };
     static defaultProps = {
         isMinimised: true,
-
-        onToggleMinimise: () => {},
     };
 
     constructor(props) {
@@ -48,7 +46,7 @@ export class AdminLookupForm extends PureComponent {
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
-        this.props.recordInput(primaryValue, secondaryValue);
+        this.props.sendInputsToResultComponent(primaryValue, secondaryValue);
 
         if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
             this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
@@ -88,14 +86,14 @@ export class AdminLookupForm extends PureComponent {
                         </IconButton>
                     </Grid>
                 </Grid>
-                <p>{txt.thisForm.tip}</p>
+                <p>{txt.thisForm.tip ? txt.thisForm.tip : ''}</p>
                 {
                     !this.state.isMinimised &&
                     <form>
 
                         <div>
                             <h4>{txt.thisForm.primaryField.heading}</h4>
-                            <p>{txt.thisForm.primaryField.tip}</p>
+                            <p>{txt.thisForm.primaryField.tip ? txt.thisForm.primaryField.tip : ''}</p>
                             <TextField
                                 fullWidth
                                 name={'primaryValue'}
@@ -122,11 +120,11 @@ export class AdminLookupForm extends PureComponent {
                                     />
                                 </div>
                         }
-                        <p>{txt.thisForm.bottomTip}</p>
+                        <p>{txt.thisForm.bottomTip ?  txt.thisForm.bottomTip : ''}</p>
                         <Button
                             children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
                             variant="contained"
-                            aria-label={txt.thisForm.submitButtonLabel}
+                            aria-label={txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
                             color={'primary'}
                             onClick={() => this._handleSubmitLookup()}
                         />
