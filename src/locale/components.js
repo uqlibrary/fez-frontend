@@ -361,7 +361,7 @@ export default {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Type ISBN value',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -406,7 +406,7 @@ export default {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Type ISSN value',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -451,7 +451,7 @@ export default {
                         inputFieldLabel: 'ISMN value',
                         inputFieldHint: 'eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X',
                         addButtonLabel: <span>Add&nbsp;ISMN</span>,
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -496,7 +496,7 @@ export default {
                         inputFieldLabel: 'ISRC value',
                         inputFieldHint: 'eg. BR-BMG-03-00729 (automatic hyphenation)',
                         addButtonLabel: <span>Add&nbsp;ISRC</span>,
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
