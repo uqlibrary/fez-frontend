@@ -8898,7 +8898,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="24"
       style={
         Object {
           "padding": 8,

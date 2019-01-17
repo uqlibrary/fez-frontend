@@ -119,9 +119,16 @@ export class AdditionalInformation extends PureComponent {
 
     // render rek fields from fez_record_search_key
     renderContent = (key, value) => {
+        if(key === 'rek_end_stae') {
+            console.log('PING');
+        } else {
+            console.log(key);
+        }
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
+            case 'rek_start_date': return this.formatPublicationDate(value);
+            case 'rek_end_date': return this.formatPublicationDate(value);
             case 'rek_description': return this.renderHTML(value);
             default: return value;
         }
