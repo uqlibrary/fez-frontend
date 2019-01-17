@@ -126,7 +126,7 @@ export const isValidIsbn = subject => {
 
 export const checkDigit = subject => {
     const check = parseInt(subject.slice(-1), 10);
-    const ismn = subject.replace(/-/g, '');
+    const ismn = subject.replace(/(ISMN |M|-|)/g, '');
     let checksum = null;
     for (let i = 0; i < ismn.length - 1; i++) {
         checksum += parseInt(ismn.charAt(i), 10) * (i % 2 === 0 ? 1 : 3);
@@ -136,13 +136,13 @@ export const checkDigit = subject => {
 
 export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
-    const regex = /^979-0-\d{3}-\d{5}-\d$/gi;
+    const regex = /^(?:ISMN )?((?:979-0-[\d-]{9}-\d)|(?:M-[\d-]{9}-\d))$/gi;
     return subject.trim().length === 0 || (regex.test(subject) && checkDigit(subject)) ? '' : locale.validationErrors.ismn;
 };
 
 export const isValidIsrc = subject => {
     // https://www.wikidata.org/wiki/Property:P1243
-    const regex = /^[A-Z]{2}-[A-Z0-9]{3}-[0-9]{2}-[0-9]{5}$/gi;
+    const regex = /^(?:ISRC )?(?:[A-Z]{2}-[A-Z0-9]{3}-\d{2}-\d{5})$/gi;
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isrc;
 };
 
