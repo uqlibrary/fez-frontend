@@ -213,7 +213,11 @@ export default {
                 fez_record_search_key_date_available: 'Collection year',
                 fez_record_search_key_translated_title: 'Translated title of proceedings'
             },
-            'Creative Work': {},
+            'Creative Work': {
+                rek_genre: 'Type',
+                fez_record_search_key_start_date: 'Start date',
+                fez_record_search_key_end_date: 'End date',
+            },
             'Data Collection': {
                 rek_date: 'Publication year',
                 rek_genre: 'Collection type',
@@ -979,6 +983,14 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 20
+                },
+                {
+                    field: 'fez_record_search_key_start_date',
+                    order: 21
+                },
+                {
+                    field: 'fez_record_search_key_end_date',
+                    order: 22
                 },
             ],
             'Data Collection': [
