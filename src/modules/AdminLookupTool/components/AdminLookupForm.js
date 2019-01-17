@@ -17,13 +17,10 @@ export class AdminLookupForm extends PureComponent {
         actions: PropTypes.object,
         localeform: PropTypes.object.isRequired,
         isMinimised: PropTypes.bool,
-        lookupType: PropTypes.string,
-        loadingResults: PropTypes.bool,
+        recordInput: PropTypes.func.isRequired
     };
     static defaultProps = {
-        lookupType: '',
         isMinimised: true,
-        loadingResults: false,
 
         onToggleMinimise: () => {},
     };
@@ -51,13 +48,11 @@ export class AdminLookupForm extends PureComponent {
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
+        this.props.recordInput(primaryValue, secondaryValue);
+
         if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
             this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
         }
-    };
-
-    _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
     };
 
     // update state for the form fields on input
@@ -96,7 +91,7 @@ export class AdminLookupForm extends PureComponent {
                 <p>{txt.thisForm.tip}</p>
                 {
                     !this.state.isMinimised &&
-                    <form onSubmit={this._handleDefaultSubmit}>
+                    <form>
 
                         <div>
                             <h4>{txt.thisForm.primaryField.heading}</h4>
@@ -134,7 +129,6 @@ export class AdminLookupForm extends PureComponent {
                             aria-label={txt.thisForm.submitButtonLabel}
                             color={'primary'}
                             onClick={() => this._handleSubmitLookup()}
-                            disabled={this.props.loadingResults}
                         />
                     </form>
                 }

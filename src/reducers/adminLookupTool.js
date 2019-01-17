@@ -46,7 +46,7 @@ const handlers = {
 };
 
 export default function adminLookupToolReducer(state = initialState, action) {
-    console.log('reducer');
+    console.log('adminLookupToolReducer sees:');
     console.log(action);
     const handler = handlers[action.type];
     if (!handler) {
