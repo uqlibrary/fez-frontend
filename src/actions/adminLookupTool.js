@@ -1,6 +1,7 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import {ADMIN_LOOKUP_API_1FIELD, ADMIN_LOOKUP_API_2FIELD} from 'repositories/routes';
+import {locale} from 'locale';
 
 /**
  * build the api url
@@ -46,9 +47,15 @@ export function loadAdminLookup(type, field1, field2) {
                 // return Promise.resolve(response.data);
             })
             .catch(error => {
+                let message;
+                if (error.message === locale.global.errorMessages[403].message) {
+                    message = ['Invalid authentication credentials - use a valid api key'];
+                } else {
+                    message = [error.message];
+                }
                 dispatch({
                     type: actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED,
-                    payload: error.message
+                    payload: message
                 });
             });
     };

@@ -55,8 +55,10 @@ if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME)
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
 let isGet = null;
+let requestUrl = '';
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
+    requestUrl = request.baseURL + request.url;
     if (
         (request.url.includes('records/search') || request.url.includes('records/export'))
         && !!request.params && !!request.params.mode && request.params.mode === 'advanced'
@@ -74,7 +76,9 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    if (error.response && error.response.status === 403) {
+    if (requestUrl.startsWith(API_URL + 'admin/lookup') ) {
+        // do nothing - 403 for admin tool api lookup is handled in actions/adminLookupTool.js
+    } else if (error.response && error.response.status === 403) {
         if (!!Cookies.get(SESSION_COOKIE_NAME)) {
             Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
             delete api.defaults.headers.common[TOKEN_NAME];
