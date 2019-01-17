@@ -7,6 +7,7 @@ import {logout} from 'actions/account';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
+import {pathConfig} from 'config/routes';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -76,8 +77,10 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    if (requestUrl.startsWith(API_URL + 'admin/lookup') ) {
+    const adminLookupUrlRoot = API_URL + pathConfig.admin.lookupTools.substring(1);
+    if (requestUrl.startsWith(adminLookupUrlRoot) ) {
         // do nothing - 403 for admin tool api lookup is handled in actions/adminLookupTool.js
+        console.log('skipping root 403 handling for 3rd party api');
     } else if (error.response && error.response.status === 403) {
         if (!!Cookies.get(SESSION_COOKIE_NAME)) {
             Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
