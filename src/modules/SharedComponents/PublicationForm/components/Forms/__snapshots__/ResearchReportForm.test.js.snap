@@ -270,7 +270,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                 "inputFieldHint": "Type ISBN value",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -344,7 +344,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                 "inputFieldHint": "Type ISSN value",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
