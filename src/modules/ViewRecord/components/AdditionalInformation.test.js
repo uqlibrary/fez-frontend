@@ -9,7 +9,7 @@ function setup(testProps, isShallow = true){
             gridRow: 'gridRow',
             list: 'list'
         },
-        publication: testProps.publication || records.journalArticle,
+        publication: {...(testProps.publication || records.journalArticle), rek_formatted_abstract: 'This is a&nbsp;test'},
         ...testProps
     };
     return getElement(AdditionalInformation, props, isShallow);

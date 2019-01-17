@@ -129,7 +129,7 @@ export default class NtroFields extends React.PureComponent {
     };
 
     normalizeIsmn = value => {
-        const text = value.replace(/[^\d]/g, '');
+        const text = value.replace(/[^[[:alnum:]-]]/g, '');
         const normalizedValue = text.replace(/(979)?-?(0)-?(\d{3})?-?(\d{5})?-?(\d)?/g, (m, ...groups) => {
             return groups.slice(0, 5).filter(token => !!token).join('-');
         });
@@ -144,7 +144,12 @@ export default class NtroFields extends React.PureComponent {
     };
 
     transformIsrc = (searchKey, item, index) => ({
-        [searchKey.value]: item.replace(/-/g, ''),
+        [searchKey.value]: item.replace('ISRC ', ''),
+        [searchKey.order]: index + 1
+    });
+
+    transformIsmn = (searchKey, item, index) => ({
+        [searchKey.value]: item.replace('ISMN ', ''),
         [searchKey.order]: index + 1
     });
 
@@ -214,7 +219,7 @@ export default class NtroFields extends React.PureComponent {
                                         locale={{...componentLocale.components.ismnForm.field}}
                                         searchKey={{value: 'rek_ismn', order: 'rek_ismn_order'}}
                                         disabled={this.props.submitting}
-                                        inputNormalizer={this.normalizeIsmn}     // custom normalizer prop for custom component; redux-form has normalize prop which can be used straight on input field
+                                        transformFunction={this.transformIsmn}
                                     />
                                 </Grid>
                             }
