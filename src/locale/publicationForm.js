@@ -621,6 +621,12 @@ export default {
                     month: 'Month',
                     year: 'Year'
                 },
+                startdate: {
+                    title: 'Publication start date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
                 abstract: {
                     label: 'Abstract/Description',
                     placeholder: 'Provide an abstract or summary of the work.'
