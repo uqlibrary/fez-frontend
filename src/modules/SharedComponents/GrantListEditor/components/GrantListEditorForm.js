@@ -24,14 +24,14 @@ export default class GrantListEditorForm extends PureComponent {
 
     static defaultProps = {
         locale: {
-            grantName: 'Grant name',
-            grantNameHint: 'Enter the grants name',
+            grantName: 'Funder/Sponsor name',
+            grantNameHint: 'Enter funder/sponsor name for this work',
             grantId: 'Grant ID',
-            grantIdHint: 'Enter the grants ID',
-            grantType: 'Grant type',
-            grantTypeHint: 'Select the grants type',
+            grantIdHint: 'Enter grant number for this work, if available',
+            grantType: 'Funder/Sponsor type',
+            grantTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
-            description: 'Add the grant\'s name, id and type - then add each grant to the list'
+            description: 'Add the Funder/Sponsor\'s name, grant ID and type - then add each to the list'
         },
         hideType: false
     };
