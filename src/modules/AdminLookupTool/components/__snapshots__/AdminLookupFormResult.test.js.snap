@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component AdminLookupFormResult it renders api data 1`] = `
+exports[`Component AdminLookupFormResult renders api data 1`] = `
 <StandardCard
   title="Incites"
 >

@@ -67,7 +67,7 @@ export class AdminLookupForm extends PureComponent {
         };
         const { primaryValue, secondaryValue } = this.state;
         return (
-            <StandardCard className="lookupComponent" noHeader>
+            <StandardCard noHeader>
                 <Grid container spacing={24}>
                     <Grid item style={{flexGrow: 1, width: 1}}>
                         <Typography variant={'headline'}>{txt.thisForm.lookupLabel}</Typography>
@@ -102,6 +102,7 @@ export class AdminLookupForm extends PureComponent {
                                 value={primaryValue}
                                 onChange={this._onChange}
                                 required
+                                className={'primaryValue'}
                             />
                         </div>
                         {
@@ -117,6 +118,7 @@ export class AdminLookupForm extends PureComponent {
                                         aria-label={txt.thisForm.secondaryField.fromAria}
                                         value={secondaryValue}
                                         onChange={this._onChange}
+                                        className={'secondaryValue'}
                                     />
                                 </div>
                         }

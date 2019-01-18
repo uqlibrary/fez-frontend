@@ -1,5 +1,4 @@
 import {AdminLookupTool} from './AdminLookupTool';
-import {AdminLookupForm} from './AdminLookupForm';
 
 function setup(testProps, isShallow = true) {
     const props = {

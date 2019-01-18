@@ -1,14 +1,15 @@
 import {AdminLookupFormResult} from './AdminLookupFormResult';
 import {locale} from 'locale';
 import PropTypes from "prop-types";
+import React from "react";
 
 function setup(testProps, isShallow = true) {
     const props = {
-        lookupResults: [{"IS_INTERNATIONAL_COLLAB":"0"}],
-        primaryValue: "dummy UT",
-        secondaryValue: "API Key",
-        localeform: locale.components.adminLookupTools.forms.incites,
-        actions: {
+        lookupResults: testProps.lookupResults || [{"IS_INTERNATIONAL_COLLAB":"0"}],
+        primaryValue: testProps.primaryValue || "dummy UT",
+        secondaryValue: testProps.secondaryValue || "API Key",
+        localeform: testProps.localeform || locale.components.adminLookupTools.forms.incites,
+        actions: testProps.actions || {
             clearAdminLookup: jest.fn()
         },
     };
@@ -16,17 +17,27 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component AdminLookupFormResult', () => {
-    it('it renders api data', () => {
-        const testFunction = jest.fn();
+    it('renders api data', () => {
+        // const testFunction = jest.fn();
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    // it('should reset lookup', () => {
-    //     const testMethod = jest.fn();
-    //     const wrapper = setup({_handleClear: testMethod});
-    //
-    //     wrapper.instance()._handleClear();
-    //     expect(testMethod).toHaveBeenCalled();
-    // });
+    it('should clear results via clear button', () => {
+        const mockCallback = jest.fn();
+
+        const props = {
+            actions: {
+                clearAdminLookup: mockCallback
+            }
+        };
+        const wrapper = setup({...props});
+        // wrapper.instance()._handleClear = mockCallback;
+
+        const button = wrapper.find('WithStyles(Button)');
+        expect(button.length).toEqual(1);
+        button.simulate('click');
+
+        expect(mockCallback).toHaveBeenCalledTimes(1);
+    });
 });

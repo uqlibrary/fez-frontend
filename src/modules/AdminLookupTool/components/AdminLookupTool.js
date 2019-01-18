@@ -51,7 +51,7 @@ export class AdminLookupTool extends PureComponent {
             <StandardPage title={locale.components.adminLookupTools.title}>
                 {
                     this.props.loadingResults &&
-                        <InlineLoader message={locale.components.adminLookupTools.loadingMessage ? locale.components.adminLookupTools.loadingMessage : 'Loading'}/>
+                    <InlineLoader message={locale.components.adminLookupTools.loadingMessage ? locale.components.adminLookupTools.loadingMessage : 'Loading'}/>
                 }
                 {
                     !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length > 0 &&
@@ -66,19 +66,19 @@ export class AdminLookupTool extends PureComponent {
 
                 {
                     !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length === 0 &&
-                        <Fragment>
+                    <Fragment>
 
-                            {/* incites */}
-                            <AdminLookupForm
-                                isMinimised={false}
-                                localeform={locale.components.adminLookupTools.forms.incites}
-                                actions={this.props.actions}
-                                sendInputsToResultComponent={this.recordInputs} // function
-                            />
+                        {/* incites */}
+                        <AdminLookupForm
+                            isMinimised={false}
+                            localeform={locale.components.adminLookupTools.forms.incites}
+                            actions={this.props.actions}
+                            sendInputsToResultComponent={this.recordInputs} // function
+                        />
 
-                            {/* put more forms here */}
+                        {/* put more forms here */}
 
-                        </Fragment>
+                    </Fragment>
                 }
             </StandardPage>
         );
