@@ -79,7 +79,7 @@ export default class ResearchReportForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    name="fez_record_search_key_report_number"
+                                    name="fez_record_search_key_report_number.rek_report_number"
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.reportNumber}
