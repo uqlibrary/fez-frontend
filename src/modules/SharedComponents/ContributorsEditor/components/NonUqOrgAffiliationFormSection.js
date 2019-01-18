@@ -23,6 +23,7 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
                     value={orgAffiliation}
                     onChange={onOrgAffiliationChange}
                     label={locale.fields.organisation.inputLabel}
+                    placeholder={locale.fields.organisation.placeholder}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -53,11 +54,12 @@ NonUqOrgAffiliationFormSection.defaultProps = {
     locale: {
         fields: {
             organisation: {
-                inputLabel: 'Organisation'
+                inputLabel: 'Organisation',
+                placeholder: 'Enter the primary affiliated organisation'
             },
             organisationType: {
                 inputLabel: 'Organisation type',
-                placeholder: 'Select an organisation type',
+                placeholder: 'Select an affiliated organisation type',
             }
         }
     }

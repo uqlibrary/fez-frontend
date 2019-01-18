@@ -43,6 +43,7 @@ export const maxListEditorTextLength = (max) => (value) => {
 };
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
+export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
 
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {

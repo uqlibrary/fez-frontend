@@ -81,9 +81,8 @@ export default class CreativeWorkForm extends Component {
                                     name="rek_doi"
                                     type="text"
                                     fullWidth
-                                    label={'DOI'}
-                                    placeholder={'Please enter a valid DOI.'}
                                     validate={[validation.doi]}
+                                    {...txt.information.fieldLabels.doi}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
