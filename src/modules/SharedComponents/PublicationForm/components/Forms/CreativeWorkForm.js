@@ -102,7 +102,7 @@ export default class CreativeWorkForm extends Component {
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
-                                    name="rek_end_date"
+                                    name="fez_record_search_key_end_date.rek_end_date"
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.enddate.title}
                                     floatingTitleRequired

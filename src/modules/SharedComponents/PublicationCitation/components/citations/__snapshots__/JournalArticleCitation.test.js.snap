@@ -9500,7 +9500,10 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
             >
               <span
                 className="citationPageRange empty"
-              />
+              >
+                 
+                 
+              </span>
             </PageRangeCitationView>
             <span>
               . 

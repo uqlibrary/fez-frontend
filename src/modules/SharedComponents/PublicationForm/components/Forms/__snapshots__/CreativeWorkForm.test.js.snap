@@ -119,7 +119,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             disabled={false}
             floatingTitle="Publication end date"
             floatingTitleRequired={true}
-            name="rek_end_date"
+            name="fez_record_search_key_end_date.rek_end_date"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>

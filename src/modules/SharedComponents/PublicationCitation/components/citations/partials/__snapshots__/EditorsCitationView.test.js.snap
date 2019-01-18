@@ -12,7 +12,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
     }
   }
   initialNumberOfAuthors={10}
-  prefix=" edited by "
+  prefix=" Edited by "
   publication={Object {}}
   searchKey={
     Object {
@@ -39,7 +39,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
     }
   }
   initialNumberOfAuthors={10}
-  prefix=" edited by "
+  prefix=" Edited by "
   publication={
     Object {
       "fez_record_search_key_contributor": Array [
@@ -77,7 +77,7 @@ exports[`EditorsCitationView test  should render component with three contributo
     }
   }
   initialNumberOfAuthors={10}
-  prefix=" edited by "
+  prefix=" Edited by "
   publication={
     Object {
       "fez_record_search_key_contributor": Array [
@@ -127,7 +127,7 @@ exports[`EditorsCitationView test  should render component with two contributors
     }
   }
   initialNumberOfAuthors={10}
-  prefix=" edited by "
+  prefix=" Edited by "
   publication={
     Object {
       "fez_record_search_key_contributor": Array [
