@@ -48,7 +48,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-            placeholder="City, country"
+            placeholder="Enter place of publication, location or venue"
             type="text"
           />
         </WithStyles(Grid)>
@@ -63,7 +63,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
-            placeholder=""
+            placeholder="Enter the name of the publisher or producer"
             type="text"
           />
         </WithStyles(Grid)>
@@ -78,7 +78,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="DOI"
             name="rek_doi"
-            placeholder="Please enter a valid DOI."
+            placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
             type="text"
             validate={
               Array [
@@ -267,7 +267,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Enter URL for this work."
+            placeholder="Enter a valid URL to the work, or information about this work."
             type="text"
             validate={
               Array [

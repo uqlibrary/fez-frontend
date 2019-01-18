@@ -17,6 +17,9 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Select the option that desribes the significance of the work for you.
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={true}
@@ -50,17 +53,19 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           }
           xs={12}
         >
+          <WithStyles(Typography)>
+            Creator contribution statement
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={true}
-            errorText="Remember to enter your statement in three sections: Background, Contribution, Significance"
             fullWidth={true}
-            label="Creator contribution statement"
-            multiline={true}
             name="impactStatement"
-            placeholder="Enter your statement in three sections: Background, Contribution, Significance"
-            rows={8}
-            type="text"
             validate={
               Array [
                 [Function],
@@ -87,10 +92,13 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Abstract/Description (for public view)
+          </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description (for public view)
+            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -120,7 +128,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
+                    "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -191,7 +199,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
+                    "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -254,8 +262,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             floatingLabelText="Series"
+            hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
-            placeholder=""
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -346,6 +354,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
+            placeholder="Type of work, e.g. Video, Map, Oil painting"
             type="text"
           />
         </WithStyles(Grid)>
@@ -442,6 +451,9 @@ exports[`Component NtroFields should render contribution statement fields as wel
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Select the option that desribes the significance of the work for you.
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -475,17 +487,19 @@ exports[`Component NtroFields should render contribution statement fields as wel
           }
           xs={12}
         >
+          <WithStyles(Typography)>
+            Creator contribution statement
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
-            errorText="Remember to enter your statement in three sections: Background, Contribution, Significance"
             fullWidth={true}
-            label="Creator contribution statement"
-            multiline={true}
             name="impactStatement"
-            placeholder="Enter your statement in three sections: Background, Contribution, Significance"
-            rows={8}
-            type="text"
             validate={
               Array [
                 [Function],
@@ -512,10 +526,13 @@ exports[`Component NtroFields should render contribution statement fields as wel
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Abstract/Description (for public view)
+          </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description (for public view)
+            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -545,7 +562,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
+                    "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -616,7 +633,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
+                    "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -679,8 +696,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             floatingLabelText="Series"
+            hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
-            placeholder=""
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -771,6 +788,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
+            placeholder="Type of work, e.g. Video, Map, Oil painting"
             type="text"
           />
         </WithStyles(Grid)>
@@ -867,10 +885,13 @@ exports[`Component NtroFields should render default view 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Abstract/Description (for public view)
+          </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description (for public view)
+            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -900,7 +921,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
+                    "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -971,7 +992,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
+                    "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -1034,8 +1055,8 @@ exports[`Component NtroFields should render default view 1`] = `
             component={[Function]}
             disabled={false}
             floatingLabelText="Series"
+            hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
-            placeholder=""
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1126,6 +1147,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
+            placeholder="Type of work, e.g. Video, Map, Oil painting"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1222,6 +1244,9 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Select the option that desribes the significance of the work for you.
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -1255,17 +1280,19 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           }
           xs={12}
         >
+          <WithStyles(Typography)>
+            Creator contribution statement
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            variant="caption"
+          >
+            Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.
+          </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
-            errorText="Remember to enter your statement in three sections: Background, Contribution, Significance"
             fullWidth={true}
-            label="Creator contribution statement"
-            multiline={true}
             name="impactStatement"
-            placeholder="Enter your statement in three sections: Background, Contribution, Significance"
-            rows={8}
-            type="text"
             validate={
               Array [
                 [Function],
@@ -1292,10 +1319,13 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)>
+            Abstract/Description (for public view)
+          </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
           >
-            Abstract/Description (for public view)
+            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -1325,7 +1355,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
-                    "inputFieldHint": "eg. 979-0-XXX-XXXXX-X or M-XXXX-XXXX-X",
+                    "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -1396,7 +1426,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
-                    "inputFieldHint": "eg. BR-BMG-03-00729 (automatic hyphenation)",
+                    "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
                       Pleasepress 
@@ -1459,8 +1489,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             floatingLabelText="Series"
+            hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
-            placeholder=""
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1551,6 +1581,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
+            placeholder="Type of work, e.g. Video, Map, Oil painting"
             type="text"
           />
         </WithStyles(Grid)>

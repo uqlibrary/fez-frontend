@@ -603,11 +603,15 @@ export default {
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'City, country'
+                    placeholder: 'Enter place of publication, location or venue'
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: ''
+                    placeholder: 'Enter the name of the publisher or producer'
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 },
                 date: {
                     title: 'Publication (start) date',
@@ -630,7 +634,7 @@ export default {
                 abstract: {
                     label: 'Abstract/Description',
                     placeholder: 'Provide an abstract or summary of the work.'
-                }
+                },
             }
         },
         authors: txt.components.authors,
@@ -648,7 +652,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter URL for this work.',
+                    placeholder: 'Enter a valid URL to the work, or information about this work.',
                 }
             }
         },
@@ -1071,6 +1075,7 @@ export default {
             }
         }
     },
+
     fileUpload: {
         title: 'Upload files',
         // help: {

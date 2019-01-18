@@ -57,11 +57,12 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Author/Creator contribution statement (not for public view)',
                 fields: {
                     scaleOfWork: {
-                        label: 'Scale/Significance of work'
+                        label: 'Scale/Significance of work',
+                        description: 'Select the option that desribes the significance of the work for you.',
                     },
                     impactStatement: {
                         label: 'Creator contribution statement',
-                        placeholder: 'Enter your statement in three sections: Background, Contribution, Significance',
+                        placeholder: 'Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.',
                         description: 'Remember to enter your statement in three sections: Background, Contribution, Significance'
                     },
                 }
@@ -70,11 +71,12 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Non-traditional research output metadata',
                 fields: {
                     abstract: {
-                        label: 'Abstract/Description (for public view)'
+                        label: 'Abstract/Description (for public view)',
+                        description: 'Enter a statement (800 characters or less, approximately 100 words) that summarises the work',
                     },
                     series: {
                         floatingLabelText: 'Series',
-                        placeholder: ''
+                        hintText: 'Enter the name of publication, performance, recording, or event series'
                     },
                     volume: {
                         label: 'Volume',
@@ -94,6 +96,7 @@ export default class NtroFields extends React.PureComponent {
                     },
                     physicalDescription: {
                         label: 'Physical description',
+                        placeholder: 'Type of work, e.g. Video, Map, Oil painting'
                     },
                     audienceSize: {
                         label: 'Audience size',
@@ -155,7 +158,6 @@ export default class NtroFields extends React.PureComponent {
 
     render() {
         const {contributionStatement, metadata, grantEditor} = this.props.locale;
-
         return (
             <React.Fragment>
                 {
@@ -164,6 +166,7 @@ export default class NtroFields extends React.PureComponent {
                         <StandardCard title={contributionStatement.title}>
                             <Grid container spacing={8}>
                                 <Grid item xs={12}>
+                                    <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
                                     <Field
                                         component={SelectField}
                                         disabled={this.props.submitting}
@@ -177,18 +180,14 @@ export default class NtroFields extends React.PureComponent {
                                     </Field>
                                 </Grid>
                                 <Grid item xs={12} style={{marginTop: 24}}>
+                                    <Typography>{contributionStatement.fields.impactStatement.label}</Typography>
+                                    <Typography variant={'caption'}>{contributionStatement.fields.impactStatement.placeholder}</Typography>
                                     <Field
-                                        component={TextField}
+                                        component={RichEditorField}
                                         name="impactStatement"
-                                        type="text"
-                                        multiline
-                                        rows={8}
                                         fullWidth
                                         disabled={this.props.submitting}
-                                        label={contributionStatement.fields.impactStatement.label}
-                                        placeholder={contributionStatement.fields.impactStatement.placeholder}
-                                        validate={[validation.required, validation.maxLength2000]}
-                                        errorText={contributionStatement.fields.impactStatement.description}
+                                        validate={[validation.required, validation.maxListEditorTextLength2000]}
                                     />
                                 </Grid>
                             </Grid>
@@ -199,7 +198,8 @@ export default class NtroFields extends React.PureComponent {
                     <StandardCard title={metadata.title}>
                         <Grid container spacing={16}>
                             <Grid item xs={12}>
-                                <Typography variant="caption" children={metadata.fields.abstract.label}/>
+                                <Typography children={metadata.fields.abstract.label}/>
+                                <Typography variant="caption" children={metadata.fields.abstract.description}/>
                                 <Field
                                     component={RichEditorField}
                                     name="ntroAbstract"
@@ -247,7 +247,8 @@ export default class NtroFields extends React.PureComponent {
                                         component={SeriesField}
                                         disabled={this.props.submitting}
                                         name="fez_record_search_key_series.rek_series"
-                                        {...metadata.fields.series} />
+                                        {...metadata.fields.series}
+                                    />
 
                                 </Grid>
                             }
@@ -328,7 +329,7 @@ export default class NtroFields extends React.PureComponent {
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
-                                        label={metadata.fields.physicalDescription.label}
+                                        {...metadata.fields.physicalDescription}
                                     />
                                 </Grid>
                             }
