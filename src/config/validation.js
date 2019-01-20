@@ -137,8 +137,8 @@ export const checkDigit = subject => {
 
 export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
-    const regex = /^(?:ISMN )?((?:979-0-[\d-]{9}-\d)|(?:M-[\d-]{9}-\d))$/gi;
-    return subject.trim().length === 0 || (regex.test(subject) && checkDigit(subject)) ? '' : locale.validationErrors.ismn;
+    // const regex = /^(?:ISMN )?((?:979-0-[\d-]{9}-\d)|(?:M-[\d-]{9}-\d))$/gi;
+    return subject.trim().length === 0 || checkDigit(subject) ? '' : locale.validationErrors.ismn;
 };
 
 export const isValidIsrc = subject => {
