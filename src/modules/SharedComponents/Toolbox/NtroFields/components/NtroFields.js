@@ -188,6 +188,7 @@ export default class NtroFields extends React.PureComponent {
                                         fullWidth
                                         disabled={this.props.submitting}
                                         validate={[validation.required, validation.maxListEditorTextLength2000]}
+                                        returnSingleValue
                                     />
                                 </Grid>
                             </Grid>
