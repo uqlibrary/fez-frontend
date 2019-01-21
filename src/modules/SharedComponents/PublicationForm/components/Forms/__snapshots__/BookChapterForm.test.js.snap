@@ -494,6 +494,8 @@ exports[`BookChapterForm renders  component 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            error={false}
+            errorText=""
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
@@ -514,6 +516,8 @@ exports[`BookChapterForm renders  component 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            error={false}
+            errorText=""
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"

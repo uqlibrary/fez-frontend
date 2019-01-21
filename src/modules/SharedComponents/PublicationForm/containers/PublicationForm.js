@@ -72,8 +72,16 @@ const validate = (values) => {
     const startDate = data.rek_date && moment(data.rek_date).format();
 
     if(!!endDate && !!startDate && startDate > endDate) {
-        errors.dateRange = 'Date range is not valid';
+        errors.dateRange = locale.validationErrors.dateRange;
     }
+
+    // Check start/end pages are alid
+    const startPage = data.fez_record_search_key_start_page && data.fez_record_search_key_start_page.rek_start_page;
+    const endPage = data.fez_record_search_key_end_page && data.fez_record_search_key_end_page.rek_end_page;
+    if(!!startPage && !!endPage && startPage > endPage) {
+        errors.pageRange = locale.validationErrors.pageRange;
+    }
+
     return errors;
 };
 

@@ -26,7 +26,8 @@ export default {
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
-        dateRange: 'Please provide a valid date range'
+        dateRange: 'Please provide a valid start/end date range',
+        pageRange: 'Please provide a valid start/end page range'
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
@@ -75,6 +76,7 @@ export default {
         qualityIndicators: 'Quality indicator is required',
         impactStatement: 'Creator contribution statement is required',
         significance: 'Scale/Significance of work is required',
-        dateRange: 'Publication start/end dates are invalid'
+        dateRange: 'Publication start/end dates are invalid',
+        pageRange: 'Please provide a valid start/end page range'
     }
 };
