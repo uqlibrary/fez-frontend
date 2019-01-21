@@ -66,6 +66,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             disabled={true}
             fullWidth={true}
             name="impactStatement"
+            returnSingleValue={true}
             validate={
               Array [
                 [Function],
@@ -500,6 +501,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             disabled={false}
             fullWidth={true}
             name="impactStatement"
+            returnSingleValue={true}
             validate={
               Array [
                 [Function],
@@ -1293,6 +1295,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             disabled={false}
             fullWidth={true}
             name="impactStatement"
+            returnSingleValue={true}
             validate={
               Array [
                 [Function],
