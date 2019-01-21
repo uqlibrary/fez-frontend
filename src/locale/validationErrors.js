@@ -74,6 +74,7 @@ export default {
         fez_record_search_key_grant_id: 'Grant information is required',
         qualityIndicators: 'Quality indicator is required',
         impactStatement: 'Creator contribution statement is required',
-        significance: 'Scale/Significance of work is required'
+        significance: 'Scale/Significance of work is required',
+        dateRange: 'Publication start/end dates are invalid'
     }
 };
