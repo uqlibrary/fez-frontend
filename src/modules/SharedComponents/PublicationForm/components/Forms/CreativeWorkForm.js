@@ -21,6 +21,7 @@ import {
     NTRO_SUBTYPE_CW_OTHER,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK
 } from 'config/general';
+import moment from 'moment';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
@@ -28,6 +29,7 @@ export default class CreativeWorkForm extends Component {
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
         isAuthorSelected: PropTypes.bool,
+        formValues: PropTypes.any
     };
 
     constructor(props) {
@@ -36,6 +38,10 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         const txt = formLocale.creativeWork;
+        const formValues = this.props.formValues && this.props.formValues.toJS();
+        const startDate = formValues && formValues.rek_date;
+        const endDate = formValues && formValues.fez_record_search_key_end_date && formValues.fez_record_search_key_end_date.rek_end_date;
+        const dateError = !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format() ? 'Date range is not valid' : '';
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -95,6 +101,7 @@ export default class CreativeWorkForm extends Component {
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
                                     floatingTitleRequired
+                                    hasError={dateError}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -104,7 +111,8 @@ export default class CreativeWorkForm extends Component {
                                     name="fez_record_search_key_end_date.rek_end_date"
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.enddate.title}
-                                    floatingTitleRequired
+                                    // floatingTitleRequired
+                                    hasError={dateError}
                                 />
                             </Grid>
                         </Grid>
