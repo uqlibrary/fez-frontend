@@ -84,7 +84,7 @@ export default class CreativeWorkForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    name="rek_doi"
+                                    name="fez_record_search_key_doi.rek_doi"
                                     type="text"
                                     fullWidth
                                     validate={[validation.doi]}
