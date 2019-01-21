@@ -82,4 +82,28 @@ describe('Component AdminLookupFormResult', () => {
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should not display the secondary field if reportInOutput is not specifically turned on', () => {
+        const props = {localeform: {
+                lookupType: 'incites',
+                lookupLabel: 'Incites',
+                tip: 'View raw output we receive from Incites via their API',
+                primaryField: {
+                    heading: 'UTs',
+                    fromAria: '',
+                    tip: '',
+                    inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                },
+                secondaryField: {
+                    heading: 'API Key',
+                    fromAria: '',
+                    tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
+                    inputPlaceholder: 'Enter API key',
+                },
+                bottomTip: '',
+                submitButtonLabel: 'Submit to Incites',
+            }};
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
