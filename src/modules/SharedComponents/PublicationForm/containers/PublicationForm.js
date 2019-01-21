@@ -7,6 +7,7 @@ import {general, publicationTypes} from 'config';
 import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
+import moment from 'moment';
 
 import * as recordForms from '../components/Forms';
 
@@ -46,6 +47,7 @@ const validate = (values) => {
     const data = values.toJS();
     const errors = {};
 
+    // Check authors validation for special cases
     switch(data.rek_display_type) {
         case general.PUBLICATION_TYPE_BOOK:
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
@@ -63,6 +65,14 @@ const validate = (values) => {
             break;
         default:
             break;
+    }
+
+    // Check start\end dates are valid
+    const endDate = data.fez_record_search_key_end_date && data.fez_record_search_key_end_date.rek_end_date && moment(data.fez_record_search_key_end_date.rek_end_date, 'YYYY-MM-DD').format();
+    const startDate = data.rek_date && moment(data.rek_date).format();
+
+    if(!!endDate && !!startDate && startDate > endDate) {
+        errors.dateRange = 'Date range is not valid';
     }
     return errors;
 };

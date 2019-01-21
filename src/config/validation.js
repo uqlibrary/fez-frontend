@@ -212,7 +212,7 @@ export const getErrorAlertProps = ({dirty = false, submitting = false,
                 ...alertLocale.errorAlert,
                 message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
             };
-        } else if (formErrors && formErrors && formErrors.size === undefined) {
+        } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const message = (
