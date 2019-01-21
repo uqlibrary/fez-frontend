@@ -35,7 +35,7 @@ export class AdminLookupFormResult extends PureComponent {
             <StandardCard title={txt.thisForm.lookupLabel}>
                 <p>{txt.thisForm.primaryField.heading} - {this.props.primaryValue}</p>
                 {
-                    // not all forms will have a second field
+                    // not all forms will have a second field; some of them shouldn't be reported
                     !!txt.thisForm.secondaryField && !!txt.thisForm.secondaryField.reportInOutput && this.props.secondaryValue &&
                     <p>{txt.thisForm.secondaryField.heading} - {this.props.secondaryValue}</p>
                 }

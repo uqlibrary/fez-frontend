@@ -39,7 +39,7 @@ export class AdminLookupForm extends PureComponent {
         });
     };
 
-    _handleSubmitLookup = () => {
+    _handleSubmitLookup = (event) => {
         if (event && event.key && (event.key !== 'Enter')) return;
 
         const lookupType = this.props.localeform.lookupType;
@@ -66,6 +66,7 @@ export class AdminLookupForm extends PureComponent {
             thisForm: this.props.localeform,
         };
         const { primaryValue, secondaryValue } = this.state;
+        const lookupLabel = txt.thisForm.lookupLabel ? txt.thisForm.lookupLabel : 'this form';
         return (
             <StandardCard noHeader>
                 <Grid container spacing={24}>
@@ -76,8 +77,9 @@ export class AdminLookupForm extends PureComponent {
                         <IconButton
                             onClick={this._toggleMinimise}
                             tooltip={!!this.state.isMinimised
-                                ? locale.components.adminLookupTools.tooltip.show + ' for ' + txt.thisForm.lookupLabel
-                                : locale.components.adminLookupTools.tooltip.hide + ' for ' + txt.thisForm.lookupLabel}>
+                                ? locale.components.adminLookupTools.tooltip.show + ' for ' + lookupLabel
+                                : locale.components.adminLookupTools.tooltip.hide + ' for ' + lookupLabel
+                            }>
                             {
                                 !!this.state.isMinimised
                                     ? <KeyboardArrowDown/>
@@ -97,8 +99,8 @@ export class AdminLookupForm extends PureComponent {
                             <TextField
                                 fullWidth
                                 name={'primaryValue'}
-                                placeholder={txt.thisForm.primaryField.inputPlaceholder}
-                                aria-label={txt.thisForm.primaryField.fromAria}
+                                placeholder={txt.thisForm.primaryField.inputPlaceholder ? txt.thisForm.primaryField.inputPlaceholder : ''}
+                                aria-label={txt.thisForm.primaryField.fromAria ? txt.thisForm.primaryField.fromAria : ''}
                                 value={primaryValue}
                                 onChange={this._onChange}
                                 required
@@ -110,12 +112,12 @@ export class AdminLookupForm extends PureComponent {
                             !!txt.thisForm.secondaryField &&
                                 <div>
                                     <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                    <p>{txt.thisForm.secondaryField.tip}</p>
+                                    <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
                                     <TextField
                                         fullWidth
                                         name={'secondaryValue'}
-                                        placeholder={txt.thisForm.secondaryField.inputPlaceholder}
-                                        aria-label={txt.thisForm.secondaryField.fromAria}
+                                        placeholder={txt.thisForm.secondaryField.inputPlaceholder ? txt.thisForm.secondaryField.inputPlaceholder : ''}
+                                        aria-label={txt.thisForm.secondaryField.fromAria ? txt.thisForm.secondaryField.fromAria : ''}
                                         value={secondaryValue}
                                         onChange={this._onChange}
                                         className={'secondaryValue'}

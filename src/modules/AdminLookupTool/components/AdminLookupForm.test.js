@@ -30,6 +30,26 @@ describe('Component AdminLookupForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should display form without a secondary field', () => {
+        const props = {
+            isMinimised: false,
+            localeform: {
+                lookupType: 'incites',
+                lookupLabel: 'Incites',
+                tip: 'View raw output we receive from Incites via their API',
+                primaryField: {
+                    heading: 'UTs',
+                    fromAria: '',
+                    tip: '',
+                    inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                },
+                bottomTip: '',
+                submitButtonLabel: 'Submit to Incites',
+            }};
+        const wrapper = setup({...props});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should return values as expected for a valid submit button click', () => {
         const submitMock = jest.fn();
 
@@ -56,6 +76,8 @@ describe('Component AdminLookupForm', () => {
 
         // clicking the button class the passed in function
         expect(submitMock).toHaveBeenCalledTimes(1);
+
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should toggle nested items on click', () => {
@@ -69,5 +91,22 @@ describe('Component AdminLookupForm', () => {
 
         button.simulate('click'); // close the block again
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not submit if no primary field is entered', () => {
+        const submitMock = jest.fn();
+
+        const props = {
+            isMinimised: false,
+            sendInputsToResultComponent: submitMock
+        };
+        const wrapper = setup({...props});
+        wrapper.instance()._handleSubmitLookup = submitMock;
+
+        const button = wrapper.find('WithStyles(Button)');
+        expect(button.length).toEqual(1);
+        button.simulate('click');
+
+        expect(toJson(wrapper)).toMatchSnapshot(); // still on form page
     });
 });

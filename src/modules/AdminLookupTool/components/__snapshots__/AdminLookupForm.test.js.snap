@@ -40,6 +40,253 @@ exports[`Component AdminLookupForm should display form in minimised view 1`] = `
 </StandardCard>
 `;
 
+exports[`Component AdminLookupForm should display form without a secondary field 1`] = `
+<StandardCard
+  noHeader={true}
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+    >
+      <WithStyles(Typography)
+        variant="headline"
+      >
+        Incites
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(IconButton)
+        onClick={[Function]}
+        tooltip="Hide form for Incites"
+      >
+        <pure(KeyboardArrowUpIcon) />
+      </WithStyles(IconButton)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <p>
+    View raw output we receive from Incites via their API
+  </p>
+  <form>
+    <div>
+      <h4>
+        UTs
+      </h4>
+      <p />
+      <TextField
+        aria-label=""
+        className="primaryValue"
+        fullWidth={true}
+        name="primaryValue"
+        onChange={[Function]}
+        placeholder="Enter one or more UTs, separated by a comma"
+        required={true}
+        select={false}
+        value=""
+        variant="standard"
+      />
+    </div>
+    <p />
+    <WithStyles(Button)
+      aria-label="Submit to Incites"
+      color="primary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Submit to Incites
+    </WithStyles(Button)>
+  </form>
+</StandardCard>
+`;
+
+exports[`Component AdminLookupForm should not submit if no primary field is entered 1`] = `
+<StandardCard
+  noHeader={true}
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+    >
+      <WithStyles(Typography)
+        variant="headline"
+      >
+        Incites
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(IconButton)
+        onClick={[Function]}
+        tooltip="Hide form for Incites"
+      >
+        <pure(KeyboardArrowUpIcon) />
+      </WithStyles(IconButton)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <p>
+    View raw output we receive from Incites via their API
+  </p>
+  <form>
+    <div>
+      <h4>
+        UTs
+      </h4>
+      <p />
+      <TextField
+        aria-label=""
+        className="primaryValue"
+        fullWidth={true}
+        name="primaryValue"
+        onChange={[Function]}
+        placeholder="Enter one or more UTs, separated by a comma"
+        required={true}
+        select={false}
+        value=""
+        variant="standard"
+      />
+    </div>
+    <div>
+      <h4>
+        API Key
+      </h4>
+      <p>
+        Optional, a default key is provided. Limit: 1,000 queries per day
+      </p>
+      <TextField
+        aria-label=""
+        className="secondaryValue"
+        fullWidth={true}
+        name="secondaryValue"
+        onChange={[Function]}
+        placeholder="Enter API key"
+        required={false}
+        select={false}
+        value=""
+        variant="standard"
+      />
+    </div>
+    <p />
+    <WithStyles(Button)
+      aria-label="Submit to Incites"
+      color="primary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Submit to Incites
+    </WithStyles(Button)>
+  </form>
+</StandardCard>
+`;
+
+exports[`Component AdminLookupForm should return values as expected for a valid submit button click 1`] = `
+<StandardCard
+  noHeader={true}
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+    >
+      <WithStyles(Typography)
+        variant="headline"
+      >
+        Incites
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(IconButton)
+        onClick={[Function]}
+        tooltip="Hide form for Incites"
+      >
+        <pure(KeyboardArrowUpIcon) />
+      </WithStyles(IconButton)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <p>
+    View raw output we receive from Incites via their API
+  </p>
+  <form>
+    <div>
+      <h4>
+        UTs
+      </h4>
+      <p />
+      <TextField
+        aria-label=""
+        className="primaryValue"
+        fullWidth={true}
+        name="primaryValue"
+        onChange={[Function]}
+        placeholder="Enter one or more UTs, separated by a comma"
+        required={true}
+        select={false}
+        value="blah"
+        variant="standard"
+      />
+    </div>
+    <div>
+      <h4>
+        API Key
+      </h4>
+      <p>
+        Optional, a default key is provided. Limit: 1,000 queries per day
+      </p>
+      <TextField
+        aria-label=""
+        className="secondaryValue"
+        fullWidth={true}
+        name="secondaryValue"
+        onChange={[Function]}
+        placeholder="Enter API key"
+        required={false}
+        select={false}
+        value="blah"
+        variant="standard"
+      />
+    </div>
+    <p />
+    <WithStyles(Button)
+      aria-label="Submit to Incites"
+      color="primary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Submit to Incites
+    </WithStyles(Button)>
+  </form>
+</StandardCard>
+`;
+
 exports[`Component AdminLookupForm should show form with non-minimised form 1`] = `
 <StandardCard
   noHeader={true}
