@@ -43,7 +43,7 @@ export class NtroDetails extends PureComponent {
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
                     {/* Scale of work */}
                     {
-                        publication.fez_record_search_key_significance.length > 0 &&
+                        publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.significance}
                                 data={publication.fez_record_search_key_significance[0].rek_significance === general.SIGNIFICANCE_MINOR ? 'Minor' : 'Major'}
@@ -67,7 +67,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* ISMN */}
                     {
-                        publication.fez_record_search_key_ismn.length > 0 &&
+                        publication.fez_record_search_key_ismn && publication.fez_record_search_key_ismn.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.fez_record_search_key_ismn}
                             data={publication.fez_record_search_key_ismn[0].rek_ismn}
@@ -75,7 +75,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* ISRC */}
                     {
-                        publication.fez_record_search_key_isrc.length > 0 &&
+                        publication.fez_record_search_key_isrc && publication.fez_record_search_key_isrc.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.fez_record_search_key_isrc}
                             data={publication.fez_record_search_key_isrc[0].rek_isrc}
@@ -149,7 +149,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Quality indicators */}
                     {
-                        publication.fez_record_search_key_quality_indicator.length > 0 &&
+                        publication.fez_record_search_key_quality_indicator && publication.fez_record_search_key_quality_indicator.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.qualityIndicators}
                             data={publication.fez_record_search_key_quality_indicator.map((item1) => {
