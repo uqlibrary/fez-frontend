@@ -325,7 +325,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -346,7 +346,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -361,7 +361,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -398,7 +398,21 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={true}
+            label="Language"
+            multiple={true}
+            name="fez_record_search_key_language.rek_language"
+            required={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -760,7 +774,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -781,7 +795,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -796,7 +810,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -833,7 +847,21 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            label="Language"
+            multiple={true}
+            name="fez_record_search_key_language.rek_language"
+            required={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1119,7 +1147,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -1140,7 +1168,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1155,7 +1183,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1192,7 +1220,21 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            label="Language"
+            multiple={true}
+            name="fez_record_search_key_language.rek_language"
+            required={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1554,7 +1596,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -1575,7 +1617,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1590,7 +1632,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1627,7 +1669,21 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            label="Language"
+            multiple={true}
+            name="fez_record_search_key_language.rek_language"
+            required={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
