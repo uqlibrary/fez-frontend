@@ -12,6 +12,7 @@ import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import RelatedPublications from './RelatedPublications';
 import Links from './Links';
+import NtroDetails from './NtroDetails';
 import {ShareThisErrorBoundary} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
@@ -78,6 +79,7 @@ export default class ViewRecord extends PureComponent {
                     <Links publication={recordToView}/>
                     <RelatedPublications publication={recordToView} />
                     <AdditionalInformation publication={recordToView} />
+                    <NtroDetails publication={recordToView}/>
                     <GrantInformation publication={recordToView} />
                     <PublicationDetails publication={recordToView} />
                     <AvailableVersions publication={recordToView} />

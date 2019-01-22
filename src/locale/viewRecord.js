@@ -65,7 +65,49 @@ export default {
                 'Journal': 'Summary/Description',
                 'Data Collection': 'Dataset description',
                 'Design': 'Project description'
-            }
+            },
+            ntro: {
+                title: 'Non-traditional research output metadata',
+                fields: {
+                    abstract: {
+                        label: 'Abstract/Description (for public view)',
+                        description: 'Enter a statement (800 characters or less, approximately 100 words) that summarises the work',
+                    },
+                    series: {
+                        floatingLabelText: 'Series',
+                        hintText: 'Enter the name of publication, performance, recording, or event series'
+                    },
+                    volume: {
+                        label: 'Volume',
+                    },
+                    issue: {
+                        label: 'Issue',
+                    },
+                    startPage: {
+                        label: 'Start page',
+                    },
+                    endPage: {
+                        label: 'End page',
+                    },
+                    extent: {
+                        label: 'Extent',
+                        placeholder: 'Enter total pages, size or duration of work'
+                    },
+                    physicalDescription: {
+                        label: 'Physical description',
+                        placeholder: 'Type of work, e.g. Video, Map, Oil painting'
+                    },
+                    audienceSize: {
+                        label: 'Audience size',
+                    },
+                    peerReviewActivity: {
+                        label: 'Quality indicators',
+                    },
+                    notes: {
+                        label: 'Notes',
+                    },
+                }
+            },
         },
         headings: {
             default: {
@@ -298,7 +340,23 @@ export default {
                 fez_record_search_key_author: 'Creator',
                 fez_record_search_key_rights: 'Rights'
             },
-            'Working Paper': {}
+            'Working Paper': {},
+            'NTRO': {
+                significance: 'Scale of work',
+                impactStatement: 'Impact statement',
+                ntroAbstract: 'Abstract/Description',
+                fez_record_search_key_ismn: 'ISMN',
+                fez_record_search_key_isrc: 'ISRC',
+                rek_series: 'Series',
+                rek_volume_number: 'Volume number',
+                rek_issue_number: 'Issue number',
+                rek_start_page: 'Start page',
+                rek_end_page: 'End page',
+                rek_total_pages: 'Total pages',
+                rek_original_format: 'Original format',
+                rek_audience_size: 'Audience size',
+                qualityIndicators: 'Quality indicators',
+            }
         },
         fields: {
             'Audio Document': [
