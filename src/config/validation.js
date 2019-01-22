@@ -126,9 +126,8 @@ export const isValidIsbn = subject => {
 };
 
 export const checkDigit = subject => {
-    const check = parseInt(subject.slice(-1), 10);
-    const cleanISMN = subject.replace('ISMN ', '');
-    const cleanCapitalM = cleanISMN.replace('m', 'M');
+    const check = subject && subject.toString().slice(-1) && !isNaN(subject.toString().slice(-1)) && parseInt(subject.toString().slice(-1), 10);
+    const cleanCapitalM = subject.toString().replace('m', 'M');
     const cleanOldISMN = cleanCapitalM.replace('M', '9790');
     const ismn = cleanOldISMN.replace(/-/g, '');
     let checksum = null;
