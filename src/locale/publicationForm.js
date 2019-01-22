@@ -288,6 +288,10 @@ export default {
                 totalPages: {
                     label: 'Total pages',
                     placeholder: 'Type total number of pages'
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 }
             }
         },
@@ -534,7 +538,7 @@ export default {
             fieldLabels: {
                 doi: {
                     label: 'DOI',
-                    placeholder: ''
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 },
                 totalPages: {
                     label: 'Total pages',
