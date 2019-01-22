@@ -843,3 +843,9 @@ export const AUDIENCE_SIZE = [
     {text: '100 - 500', value: 453993},
     {text: 'Greater than 500', value: 453994},
 ];
+
+export const LANGUAGE = [
+    {text: 'English', value: 'eng'},
+    {text: 'Chinese', value: 'chn'},
+    {text: 'Spanish', value: 'spn'},
+];

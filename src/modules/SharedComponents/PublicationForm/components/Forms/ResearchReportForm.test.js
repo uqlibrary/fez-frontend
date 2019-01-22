@@ -39,6 +39,6 @@ describe('ResearchReportForm renders ', () => {
     it('component with 4 input fields for NTRO', () => {
         const wrapper = setup({isNtro: true});
         expect(wrapper.find('Field').length).toEqual(11);
-        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(5);
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(6);
     });
 });

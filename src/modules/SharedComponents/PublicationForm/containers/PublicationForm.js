@@ -129,7 +129,12 @@ const mapStateToProps = (state) => {
         isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
         hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
         docTypeSubTypeCombo: docTypeSubTypeCombo,
-        isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false
+        isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false,
+        initialValues: {
+            fez_record_search_key_language: {
+                rek_language: ['eng']
+            }
+        }
     };
 };
 
