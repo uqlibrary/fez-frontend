@@ -826,13 +826,13 @@ export const SIGNIFICANCE_MAJOR = 454026;
 export const SIGNIFICANCE_MINOR = 454027;
 
 export const QUALITY_INDICATORS = [
-    {text: 'Option 1', value: 453996},
-    {text: 'Option 2', value: 453997},
-    {text: 'Option 3', value: 454033},
-    {text: 'Option 4', value: 454034},
-    {text: 'Option 5', value: 454035},
-    {text: 'Option 6', value: 454036},
-    {text: 'Option 7', value: 454037},
+    {text: 'Disseminated via (inter)nationally recognised outlet or entity', value: 453996},
+    {text: 'Association with recognised (inter)national entities, distinct from co-creation', value: 453997},
+    {text: 'Reviews, prizes, awards recognition of the output', value: 454033},
+    {text: 'Commissioned by external body', value: 454034},
+    {text: 'Repeat performances, reproductions, reviews or exhibitions', value: 454035},
+    {text: 'Selected by (inter)nationally recognised outlet or entity', value: 454036},
+    {text: 'Other', value: 454037},
     {text: 'Option 8', value: 454038},
     {text: 'Option 9', value: 454039},
     {text: 'Option 10', value: 454040},
