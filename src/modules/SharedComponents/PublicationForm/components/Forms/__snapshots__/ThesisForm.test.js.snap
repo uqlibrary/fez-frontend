@@ -314,7 +314,7 @@ exports[`ThesisForm  should render component 1`] = `
             fullWidth={true}
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
-            placeholder=""
+            placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
             type="text"
             validate={
               Array [

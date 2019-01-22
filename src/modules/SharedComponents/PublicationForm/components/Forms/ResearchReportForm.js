@@ -87,7 +87,7 @@ export default class ResearchReportForm extends Component {
                             </Grid>
                             {
                                 !this.props.isNtro &&
-                                <Grid item xs={12} sm={6}>
+                                <Grid item xs={12} sm={4}>
                                     <Field
                                         component={TextField}
                                         name="fez_record_search_key_total_pages.rek_total_pages"
@@ -101,7 +101,18 @@ export default class ResearchReportForm extends Component {
                                     />
                                 </Grid>
                             }
-                            <Grid item xs={12} sm={this.props.isNtro ? 12 : 6}>
+                            <Grid item xs={12} sm={this.props.isNtro ? 6 : 4}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_doi.rek_doi"
+                                    type="text"
+                                    fullWidth
+                                    validate={[validation.doi]}
+                                    {...txt.information.fieldLabels.doi}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={this.props.isNtro ? 6 : 4}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
