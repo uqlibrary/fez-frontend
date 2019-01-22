@@ -127,12 +127,15 @@ export const isValidIsbn = subject => {
 
 export const checkDigit = subject => {
     const check = parseInt(subject.slice(-1), 10);
-    const ismn = subject.replace(/(ISMN |M|-|)/g, '');
+    const cleanISMN = subject.replace('ISMN ', '');
+    const cleanCapitalM = cleanISMN.replace('m', 'M');
+    const cleanOldISMN = cleanCapitalM.replace('M', '9790');
+    const ismn = cleanOldISMN.replace(/-/g, '');
     let checksum = null;
     for (let i = 0; i < ismn.length - 1; i++) {
         checksum += parseInt(ismn.charAt(i), 10) * (i % 2 === 0 ? 1 : 3);
     }
-    return (checksum + check) % 10 === 0;
+    return ismn.length === 13 && (checksum + check) % 10 === 0;
 };
 
 export const isValidIsmn = subject => {
