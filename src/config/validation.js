@@ -1,5 +1,6 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
+import Immutable from 'immutable';
 
 // Min Length
 export const maxLength = max => value => value && value.replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
@@ -74,7 +75,14 @@ export const isValidPublicationTitle = value => {
 // Generic
 export const required = value => value ? undefined : locale.validationErrors.required;
 
-export const requiredList = value => (value && value.length > 0 ? undefined : locale.validationErrors.required);
+export const requiredList = value => {
+    if(value instanceof Immutable.List) {
+        return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
+    } else {
+        return value && value.length > 0 ? undefined : locale.validationErrors.required;
+    }
+};
+
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = (value) => !!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined;
