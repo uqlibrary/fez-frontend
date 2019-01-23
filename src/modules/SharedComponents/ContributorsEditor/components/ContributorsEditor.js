@@ -125,7 +125,6 @@ export class ContributorsEditor extends PureComponent {
     }
 
     assignContributor = (contributor, index) => {
-        // console.log(contributor, index);
         const newContributors = this.state.contributors.map((item, itemIndex) => (
             {
                 ...item,
@@ -176,7 +175,6 @@ export class ContributorsEditor extends PureComponent {
             });
         }
 
-        console.log(this.state.contributors);
         return (
             <div>
                 {

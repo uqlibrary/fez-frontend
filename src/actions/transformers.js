@@ -476,8 +476,6 @@ export const getNtroMetadataSearchKeys = (data) => {
     if (!!data.impactStatement) {
         const hasAValue = (value) => !!value.rek_author_id && !isNaN(value.rek_author_id);
         const selectedAuthorIdIndex = getRecordAuthorsIdSearchKey(data.authors).fez_record_search_key_author_id.findIndex(hasAValue);
-        console.log('How many authors?   ', data.authors.length);
-        console.log('Which author is me? ', selectedAuthorIdIndex);
         ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) =>{
             if (selectedAuthorIdIndex === index) {
                 return {
@@ -491,7 +489,6 @@ export const getNtroMetadataSearchKeys = (data) => {
                 };
             }
         });
-        console.log('This should be correct: ', ntroMetadata.fez_record_search_key_creator_contribution_statement);
     }
 
     if (!!data.qualityIndicators) {
