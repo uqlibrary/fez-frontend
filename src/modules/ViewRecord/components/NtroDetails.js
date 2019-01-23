@@ -17,7 +17,8 @@ const styles = (theme) => ({
 export class NtroDetails extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        account: PropTypes.object
     };
 
     ViewNtroRow = ({heading, data}) => (
@@ -34,6 +35,7 @@ export class NtroDetails extends PureComponent {
 
     render() {
         const {publication} = this.props;
+        console.log(this.props);
         if (!general.NTRO_SUBTYPES.includes(publication.rek_subtype)) {
             return null;
         }
@@ -44,22 +46,43 @@ export class NtroDetails extends PureComponent {
                     {/* Scale of work */}
                     {
                         publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
-                            <this.ViewNtroRow
-                                heading={locale.viewRecord.headings.NTRO.significance}
-                                data={publication.fez_record_search_key_significance[0].rek_significance === general.SIGNIFICANCE_MINOR ? 'Minor' : 'Major'}
-                            />
+                        <this.ViewNtroRow
+                            heading={locale.viewRecord.headings.NTRO.significance}
+                            data={publication.fez_record_search_key_significance[0].rek_significance === general.SIGNIFICANCE_MINOR ? 'Minor' : 'Major'}
+                        />
                     }
                     {/* Contribution statement */}
                     {
-                        publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement[0].rek_creator_contribution_statement &&
+                        publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.impactStatement}
-                            data={ReactHtmlParser(publication.fez_record_search_key_creator_contribution_statement[0].rek_creator_contribution_statement)}
+                            data={
+                                publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
+                                    // Admins will see all statements in the record
+                                    if(!!this.props.account.canMasquerade && item.rek_creator_contribution_statement.trim().length !== 0) {
+                                        return (
+                                            <Grid container key={index} alignContent={'flex-start'} alignItems={'flex-start'} justify={'flex-start'}>
+                                                <Grid item xs={'auto'} style={{marginRight: 12}}>
+                                                    <p>{publication.fez_record_search_key_author_id[index].rek_author_id_lookup}</p>
+                                                </Grid>
+                                                <Grid item xs>
+                                                    {ReactHtmlParser(item.rek_creator_contribution_statement)}
+                                                </Grid>
+                                            </Grid>
+                                        );
+                                        // Otherwise, we only show the 1 that is populated
+                                    } else if (item.rek_creator_contribution_statement.trim().length !== 0) {
+                                        return ReactHtmlParser(item.rek_creator_contribution_statement);
+                                    } else {
+                                        return null;
+                                    }
+                                })
+                            }
                         />
                     }
                     {/* NTRO Abstract */}
                     {
-                        publication.rek_description &&
+                        publication.rek_description && publication.rek_description.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.ntroAbstract}
                             data={ReactHtmlParser(publication.rek_description)}
@@ -70,7 +93,15 @@ export class NtroDetails extends PureComponent {
                         publication.fez_record_search_key_ismn && publication.fez_record_search_key_ismn.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.fez_record_search_key_ismn}
-                            data={publication.fez_record_search_key_ismn[0].rek_ismn}
+                            data={publication.fez_record_search_key_ismn.map((item, index) => {
+                                return (
+                                    <span key={index}>
+                                        {item.rek_ismn}
+                                        {publication.fez_record_search_key_ismn.length > 1 && index < publication.fez_record_search_key_ismn.length - 1 && <br/>}
+                                    </span>
+                                );
+                            })
+                            }
                         />
                     }
                     {/* ISRC */}
@@ -78,7 +109,15 @@ export class NtroDetails extends PureComponent {
                         publication.fez_record_search_key_isrc && publication.fez_record_search_key_isrc.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.fez_record_search_key_isrc}
-                            data={publication.fez_record_search_key_isrc[0].rek_isrc}
+                            data={publication.fez_record_search_key_isrc.map((item, index) => {
+                                return (
+                                    <span key={index}>
+                                        {item.rek_isrc}
+                                        {publication.fez_record_search_key_isrc.length > 1 && index < publication.fez_record_search_key_isrc.length - 1 && <br/>}
+                                    </span>
+                                );
+                            })
+                            }
                         />
                     }
                     {/* Series */}
@@ -129,6 +168,25 @@ export class NtroDetails extends PureComponent {
                             data={publication.fez_record_search_key_total_pages.rek_total_pages}
                         />
                     }
+
+                    {/* Language */}
+                    {
+                        publication.fez_record_search_key_language && publication.fez_record_search_key_language.length > 0 &&
+                        <this.ViewNtroRow
+                            heading={locale.viewRecord.headings.NTRO.rek_language}
+                            data={publication.fez_record_search_key_language.map((item1, index) => {
+                                return general.LANGUAGE.map((item2) => {
+                                    return item1.rek_language === item2.value &&
+                                        <span key={index}>
+                                            {item2.text}
+                                            {publication.fez_record_search_key_language.length > 1 && index < publication.fez_record_search_key_language.length - 1 && ', '}
+                                        </span>;
+                                });
+                            })
+                            }
+                        />
+                    }
+
                     {/* Original format */}
                     {
                         publication.fez_record_search_key_original_format && publication.fez_record_search_key_original_format.rek_original_format &&
@@ -152,12 +210,12 @@ export class NtroDetails extends PureComponent {
                         publication.fez_record_search_key_quality_indicator && publication.fez_record_search_key_quality_indicator.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.qualityIndicators}
-                            data={publication.fez_record_search_key_quality_indicator.map((item1) => {
-                                return general.QUALITY_INDICATORS.map((item2, index) => {
+                            data={publication.fez_record_search_key_quality_indicator.map((item1, index) => {
+                                return general.QUALITY_INDICATORS.map((item2) => {
                                     return item1.rek_quality_indicator === item2.value &&
                                         <span key={index}>
                                             {item2.text}
-                                            {publication.fez_record_search_key_quality_indicator.length > 1 && (index < publication.fez_record_search_key_quality_indicator.length) && ', '}
+                                            {publication.fez_record_search_key_quality_indicator.length > 1 && index < publication.fez_record_search_key_quality_indicator.length - 1 && ', '}
                                         </span>;
                                 });
                             })

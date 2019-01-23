@@ -447,6 +447,19 @@ export const getGrantsListSearchKey = (grants) => {
     };
 };
 
+export const getLanguageSearchKey = (languages) => {
+    if (!languages || languages.length === 0) return {};
+    return {
+        fez_record_search_key_language: [
+            ...languages
+                .map((item, index) => ({
+                    rek_language: item,
+                    rek_language_order: index + 1
+                }))
+        ]
+    };
+};
+
 export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
 

@@ -25,7 +25,8 @@ export default class ViewRecord extends PureComponent {
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
-        hideCulturalSensitivityStatement: PropTypes.bool
+        hideCulturalSensitivityStatement: PropTypes.bool,
+        account: PropTypes.object
     };
 
     componentDidMount() {
@@ -62,7 +63,6 @@ export default class ViewRecord extends PureComponent {
         } else if(!recordToView) {
             return <div className="empty"/>;
         }
-
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{marginTop: -24}}>
@@ -79,7 +79,7 @@ export default class ViewRecord extends PureComponent {
                     <Links publication={recordToView}/>
                     <RelatedPublications publication={recordToView} />
                     <AdditionalInformation publication={recordToView} />
-                    <NtroDetails publication={recordToView}/>
+                    <NtroDetails publication={recordToView} account={this.props.account}/>
                     <GrantInformation publication={recordToView} />
                     <PublicationDetails publication={recordToView} />
                     <AvailableVersions publication={recordToView} />

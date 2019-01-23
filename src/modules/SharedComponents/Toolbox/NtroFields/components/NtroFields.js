@@ -188,8 +188,11 @@ export default class NtroFields extends React.PureComponent {
                                         fullWidth
                                         disabled={this.props.submitting}
                                         validate={[validation.required, validation.maxListEditorTextLength2000]}
+                                        placeholder={'this is a test'}
+                                        helpText={'this is a test'}
                                         returnSingleValue
                                     />
+                                    <Typography variant={'caption'}>{contributionStatement.fields.impactStatement.description}</Typography>
                                 </Grid>
                             </Grid>
                         </StandardCard>
@@ -358,11 +361,12 @@ export default class NtroFields extends React.PureComponent {
                                 <Grid item xs={12} sm={this.row5Width}>
                                     <Field
                                         component={LanguageField}
-                                        name="fez_record_search_key_language.rek_language"
+                                        name="languages"
                                         disabled={this.props.submitting}
                                         label={metadata.fields.language.label}
                                         required
                                         multiple
+                                        validate={[validation.requiredList]}
                                     />
                                 </Grid>
                             }

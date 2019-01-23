@@ -356,6 +356,7 @@ export default {
                 rek_original_format: 'Original format',
                 rek_audience_size: 'Audience size',
                 qualityIndicators: 'Quality indicators',
+                rek_language: 'Language(s)'
             }
         },
         fields: {

@@ -131,9 +131,7 @@ const mapStateToProps = (state) => {
         docTypeSubTypeCombo: docTypeSubTypeCombo,
         isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false,
         initialValues: {
-            fez_record_search_key_language: {
-                rek_language: ['eng']
-            }
+            languages: ['eng']
         }
     };
 };
