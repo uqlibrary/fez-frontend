@@ -30,6 +30,6 @@ describe('DesignForm renders ', () => {
 
     it('component with 6 input fields for NTRO', () => {
         const wrapper = setup({isNtro: true});
-        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(6);
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(7);
     });
 });

@@ -11,6 +11,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {QualityIndicatorField} from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
+import {LanguageField} from 'modules/SharedComponents/Toolbox/LanguageField';
 import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
@@ -35,6 +36,7 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: PropTypes.bool,
         hideSeries: PropTypes.bool,
         hideGrants: PropTypes.bool,
+        hideLanguage: PropTypes.bool,
         showContributionStatement: PropTypes.bool
     };
 
@@ -51,6 +53,7 @@ export default class NtroFields extends React.PureComponent {
         hidePeerReviewActivity: false,
         hideSeries: false,
         hideGrants: false,
+        hideLanguage: false,
         showContributionStatement: false,
         locale: {
             contributionStatement: {
@@ -107,6 +110,9 @@ export default class NtroFields extends React.PureComponent {
                     notes: {
                         label: 'Notes',
                     },
+                    language: {
+                        label: 'Language'
+                    }
                 }
             },
             grantEditor: {
@@ -118,25 +124,19 @@ export default class NtroFields extends React.PureComponent {
     constructor(props) {
         super(props);
         this.row3Width = this.getWidth([props.hideVolume, props.hideIssue, props.hideStartPage, props.hideEndPage]);
-        this.row4Width = this.getWidth([props.hideExtent, props.hideOriginalFormat, props.hideAudienceSize, props.hidePeerReviewActivity]);
+        this.row4Width = this.getWidth([props.hideExtent, props.hideOriginalFormat]);
+        this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
     }
 
     componentWillReceiveProps(nextProps) {
         this.row3Width = this.getWidth([nextProps.hideVolume, nextProps.hideIssue, nextProps.hideStartPage, nextProps.hideEndPage]);
-        this.row4Width = this.getWidth([nextProps.hideExtent, nextProps.hideOriginalFormat, nextProps.hideAudienceSize, nextProps.hidePeerReviewActivity]);
+        this.row4Width = this.getWidth([nextProps.hideExtent, nextProps.hideOriginalFormat]);
+        this.row5Width = this.getWidth([nextProps.hideAudienceSize, nextProps.hidePeerReviewActivity, nextProps.hideLanguage]);
     }
 
     getWidth = (fields) => {
         const numberOfFieldsToDisplay = fields.filter(field => field === false).length;
         return numberOfFieldsToDisplay > 0 && (12 / numberOfFieldsToDisplay) || 12;
-    };
-
-    normalizeIsmn = value => {
-        const text = value.replace(/[^[[:alnum:]-]]/g, '');
-        const normalizedValue = text.replace(/(979)?-?(0)-?(\d{3})?-?(\d{5})?-?(\d)?/g, (m, ...groups) => {
-            return groups.slice(0, 5).filter(token => !!token).join('-');
-        });
-        return `${normalizedValue}`;
     };
 
     normalizeIsrc = value => {
@@ -188,8 +188,11 @@ export default class NtroFields extends React.PureComponent {
                                         fullWidth
                                         disabled={this.props.submitting}
                                         validate={[validation.required, validation.maxListEditorTextLength2000]}
+                                        placeholder={'this is a test'}
+                                        helpText={'this is a test'}
                                         returnSingleValue
                                     />
+                                    <Typography variant={'caption'}>{contributionStatement.fields.impactStatement.description}</Typography>
                                 </Grid>
                             </Grid>
                         </StandardCard>
@@ -323,7 +326,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideOriginalFormat &&
-                                <Grid item xs={12} sm={this.row4Width}>
+                                <Grid item xs={12} sm={this.row5Width}>
                                     <Field
                                         component={TextField}
                                         name="fez_record_search_key_original_format.rek_original_format"
@@ -336,7 +339,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideAudienceSize &&
-                                <Grid item xs={12} sm={this.row4Width}>
+                                <Grid item xs={12} sm={this.row5Width}>
                                     <Field
                                         component={SelectField}
                                         name="fez_record_search_key_audience_size.rek_audience_size"
@@ -354,8 +357,22 @@ export default class NtroFields extends React.PureComponent {
                                 </Grid>
                             }
                             {
+                                !this.props.hideLanguage &&
+                                <Grid item xs={12} sm={this.row5Width}>
+                                    <Field
+                                        component={LanguageField}
+                                        name="languages"
+                                        disabled={this.props.submitting}
+                                        label={metadata.fields.language.label}
+                                        required
+                                        multiple
+                                        validate={[validation.requiredList]}
+                                    />
+                                </Grid>
+                            }
+                            {
                                 !this.props.hidePeerReviewActivity &&
-                                <Grid item xs={12} sm={this.row4Width}>
+                                <Grid item xs={12} sm={this.row5Width}>
                                     <Field
                                         component={QualityIndicatorField}
                                         disabled={this.props.submitting}

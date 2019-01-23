@@ -342,8 +342,8 @@ export default {
             },
             'Working Paper': {},
             'NTRO': {
-                significance: 'Scale of work',
-                impactStatement: 'Impact statement',
+                significance: 'Scale/Significance of work',
+                impactStatement: 'Creator contribution statement',
                 ntroAbstract: 'Abstract/Description',
                 fez_record_search_key_ismn: 'ISMN',
                 fez_record_search_key_isrc: 'ISRC',
@@ -356,6 +356,7 @@ export default {
                 rek_original_format: 'Original format',
                 rek_audience_size: 'Audience size',
                 qualityIndicators: 'Quality indicators',
+                rek_language: 'Language(s)'
             }
         },
         fields: {
