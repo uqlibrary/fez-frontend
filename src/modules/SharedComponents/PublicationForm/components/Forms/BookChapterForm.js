@@ -32,7 +32,6 @@ export default class BookChapterForm extends Component {
 
     render() {
         const txt = formLocale.bookChapter;
-        // console.log(this.props.formValues && this.props.formValues.toJS());
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startPage = formValues && formValues.fez_record_search_key_start_page && formValues.fez_record_search_key_start_page.rek_start_page;
         const endPage = formValues && formValues.fez_record_search_key_end_page && formValues.fez_record_search_key_end_page.rek_end_page;
