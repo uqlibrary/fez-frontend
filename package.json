@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": "github:uqlibrary/fez-frontend",
   "devDependencies": {
     "@sentry/webpack-plugin": "^1.5.2",
     "axios-mock-adapter": "^1.15.0",
@@ -128,8 +129,8 @@
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {
-    "npm": "^6.4.1",
-    "node": "^11.3.0"
+    "npm": "^6.6.0",
+    "node": "^11.7.0"
   },
   "babel": {
     "presets": [
