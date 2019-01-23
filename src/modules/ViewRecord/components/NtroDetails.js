@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
+import {default as global} from 'locale/global';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -35,11 +36,9 @@ export class NtroDetails extends PureComponent {
 
     render() {
         const {publication} = this.props;
-        console.log(this.props);
         if (!general.NTRO_SUBTYPES.includes(publication.rek_subtype)) {
             return null;
         }
-
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
@@ -54,31 +53,23 @@ export class NtroDetails extends PureComponent {
                     {/* Contribution statement */}
                     {
                         publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.impactStatement}
-                            data={
-                                publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
-                                    // Admins will see all statements in the record
-                                    if(!!this.props.account.canMasquerade && item.rek_creator_contribution_statement.trim().length !== 0) {
-                                        return (
-                                            <Grid container key={index} alignContent={'flex-start'} alignItems={'flex-start'} justify={'flex-start'}>
-                                                <Grid item xs={'auto'} style={{marginRight: 12}}>
-                                                    <p>{publication.fez_record_search_key_author_id[index].rek_author_id_lookup}</p>
-                                                </Grid>
-                                                <Grid item xs>
-                                                    {ReactHtmlParser(item.rek_creator_contribution_statement)}
-                                                </Grid>
-                                            </Grid>
-                                        );
-                                        // Otherwise, we only show the 1 that is populated
-                                    } else if (item.rek_creator_contribution_statement.trim().length !== 0) {
-                                        return ReactHtmlParser(item.rek_creator_contribution_statement);
-                                    } else {
-                                        return null;
-                                    }
-                                })
+                        publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
+                            if(item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing) {
+                                return (
+                                    <this.ViewNtroRow
+                                        key={index}
+                                        heading={
+                                            !!this.props.account.canMasquerade && item.rek_creator_contribution_statement.trim().length !== 0 && !!publication.fez_record_search_key_author[index].rek_author
+                                            && `${locale.viewRecord.headings.NTRO.impactStatement} for ${publication.fez_record_search_key_author[index].rek_author}`
+                                            || locale.viewRecord.headings.NTRO.impactStatement
+                                        }
+                                        data={item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
+                                    />
+                                );
+                            } else {
+                                return null;
                             }
-                        />
+                        })
                     }
                     {/* NTRO Abstract */}
                     {
