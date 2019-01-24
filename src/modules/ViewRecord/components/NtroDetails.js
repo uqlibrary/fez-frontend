@@ -12,6 +12,11 @@ import ReactHtmlParser from 'react-html-parser';
 const styles = (theme) => ({
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`
+    },
+    richTextParagraphFix: {
+        '& p:first-of-type': {
+            marginTop: 0
+        }
     }
 });
 
@@ -22,7 +27,7 @@ export class NtroDetails extends PureComponent {
         account: PropTypes.object
     };
 
-    ViewNtroRow = ({heading, subheading, data}) => (
+    ViewNtroRow = ({heading, subheading, className, data}) => (
         <div style={{padding: 8}}>
             <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
@@ -30,7 +35,7 @@ export class NtroDetails extends PureComponent {
                     {!!subheading && <Typography variant="caption" component={'span'} classes={{root: this.props.classes.header}}>{subheading}</Typography>}
                 </Grid>
                 <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                    <Typography variant="body2" component={'span'}>{data}</Typography></Grid>
+                    <Typography variant="body2" component={'span'} className={className}>{data}</Typography></Grid>
             </Grid>
         </div>
     );
@@ -67,6 +72,7 @@ export class NtroDetails extends PureComponent {
                             if(this.props.account.canMasquerade || item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
                                 return (
                                     <this.ViewNtroRow
+                                        className={this.props.classes.richTextParagraphFix}
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
