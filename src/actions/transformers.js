@@ -462,20 +462,27 @@ export const getLanguageSearchKey = (languages) => {
 
 export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
-
+    const hasAValue = (value) => !!value.rek_author_id && !isNaN(value.rek_author_id);
+    const selectedAuthorIdIndex = getRecordAuthorsIdSearchKey(data.authors).fez_record_search_key_author_id.findIndex(hasAValue);
     const ntroMetadata = {};
+
     if (!!data.significance) {
-        ntroMetadata.fez_record_search_key_significance = [
-            {
-                rek_significance: data.significance,
-                rek_significance_order: 1
+        ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
+            if (selectedAuthorIdIndex === index) {
+                return {
+                    rek_significance: data.significance,
+                    rek_significance_order: selectedAuthorIdIndex + 1
+                };
+            } else {
+                return {
+                    rek_significance: 0,
+                    rek_significance_order: index + 1
+                };
             }
-        ];
+        });
     }
 
     if (!!data.impactStatement) {
-        const hasAValue = (value) => !!value.rek_author_id && !isNaN(value.rek_author_id);
-        const selectedAuthorIdIndex = getRecordAuthorsIdSearchKey(data.authors).fez_record_search_key_author_id.findIndex(hasAValue);
         ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) =>{
             if (selectedAuthorIdIndex === index) {
                 return {
