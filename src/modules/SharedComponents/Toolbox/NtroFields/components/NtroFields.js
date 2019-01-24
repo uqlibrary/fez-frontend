@@ -187,7 +187,7 @@ export default class NtroFields extends React.PureComponent {
                                         name="impactStatement"
                                         fullWidth
                                         disabled={this.props.submitting}
-                                        validate={[validation.required, validation.maxListEditorTextLength2000]}
+                                        validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
                                         placeholder={'this is a test'}
                                         helpText={'this is a test'}
                                         returnSingleValue
