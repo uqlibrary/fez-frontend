@@ -12,7 +12,9 @@ export default class RichEditor extends PureComponent {
         disabled: PropTypes.bool,
         height: PropTypes.number,
         meta: PropTypes.object,
-        returnSingleValue: PropTypes.bool
+        returnSingleValue: PropTypes.bool,
+        maxValue: PropTypes.number,
+        instructions: PropTypes.string
     };
 
     static defaultProps = {
@@ -20,7 +22,7 @@ export default class RichEditor extends PureComponent {
         className: '',
         height: 100,
         disabled: false,
-        returnSingleValue: false
+        returnSingleValue: false,
     };
 
     componentDidMount() {
@@ -81,11 +83,15 @@ export default class RichEditor extends PureComponent {
                 <div className={this.props.className} />
                 {
                     this.props.meta && this.props.meta.error &&
-                    <Typography color="error" variant="caption">
-                        {
-                            error || this.props.meta.error
-                        }
-                    </Typography>
+                        <Typography color="error" variant="caption">
+                            {
+                                error || this.props.meta.error
+                            }
+                        </Typography>
+                }
+                {
+                    !this.props.meta || (this.props.meta && !this.props.meta.error) && this.props.maxValue &&
+                    <Typography variant="caption">{this.props.value.length} of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}</Typography>
                 }
             </React.Fragment>
         );

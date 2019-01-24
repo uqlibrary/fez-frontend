@@ -65,9 +65,9 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             fullWidth={true}
-            helpText="this is a test"
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={2000}
             name="impactStatement"
-            placeholder="this is a test"
             returnSingleValue={true}
             validate={
               Array [
@@ -76,11 +76,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           />
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Remember to enter your statement in three sections: Background, Contribution, Significance
-          </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
@@ -526,9 +521,9 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            helpText="this is a test"
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={2000}
             name="impactStatement"
-            placeholder="this is a test"
             returnSingleValue={true}
             validate={
               Array [
@@ -537,11 +532,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           />
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Remember to enter your statement in three sections: Background, Contribution, Significance
-          </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
@@ -1365,9 +1355,9 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            helpText="this is a test"
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={2000}
             name="impactStatement"
-            placeholder="this is a test"
             returnSingleValue={true}
             validate={
               Array [
@@ -1376,11 +1366,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           />
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Remember to enter your statement in three sections: Background, Contribution, Significance
-          </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>

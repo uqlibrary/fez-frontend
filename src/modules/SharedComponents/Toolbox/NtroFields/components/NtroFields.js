@@ -186,13 +186,12 @@ export default class NtroFields extends React.PureComponent {
                                         component={RichEditorField}
                                         name="impactStatement"
                                         fullWidth
+                                        maxValue={2000}
+                                        instructions={contributionStatement.fields.impactStatement.description}
                                         disabled={this.props.submitting}
                                         validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
-                                        placeholder={'this is a test'}
-                                        helpText={'this is a test'}
                                         returnSingleValue
                                     />
-                                    <Typography variant={'caption'}>{contributionStatement.fields.impactStatement.description}</Typography>
                                 </Grid>
                             </Grid>
                         </StandardCard>
