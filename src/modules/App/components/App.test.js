@@ -1,5 +1,5 @@
 import {App} from './App';
-import {accounts, authorDetails} from 'mock/data';
+import {accounts} from 'mock/data';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 
 function setup(testProps, isShallow = true) {

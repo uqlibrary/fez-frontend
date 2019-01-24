@@ -2,9 +2,10 @@ import DateRange from './DateRange';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        onChange: jest.fn() || testProps.onChange,
-        value: {from: null, to: null} || testProps.value,
-        open: null || testProps.open,
+        onChange: testProps.onChange || jest.fn(),
+        value: testProps.value || {from: null, to: null},
+        open: testProps.open || null,
+        onToggle: testProps.onToggle || jest.fn(),
         ...testProps
     };
     return getElement(DateRange, props, isShallow);

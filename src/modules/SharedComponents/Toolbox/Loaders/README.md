@@ -2,34 +2,37 @@
 
 reusable loaders for applications
 
-
 ## AppLoader
-application loader
 
-## Props
+Application loader
+
+Props:
+
 - `title: PropTypes.string.isRequired` - title to display
 - `logoImage: PropTypes.string` - url of an image of a logo
 - `logoText: PropTypes.string` - alt text for a logo image
 - `progressColor: PropTypes.string` - colour of progress animation
-    
-    
+
 ## InlineLoader
-small loader animation to be used inline
 
-## Props
+Small loader animation to be used inline
+
+Props:
+
 - `message: PropTypes.string` - text to display
-
 
 ## ContentLoader
-loader animation inside of a paper card
 
-## Props
+Loader animation inside of a paper card
+
+Props:
+
 - `message: PropTypes.string` - text to display
-
 
 ## Usage
 
-**./App.js**
+### ./App.js
+
 ```jsx
 import React from 'react';
 ...
@@ -47,4 +50,3 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
-

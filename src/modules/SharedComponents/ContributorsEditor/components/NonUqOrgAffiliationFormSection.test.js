@@ -2,8 +2,8 @@ import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
 function setup(testProps, isShallow = true){
     const props = {
-        orgAffiliation: '',
-        orgType: '',
+        orgAffiliation: testProps.orgAffiliation || '',
+        orgType: testProps.orgType || '',
         onOrgAffiliationChange: jest.fn(),
         onOrgTypeChange: jest.fn(),
         locale: {
@@ -34,12 +34,12 @@ describe('NonUqOrgAffiliationFormSection tests ', () => {
     });
 
     it('should render component with organisation affiliation type value', () => {
-        const wrapper = setup({orgType: 453987});
+        const wrapper = setup({orgType: '453987'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with both values', () => {
-        const wrapper = setup({orgAffiliation: 'Test', orgType: 453987});
+        const wrapper = setup({orgAffiliation: 'Test', orgType: '453987'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

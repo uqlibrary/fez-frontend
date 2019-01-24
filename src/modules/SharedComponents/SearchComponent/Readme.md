@@ -3,6 +3,7 @@
 Prototype component to publically search eSpace
 
 ## Props
+
 - `searchQueryParams: PropTypes.object` - Parameters for the search query
 - `inHeader: PropTypes.bool` - Apply styles/behaviour for header placement
 - `showAdvancedSearchButton: PropTypes.bool` - Show button to switch to advanced
@@ -11,23 +12,24 @@ Prototype component to publically search eSpace
 - `showMobileSearchButton: PropTypes.bool` - Show icon to expand mobile search across header
 
 ## Usage
+
 ```jsx
 import React from 'react';
 ...
 
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
-      
+
 const App = () => (
   <div>
   
-    <SearchComponent 
+    <SearchComponent
         inHeader
         showAdvancedSearchButton
         showSearchButton
         showPrefixIcon
-        showMobileSearchButton        
+        showMobileSearchButton
     />
-    
+
   </div>
 );
 
@@ -36,4 +38,3 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
-

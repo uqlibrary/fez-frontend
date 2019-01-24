@@ -1,6 +1,5 @@
 import Orcid from './Orcid';
 import {accounts, currentAuthor} from 'mock/data/account';
-import {ORCID_CLIENT_ID} from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {

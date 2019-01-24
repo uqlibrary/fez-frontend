@@ -1,4 +1,3 @@
-/* eslint-disable */
 export const vocabulariesList = {
     // org units
     453703: {

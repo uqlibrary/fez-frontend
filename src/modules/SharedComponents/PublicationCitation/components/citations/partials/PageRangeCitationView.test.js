@@ -1,5 +1,4 @@
 import PageRangeCitationView from './PageRangeCitationView';
-import {conferencePaper} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component

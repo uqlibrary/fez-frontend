@@ -1,4 +1,4 @@
-# Actions 
+# Actions
 
 ## Action types
 
@@ -8,17 +8,18 @@ All action types are defined in src/actions/actionTypes.js
 
 - Only action creators which handle redux-form should return Promise.resolve() or Promise.reject(), eg claimPublication(), fixPublication()
 - Dispatch [ACTION]_FAILED action in case something went wrong (even if it returns Promise.reject())
- 
+
 ## Testing
 
 Global test setup is done in /src/test.setup.js:
+
 - mockApi - to mock API responses
 - mockActionsStore - to mock store to track all dispatched actions
 - extending expect with `toHaveDispatchedActions` and `toHaveAnyOrderDispatchedActions` to easily compare received actions to expected actions
   
 Template for actions unit tests:
 
-```` 
+````javascript
 
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -65,11 +66,10 @@ describe('[ACTIONS NAME] actions', () => {
             actions.CURRENT_ACCOUNT_ANONYMOUS,
             actions.[ACTION_TYPE]_LOADED
         ];
-       
+
         await mockActionsStore.dispatch([ACTIONS].[ACTION()]());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });
-
 
 ````
