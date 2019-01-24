@@ -1,4 +1,3 @@
-import React from 'react';
 import {FileUploader} from './FileUploader';
 
 function setup(testProps, isShallow = true) {

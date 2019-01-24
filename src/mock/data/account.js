@@ -1,4 +1,3 @@
-/* eslint-disable */
 export const accounts = {
     // staff, no espace data
     uqstaff : {
