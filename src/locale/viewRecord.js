@@ -352,7 +352,7 @@ export default {
                 rek_issue_number: 'Issue number',
                 rek_start_page: 'Start page',
                 rek_end_page: 'End page',
-                rek_total_pages: 'Total pages',
+                rek_total_pages: 'Extent',
                 rek_original_format: 'Original format',
                 rek_audience_size: 'Audience size',
                 qualityIndicators: 'Quality indicators',
@@ -1035,18 +1035,18 @@ export default {
                     field: 'fez_record_search_key_end_page',
                     order: 18
                 },
-                {
-                    field: 'fez_record_search_key_total_pages',
-                    order: 19
-                },
+                // {
+                //     field: 'fez_record_search_key_total_pages',
+                //     order: 19
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 20
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 21
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 21
+                // },
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22
@@ -2457,10 +2457,10 @@ export default {
                     field: 'fez_record_search_key_notes',
                     order: 54
                 },
-                {
-                    field: 'rek_description',
-                    order: 55
-                }
+                // {
+                //     field: 'rek_description',
+                //     order: 55
+                // }
             ]
         },
         adminFields: [

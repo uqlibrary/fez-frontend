@@ -22,11 +22,12 @@ export class NtroDetails extends PureComponent {
         account: PropTypes.object
     };
 
-    ViewNtroRow = ({heading, data}) => (
+    ViewNtroRow = ({heading, subheading, data}) => (
         <div style={{padding: 8}}>
             <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>{heading}</Typography>
+                    {!!subheading && <Typography variant="caption" component={'span'} classes={{root: this.props.classes.header}}>{subheading}</Typography>}
                 </Grid>
                 <Grid item xs={12} sm={9} className={this.props.classes.data}>
                     <Typography variant="body2" component={'span'}>{data}</Typography></Grid>
@@ -45,10 +46,20 @@ export class NtroDetails extends PureComponent {
                     {/* Scale of work */}
                     {
                         publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.significance}
-                            data={publication.fez_record_search_key_significance[0].rek_significance === general.SIGNIFICANCE_MINOR ? 'Minor' : 'Major'}
-                        />
+                        publication.fez_record_search_key_significance.map((item, index) => {
+                            if(item.rek_significance !== 0) {
+                                return (
+                                    <this.ViewNtroRow
+                                        key={index}
+                                        heading={`${locale.viewRecord.headings.NTRO.significance}`}
+                                        subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
+                                        data={item.rek_significance === general.SIGNIFICANCE_MINOR ? 'Minor' : 'Major'}
+                                    />
+                                );
+                            } else {
+                                return null;
+                            }
+                        })
                     }
                     {/* Contribution statement */}
                     {
@@ -59,10 +70,10 @@ export class NtroDetails extends PureComponent {
                                     <this.ViewNtroRow
                                         key={index}
                                         heading={
-                                            !!this.props.account.canMasquerade && item.rek_creator_contribution_statement.trim().length !== 0 && !!publication.fez_record_search_key_author[index].rek_author
-                                            && `${locale.viewRecord.headings.NTRO.impactStatement} for ${publication.fez_record_search_key_author[index].rek_author}`
-                                            || locale.viewRecord.headings.NTRO.impactStatement
+                                            item.rek_creator_contribution_statement.trim().length !== 0 && !!publication.fez_record_search_key_author[index].rek_author
+                                            && locale.viewRecord.headings.NTRO.impactStatement
                                         }
+                                        subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
                                         data={item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
                                     />
                                 );
