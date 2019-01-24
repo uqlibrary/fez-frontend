@@ -1,6 +1,4 @@
-import React from 'react';
 import * as routes from './routes';
-import {getStandardSearchParams} from "./routes";
 
 describe('Backend routes method', () => {
     it('should return search by type', () => {

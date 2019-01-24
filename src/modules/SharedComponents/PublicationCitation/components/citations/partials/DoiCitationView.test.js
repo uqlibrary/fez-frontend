@@ -1,5 +1,4 @@
 import DoiCitationView from './DoiCitationView';
-import {researchReport} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
