@@ -47,17 +47,17 @@ export class NtroDetails extends PureComponent {
                     {
                         publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
                         publication.fez_record_search_key_significance.map((item, index) => {
-                            if(item.rek_significance !== 0) {
+                            if(item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) { return null; } else {
                                 return (
                                     <this.ViewNtroRow
                                         key={index}
                                         heading={`${locale.viewRecord.headings.NTRO.significance}`}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                        data={item.rek_significance === general.SIGNIFICANCE_MINOR ? 'Minor' : 'Major'}
+                                        data={item.rek_significance === general.SIGNIFICANCE_MINOR && 'Minor'
+                                            || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major'
+                                            || (item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) && 'Not set'}
                                     />
                                 );
-                            } else {
-                                return null;
                             }
                         })
                     }
@@ -65,14 +65,11 @@ export class NtroDetails extends PureComponent {
                     {
                         publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
-                            if(item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing) {
+                            if(this.props.account.canMasquerade || item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
                                 return (
                                     <this.ViewNtroRow
                                         key={index}
-                                        heading={
-                                            item.rek_creator_contribution_statement.trim().length !== 0 && !!publication.fez_record_search_key_author[index].rek_author
-                                            && locale.viewRecord.headings.NTRO.impactStatement
-                                        }
+                                        heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
                                         data={item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
                                     />

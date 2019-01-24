@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": "github:uqlibrary/fez-frontend",
   "devDependencies": {
     "@sentry/webpack-plugin": "^1.5.2",
     "axios-mock-adapter": "^1.15.0",
@@ -59,13 +60,14 @@
     "webpack": "^4.16.0",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.10",
+    "webpack-dev-server": "^3.1.14",
     "webpack-pwa-manifest": "^3.7.1"
   },
   "dependencies": {
     "@material-ui/core": "^3.2.0",
     "@material-ui/icons": "^3.0.1",
     "@material/animation": "0.34.0",
+    "@types/jest": "^23.3.13",
     "axios": "^0.18.0",
     "axios-cache-adapter": "^2.0.0",
     "babel-loader": "^7.1.4",
@@ -128,8 +130,8 @@
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {
-    "npm": "^6.4.1",
-    "node": "^11.3.0"
+    "npm": "^6.6.0",
+    "node": "^11.7.0"
   },
   "babel": {
     "presets": [

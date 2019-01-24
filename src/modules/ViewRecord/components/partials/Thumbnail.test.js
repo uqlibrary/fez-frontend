@@ -1,4 +1,3 @@
-import {journalArticle} from 'mock/data/testing/records';
 import Thumbnail from "./Thumbnail";
 
 function setup(testProps, isShallow = true){

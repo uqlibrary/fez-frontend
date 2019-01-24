@@ -12,6 +12,8 @@ exports[`Date range  should render component with values set 1`] = `
       primaryText="2010 - 2016"
     />
   }
+  onToggle={[MockFunction]}
+  open={null}
 />
 `;
 
@@ -81,6 +83,8 @@ exports[`Date range  should render disabled component 1`] = `
       </WithStyles(Grid)>
     </div>
   }
+  onToggle={[MockFunction]}
+  open={null}
 />
 `;
 
@@ -149,5 +153,7 @@ exports[`Date range  should render empty component 1`] = `
       </WithStyles(Grid)>
     </div>
   }
+  onToggle={[MockFunction]}
+  open={null}
 />
 `;

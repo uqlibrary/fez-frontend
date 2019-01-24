@@ -8,16 +8,17 @@ component for a pre-formatted page
 
 ## Usage
 
-**./App.js**
+### ./App.js
+
 ```jsx
 import React from 'react';
 ...
 
 import {StandardPage} from 'uqlibrary-react-toolbox';
-        
+
 const App = () => (
   <div>
-    <StandardPage 
+    <StandardPage
       title='Contact us'>
       some text or react elements....
     </StandardPage>
@@ -29,4 +30,3 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
-
