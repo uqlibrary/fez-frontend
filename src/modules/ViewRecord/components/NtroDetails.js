@@ -47,15 +47,14 @@ export class NtroDetails extends PureComponent {
                     {
                         publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
                         publication.fez_record_search_key_significance.map((item, index) => {
-                            if(item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) { return null; } else {
+                            if((item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) && !this.props.account.canMasquerade) { return null; } else {
                                 return (
                                     <this.ViewNtroRow
                                         key={index}
                                         heading={`${locale.viewRecord.headings.NTRO.significance}`}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
                                         data={item.rek_significance === general.SIGNIFICANCE_MINOR && 'Minor'
-                                            || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major'
-                                            || (item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) && 'Not set'}
+                                            || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major' || 'Not set'}
                                     />
                                 );
                             }
