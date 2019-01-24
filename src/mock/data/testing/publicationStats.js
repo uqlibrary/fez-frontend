@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 export const formattedData = {
     "thomson_citation_count_i": {
         "count": 301,
