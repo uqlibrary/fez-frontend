@@ -10,6 +10,7 @@ import {general} from 'config';
 import ReactHtmlParser from 'react-html-parser';
 import {pathConfig} from 'config/routes';
 import {Link} from 'react-router-dom';
+import {NTRO_SUBTYPE_CW_TEXTUAL_WORK} from 'config/general';
 
 const styles = (theme) => ({
     gridRow: {
@@ -45,7 +46,8 @@ export class NtroDetails extends PureComponent {
     render() {
         const {publication} = this.props;
         const docType = publication.rek_display_type_lookup;
-        if (!general.NTRO_SUBTYPES.includes(publication.rek_subtype)) {
+        const subType = publication.rek_subtype;
+        if (!general.NTRO_SUBTYPES.includes(subType)) {
             return null;
         }
         return (
@@ -174,7 +176,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Total pages */}
                     {
-                        docType !== 'Book Chapter' && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
+                        docType !== 'Book Chapter' && (docType !== 'Book' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_total_pages}
                             data={publication.fez_record_search_key_total_pages.rek_total_pages}
