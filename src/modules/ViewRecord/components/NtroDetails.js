@@ -76,7 +76,7 @@ export class NtroDetails extends PureComponent {
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                        data={item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
+                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
                                     />
                                 );
                             } else {
