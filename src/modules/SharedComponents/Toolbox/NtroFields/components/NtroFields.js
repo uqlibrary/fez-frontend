@@ -325,7 +325,7 @@ export default class NtroFields extends React.PureComponent {
                             }
                             {
                                 !this.props.hideOriginalFormat &&
-                                <Grid item xs={12} sm={this.row5Width}>
+                                <Grid item xs={12} sm={this.row4Width}>
                                     <Field
                                         component={TextField}
                                         name="fez_record_search_key_original_format.rek_original_format"

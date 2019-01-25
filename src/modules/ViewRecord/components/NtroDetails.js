@@ -8,6 +8,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {general} from 'config';
 import ReactHtmlParser from 'react-html-parser';
+import {pathConfig} from 'config/routes';
+import {Link} from 'react-router-dom';
 
 const styles = (theme) => ({
     gridRow: {
@@ -42,6 +44,7 @@ export class NtroDetails extends PureComponent {
 
     render() {
         const {publication} = this.props;
+        const docType = publication.rek_display_type_lookup;
         if (!general.NTRO_SUBTYPES.includes(publication.rek_subtype)) {
             return null;
         }
@@ -125,11 +128,16 @@ export class NtroDetails extends PureComponent {
                         />
                     }
                     {/* Series */}
+                    {/* getSearchUrl({searchQuery: {'rek_series': {'value': series}}}) */}
                     {
                         publication.fez_record_search_key_series && publication.fez_record_search_key_series.rek_series &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_series}
-                            data={publication.fez_record_search_key_series.rek_series}
+                            data={
+                                <Link to={pathConfig.list.series(publication.fez_record_search_key_series.rek_series)}>
+                                    {publication.fez_record_search_key_series.rek_series}
+                                </Link>
+                            }
                         />
                     }
                     {/* Volume number */}
@@ -150,7 +158,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Start page */}
                     {
-                        publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
+                        docType !== 'Book Chapter' && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_start_page}
                             data={publication.fez_record_search_key_start_page.rek_start_page}
@@ -158,7 +166,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* End page */}
                     {
-                        publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
+                        docType !== 'Book Chapter' && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_end_page}
                             data={publication.fez_record_search_key_end_page.rek_end_page}
@@ -166,7 +174,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Total pages */}
                     {
-                        publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
+                        docType !== 'Book Chapter' && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_total_pages}
                             data={publication.fez_record_search_key_total_pages.rek_total_pages}

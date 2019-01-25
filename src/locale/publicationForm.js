@@ -138,9 +138,13 @@ export default {
                     month: 'Month',
                     year: 'Year'
                 },
-                series: {
-                    floatingLabelText: 'Series',
+                extent: {
+                    label: 'Extent',
                     placeholder: ''
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 }
             }
         },
@@ -804,7 +808,13 @@ export default {
                     placeholder: 'Type the geographical location for the design itself.'
                 },
                 date: {
-                    title: 'Publication date',
+                    title: 'Publication/Start date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                endDate: {
+                    title: 'End date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'

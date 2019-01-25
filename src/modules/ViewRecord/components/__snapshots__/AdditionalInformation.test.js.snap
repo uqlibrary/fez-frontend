@@ -546,7 +546,7 @@ exports[`Additional Information Component  should render component with audio do
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -563,7 +563,7 @@ exports[`Additional Information Component  should render component with audio do
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1652,58 +1652,6 @@ exports[`Additional Information Component  should render component with book 1`]
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Series"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            Series
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            component="span"
-            variant="body2"
-          >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Clinical+Psychology%3A+A+Modular+Course&searchMode=advanced"
-            >
-              Clinical Psychology: A Modular Course
-            </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="12"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
         key="additional-info-ISBN"
         spacing={16}
       >
@@ -1759,7 +1707,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -2111,7 +2059,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -2986,59 +2934,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Series"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            Series
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            component="span"
-            variant="body2"
-          >
-            <Link
-              replace={false}
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Advances+in+Experimental+Medicine+and+Biology&searchMode=advanced"
-            >
-              Advances in Experimental Medicine and Biology
-            </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="15"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -3094,7 +2990,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -3150,7 +3046,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -3620,7 +3516,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -3667,7 +3563,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -3714,7 +3610,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -3761,7 +3657,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -3808,7 +3704,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -3855,7 +3751,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="23"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -3902,63 +3798,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="24"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Language"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            Language
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            component="span"
-            variant="body2"
-          >
-            <ul
-              className="list"
-              key="rek_language"
-            >
-              <li
-                key="rek_language-0"
-              >
-                eng
-              </li>
-            </ul>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="25"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -4019,7 +3859,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="26"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -7241,7 +7081,7 @@ exports[`Additional Information Component  should render component with conferen
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -7258,7 +7098,7 @@ exports[`Additional Information Component  should render component with conferen
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -8537,7 +8377,7 @@ exports[`Additional Information Component  should render component with creative
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -8554,7 +8394,7 @@ exports[`Additional Information Component  should render component with creative
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -8579,7 +8419,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -8640,7 +8480,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -18527,7 +18367,7 @@ exports[`Additional Information Component  should render component with journal 
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -18544,7 +18384,7 @@ exports[`Additional Information Component  should render component with journal 
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -21405,7 +21245,7 @@ exports[`Additional Information Component  should render component with journal 
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -21422,7 +21262,7 @@ exports[`Additional Information Component  should render component with journal 
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -26132,7 +25972,7 @@ exports[`Additional Information Component  should render component with newspape
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -26149,7 +25989,7 @@ exports[`Additional Information Component  should render component with newspape
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -31236,7 +31076,7 @@ exports[`Additional Information Component  should render component with referenc
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -31253,7 +31093,7 @@ exports[`Additional Information Component  should render component with referenc
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -32415,7 +32255,7 @@ exports[`Additional Information Component  should render component with research
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -32432,7 +32272,7 @@ exports[`Additional Information Component  should render component with research
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -32570,7 +32410,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -32617,7 +32457,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -32664,7 +32504,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -33211,7 +33051,7 @@ exports[`Additional Information Component  should render component with thesis 1
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -33228,7 +33068,7 @@ exports[`Additional Information Component  should render component with thesis 1
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -33987,7 +33827,7 @@ exports[`Additional Information Component  should render component with video do
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -34004,7 +33844,7 @@ exports[`Additional Information Component  should render component with video do
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -35033,7 +34873,7 @@ exports[`Additional Information Component  should render component with working 
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -35050,7 +34890,7 @@ exports[`Additional Information Component  should render component with working 
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -36074,7 +35914,7 @@ exports[`Additional Information Component  should render oa status value link in
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Publication date"
+        key="additional-info-Publication/Start date"
         spacing={16}
       >
         <WithStyles(Grid)
@@ -36091,7 +35931,7 @@ exports[`Additional Information Component  should render oa status value link in
             component="span"
             variant="body2"
           >
-            Publication date
+            Publication/Start date
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)

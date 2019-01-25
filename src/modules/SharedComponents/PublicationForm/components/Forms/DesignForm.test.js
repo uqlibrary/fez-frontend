@@ -18,7 +18,7 @@ describe('DesignForm renders ', () => {
 
     it('component with 10 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(10);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with all fields disabled', () => {

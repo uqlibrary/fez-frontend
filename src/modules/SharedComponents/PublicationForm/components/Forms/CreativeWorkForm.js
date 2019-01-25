@@ -19,7 +19,8 @@ import {
     CPEE_NTRO_SUBTYPES,
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     NTRO_SUBTYPE_CW_OTHER,
-    NTRO_SUBTYPE_CW_TEXTUAL_WORK
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT
 } from 'config/general';
 import moment from 'moment';
 
@@ -37,6 +38,7 @@ export default class CreativeWorkForm extends Component {
     }
 
     render() {
+        console.log(this.props.subtype);
         const txt = formLocale.creativeWork;
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startDate = formValues && formValues.rek_date;
@@ -60,7 +62,7 @@ export default class CreativeWorkForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
+                            <Grid item xs={12} sm={this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT ? 4 : 6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -70,7 +72,7 @@ export default class CreativeWorkForm extends Component {
                                     {...txt.information.fieldLabels.placeOfPublication}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
+                            <Grid item xs={12} sm={this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT ? 4 : 6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -80,17 +82,20 @@ export default class CreativeWorkForm extends Component {
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_doi.rek_doi"
-                                    type="text"
-                                    fullWidth
-                                    validate={[validation.doi]}
-                                    {...txt.information.fieldLabels.doi}
-                                />
-                            </Grid>
+                            {
+                                this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT &&
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_doi.rek_doi"
+                                        type="text"
+                                        fullWidth
+                                        validate={[validation.doi]}
+                                        {...txt.information.fieldLabels.doi}
+                                    />
+                                </Grid>
+                            }
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}

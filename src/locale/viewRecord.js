@@ -112,7 +112,7 @@ export default {
         headings: {
             default: {
                 rek_title: 'Title',
-                rek_date: 'Publication date',
+                rek_date: 'Publication/Start date',
                 rek_subtype: 'Sub-type',
                 rek_genre: 'Type',
                 rek_genre_type: 'Sub-type',
@@ -523,10 +523,10 @@ export default {
                     field: 'fez_record_search_key_edition',
                     order: 11
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 12
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 12
+                // },
                 {
                     field: 'fez_record_search_key_isbn',
                     order: 13
@@ -539,10 +539,10 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 15
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 16
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 16
+                // },
                 {
                     field: 'fez_record_search_key_start_page',
                     order: 17
@@ -621,10 +621,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 13
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 14
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 14
+                // },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 15
@@ -665,10 +665,10 @@ export default {
                     field: 'fez_record_search_key_total_chapters',
                     order: 24
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 25
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 25
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 26
@@ -1007,10 +1007,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 11
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 12
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 12
+                // },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 13
@@ -2019,10 +2019,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 11
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 12
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 12
+                // },
                 {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 13
@@ -2039,10 +2039,10 @@ export default {
                     field: 'fez_record_search_key_total_pages',
                     order: 16
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 17
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 17
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 18
@@ -2456,11 +2456,7 @@ export default {
                 {
                     field: 'fez_record_search_key_notes',
                     order: 54
-                },
-                // {
-                //     field: 'rek_description',
-                //     order: 55
-                // }
+                }
             ]
         },
         adminFields: [
