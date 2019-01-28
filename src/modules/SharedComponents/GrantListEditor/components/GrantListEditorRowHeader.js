@@ -23,7 +23,7 @@ export class GrantListEditorRowHeader extends PureComponent {
 
     static defaultProps = {
         locale: {
-            GrantName: 'Name as published',
+            GrantAgencyName: 'Name as published',
             GrantID: 'UQ identifier',
             GrantAgencyType: 'Role',
             reorderColumn: 'Reorder entries',
@@ -46,7 +46,7 @@ export class GrantListEditorRowHeader extends PureComponent {
     };
 
     render() {
-        const {GrantName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
+        const {GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
         const {classes, isInfinite} = this.props;
         return (
             <Fragment>
@@ -61,7 +61,7 @@ export class GrantListEditorRowHeader extends PureComponent {
                             <People/> Hello
                         </ListItemIcon>
                     </Hidden>
-                    <ListItemText secondary={GrantName} secondaryTypographyProps={{variant: 'caption'}}/>
+                    <ListItemText secondary={GrantAgencyName} secondaryTypographyProps={{variant: 'caption'}}/>
                     <ListItemText secondary={GrantID} secondaryTypographyProps={{variant: 'caption'}}/>
                     <ListItemText secondary={GrantAgencyType} secondaryTypographyProps={{variant: 'caption'}}/>
                     <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>

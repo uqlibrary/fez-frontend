@@ -395,8 +395,8 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 // * getGrantsListSearchKey - returns the grant grant details as mapped in search keys
 // Input:
 // "grants":[
-//  {"grantName":"Funder 1","grantID":"00001","grantAgencyType":"Museum","disabled":false},
-//  {"grantName":"Funder 2","grantID":"00002","grantAgencyType":"Gallery","disabled":false}
+//  {"grantAgencyName":"Funder 1","grantID":"00001","grantAgencyType":"Museum","disabled":false},
+//  {"grantAgencyName":"Funder 2","grantID":"00002","grantAgencyType":"Gallery","disabled":false}
 // ]
 //
 // Output:
@@ -423,7 +423,7 @@ export const getGrantsListSearchKey = (grants) => {
         fez_record_search_key_grant_agency: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_agency: item.grantName,
+                    rek_grant_agency: item.grantAgencyName,
                     rek_grant_agency_order: index + 1
                 }))
                 .filter(item => !!item.rek_grant_agency)

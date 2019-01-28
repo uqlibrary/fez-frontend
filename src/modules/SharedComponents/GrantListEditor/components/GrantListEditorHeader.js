@@ -24,7 +24,7 @@ export class GrantListEditorHeader extends PureComponent {
 
     static defaultProps = {
         locale: {
-            GrantName: 'Grant name',
+            GrantAgencyName: 'Grant name',
             GrantID: 'Funder/sponsor ID',
             GrantAgencyType: 'Funder/sponsor type',
             reorderColumn: 'Reorder entries',
@@ -48,7 +48,7 @@ export class GrantListEditorHeader extends PureComponent {
     };
 
     render() {
-        const {GrantName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
+        const {GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
         const {classes} = this.props;
         return (
             <Fragment>
@@ -62,7 +62,7 @@ export class GrantListEditorHeader extends PureComponent {
                         <Grid item xs={this.props.width === 'xs' ? 11 : 9}>
                             <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
                                 <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
-                                    <ListItemText secondary={GrantName} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}}/>
+                                    <ListItemText secondary={GrantAgencyName} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}}/>
                                 </Grid>
                                 <Hidden xsDown>
                                     <Grid item xs={this.props.width === 'xs' ? 5 : 4}>

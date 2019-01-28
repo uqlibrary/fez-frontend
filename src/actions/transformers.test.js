@@ -1202,7 +1202,7 @@ describe('getGrantsListSearchKey tests', () => {
 
     it('should return search key with data', () => {
         const input = [{
-            grantName: 'test',
+            grantAgencyName: 'test',
             grantId: 'test123',
             grantAgencyType: '12345'
         }];
@@ -1234,16 +1234,16 @@ describe('getGrantsListSearchKey tests', () => {
     it('should return search key with data filtered empty values', () => {
         const input = [
             {
-                grantName: 'test',
+                grantAgencyName: 'test',
                 grantId: 'test123',
             },
             {
-                grantName: 'testing',
+                grantAgencyName: 'testing',
                 grantId: 'testing123',
                 grantAgencyType: '12345'
             },
             {
-                grantName: 'tested',
+                grantAgencyName: 'tested',
                 grantAgencyType: '56465'
             }
         ];

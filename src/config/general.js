@@ -625,9 +625,9 @@ export const ORG_TYPES_LOOKUP = {
 };
 
 /**
- * @todo Merge grantTypes and orgAffiliationTypes if possible
+ * @todo Merge grantAgencyTypes and orgAffiliationTypes if possible
  */
-export const grantTypes = [
+export const grantAgencyTypes = [
     'Museum',
     'Gallery',
     'Government',
