@@ -25,7 +25,7 @@ export class GrantListEditorRowHeader extends PureComponent {
         locale: {
             GrantName: 'Name as published',
             GrantID: 'UQ identifier',
-            GrantType: 'Role',
+            GrantAgencyType: 'Role',
             reorderColumn: 'Reorder entries',
             deleteAll: 'Remove all entries',
             deleteAllConfirmation: {
@@ -46,7 +46,7 @@ export class GrantListEditorRowHeader extends PureComponent {
     };
 
     render() {
-        const {GrantName, GrantID, GrantType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
+        const {GrantName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
         const {classes, isInfinite} = this.props;
         return (
             <Fragment>
@@ -63,7 +63,7 @@ export class GrantListEditorRowHeader extends PureComponent {
                     </Hidden>
                     <ListItemText secondary={GrantName} secondaryTypographyProps={{variant: 'caption'}}/>
                     <ListItemText secondary={GrantID} secondaryTypographyProps={{variant: 'caption'}}/>
-                    <ListItemText secondary={GrantType} secondaryTypographyProps={{variant: 'caption'}}/>
+                    <ListItemText secondary={GrantAgencyType} secondaryTypographyProps={{variant: 'caption'}}/>
                     <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
                     <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
                         <Tooltip title={deleteAll}>
