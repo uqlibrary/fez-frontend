@@ -45,7 +45,8 @@ describe('Component AdminLookupForm', () => {
                 },
                 bottomTip: '',
                 submitButtonLabel: 'Submit to Incites',
-            }};
+            }
+        };
         const wrapper = setup({...props});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
