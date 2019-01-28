@@ -77,7 +77,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             disabled={false}
             fullWidth={true}
             label="DOI"
-            name="rek_doi"
+            name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
             type="text"
             validate={
@@ -99,6 +99,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             disabled={false}
             floatingTitle="Publication (start) date"
             floatingTitleRequired={true}
+            hasError=""
             name="rek_date"
             required={true}
             validate={
@@ -118,7 +119,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             component={[Function]}
             disabled={false}
             floatingTitle="Publication end date"
-            floatingTitleRequired={true}
+            hasError=""
             name="fez_record_search_key_end_date.rek_end_date"
           />
         </WithStyles(Grid)>

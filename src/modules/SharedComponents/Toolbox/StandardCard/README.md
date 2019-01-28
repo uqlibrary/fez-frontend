@@ -9,19 +9,20 @@ component for a standard card display with help button
 
 ## Usage
 
-**./App.js**
+### **./App.js
+
 ```jsx
 import React from 'react';
 ...
 
 import {StandardCard} from 'uqlibrary-react-toolbox';
-        
+
 const App = () => (
   <div>
-    <StandardCard 
-      title='Contact us' 
-      text='contact details here...' 
-      help={title: 'About', text: 'help text..', buttonLabel:'Close'} 
+    <StandardCard
+      title='Contact us'
+      text='contact details here...'
+      help={title: 'About', text: 'help text..', buttonLabel:'Close'}
        />
   </div>
 );
@@ -31,4 +32,3 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
-

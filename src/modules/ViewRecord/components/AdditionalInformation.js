@@ -28,7 +28,8 @@ const styles = (theme) => ({
 export class AdditionalInformation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        isNtro: PropTypes.bool
     };
 
     renderRow = (heading, data, index) => {

@@ -1,6 +1,5 @@
-/* eslint-disable */
+/* eslint-env jest */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -55,7 +54,7 @@ const toHaveDispatchedActions = (actions, expectedActions) => {
         });
     }
     return {
-        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action))}]`,
+        message: () => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action))}]`,
         pass: pass
     };
 };
@@ -75,7 +74,7 @@ const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
         });
     }
     return {
-        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action))}]`,
+        message: () => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action))}]`,
         pass: pass
     };
 };
@@ -87,9 +86,11 @@ const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
 
 // get a mounted or shallow element
 const getElement = (component, props, isShallow = true) => {
-    if (isShallow) return shallow(
-        React.createElement(component, props)
-    );
+    if (isShallow) {
+        return shallow(
+            React.createElement(component, props)
+        );
+    }
     return mount(
         <Provider store={setupStoreForMount().store}>
             <MemoryRouter initialEntries={[ { pathname: '/', key: 'testKey' } ]}>
@@ -97,7 +98,8 @@ const getElement = (component, props, isShallow = true) => {
                     {React.createElement(component, props)}
                 </MuiThemeProvider>
             </MemoryRouter>
-        </Provider>);
+        </Provider>
+    );
 };
 
 // React Enzyme adapter
@@ -125,5 +127,5 @@ global.toHaveDispatchedActions = toHaveDispatchedActions;
 global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 
-var MockDate = require('mockdate');
+const MockDate = require('mockdate');
 MockDate.set('1/1/2017');

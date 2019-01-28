@@ -18,7 +18,7 @@ describe('DesignForm renders ', () => {
 
     it('component with 10 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(10);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with all fields disabled', () => {
@@ -30,6 +30,6 @@ describe('DesignForm renders ', () => {
 
     it('component with 6 input fields for NTRO', () => {
         const wrapper = setup({isNtro: true});
-        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(6);
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(7);
     });
 });

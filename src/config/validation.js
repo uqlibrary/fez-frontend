@@ -1,15 +1,17 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
+import Immutable from 'immutable';
 
-// Min Length
+// Max Length
 export const maxLength = max => value => value && value.replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLengthWithWhitespace = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
 export const maxLength800 = maxLength(800);
 export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
-// Max Length
+// Min Length
 export const minLength = min => value => (value !== null || value !== undefined) && value.trim().length < min ? locale.validationErrors.minLength.replace('[min]', min) : undefined;
 export const minLength10 = minLength(10);
 
@@ -74,7 +76,14 @@ export const isValidPublicationTitle = value => {
 // Generic
 export const required = value => value ? undefined : locale.validationErrors.required;
 
-export const requiredList = value => (value && value.length > 0 ? undefined : locale.validationErrors.required);
+export const requiredList = value => {
+    if(value instanceof Immutable.List) {
+        return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
+    } else {
+        return value && value.length > 0 ? undefined : locale.validationErrors.required;
+    }
+};
+
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = (value) => !!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined;
@@ -126,13 +135,15 @@ export const isValidIsbn = subject => {
 };
 
 export const checkDigit = subject => {
-    const check = parseInt(subject.slice(-1), 10);
-    const ismn = subject.replace(/(ISMN |M|-|)/g, '');
+    const check = subject && subject.toString().slice(-1) && !isNaN(subject.toString().slice(-1)) && parseInt(subject.toString().slice(-1), 10);
+    const cleanCapitalM = subject.toString().replace('m', 'M');
+    const cleanOldISMN = cleanCapitalM.replace('M', '9790');
+    const ismn = cleanOldISMN.replace(/-/g, '');
     let checksum = null;
     for (let i = 0; i < ismn.length - 1; i++) {
         checksum += parseInt(ismn.charAt(i), 10) * (i % 2 === 0 ? 1 : 3);
     }
-    return (checksum + check) % 10 === 0;
+    return ismn.length === 13 && (checksum + check) % 10 === 0;
 };
 
 export const isValidIsmn = subject => {
@@ -212,7 +223,7 @@ export const getErrorAlertProps = ({dirty = false, submitting = false,
                 ...alertLocale.errorAlert,
                 message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
             };
-        } else if (formErrors && formErrors && formErrors.size === undefined) {
+        } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const message = (

@@ -65,7 +65,10 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={2000}
             name="impactStatement"
+            returnSingleValue={true}
             validate={
               Array [
                 [Function],
@@ -324,7 +327,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -345,7 +348,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -360,7 +363,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -397,7 +400,26 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={true}
+            label="Language"
+            multiple={true}
+            name="languages"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -499,7 +521,10 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={2000}
             name="impactStatement"
+            returnSingleValue={true}
             validate={
               Array [
                 [Function],
@@ -758,7 +783,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -779,7 +804,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -794,7 +819,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -831,7 +856,26 @@ exports[`Component NtroFields should render contribution statement fields as wel
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            label="Language"
+            multiple={true}
+            name="languages"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1117,7 +1161,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -1138,7 +1182,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -1153,7 +1197,7 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1190,7 +1234,26 @@ exports[`Component NtroFields should render default view 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            label="Language"
+            multiple={true}
+            name="languages"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1292,7 +1355,10 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={2000}
             name="impactStatement"
+            returnSingleValue={true}
             validate={
               Array [
                 [Function],
@@ -1551,7 +1617,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -1572,7 +1638,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={6}
           xs={12}
         >
           <Field
@@ -1587,7 +1653,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
           xs={12}
         >
           <Field
@@ -1624,7 +1690,26 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={3}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            label="Language"
+            multiple={true}
+            name="languages"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field

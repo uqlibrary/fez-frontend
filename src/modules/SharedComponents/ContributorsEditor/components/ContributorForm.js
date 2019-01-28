@@ -70,7 +70,10 @@ export class ContributorForm extends PureComponent {
         ) return;
 
         // pass on the selected contributor
-        this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished, creatorRole: this.state.creatorRole, affiliation: this.state.affiliation, orgaff: this.state.orgaff, orgtype: this.state.orgtype}});
+        this.props.onAdd(
+            {
+                ...this.state.contributor,
+                ...{nameAsPublished: this.state.nameAsPublished, creatorRole: this.state.creatorRole, affiliation: this.state.affiliation, orgaff: this.state.orgaff, orgtype: this.state.orgtype}});
 
         // reset internal state
         this.setState({

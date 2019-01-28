@@ -33,7 +33,8 @@ export function createNewRecord(data) {
             ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.isNtro && data.authors || null),
             ...transformers.getRecordAbstractDescriptionSearchKey(data.isNtro && data.ntroAbstract || null),
             ...transformers.getGrantsListSearchKey(data.isNtro && data.grants || null),
-            ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null)
+            ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
+            ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null)
         };
 
         // delete extra form values from request object
@@ -50,6 +51,7 @@ export function createNewRecord(data) {
         if (recordRequest.grants) delete recordRequest.grants;
         if (recordRequest.significance) delete recordRequest.significance;
         if (recordRequest.impactStatement) delete recordRequest.impactStatement;
+        if (recordRequest.languages) delete recordRequest.languages;
         if (recordRequest.qualityIndicators) delete recordRequest.qualityIndicators;
 
         let newRecord = null;

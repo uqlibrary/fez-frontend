@@ -25,7 +25,7 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'about' }
 	];
 
-	// The default plugins included in the basic setup define some buttons that
+    // The default plugins included in the basic setup define some buttons that
 	// are not needed in a basic editor. They are removed here.
 	config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript';
 

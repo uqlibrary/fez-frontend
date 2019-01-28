@@ -10,13 +10,14 @@ Pre formatted dialog box for confirmation
 
 ## Usage
 
-**./App.js**
+### ./App.js
+
 ```jsx
 import React from 'react';
 ...
 
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
- 
+
 const App = () => (
   <div>
     <ConfirmDialogBox onAction={this.deleteItem} onRef={this.setRef} />

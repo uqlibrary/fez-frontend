@@ -31,7 +31,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       </WithStyles(InputLabel)>
       <WithStyles(Select)
         onChange={[MockFunction]}
-        value={453987}
+        value="453987"
       >
         <WithStyles(MenuItem)
           disabled={true}
@@ -215,7 +215,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       </WithStyles(InputLabel)>
       <WithStyles(Select)
         onChange={[MockFunction]}
-        value={453987}
+        value="453987"
       >
         <WithStyles(MenuItem)
           disabled={true}

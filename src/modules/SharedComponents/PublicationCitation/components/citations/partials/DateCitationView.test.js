@@ -4,11 +4,7 @@ function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
         classes: {},
-        ...testProps,
-        date: testProps.date,
-        format: testProps.format,
-        prefix: testProps.prefix,
-        suffix: testProps.suffix
+        ...testProps
     };
     return getElement(DateCitationView, props, isShallow);
 }

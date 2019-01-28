@@ -2,18 +2,19 @@
 
 various charts for UQ Library applications, sample data is available in `/data/*`
 
-
 ## AuthorsPublicationsPerYearChart
 
 displays types of publications per year for an author
 
-### Props 
+### Props
+
 - `rawData: PropTypes.object.isRequired` - raw output of api call `[API_URL]/academic/[USER_NAME]/publication-years`
 - `yAxisTitle: PropTypes.string`, default text is 'Total publications', NOTE: x axis is represented by years
-    
+
 ## Usage
 
-**./App.js**
+### ./App.js
+
 ```jsx
 import React from 'react';
 ...

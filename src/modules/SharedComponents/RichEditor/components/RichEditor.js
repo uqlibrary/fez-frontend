@@ -12,13 +12,17 @@ export default class RichEditor extends PureComponent {
         disabled: PropTypes.bool,
         height: PropTypes.number,
         meta: PropTypes.object,
+        returnSingleValue: PropTypes.bool,
+        maxValue: PropTypes.number,
+        instructions: PropTypes.string
     };
 
     static defaultProps = {
         value: '',
         className: '',
         height: 100,
-        disabled: false
+        disabled: false,
+        returnSingleValue: false,
     };
 
     componentDidMount() {
@@ -40,12 +44,16 @@ export default class RichEditor extends PureComponent {
 
                 this.editorInstance.on('change', (evt) => {
                     const textValue = evt.editor.document.getBody().getText().trim();
-                    this.props.onChange(textValue.length > 0
-                        ? {
-                            htmlText: evt.editor.getData(),
-                            plainText: evt.editor.document.getBody().getText().trim()
-                        }
-                        : null);
+                    if(!this.props.returnSingleValue) {
+                        this.props.onChange(textValue.length > 0
+                            ? {
+                                htmlText: evt.editor.getData(),
+                                plainText: evt.editor.document.getBody().getText().trim()
+                            }
+                            : null);
+                    } else {
+                        this.props.onChange(textValue.length > 0 ? evt.editor.getData() : null);
+                    }
                 });
             }
         }
@@ -75,11 +83,15 @@ export default class RichEditor extends PureComponent {
                 <div className={this.props.className} />
                 {
                     this.props.meta && this.props.meta.error &&
-                    <Typography color="error" variant="caption">
-                        {
-                            error || this.props.meta.error
-                        }
-                    </Typography>
+                        <Typography color="error" variant="caption">
+                            {
+                                error || this.props.meta.error
+                            }
+                        </Typography>
+                }
+                {
+                    !this.props.meta || (this.props.meta && !this.props.meta.error) && this.props.maxValue &&
+                    <Typography variant="caption">{this.props.value.length} of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}</Typography>
                 }
             </React.Fragment>
         );

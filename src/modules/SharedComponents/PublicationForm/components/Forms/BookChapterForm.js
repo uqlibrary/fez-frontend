@@ -22,8 +22,9 @@ export default class BookChapterForm extends Component {
         submitting: PropTypes.bool,
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
-        isAuthorSelected: PropTypes.bool
-    }
+        isAuthorSelected: PropTypes.bool,
+        formValues: PropTypes.any
+    };
 
     constructor(props) {
         super(props);
@@ -31,6 +32,10 @@ export default class BookChapterForm extends Component {
 
     render() {
         const txt = formLocale.bookChapter;
+        const formValues = this.props.formValues && this.props.formValues.toJS();
+        const startPage = formValues && formValues.fez_record_search_key_start_page && formValues.fez_record_search_key_start_page.rek_start_page;
+        const endPage = formValues && formValues.fez_record_search_key_end_page && formValues.fez_record_search_key_end_page.rek_end_page;
+        const pageError = !!startPage && !!endPage && startPage > endPage ? 'Page range invalid' : '';
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -188,7 +193,10 @@ export default class BookChapterForm extends Component {
                                     disabled={this.props.submitting}
                                     required
                                     validate={[validation.required]}
-                                    label={txt.other.fieldLabels.startPage}/>
+                                    label={txt.other.fieldLabels.startPage}
+                                    error={!!pageError}
+                                    errorText={pageError}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -199,7 +207,10 @@ export default class BookChapterForm extends Component {
                                     disabled={this.props.submitting}
                                     required
                                     validate={[validation.required]}
-                                    label={txt.other.fieldLabels.endPage}/>
+                                    label={txt.other.fieldLabels.endPage}
+                                    error={!!pageError}
+                                    errorText={pageError}
+                                />
                             </Grid>
                         </Grid>
                         <Grid container spacing={16}>

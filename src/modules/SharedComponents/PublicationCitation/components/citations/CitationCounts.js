@@ -71,7 +71,7 @@ export class CitationCounts extends PureComponent {
                         <Partials.CitationCountView
                             source="google"
                             count={counts.google}
-                            link={txt.google.externalUrl + encodeURI(publication.rek_title)}
+                            link={txt.google.externalUrl.replace('[id]', encodeURI(publication.rek_title))}
                             title={this.getTitle(txt.google.title)}
                         />
                     }

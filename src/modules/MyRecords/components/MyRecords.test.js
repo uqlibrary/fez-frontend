@@ -1,5 +1,4 @@
 import MyRecords from './MyRecords';
-import {myRecordsList} from 'mock/data';
 import {routes} from 'config';
 import {locale} from 'locale';
 

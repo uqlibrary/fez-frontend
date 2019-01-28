@@ -12,10 +12,12 @@ import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import RelatedPublications from './RelatedPublications';
 import Links from './Links';
+import NtroDetails from './NtroDetails';
 import {ShareThisErrorBoundary} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
+import {general} from 'config';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -24,7 +26,8 @@ export default class ViewRecord extends PureComponent {
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
-        hideCulturalSensitivityStatement: PropTypes.bool
+        hideCulturalSensitivityStatement: PropTypes.bool,
+        account: PropTypes.object
     };
 
     componentDidMount() {
@@ -49,7 +52,8 @@ export default class ViewRecord extends PureComponent {
     render() {
         const txt = locale.pages.viewRecord;
         const {loadingRecordToView, recordToViewError, recordToView} = this.props;
-
+        console.log(recordToView);
+        const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
         if(loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage}/>;
         } else if(recordToViewError) {
@@ -61,7 +65,6 @@ export default class ViewRecord extends PureComponent {
         } else if(!recordToView) {
             return <div className="empty"/>;
         }
-
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{marginTop: -24}}>
@@ -77,7 +80,11 @@ export default class ViewRecord extends PureComponent {
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
                     <Links publication={recordToView}/>
                     <RelatedPublications publication={recordToView} />
-                    <AdditionalInformation publication={recordToView} />
+                    <AdditionalInformation publication={recordToView} isNtro={isNtro} />
+                    {
+                        isNtro &&
+                        <NtroDetails publication={recordToView} account={this.props.account}/>
+                    }
                     <GrantInformation publication={recordToView} />
                     <PublicationDetails publication={recordToView} />
                     <AvailableVersions publication={recordToView} />

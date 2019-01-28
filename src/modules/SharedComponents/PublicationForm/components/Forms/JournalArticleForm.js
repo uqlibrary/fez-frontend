@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
 import {Field} from 'redux-form/immutable';
-
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
-
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
 import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
-
+import {locale} from 'locale';
+import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -115,6 +112,21 @@ export default class JournalArticleForm extends Component {
                         hideAudienceSize
                     />
                 }
+                <Grid item xs={12}>
+                    <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
+                        <Typography>{locale.components.issnForm.text}</Typography>
+                        <Field
+                            component={ListEditorField}
+                            remindToAdd
+                            isValid={validation.isValidIssn}
+                            name="fez_record_search_key_issn"
+                            maxCount={5}
+                            locale={locale.components.issnForm.field}
+                            searchKey={{value: 'rek_issn', order: 'rek_issn_order'}}
+                            disabled={this.props.submitting}
+                        />
+                    </StandardCard>
+                </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

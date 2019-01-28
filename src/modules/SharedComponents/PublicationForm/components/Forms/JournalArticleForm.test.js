@@ -19,7 +19,7 @@ describe('JournalArticleForm renders ', () => {
 
     it('component with 11 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(12);
     });
 
     it.skip('component with all fields disabled', () => {
@@ -31,11 +31,11 @@ describe('JournalArticleForm renders ', () => {
 
     it('component with 4 input fields for NTRO', () => {
         const wrapper = setup({isNtro: true});
-        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(4);
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(5);
     });
 
     it('component with 5 input fields for NTRO with musical composition subtype', () => {
         const wrapper = setup({isNtro: true, subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION});
-        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(5);
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(6);
     });
 });
