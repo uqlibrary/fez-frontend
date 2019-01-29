@@ -67,6 +67,8 @@ export default class RichEditor extends PureComponent {
 
     render() {
         let error = null;
+        const inputLength = this.props.value && this.props.value.plainText && this.props.value.plainText.length || this.props.value.length - 7; // default rich editor has "<p></p>"
+        console.log(this.props.value);
         if (this.props.meta && this.props.meta.error) {
             error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
                 if (child.type) {
@@ -91,7 +93,7 @@ export default class RichEditor extends PureComponent {
                 }
                 {
                     !this.props.meta || (this.props.meta && !this.props.meta.error) && this.props.maxValue &&
-                    <Typography variant="caption">{this.props.value.length} of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}</Typography>
+                    <Typography variant="caption">{inputLength > -1 && inputLength} of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}</Typography>
                 }
             </React.Fragment>
         );

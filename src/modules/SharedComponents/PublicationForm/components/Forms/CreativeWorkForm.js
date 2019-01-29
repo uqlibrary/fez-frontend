@@ -115,7 +115,6 @@ export default class CreativeWorkForm extends Component {
                                     name="fez_record_search_key_end_date.rek_end_date"
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.enddate.title}
-                                    // floatingTitleRequired
                                     hasError={dateError}
                                 />
                             </Grid>

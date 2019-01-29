@@ -207,8 +207,10 @@ export default class NtroFields extends React.PureComponent {
                                     component={RichEditorField}
                                     name="ntroAbstract"
                                     fullWidth
+                                    maxValue={800}
+                                    instructions={contributionStatement.fields.impactStatement.description}
                                     disabled={this.props.submitting}
-                                    validate={[validation.required, validation.maxListEditorTextLength800]}/>
+                                    validate={[validation.required, validation.maxLengthWithWhitespace(800)]}/>
                             </Grid>
                             {
                                 !this.props.hideIsmn &&

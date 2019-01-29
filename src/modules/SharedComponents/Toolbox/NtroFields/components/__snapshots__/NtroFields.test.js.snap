@@ -107,6 +107,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={800}
             name="ntroAbstract"
             validate={
               Array [
@@ -563,6 +565,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={800}
             name="ntroAbstract"
             validate={
               Array [
@@ -941,6 +945,8 @@ exports[`Component NtroFields should render default view 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={800}
             name="ntroAbstract"
             validate={
               Array [
@@ -1397,6 +1403,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            maxValue={800}
             name="ntroAbstract"
             validate={
               Array [
