@@ -259,6 +259,7 @@ export default {
                 rek_genre: 'Type',
                 fez_record_search_key_start_date: 'Start date',
                 fez_record_search_key_end_date: 'End date',
+                rek_total_pages: 'Extent',
             },
             'Data Collection': {
                 rek_date: 'Publication year',
