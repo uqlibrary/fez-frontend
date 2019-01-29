@@ -4,7 +4,7 @@ import {OPEN_ACCESS_ID, CLOSED_ACCESS_ID} from './config';
 export default {
     instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
     ntroSpecificInstructions: (
-        <span>You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets" target="_blank">here</a>.</span>
+        <span>You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets" target="_blank">More information</a>.</span>
     ),
     accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
     validation: {
