@@ -30,7 +30,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId={false}
           />
         </WithStyles(Grid)>
@@ -42,7 +42,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         >
           <Component
             className="data"
-            grantAgency="National Health and Medical Research Council"
+            grantAgencyName="National Health and Medical Research Council"
             grantId={false}
           />
           <WithStyles(Typography)
@@ -73,7 +73,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId="Grant ID"
           />
         </WithStyles(Grid)>
@@ -85,7 +85,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         >
           <Component
             className="data"
-            grantAgency="Cancer Council Queensland"
+            grantAgencyName="Cancer Council Queensland"
             grantId="1042819"
           />
           <WithStyles(Typography)
@@ -116,7 +116,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId="Grant ID"
           />
         </WithStyles(Grid)>
@@ -128,7 +128,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         >
           <Component
             className="data"
-            grantAgency="National Breast Cancer Foundation"
+            grantAgencyName="National Breast Cancer Foundation"
             grantId="CG-12-07 | CG-10-04"
           />
           <WithStyles(Typography)
@@ -178,7 +178,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId={false}
           />
         </WithStyles(Grid)>
@@ -190,7 +190,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         >
           <Component
             className="data"
-            grantAgency="National Health and Medical Research Council"
+            grantAgencyName="National Health and Medical Research Council"
             grantId={false}
           />
           <WithStyles(Typography)
@@ -221,7 +221,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId={false}
           />
         </WithStyles(Grid)>
@@ -233,7 +233,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         >
           <Component
             className="data"
-            grantAgency="Cancer Council Queensland"
+            grantAgencyName="Cancer Council Queensland"
             grantId={false}
           />
           <WithStyles(Typography)
@@ -264,7 +264,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId={false}
           />
         </WithStyles(Grid)>
@@ -276,7 +276,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         >
           <Component
             className="data"
-            grantAgency="National Breast Cancer Foundation"
+            grantAgencyName="National Breast Cancer Foundation"
             grantId={false}
           />
           <WithStyles(Typography)
@@ -328,7 +328,7 @@ exports[`Grant Information Component  should render component 1`] = `
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId="Grant ID"
           />
         </WithStyles(Grid)>
@@ -340,7 +340,7 @@ exports[`Grant Information Component  should render component 1`] = `
         >
           <Component
             className="data"
-            grantAgency="National Health and Medical Research Council"
+            grantAgencyName="National Health and Medical Research Council"
             grantId="569645 | 1022263"
           />
           <WithStyles(Typography)
@@ -371,7 +371,7 @@ exports[`Grant Information Component  should render component 1`] = `
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId="Grant ID"
           />
         </WithStyles(Grid)>
@@ -383,7 +383,7 @@ exports[`Grant Information Component  should render component 1`] = `
         >
           <Component
             className="data"
-            grantAgency="Cancer Council Queensland"
+            grantAgencyName="Cancer Council Queensland"
             grantId="1042819"
           />
           <WithStyles(Typography)
@@ -414,7 +414,7 @@ exports[`Grant Information Component  should render component 1`] = `
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
             grantId="Grant ID"
           />
         </WithStyles(Grid)>
@@ -426,7 +426,7 @@ exports[`Grant Information Component  should render component 1`] = `
         >
           <Component
             className="data"
-            grantAgency="National Breast Cancer Foundation"
+            grantAgencyName="National Breast Cancer Foundation"
             grantId="CG-12-07 | CG-10-04"
           />
           <WithStyles(Typography)
@@ -476,7 +476,7 @@ exports[`Grant Information Component  should render with publication without gra
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -487,7 +487,7 @@ exports[`Grant Information Component  should render with publication without gra
         >
           <Component
             className="data"
-            grantAgency="National Health and Medical Research Council"
+            grantAgencyName="National Health and Medical Research Council"
           />
           <WithStyles(Typography)
             variant="body2"
@@ -517,7 +517,7 @@ exports[`Grant Information Component  should render with publication without gra
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -528,7 +528,7 @@ exports[`Grant Information Component  should render with publication without gra
         >
           <Component
             className="data"
-            grantAgency="Cancer Council Queensland"
+            grantAgencyName="Cancer Council Queensland"
           />
           <WithStyles(Typography)
             variant="body2"
@@ -558,7 +558,7 @@ exports[`Grant Information Component  should render with publication without gra
         >
           <Component
             className="header"
-            grantAgency="Grant agency"
+            grantAgencyName="Grant agency"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -569,7 +569,7 @@ exports[`Grant Information Component  should render with publication without gra
         >
           <Component
             className="data"
-            grantAgency="National Breast Cancer Foundation"
+            grantAgencyName="National Breast Cancer Foundation"
           />
           <WithStyles(Typography)
             variant="body2"
