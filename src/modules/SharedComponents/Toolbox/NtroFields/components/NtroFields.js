@@ -75,7 +75,8 @@ export default class NtroFields extends React.PureComponent {
                 fields: {
                     abstract: {
                         label: 'Abstract/Description (for public view)',
-                        description: 'Enter a statement (800 characters or less, approximately 100 words) that summarises the work',
+                        placeholder: 'Enter a brief description (800 characters or less, approximately 100 words) of the work',
+                        description: 'Remember that this description is for public view',
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -202,13 +203,13 @@ export default class NtroFields extends React.PureComponent {
                         <Grid container spacing={16}>
                             <Grid item xs={12}>
                                 <Typography children={metadata.fields.abstract.label}/>
-                                <Typography variant="caption" children={metadata.fields.abstract.description}/>
+                                <Typography variant="caption" children={metadata.fields.abstract.placeholder}/>
                                 <Field
                                     component={RichEditorField}
                                     name="ntroAbstract"
                                     fullWidth
                                     maxValue={800}
-                                    instructions={contributionStatement.fields.impactStatement.description}
+                                    instructions={metadata.fields.abstract.description}
                                     disabled={this.props.submitting}
                                     validate={[validation.required, validation.maxLengthWithWhitespace(800)]}/>
                             </Grid>
