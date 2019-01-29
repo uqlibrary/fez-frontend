@@ -84,6 +84,7 @@ export const PUBLICATION_TYPE_RR_INTERNAL_OTHER = 1039;
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
+// these values must match what is in api at fez_core/src/config/fez_core.php
 export const NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
 export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';
 export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual Art';
@@ -624,9 +625,9 @@ export const ORG_TYPES_LOOKUP = {
 };
 
 /**
- * @todo Merge grantTypes and orgAffiliationTypes if possible
+ * @todo Merge grantAgencyTypes and orgAffiliationTypes if possible
  */
-export const grantTypes = [
+export const grantAgencyTypes = [
     'Museum',
     'Gallery',
     'Government',

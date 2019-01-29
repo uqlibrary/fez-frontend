@@ -7,7 +7,7 @@ const PublicationForm = (componentProps) => (<Async load={import('modules/Shared
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 // forms & custom components
-import {validation, routes} from 'config';
+import {routes} from 'config';
 import locale from 'locale/pages';
 import Grid from '@material-ui/core/Grid';
 
@@ -54,7 +54,7 @@ export default class NewRecord extends PureComponent {
                     'authorId': this.props.author ? this.props.author.aut_id : ''
                 }
             ],
-            rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
+            rek_title: rawSearchQuery || ''
         };
 
         // set confirmation message depending on file upload status

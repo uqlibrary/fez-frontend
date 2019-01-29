@@ -38,7 +38,6 @@ export default class CreativeWorkForm extends Component {
     }
 
     render() {
-        console.log(this.props.subtype);
         const txt = formLocale.creativeWork;
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startDate = formValues && formValues.rek_date;

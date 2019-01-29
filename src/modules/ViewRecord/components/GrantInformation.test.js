@@ -41,14 +41,14 @@ describe('Grant Information Component ', () => {
         publication['fez_record_search_key_grant_id'][0]['rek_grant_id'] = '';
         const wrapper = setup({publication: publication});
 
-        expect(wrapper.find('.header').at(0).props().grantAgency).toEqual('Grant agency');
+        expect(wrapper.find('.header').at(0).props().grantAgencyName).toEqual('Grant agency');
         expect(wrapper.find('.header').at(0).props().grantId).toBeFalsy();
-        expect(wrapper.find('.header').at(1).props().grantAgency).toEqual('Grant agency');
+        expect(wrapper.find('.header').at(1).props().grantAgencyName).toEqual('Grant agency');
         expect(wrapper.find('.header').at(1).props().grantId).toEqual('Grant ID');
 
-        expect(wrapper.find('.data').at(1).props().grantAgency).toEqual('National Health and Medical Research Council');
+        expect(wrapper.find('.data').at(1).props().grantAgencyName).toEqual('National Health and Medical Research Council');
         expect(wrapper.find('.data').at(1).props().grantId).toBeFalsy();
-        expect(wrapper.find('.data').at(3).props().grantAgency).toEqual('Cancer Council Queensland');
+        expect(wrapper.find('.data').at(3).props().grantAgencyName).toEqual('Cancer Council Queensland');
         expect(wrapper.find('.data').at(3).props().grantId).toEqual('1042819');
     });
 

@@ -17,12 +17,12 @@ export class GrantInformation extends PureComponent {
         classes: PropTypes.object
     };
 
-    GrantInformationCell = ({grantAgency, grantId, className}) => {
+    GrantInformationCell = ({grantAgencyName, grantId, className}) => {
         return (
             <Grid container display="row" alignItems="center">
                 <Grid item>
                     <Typography variant="body2" className={className}>
-                        {grantAgency}
+                        {grantAgencyName}
                     </Typography>
                 </Grid>
                 {
@@ -37,21 +37,21 @@ export class GrantInformation extends PureComponent {
         );
     };
 
-    renderGrantDetail = (grantAgency, grantId, grantText, order, index) => {
+    renderGrantDetail = (grantAgencyName, grantId, grantText, order, index) => {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
             <div style={{padding: 8}} key={index}>
                 <Grid container spacing={16} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}>
                         <this.GrantInformationCell
-                            grantAgency={txt.fez_record_search_key_grant_agency}
+                            grantAgencyName={txt.fez_record_search_key_grant_agency}
                             grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && txt.fez_record_search_key_grant_id}
                             className="header"
                         />
                     </Grid>
                     <Grid item xs={12} sm={9} className={this.props.classes.data}>
                         <this.GrantInformationCell
-                            grantAgency={grantAgency.rek_grant_agency}
+                            grantAgencyName={grantAgencyName.rek_grant_agency}
                             grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id}
                             className={this.props.classes.data}
                         />
@@ -73,11 +73,11 @@ export class GrantInformation extends PureComponent {
 
         return grantAgencies.sort((grantAgency1, grantAgency2) => (
             grantAgency1.rek_grant_agency_order - grantAgency2.rek_grant_agency_order
-        )).map((grantAgency, index) => {
-            const order = grantAgency.rek_grant_agency_order;
+        )).map((grantAgencyName, index) => {
+            const order = grantAgencyName.rek_grant_agency_order;
             const grantId = this.searchByOrder(grantIds, 'rek_grant_id_order', order);
             const grantText = includeFundingText && this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
-            return this.renderGrantDetail(grantAgency, grantId, grantText, order, index);
+            return this.renderGrantDetail(grantAgencyName, grantId, grantText, order, index);
         });
     }
 
