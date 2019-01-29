@@ -99,7 +99,7 @@ export class PartialDateForm extends Component {
         const {day, month, year} = state;
         const {locale} = this.props;
 
-        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' || isNaN(year) && locale.validationMessage.year  || '';
+        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' || !!year && isNaN(year) && locale.validationMessage.year  || '';
 
         if (this.props.allowPartial) {
             this.errors.month = (year && month < 0) ? locale.validationMessage.month : '';
