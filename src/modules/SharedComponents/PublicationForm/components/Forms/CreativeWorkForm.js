@@ -148,7 +148,7 @@ export default class CreativeWorkForm extends Component {
                         hideAudienceSize={![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
                         hideVolume={![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
                         hideIssue={![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
-                        hideOriginalFormat={[CPEE_NTRO_SUBTYPES].includes(this.props.subtype)}
+                        hideOriginalFormat={CPEE_NTRO_SUBTYPES.includes(this.props.subtype)}
                     />
                 }
                 <Grid item xs={12}>
