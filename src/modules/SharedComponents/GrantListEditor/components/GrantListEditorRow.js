@@ -117,7 +117,7 @@ export class GrantListEditorRow extends PureComponent {
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
                 <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
                     {this.getListItemTypoGraphy(
-                        grant.grantName,
+                        grant.grantAgencyName,
                         '',
                         `${classes.primary} ${selectedClass}`,
                         ''
@@ -134,7 +134,7 @@ export class GrantListEditorRow extends PureComponent {
                     </Grid>
                     <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
                         {this.getListItemTypoGraphy(
-                            `${ORG_TYPES_LOOKUP[grant.grantType]}`,
+                            `${ORG_TYPES_LOOKUP[grant.grantAgencyType]}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             ''

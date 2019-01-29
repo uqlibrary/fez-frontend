@@ -31,7 +31,8 @@ export default class PublicationForm extends Component {
         isNtro: PropTypes.bool,
         hasDefaultDocTypeSubType: PropTypes.bool,
         docTypeSubTypeCombo: PropTypes.object,
-        isAuthorSelected: PropTypes.bool
+        isAuthorSelected: PropTypes.bool,
+        initialValues: PropTypes.object
     };
 
     constructor(props) {

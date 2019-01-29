@@ -24,12 +24,12 @@ export default class GrantListEditorForm extends PureComponent {
 
     static defaultProps = {
         locale: {
-            grantName: 'Funder/Sponsor name',
-            grantNameHint: 'Enter funder/sponsor name for this work',
+            grantAgencyName: 'Funder/Sponsor name',
+            grantAgencyNameHint: 'Enter funder/sponsor name for this work',
             grantId: 'Grant ID',
             grantIdHint: 'Enter grant number for this work, if available',
-            grantType: 'Funder/Sponsor type',
-            grantTypeHint: 'Select Funder/Sponsor type',
+            grantAgencyType: 'Funder/Sponsor type',
+            grantAgencyTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
             description: 'Add the Funder/Sponsor\'s name, grant ID and type - then add each to the list'
         },
@@ -40,9 +40,9 @@ export default class GrantListEditorForm extends PureComponent {
         super(props);
 
         this.state = {
-            grantName: '',
+            grantAgencyName: '',
             grantId: '',
-            grantType: ''
+            grantAgencyType: ''
         };
     }
 
@@ -51,24 +51,24 @@ export default class GrantListEditorForm extends PureComponent {
             this.props.disabled ||
             (event && event.key && (
                 event.key !== 'Enter' ||
-                this.state.grantName.length === 0
+                this.state.grantAgencyName.length === 0
             ))
         ) return;
 
         // pass on the selected grant
-        this.props.onAdd({grantName: this.state.grantName, grantId: this.state.grantId, grantType: this.state.grantType});
+        this.props.onAdd({grantAgencyName: this.state.grantAgencyName, grantId: this.state.grantId, grantAgencyType: this.state.grantAgencyType});
 
         // reset internal state
         this.setState({
-            grantName: '',
+            grantAgencyName: '',
             grantId: '',
-            grantType: ''
+            grantAgencyType: ''
         });
     };
 
     _onNameChanged = (event) => {
         this.setState({
-            grantName: event.target.value,
+            grantAgencyName: event.target.value,
         });
     };
 
@@ -80,7 +80,7 @@ export default class GrantListEditorForm extends PureComponent {
 
     _onTypeChanged = (event) => {
         this.setState({
-            grantType: event.target.value,
+            grantAgencyType: event.target.value,
         });
     };
 
@@ -93,16 +93,16 @@ export default class GrantListEditorForm extends PureComponent {
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
-                            id="grantName"
-                            label={this.props.locale.grantName}
-                            placeholder={this.props.locale.grantNameHint}
-                            value={this.state.grantName}
+                            id="grantAgencyName"
+                            label={this.props.locale.grantAgencyName}
+                            placeholder={this.props.locale.grantAgencyNameHint}
+                            value={this.state.grantAgencyName}
                             onChange={this._onNameChanged}
                             disabled={disabled}
                             required={this.props.required}
                             autoComplete="off"
-                            error={this.props.required && !this.state.grantName}
-                            errorText={this.props.required && !this.state.grantName && locale.validationErrors.required}
+                            error={this.props.required && !this.state.grantAgencyName}
+                            errorText={this.props.required && !this.state.grantAgencyName && locale.validationErrors.required}
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={!this.props.hideType ? 3 : 4} >
@@ -113,7 +113,7 @@ export default class GrantListEditorForm extends PureComponent {
                             placeholder={this.props.locale.grantIdHint}
                             value={this.state.grantId}
                             onChange={this._onIDChanged}
-                            disabled={disabled || this.state.grantName.trim().length === 0}
+                            disabled={disabled || this.state.grantAgencyName.trim().length === 0}
                             required={this.props.required}
                         />
                     </Grid>
@@ -122,22 +122,22 @@ export default class GrantListEditorForm extends PureComponent {
                         <Grid item xs={12} sm={12} md={3}>
                             <FormControl
                                 fullWidth
-                                required={this.props.required || this.state.grantName.trim().length > 0}
-                                error={this.state.grantName.trim().length > 0 && this.state.grantType.trim().length === 0}
+                                required={this.props.required || this.state.grantAgencyName.trim().length > 0}
+                                error={this.state.grantAgencyName.trim().length > 0 && this.state.grantAgencyType.trim().length === 0}
                             >
-                                <InputLabel>{this.props.locale.grantType}</InputLabel>
+                                <InputLabel>{this.props.locale.grantAgencyType}</InputLabel>
                                 <Select
-                                    label={this.props.locale.grantType}
-                                    placeholder={this.props.locale.grantTypeHint}
-                                    value={this.state.grantType}
+                                    label={this.props.locale.grantAgencyType}
+                                    placeholder={this.props.locale.grantAgencyTypeHint}
+                                    value={this.state.grantAgencyType}
                                     onChange={this._onTypeChanged}
-                                    disabled={disabled || this.state.grantName.trim().length === 0}
+                                    disabled={disabled || this.state.grantAgencyName.trim().length === 0}
                                 >
-                                    <MenuItem value={''} disabled>{this.props.locale.grantTypeHint}</MenuItem>
+                                    <MenuItem value={''} disabled>{this.props.locale.grantAgencyTypeHint}</MenuItem>
                                     {orgAffiliationTypes.map((item, index) => <MenuItem value={item.value} key={index}>{item.text}</MenuItem>)}
                                 </Select>
                                 {
-                                    this.props.required || this.state.grantName.trim().length > 0 && this.state.grantId.trim().length > 0 && this.state.grantType.trim().length === 0 &&
+                                    this.props.required || this.state.grantAgencyName.trim().length > 0 && this.state.grantId.trim().length > 0 && this.state.grantAgencyType.trim().length === 0 &&
                                     <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
                                 }
                             </FormControl>
@@ -148,7 +148,7 @@ export default class GrantListEditorForm extends PureComponent {
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.grantName.trim().length === 0 || (!this.props.hideType && this.state.grantType.trim().length === 0)}
+                            disabled={disabled || this.state.grantAgencyName.trim().length === 0 || (!this.props.hideType && this.state.grantAgencyType.trim().length === 0)}
                             onClick={this._addGrant}
                         >
                             {this.props.locale.addButton}
