@@ -74,12 +74,12 @@ exports[`Component FileUploader should accept terms and condition and reset back
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -269,12 +269,12 @@ exports[`Component FileUploader should accept terms and condition and reset back
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -476,12 +476,12 @@ exports[`Component FileUploader should accept terms and condition and reset back
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -683,12 +683,12 @@ exports[`Component FileUploader should accept terms and condition and reset back
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -881,12 +881,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -1138,12 +1138,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -1397,12 +1397,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -1660,12 +1660,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2038,12 +2038,12 @@ exports[`Component FileUploader should render default component 1`] = `
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2135,12 +2135,12 @@ exports[`Component FileUploader should render disabled component 1`] = `
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2231,12 +2231,12 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2332,12 +2332,12 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2588,12 +2588,12 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2779,12 +2779,12 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2875,12 +2875,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -2976,12 +2976,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -3232,12 +3232,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -3333,12 +3333,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -3590,12 +3590,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -3849,12 +3849,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -4118,12 +4118,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -4382,12 +4382,12 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
@@ -4483,12 +4483,12 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
         "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
           <a
             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
             target="_blank"
           >
-            here
+            More information
           </a>
           .
         </span>,
