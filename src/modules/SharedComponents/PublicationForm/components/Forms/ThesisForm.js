@@ -143,7 +143,7 @@ export default class ThesisForm extends Component {
                                     fullWidth
                                     {...txt.optional.fieldLabels.doi} />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
