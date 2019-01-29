@@ -1115,7 +1115,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 "ntroSpecificInstructions": <span>
                   You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  See examples 
                   <a
-                    href="http://google.com"
+                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
                     target="_blank"
                   >
                     here
