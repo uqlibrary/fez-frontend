@@ -101,13 +101,13 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
+            Enter a brief description (800 characters or less, approximately 100 words) of the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={true}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
             validate={
@@ -559,13 +559,13 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <WithStyles(Typography)
             variant="caption"
           >
-            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
+            Enter a brief description (800 characters or less, approximately 100 words) of the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
             validate={
@@ -939,13 +939,13 @@ exports[`Component NtroFields should render default view 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
+            Enter a brief description (800 characters or less, approximately 100 words) of the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
             validate={
@@ -1397,13 +1397,13 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            Enter a statement (800 characters or less, approximately 100 words) that summarises the work
+            Enter a brief description (800 characters or less, approximately 100 words) of the work
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
             validate={
