@@ -52,7 +52,6 @@ export default class ViewRecord extends PureComponent {
     render() {
         const txt = locale.pages.viewRecord;
         const {loadingRecordToView, recordToViewError, recordToView} = this.props;
-        console.log(recordToView);
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
         if(loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage}/>;

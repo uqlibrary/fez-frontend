@@ -94,7 +94,7 @@ let PublicationFormContainer = reduxForm({
 
 const selector = formValueSelector(FORM_NAME);
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     const displayType = selector(state, 'rek_display_type');
@@ -131,7 +131,8 @@ const mapStateToProps = (state) => {
         docTypeSubTypeCombo: docTypeSubTypeCombo,
         isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false,
         initialValues: {
-            languages: ['eng']
+            languages: ['eng'],
+            rek_title: props.initialValues.rek_title || ''
         }
     };
 };
