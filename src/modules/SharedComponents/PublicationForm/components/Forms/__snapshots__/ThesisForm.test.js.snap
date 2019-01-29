@@ -325,6 +325,7 @@ exports[`ThesisForm  should render component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
+          sm={6}
           xs={12}
         >
           <Field
