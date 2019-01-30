@@ -61,17 +61,15 @@ exports[`DesignForm renders  component 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Project description"
-            multiline={true}
-            name="rek_description"
-            placeholder="Provide a summary/description of the project."
-            rows={1}
+            label="Location"
+            name="fez_record_search_key_location[0].rek_location"
+            placeholder="Type the geographical location for the design itself."
             type="text"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -86,7 +84,7 @@ exports[`DesignForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -96,21 +94,6 @@ exports[`DesignForm renders  component 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             placeholder="Type the geographical location for the publisher."
-            type="text"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={4}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Location"
-            name="fez_record_search_key_location[0].rek_location"
-            placeholder="Type the geographical location for the design itself."
             type="text"
           />
         </WithStyles(Grid)>

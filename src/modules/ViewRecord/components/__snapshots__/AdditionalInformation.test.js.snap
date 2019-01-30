@@ -32504,7 +32504,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
