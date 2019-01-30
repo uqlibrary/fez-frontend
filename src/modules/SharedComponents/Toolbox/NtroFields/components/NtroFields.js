@@ -64,7 +64,7 @@ export default class NtroFields extends React.PureComponent {
                         description: 'Select the option that desribes the significance of the work for you.',
                     },
                     impactStatement: {
-                        label: 'Creator contribution statement',
+                        label: 'Creator contribution statement *',
                         placeholder: 'Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.',
                         description: 'Remember to enter your statement in three sections: Background, Contribution, Significance'
                     },
@@ -74,7 +74,7 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Non-traditional research output metadata',
                 fields: {
                     abstract: {
-                        label: 'Abstract/Description (for public view)',
+                        label: 'Abstract/Description (for public view) *',
                         placeholder: 'Enter a brief description (800 characters or less, approximately 100 words) of the work',
                         description: 'Remember that this description is for public view',
                     },

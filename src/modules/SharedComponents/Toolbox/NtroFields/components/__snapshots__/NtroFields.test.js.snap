@@ -54,7 +54,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Creator contribution statement
+            Creator contribution statement *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
@@ -96,7 +96,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Abstract/Description (for public view)
+            Abstract/Description (for public view) *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
@@ -513,7 +513,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <WithStyles(Typography)>
-            Creator contribution statement
+            Creator contribution statement *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
@@ -555,7 +555,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <WithStyles(Typography)>
-            Abstract/Description (for public view)
+            Abstract/Description (for public view) *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
@@ -936,7 +936,7 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Abstract/Description (for public view)
+            Abstract/Description (for public view) *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
@@ -1353,7 +1353,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Creator contribution statement
+            Creator contribution statement *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
@@ -1395,7 +1395,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Abstract/Description (for public view)
+            Abstract/Description (for public view) *
           </WithStyles(Typography)>
           <WithStyles(Typography)
             variant="caption"
