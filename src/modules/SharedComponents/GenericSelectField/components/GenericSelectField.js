@@ -103,6 +103,7 @@ export class GenericSelectField extends Component {
                         style={{display: 'block'}}
                         {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
                         key={index + 1}
+                        disabled={item && !item.value}
                         aria-label={item.text || item.value || item}>
                         {item.text || item.value || item}
                     </MenuItem>

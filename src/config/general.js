@@ -827,6 +827,7 @@ export const SIGNIFICANCE_MAJOR = 454026;
 export const SIGNIFICANCE_MINOR = 454027;
 
 export const QUALITY_INDICATORS = [
+    {text: 'Select multiple quality indicators as required', value: null},
     {text: 'Disseminated via (inter)nationally recognised outlet or entity', value: 453996},
     {text: 'Association with recognised (inter)national entities, distinct from co-creation', value: 453997},
     {text: 'Reviews, prizes, awards recognition of the output', value: 454033},
@@ -846,6 +847,7 @@ export const AUDIENCE_SIZE = [
 ];
 
 export const LANGUAGE = [
+    {text: 'Select multiple languages as required', value: null},
     {text: 'Afrikaans', value: 'afr'},
     {text: 'Albanian', value: 'alb'},
     {text: 'Arabic', value: 'ara'},

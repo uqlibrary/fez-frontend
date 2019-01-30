@@ -430,6 +430,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
+            placeholder="Quality indicators"
             required={true}
             validate={
               Array [
@@ -888,6 +889,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
+            placeholder="Quality indicators"
             required={true}
             validate={
               Array [
@@ -1268,6 +1270,7 @@ exports[`Component NtroFields should render default view 1`] = `
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
+            placeholder="Quality indicators"
             required={true}
             validate={
               Array [
@@ -1726,6 +1729,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
+            placeholder="Quality indicators"
             required={true}
             validate={
               Array [

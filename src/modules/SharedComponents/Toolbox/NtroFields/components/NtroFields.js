@@ -380,6 +380,7 @@ export default class NtroFields extends React.PureComponent {
                                         disabled={this.props.submitting}
                                         name="qualityIndicators"
                                         label={metadata.fields.peerReviewActivity.label}
+                                        placeholder={metadata.fields.peerReviewActivity.label}
                                         required
                                         multiple
                                         validate={[validation.requiredList]}

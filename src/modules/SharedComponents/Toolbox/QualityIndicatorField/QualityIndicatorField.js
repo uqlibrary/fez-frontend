@@ -7,7 +7,7 @@ export default function QualityIndicatorField(fieldProps) {
         <GenericSelectField
             itemsList={QUALITY_INDICATORS}
             hideLabel={false}
-            locale={{label: fieldProps.label}}
+            locale={{label: fieldProps.label, placeholder: fieldProps.placeholder}}
             selectedValue={fieldProps.input.value || []}
             onChange={!!fieldProps.input && fieldProps.input.onChange}
             errorText={!!fieldProps.meta && fieldProps.meta.error || ''}
