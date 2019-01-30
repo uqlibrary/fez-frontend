@@ -95,7 +95,7 @@ export default class NtroFields extends React.PureComponent {
                         label: 'End page',
                     },
                     extent: {
-                        label: 'Extent',
+                        label: 'Total pages/Extent',
                         placeholder: 'Enter total pages, size or duration of work'
                     },
                     physicalDescription: {

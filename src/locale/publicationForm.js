@@ -139,7 +139,7 @@ export default {
                     year: 'Year'
                 },
                 extent: {
-                    label: 'Extent',
+                    label: 'Total pages',
                     placeholder: ''
                 },
                 doi: {
