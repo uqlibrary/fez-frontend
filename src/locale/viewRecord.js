@@ -349,12 +349,12 @@ export default {
                 fez_record_search_key_ismn: 'ISMN',
                 fez_record_search_key_isrc: 'ISRC',
                 rek_series: 'Series',
-                rek_volume_number: 'Volume number',
-                rek_issue_number: 'Issue number',
+                rek_volume_number: 'Volume',
+                rek_issue_number: 'Issue',
                 rek_start_page: 'Start page',
                 rek_end_page: 'End page',
                 rek_total_pages: 'Extent',
-                rek_original_format: 'Original format',
+                rek_original_format: 'Physical description',
                 rek_audience_size: 'Audience size',
                 qualityIndicators: 'Quality indicators',
                 rek_language: 'Language(s)'
@@ -1330,10 +1330,10 @@ export default {
                     field: 'fez_record_search_key_source',
                     order: 23
                 },
-                {
-                    field: 'fez_record_search_key_original_format',
-                    order: 24
-                },
+                // {
+                //     field: 'fez_record_search_key_original_format',
+                //     order: 24
+                // },
                 {
                     field: 'fez_record_search_key_scale',
                     order: 25
@@ -2051,6 +2051,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19
+                },
+                {
+                    field: 'fez_record_search_key_report_number',
+                    order: 20
                 }
             ],
             'Patent': [

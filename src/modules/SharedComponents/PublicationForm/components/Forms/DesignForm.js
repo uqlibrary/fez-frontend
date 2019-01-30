@@ -62,15 +62,13 @@ export default class DesignForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    name="rek_description"
+                                    name="fez_record_search_key_location[0].rek_location"
                                     type="text"
                                     fullWidth
-                                    rows={1}
-                                    multiline
-                                    {...txt.information.fieldLabels.projectDescription}
+                                    {...txt.information.fieldLabels.location}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -80,7 +78,7 @@ export default class DesignForm extends Component {
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -88,16 +86,6 @@ export default class DesignForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.placeOfPublication}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={4}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_location[0].rek_location"
-                                    type="text"
-                                    fullWidth
-                                    {...txt.information.fieldLabels.location}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>

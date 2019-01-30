@@ -144,7 +144,8 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Volume number */}
                     {
-                        publication.fez_record_search_key_volume_number && publication.fez_record_search_key_volume_number.rek_volume_number &&
+                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        && publication.fez_record_search_key_volume_number && publication.fez_record_search_key_volume_number.rek_volume_number &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_volume_number}
                             data={publication.fez_record_search_key_volume_number.rek_volume_number}
@@ -152,7 +153,8 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Issue number */}
                     {
-                        publication.fez_record_search_key_issue_number && publication.fez_record_search_key_issue_number.rek_issue_number &&
+                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        && publication.fez_record_search_key_issue_number && publication.fez_record_search_key_issue_number.rek_issue_number &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_issue_number}
                             data={publication.fez_record_search_key_issue_number.rek_issue_number}
@@ -160,7 +162,8 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Start page */}
                     {
-                        docType !== 'Book Chapter' && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
+                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        && docType !== 'Book Chapter' && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_start_page}
                             data={publication.fez_record_search_key_start_page.rek_start_page}
@@ -168,7 +171,8 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* End page */}
                     {
-                        docType !== 'Book Chapter' && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
+                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        && docType !== 'Book Chapter' && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_end_page}
                             data={publication.fez_record_search_key_end_page.rek_end_page}
@@ -176,7 +180,10 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Total pages */}
                     {
-                        docType !== 'Book Chapter' && (docType !== 'Book' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
+                        docType !== 'Book Chapter'
+                        && (docType !== 'Book' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK)
+                        && docType !== 'Research Report'
+                        && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_total_pages}
                             data={publication.fez_record_search_key_total_pages.rek_total_pages}

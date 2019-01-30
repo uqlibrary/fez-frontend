@@ -866,6 +866,7 @@ export const LANGUAGE = [
     {text: 'Finnish', value: 'fin'},
     {text: 'French', value: 'fre'},
     {text: 'German', value: 'ger'},
+    {text: 'Germanic', value: 'gem'},
     {text: 'Greek (Ancient)', value: 'grc'},
     {text: 'Greek', value: 'gre'},
     {text: 'Hebrew', value: 'heb'},
