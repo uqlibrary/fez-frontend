@@ -28,6 +28,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
         xs={12}
       >
         <Field
+          autoComplete="search"
           autoFocus={true}
           color="primary"
           component={[Function]}

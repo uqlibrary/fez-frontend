@@ -110,7 +110,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'TextField':
                 return {
                     ...textFieldMui1Props,
-                    'autoComplete': 'off',
+                    'autoComplete': 'search',
                     'onChange': (event) => this.props.onChange(event.target.value),
                 };
             case 'PublisherLookup':
