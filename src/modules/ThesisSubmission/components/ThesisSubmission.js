@@ -132,10 +132,10 @@ export default class ThesisSubmission extends Component {
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={24}>
                                     <Grid item xs={12}>
-                                        <Typography variant={'caption'} children={txt.information.fieldLabels.documentTitle.placeholder}/>
                                         <Field
                                             component={RichEditorField}
                                             name="thesisTitle"
+                                            title={txt.information.fieldLabels.documentTitle.placeholder}
                                             disabled={this.props.submitting}
                                             height={50}
                                             validate={[validation.required]}/>
@@ -174,10 +174,10 @@ export default class ThesisSubmission extends Component {
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <Typography variant={'caption'} children={txt.optional.fieldLabels.abstract.label}/>
                                         <Field
                                             component={RichEditorField}
                                             disabled={this.props.submitting}
+                                            title={txt.optional.fieldLabels.abstract.label}
                                             name="thesisAbstract"
                                             validate={[validation.required]}/>
                                     </Grid>

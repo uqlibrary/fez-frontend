@@ -486,7 +486,7 @@ export const getNtroMetadataSearchKeys = (data) => {
         ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) =>{
             if (selectedAuthorIdIndex === index) {
                 return {
-                    rek_creator_contribution_statement: data.impactStatement,
+                    rek_creator_contribution_statement: data.impactStatement.htmlText,
                     rek_creator_contribution_statement_order: selectedAuthorIdIndex + 1
                 };
             } else {

@@ -14,7 +14,9 @@ export default class RichEditor extends PureComponent {
         meta: PropTypes.object,
         returnSingleValue: PropTypes.bool,
         maxValue: PropTypes.number,
-        instructions: PropTypes.string
+        instructions: PropTypes.string,
+        title: PropTypes.string,
+        description: PropTypes.string
     };
 
     static defaultProps = {
@@ -44,16 +46,12 @@ export default class RichEditor extends PureComponent {
 
                 this.editorInstance.on('change', (evt) => {
                     const textValue = evt.editor.document.getBody().getText().trim();
-                    if(!this.props.returnSingleValue) {
-                        this.props.onChange(textValue.length > 0
-                            ? {
-                                htmlText: evt.editor.getData(),
-                                plainText: evt.editor.document.getBody().getText().trim()
-                            }
-                            : null);
-                    } else {
-                        this.props.onChange(textValue.length > 0 ? evt.editor.getData() : null);
-                    }
+                    this.props.onChange(textValue.length > 0
+                        ? {
+                            htmlText: evt.editor.getData(),
+                            plainText: evt.editor.document.getBody().getText().trim()
+                        }
+                        : null);
                 });
             }
         }
@@ -81,6 +79,16 @@ export default class RichEditor extends PureComponent {
         }
         return (
             <React.Fragment>
+                <span>
+                    {
+                        this.props.title &&
+                            <Typography color={this.props.meta && this.props.meta.error && 'error'}>{this.props.title}</Typography>
+                    }
+                    {
+                        this.props.description &&
+                            <Typography color={this.props.meta && this.props.meta.error && 'error'} variant={'caption'}>{this.props.description}</Typography>
+                    }
+                </span>
                 <div className={this.props.className} />
                 {
                     this.props.meta && this.props.meta.error &&

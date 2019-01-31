@@ -481,6 +481,7 @@ exports[`RichEditor tests  should render component 1`] = `
           returnSingleValue={false}
           value=""
         >
+          <span />
           <div
             className=""
           />

@@ -181,17 +181,16 @@ export default class NtroFields extends React.PureComponent {
                                     </Field>
                                 </Grid>
                                 <Grid item xs={12} style={{marginTop: 24}}>
-                                    <Typography>{contributionStatement.fields.impactStatement.label}</Typography>
-                                    <Typography variant={'caption'}>{contributionStatement.fields.impactStatement.placeholder}</Typography>
                                     <Field
                                         component={RichEditorField}
                                         name="impactStatement"
                                         fullWidth
+                                        title={contributionStatement.fields.impactStatement.label}
+                                        description={contributionStatement.fields.impactStatement.placeholder}
                                         maxValue={2000}
                                         instructions={contributionStatement.fields.impactStatement.description}
                                         disabled={this.props.submitting}
                                         validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
-                                        returnSingleValue
                                     />
                                 </Grid>
                             </Grid>
@@ -202,12 +201,12 @@ export default class NtroFields extends React.PureComponent {
                     <StandardCard title={metadata.title}>
                         <Grid container spacing={16}>
                             <Grid item xs={12}>
-                                <Typography children={metadata.fields.abstract.label}/>
-                                <Typography variant="caption" children={metadata.fields.abstract.placeholder}/>
                                 <Field
                                     component={RichEditorField}
                                     name="ntroAbstract"
                                     fullWidth
+                                    title={metadata.fields.abstract.label}
+                                    description={metadata.fields.abstract.placeholder}
                                     maxValue={800}
                                     instructions={metadata.fields.abstract.description}
                                     disabled={this.props.submitting}

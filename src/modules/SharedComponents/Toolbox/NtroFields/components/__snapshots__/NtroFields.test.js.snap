@@ -53,22 +53,15 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           }
           xs={12}
         >
-          <WithStyles(Typography)>
-            Creator contribution statement *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
             disabled={true}
             fullWidth={true}
             instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
             maxValue={2000}
             name="impactStatement"
-            returnSingleValue={true}
+            title="Creator contribution statement *"
             validate={
               Array [
                 [Function],
@@ -95,21 +88,15 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)>
-            Abstract/Description (for public view) *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a brief description (800 characters or less, approximately 100 words) of the work
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={true}
             fullWidth={true}
             instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
+            title="Abstract/Description (for public view) *"
             validate={
               Array [
                 [Function],
@@ -512,22 +499,15 @@ exports[`Component NtroFields should render contribution statement fields as wel
           }
           xs={12}
         >
-          <WithStyles(Typography)>
-            Creator contribution statement *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
             disabled={false}
             fullWidth={true}
             instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
             maxValue={2000}
             name="impactStatement"
-            returnSingleValue={true}
+            title="Creator contribution statement *"
             validate={
               Array [
                 [Function],
@@ -554,21 +534,15 @@ exports[`Component NtroFields should render contribution statement fields as wel
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)>
-            Abstract/Description (for public view) *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a brief description (800 characters or less, approximately 100 words) of the work
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={false}
             fullWidth={true}
             instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
+            title="Abstract/Description (for public view) *"
             validate={
               Array [
                 [Function],
@@ -935,21 +909,15 @@ exports[`Component NtroFields should render default view 1`] = `
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)>
-            Abstract/Description (for public view) *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a brief description (800 characters or less, approximately 100 words) of the work
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={false}
             fullWidth={true}
             instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
+            title="Abstract/Description (for public view) *"
             validate={
               Array [
                 [Function],
@@ -1352,22 +1320,15 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           }
           xs={12}
         >
-          <WithStyles(Typography)>
-            Creator contribution statement *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
             disabled={false}
             fullWidth={true}
             instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
             maxValue={2000}
             name="impactStatement"
-            returnSingleValue={true}
+            title="Creator contribution statement *"
             validate={
               Array [
                 [Function],
@@ -1394,21 +1355,15 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)>
-            Abstract/Description (for public view) *
-          </WithStyles(Typography)>
-          <WithStyles(Typography)
-            variant="caption"
-          >
-            Enter a brief description (800 characters or less, approximately 100 words) of the work
-          </WithStyles(Typography)>
           <Field
             component={[Function]}
+            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={false}
             fullWidth={true}
             instructions="Remember that this description is for public view"
             maxValue={800}
             name="ntroAbstract"
+            title="Abstract/Description (for public view) *"
             validate={
               Array [
                 [Function],
