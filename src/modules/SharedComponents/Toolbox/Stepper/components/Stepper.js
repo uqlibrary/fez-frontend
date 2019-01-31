@@ -40,7 +40,6 @@ export class CustomStepper extends Component {
 
     render() {
         const {activeStep, steps, classes, width} = this.props;
-        console.log(this.props.width);
         return (
             <Stepper activeStep={activeStep} className={classes.stepper}>
                 {
