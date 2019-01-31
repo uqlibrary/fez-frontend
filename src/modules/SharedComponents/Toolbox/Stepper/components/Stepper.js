@@ -4,10 +4,24 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import {withStyles} from '@material-ui/core/styles';
+import withWidth from '@material-ui/core/withWidth';
 
 const styles = theme => ({
     stepper: {
-        backgroundColor: theme.hexToRGBA('#F7F7F7', 0)
+        backgroundColor: theme.hexToRGBA('#F7F7F7', 0),
+        [theme.breakpoints.down('sm')]: {
+            padding: '12px 0 24px 8px',
+            margin: '-24px 0 0 0'
+        }
+    },
+    stepperLabel: {
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        // [theme.breakpoints.down('sm')]: {
+        //     '& span': {
+        //         display: 'none'
+        //     }
+        // }
     }
 });
 
@@ -15,7 +29,8 @@ export class CustomStepper extends Component {
     static propTypes = {
         activeStep: PropTypes.number,
         steps: PropTypes.array,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        width: PropTypes.any
     };
 
     shouldComponentUpdate(nextProps) {
@@ -24,16 +39,18 @@ export class CustomStepper extends Component {
     }
 
     render() {
-        const {activeStep, steps, classes} = this.props;
+        const {activeStep, steps, classes, width} = this.props;
+        console.log(this.props.width);
         return (
             <Stepper activeStep={activeStep} className={classes.stepper}>
                 {
                     steps.map((step, index) => {
+                        const label = width !== 'xs' && step.label;
                         return (
                             <Step key={`stepper_${index}`}>
                                 <StepLabel
-                                    style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>
-                                    {step.label}
+                                    className={classes.stepperLabel}>
+                                    <span>{label}</span>
                                 </StepLabel>
                             </Step>
                         );
@@ -44,4 +61,4 @@ export class CustomStepper extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(CustomStepper);
+export default withStyles(styles, {withTheme: true})(withWidth()(CustomStepper));
