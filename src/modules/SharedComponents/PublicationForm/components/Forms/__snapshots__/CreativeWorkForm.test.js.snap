@@ -97,7 +97,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             className="requiredHintField"
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication (start) date"
+            floatingTitle="Publication/Start date"
             floatingTitleRequired={true}
             hasError=""
             name="rek_date"
@@ -118,7 +118,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             allowPartial={true}
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication end date"
+            floatingTitle="End date"
             hasError=""
             name="fez_record_search_key_end_date.rek_end_date"
           />

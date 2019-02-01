@@ -622,13 +622,13 @@ export default {
                     placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 },
                 date: {
-                    title: 'Publication (start) date',
+                    title: 'Publication/Start date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
                 },
                 enddate: {
-                    title: 'Publication end date',
+                    title: 'End date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
