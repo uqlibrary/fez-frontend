@@ -55,7 +55,7 @@ export default class SbsSubmission extends Component {
     }
 
     cancelSubmit = () => {
-        window.location.assign(formLocale.thesisSubmission.cancelLink);
+        window.location.reload();
     }
 
     afterSubmit = () => {
@@ -78,23 +78,12 @@ export default class SbsSubmission extends Component {
 
         if (this.props.submitSucceeded) {
             return (
-                <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+                <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
+                            <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
+                                <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
                             </StandardCard>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={16}>
-                        <Grid item xs/>
-                        <Grid item>
-                            <Button
-                                variant={'raised'}
-                                color={'primary'}
-                                fullWidth
-                                children={formLocale.thesisSubmission.afterSubmit}
-                                onClick={this.afterSubmit}/>
                         </Grid>
                     </Grid>
                 </StandardPage>
@@ -113,7 +102,7 @@ export default class SbsSubmission extends Component {
                 }
             }});
         return (
-            <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+            <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
@@ -129,12 +118,12 @@ export default class SbsSubmission extends Component {
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={24}>
                                     <Grid item xs={12}>
-                                        <Typography variant={'caption'} children={txt.information.fieldLabels.documentTitle.placeholder}/>
                                         <Field
                                             component={RichEditorField}
                                             name="thesisTitle"
                                             disabled={this.props.submitting}
                                             height={50}
+                                            title={txt.information.fieldLabels.documentTitle.placeholder}
                                             validate={[validation.required]}/>
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
@@ -194,11 +183,11 @@ export default class SbsSubmission extends Component {
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <Typography variant={'caption'} children={txt.optional.fieldLabels.abstract.label}/>
                                         <Field
                                             component={RichEditorField}
                                             disabled={this.props.submitting}
                                             name="thesisAbstract"
+                                            title={txt.optional.fieldLabels.abstract.label}
                                             validate={[validation.required]}/>
                                     </Grid>
                                 </Grid>
@@ -237,9 +226,7 @@ export default class SbsSubmission extends Component {
                                 <Field
                                     component={ListEditorField}
                                     name="fez_record_search_key_keywords"
-                                    required
                                     maxCount={10}
-                                    validate={[validation.requiredList]}
                                     searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
                                     locale={locale.components.keywordsForm.field}
                                     disabled={this.props.submitting}/>
@@ -261,12 +248,12 @@ export default class SbsSubmission extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
+                            <StandardCard title={formLocale.sbsSubmission.fileUpload.title} help={formLocale.sbsSubmission.fileUpload.help}>
                                 <Field
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
-                                    locale={formLocale.thesisSubmission.fileUpload.locale}
+                                    locale={formLocale.sbsSubmission.fileUpload.locale}
                                     defaultQuickTemplateId={this.props.fileAccessId}
                                     validate={[validation.fileUploadRequired]}/>
                             </StandardCard>

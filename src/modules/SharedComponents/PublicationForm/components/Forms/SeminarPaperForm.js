@@ -89,7 +89,7 @@ export default class SeminarPaperForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             validate={[validation.authorRequired]}
                             locale={txt.authors.field}

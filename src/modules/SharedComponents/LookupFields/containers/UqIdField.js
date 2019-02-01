@@ -19,13 +19,18 @@ const mapStateToProps = (state, props) => {
         selectedValue: !!props.value && {value: props.value} || '',
         itemToString: () => '',
         maxResults: 7,
+<<<<<<< HEAD
         floatingLabelText: props.label || 'UQ identifier (if available)',
         hintText: props.placeholder || ''
+=======
+        floatingLabelText: props.floatingLabelText || 'UQ Identifier',
+        hintText: props.hintText || 'Enter a value to search',
+>>>>>>> master
     };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    loadSuggestions: (searchQuery) => dispatch(actions.searchAuthors(searchQuery))
+    loadSuggestions: (searchKey, searchQuery = '') => dispatch(actions.searchAuthors(searchQuery))
 });
 
 export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);

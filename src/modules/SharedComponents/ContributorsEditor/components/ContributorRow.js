@@ -1,5 +1,7 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
+import {numberToWords} from 'config';
+import {ORG_TYPES_LOOKUP} from 'config/general';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -20,6 +22,10 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 
 const styles = (theme) => ({
     listItem: {
+<<<<<<< HEAD
+=======
+        padding: '0'
+>>>>>>> master
     },
     rowSelected: {
         backgroundColor: theme.palette.accent.light
@@ -65,7 +71,8 @@ export class ContributorRow extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
-        width: PropTypes.string
+        width: PropTypes.string,
+        showRoleInput: PropTypes.bool
     };
 
     static defaultProps = {
@@ -74,7 +81,6 @@ export class ContributorRow extends PureComponent {
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             selectHint: 'Select this record ([name]) to assign it to you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
@@ -141,14 +147,22 @@ export class ContributorRow extends PureComponent {
         />
     );
 
-    getContributorRowText = (showIdentifierLookup, selectedClass) => {
+    getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
         const {index, contributor, classes, width} = this.props;
+<<<<<<< HEAD
         const {ordinalData, suffix} = this.props.locale;
         const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
 
         return showIdentifierLookup ?
             (<Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={4}>
+=======
+        const {suffix} = this.props.locale;
+        const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
+        return (
+            <Grid container classes={{container: classes.listItem}}>
+                <Grid item xs={10} sm={5} md={5}>
+>>>>>>> master
                     {this.getListItemTypoGraphy(
                         contributor.nameAsPublished,
                         contributorOrder,
@@ -156,6 +170,7 @@ export class ContributorRow extends PureComponent {
                         `${selectedClass}`
                     )}
                 </Grid>
+<<<<<<< HEAD
                 <Grid item xs={12} sm={3}>
                     {parseInt(Math.random(100) * 100, 10)}%
                 </Grid>
@@ -174,6 +189,43 @@ export class ContributorRow extends PureComponent {
                 `${classes.primary} ${selectedClass}`,
                 `${selectedClass}`
             );
+=======
+                {
+                    showIdentifierLookup || !!contributor.aut_title &&
+                    <Grid item xs={10} sm={5} md={5}>
+                        {this.getListItemTypoGraphy(
+                            `${contributor.aut_title} ${contributor.aut_display_name}`,
+                            `${contributor.aut_org_username || contributor.aut_student_username}`,
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+                {
+                    contributor.affiliation === 'NotUQ' &&
+                    <Grid item xs={5}>
+                        {this.getListItemTypoGraphy(
+                            `${contributor.orgaff}`,
+                            `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+                {
+                    showRoleInput &&
+                    <Grid item xs={10} sm={5} md={5}>
+                        {this.getListItemTypoGraphy(
+                            contributor.creatorRole,
+                            '',
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+            </Grid>
+        );
+>>>>>>> master
     };
 
     render() {
@@ -207,7 +259,7 @@ export class ContributorRow extends PureComponent {
                         </ListItemIcon>
                     </Hidden>
                     {
-                        this.getContributorRowText(this.props.showIdentifierLookup, selectedClass)
+                        this.getContributorRowText(this.props.showIdentifierLookup, this.props.showRoleInput, selectedClass)
                     }
                     <ListItemSecondaryAction>
                         {

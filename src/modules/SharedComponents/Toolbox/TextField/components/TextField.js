@@ -9,17 +9,15 @@ import {withStyles} from '@material-ui/core/styles';
 const styles = {};
 
 const TextFieldWrapper = props => {
-    const filteredProps = propFilter(props, TextField.propTypes);
+    const filteredProps = propFilter({...props, forceError: true}, TextField.propTypes);
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
-    const error = filteredProps.errorText;
+    const helperText = filteredProps.errorText || undefined;
     delete filteredProps.errorText;
-
     return (
         <Fragment>
             <TextField {...filteredProps}
-                id={props.label || 'This is a test'}
-                helperText={error}
-                error={!!error}
+                helperText={helperText}
+                id={props.label || ''}
                 InputLabelProps={filteredProps.floatinglabelfixed ? {shrink: true} : null}
             />
             {props.help && props.help.text && (

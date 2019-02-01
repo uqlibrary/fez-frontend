@@ -22,13 +22,56 @@ export default {
                 "fez_record_search_key_end_page": {"rek_end_page": "2088"},
                 "fez_record_search_key_total_pages": {"rek_total_pages": 13},
                 "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
-                "fez_record_search_key_author": [{
-                    "rek_author": "Cicero, Arrigo F G",
-                    "rek_author_order": 1
-                }, {"rek_author": "Fogacci, Federica", "rek_author_order": 2}, {
-                    "rek_author": "Colletti, Alessandro",
-                    "rek_author_order": 3
-                }],
+                "fez_record_search_key_author": [
+                    {
+                        "rek_author": "Cicero, Arrigo F G",
+                        "rek_author_order": 1
+                    },
+                    {
+                        "rek_author": "Fogacci, Federica",
+                        "rek_author_order": 2
+                    },
+                    {
+                        "rek_author": "Colletti, Alessandro",
+                        "rek_author_order": 3
+                    },
+                    {
+                        "rek_author": "Cicero, Arrigo F G",
+                        "rek_author_order": 4
+                    },
+                    {
+                        "rek_author": "Fogacci, Federica",
+                        "rek_author_order": 5
+                    },
+                    {
+                        "rek_author": "Colletti, Alessandro",
+                        "rek_author_order": 6
+                    },
+                    {
+                        "rek_author": "Cicero, Arrigo F G",
+                        "rek_author_order": 7
+                    },
+                    {
+                        "rek_author": "Fogacci, Federica",
+                        "rek_author_order": 8
+                    },
+                    {
+                        "rek_author": "Colletti, Alessandro",
+                        "rek_author_order": 9
+                    },
+                    {
+                        "rek_author": "Cicero, Arrigo F G",
+                        "rek_author_order": 10
+                    },
+                    {
+                        "rek_author": "Fogacci, Federica",
+                        "rek_author_order": 11
+                    },
+                    {
+                        "rek_author": "Colletti, Alessandro",
+                        "rek_author_order": 12
+                    }
+                ],
                 "fez_record_search_key_author_affiliation_full_address": [{
                     "rek_author_affiliation_full_address": "Atherosclerosis and Metabolic Diseases Research Center, Medical & Surgical Sciences Dept., Alma Mater Studiorum - University of Bologna, Bologna, Italy. arrigo.cicero@unibo.it.",
                     "rek_author_affiliation_full_address_order": 1

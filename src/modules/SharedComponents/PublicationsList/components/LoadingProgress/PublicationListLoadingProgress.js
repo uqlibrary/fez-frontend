@@ -42,8 +42,9 @@ export class PublicationListLoadingProgress extends PureComponent {
                                     : (
                                         <Grid item>
                                             <CircularProgress
-                                                size={10}
-                                                thickness={2}
+                                                size={12}
+                                                thickness={4}
+                                                variant={'indeterminate'}
                                                 aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}/>
                                         </Grid>
                                     )

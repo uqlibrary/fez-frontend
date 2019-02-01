@@ -152,13 +152,19 @@ exports[`WorkingPaperForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": "Help text...",
+          "title": "NTRO Publication Authors/Creators/Contributors",
+        }
+      }
       title="Authors"
     >
       <WithStyles(Typography)>
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -228,18 +234,6 @@ exports[`WorkingPaperForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this author ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed author",
@@ -249,6 +243,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -263,7 +258,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Optional details"
     >
       <WithStyles(Grid)
         container={true}
@@ -300,7 +295,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Type URL for this publication"
+            placeholder="Type URL for this work"
             type="text"
             validate={
               Array [

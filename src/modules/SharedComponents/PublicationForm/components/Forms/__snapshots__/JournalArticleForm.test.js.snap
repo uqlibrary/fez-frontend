@@ -81,6 +81,10 @@ exports[`JournalArticleForm renders  component 1`] = `
             }
           />
         </WithStyles(Grid)>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
         <WithStyles(Grid)
           item={true}
           xs={12}
@@ -91,7 +95,7 @@ exports[`JournalArticleForm renders  component 1`] = `
             disabled={false}
             locale={
               Object {
-                "label": "Publication subtype",
+                "label": "Work subtype",
                 "loading": "Loading",
               }
             }
@@ -105,6 +109,8 @@ exports[`JournalArticleForm renders  component 1`] = `
             vocabId={0}
           />
         </WithStyles(Grid)>
+>>>>>>> master
+>>>>>>> feature-ntro
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -189,18 +195,6 @@ exports[`JournalArticleForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this author ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed author",
@@ -224,7 +218,7 @@ exports[`JournalArticleForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Optional publication details"
+      title="Optional details"
     >
       <WithStyles(Grid)
         container={true}

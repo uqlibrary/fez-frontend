@@ -41,7 +41,48 @@ exports[`Component FileUploader should accept terms and condition and reset back
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -92,6 +133,39 @@ exports[`Component FileUploader should accept terms and condition and reset back
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -162,7 +236,48 @@ exports[`Component FileUploader should accept terms and condition and reset back
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -213,6 +328,39 @@ exports[`Component FileUploader should accept terms and condition and reset back
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -295,7 +443,48 @@ exports[`Component FileUploader should accept terms and condition and reset back
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -346,6 +535,39 @@ exports[`Component FileUploader should accept terms and condition and reset back
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -428,7 +650,48 @@ exports[`Component FileUploader should accept terms and condition and reset back
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -479,6 +742,39 @@ exports[`Component FileUploader should accept terms and condition and reset back
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -552,7 +848,48 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -603,6 +940,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -631,6 +1001,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -702,7 +1105,48 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -753,6 +1197,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -783,6 +1260,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -854,7 +1364,48 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -905,6 +1456,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -935,6 +1519,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1010,7 +1627,48 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1061,6 +1719,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={2}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1091,6 +1782,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={2}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1121,6 +1845,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={2}
           index={2}
           key="c.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1149,6 +1906,39 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           focusOnIndex={2}
           index={3}
           key="d.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1215,7 +2005,48 @@ exports[`Component FileUploader should render default component 1`] = `
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1271,7 +2102,48 @@ exports[`Component FileUploader should render disabled component 1`] = `
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1326,7 +2198,48 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1386,7 +2299,48 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1437,6 +2391,39 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1465,6 +2452,39 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1535,7 +2555,48 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1586,6 +2647,39 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           focusOnIndex={0}
           index={0}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1652,7 +2746,48 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1707,7 +2842,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1767,7 +2943,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1819,6 +3036,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1849,6 +3099,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -1916,7 +3199,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1976,7 +3300,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2027,6 +3392,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2055,6 +3453,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2126,7 +3557,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2177,6 +3649,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2207,6 +3712,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2278,7 +3816,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2329,6 +3908,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2359,6 +3971,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2440,7 +4085,48 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2491,6 +4177,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2521,6 +4240,39 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2597,7 +4349,48 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2657,7 +4450,48 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             </li>
           </ul>
         </div>,
+        "fileUploadRow": Object {
+          "defaultView": Object {
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "fileUploadRowAccessSelector": Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          },
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2709,6 +4543,39 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           focusOnIndex={0}
           index={0}
           key="a.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}
@@ -2739,6 +4606,39 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           focusOnIndex={0}
           index={1}
           key="b.txt"
+          locale={
+            Object {
+              "defaultView": Object {
+                "embargoDateClosedAccess": "No date required",
+              },
+              "deleteHint": "Remove this file",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+                "confirmationTitle": "Delete file",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "fileUploadRowAccessSelector": Object {
+                "accessSelectOptionsText": Object {
+                  "8": "Closed Access",
+                  "9": "Open Access",
+                },
+                "errorMessage": "This field is required",
+                "initialValue": "Select access conditions",
+              },
+              "filenameColumn": "File name",
+              "mobileView": Object {
+                "embargoDateClosedAccess": "No date required",
+                "embargoDateColumn": "Embargo date",
+                "fileAccessColumn": "File access",
+                "filenameColumn": "File name",
+              },
+              "uploadInProgressText": "Uploading...",
+            }
+          }
           onAccessConditionChange={[Function]}
           onDelete={[Function]}
           onEmbargoDateChange={[Function]}

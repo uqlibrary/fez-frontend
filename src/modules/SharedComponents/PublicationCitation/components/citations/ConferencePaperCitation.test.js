@@ -1,6 +1,5 @@
 import ConferencePaperCitation from './ConferencePaperCitation';
 import {conferencePaper} from 'mock/data/testing/records';
-import mui1theme from 'config';
 
 function setup(testProps, isShallow = false) {
     const props = {

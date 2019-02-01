@@ -134,7 +134,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
       title="Creators"
     >
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -142,6 +141,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add creator",
+                "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
+                "creatorRoleLabel": "Enter creator's role",
                 "descriptionStep1": <div>
                   <span
                     className="authorSteps"
@@ -191,6 +192,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "identifierColumn": "UQ identifier",
                 "nameColumn": "Creator's name as published",
                 "reorderColumn": "Reorder items",
+                "roleColumn": "Creator's role",
               },
             },
             "row": Object {
@@ -204,18 +206,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this creator ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed creator",
@@ -225,6 +215,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
       />
     </StandardCard>
@@ -313,18 +304,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this contributor ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed contributor",

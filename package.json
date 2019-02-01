@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": "github:uqlibrary/fez-frontend",
   "devDependencies": {
     "@sentry/webpack-plugin": "^1.5.2",
     "axios-mock-adapter": "^1.15.0",
@@ -43,7 +44,7 @@
     "jsdom": "11.10.0",
     "jsdom-global": "^3.0.2",
     "mockdate": "^2.0.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.10.0",
     "postcss-loader": "^2.1.4",
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
     "progress-bar-webpack-plugin": "^1.11.0",
@@ -59,13 +60,14 @@
     "webpack": "^4.16.0",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.1.14",
     "webpack-pwa-manifest": "^3.7.1"
   },
   "dependencies": {
     "@material-ui/core": "^3.2.0",
     "@material-ui/icons": "^3.0.1",
     "@material/animation": "0.34.0",
+    "@types/jest": "^23.3.13",
     "axios": "^0.18.0",
     "axios-cache-adapter": "^2.0.0",
     "babel-loader": "^7.1.4",
@@ -88,6 +90,7 @@
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
     "mui-datatables": "^2.0.0-beta-37",
+    "number-to-words": "^1.2.4",
     "prop-types": "^15.6.0",
     "raven-js": "^3.24.2",
     "react": "16.3.2",
@@ -129,8 +132,8 @@
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {
-    "npm": ">=4",
-    "node": ">=7.2.0"
+    "npm": "^6.6.0",
+    "node": "^11.7.0"
   },
   "babel": {
     "presets": [

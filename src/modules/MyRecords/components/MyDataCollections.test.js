@@ -1,5 +1,4 @@
 import myDatasets from './MyRecords';
-import {MyDatasetList} from 'mock/data';
 import {routes} from 'config';
 import {locale} from 'locale';
 

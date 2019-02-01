@@ -57,7 +57,7 @@ export default class ThesisForm extends Component {
                                     name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
-                                    className="requiredField"
+                                    required
                                     {...txt.information.fieldLabels.orgUnitName}
                                 />
                             </Grid>
@@ -66,7 +66,7 @@ export default class ThesisForm extends Component {
                                     component={OrgNameField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_org_name.rek_org_name"
-                                    className="requiredField"
+                                    required
                                     validate={[validation.required]}
                                     {...txt.information.fieldLabels.orgName}/>
                             </Grid>
@@ -77,7 +77,7 @@ export default class ThesisForm extends Component {
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
                                     locale={txt.information.fieldLabels.thesisType}
-                                    className="requiredField" />
+                                    required />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -109,7 +109,7 @@ export default class ThesisForm extends Component {
                     <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                         <Field
                             component={ContributorsEditorField}
-                            className="requiredField"
+                            required
                             name="supervisors"
                             validate={[validation.supervisorRequired]}
                             locale={txt.supervisors.field}
@@ -143,7 +143,7 @@ export default class ThesisForm extends Component {
                                     fullWidth
                                     {...txt.optional.fieldLabels.doi} />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}

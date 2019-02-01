@@ -9,10 +9,12 @@ import {routes} from 'config';
 const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
+        ...state.get('accountReducer'),
         ...state.get('publicationsReducer'),
         ...state.get('exportPublicationsReducer'),
         localePages: locale.pages.myResearch,
         thisUrl: routes.pathConfig.records.mine,
+        canUseExport: state.get('accountReducer') && state.get('accountReducer').account && !!state.get('accountReducer').account.hasSession
     };
 };
 

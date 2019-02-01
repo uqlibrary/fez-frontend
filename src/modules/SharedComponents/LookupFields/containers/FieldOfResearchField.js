@@ -15,11 +15,12 @@ const mapStateToProps = (state, props) => {
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        selectedValue: props.input ? {value: props.input.value} : null,
+        selectedValue: !!props.input && !!props.input.value ? {value: props.input.value} : null,
         maxResults: props.maxResults,
         async: true,
         itemToString: (item) => !!item && String(item.value) || '',
         filter: props.filter || ((searchText, key) => {
+            if (searchText === '') return false;
             return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
         })
     };
@@ -33,21 +34,24 @@ const filterFoRmapStateToProps = (state, props) => {
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        selectedValue: props.input ? props.input.value : null,
+        selectedValue: !!props.input && !!props.input.value ? {value: props.input.value} : null,
         maxResults: 20,
         async: true,
         itemToString: (item) => !!item && String(item.value) || '',
         filter: (searchText, key) => {
             if (searchText === '') return false;
-            const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRegExp(searchText)}.*`, 'gi');
-            return testKey.test(key);
+            const textMatchKey = !!key && key.toString().toLowerCase().includes(!!searchText && searchText.toString().toLowerCase());
+            const testKey = new RegExp(/^[0-9]{4}\s.*/gi); // Only return items from the list that match this regex of 4 digits, then a space, then anything
+            return testKey.test(key.toString()) && textMatchKey;
         }
     };
 };
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (category) => dispatch(actions.loadVocabulariesList(category))
+        loadSuggestions: (category) => {
+            dispatch(actions.loadVocabulariesList(category));
+        }
     }
 );
 

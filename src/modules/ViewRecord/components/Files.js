@@ -102,7 +102,7 @@ export class Files extends Component {
 
         setTimeout(() => {
             const files = ReactDOM.findDOMNode(this.refs.files);
-            window.scrollTo(0, (files.offsetTop + files.scrollHeight - 30));
+            files && window.scrollTo(0, (files.offsetTop + files.scrollHeight - 30));
         }, 80);
     }
 
@@ -122,7 +122,7 @@ export class Files extends Component {
             && publication.fez_record_search_key_oa_status.rek_oa_status) || null;
         if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
             return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
-        } else if (embargoDate && moment(embargoDate).isSameOrAfter(moment(), 'day')) {
+        } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
             return {isOpenAccess: false, embargoDate: moment(embargoDate).format('Do MMMM YYYY'), openAccessStatusId: openAccessStatusId};
         }
         return {isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId};

@@ -1,19 +1,17 @@
-**To emulate uploading files:**
+# To emulate uploading files
 
-1. Head to _node_modules_ > _axios-mock-adapter_ > _src_ > _handle_request.js _
-2. Add this on line 15  
+1. Head to _node_modules_ > _axios-mock-adapter_ > _src_ > _handle_request.js
+1. Add this on line 15
 
-```
-
+```javascript
 if (typeof config.url === 'object') {
   config.url = config.url[0];
 }
-  
-```
-so it should look like this
-
 ```
 
+so it should look like this:
+
+```javascript
   function handleRequest(mockAdapter, resolve, reject, config) {
   if (typeof config.url === 'object') {
       config.url = config.url[0];

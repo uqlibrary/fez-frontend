@@ -11,16 +11,22 @@ const mapStateToProps = (state, props) => {
             : [],
         onChange: (item) => {
             if (!item.id) {
-                props.onChange({...item, id: item.value});
+                !!props.input
+                    ? props.input.onChange({...item, id: item.value})
+                    : props.onChange({...item, id: item.value});
             } else {
-                props.onChange(item);
+                !!props.input
+                    ? props.input.onChange(item)
+                    : props.onChange(item);
             }
         },
         allowFreeText: true,
         async: true,
-        selectedValue: !!props.label && props.label || !!props.value && props.value || '',
+        selectedValue: !props.input && (!!props.label && {value: props.label} || !!props.value && {value: props.value}) || '',
         itemToString: (item) => !!item && String(`${item.id} (${item.value})`) || '',
-        maxResults: 50
+        maxResults: 50,
+        error: (!!props.meta && !!props.meta.error) || props.error,
+        errorText: (!!props.meta && !!props.meta.error && props.meta.error) || (props.error && props.errorText) || ''
     };
 };
 

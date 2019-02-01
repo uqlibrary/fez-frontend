@@ -28,7 +28,8 @@ const styles = (theme) => ({
 export class AdditionalInformation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        isNtro: PropTypes.bool
     };
 
     renderRow = (heading, data, index) => {
@@ -122,6 +123,8 @@ export class AdditionalInformation extends PureComponent {
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
+            case 'rek_start_date': return this.formatPublicationDate(value);
+            case 'rek_end_date': return this.formatPublicationDate(value);
             case 'rek_description': return this.renderHTML(value);
             default: return value;
         }
@@ -183,6 +186,7 @@ export class AdditionalInformation extends PureComponent {
                 containerElement={<div style={{height: '400px'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}
                 coordinates={coordinatesList[0].rek_geographic_area}
+                readOnly
             />
         );
     };
@@ -205,7 +209,7 @@ export class AdditionalInformation extends PureComponent {
     }
 
     getAbstract = (publication) => {
-        return publication.rek_formatted_abstract || publication.rek_description;
+        return publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ');
     }
 
     // TODO: display original contact email for admin users

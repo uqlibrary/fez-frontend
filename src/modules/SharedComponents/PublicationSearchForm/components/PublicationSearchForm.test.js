@@ -1,6 +1,4 @@
 import PublicationSearchForm from './PublicationSearchForm';
-import {locale} from 'locale';
-
 
 function setup(testProps, isShallow = true) {
     const props = {

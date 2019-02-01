@@ -17,7 +17,7 @@ export default {
                 activeFilter: 'Show only open access records'
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
-            renameFacetsList: {'Display type': 'Publication type', 'Subtype': 'Publication subtype'},
+            renameFacetsList: {'Display type': 'Work type', 'Subtype': 'Work subtype'},
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
@@ -30,15 +30,15 @@ export default {
             // },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace publications',
+            publicationStatsTitle1: 'eSpace works',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
             publicationStatsRowTitle1: 'h-index',
-            publicationStatsRowTitle2: 'Average citation count per publication',
+            publicationStatsRowTitle2: 'Average citation count per work',
             publicationStatsRowTitle3: 'Total citations',
-            publicationStatsRowTitle4: 'Total publications',
-            publicationStatsRowTitle5: 'Publication range',
+            publicationStatsRowTitle4: 'Total works',
+            publicationStatsRowTitle5: 'Works year range',
             publicationStatsNA: 'N/A'
         },
         publicationCitation: {
@@ -199,6 +199,154 @@ export default {
                 }
             }
         },
+        fundingBodyForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Funding body',
+                        inputFieldHint: 'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Funding body',
+                        reorderColumn: 'Reorder funding bodies',
+                        deleteAll: 'Remove all funding bodies',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all funding bodies?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move funding body up the order',
+                        moveDownHint: 'Move funding body down the order',
+                        deleteHint: 'Remove this funding body',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete funding body',
+                            confirmationMessage: 'Are you sure you want to delete this funding body?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        grantIdForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Grant IDs',
+                        inputFieldHint: 'Type grantID',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Grant ID',
+                        reorderColumn: 'Reorder grant IDs',
+                        deleteAll: 'Remove all grant IDs',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all grant IDs?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move grant ID up the order',
+                        moveDownHint: 'Move grant ID down the order',
+                        deleteHint: 'Remove this grant ID',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete grant ID',
+                            confirmationMessage: 'Are you sure you want to delete this grant ID?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        typeOfDataForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Type of data',
+                        inputFieldHint: 'Type type of data',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Type of data',
+                        reorderColumn: 'Reorder type of data',
+                        deleteAll: 'Remove all type of data',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all type of data?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move type of data up the order',
+                        moveDownHint: 'Move type of data down the order',
+                        deleteHint: 'Remove this type of data',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete type of data',
+                            confirmationMessage: 'Are you sure you want to delete this type of data?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        softwareRequiredForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Software required',
+                        inputFieldHint: 'Type software required',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Software required',
+                        reorderColumn: 'Reorder software required',
+                        deleteAll: 'Remove all software required',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all software required?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move software required up the order',
+                        moveDownHint: 'Move software required down the order',
+                        deleteHint: 'Remove this software required',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete software required',
+                            confirmationMessage: 'Are you sure you want to delete this software required?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         isbnForm: {
             title: 'ISBN',
             text: 'You can add up to five ISBN values',
@@ -211,9 +359,9 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISBN value',
-                        inputFieldHint: 'Type ISBN value',
+                        inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -256,9 +404,9 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISSN value',
-                        inputFieldHint: 'Type ISSN value',
+                        inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -289,15 +437,105 @@ export default {
                 }
             }
         },
+        ismnForm: {
+            title: 'ISMN',
+            text: 'You can add up to five ISMN values',
+            // help: {
+            //     title: 'ISMN value',
+            //     text: 'Acceptable ISMN formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISMN value',
+                        inputFieldHint: 'Enter ISMN, e.g. 9790720208015',
+                        addButtonLabel: <span>Add&nbsp;ISMN</span>,
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISMN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        isrcForm: {
+            title: 'ISRC',
+            text: 'You can add up to five ISRC values',
+            // help: {
+            //     title: 'ISRC value',
+            //     text: 'Acceptable ISRC formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISRC value',
+                        inputFieldHint: 'Enter ISRC, e.g. US6R21320619',
+                        addButtonLabel: <span>Add&nbsp;ISRC</span>,
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISRC',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Adding contributors',
-            //     text: 'Help text...',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'NTRO Publication Authors/Creators/Contributors',
+                text: 'Help text...',
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {
@@ -339,7 +577,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this author ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -402,7 +639,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this editor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -434,6 +670,8 @@ export default {
                         ),
                         nameAsPublishedLabel: 'Enter each creator\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
+                        creatorRoleLabel: 'Enter creator\'s role',
+                        creatorRoleHint: 'Select role from list or type the role of the creator in relation to the dataset',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator'
                     }
@@ -445,6 +683,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Creator\'s name as published',
+                        roleColumn: 'Creator\'s role',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
@@ -464,7 +703,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this creator ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -525,7 +763,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this designer ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -586,7 +823,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -638,7 +874,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -698,7 +933,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this contributor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -997,8 +1231,8 @@ export default {
                     },
                     'rek_display_type': {
                         order: 20,
-                        map: 'Publication type',
-                        title: 'Publication type',
+                        map: 'Work type',
+                        title: 'Work type',
                         combiner: 'is one of',
                         type: null,
                         hint: 'Select document types',

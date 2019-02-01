@@ -20,12 +20,12 @@ export default {
             primaryText: 'Author statistics'
         },
         claimPublication: {
-            primaryText: 'Claim possible publications'
+            primaryText: 'Claim possible work'
         },
         addMissingRecord: {
-            primaryText: 'Add a missing publication'
+            primaryText: 'Add a missing work'
         },
-        addDataset: {
+        addMissingDataset: {
             primaryText: 'Add a missing dataset'
         },
         masquerade: {

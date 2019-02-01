@@ -17,7 +17,7 @@ describe('getRecordLinkSearchKey test ', () => {
             ],
             fez_record_search_key_link_description: [
                 {
-                    rek_link_description: 'Link to publication',
+                    rek_link_description: 'Link to work',
                     rek_link_description_order: 1
                 }
             ]
@@ -97,10 +97,6 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
                 }
             ],
             fez_record_search_key_file_attachment_embargo_date: [
-                {
-                    rek_file_attachment_embargo_date: '2018-01-01',
-                    rek_file_attachment_embargo_date_order: 1
-                },
                 {
                     rek_file_attachment_embargo_date: '2018-01-31',
                     rek_file_attachment_embargo_date_order: 2
@@ -249,12 +245,7 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
                     rek_file_attachment_name_order: 3
                 }
             ],
-            fez_record_search_key_file_attachment_embargo_date: [
-                {
-                    rek_file_attachment_embargo_date: '2018-01-01',
-                    rek_file_attachment_embargo_date_order: 2
-                }
-            ],
+            fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [
                 {
                     rek_file_attachment_access_condition: 1,
@@ -269,7 +260,6 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
         const result = transformers.getRecordFileAttachmentSearchKey(files, record);
         expect(result).toEqual(expected);
     });
-
 });
 
 describe('getFixIssueRequest test ', () => {
@@ -778,3 +768,523 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getDatasetCreatorRolesSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = [];
+        const expected = {};
+        const result = transformers.getDatasetCreatorRolesSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [
+            {creatorRole: "Investigator"},
+            {creatorRole: "Software Developer"},
+            {creatorRole: "Co-investigator"}
+        ];
+        const expected = {
+            fez_record_search_key_author_role: [
+                {
+                    rek_author_role: 'Investigator',
+                    rek_author_role_order: 1
+                },
+                {
+                    rek_author_role: 'Software Developer',
+                    rek_author_role_order: 2
+                },
+                {
+                    rek_author_role: 'Co-investigator',
+                    rek_author_role_order: 3
+                }
+            ]
+        };
+        const result = transformers.getDatasetCreatorRolesSearchKey(input);
+        expect(result).toEqual(expected);
+    })
+});
+
+describe('getDatasetContactDetailSearchKeys tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactNameId: {
+                id: 121212,
+                value: 'Test, Contact'
+            },
+            contactEmail: 'test@test.com'
+        };
+        const expected = {
+            fez_record_search_key_contributor: [{
+                rek_contributor: 'Test Contact',
+                rek_contributor_id: null,
+                rek_contributor_order: 1
+            }],
+            fez_record_search_key_contributor_id: [{
+                rek_contributor_id: 121212,
+                rek_contributor_id_order: 1
+            }],
+            fez_record_search_key_contact_details_email: [{
+                rek_contact_details_email: 'test@test.com',
+                rek_contact_details_email_order: 1
+            }]
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data transformed correctly for api', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactNameId: {
+                id: '121212',
+                value: 'Test, Contact'
+            },
+            contactEmail: 'test@test.com'
+        };
+        const expected = {
+            fez_record_search_key_contributor: [{
+                rek_contributor: 'Test Contact',
+                rek_contributor_id: null,
+                rek_contributor_order: 1
+            }],
+            fez_record_search_key_contributor_id: [{
+                rek_contributor_id: 121212,
+                rek_contributor_id_order: 1
+            }],
+            fez_record_search_key_contact_details_email: [{
+                rek_contact_details_email: 'test@test.com',
+                rek_contact_details_email_order: 1
+            }]
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data transformed correctly with id set to 0', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactNameId: {
+                id: 'test',
+                value: 'Test, Contact'
+            },
+            contactEmail: 'test@test.com'
+        };
+        const expected = {
+            fez_record_search_key_contributor: [{
+                rek_contributor: 'Test Contact',
+                rek_contributor_id: null,
+                rek_contributor_order: 1
+            }],
+            fez_record_search_key_contributor_id: [{
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 1
+            }],
+            fez_record_search_key_contact_details_email: [{
+                rek_contact_details_email: 'test@test.com',
+                rek_contact_details_email_order: 1
+            }]
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getGeographicAreaSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getGeographicAreaSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = '12.231112,-32.323323';
+        const expected = {
+            fez_record_search_key_geographic_area: [{
+                rek_geographic_area: '12.231112,-32.323323',
+                rek_geographic_area_order: 1
+            }]
+        };
+        const result = transformers.getGeographicAreaSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordAuthorAffiliationSearchKey tests', () => {
+    it('should return an empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getRecordAuthorAffiliationSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [
+            {
+                value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+                id: 553,
+                aut_id: 553,
+                aut_org_username: 'mdcmar',
+                aut_org_staff_id: '0002633',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Del Mar, Christopher B.',
+                aut_fname: 'Christopher',
+                aut_mname: 'Bernard',
+                aut_lname: 'Del Mar',
+                aut_title: 'Professor',
+                aut_position: '',
+                aut_homepage_link: '',
+                aut_created_date: null,
+                aut_update_date: '2010-10-08',
+                aut_external_id: '0000041362',
+                aut_ref_num: '',
+                aut_researcher_id: null,
+                aut_scopus_id: '',
+                aut_mypub_url: '',
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: true,
+                selected: false,
+                authorId: null
+            },
+            {
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: 'Test organisation',
+                orgtype: 453983,
+                disabled: false,
+                selected: true,
+                authorId: 410
+            },
+            {
+                nameAsPublished: 'Another user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: 'Some Organisation',
+                orgtype: 453987,
+                disabled: false,
+                selected: false,
+                authorId: null
+            },
+            {
+                value: 'Emeritus Professor Critchley, Christa (uqccritc) ',
+                id: 608,
+                aut_id: 608,
+                aut_org_username: 'uqccritc',
+                aut_org_staff_id: '0002876',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Critchley, Christa',
+                aut_fname: 'Christa',
+                aut_mname: null,
+                aut_lname: 'Critchley',
+                aut_title: 'Emeritus Professor',
+                aut_position: null,
+                aut_homepage_link: null,
+                aut_created_date: null,
+                aut_update_date: '2010-01-18',
+                aut_external_id: '0000041476',
+                aut_ref_num: null,
+                aut_researcher_id: null,
+                aut_scopus_id: null,
+                aut_mypub_url: null,
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Some user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: true,
+                selected: false,
+                authorId: null
+            }
+        ];
+        const expected = {
+            fez_record_search_key_author_affiliation_name: [
+                {
+                    rek_author_affiliation_name: 'Test organisation',
+                    rek_author_affiliation_name_order: 2
+                },
+                {
+                    rek_author_affiliation_name: 'Some Organisation',
+                    rek_author_affiliation_name_order: 3
+                }
+            ]
+        };
+        const result = transformers.getRecordAuthorAffiliationSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
+    it('should return an empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [
+            {
+                value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+                id: 553,
+                aut_id: 553,
+                aut_org_username: 'mdcmar',
+                aut_org_staff_id: '0002633',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Del Mar, Christopher B.',
+                aut_fname: 'Christopher',
+                aut_mname: 'Bernard',
+                aut_lname: 'Del Mar',
+                aut_title: 'Professor',
+                aut_position: '',
+                aut_homepage_link: '',
+                aut_created_date: null,
+                aut_update_date: '2010-10-08',
+                aut_external_id: '0000041362',
+                aut_ref_num: '',
+                aut_researcher_id: null,
+                aut_scopus_id: '',
+                aut_mypub_url: '',
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: true,
+                selected: false,
+                authorId: null
+            },
+            {
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: 'Test organisation',
+                orgtype: '453983',
+                disabled: false,
+                selected: true,
+                authorId: 410
+            },
+            {
+                nameAsPublished: 'Another user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: 'Some Organisation',
+                orgtype: '453987',
+                disabled: false,
+                selected: false,
+                authorId: null
+            },
+            {
+                value: 'Emeritus Professor Critchley, Christa (uqccritc) ',
+                id: 608,
+                aut_id: 608,
+                aut_org_username: 'uqccritc',
+                aut_org_staff_id: '0002876',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Critchley, Christa',
+                aut_fname: 'Christa',
+                aut_mname: null,
+                aut_lname: 'Critchley',
+                aut_title: 'Emeritus Professor',
+                aut_position: null,
+                aut_homepage_link: null,
+                aut_created_date: null,
+                aut_update_date: '2010-01-18',
+                aut_external_id: '0000041476',
+                aut_ref_num: null,
+                aut_researcher_id: null,
+                aut_scopus_id: null,
+                aut_mypub_url: null,
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Some user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: true,
+                selected: false,
+                authorId: null
+            }
+        ];
+        const expected = {
+            fez_record_search_key_author_affiliation_type: [
+                {
+                    rek_author_affiliation_type: 453983,
+                    rek_author_affiliation_type_order: 2
+                },
+                {
+                    rek_author_affiliation_type: 453987,
+                    rek_author_affiliation_type_order: 3
+                }
+            ]
+        };
+        const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordAbstractDescriptionSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getRecordAbstractDescriptionSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = {
+            plainText: 'test',
+            htmlText: '<p>test</p>'
+        };
+        const expected = {
+            rek_description: 'test',
+            rek_formatted_abstract: '<p>test</p>'
+        };
+        const result = transformers.getRecordAbstractDescriptionSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getGrantsListSearchKey tests', () => {
+    it('should return empty object', () => {
+        const input = null;
+        const expected = {};
+        const result = transformers.getGrantsListSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data', () => {
+        const input = [{
+            grantAgencyName: 'test',
+            grantId: 'test123',
+            grantAgencyType: '12345'
+        }];
+
+        const expected = {
+            fez_record_search_key_grant_agency: [
+                {
+                    rek_grant_agency: 'test',
+                    rek_grant_agency_order: 1
+                }
+            ],
+            fez_record_search_key_grant_id: [
+                {
+                    rek_grant_id: 'test123',
+                    rek_grant_id_order: 1
+                }
+            ],
+            fez_record_search_key_grant_agency_type: [
+                {
+                    rek_grant_agency_type: 12345,
+                    rek_grant_agency_type_order: 1
+                }
+            ],
+        };
+        const result = transformers.getGrantsListSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data filtered empty values', () => {
+        const input = [
+            {
+                grantAgencyName: 'test',
+                grantId: 'test123',
+            },
+            {
+                grantAgencyName: 'testing',
+                grantId: 'testing123',
+                grantAgencyType: '12345'
+            },
+            {
+                grantAgencyName: 'tested',
+                grantAgencyType: '56465'
+            }
+        ];
+
+        const expected = {
+            fez_record_search_key_grant_agency: [
+                {
+                    rek_grant_agency: 'test',
+                    rek_grant_agency_order: 1
+                },
+                {
+                    rek_grant_agency: 'testing',
+                    rek_grant_agency_order: 2
+                },
+                {
+                    rek_grant_agency: 'tested',
+                    rek_grant_agency_order: 3
+                }
+            ],
+            fez_record_search_key_grant_id: [
+                {
+                    rek_grant_id: 'test123',
+                    rek_grant_id_order: 1
+                },
+                {
+                    rek_grant_id: 'testing123',
+                    rek_grant_id_order: 2
+                }
+            ],
+            fez_record_search_key_grant_agency_type: [
+                {
+                    rek_grant_agency_type: 12345,
+                    rek_grant_agency_type_order: 2
+                },
+                {
+                    rek_grant_agency_type: 56465,
+                    rek_grant_agency_type_order: 3
+                }
+            ],
+        };
+        const result = transformers.getGrantsListSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+})

@@ -77,7 +77,7 @@ class DashboardAuthorProfile extends PureComponent {
                                     values={{
                                         publons: parseInt(author.aut_publons_id, 10) === 1 ? author.aut_orcid_id : author.aut_publons_id,
                                         researcher: author.aut_researcher_id,
-                                        scopus: author.aut_scopus_id,
+                                        scopus: parseInt(author.aut_is_scopus_id_authenticated, 10) === 1 ? author.aut_scopus_id : '',
                                         google_scholar: author.aut_google_scholar_id,
                                         orcid: author.aut_orcid_id
                                     }}

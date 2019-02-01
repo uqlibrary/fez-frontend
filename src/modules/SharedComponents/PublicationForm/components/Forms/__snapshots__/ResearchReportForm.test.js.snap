@@ -17,7 +17,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         spacing={16}
       >
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -41,7 +41,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={4}
           xs={12}
         >
           <Field
@@ -56,7 +56,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={4}
           xs={12}
         >
           <Field
@@ -71,7 +71,22 @@ exports[`ResearchReportForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Report number"
+            name="fez_record_search_key_report_number.rek_report_number"
+            placeholder="Type the report number"
+            type="text"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -81,7 +96,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             normalize={[Function]}
-            placeholder="Type total number of pages in the publication"
+            placeholder="Type total number of pages"
             required={true}
             type="text"
             validate={
@@ -93,7 +108,27 @@ exports[`ResearchReportForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="DOI"
+            name="fez_record_search_key_doi.rek_doi"
+            placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -113,7 +148,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -132,13 +167,19 @@ exports[`ResearchReportForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": "Help text...",
+          "title": "NTRO Publication Authors/Creators/Contributors",
+        }
+      }
       title="Authors"
     >
       <WithStyles(Typography)>
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -208,18 +249,6 @@ exports[`ResearchReportForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this author ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed author",
@@ -229,6 +258,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -257,10 +287,10 @@ exports[`ResearchReportForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISBN",
-                "inputFieldHint": "Type ISBN value",
+                "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -331,10 +361,10 @@ exports[`ResearchReportForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISSN",
-                "inputFieldHint": "Type ISSN value",
+                "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -391,14 +421,14 @@ exports[`ResearchReportForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Other work details"
     >
       <WithStyles(Grid)
         container={true}
         spacing={16}
       >
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -414,7 +444,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -429,7 +459,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          iteam={true}
+          item={true}
           xs={12}
         >
           <Field
@@ -438,7 +468,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Type URL for this publication"
+            placeholder="Type URL for this work"
             type="text"
             validate={
               Array [

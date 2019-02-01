@@ -17,8 +17,7 @@ exports[`myDatasets test renders active filters 1`] = `
           <div>
             We were unable to find any results. You may be able to 
             <a
-              href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-              target="_blank"
+              href="/data-collections/add"
             >
               add a missing dataset
             </a>
@@ -30,8 +29,7 @@ exports[`myDatasets test renders active filters 1`] = `
         <div>
           We were unable to find any results. You may be able to 
           <a
-            href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-            target="_blank"
+            href="/data-collections/add"
           >
             add a missing dataset
           </a>
@@ -73,8 +71,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
             <span>
               Add to this list by 
               <a
-                href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-                target="_blank"
+                href="/data-collections/add"
               >
                 adding a missing dataset
               </a>
@@ -86,7 +83,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -197,8 +193,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             <span>
               Add to this list by 
               <a
-                href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-                target="_blank"
+                href="/data-collections/add"
               >
                 adding a missing dataset
               </a>
@@ -210,7 +205,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -446,8 +440,7 @@ exports[`myDatasets test renders loading screen while loading publications while
             <span>
               Add to this list by 
               <a
-                href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-                target="_blank"
+                href="/data-collections/add"
               >
                 adding a missing dataset
               </a>
@@ -459,7 +452,6 @@ exports[`myDatasets test renders loading screen while loading publications while
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -529,8 +521,7 @@ exports[`myDatasets test renders no results 1`] = `
           <div>
             We were unable to find any results. You may be able to 
             <a
-              href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-              target="_blank"
+              href="/data-collections/add"
             >
               add a missing dataset
             </a>
@@ -542,8 +533,7 @@ exports[`myDatasets test renders no results 1`] = `
         <div>
           We were unable to find any results. You may be able to 
           <a
-            href="http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
-            target="_blank"
+            href="/data-collections/add"
           >
             add a missing dataset
           </a>

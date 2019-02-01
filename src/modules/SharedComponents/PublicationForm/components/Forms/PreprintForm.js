@@ -41,7 +41,7 @@ export default class PreprintForm extends Component {
                                     multiline
                                     rows={1}
                                     {...txt.information.fieldLabels.documentTitle}
-                                    className="requiredField"
+                                    required
                                     validate={[validation.required]}
                                 />
                             </Grid>
@@ -66,7 +66,7 @@ export default class PreprintForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             validate={[validation.authorRequired]}

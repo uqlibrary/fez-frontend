@@ -8,7 +8,6 @@ import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
@@ -18,8 +17,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default class ConferencePaperForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     }
 
     constructor(props) {
@@ -118,16 +116,6 @@ export default class ConferencePaperForm extends Component {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
-                                    component={PublicationSubtypeField}
-                                    name="rek_subtype"
-                                    disabled={this.props.submitting}
-                                    vocabId={this.props.subtypeVocabId}
-                                    className="requiredField"
-                                    locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
-                                    validate={[validation.required]} />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
@@ -149,7 +137,7 @@ export default class ConferencePaperForm extends Component {
                             name="authors"
                             locale={txt.authors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.authorRequired]}
                             disabled={this.props.submitting} />
                     </StandardCard>

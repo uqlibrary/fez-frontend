@@ -49,15 +49,32 @@ export class AutoCompleteAsyncField extends Component {
         maxResults: PropTypes.number,
         required: PropTypes.bool,
         selectedValue: PropTypes.any,
-        filter: PropTypes.func
+        filter: PropTypes.func,
+        openOnFocus: PropTypes.bool,
+        clearInput: PropTypes.bool,
+        MenuItemComponent: PropTypes.func
     };
 
     static defaultProps = {
         maxResults: 7,
         required: false,
         filter: (searchText, key) => {
-            return key.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
-        }
+            const anyKey = isNaN(key) ? key : `${key}`;
+            const regex = new RegExp(`(${searchText.split(' ').join('|')})`, 'gi');
+            return regex.test(anyKey);
+        },
+        MenuItemComponent: ({suggestion}) => (
+            <ListItemText
+                primary={suggestion.value}
+                secondary={suggestion.id}
+                primaryTypographyProps={{
+                    variant: 'body1'
+                }}
+                secondaryTypographyProps={{
+                    variant: 'body2'
+                }}
+            />
+        )
     };
 
     componentDidMount() {
@@ -76,11 +93,16 @@ export class AutoCompleteAsyncField extends Component {
         this.props.onChange(value);
     };
 
-    renderInput = ({ inputProps, classes, ...other }) => {
+    renderInput = ({ inputProps, classes, openMenu, ...other }) => {
         return (
             <TextField
                 InputProps={{
-                    inputRef: node => {this.textInputRef = node;},
+                    inputRef: node => {
+                        this.textInputRef = node;
+                        if (!!this.textInputRef && this.props.openOnFocus) {
+                            this.textInputRef.addEventListener('focus', openMenu);
+                        }
+                    },
                     classes: {
                         root: classes.inputRoot,
                     },
@@ -91,10 +113,11 @@ export class AutoCompleteAsyncField extends Component {
         );
     };
 
+    renderMenuItemComponent = (suggestion) => (<this.props.MenuItemComponent suggestion={suggestion} />);
+
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
         const isSelected = (selectedItem && selectedItem.value || '').indexOf(suggestion.value) > -1;
-
         return (
             <MenuItem
                 button
@@ -107,16 +130,9 @@ export class AutoCompleteAsyncField extends Component {
                     height: 'auto'
                 }}
             >
-                <ListItemText
-                    primary={suggestion.value}
-                    secondary={suggestion.id}
-                    primaryTypographyProps={{
-                        variant: 'body1'
-                    }}
-                    secondaryTypographyProps={{
-                        variant: 'body2'
-                    }}
-                />
+                {
+                    this.renderMenuItemComponent(suggestion)
+                }
             </MenuItem>
         );
     };
@@ -151,10 +167,14 @@ export class AutoCompleteAsyncField extends Component {
 
     render() {
         const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, allowFreeText, required, selectedValue } = this.props;
+
+        const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
+
         return (
             <div className={classes.root}>
                 <Downshift
-                    defaultInputValue={selectedValue}
+                    {...selectedItemProps}
+                    defaultInputValue={!!selectedValue && selectedValue.value || ''}
                     stateReducer={this.stateReducer}
                     onChange={this.handleSelected}
                     itemToString={itemToString}
@@ -164,7 +184,7 @@ export class AutoCompleteAsyncField extends Component {
                     }
                 >
                     {
-                        ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex }) => {
+                        ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {
                             return (
                                 <div className={classes.container}>
                                     {this.renderInput({
@@ -179,7 +199,8 @@ export class AutoCompleteAsyncField extends Component {
                                         label: floatingLabelText,
                                         value: inputValue,
                                         disabled: disabled,
-                                        required: required
+                                        required: required,
+                                        openMenu: openMenu
                                     })}
                                     {isOpen && itemsList.length > 0 ? (
                                         <div {...getMenuProps()}>
@@ -187,7 +208,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 <Paper className={classes.paper} square style={{width: this.textInputRef ? this.textInputRef.clientWidth : null}}>
                                                     {
                                                         itemsList
-                                                            .filter(suggestion => this.props.filter(inputValue, suggestion.value))
+                                                            .filter(suggestion => this.props.filter(inputValue, isNaN(inputValue) ? suggestion.value : suggestion.id || suggestion.value.toString()))
                                                             .slice(0, maxResults).map((suggestion, index) => {
                                                                 return !!suggestion && this.renderSuggestion({
                                                                     suggestion,

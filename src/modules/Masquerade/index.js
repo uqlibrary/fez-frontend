@@ -1,1 +1,1 @@
-export {default as Masquerade} from './components/Masquerade';
+export {default as Masquerade} from './containers/Masquerade';

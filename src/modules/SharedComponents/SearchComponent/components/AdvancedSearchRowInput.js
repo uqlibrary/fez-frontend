@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
-import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import {ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
 export default class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -60,8 +60,6 @@ export default class AdvancedSearchRowInput extends PureComponent {
                 return TextField;
             case 'PublisherLookup':
                 return PublisherField;
-            case 'SubTypeLookup':
-                return PublicationSubtypeField;
             case 'ThesisTypeLookup':
                 return ThesisSubtypeField;
             case 'CollectionsLookup':
@@ -82,7 +80,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'aria-label': this.props.inputField.ariaLabel,
             'errorText': this.runValidationRules(this.props.value),
             'error': !!this.runValidationRules(this.props.value),
-            'label': this.props.inputField.label,
+            'label': this.props.label,
         };
 
         const textFieldMui1Props = {
@@ -112,7 +110,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'TextField':
                 return {
                     ...textFieldMui1Props,
-                    'autoComplete': 'off',
+                    'autoComplete': 'search',
                     'onChange': (event) => this.props.onChange(event.target.value),
                 };
             case 'PublisherLookup':
@@ -125,7 +123,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'ContributorIdLookup':
                 return {
                     ...lookupDefaultProps,
-                    'label': null,
+                    'label': this.props.label,
                     'onChange': (item) => {
                         if (parseInt(item.id, 10) > 0) {
                             this.props.onChange(item.id, item.value);
@@ -133,10 +131,6 @@ export default class AdvancedSearchRowInput extends PureComponent {
                             this.props.onChange(0, '');
                         }
                     }
-                };
-            case 'SubTypeLookup':
-                return {
-                    ...selectDefaultProps,
                 };
             case 'ThesisTypeLookup':
                 return {

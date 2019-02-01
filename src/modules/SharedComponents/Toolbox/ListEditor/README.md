@@ -5,7 +5,7 @@ TODO: update LookupListEditor
 ReduxForm Field - adds ability for users to add a list of items (strings) to a record,
 data is passed to redux form values in the following format:
 
-```
+```javascript
 [
   {value: "item 1", order: 1},
   {value: "item 2", order: 2},
@@ -13,10 +13,10 @@ data is passed to redux form values in the following format:
 ]
 ```
 
-### Props 
+## Props
 
 - className: PropTypes.string - wraps control in this class (if set to 'requiredField' will set style as required field)
-- disabled: PropTypes.bool - if set to true, disables control 
+- disabled: PropTypes.bool - if set to true, disables control
 - onChange: PropTypes.func - required function for reduxForm Field
 - locale: PropTypes.object - text labels for the control
 - searchKey: PropTypes.object.isRequired - a structure for output, eg {{value: 'rek_isbn', order: 'rek_isbn_order'}}
@@ -25,9 +25,9 @@ data is passed to redux form values in the following format:
 
 ## Usage
 
-**./App.js**
-```jsx
+### ./App.js
 
+```jsx
   ...
    <Field
       component={ListEditorField}
@@ -37,5 +37,4 @@ data is passed to redux form values in the following format:
       searchKey={{value: 'rek_isbn', order: 'rek_isbn_order'}}
       locale={locale.components.isbnForm.field}
       disabled={this.props.submitting} />
-    
 ```

@@ -1,4 +1,3 @@
-/* eslint-disable */
 export const accounts = {
     // staff, no espace data
     uqstaff : {
@@ -17,6 +16,7 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": true,
+        "canMasqueradeType": "readonly",
         "blocked": false
     },
     // student

@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import {numberToWords} from 'config';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -36,7 +37,6 @@ export class AuthorItem extends PureComponent {
 
     static defaultProps = {
         locale: {
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             suffix: ' listed [type]'
         }
     };
@@ -69,8 +69,8 @@ export class AuthorItem extends PureComponent {
 
     render() {
         const {linked, author, selected, index} = this.props;
-        const {ordinalData, suffix} = this.props.locale;
-        const authorOrder = (index < ordinalData.length ? ordinalData[index] : (index + 1)) + ' ' + suffix.replace('[type]', this.props.type);
+        const {suffix} = this.props.locale;
+        const authorOrder = `${numberToWords(index + 1)} ${suffix.replace('[type]', this.props.type)}`;
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;
 

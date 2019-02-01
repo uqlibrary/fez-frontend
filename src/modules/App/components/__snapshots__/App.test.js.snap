@@ -14,7 +14,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -66,7 +66,17 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim possible publications",
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
           "path": "/records/possible",
         },
         Object {
@@ -76,7 +86,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -96,7 +106,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -106,7 +116,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -116,7 +126,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -354,18 +364,18 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
+          "primaryText": "Claim possible work",
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing publication",
+          "primaryText": "Add a missing work",
         },
         Object {
           "linkTo": "/data-collections/mine",
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -424,7 +434,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -488,9 +498,15 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_7"
         pageTitle="Claim possible publications"
         path="/records/possible"
+=======
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+>>>>>>> master
       />
       <Route
         access={
@@ -501,8 +517,29 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_8"
         pageTitle="Claim a publication"
+        path="/records/claim"
+=======
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+>>>>>>> master
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+<<<<<<< HEAD
+=======
+        key="route_8"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -514,6 +551,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+>>>>>>> master
         key="route_9"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
@@ -528,7 +566,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_10"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/find"
         render={[Function]}
       />
@@ -541,7 +583,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_11"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/results"
         render={[Function]}
       />
@@ -554,7 +600,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_12"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/new"
         render={[Function]}
       />
@@ -631,7 +681,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -683,7 +733,17 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim possible publications",
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
           "path": "/records/possible",
         },
         Object {
@@ -693,7 +753,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -713,7 +773,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -723,7 +783,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -733,7 +793,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -971,18 +1031,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
+          "primaryText": "Claim possible work",
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing publication",
+          "primaryText": "Add a missing work",
         },
         Object {
           "linkTo": "/data-collections/mine",
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -1041,7 +1101,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -1105,9 +1165,15 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_7"
         pageTitle="Claim possible publications"
         path="/records/possible"
+=======
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+>>>>>>> master
       />
       <Route
         access={
@@ -1118,8 +1184,29 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_8"
         pageTitle="Claim a publication"
+        path="/records/claim"
+=======
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+>>>>>>> master
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+<<<<<<< HEAD
+=======
+        key="route_8"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -1131,6 +1218,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
+>>>>>>> master
         key="route_9"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
@@ -1145,7 +1233,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_10"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/find"
         render={[Function]}
       />
@@ -1158,7 +1250,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_11"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/results"
         render={[Function]}
       />
@@ -1171,7 +1267,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_12"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/new"
         render={[Function]}
       />
@@ -1272,7 +1372,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -1542,7 +1642,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       <Route
         key="route_5"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -1571,7 +1671,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -1623,7 +1723,17 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim possible publications",
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
           "path": "/records/possible",
         },
         Object {
@@ -1633,7 +1743,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -1653,7 +1763,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -1663,7 +1773,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -1673,7 +1783,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -1911,18 +2021,18 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
+          "primaryText": "Claim possible work",
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing publication",
+          "primaryText": "Add a missing work",
         },
         Object {
           "linkTo": "/data-collections/mine",
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -1981,7 +2091,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -2045,9 +2155,15 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_7"
         pageTitle="Claim possible publications"
         path="/records/possible"
+=======
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+>>>>>>> master
       />
       <Route
         access={
@@ -2058,8 +2174,29 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_8"
         pageTitle="Claim a publication"
+        path="/records/claim"
+=======
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+>>>>>>> master
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+<<<<<<< HEAD
+=======
+        key="route_8"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -2071,6 +2208,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+>>>>>>> master
         key="route_9"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
@@ -2085,7 +2223,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/find"
         render={[Function]}
       />
@@ -2098,7 +2240,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_11"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/results"
         render={[Function]}
       />
@@ -2111,7 +2257,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_12"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/new"
         render={[Function]}
       />
@@ -2188,7 +2338,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -2240,7 +2390,17 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim possible publications",
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
           "path": "/records/possible",
         },
         Object {
@@ -2250,7 +2410,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -2270,7 +2430,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -2280,7 +2440,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -2290,7 +2450,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -2528,18 +2688,18 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
+          "primaryText": "Claim possible work",
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing publication",
+          "primaryText": "Add a missing work",
         },
         Object {
           "linkTo": "/data-collections/mine",
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -2598,7 +2758,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -2662,9 +2822,15 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_7"
         pageTitle="Claim possible publications"
         path="/records/possible"
+=======
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+>>>>>>> master
       />
       <Route
         access={
@@ -2675,8 +2841,29 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_8"
         pageTitle="Claim a publication"
+        path="/records/claim"
+=======
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+>>>>>>> master
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+<<<<<<< HEAD
+=======
+        key="route_8"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -2688,6 +2875,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+>>>>>>> master
         key="route_9"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
@@ -2702,7 +2890,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/find"
         render={[Function]}
       />
@@ -2715,7 +2907,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_11"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/results"
         render={[Function]}
       />
@@ -2728,7 +2924,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_12"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/new"
         render={[Function]}
       />
@@ -2805,7 +3005,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -2857,7 +3057,17 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim possible publications",
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
           "path": "/records/possible",
         },
         Object {
@@ -2867,7 +3077,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -2887,7 +3097,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -2897,7 +3107,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -2907,7 +3117,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -3095,7 +3305,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_1"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route
@@ -3159,9 +3369,15 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_7"
         pageTitle="Claim possible publications"
         path="/records/possible"
+=======
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+>>>>>>> master
       />
       <Route
         access={
@@ -3172,8 +3388,29 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+<<<<<<< HEAD
         key="route_8"
         pageTitle="Claim a publication"
+        path="/records/claim"
+=======
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+>>>>>>> master
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+<<<<<<< HEAD
+=======
+        key="route_8"
+        pageTitle="Claim a work"
         path="/records/claim"
       />
       <Route
@@ -3185,6 +3422,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+>>>>>>> master
         key="route_9"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
@@ -3199,7 +3437,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/find"
         render={[Function]}
       />
@@ -3212,7 +3454,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_11"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/results"
         render={[Function]}
       />
@@ -3225,7 +3471,11 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_12"
+<<<<<<< HEAD
         pageTitle="Add a missing publication to eSpace"
+=======
+        pageTitle="Add a missing work to eSpace"
+>>>>>>> master
         path="/records/add/new"
         render={[Function]}
       />
@@ -3302,7 +3552,7 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -3354,7 +3604,17 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim possible publications",
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
           "path": "/records/possible",
         },
         Object {
@@ -3364,7 +3624,7 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Claim a publication",
+          "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
         Object {
@@ -3384,7 +3644,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -3394,7 +3654,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -3404,7 +3664,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing publication to eSpace",
+          "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -3642,18 +3902,18 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
+          "primaryText": "Claim possible work",
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing publication",
+          "primaryText": "Add a missing work",
         },
         Object {
           "linkTo": "/data-collections/mine",
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -4072,7 +4332,7 @@ exports[`Application component should render thesis submission for HDR without m
         },
         Object {
           "pageTitle": "Professional doctorate deposit",
-          "path": "/sbslodge_new",
+          "path": "/habslodge",
           "render": [Function],
         },
         Object {
@@ -4246,7 +4506,7 @@ exports[`Application component should render thesis submission for HDR without m
       <Route
         key="route_5"
         pageTitle="Professional doctorate deposit"
-        path="/sbslodge_new"
+        path="/habslodge"
         render={[Function]}
       />
       <Route

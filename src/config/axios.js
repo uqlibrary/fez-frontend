@@ -5,6 +5,7 @@ import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME
 import {store} from 'config/store';
 import {logout} from 'actions/account';
 import locale from 'locale/global';
+import Raven from 'raven-js';
 import param from 'can-param';
 
 export const cache = setupCache({
@@ -87,13 +88,21 @@ api.interceptors.response.use(response => {
     }
 
     let errorMessage = null;
+    let specificError = '';
     if (!!error.response && !!error.response.status) {
         errorMessage = locale.global.errorMessages[error.response.status];
+        specificError = 'Response: ' + error.response + ' Status: ' + error.status;
     }
 
     if (!!errorMessage) {
         return Promise.reject({...errorMessage});
     } else {
+        if (error.response) {
+            specificError = 'Data: ' + error.response.data + ' Status: ' + error.response.status + ' Headers: ' + error.response.headers;
+        } else {
+            specificError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
+        }
+        Raven.captureException(error, {extra: {error: specificError}});
         return Promise.reject(error);
     }
 });

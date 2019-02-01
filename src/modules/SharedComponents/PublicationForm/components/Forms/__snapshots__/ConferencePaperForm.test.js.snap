@@ -159,30 +159,6 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "label": "Publication subtype",
-                "loading": "Loading",
-              }
-            }
-            name="rek_subtype"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-            vocabId={0}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
             allowPartial={true}
             className="requiredHintField"
             component={[Function]}
@@ -206,13 +182,19 @@ exports[`ConferencePaperForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": "Help text...",
+          "title": "NTRO Publication Authors/Creators/Contributors",
+        }
+      }
       title="Authors"
     >
       <WithStyles(Typography)>
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -282,18 +264,6 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this author ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed author",
@@ -303,6 +273,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -331,10 +302,10 @@ exports[`ConferencePaperForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISBN",
-                "inputFieldHint": "Type ISBN value",
+                "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -405,10 +376,10 @@ exports[`ConferencePaperForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISSN",
-                "inputFieldHint": "Type ISSN value",
+                "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -465,7 +436,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Other work details"
     >
       <WithStyles(Grid)
         container={true}

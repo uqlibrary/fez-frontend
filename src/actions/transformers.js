@@ -67,7 +67,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         });
     const attachmentEmbargoDates = files
         .map((item, index) => {
-            if (!item.hasOwnProperty('date') || !item.date) return null;
+            if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) return null;
             return {
                 rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
                 rek_file_attachment_embargo_date_order: initialCount + index + 1
@@ -118,6 +118,18 @@ export const getRecordAuthorsSearchKey = (authors) => {
     };
 };
 
+export const getDatasetCreatorRolesSearchKey = (creators) => {
+    if (!creators || creators.length === 0) return {};
+    return {
+        fez_record_search_key_author_role: creators.map((item, index) => (
+            !!item.creatorRole && {
+                rek_author_role: item.creatorRole,
+                rek_author_role_order: index + 1
+            } || {}
+        ))
+    };
+};
+
 export const getRecordSupervisorsSearchKey = (supervisors) => {
     if (!supervisors || supervisors.length === 0) return {};
     return {
@@ -162,6 +174,40 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
                     }
             )
         )
+    };
+};
+
+export const getRecordAuthorAffiliationSearchKey = (authors) => {
+    if ((!authors || authors.length === 0)) return {};
+
+    return {
+        fez_record_search_key_author_affiliation_name: authors
+            .map(
+                (item, index) => (
+                    {
+                        rek_author_affiliation_name: item.orgaff,
+                        rek_author_affiliation_name_order: index + 1
+                    }
+                )
+            )
+            .filter(item => item.rek_author_affiliation_name !== '')
+    };
+};
+
+export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
+    if ((!authors || authors.length === 0)) return {};
+
+    return {
+        fez_record_search_key_author_affiliation_type: authors
+            .map(
+                (item, index) => (
+                    {
+                        rek_author_affiliation_type: parseInt(item.orgtype, 10),
+                        rek_author_affiliation_type_order: index + 1
+                    }
+                )
+            )
+            .filter(item => !isNaN(item.rek_author_affiliation_type))
     };
 };
 
@@ -305,4 +351,159 @@ export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = n
     }
 
     return patchRequest;
+};
+
+export const getDatasetContactDetailSearchKeys = (contact) => {
+    if (!contact) return {};
+    return {
+        fez_record_search_key_contributor: [{
+            rek_contributor: contact.contactName,
+            rek_contributor_id: null,
+            rek_contributor_order: 1
+        }],
+        fez_record_search_key_contributor_id: [{
+            rek_contributor_id: isNaN(contact.contactNameId.id) ? 0 : parseInt(contact.contactNameId.id, 10),
+            rek_contributor_id_order: 1
+        }],
+        fez_record_search_key_contact_details_email: [{
+            rek_contact_details_email: contact.contactEmail,
+            rek_contact_details_email_order: 1
+        }]
+    };
+};
+
+export const getGeographicAreaSearchKey = (area = null) => {
+    if (!area) return {};
+
+    return {
+        fez_record_search_key_geographic_area: [{
+            rek_geographic_area: area,
+            rek_geographic_area_order: 1
+        }]
+    };
+};
+
+export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
+    if (!abstract) return {};
+
+    return {
+        rek_description: abstract.plainText,
+        rek_formatted_abstract: abstract.htmlText
+    };
+};
+
+// * getGrantsListSearchKey - returns the grant grant details as mapped in search keys
+// Input:
+// "grants":[
+//  {"grantAgencyName":"Funder 1","grantID":"00001","grantAgencyType":"Museum","disabled":false},
+//  {"grantAgencyName":"Funder 2","grantID":"00002","grantAgencyType":"Gallery","disabled":false}
+// ]
+//
+// Output:
+// "fez_record_search_key_grant_agency": [
+//     {
+//         "rek_grant_agency_id": 00001,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 1",
+//         "rek_grant_agency_order": 1
+//     },
+//     {
+//         "rek_grant_agency_id": 00002,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 2",
+//         "rek_grant_agency_order": 2
+//     }
+// ]
+export const getGrantsListSearchKey = (grants) => {
+    if (!grants || grants.length === 0) return {};
+
+    return {
+        fez_record_search_key_grant_agency: [
+            ...grants
+                .map((item, index) => ({
+                    rek_grant_agency: item.grantAgencyName,
+                    rek_grant_agency_order: index + 1
+                }))
+                .filter(item => !!item.rek_grant_agency)
+        ],
+        fez_record_search_key_grant_id: [
+            ...grants
+                .map((item, index) => ({
+                    rek_grant_id: item.grantId,
+                    rek_grant_id_order: index + 1
+                }))
+                .filter(item => !!item.rek_grant_id)
+        ],
+        fez_record_search_key_grant_agency_type: [
+            ...grants
+                .map((item, index) => ({
+                    rek_grant_agency_type: parseInt(item.grantAgencyType, 10),
+                    rek_grant_agency_type_order: index + 1
+                }))
+                .filter(item => !!item.rek_grant_agency_type)
+        ]
+    };
+};
+
+export const getLanguageSearchKey = (languages) => {
+    if (!languages || languages.length === 0) return {};
+    return {
+        fez_record_search_key_language: [
+            ...languages
+                .map((item, index) => ({
+                    rek_language: item,
+                    rek_language_order: index + 1
+                }))
+        ]
+    };
+};
+
+export const getNtroMetadataSearchKeys = (data) => {
+    if (!data) return {};
+    const hasAValue = (value) => !!value.rek_author_id && !isNaN(value.rek_author_id);
+    const selectedAuthorIdIndex = getRecordAuthorsIdSearchKey(data.authors).fez_record_search_key_author_id.findIndex(hasAValue);
+    const ntroMetadata = {};
+
+    if (!!data.significance) {
+        ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
+            if (selectedAuthorIdIndex === index) {
+                return {
+                    rek_significance: data.significance,
+                    rek_significance_order: selectedAuthorIdIndex + 1
+                };
+            } else {
+                return {
+                    rek_significance: 0,
+                    rek_significance_order: index + 1
+                };
+            }
+        });
+    }
+
+    if (!!data.impactStatement) {
+        ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) =>{
+            if (selectedAuthorIdIndex === index) {
+                return {
+                    rek_creator_contribution_statement: data.impactStatement.htmlText,
+                    rek_creator_contribution_statement_order: selectedAuthorIdIndex + 1
+                };
+            } else {
+                return {
+                    rek_creator_contribution_statement: locale.global.defaultContibutorStatementMissing,
+                    rek_creator_contribution_statement_order: index + 1
+                };
+            }
+        });
+    }
+
+    if (!!data.qualityIndicators) {
+        ntroMetadata.fez_record_search_key_quality_indicator = data.qualityIndicators.map((item, index) => ({
+            rek_quality_indicator: item,
+            rek_quality_indicator_order: index + 1
+        }));
+    }
+
+    return ntroMetadata;
 };

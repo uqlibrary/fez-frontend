@@ -237,6 +237,23 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
+    it('should dispatch series of search actions for eSpace only search when searching', async() => {
+        const searchQuery = 'test';
+        const searchKey = 'publications';
+        const params = {searchQueryParams: {all: searchQuery}};
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl)
+            .reply(200, {data: []});
+
+        const expectedActions = [
+            `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
+            `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`
+        ];
+
+        await mockActionsStore.dispatch(searchActions.loadPublicationList(searchKey, searchQuery));
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
     it('should dispatch series of actions on clearing search', () => {
         const expectedActions = [
             actions.CLEAR_SEARCH_QUERY

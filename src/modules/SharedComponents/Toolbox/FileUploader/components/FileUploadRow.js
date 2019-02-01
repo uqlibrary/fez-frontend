@@ -68,6 +68,7 @@ export class FileUploadRow extends PureComponent {
         const embargoDate = uploadedFile[config.FILE_META_KEY_EMBARGO_DATE];
 
         const FileUploadRowView = this.props.width === 'xs' ? FileUploadRowMobileView : FileUploadRowDefaultView;
+        const fileUploadRowLocale = this.props.width === 'xs' ? this.props.locale.mobileView : this.props.locale.defaultView;
 
         return (
             <Fragment>
@@ -88,6 +89,8 @@ export class FileUploadRow extends PureComponent {
                     onAccessConditionChange={this._updateAccessCondition}
                     onEmbargoDateChange={this._updateEmbargoDate}
                     focusOnIndex={focusOnIndex}
+                    locale={fileUploadRowLocale}
+                    accessConditionLocale={this.props.locale.fileUploadRowAccessSelector}
                 />
             </Fragment>
         );

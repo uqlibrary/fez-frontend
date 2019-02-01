@@ -4,7 +4,8 @@ import * as Partials from './partials';
 
 export default class DataCollectionCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        hideDoiLink: PropTypes.bool
     };
 
     constructor(props) {
@@ -43,7 +44,7 @@ export default class DataCollectionCitation extends Component {
                 <Partials.CitationView className="citationCollectionType" value={record.collectionType} />
 
                 {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} />
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
             </div>
         );
     }

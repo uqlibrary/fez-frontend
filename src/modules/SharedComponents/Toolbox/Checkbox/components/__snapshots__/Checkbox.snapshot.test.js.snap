@@ -11,6 +11,7 @@ exports[`Checkbox snapshots tests renders Checkbox component 1`] = `
   }
 >
   <WithStyles(Checkbox)
+    error={false}
     label="This is a test checkbox component"
     onChange={[Function]}
   />

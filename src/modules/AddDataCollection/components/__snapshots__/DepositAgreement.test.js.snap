@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component DepositAgreement should render checked if deposit agreement accepted 1`] = `
+<WithStyles(FormControlLabel)
+  classes={
+    Object {
+      "root": undefined,
+    }
+  }
+  control={
+    <WithStyles(Checkbox)
+      checked={true}
+      classes={
+        Object {
+          "checked": undefined,
+          "root": undefined,
+        }
+      }
+      onChange={[Function]}
+    />
+  }
+  disabled={false}
+  label={
+    <WithStyles(Typography)
+      classes={
+        Object {
+          "root": "",
+        }
+      }
+      color="secondary"
+      component="div"
+    >
+      test deposit agreement
+    </WithStyles(Typography)>
+  }
+/>
+`;
+
+exports[`Component DepositAgreement should render default view 1`] = `
+<WithStyles(FormControlLabel)
+  classes={
+    Object {
+      "root": undefined,
+    }
+  }
+  control={
+    <WithStyles(Checkbox)
+      checked={false}
+      classes={
+        Object {
+          "checked": undefined,
+          "root": undefined,
+        }
+      }
+      onChange={[Function]}
+    />
+  }
+  disabled={false}
+  label={
+    <WithStyles(Typography)
+      classes={
+        Object {
+          "root": "",
+        }
+      }
+      color="error"
+      component="div"
+    >
+      test deposit agreement
+    </WithStyles(Typography)>
+  }
+/>
+`;

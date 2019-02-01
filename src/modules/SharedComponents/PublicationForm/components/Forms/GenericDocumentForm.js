@@ -16,8 +16,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default class GenericDocumentForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     };
 
     constructor(props) {
@@ -100,7 +99,7 @@ export default class GenericDocumentForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             validate={[validation.authorRequired]}

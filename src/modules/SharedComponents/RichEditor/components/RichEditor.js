@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import Typography from '@material-ui/core/Typography';
 import 'ckeditor';
 
 export default class RichEditor extends PureComponent {
@@ -9,14 +10,21 @@ export default class RichEditor extends PureComponent {
         className: PropTypes.string,
         onChange: PropTypes.func.isRequired,
         disabled: PropTypes.bool,
-        height: PropTypes.number
+        height: PropTypes.number,
+        meta: PropTypes.object,
+        returnSingleValue: PropTypes.bool,
+        maxValue: PropTypes.number,
+        instructions: PropTypes.string,
+        title: PropTypes.string,
+        description: PropTypes.string
     };
 
     static defaultProps = {
         value: '',
         className: '',
         height: 100,
-        disabled: false
+        disabled: false,
+        returnSingleValue: false,
     };
 
     componentDidMount() {
@@ -56,6 +64,45 @@ export default class RichEditor extends PureComponent {
     }
 
     render() {
-        return <div className={this.props.className} />;
+        let error = null;
+        const inputLength = this.props.value && this.props.value.plainText && this.props.value.plainText.length || this.props.value.length - 7; // default rich editor has "<p></p>"
+        if (this.props.meta && this.props.meta.error) {
+            error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {
+                        key: index
+                    });
+                } else {
+                    return child;
+                }
+            });
+        }
+        return (
+            <React.Fragment>
+                <span>
+                    {
+                        this.props.title &&
+                            <Typography color={this.props.meta && this.props.meta.error && 'error'}>{this.props.title}</Typography>
+                    }
+                    {
+                        this.props.description &&
+                            <Typography color={this.props.meta && this.props.meta.error && 'error'} variant={'caption'}>{this.props.description}</Typography>
+                    }
+                </span>
+                <div className={this.props.className} />
+                {
+                    this.props.meta && this.props.meta.error &&
+                        <Typography color="error" variant="caption">
+                            {
+                                error || this.props.meta.error
+                            }
+                        </Typography>
+                }
+                {
+                    !this.props.meta || (this.props.meta && !this.props.meta.error) && this.props.maxValue &&
+                    <Typography variant="caption">{inputLength > -1 && inputLength} of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}</Typography>
+                }
+            </React.Fragment>
+        );
     }
 }

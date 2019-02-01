@@ -27,7 +27,10 @@ exports[`PageRangeCitationView test  should render endPage only 1`] = `
 exports[`PageRangeCitationView test  should render nothing if search key not found 1`] = `
 <span
   className="citationPageRange empty"
-/>
+>
+   
+   
+</span>
 `;
 
 exports[`PageRangeCitationView test  should render startPage only 1`] = `

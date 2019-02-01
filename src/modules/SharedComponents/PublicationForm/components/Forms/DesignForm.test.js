@@ -21,15 +21,15 @@ describe('DesignForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(10);
     });
 
-    it('component with 3 required input fields', () => {
-        const wrapper = setup({});
-        expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
-    });
-
     it('component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         })
+    });
+
+    it('component with 6 input fields for NTRO', () => {
+        const wrapper = setup({isNtro: true});
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(7);
     });
 });

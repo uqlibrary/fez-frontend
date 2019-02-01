@@ -19,7 +19,7 @@ exports[`MyRecords test renders active filters 1`] = `
             <a
               href="/records/possible"
             >
-              claim publications we think may be yours
+              claim works we think may be yours
             </a>
              or 
             <a
@@ -29,14 +29,14 @@ exports[`MyRecords test renders active filters 1`] = `
             </a>
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results. You may be able to 
           <a
             href="/records/possible"
           >
-            claim publications we think may be yours
+            claim works we think may be yours
           </a>
            or 
           <a
@@ -99,8 +99,8 @@ exports[`MyRecords test renders active filters 1`] = `
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={true}
@@ -144,13 +144,13 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -160,7 +160,6 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -278,13 +277,13 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -294,7 +293,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -478,8 +476,8 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={true}
@@ -520,13 +518,13 @@ exports[`MyRecords test renders loading screen while export publications loading
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -536,7 +534,6 @@ exports[`MyRecords test renders loading screen while export publications loading
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -567,7 +564,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Exporting your publications"
+                message="Exporting your works"
               />
             </div>
           </WithStyles(Grid)>
@@ -604,7 +601,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for your publications"
+        message="Searching for your works"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -640,13 +637,13 @@ exports[`MyRecords test renders loading screen while loading publications while 
               <a
                 href="/records/possible"
               >
-                claiming a publication
+                claiming a work
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                adding a missing publication
+                adding a missing work
               </a>
               .
             </span>
@@ -656,7 +653,6 @@ exports[`MyRecords test renders loading screen while loading publications while 
             xs={12}
           >
             <WithStyles(PublicationsListSorting)
-              canUseExport={true}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -687,7 +683,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               className="is-centered"
             >
               <WithStyles(InlineLoader)
-                message="Retrieving your publications"
+                message="Retrieving your works"
               />
             </div>
           </WithStyles(Grid)>
@@ -728,7 +724,7 @@ exports[`MyRecords test renders no results 1`] = `
             <a
               href="/records/possible"
             >
-              claim publications we think may be yours
+              claim works we think may be yours
             </a>
              or 
             <a
@@ -738,14 +734,14 @@ exports[`MyRecords test renders no results 1`] = `
             </a>
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results. You may be able to 
           <a
             href="/records/possible"
           >
-            claim publications we think may be yours
+            claim works we think may be yours
           </a>
            or 
           <a

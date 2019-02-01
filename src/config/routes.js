@@ -31,7 +31,7 @@ export const pathConfig = {
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
-    sbsSubmission: '/sbslodge_new',
+    sbsSubmission: '/habslodge',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
@@ -47,7 +47,8 @@ export const pathConfig = {
     },
     dataset: {
         mine: '/data-collections/mine',
-        add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
+        // legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
+        add: '/data-collections/add'
     },
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
@@ -226,6 +227,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 pageTitle: locale.pages.myDatasets.pageTitle
             },
             {
+                path: pathConfig.dataset.add,
+                component: components.AddDataCollection,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.addDataset.pageTitle
+            },
+            {
                 path: pathConfig.records.possible,
                 component: components.PossiblyMyRecords,
                 access: [roles.researcher, roles.admin],
@@ -374,9 +382,13 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
+            // {
+            //     linkTo: pathConfig.dataset.legacy,
+            //     ...locale.menu.addDataset
+            // },
             {
                 linkTo: pathConfig.dataset.add,
-                ...locale.menu.addDataset
+                ...locale.menu.addMissingDataset
             },
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
