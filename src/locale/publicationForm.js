@@ -797,11 +797,11 @@ export default {
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'Type the geographical location for the publisher.'
+                    placeholder: 'Enter the geographical location for the client, builder or curator of the work.'
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Type the name of the publisher.'
+                    placeholder: 'Enter the name of the client, builder or curator of the work.'
                 },
                 location: {
                     label: 'Location',

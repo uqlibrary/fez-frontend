@@ -78,7 +78,7 @@ exports[`DesignForm renders  component 1`] = `
             fullWidth={true}
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
-            placeholder="Type the name of the publisher."
+            placeholder="Enter the name of the client, builder or curator of the work."
             type="text"
           />
         </WithStyles(Grid)>
@@ -93,7 +93,7 @@ exports[`DesignForm renders  component 1`] = `
             fullWidth={true}
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-            placeholder="Type the geographical location for the publisher."
+            placeholder="Enter the geographical location for the client, builder or curator of the work."
             type="text"
           />
         </WithStyles(Grid)>

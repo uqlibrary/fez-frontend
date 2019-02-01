@@ -100,7 +100,7 @@ export default class NtroFields extends React.PureComponent {
                     },
                     physicalDescription: {
                         label: 'Physical description',
-                        placeholder: 'Type of work, e.g. Video, Map, Oil painting'
+                        placeholder: 'Building, Exhibition, Performance, Composition'
                     },
                     audienceSize: {
                         label: 'Audience size',

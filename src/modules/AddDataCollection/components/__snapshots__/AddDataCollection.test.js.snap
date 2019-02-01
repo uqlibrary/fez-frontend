@@ -1113,7 +1113,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 },
                 "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
                 "ntroSpecificInstructions": <span>
-                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program or catalogue, audio or video recording, website scholarly review.  
+                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
                   <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
                     target="_blank"

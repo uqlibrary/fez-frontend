@@ -346,7 +346,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Type of work, e.g. Video, Map, Oil painting"
+            placeholder="Building, Exhibition, Performance, Composition"
             type="text"
           />
         </WithStyles(Grid)>
@@ -792,7 +792,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Type of work, e.g. Video, Map, Oil painting"
+            placeholder="Building, Exhibition, Performance, Composition"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1167,7 +1167,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Type of work, e.g. Video, Map, Oil painting"
+            placeholder="Building, Exhibition, Performance, Composition"
             type="text"
           />
         </WithStyles(Grid)>
@@ -1613,7 +1613,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Type of work, e.g. Video, Map, Oil painting"
+            placeholder="Building, Exhibition, Performance, Composition"
             type="text"
           />
         </WithStyles(Grid)>
