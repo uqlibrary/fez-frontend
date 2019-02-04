@@ -88,7 +88,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             <p>
               For more information about each quality indicator option, click 
               <a
-                href=""
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
                 target="_blank"
               >
                 here
@@ -554,7 +554,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             <p>
               For more information about each quality indicator option, click 
               <a
-                href=""
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
                 target="_blank"
               >
                 here
@@ -949,7 +949,7 @@ exports[`Component NtroFields should render default view 1`] = `
             <p>
               For more information about each quality indicator option, click 
               <a
-                href=""
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
                 target="_blank"
               >
                 here
@@ -1415,7 +1415,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             <p>
               For more information about each quality indicator option, click 
               <a
-                href=""
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
                 target="_blank"
               >
                 here

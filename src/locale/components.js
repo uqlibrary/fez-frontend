@@ -534,7 +534,7 @@ export default {
             help: {
                 title: 'Authors/Designers name',
                 text: (
-                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="">here</a></p>
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
                 buttonLabel: 'OK'
             },
@@ -1027,7 +1027,7 @@ export default {
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
-                            <p>For more information about each quality indicator option, click <a target="_blank" href="">here</a></p>
+                            <p>For more information about each quality indicator option, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></p>
                         </React.Fragment>
                     ),
                     buttonLabel: 'OK'

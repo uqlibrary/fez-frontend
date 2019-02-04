@@ -12,7 +12,7 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a target="_blank" href="">here</a></p>
+                <p>For more information about each type, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts">here</a></p>
             ),
             buttonLabel: 'OK'
         }
