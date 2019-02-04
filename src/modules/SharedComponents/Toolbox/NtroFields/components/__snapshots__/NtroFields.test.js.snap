@@ -78,6 +78,26 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <UNDEFINED>
+            <h3>
+              Quality indicators
+            </h3>
+            <p>
+              For more information about each quality indicator option, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>
+          </UNDEFINED>,
+          "title": "Non-traditional research out metadata",
+        }
+      }
       title="Non-traditional research output metadata"
     >
       <WithStyles(Grid)
@@ -524,6 +544,26 @@ exports[`Component NtroFields should render contribution statement fields as wel
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <UNDEFINED>
+            <h3>
+              Quality indicators
+            </h3>
+            <p>
+              For more information about each quality indicator option, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>
+          </UNDEFINED>,
+          "title": "Non-traditional research out metadata",
+        }
+      }
       title="Non-traditional research output metadata"
     >
       <WithStyles(Grid)
@@ -899,6 +939,26 @@ exports[`Component NtroFields should render default view 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <UNDEFINED>
+            <h3>
+              Quality indicators
+            </h3>
+            <p>
+              For more information about each quality indicator option, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>
+          </UNDEFINED>,
+          "title": "Non-traditional research out metadata",
+        }
+      }
       title="Non-traditional research output metadata"
     >
       <WithStyles(Grid)
@@ -1345,6 +1405,26 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <UNDEFINED>
+            <h3>
+              Quality indicators
+            </h3>
+            <p>
+              For more information about each quality indicator option, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>
+          </UNDEFINED>,
+          "title": "Non-traditional research out metadata",
+        }
+      }
       title="Non-traditional research output metadata"
     >
       <WithStyles(Grid)

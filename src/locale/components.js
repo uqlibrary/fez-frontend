@@ -1020,6 +1020,20 @@ export default {
         newsFeed: {
             title: 'Latest news'
         },
+        ntroFields: {
+            metadata: {
+                help: {
+                    title: 'Non-traditional research out metadata',
+                    text: (
+                        <React.Fragment>
+                            <h3>Quality indicators</h3>
+                            <p>For more information about each quality indicator option, click <a target="_blank" href="">here</a></p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'OK'
+                }
+            }
+        },
         export: {
             label: 'Export results',
             format: [
