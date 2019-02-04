@@ -24,6 +24,21 @@ exports[`Component PublicationForm should render component initialised with just
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)
@@ -430,6 +445,21 @@ exports[`Component PublicationForm should render component initialised with two 
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)
@@ -869,6 +899,21 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)
@@ -1346,6 +1391,21 @@ exports[`Component PublicationForm should render component with GenericDocument 
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)
@@ -1820,6 +1880,21 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)
@@ -2294,6 +2369,21 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)
@@ -2768,6 +2858,21 @@ exports[`Component PublicationForm should render component with all fields disab
       xs={12}
     >
       <StandardCard
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <p>
+              For more information about each type, click 
+              <a
+                href=""
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Non-traditional research output types",
+          }
+        }
         title="Work type"
       >
         <WithStyles(Grid)

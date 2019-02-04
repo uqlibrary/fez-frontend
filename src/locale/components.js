@@ -532,8 +532,10 @@ export default {
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
-                title: 'NTRO Publication Authors/Creators/Contributors',
-                text: 'Help text...',
+                title: 'Authors/Designers name',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="">here</a></p>
+                ),
                 buttonLabel: 'OK'
             },
             field: {

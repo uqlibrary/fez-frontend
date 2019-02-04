@@ -9,11 +9,13 @@ export default {
         title: 'Work type',
         inputLabelText: 'Work type',
         hintText: 'Select a Work type from the dropdown list',
-        // help: {
-        //     title: 'Publication type',
-        //     text: 'Help about publication types, eg journal article, book, conference paper etc',
-        //     buttonLabel: 'OK'
-        // }
+        help: {
+            title: 'Non-traditional research output types',
+            text: (
+                <p>For more information about each type, click <a target="_blank" href="">here</a></p>
+            ),
+            buttonLabel: 'OK'
+        }
     },
     publicationSubtype: {
         title: 'Publication subtype',
