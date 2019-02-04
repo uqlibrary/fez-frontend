@@ -22,10 +22,7 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 
 const styles = (theme) => ({
     listItem: {
-<<<<<<< HEAD
-=======
         padding: '0'
->>>>>>> master
     },
     rowSelected: {
         backgroundColor: theme.palette.accent.light
@@ -149,20 +146,11 @@ export class ContributorRow extends PureComponent {
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
         const {index, contributor, classes, width} = this.props;
-<<<<<<< HEAD
-        const {ordinalData, suffix} = this.props.locale;
-        const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
-
-        return showIdentifierLookup ?
-            (<Grid container classes={{container: classes.listItem}}>
-                <Grid item xs={10} sm={4}>
-=======
         const {suffix} = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
             <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
->>>>>>> master
                     {this.getListItemTypoGraphy(
                         contributor.nameAsPublished,
                         contributorOrder,
@@ -170,26 +158,6 @@ export class ContributorRow extends PureComponent {
                         `${selectedClass}`
                     )}
                 </Grid>
-<<<<<<< HEAD
-                <Grid item xs={12} sm={3}>
-                    {parseInt(Math.random(100) * 100, 10)}%
-                </Grid>
-                <Grid item xs={10} sm={3}>
-                    {this.getListItemTypoGraphy(
-                        `${contributor.aut_title} ${contributor.aut_display_name}`,
-                        `${contributor.aut_org_username || contributor.aut_student_username}`,
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                    )}
-                </Grid>
-            </Grid>)
-            : this.getListItemTypoGraphy(
-                contributor.nameAsPublished,
-                contributorOrder,
-                `${classes.primary} ${selectedClass}`,
-                `${selectedClass}`
-            );
-=======
                 {
                     showIdentifierLookup || !!contributor.aut_title &&
                     <Grid item xs={10} sm={5} md={5}>
@@ -225,7 +193,6 @@ export class ContributorRow extends PureComponent {
                 }
             </Grid>
         );
->>>>>>> master
     };
 
     render() {

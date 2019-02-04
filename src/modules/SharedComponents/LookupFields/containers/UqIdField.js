@@ -19,13 +19,8 @@ const mapStateToProps = (state, props) => {
         selectedValue: !!props.value && {value: props.value} || '',
         itemToString: () => '',
         maxResults: 7,
-<<<<<<< HEAD
-        floatingLabelText: props.label || 'UQ identifier (if available)',
-        hintText: props.placeholder || ''
-=======
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
         hintText: props.hintText || 'Enter a value to search',
->>>>>>> master
     };
 };
 

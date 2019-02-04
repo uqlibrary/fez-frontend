@@ -2,17 +2,6 @@
 
 exports[`FreeTextForm tests  rendering active form 1`] = `
 <WithStyles(Grid)
-<<<<<<< HEAD
-  alignContent="flex-end"
-  alignItems="flex-end"
-  container={true}
-  display="row"
-  spacing={8}
->
-  <WithStyles(Grid)
-    item={true}
-    xs={true}
-=======
   alignItems="center"
   container={true}
   display="row"
@@ -25,7 +14,6 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
         "flexGrow": 1,
       }
     }
->>>>>>> master
   >
     <TextField
       disabled={false}
@@ -45,11 +33,7 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-<<<<<<< HEAD
-    sm="auto"
-=======
     sm={2}
->>>>>>> master
     xs={12}
   >
     <WithStyles(Button)
@@ -67,17 +51,6 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
 
 exports[`FreeTextForm tests  rendering disabled form 1`] = `
 <WithStyles(Grid)
-<<<<<<< HEAD
-  alignContent="flex-end"
-  alignItems="flex-end"
-  container={true}
-  display="row"
-  spacing={8}
->
-  <WithStyles(Grid)
-    item={true}
-    xs={true}
-=======
   alignItems="center"
   container={true}
   display="row"
@@ -90,7 +63,6 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
         "flexGrow": 1,
       }
     }
->>>>>>> master
   >
     <TextField
       disabled={true}
@@ -110,11 +82,7 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-<<<<<<< HEAD
-    sm="auto"
-=======
     sm={2}
->>>>>>> master
     xs={12}
   >
     <WithStyles(Button)
@@ -132,17 +100,6 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
 
 exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
 <WithStyles(Grid)
-<<<<<<< HEAD
-  alignContent="flex-end"
-  alignItems="flex-end"
-  container={true}
-  display="row"
-  spacing={8}
->
-  <WithStyles(Grid)
-    item={true}
-    xs={true}
-=======
   alignItems="center"
   container={true}
   display="row"
@@ -155,7 +112,6 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
         "flexGrow": 1,
       }
     }
->>>>>>> master
   >
     <TextField
       disabled={false}
@@ -179,11 +135,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-<<<<<<< HEAD
-    sm="auto"
-=======
     sm={2}
->>>>>>> master
     xs={12}
   >
     <WithStyles(Button)

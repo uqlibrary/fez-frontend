@@ -18,11 +18,7 @@ export class ContributorForm extends PureComponent {
         authorsList: PropTypes.array.isRequired,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
-<<<<<<< HEAD
-        showAffiliation: PropTypes.bool,
-=======
         showRoleInput: PropTypes.bool,
->>>>>>> master
         errorText: PropTypes.string,
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
@@ -56,14 +52,10 @@ export class ContributorForm extends PureComponent {
             creatorRole: '',
             uqIdentifier: '',
             contributor: {},
-<<<<<<< HEAD
-            affiliation: ''
-=======
             affiliation: '',
             orgaff: '',
             orgtype: '',
             showIdentifierLookup: false
->>>>>>> master
         };
     }
 
@@ -89,16 +81,11 @@ export class ContributorForm extends PureComponent {
             nameAsPublished: '',
             creatorRole: '',
             uqIdentifier: '',
-<<<<<<< HEAD
-            contributor: {},
-            affiliation: ''
-=======
             clearRoleInput: true,
             contributor: {},
             affiliation: '',
             orgaff: '',
             orgtype: ''
->>>>>>> master
         });
     };
 
@@ -166,10 +153,6 @@ export class ContributorForm extends PureComponent {
         return (
             <React.Fragment>
                 {description}
-<<<<<<< HEAD
-                <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'}>
-                    <Grid item xs={12} sm>
-=======
                 <Grid container spacing={8} style={{marginTop: 8}}>
                     {
                         isNtro &&
@@ -182,7 +165,6 @@ export class ContributorForm extends PureComponent {
                         </Grid>
                     }
                     <Grid item xs={12} sm >
->>>>>>> master
                         <TextField
                             fullWidth
                             id="nameAsPublishedField"
@@ -198,49 +180,6 @@ export class ContributorForm extends PureComponent {
                             !!(isNtro && this.state.affiliation && !this.state.nameAsPublished)}
                         />
                     </Grid>
-<<<<<<< HEAD
-                    <Grid item xs={12} sm={2}>
-                        <TextField
-                            fullWidth
-                            label={'Affiliation value'}
-                            placeholder={'1% - 100%'}
-                            value={this.state.affiliation}
-                            onChange={this._onAffChanged}
-                            disabled={!this.state.nameAsPublished}
-                            autoComplete="off"
-                        />
-                    </Grid>
-                </Grid>
-                <Grid container spacing={8} alignItems={'flex-end'} alignContent={'flex-end'}>
-                    <Grid item xs={12} sm>
-                        <TextField
-                            fullWidth
-                            label={'Affiliation ID'}
-                            disabled={!this.state.nameAsPublished}
-                            autoComplete="off"
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm>
-                        <TextField
-                            fullWidth
-                            label={'Affiliation country'}
-                            disabled={!this.state.nameAsPublished}
-                            autoComplete="off"
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm>
-                        <UqIdField
-                            label={this.props.locale.identifierLabel}
-                            placeholder={this.props.locale.identifierHint}
-                            value={this.state.uqIdentifier}
-                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                            onChange={this._onUQIdentifierSelected}
-                            ref="identifierField"
-                            id="identifierField"
-                        />
-                    </Grid>
-                    <Grid item xs={'auto'}>
-=======
                     {
                         (showIdentifierLookup || this.state.showIdentifierLookup) &&
                         <Grid item xs={12} sm={3}>
@@ -283,7 +222,6 @@ export class ContributorForm extends PureComponent {
                         </Grid>
                     }
                     <Grid item xs={12} style={{marginBottom: 8}}>
->>>>>>> master
                         <Button
                             variant="contained"
                             fullWidth

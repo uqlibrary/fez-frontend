@@ -27,8 +27,8 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -187,8 +187,8 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -347,8 +347,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -471,8 +471,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -595,8 +595,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -789,8 +789,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -913,8 +913,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -1037,8 +1037,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -1161,8 +1161,8 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}
@@ -1321,8 +1321,8 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
     style={
       Object {
         "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
+        "margin": 0,
+        "width": "100%",
       }
     }
     tabIndex={0}

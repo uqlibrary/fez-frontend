@@ -111,12 +111,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -552,6 +565,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                       </b>
                       , in the format and order that they are published.
                     </div>,
+                    "identifierHint": "",
                     "identifierLabel": "UQ identifier (if available)",
                     "nameAsPublishedHint": "Please type the name exactly as published",
                     "nameAsPublishedLabel": "Name as published",
@@ -1412,12 +1426,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                                 },
                                                               },
                                                               "overrides": Object {
+                                                                "MUIDataTable": Object {
+                                                                  "paper": Object {
+                                                                    "boxShadow": "none",
+                                                                    "margin": 0,
+                                                                    "padding": 0,
+                                                                  },
+                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
+                                                                  },
+                                                                },
+                                                                "MuiMenuItem": Object {
+                                                                  "selected": Object {
+                                                                    "backgroundColor": "#4085C6 !important",
+                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -2118,12 +2145,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
                                           "textOverflow": "ellipsis",
                                           "whiteSpace": "nowrap",
                                           "width": "100%",
+                                        },
+                                      },
+                                      "MuiMenuItem": Object {
+                                        "selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
                                         },
                                       },
                                     },
@@ -2553,12 +2593,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                         },
                                       },
                                       "overrides": Object {
+                                        "MUIDataTable": Object {
+                                          "paper": Object {
+                                            "boxShadow": "none",
+                                            "margin": 0,
+                                            "padding": 0,
+                                          },
+                                        },
                                         "MuiFormLabel": Object {
                                           "root": Object {
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
                                             "width": "100%",
+                                          },
+                                        },
+                                        "MuiMenuItem": Object {
+                                          "selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
                                           },
                                         },
                                       },
@@ -2982,12 +3035,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                           },
                                         },
                                         "overrides": Object {
+                                          "MUIDataTable": Object {
+                                            "paper": Object {
+                                              "boxShadow": "none",
+                                              "margin": 0,
+                                              "padding": 0,
+                                            },
+                                          },
                                           "MuiFormLabel": Object {
                                             "root": Object {
                                               "overflow": "hidden",
                                               "textOverflow": "ellipsis",
                                               "whiteSpace": "nowrap",
                                               "width": "100%",
+                                            },
+                                          },
+                                          "MuiMenuItem": Object {
+                                            "selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
                                             },
                                           },
                                         },
@@ -3419,12 +3485,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                             },
                                           },
                                           "overrides": Object {
+                                            "MUIDataTable": Object {
+                                              "paper": Object {
+                                                "boxShadow": "none",
+                                                "margin": 0,
+                                                "padding": 0,
+                                              },
+                                            },
                                             "MuiFormLabel": Object {
                                               "root": Object {
                                                 "overflow": "hidden",
                                                 "textOverflow": "ellipsis",
                                                 "whiteSpace": "nowrap",
                                                 "width": "100%",
+                                              },
+                                            },
+                                            "MuiMenuItem": Object {
+                                              "selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
                                               },
                                             },
                                           },
@@ -3843,12 +3922,25 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                               },
                                             },
                                             "overrides": Object {
+                                              "MUIDataTable": Object {
+                                                "paper": Object {
+                                                  "boxShadow": "none",
+                                                  "margin": 0,
+                                                  "padding": 0,
+                                                },
+                                              },
                                               "MuiFormLabel": Object {
                                                 "root": Object {
                                                   "overflow": "hidden",
                                                   "textOverflow": "ellipsis",
                                                   "whiteSpace": "nowrap",
                                                   "width": "100%",
+                                                },
+                                              },
+                                              "MuiMenuItem": Object {
+                                                "selected": Object {
+                                                  "backgroundColor": "#4085C6 !important",
+                                                  "color": "#FFFFFF",
                                                 },
                                               },
                                             },
