@@ -827,17 +827,16 @@ export const SIGNIFICANCE_MAJOR = 454026;
 export const SIGNIFICANCE_MINOR = 454027;
 
 export const QUALITY_INDICATORS = [
-    {text: 'Select multiple quality indicators as required', value: null},
-    {text: 'Disseminated via (inter)nationally recognised outlet or entity', value: 453996},
-    {text: 'Association with recognised (inter)national entities, distinct from co-creation', value: 453997},
-    {text: 'Reviews, prizes, awards recognition of the output', value: 454033},
-    {text: 'Commissioned by external body', value: 454034},
-    {text: 'Repeat performances, reproductions, reviews or exhibitions', value: 454035},
-    {text: 'Selected by (inter)nationally recognised outlet or entity', value: 454036},
-    {text: 'Other', value: 454037},
-    {text: 'Option 8', value: 454038},
-    {text: 'Option 9', value: 454039},
-    {text: 'Option 10', value: 454040},
+    {text: 'Disseminated via nationally recognised outlet or entity', value: 453996},
+    {text: 'Disseminated via internationally recognised outlet or entity', value: 453997},
+    {text: 'Association with recognised national entities, distinct from co-creation', value: 454033},
+    {text: 'Association with recognised international entities, distinct from co-creation', value: 454034},
+    {text: 'Reviews, prizes, awards recognition of the output', value: 454035},
+    {text: 'Commissioned by external body', value: 454036},
+    {text: 'Repeat performances, reproductions, republications or re-exhibitions', value: 454037},
+    {text: 'Selected for use by nationally recognised outlet or entity', value: 454038},
+    {text: 'Selected for use by internationally recognised outlet or entity', value: 454039},
+    {text: 'Other (add details to Author/Creator contribution statement)', value: 454040}
 ];
 
 export const AUDIENCE_SIZE = [

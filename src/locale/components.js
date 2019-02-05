@@ -532,8 +532,10 @@ export default {
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
-                title: 'NTRO Publication Authors/Creators/Contributors',
-                text: 'Help text...',
+                title: 'Authors/Designers name',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
+                ),
                 buttonLabel: 'OK'
             },
             field: {
@@ -717,11 +719,13 @@ export default {
         designers: {
             title: 'Designer name',
             description: 'Please provide a list of designers and then select your name from the list.',
-            // help: {
-            //     title: 'Designers',
-            //     text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'Designers',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
+                ),
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {
@@ -1017,6 +1021,20 @@ export default {
         },
         newsFeed: {
             title: 'Latest news'
+        },
+        ntroFields: {
+            metadata: {
+                help: {
+                    title: 'Non-traditional research out metadata',
+                    text: (
+                        <React.Fragment>
+                            <h3>Quality indicators</h3>
+                            <p>For more information about each quality indicator option, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'OK'
+                }
+            }
         },
         export: {
             label: 'Export results',

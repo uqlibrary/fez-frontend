@@ -39,7 +39,7 @@ exports[`DesignForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={12}
           xs={12}
         >
           <Field
@@ -118,27 +118,6 @@ exports[`DesignForm renders  component 1`] = `
             }
           />
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            allowPartial={true}
-            className="requiredHintField"
-            component={[Function]}
-            disabled={false}
-            floatingTitle="End date"
-            floatingTitleRequired={true}
-            name="fez_record_search_key_end_date.rek_end_date"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -147,6 +126,21 @@ exports[`DesignForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <p>
+            For more information about identification of author/creator/designer, click 
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>,
+          "title": "Designers",
+        }
+      }
       title="Designer name"
     >
       <Field

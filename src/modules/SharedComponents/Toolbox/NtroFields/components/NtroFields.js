@@ -198,7 +198,7 @@ export default class NtroFields extends React.PureComponent {
                     </Grid>
                 }
                 <Grid item xs={12}>
-                    <StandardCard title={metadata.title}>
+                    <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
                         <Grid container spacing={16}>
                             <Grid item xs={12}>
                                 <Field
