@@ -1073,7 +1073,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       contain only upper and lowercase alphanumeric characters, and underscores
                     </li>
                     <li>
-                      have only a single period which precedes the file extension: “.pdf”
+                      have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                     </li>
                     <li>
                       are uploaded individually and not inside a folder
