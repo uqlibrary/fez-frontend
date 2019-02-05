@@ -24,7 +24,7 @@ export default {
             <ul>
                 <li>begin with a letter and are less than 45 characters long</li>
                 <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
-                <li>have only a single period which precedes the file extension: “.pdf”</li>
+                <li>have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.</li>
                 <li>are uploaded individually and not inside a folder</li>
             </ul>
         </div>
