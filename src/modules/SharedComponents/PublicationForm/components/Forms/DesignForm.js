@@ -48,7 +48,7 @@ export default class DesignForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={12}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -97,18 +97,6 @@ export default class DesignForm extends Component {
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PartialDateField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_end_date.rek_end_date"
-                                    allowPartial required
-                                    className="requiredHintField"
-                                    validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.endDate.title}
                                     floatingTitleRequired
                                 />
                             </Grid>

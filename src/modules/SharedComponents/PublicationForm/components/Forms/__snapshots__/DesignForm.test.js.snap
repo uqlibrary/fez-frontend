@@ -39,7 +39,7 @@ exports[`DesignForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={12}
           xs={12}
         >
           <Field
@@ -110,27 +110,6 @@ exports[`DesignForm renders  component 1`] = `
             floatingTitle="Publication/Start date"
             floatingTitleRequired={true}
             name="rek_date"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            allowPartial={true}
-            className="requiredHintField"
-            component={[Function]}
-            disabled={false}
-            floatingTitle="End date"
-            floatingTitleRequired={true}
-            name="fez_record_search_key_end_date.rek_end_date"
             required={true}
             validate={
               Array [
