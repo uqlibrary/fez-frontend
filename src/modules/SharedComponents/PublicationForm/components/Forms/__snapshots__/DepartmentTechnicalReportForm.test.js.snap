@@ -138,8 +138,16 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
       help={
         Object {
           "buttonLabel": "OK",
-          "text": "Help text...",
-          "title": "NTRO Publication Authors/Creators/Contributors",
+          "text": <p>
+            For more information about identification of author/creator/designer, click 
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>,
+          "title": "Authors/Designers name",
         }
       }
       title="Authors"
