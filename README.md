@@ -46,7 +46,10 @@ Mock data is provided for all pages and actions under `src/mock/`.
 There are two ways to run `eslint`:
 
 - Run `npm run eslint` command
-- Copy `scripts/pre-commit` to `.git/hooks` directory to run eslint automatically before every commit locally
+- Run the following in the project root directory to run eslint automatically before every local commit:
+    ```sh
+    ln -sf "../../scripts/pre-commit" ".git/hooks/pre-commit"
+    ```
 
 #### Naming conventions
 

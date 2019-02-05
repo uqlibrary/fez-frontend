@@ -126,6 +126,21 @@ exports[`DesignForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <p>
+            For more information about identification of author/creator/designer, click 
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>,
+          "title": "Designers",
+        }
+      }
       title="Designer name"
     >
       <Field
