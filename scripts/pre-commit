@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$")
 ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
@@ -9,7 +9,7 @@ fi
 
 PASS=true
 
-echo "\nRunning ESLint:\n"
+printf "\n\e[32mRunning ESLint...\e[0m\n\n"
 
 # Check for eslint
 if [[ ! -x "$ESLINT" ]]; then
@@ -22,20 +22,19 @@ do
   "$ESLINT" --config "$(git rev-parse --show-toplevel)/.eslintrc" "$FILE" --quiet
 
   if [[ "$?" == 0 ]]; then
-    echo "ESLint Passed: $FILE"
+    echo -e "\e[92mESLint Passed: $FILE\e[0m"
   else
-    echo "ESLint Failed: $FILE"
+    echo -e "\e[31mESLint Failed: $FILE\e[0m"
     PASS=false
   fi
 done
 
-echo "\nESLint validation completed!\n"
+echo -e "\nESLint validation complete."
 
 if ! $PASS; then
-  echo "COMMIT FAILED: Your commit contains files that should pass ESLint but do not. Please fix the ESLint errors and try again.\n"
+  echo -e "\e[31m\e[1mCOMMIT FAILED.\e[0m \e[31mYour commit contains files that should pass ESLint but do not.\e[0m"
+  echo -e "\e[31mPlease fix the ESLint errors and try again.\e[0m"
   exit 1
 else
-  echo "COMMIT SUCCEEDED"
+  echo -e "\e[92mNo issues found. Proceeding with commit...\n\e[0m"
 fi
-
-exit $?
