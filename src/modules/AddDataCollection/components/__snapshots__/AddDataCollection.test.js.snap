@@ -1115,7 +1115,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 "ntroSpecificInstructions": <span>
                   You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
                   <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
                     target="_blank"
                   >
                     More information
