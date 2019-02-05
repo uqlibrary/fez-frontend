@@ -22,19 +22,19 @@ do
   "$ESLINT" --config "$(git rev-parse --show-toplevel)/.eslintrc" "$FILE" --quiet
 
   if [[ "$?" == 0 ]]; then
-    echo -e "\e[92mESLint Passed: $FILE\e[0m"
+    printf "\e[92mESLint Passed: $FILE\e[0m\n"
   else
-    echo -e "\e[31mESLint Failed: $FILE\e[0m"
+    printf "\e[31mESLint Failed: $FILE\e[0m\n"
     PASS=false
   fi
 done
 
-echo -e "\nESLint validation complete."
+printf "\nESLint validation complete.\n"
 
 if ! $PASS; then
-  echo -e "\e[31m\e[1mCOMMIT FAILED.\e[0m \e[31mYour commit contains files that should pass ESLint but do not.\e[0m"
-  echo -e "\e[31mPlease fix the ESLint errors and try again.\e[0m"
+  printf "\n\e[31m\e[1mCOMMIT FAILED.\e[0m \e[31mYour commit contains files that should pass ESLint but do not.\e[0m"
+  printf "\n\e[31mPlease fix the ESLint errors and try again.\e[0m\n"
   exit 1
 else
-  echo -e "\e[92mNo issues found. Proceeding with commit...\n\e[0m"
+  printf "\n\e[92mNo issues found. Proceeding with commit...\e[0m\n\n"
 fi
