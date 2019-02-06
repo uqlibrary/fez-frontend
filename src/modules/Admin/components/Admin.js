@@ -298,7 +298,7 @@ class Admin extends PureComponent {
         const authorRecData = [
             ['John Smith', 'UQ12345', <TextField
                 fullWidth
-                placeholder={'1% - 100%'}
+                placeholder="1% - 100%"
                 autoComplete="off"
             />, <IconButton style={{float: 'right', marginRight: -24}}><PersonAdd/></IconButton>]
         ];
@@ -325,22 +325,22 @@ class Admin extends PureComponent {
         return (
             <form>
                 <StandardPage>
-                    <Hidden xsDown>
-                        <KeyboardEventHandler
-                            handleKeys={['ctrl+shift+left', 'ctrl+shift+right', 'ctrl+shift+up', 'ctrl+shift+down']}
-                            onKeyEvent={this.handleKeyEvent}
-                            handleFocusableElements
-                        />
-                        <Grid container direction={'row'} alignItems={'center'} style={{marginTop: -24}}>
-                            <Grid item xs style={{marginBottom: 12}}>
-                                <Typography variant={'h5'} color={'primary'} style={{fontSize: 24}}>{PIDtitle}</Typography>
-                            </Grid>
-                            <Grid item xs={'auto'}>
-                                <Grid container direction={'row'} spacing={0} alignItems={'center'}>
+                    <Grid container direction="row" alignItems="center" style={{marginTop: -24}}>
+                        <Grid item xs style={{marginBottom: 12}}>
+                            <Typography variant="h5" color="primary" style={{fontSize: 24}}>{PIDtitle}</Typography>
+                        </Grid>
+                        <Hidden xsDown>
+                            <KeyboardEventHandler
+                                handleKeys={['ctrl+shift+left', 'ctrl+shift+right', 'ctrl+shift+up', 'ctrl+shift+down']}
+                                onKeyEvent={this.handleKeyEvent}
+                                handleFocusableElements
+                            />
+                            <Grid item xs="auto">
+                                <Grid container direction="row" spacing={0} alignItems="center">
                                     <Grid item>
                                         <Tooltip title={`Switch to ${this.state.tabbed ? 'full form' : 'tabbed'} mode`}>
                                             <Switch
-                                                color={'primary'}
+                                                color="primary"
                                                 checked={this.state.tabbed}
                                                 onChange={this.handleFormatChange}
                                                 value="tabbed"
@@ -348,85 +348,80 @@ class Admin extends PureComponent {
                                         </Tooltip>
                                     </Grid>
                                     <Grid item>
-                                        <Badge classes={{badge: classes.badgeMargin}} badgeContent={'?'} color="secondary">
+                                        <Badge classes={{badge: classes.badgeMargin}} badgeContent="?" color="secondary">
                                             <HelpIcon
                                                 icon={<Keyboard className={classes.helpIcon} />}
-                                                tooltip={'Learn about keyboard shortcuts'}
-                                                title={'Keyboard shortcuts'}
+                                                tooltip="Learn about keyboard shortcuts"
+                                                title="Keyboard shortcuts"
                                                 text={(
                                                     <React.Fragment>
                                                         <br/>
-                                                        <Typography variant={'h6'} component={'p'}>Tab navigation</Typography>
+                                                        <Typography variant="h6" component="p">Tab navigation</Typography>
                                                         <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
-                                                        <Typography variant={'h6'} component={'p'}>Form style</Typography>
+                                                        <Typography variant="h6" component="p">Form style</Typography>
                                                         <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
                                                         <p>Your preference is saved as a cookie on this browser and it will remember your preference.</p>
                                                     </React.Fragment>
                                                 )}
-                                                buttonLabel={'GOT IT'}
+                                                buttonLabel="GOT IT"
                                             />
                                         </Badge>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid container spacing={0} direction={'row'}>
-                            {
-                                this.state.tabbed &&
-                                    <Grid item xs={12}>
-                                        <Tabs value={this.state.tabValue}
-                                            fullWidth
-                                            style={{marginRight: -56, marginLeft: -56}}
-                                            classes={{indicator: classes.tabIndicator}}
-                                            onChange={this.handleTabChange}
-                                            scrollable
-                                            scrollButtons={'on'}
-                                            indicatorColor="primary"
-                                            textColor="primary">
-                                            <Tab label="Identifiers"/>
-                                            <Tab label="Bibliographic"/>
-                                            <Tab label="Admin"/>
-                                            <Tab label="Grant Information"/>
-                                            <Tab label="Author details"/>
-                                            <Tab label="Files"/>
-                                            <Tab label="Security"/>
-                                        </Tabs>
-                                    </Grid>
-                            }
-                        </Grid>
-                    </Hidden>
-                    {/* --------------- Content here ---------------*/}
-                    <Grid container spacing={16}>
-                        <Hidden smUp>
-                            <Grid item xs>
-                                <Typography variant={'h5'} color={'primary'} style={{fontSize: 24}}>{PIDtitle}</Typography>
+                            <Grid container spacing={0} direction="row">
+                                {
+                                    this.state.tabbed &&
+                                        <Grid item xs={12}>
+                                            <Tabs value={this.state.tabValue}
+                                                fullWidth
+                                                style={{marginRight: -56, marginLeft: -56}}
+                                                classes={{indicator: classes.tabIndicator}}
+                                                onChange={this.handleTabChange}
+                                                scrollable
+                                                scrollButtons="on"
+                                                indicatorColor="primary"
+                                                textColor="primary">
+                                                <Tab label="Identifiers"/>
+                                                <Tab label="Bibliographic"/>
+                                                <Tab label="Admin"/>
+                                                <Tab label="Grant Information"/>
+                                                <Tab label="Author details"/>
+                                                <Tab label="Files"/>
+                                                <Tab label="Security"/>
+                                            </Tabs>
+                                        </Grid>
+                                }
                             </Grid>
                         </Hidden>
+                    </Grid>
+                    {/* --------------- Content here ---------------*/}
+                    <Grid container spacing={16}>
                         {
                             ((this.state.tabbed && this.state.tabValue === 0) || !this.state.tabbed) &&
                             // Identifiers
                             <Grid item xs={12}>
-                                <StandardCard title={'Identifiers'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <StandardCard title="Identifiers" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                     <Grid container spacing={8}>
                                         <Grid item xs={12} sm={12}>
-                                            <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                            <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
                                         </Grid>
                                         <Grid item xs={12}>
                                             <DownshiftMultiple
                                                 initialValue={this.state.collection}
                                                 sendData={this.handleMultiChipData}
-                                                label={'Collection'}
-                                                placeholder={'Begin typing to select and add collection(s)'}
+                                                label="Collection"
+                                                placeholder="Begin typing to select and add collection(s)"
                                                 optionsList={collectionItems}
-                                                name={'collection'} />
+                                                name="collection" />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="WOSisi"
                                                 fullWidth
-                                                label={'WOS ID (ISI Loc)'}
-                                                placeholder={''}
+                                                label="WOS ID (ISI Loc)"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -436,10 +431,10 @@ class Admin extends PureComponent {
                                                 disabled={this.props.submitting}
                                                 name="wosDocType"
                                                 value={this.props.formValues.get('wosDocType')}
-                                                label={'WOS Document type'}
+                                                label="WOS Document type"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Select a document type</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Select a document type</MenuItem>
                                                 {WOSDocTypes.map((item, index) => {
                                                     return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                                                 })}
@@ -451,8 +446,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="scopusId"
                                                 fullWidth
-                                                label={'Scopus ID'}
-                                                placeholder={''}
+                                                label="Scopus ID"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -462,10 +457,10 @@ class Admin extends PureComponent {
                                                 disabled={this.props.submitting}
                                                 name="scopusDocType"
                                                 value={this.props.formValues.get('scopusDocType')}
-                                                label={'Scopus Document type'}
+                                                label="Scopus Document type"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Select a document type</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Select a document type</MenuItem>
                                                 {ScopusDocTypes.map((item, index) => {
                                                     return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                                                 })}
@@ -477,8 +472,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="pubmedId"
                                                 fullWidth
-                                                label={'PubMed ID'}
-                                                placeholder={''}
+                                                label="PubMed ID"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -488,10 +483,10 @@ class Admin extends PureComponent {
                                                 disabled={this.props.submitting}
                                                 name="pubmedDocType"
                                                 value={this.props.formValues.get('pubmedDocType')}
-                                                label={'PubMed Document type'}
+                                                label="PubMed Document type"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Select a document type</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Select a document type</MenuItem>
                                                 {PubmedDocTypes.map((item, index) => {
                                                     return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                                                 })}
@@ -505,24 +500,23 @@ class Admin extends PureComponent {
                             ((this.state.tabbed && this.state.tabValue === 1) || !this.state.tabbed) &&
                             // Bibliographic
                             <Grid item xs={12}>
-                                <StandardCard title={'Bibliographic'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <StandardCard title="Bibliographic" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                     <Grid container spacing={8}>
                                         <Grid item xs={12}>
-                                            <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Formatted title</Typography>
+                                            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Formatted title</Typography>
                                             <Field
                                                 component={RichEditorField}
                                                 name="title"
                                                 height={100}
                                                 validate={[validation.required]}/>
                                         </Grid>
-
                                         <Grid item xs={12}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="authorAffiliationAddress"
                                                 fullWidth
-                                                label={'Author affiliation full address'}
-                                                placeholder={''}
+                                                label="Author affiliation full address"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -533,10 +527,10 @@ class Admin extends PureComponent {
                                                 disabled={this.props.submitting}
                                                 name="language"
                                                 value={this.props.formValues.get('language')}
-                                                label={'Language'}
+                                                label="Language"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Please select a language</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Please select a language</MenuItem>
                                                 {
                                                     languages.map((item, index) =>{
                                                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -551,8 +545,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="nativeTitle"
                                                 fullWidth
-                                                label={'Native title'}
-                                                placeholder={''}
+                                                label="Native title"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -561,8 +555,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="romanScriptTitle"
                                                 fullWidth
-                                                label={'Roman script title'}
-                                                placeholder={''}
+                                                label="Roman script title"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -571,8 +565,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="translatedTitle"
                                                 fullWidth
-                                                label={'Translated title'}
-                                                placeholder={''} />
+                                                label="Translated title"
+                                                placeholder="" />
                                         </Grid>
 
                                         <Grid item xs={12} sm={4}>
@@ -580,8 +574,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="journalName"
                                                 fullWidth
-                                                label={'Journal name'}
-                                                placeholder={''}
+                                                label="Journal name"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]}/>
                                         </Grid>
@@ -591,8 +585,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="ISSN"
                                                 fullWidth
-                                                label={'ISSN'}
-                                                placeholder={''}
+                                                label="ISSN"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -601,8 +595,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="ISBN"
                                                 fullWidth
-                                                label={'ISBN'}
-                                                placeholder={''}
+                                                label="ISBN"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -612,8 +606,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="pubplace"
                                                 fullWidth
-                                                label={'Place of publication'}
-                                                placeholder={''}
+                                                label="Place of publication"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -622,8 +616,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="publisher"
                                                 fullWidth
-                                                label={'Publisher'}
-                                                placeholder={''}
+                                                label="Publisher"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -633,8 +627,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="eraJournal"
                                                 fullWidth
-                                                label={'ERA journal list match'}
-                                                placeholder={''}
+                                                label="ERA journal list match"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -644,8 +638,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="eraJournalId"
                                                 fullWidth
-                                                label={'ERA journal ID'}
-                                                placeholder={''}
+                                                label="ERA journal ID"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -662,7 +656,7 @@ class Admin extends PureComponent {
                                                 leftArrowIcon={<KeyboardArrowLeft/>}
                                                 rightArrowIcon={<KeyboardArrowRight/>}
                                                 keyboardIcon={<Event/>}
-                                                label={'Publication date'}
+                                                label="Publication date"
 
                                             />
                                         </Grid>
@@ -672,10 +666,10 @@ class Admin extends PureComponent {
                                                 disabled={this.props.submitting}
                                                 name="subtype"
                                                 value={this.props.formValues.get('subtype')}
-                                                label={'eSpace subtype'}
+                                                label="eSpace subtype"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Select a document subtype</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Select a document subtype</MenuItem>
                                                 {
                                                     subtypes.map((item, index) => {
                                                         return  <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -688,8 +682,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="doi"
                                                 fullWidth
-                                                label={'DOI'}
-                                                placeholder={''}
+                                                label="DOI"
+                                                placeholder=""
                                                 required
                                                 validate={[validation.required]} />
                                         </Grid>
@@ -698,8 +692,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="doiembargodays"
                                                 fullWidth
-                                                label={'DOI Embargo days'}
-                                                placeholder={''} />
+                                                label="DOI Embargo days"
+                                                placeholder="" />
                                         </Grid>
 
                                         <Grid item xs={12} sm={4}>
@@ -707,58 +701,58 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="volume"
                                                 fullWidth
-                                                label={'Volume'}
-                                                placeholder={''} />
+                                                label="Volume"
+                                                placeholder="" />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="issue"
                                                 fullWidth
-                                                label={'Issue'}
-                                                placeholder={''} />
+                                                label="Issue"
+                                                placeholder="" />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="articlenumber"
                                                 fullWidth
-                                                label={'Article number'}
-                                                placeholder={''} />
+                                                label="Article number"
+                                                placeholder="" />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="startpage"
                                                 fullWidth
-                                                label={'Start page'}
-                                                placeholder={''} />
+                                                label="Start page"
+                                                placeholder="" />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="endpage"
                                                 fullWidth
-                                                label={'End page'}
-                                                placeholder={''} />
+                                                label="End page"
+                                                placeholder="" />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <Field
                                                 component={GenericTextField}
                                                 name="totalpages"
                                                 fullWidth
-                                                label={'Total pages'}
-                                                placeholder={''} />
+                                                label="Total pages"
+                                                placeholder="" />
                                         </Grid>
 
                                         <Grid item xs={12}>
                                             <DownshiftMultiple
                                                 initialValue={this.state.subject}
                                                 sendData={this.handleMultiChipData}
-                                                label={'Subject(s)'}
-                                                placeholder={'Begin typing to select and add subject(s)'}
+                                                label="Subject(s)"
+                                                placeholder="Begin typing to select and add subject(s)"
                                                 optionsList={subjects}
-                                                name={'subject'} />
+                                                name="subject" />
                                         </Grid>
 
                                         <Grid item xs={12}>
@@ -768,7 +762,7 @@ class Admin extends PureComponent {
                                                 remindToAdd
                                                 maxCount={10}
                                                 searchKey={{value: 'keyword', order: 'order'}}
-                                                value={'hello'}
+                                                value="hello"
                                                 // value={this.props.formValues.get('keywords')}
                                                 locale={{
                                                     form: {
@@ -782,7 +776,7 @@ class Admin extends PureComponent {
                                         </Grid>
 
                                         <Grid item xs={12}>
-                                            <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Formatted abstract</Typography>
+                                            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Formatted abstract</Typography>
                                             <Field
                                                 component={RichEditorField}
                                                 name="abstract"
@@ -797,10 +791,10 @@ class Admin extends PureComponent {
                             ((this.state.tabbed && this.state.tabValue === 2) || !this.state.tabbed) &&
                             // Admin
                             <Grid item xs={12}>
-                                <StandardCard title={'Admin'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <StandardCard title="Admin" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                     <Grid container spacing={8}>
                                         <Grid item xs={12} sm={12}>
-                                            <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                            <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
                                         </Grid>
 
                                         <Grid item xs={12} sm={4}>
@@ -808,10 +802,10 @@ class Admin extends PureComponent {
                                                 component={SelectField}
                                                 name="refsource"
                                                 value={this.props.formValues.get('refsource')}
-                                                label={'Refereed Source'}
+                                                label="Refereed Source"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Please select a source</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Please select a source</MenuItem>
                                                 {
                                                     refereedsources.map((item, index) =>{
                                                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -824,10 +818,10 @@ class Admin extends PureComponent {
                                                 component={SelectField}
                                                 name="openaccessstatus"
                                                 value={this.props.formValues.get('openaccessstatus')}
-                                                label={'Open access status'}
+                                                label="Open access status"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Please select a status</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Please select a status</MenuItem>
                                                 {
                                                     openaccess.map((item, index) =>{
                                                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -841,8 +835,8 @@ class Admin extends PureComponent {
                                                 component={GenericTextField}
                                                 name="succeeds"
                                                 fullWidth
-                                                label={'Succeeds'}
-                                                placeholder={'PID of succeeded record'} />
+                                                label="Succeeds"
+                                                placeholder="PID of succeeded record" />
                                         </Grid>
 
                                         <Grid item xs={12} sm={4}>
@@ -850,10 +844,10 @@ class Admin extends PureComponent {
                                                 component={SelectField}
                                                 name="qindexcode"
                                                 value={this.props.formValues.get('qindexcode')}
-                                                label={'Research Code (Q-Index code)'}
+                                                label="Research Code (Q-Index code)"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Please select a code</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Please select a code</MenuItem>
                                                 {
                                                     qindex.map((item, index) =>{
                                                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -867,10 +861,10 @@ class Admin extends PureComponent {
                                                 component={SelectField}
                                                 name="qindexcodestatus"
                                                 value={this.props.formValues.get('qindexcodestatus')}
-                                                label={'Research Code status'}
+                                                label="Research Code status"
                                                 required
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Please select a status</MenuItem>
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Please select a status</MenuItem>
                                                 <MenuItem value={1} >Confirmed code</MenuItem>
                                                 <MenuItem value={2} >Provisional code</MenuItem>
                                             </Field>
@@ -881,9 +875,9 @@ class Admin extends PureComponent {
                                                 component={SelectField}
                                                 name="inststatus"
                                                 value={this.props.formValues.get('inststatus')}
-                                                label={'Institutional status'}
-                                                placeholder={''}>
-                                                <MenuItem value={''} disabled>Please select a status</MenuItem>
+                                                label="Institutional status"
+                                                placeholder="">
+                                                <MenuItem value="" disabled>Please select a status</MenuItem>
                                                 <MenuItem value={1} >UQ</MenuItem>
                                                 <MenuItem value={2} >Non-UQ</MenuItem>
                                                 <MenuItem value={3} >Unknown</MenuItem>
@@ -891,7 +885,7 @@ class Admin extends PureComponent {
                                         </Grid>
 
                                         <Grid item xs={12}>
-                                            <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Additional notes</Typography>
+                                            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Additional notes</Typography>
                                             <Field
                                                 component={RichEditorField}
                                                 name="notes"
@@ -900,7 +894,7 @@ class Admin extends PureComponent {
                                         </Grid>
 
                                         <Grid item xs={12}>
-                                            <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Internal notes</Typography>
+                                            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Internal notes</Typography>
                                             <Field
                                                 component={RichEditorField}
                                                 name="internalnotes"
@@ -918,42 +912,42 @@ class Admin extends PureComponent {
                             // Grant Info
                             <React.Fragment>
                                 <Grid item xs={12}>
-                                    <StandardCard title={'Grant information'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                    <StandardCard title="Grant information" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                         <Grid container spacing={8} style={{marginTop: -24}}>
                                             <Grid item xs={12} sm={6}>
                                                 <Field
                                                     component={GenericTextField}
                                                     name="grantagency"
                                                     fullWidth
-                                                    label={'Grant agency'}
-                                                    placeholder={''} />
+                                                    label="Grant agency"
+                                                    placeholder="" />
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
                                                 <Field
                                                     component={GenericTextField}
                                                     name="grantagencyid"
                                                     fullWidth
-                                                    label={'Grant agency ID'}
-                                                    placeholder={''} />
+                                                    label="Grant agency ID"
+                                                    placeholder="" />
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
                                                 <Field
                                                     component={GenericTextField}
                                                     name="grantid"
                                                     fullWidth
-                                                    label={'Grant ID'}
-                                                    placeholder={''} />
+                                                    label="Grant ID"
+                                                    placeholder="" />
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
                                                 <Field
                                                     component={GenericTextField}
                                                     name="grantacronym"
                                                     fullWidth
-                                                    label={'Grant acronym'}
-                                                    placeholder={''} />
+                                                    label="Grant acronym"
+                                                    placeholder="" />
                                             </Grid>
                                             <Grid item xs={12}>
-                                                <Typography variant={'caption'} component={'span'} style={{opacity: 0.66}}>Grant text</Typography>
+                                                <Typography variant="caption" component="span" style={{opacity: 0.66}}>Grant text</Typography>
                                                 <Field
                                                     component={RichEditorField}
                                                     name="granttext"
@@ -962,13 +956,13 @@ class Admin extends PureComponent {
                                             <Grid item xs={12} style={{padding: 4}}>
                                                 <Grid container spacing={8}>
                                                     <Grid item xs />
-                                                    <Grid item xs={'auto'}>
-                                                        <Button color={'secondary'}>
+                                                    <Grid item xs="auto">
+                                                        <Button color="secondary">
                                                             Clear
                                                         </Button>
                                                     </Grid>
-                                                    <Grid item xs={'auto'}>
-                                                        <Button variant={'contained'} color={'primary'} onClick={this.handleGrantEditButtonSubmit}>
+                                                    <Grid item xs="auto">
+                                                        <Button variant="contained" color="primary" onClick={this.handleGrantEditButtonSubmit}>
                                                             {this.state.grants.buttonAction}
                                                         </Button>
                                                     </Grid>
@@ -979,7 +973,7 @@ class Admin extends PureComponent {
                                 </Grid>
                                 <Grid item xs={12}>
                                     <MUIDataTable
-                                        title={'Grant list'}
+                                        title="Grant list"
                                         data={grantData}
                                         columns={grantColumns}
                                         options={grantOptions}
@@ -993,7 +987,7 @@ class Admin extends PureComponent {
                             // Authors
                             <React.Fragment>
                                 <Grid item xs={12}>
-                                    <StandardCard title={'Author detail'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                    <StandardCard title="Author detail" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                         <Field
                                             component={ContributorsEditorField}
                                             showIdentifierLookup
@@ -1015,7 +1009,7 @@ class Admin extends PureComponent {
                                     </StandardCard>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <StandardCard title={'Author affiliation recommendations'}>
+                                    <StandardCard title="Author affiliation recommendations">
                                         <MUIDataTable
                                             data={authorRecData}
                                             columns={authorRecColumns}
@@ -1029,10 +1023,10 @@ class Admin extends PureComponent {
                             ((this.state.tabbed && this.state.tabValue === 5) || !this.state.tabbed) &&
                             // Files
                             <Grid item xs={12}>
-                                <StandardCard title={'Files'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                <StandardCard title="Files" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                     <Grid container spacing={16}>
                                         <Grid item xs={12} sm={12}>
-                                            <Typography variant={'body2'} component={'p'}>Some explanatory text might go here. It may not. Time will tell.</Typography>
+                                            <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={12}>
@@ -1050,21 +1044,21 @@ class Admin extends PureComponent {
                             // Security
                                 <React.Fragment>
                                     <Grid item xs={12}>
-                                        <StandardCard title={'Security'} primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
+                                        <StandardCard title="Security" primaryHeader={!!this.state.tabbed} squareTop={!!this.state.tabbed}>
                                             <Grid container spacing={16}>
                                                 <Grid item xs={12} sm={12}>
                                                     <Field
                                                         component={SelectField}
                                                         name="level"
                                                         value={this.props.formValues.get('level')}
-                                                        label={'Use this interface as a...'}
+                                                        label="Use this interface as a..."
                                                         required
                                                         validation={[validation.required]}>
-                                                        <MenuItem value={'Superadmin'} >Super admin</MenuItem>
-                                                        <MenuItem value={'Admin'} >Admin</MenuItem>
+                                                        <MenuItem value="Superadmin" >Super admin</MenuItem>
+                                                        <MenuItem value="Admin" >Admin</MenuItem>
                                                     </Field>
                                                     <br/><br/>
-                                                    <Alert type={'warning'} title={'Warning'} message={'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you`re doing.'} />
+                                                    <Alert type="warning" title="Warning" message="This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you`re doing." />
                                                 </Grid>
                                             </Grid>
                                         </StandardCard>
@@ -1074,7 +1068,7 @@ class Admin extends PureComponent {
                                             <StandardCard title={<span><b>Community</b> level security - UQ:12345</span>} accentHeader>
                                                 <Grid container spacing={8}>
                                                     <Grid item xs={12}>
-                                                        <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit
+                                                        <Typography variant="body2" component="p">Lorem ipsum dolor sit
                                                             amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam
                                                             rhoncus congue consectetur. Aenean sed sapien
                                                             ipsum.</Typography>
@@ -1084,10 +1078,10 @@ class Admin extends PureComponent {
                                                             component={SelectField}
                                                             name="communitySecurity"
                                                             value={this.props.formValues.get('communitySecurity')}
-                                                            label={'Community policy to apply to this PID'}
+                                                            label="Community policy to apply to this PID"
                                                             required
                                                             validation={[validation.required]}>
-                                                            <MenuItem value={''} disabled>Select a security policy to
+                                                            <MenuItem value="" disabled>Select a security policy to
                                                                 apply</MenuItem>
                                                             {communitySecurity.map((item, index) => {
                                                                 return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -1101,7 +1095,7 @@ class Admin extends PureComponent {
                                                             padding: 24,
                                                             backgroundColor: 'rgba(0,0,0,0.05)'
                                                         }}>
-                                                            <Typography variant={'h6'} style={{marginTop: -8}}>Selected
+                                                            <Typography variant="h6" style={{marginTop: -8}}>Selected
                                                                 community record security policy details</Typography>
                                                             <Grid container spacing={8} style={{marginTop: 8}}>
                                                                 <Grid item xs={2}><b>Name (ID):</b></Grid>
@@ -1118,7 +1112,7 @@ class Admin extends PureComponent {
                                         <StandardCard title={<span><b>Collection</b> level security - UQ:12345</span>} accentHeader>
                                             <Grid container spacing={8}>
                                                 <Grid item xs={12}>
-                                                    <Typography variant={'body2'} component={'p'}>Lorem ipsum dolor sit
+                                                    <Typography variant="body2" component="p">Lorem ipsum dolor sit
                                                         amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam
                                                         rhoncus congue consectetur. Aenean sed sapien
                                                         ipsum.</Typography>
@@ -1128,10 +1122,10 @@ class Admin extends PureComponent {
                                                         component={SelectField}
                                                         name="collectionSecurity"
                                                         value={this.props.formValues.get('collectionSecurity')}
-                                                        label={'Collection policy to apply to this PID'}
+                                                        label="Collection policy to apply to this PID"
                                                         required
                                                         validation={[validation.required]}>
-                                                        <MenuItem value={''} disabled>Select a security policy to
+                                                        <MenuItem value="" disabled>Select a security policy to
                                                             apply</MenuItem>
                                                         {communitySecurity.map((item, index) => {
                                                             return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -1145,7 +1139,7 @@ class Admin extends PureComponent {
                                                         padding: 24,
                                                         backgroundColor: 'rgba(0,0,0,0.05)'
                                                     }}>
-                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected
+                                                        <Typography variant="h6" style={{marginTop: -8}}>Selected
                                                             collection record security policy details</Typography>
                                                         <Grid container spacing={8} style={{marginTop: 8}}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
@@ -1165,7 +1159,7 @@ class Admin extends PureComponent {
                                                             label={<span>Collection policy to apply to the <b>datastream</b> of this PID</span>}
                                                             required
                                                             validation={[validation.required]}>
-                                                            <MenuItem value={''} disabled>Select a security policy to
+                                                            <MenuItem value="" disabled>Select a security policy to
                                                                 apply</MenuItem>
                                                             {communitySecurity.map((item, index) => {
                                                                 return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
@@ -1180,7 +1174,7 @@ class Admin extends PureComponent {
                                                         padding: 24,
                                                         backgroundColor: 'rgba(0,0,0,0.05)'
                                                     }}>
-                                                        <Typography variant={'h6'} style={{marginTop: -8}}>Selected collection <b>datastream</b> security policy details</Typography>
+                                                        <Typography variant="h6" style={{marginTop: -8}}>Selected collection <b>datastream</b> security policy details</Typography>
                                                         <Grid container spacing={8} style={{marginTop: 8}}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                             <Grid item xs={10}>{communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].name} ({communitySecurity[this.findWithAttr(communitySecurity, 'value', this.props.formValues.get('collectionDataSecurity'))].id})</Grid>
@@ -1198,7 +1192,7 @@ class Admin extends PureComponent {
                                                 <span><b>Datastream</b> security - UQ:12345</span>} accentHeader>
                                                 <Grid container spacing={8}>
                                                     <Grid item xs={12}>
-                                                        <Typography variant={'body2'} component={'p'}>Lorem ipsum
+                                                        <Typography variant="body2" component="p">Lorem ipsum
                                                             dolor
                                                             sit amet, consectetur adipiscing elit. Ut id aliquam
                                                             sapien.
@@ -1212,14 +1206,14 @@ class Admin extends PureComponent {
                                                                     checked={this.state.overrideSecurity2}
                                                                     onChange={this.toggleSecurityOverride2}
                                                                 />}
-                                                                label={'Override inherited security (detailed below).'}
+                                                                label="Override inherited security (detailed below)."
                                                             />
                                                         </Grid>
                                                     </Grid>
                                                     {
                                                         this.props.formValues.get('collectionDataSecurity') && !this.state.overrideSecurity2 ?
                                                             <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
-                                                                <Typography variant={'h6'} style={{marginTop: -8}}>Inherited security policy details</Typography>
+                                                                <Typography variant="h6" style={{marginTop: -8}}>Inherited security policy details</Typography>
                                                                 <Grid container spacing={8} style={{marginTop: 8}}>
                                                                     <Grid item xs={2}><b>Collection:</b></Grid>
                                                                     <Grid item xs={5}>UQ:12345</Grid>
@@ -1234,8 +1228,8 @@ class Admin extends PureComponent {
                                                             </Grid>
                                                             :
                                                             <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
-                                                                <Typography variant={'h6'} style={{marginTop: -8}}>Override datastream security policy details</Typography>
-                                                                <Grid container spacing={8} alignContent={'flex-end'} alignItems={'flex-end'} style={{borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8}}>
+                                                                <Typography variant="h6" style={{marginTop: -8}}>Override datastream security policy details</Typography>
+                                                                <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8}}>
                                                                     <Grid item xs={2}>Filename:</Grid>
                                                                     <Grid item xs={4}>Test_1.PDF</Grid>
                                                                     <Grid item xs={6}>
@@ -1252,7 +1246,7 @@ class Admin extends PureComponent {
                                                                         </Field>
                                                                     </Grid>
                                                                 </Grid>
-                                                                <Grid container spacing={8} alignContent={'flex-end'} alignItems={'flex-end'} style={{borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8}}>
+                                                                <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8}}>
                                                                     <Grid item xs={2}>Filename:</Grid>
                                                                     <Grid item xs={4}>Test_3.JPG</Grid>
                                                                     <Grid item xs={6}>
@@ -1287,7 +1281,7 @@ class Admin extends PureComponent {
                                                                 checked={this.state.overrideSecurity}
                                                                 onChange={this.toggleSecurityOverride}
                                                             />}
-                                                            label={'Override inherited security (detailed below).'}
+                                                            label="Override inherited security (detailed below)."
                                                         />
                                                     </Grid>
                                                 </Grid>
@@ -1295,7 +1289,7 @@ class Admin extends PureComponent {
                                                 {
                                                     !this.state.overrideSecurity && this.props.formValues.get('collectionSecurity') ?
                                                         <Grid item xs={12} style={{marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)'}}>
-                                                            <Typography variant={'h6'} style={{marginTop: -8}}>Inherited security policy details</Typography>
+                                                            <Typography variant="h6" style={{marginTop: -8}}>Inherited security policy details</Typography>
                                                             <Grid container spacing={8} style={{marginTop: 8}}>
                                                                 <Grid item xs={2}><b>Collection:</b></Grid>
                                                                 <Grid item xs={5}>UQ:12345</Grid>
@@ -1312,10 +1306,10 @@ class Admin extends PureComponent {
                                                                     component={SelectField}
                                                                     name="overrideSecurity"
                                                                     value={this.props.formValues.get('overrideSecurity')}
-                                                                    label={'Policy to apply to override this PID`s inherited security'}
+                                                                    label="Policy to apply to override this PID`s inherited security"
                                                                     required
                                                                     validation={[validation.required]}>
-                                                                    <MenuItem value={''} disabled>Select a security
+                                                                    <MenuItem value="" disabled>Select a security
                                                                         policy
                                                                         to apply</MenuItem>
                                                                     {communitySecurity.map((item, index) => {
@@ -1330,7 +1324,7 @@ class Admin extends PureComponent {
                                                                     padding: 24,
                                                                     backgroundColor: 'rgba(0,0,0,0.05)'
                                                                 }}>
-                                                                    <Typography variant={'h6'} style={{marginTop: -8}}>Selected
+                                                                    <Typography variant="h6" style={{marginTop: -8}}>Selected
                                                                         record level security policy
                                                                         details</Typography>
                                                                     <Grid container spacing={8} style={{marginTop: 8}}>
