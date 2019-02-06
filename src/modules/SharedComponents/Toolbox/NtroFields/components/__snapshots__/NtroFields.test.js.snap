@@ -95,7 +95,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               </a>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research out metadata",
+          "title": "Non-traditional research output metadata",
         }
       }
       title="Non-traditional research output metadata"
@@ -561,7 +561,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
               </a>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research out metadata",
+          "title": "Non-traditional research output metadata",
         }
       }
       title="Non-traditional research output metadata"
@@ -956,7 +956,7 @@ exports[`Component NtroFields should render default view 1`] = `
               </a>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research out metadata",
+          "title": "Non-traditional research output metadata",
         }
       }
       title="Non-traditional research output metadata"
@@ -1422,7 +1422,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               </a>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research out metadata",
+          "title": "Non-traditional research output metadata",
         }
       }
       title="Non-traditional research output metadata"
