@@ -15227,7 +15227,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -15298,7 +15298,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -15399,7 +15399,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
+      key="20"
       style={
         Object {
           "padding": 8,
