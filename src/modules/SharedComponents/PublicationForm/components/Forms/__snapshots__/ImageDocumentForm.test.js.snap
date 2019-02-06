@@ -97,7 +97,6 @@ exports[`ImageDocumentForm renders  component 1`] = `
         Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -179,6 +178,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [

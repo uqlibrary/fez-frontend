@@ -17,8 +17,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default class ConferenceProceedingsForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     }
 
     constructor(props) {
@@ -123,7 +122,7 @@ export default class ConferenceProceedingsForm extends Component {
                             name="editors"
                             locale={txt.editors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.editorRequired]}
                             disabled={this.props.submitting} />
                     </StandardCard>

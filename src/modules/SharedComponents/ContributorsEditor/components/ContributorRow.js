@@ -1,6 +1,7 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {numberToWords} from 'config';
+import {ORG_TYPES_LOOKUP} from 'config/general';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -158,11 +159,22 @@ export class ContributorRow extends PureComponent {
                     )}
                 </Grid>
                 {
-                    showIdentifierLookup && !!contributor.aut_title &&
+                    showIdentifierLookup || !!contributor.aut_title &&
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
                             `${contributor.aut_org_username || contributor.aut_student_username}`,
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+                {
+                    contributor.affiliation === 'NotUQ' &&
+                    <Grid item xs={5}>
+                        {this.getListItemTypoGraphy(
+                            `${contributor.orgaff}`,
+                            `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}

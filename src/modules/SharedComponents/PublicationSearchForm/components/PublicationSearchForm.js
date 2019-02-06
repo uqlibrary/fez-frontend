@@ -33,6 +33,7 @@ export default class PublicationSearchForm extends Component {
                         <Grid item xs={12} sm>
                             <Field
                                 component={TextField}
+                                autoComplete={'search'}
                                 color={'primary'}
                                 required
                                 name="searchQuery"

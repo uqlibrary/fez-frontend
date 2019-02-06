@@ -1,5 +1,4 @@
 import {AdvancedSearchComponent} from './AdvancedSearchComponent';
-import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {

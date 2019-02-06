@@ -1,26 +1,25 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
 import {Field} from 'redux-form/immutable';
-
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-
 import {validation} from 'config';
-import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
-
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
+import {locale} from 'locale';
+import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 export default class JournalArticleForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -30,7 +29,6 @@ export default class JournalArticleForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;
-
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -76,32 +74,57 @@ export default class JournalArticleForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={PublicationSubtypeField}
-                                    name="rek_subtype"
-                                    required
-                                    disabled={this.props.submitting}
-                                    vocabId={this.props.subtypeVocabId}
-                                    className="requiredField"
-                                    locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
                         </Grid>
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Typography>{txt.authors.description}</Typography>
+                        <Grid container spacing={16}>
+                            <Grid item xs={12}>
+                                <Typography>{txt.authors.description}</Typography>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    showContributorAssignment
+                                    name="authors"
+                                    locale={txt.authors.field}
+                                    disabled={this.props.submitting}
+                                    validate={[validation.authorRequired]}
+                                    isNtro={this.props.isNtro}
+                                    required
+                                />
+                            </Grid>
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hideOriginalFormat
+                        hideAudienceSize
+                    />
+                }
+                <Grid item xs={12}>
+                    <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
+                        <Typography>{locale.components.issnForm.text}</Typography>
                         <Field
-                            component={ContributorsEditorField}
-                            showContributorAssignment
-                            className="requiredField"
-                            name="authors"
-                            locale={txt.authors.field}
+                            component={ListEditorField}
+                            remindToAdd
+                            isValid={validation.isValidIssn}
+                            name="fez_record_search_key_issn"
+                            maxCount={5}
+                            locale={locale.components.issnForm.field}
+                            searchKey={{value: 'rek_issn', order: 'rek_issn_order'}}
                             disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>

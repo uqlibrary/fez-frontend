@@ -9,13 +9,14 @@ component for a right hand panel wrapper
 
 ## Usage
 
-**./App.js**
+### ./App.js
+
 ```jsx
 import React from 'react';
 ...
 
 import {StandardRighthandCard} from 'uqlibrary-react-toolbox';
-        
+
 const App = () => (
     <StandardRighthandCard title={txt.component.title} help={txt.component.help}>
         Some content here.
@@ -27,4 +28,3 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
-

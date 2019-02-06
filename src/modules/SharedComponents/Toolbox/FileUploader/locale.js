@@ -3,6 +3,9 @@ import {OPEN_ACCESS_ID, CLOSED_ACCESS_ID} from './config';
 
 export default {
     instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
+    ntroSpecificInstructions: (
+        <span>You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613" target="_blank">More information</a>.</span>
+    ),
     accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
     validation: {
         ['notFiles']: 'Invalid files ([fileNames])',
@@ -21,7 +24,7 @@ export default {
             <ul>
                 <li>begin with a letter and are less than 45 characters long</li>
                 <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
-                <li>have only a single period which precedes the file extension: “.pdf”</li>
+                <li>have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.</li>
                 <li>are uploaded individually and not inside a folder</li>
             </ul>
         </div>

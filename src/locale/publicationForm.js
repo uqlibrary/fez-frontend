@@ -9,11 +9,18 @@ export default {
         title: 'Work type',
         inputLabelText: 'Work type',
         hintText: 'Select a Work type from the dropdown list',
-        // help: {
-        //     title: 'Publication type',
-        //     text: 'Help about publication types, eg journal article, book, conference paper etc',
-        //     buttonLabel: 'OK'
-        // }
+        help: {
+            title: 'Non-traditional research output types',
+            text: (
+                <p>For more information about each type, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts">here</a></p>
+            ),
+            buttonLabel: 'OK'
+        }
+    },
+    publicationSubtype: {
+        title: 'Publication subtype',
+        inputLabelText: 'Publication subtype',
+        hintText: 'Select a publication subtype from the dropdown list',
     },
     generic: {
         information: {
@@ -132,6 +139,14 @@ export default {
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
+                },
+                extent: {
+                    label: 'Total pages',
+                    placeholder: ''
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 }
             }
         },
@@ -149,6 +164,14 @@ export default {
                 notes: 'Notes (not publicly viewable)',
                 url: 'Link (URL)'
             }
+        },
+        ntro: {
+            title: 'NTRO metadata',
+            // help: {
+            //     title: 'Non-traditional Research Output details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // }
         }
     },
     bookChapter: {
@@ -254,6 +277,10 @@ export default {
                     label: 'Publisher',
                     placeholder: 'Type the name of the publisher'
                 },
+                reportNumber: {
+                    label: 'Report number',
+                    placeholder: 'Type the report number'
+                },
                 date: {
                     title: 'Date published',
                     day: 'Day',
@@ -267,6 +294,10 @@ export default {
                 totalPages: {
                     label: 'Total pages',
                     placeholder: 'Type total number of pages'
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 }
             }
         },
@@ -513,7 +544,7 @@ export default {
             fieldLabels: {
                 doi: {
                     label: 'DOI',
-                    placeholder: ''
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 },
                 totalPages: {
                     label: 'Total pages',
@@ -575,11 +606,6 @@ export default {
     creativeWork: {
         information: {
             title: 'Creative work information',
-            // help: {
-            //     title: 'Creative work information',
-            //     text: 'some help',
-            //     buttonLabel: 'OK'
-            // },
             fieldLabels: {
                 articleTitle: {
                     label: 'Title',
@@ -587,22 +613,38 @@ export default {
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'City, country'
+                    placeholder: 'Enter place of publication, location or venue'
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: ''
+                    placeholder: 'Enter the name of the publisher or producer'
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
                 },
                 date: {
-                    title: 'Publication date',
+                    title: 'Publication/Start date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                enddate: {
+                    title: 'End date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                startdate: {
+                    title: 'Publication start date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
                 },
                 abstract: {
-                    label: 'Abstract',
+                    label: 'Abstract/Description',
                     placeholder: 'Provide an abstract or summary of the work.'
-                }
+                },
             }
         },
         authors: txt.components.authors,
@@ -620,7 +662,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter URL for this work.',
+                    placeholder: 'Enter a valid URL to the work, or information about this work.',
                 }
             }
         },
@@ -757,18 +799,24 @@ export default {
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'Type the geographical location for the publisher.'
+                    placeholder: 'Enter the geographical location for the client, builder or curator of the work.'
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Type the name of the publisher.'
+                    placeholder: 'Enter the name of the client, builder or curator of the work.'
                 },
                 location: {
                     label: 'Location',
                     placeholder: 'Type the geographical location for the design itself.'
                 },
                 date: {
-                    title: 'Publication date',
+                    title: 'Publication/Start date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                endDate: {
+                    title: 'End date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year'
@@ -1043,6 +1091,7 @@ export default {
             }
         }
     },
+
     fileUpload: {
         title: 'Upload files',
         // help: {

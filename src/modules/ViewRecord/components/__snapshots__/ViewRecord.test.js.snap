@@ -38,6 +38,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
       publication={Object {}}
     />
     <WithStyles(AdditionalInformation)
+      isNtro={false}
       publication={Object {}}
     />
     <WithStyles(GrantInformation)
@@ -1683,6 +1684,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
       }
     />
     <WithStyles(AdditionalInformation)
+      isNtro={false}
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -4876,6 +4878,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
       }
     />
     <WithStyles(AdditionalInformation)
+      isNtro={false}
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,

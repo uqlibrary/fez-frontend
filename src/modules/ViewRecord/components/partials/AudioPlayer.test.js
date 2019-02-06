@@ -1,4 +1,3 @@
-import React from 'react';
 import {journalArticle} from 'mock/data/testing/records';
 import AudioPlayer from './AudioPlayer';
 

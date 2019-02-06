@@ -259,6 +259,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
                 }
               }
               aria-label="Enter your search query to search eSpace and then press Enter"
+              autoComplete="search"
               error={null}
               fullWidth={true}
               label={false}

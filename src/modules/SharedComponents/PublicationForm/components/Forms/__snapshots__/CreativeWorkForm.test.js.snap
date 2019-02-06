@@ -39,6 +39,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
+          sm={4}
           xs={12}
         >
           <Field
@@ -47,13 +48,13 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-            placeholder="City, country"
+            placeholder="Enter place of publication, location or venue"
             type="text"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
+          sm={4}
           xs={12}
         >
           <Field
@@ -62,8 +63,28 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
-            placeholder=""
+            placeholder="Enter the name of the publisher or producer"
             type="text"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="DOI"
+            name="fez_record_search_key_doi.rek_doi"
+            placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -76,8 +97,9 @@ exports[`CreativeWorkForm renders  component 1`] = `
             className="requiredHintField"
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication date"
+            floatingTitle="Publication/Start date"
             floatingTitleRequired={true}
+            hasError=""
             name="rek_date"
             required={true}
             validate={
@@ -89,18 +111,16 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
+          sm={6}
           xs={12}
         >
           <Field
+            allowPartial={true}
             component={[Function]}
             disabled={false}
-            fullWidth={true}
-            label="Abstract"
-            multiline={true}
-            name="rek_description"
-            placeholder="Provide an abstract or summary of the work."
-            rows={3}
-            type="text"
+            floatingTitle="End date"
+            hasError=""
+            name="fez_record_search_key_end_date.rek_end_date"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -111,13 +131,27 @@ exports[`CreativeWorkForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <p>
+            For more information about identification of author/creator/designer, click 
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>,
+          "title": "Authors/Designers name",
+        }
+      }
       title="Authors"
     >
       <WithStyles(Typography)>
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -196,6 +230,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -241,13 +276,26 @@ exports[`CreativeWorkForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Enter URL for this work."
+            placeholder="Enter a valid URL to the work, or information about this work."
             type="text"
             validate={
               Array [
                 [Function],
               ]
             }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Link description"
+            name="rek_link_description"
+            type="text"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
