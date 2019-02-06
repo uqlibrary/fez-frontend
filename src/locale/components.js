@@ -1025,7 +1025,7 @@ export default {
         ntroFields: {
             metadata: {
                 help: {
-                    title: 'Non-traditional research out metadata',
+                    title: 'Non-traditional research output metadata',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
@@ -1319,4 +1319,3 @@ export default {
         }
     }
 };
-
