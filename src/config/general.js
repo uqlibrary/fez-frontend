@@ -485,9 +485,10 @@ export const thesisSubtypes = [
 ];
 
 export const thesisSubmissionSubtypes = [
-    'MPhil Thesis',
-    'PhD Thesis',
-    'Professional Doctorate'
+    {value: undefined, text: 'Select a thesis type'},
+    {value: 'MPhil Thesis', text: 'MPhil Thesis'},
+    {value: 'PhD Thesis', text: 'PhD Thesis'},
+    {value: 'Professional Doctorate', text: 'Professional Doctorate'}
 ];
 
 /**
