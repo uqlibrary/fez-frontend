@@ -144,9 +144,22 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
@@ -639,9 +652,22 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
