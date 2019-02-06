@@ -147,7 +147,7 @@ export default {
                 order: 0
             },
             scopus: {
-                title: (<span>Hot papers on Scopus</span>),
+                title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',

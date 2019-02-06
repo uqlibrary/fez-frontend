@@ -51,7 +51,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         key="scopus"
         label={
           <span>
-            Hot papers on Scopus
+            Trending on Scopus
           </span>
         }
         value="scopus"
