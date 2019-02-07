@@ -562,6 +562,92 @@ export default {
             }
         },
     },
+    collection: {
+        title: 'Add a missing collection',
+        information: {
+            title: 'Collection information',
+            // help: {
+            //     title: 'Thesis information',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
+            fieldLabels: {
+                documentTitle: {
+                    placeholderlabel: 'Title',
+                    placeholder: 'Thesis title'
+                },
+                orgName: {
+                    floatingLabelText: 'Institution name',
+                    hintText: ''
+                },
+                orgUnitName: {
+                    floatingLabelText: 'Enrolling unit',
+                    hintText: 'Enrolling unit, eg. School of Business'
+                },
+                date: {
+                    title: 'Publication date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year'
+                },
+                thesisType: {
+                    label: 'Thesis type'
+                },
+                author: {
+                    label: 'Author name',
+                    placeholder: ''
+                }
+            }
+        },
+        supervisors: {
+            ...txt.components.supervisors
+        },
+        fieldOfResearch: {
+            title: 'Field of research',
+            // help: {
+            //     title: 'Field of research help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
+            description: 'Select up to 3 Field of Research (FoR) codes'
+        },
+        keywords: {
+            title: 'Keywords',
+            // help: {
+            //     title: 'Optional information help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
+            description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.'
+        },
+        optional: {
+            title: 'Optional information',
+            // help: {
+            //     title: 'Optional information help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
+            fieldLabels: {
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
+                },
+                totalPages: {
+                    label: 'Total pages',
+                    placeholder: ''
+                },
+                abstract: {
+                    label: 'Abstract',
+                    placeholder: 'Provide an abstract or summary of the work'
+                },
+                notes: {
+                    title: 'Additional notes',
+                    label: 'Notes (not publicly viewable)',
+                    placeholder: 'Provide any additional information',
+                }
+            }
+        },
+    },
     preprint: {
         information: {
             title: 'Preprint information',

@@ -42,6 +42,9 @@ export default {
         },
         help: {
             primaryText: 'Help'
+        },
+        collectionForm: {
+            primaryText: 'Add a missing collection'
         }
     },
     footer: {

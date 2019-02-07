@@ -31,6 +31,7 @@ export const pathConfig = {
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
+    adminCollection: '/admin/collection',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
@@ -90,7 +91,8 @@ export const pathConfig = {
     },
     admin: {
         masquerade: '/admin/masquerade',
-        legacyEspace: `${fullPath}/my_upo_tools.php`
+        legacyEspace: `${fullPath}/my_upo_tools.php`,
+        collectionForm: '/admin/collection'
     },
     authorIdentifiers: {
         orcid: {
@@ -112,7 +114,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
+    '/admin/masquerade', 'admin/collection', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
 // TODO: will we even have roles?
 export const roles = {
@@ -163,7 +165,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 {
                     path: pathConfig.hdrSubmission,
                     render: isHdrStudent
-                        ? () => components.ThesisSubmission({isHdrThesis: true})
+                        ? () => components.CollectionForm({isHdrThesis: true})
                         : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
                     pageTitle: formLocale.thesisSubmission.hdrTitle
                 },
@@ -293,6 +295,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.masquerade.title
+            },
+            {
+                path: pathConfig.admin.collectionForm,
+                component: components.CollectionForm,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: 'Add a collection'
             }
         ] : []),
         ...publicPages,
@@ -347,7 +356,7 @@ export const getMenuConfig = (account, disabled) => {
                     divider: true,
                     path: '/234234234242'
                 }] : []),
-            ...publicPages
+            ...publicPages,
         ];
     }
 
@@ -393,6 +402,10 @@ export const getMenuConfig = (account, disabled) => {
             }
         ] : []),
         ...(account && account.canMasquerade ? [
+            {
+                linkTo: pathConfig.admin.collectionForm,
+                ...locale.menu.collectionForm,
+            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
