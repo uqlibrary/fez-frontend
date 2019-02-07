@@ -1732,10 +1732,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 21
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 22
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 22
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 23
