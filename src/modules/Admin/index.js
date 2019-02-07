@@ -1,1 +1,1 @@
-export {default as CollectionForm} from './containers/CollectionForm';
+export {default as CollectionForm} from './CollectionForm/containers/CollectionForm';
