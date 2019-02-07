@@ -21769,63 +21769,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Language"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            Language
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            component="span"
-            variant="body2"
-          >
-            <ul
-              className="list"
-              key="rek_language"
-            >
-              <li
-                key="rek_language-0"
-              >
-                eng
-              </li>
-            </ul>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="23"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -26496,63 +26440,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Language"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            Language
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            component="span"
-            variant="body2"
-          >
-            <ul
-              className="list"
-              key="rek_language"
-            >
-              <li
-                key="rek_language-0"
-              >
-                eng
-              </li>
-            </ul>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="23"
+      key="22"
       style={
         Object {
           "padding": 8,
