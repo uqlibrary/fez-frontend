@@ -49,7 +49,13 @@ exports[`CreativeWorkForm renders  component 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             placeholder="Enter place of publication, location or venue"
+            required={true}
             type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -64,7 +70,13 @@ exports[`CreativeWorkForm renders  component 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             placeholder="Enter the name of the publisher or producer"
+            required={true}
             type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
