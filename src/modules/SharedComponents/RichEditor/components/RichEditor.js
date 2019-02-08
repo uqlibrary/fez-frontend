@@ -92,15 +92,21 @@ export default class RichEditor extends PureComponent {
                 <div className={this.props.className} />
                 {
                     this.props.meta && this.props.meta.error &&
-                        <Typography color="error" variant="caption">
+                        <Typography color="error" variant="caption" component={'span'} style={{display: 'inline-block'}}>
                             {
                                 error || this.props.meta.error
+                            }
+                            {
+                                this.props.maxValue &&
+                                <span>&nbsp;-&nbsp;</span>
                             }
                         </Typography>
                 }
                 {
-                    !this.props.meta || (this.props.meta && !this.props.meta.error) && this.props.maxValue &&
-                    <Typography variant="caption">{inputLength > -1 && inputLength} of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}</Typography>
+                    this.props.maxValue &&
+                    <Typography component={'span'} style={{display: 'inline-block'}} variant="caption" color={this.props.meta && this.props.meta.error && 'error'}>
+                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue} {this.props.instructions && ' - ' + this.props.instructions}
+                    </Typography>
                 }
             </React.Fragment>
         );
