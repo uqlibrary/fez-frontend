@@ -12,11 +12,11 @@ const PageRangeCitationView = ({publication, searchKey, className, prefix, suffi
 
     return (
         <span className={`${className}${!startPage && !endPage ? ' empty' : ''}`}>
-            {(startPage || endPage) ? prefix : ''}
+            {(startPage || endPage) ? prefix : ' '}
             {startPage}
             {(startPage && endPage) && '-'}
             {endPage}
-            {(startPage || endPage) ? suffix : ''}
+            {(startPage || endPage) ? suffix : ' '}
         </span>
     );
 };

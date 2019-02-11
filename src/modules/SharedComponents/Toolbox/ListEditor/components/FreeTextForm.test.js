@@ -13,6 +13,7 @@ function setup(testProps, isShallow = true) {
         classes: {
             remindToAdd: ''
         },
+        normalize: value => value,
         ...testProps
     };
     return getElement(FreeTextForm, props, isShallow);

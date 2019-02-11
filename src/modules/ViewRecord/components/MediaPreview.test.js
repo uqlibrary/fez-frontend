@@ -1,4 +1,3 @@
-import {journalArticle} from 'mock/data/testing/records';
 import MediaPreview from "./MediaPreview";
 
 function setup(testProps, isShallow = true){

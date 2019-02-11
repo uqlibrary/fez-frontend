@@ -147,7 +147,7 @@ export default {
                 order: 0
             },
             scopus: {
-                title: (<span>Hot papers on Scopus</span>),
+                title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
@@ -393,9 +393,9 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISBN value',
-                        inputFieldHint: 'Type ISBN value',
+                        inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -438,9 +438,9 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISSN value',
-                        inputFieldHint: 'Type ISSN value',
+                        inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -471,15 +471,107 @@ export default {
                 }
             }
         },
+        ismnForm: {
+            title: 'ISMN',
+            text: 'You can add up to five ISMN values',
+            // help: {
+            //     title: 'ISMN value',
+            //     text: 'Acceptable ISMN formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISMN value',
+                        inputFieldHint: 'Enter ISMN, e.g. 9790720208015',
+                        addButtonLabel: <span>Add&nbsp;ISMN</span>,
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISMN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        isrcForm: {
+            title: 'ISRC',
+            text: 'You can add up to five ISRC values',
+            // help: {
+            //     title: 'ISRC value',
+            //     text: 'Acceptable ISRC formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISRC value',
+                        inputFieldHint: 'Enter ISRC, e.g. US6R21320619',
+                        addButtonLabel: <span>Add&nbsp;ISRC</span>,
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISRC',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Adding contributors',
-            //     text: 'Help text...',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'Authors/Designers name',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
+                ),
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {
@@ -661,11 +753,13 @@ export default {
         designers: {
             title: 'Designer name',
             description: 'Please provide a list of designers and then select your name from the list.',
-            // help: {
-            //     title: 'Designers',
-            //     text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'Designers',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
+                ),
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {
@@ -962,6 +1056,20 @@ export default {
         newsFeed: {
             title: 'Latest news'
         },
+        ntroFields: {
+            metadata: {
+                help: {
+                    title: 'Non-traditional research output metadata',
+                    text: (
+                        <React.Fragment>
+                            <h3>Quality indicators</h3>
+                            <p>For more information about each quality indicator option, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'OK'
+                }
+            }
+        },
         export: {
             label: 'Export results',
             format: [
@@ -1245,4 +1353,3 @@ export default {
         }
     }
 };
-

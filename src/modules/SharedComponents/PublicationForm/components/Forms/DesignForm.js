@@ -7,6 +7,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {default as formLocale} from 'locale/publicationForm';
@@ -16,7 +17,9 @@ import Grid from '@material-ui/core/Grid';
 export default class DesignForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        subtype: PropTypes.string,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool
     };
 
     constructor(props) {
@@ -45,7 +48,7 @@ export default class DesignForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={12}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -59,12 +62,10 @@ export default class DesignForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    name="rek_description"
+                                    name="fez_record_search_key_location[0].rek_location"
                                     type="text"
                                     fullWidth
-                                    rows={1}
-                                    multiline
-                                    {...txt.information.fieldLabels.projectDescription}
+                                    {...txt.information.fieldLabels.location}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -74,6 +75,8 @@ export default class DesignForm extends Component {
                                     name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     fullWidth
+                                    required
+                                    validate={[validation.required]}
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>
@@ -84,17 +87,9 @@ export default class DesignForm extends Component {
                                     name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                     type="text"
                                     fullWidth
+                                    required
+                                    validate={[validation.required]}
                                     {...txt.information.fieldLabels.placeOfPublication}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_location[0].rek_location"
-                                    type="text"
-                                    fullWidth
-                                    {...txt.information.fieldLabels.location}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -117,13 +112,29 @@ export default class DesignForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                            validate={[validation.authorRequired]}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideAudienceSize
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

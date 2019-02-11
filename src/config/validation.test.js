@@ -204,3 +204,32 @@ describe('getErrorAlertProps ', () => {
     });
 });
 
+
+describe('checkDigit ', () => {
+    it('should check checksum digit of ISMN values correctly', () => {
+        const testCases = [
+            '9790123456785',
+            '979-0-1234-5678-5',
+            '979-0-123-45678-5',
+            'M-2306-7118-7',
+        ];
+
+        testCases.forEach(testCase => {
+            expect(validation.checkDigit(testCase)).toBeTruthy();
+        });
+    });
+
+    it('should check checksum digit of ISMN values incorrectly', () => {
+        const testCases = [
+            'ISMN 979-0-1234-5678-5',
+            'THIS IS NOT A VALID ISMN',
+            '12345',
+            12345,
+        ];
+
+        testCases.forEach(testCase => {
+            expect(validation.checkDigit(testCase)).toBeFalsy();
+        });
+    });
+});
+

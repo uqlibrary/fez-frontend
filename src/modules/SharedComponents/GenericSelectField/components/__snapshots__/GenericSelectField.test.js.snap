@@ -22,6 +22,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
           "selected": undefined,
         }
       }
+      disabled={true}
       key="1"
       style={
         Object {
@@ -39,6 +40,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
           "selected": undefined,
         }
       }
+      disabled={true}
       key="2"
       style={
         Object {
@@ -56,6 +58,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
           "selected": undefined,
         }
       }
+      disabled={true}
       key="3"
       style={
         Object {
@@ -108,6 +111,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
           "selected": undefined,
         }
       }
+      disabled={true}
       key="1"
       style={
         Object {

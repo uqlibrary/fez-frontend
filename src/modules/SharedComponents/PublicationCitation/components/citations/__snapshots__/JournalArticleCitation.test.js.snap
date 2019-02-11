@@ -1518,7 +1518,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_display_type": 179,
               "rek_display_type_lookup": "Journal Article",
               "rek_file_downloads": 0,
-              "rek_formatted_abstract": null,
+              "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
               "rek_formatted_title": null,
               "rek_genre": "Journal Article",
               "rek_genre_type": "Article (original research)",
@@ -2586,7 +2586,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_display_type": 179,
                   "rek_display_type_lookup": "Journal Article",
                   "rek_file_downloads": 0,
-                  "rek_formatted_abstract": null,
+                  "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
                   "rek_formatted_title": null,
                   "rek_genre": "Journal Article",
                   "rek_genre_type": "Article (original research)",
@@ -3666,7 +3666,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "rek_display_type": 179,
                     "rek_display_type_lookup": "Journal Article",
                     "rek_file_downloads": 0,
-                    "rek_formatted_abstract": null,
+                    "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
                     "rek_formatted_title": null,
                     "rek_genre": "Journal Article",
                     "rek_genre_type": "Article (original research)",
@@ -5366,7 +5366,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_display_type": 179,
                   "rek_display_type_lookup": "Journal Article",
                   "rek_file_downloads": 0,
-                  "rek_formatted_abstract": null,
+                  "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
                   "rek_formatted_title": null,
                   "rek_genre": "Journal Article",
                   "rek_genre_type": "Article (original research)",
@@ -6448,7 +6448,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       "rek_display_type": 179,
                       "rek_display_type_lookup": "Journal Article",
                       "rek_file_downloads": 0,
-                      "rek_formatted_abstract": null,
+                      "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
                       "rek_formatted_title": null,
                       "rek_genre": "Journal Article",
                       "rek_genre_type": "Article (original research)",
@@ -7527,7 +7527,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       "rek_display_type": 179,
                       "rek_display_type_lookup": "Journal Article",
                       "rek_file_downloads": 0,
-                      "rek_formatted_abstract": null,
+                      "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
                       "rek_formatted_title": null,
                       "rek_genre": "Journal Article",
                       "rek_genre_type": "Article (original research)",
@@ -9500,7 +9500,10 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
             >
               <span
                 className="citationPageRange empty"
-              />
+              >
+                 
+                 
+              </span>
             </PageRangeCitationView>
             <span>
               . 

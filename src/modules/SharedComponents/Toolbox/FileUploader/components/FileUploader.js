@@ -23,7 +23,8 @@ export class FileUploader extends PureComponent {
         requireOpenAccessStatus: PropTypes.bool,
         clearFileUpload: PropTypes.func,
         disabled: PropTypes.bool,
-        defaultQuickTemplateId: PropTypes.number
+        defaultQuickTemplateId: PropTypes.number,
+        isNtro: PropTypes.bool
     };
 
     static defaultProps = {
@@ -34,7 +35,8 @@ export class FileUploader extends PureComponent {
             fileSizeUnit: config.SIZE_UNIT_G,
             fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
         },
-        requireOpenAccessStatus: false
+        requireOpenAccessStatus: false,
+        isNtro: false
     };
 
     constructor(props) {
@@ -247,7 +249,7 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
-        const {instructions, accessTermsAndConditions} = this.props.locale;
+        const {instructions, accessTermsAndConditions, ntroSpecificInstructions} = this.props.locale;
         const {maxFileSize, fileSizeUnit, fileUploadLimit, fileNameRestrictions} = this.props.fileRestrictionsConfig;
         const {requireOpenAccessStatus, defaultQuickTemplateId, disabled} = this.props;
         const {filesInQueue, isTermsAndConditionsAccepted, errorMessage} = this.state;
@@ -280,6 +282,10 @@ export class FileUploader extends PureComponent {
         return (
             <Fragment>
                 <Typography variant="body2" gutterBottom>{instructionsDisplay}</Typography>
+                {
+                    this.props.isNtro &&
+                    <Typography variant="body2" gutterBottom>{ntroSpecificInstructions}</Typography>
+                }
                 <FileUploadDropzone
                     locale={this.props.locale}
                     maxSize={this.calculateMaxFileSize()}

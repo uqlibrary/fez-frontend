@@ -5744,6 +5744,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                   className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26"
                 >
                   <WithStyles(Grid)
+                    item={true}
                     xs={true}
                   >
                     <Grid
@@ -5853,7 +5854,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       component="div"
                       container={false}
                       direction="row"
-                      item={false}
+                      item={true}
                       justify="flex-start"
                       lg={false}
                       md={false}
@@ -5865,11 +5866,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       zeroMinWidth={false}
                     >
                       <div
-                        className="MuiGrid-grid-xs-true-29"
+                        className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                       />
                     </Grid>
                   </WithStyles(Grid)>
                   <WithStyles(Grid)
+                    item={true}
                     xs="auto"
                   >
                     <Grid
@@ -5979,7 +5981,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       component="div"
                       container={false}
                       direction="row"
-                      item={false}
+                      item={true}
                       justify="flex-start"
                       lg={false}
                       md={false}
@@ -5991,7 +5993,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       zeroMinWidth={false}
                     >
                       <div
-                        className="MuiGrid-grid-xs-auto-28"
+                        className="MuiGrid-item-2 MuiGrid-grid-xs-auto-28"
                       >
                         <img
                           alt="https://test.com/test.jpg"
@@ -6008,6 +6010,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                     </Grid>
                   </WithStyles(Grid)>
                   <WithStyles(Grid)
+                    item={true}
                     xs={true}
                   >
                     <Grid
@@ -6117,7 +6120,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       component="div"
                       container={false}
                       direction="row"
-                      item={false}
+                      item={true}
                       justify="flex-start"
                       lg={false}
                       md={false}
@@ -6129,7 +6132,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       zeroMinWidth={false}
                     >
                       <div
-                        className="MuiGrid-grid-xs-true-29"
+                        className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                       />
                     </Grid>
                   </WithStyles(Grid)>

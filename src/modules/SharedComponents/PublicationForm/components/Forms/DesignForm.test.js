@@ -16,14 +16,9 @@ describe('DesignForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 10 input fields', () => {
+    it('component with 9 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(10);
-    });
-
-    it('component with 3 required input fields', () => {
-        const wrapper = setup({});
-        expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
+        expect(wrapper.find('Field').length).toEqual(9);
     });
 
     it('component with all fields disabled', () => {
@@ -31,5 +26,10 @@ describe('DesignForm renders ', () => {
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         })
+    });
+
+    it('component with 6 input fields for NTRO', () => {
+        const wrapper = setup({isNtro: true});
+        expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(7);
     });
 });

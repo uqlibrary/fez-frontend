@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ContributorForm should render display name field and identifier field 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-    }
-  }
->
+exports[`Component ContributorForm should render NTRO fields 1`] = `
+<React.Fragment>
   <div>
     Please 
     <b>
@@ -16,44 +10,67 @@ exports[`Component ContributorForm should render display name field and identifi
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignItems="baseline"
     container={true}
-    spacing={16}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
   >
     <WithStyles(Grid)
       item={true}
-      md={5}
-      sm={12}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation=""
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={false}
+        disabled={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      md={5}
-      sm={12}
-      xs={12}
-    >
-      <Connect(WithStyles(AutoCompleteAsyncField))
-        disabled={true}
-        id="identifierField"
-        onChange={[Function]}
-      />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      md={2}
-      sm={3}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
       xs={12}
     >
       <WithStyles(Button)
@@ -67,17 +84,11 @@ exports[`Component ContributorForm should render display name field and identifi
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</div>
+</React.Fragment>
 `;
 
-exports[`Component ContributorForm should render display name field and role field 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-    }
-  }
->
+exports[`Component ContributorForm should render display name field and identifier field 1`] = `
+<React.Fragment>
   <div>
     Please 
     <b>
@@ -86,25 +97,103 @@ exports[`Component ContributorForm should render display name field and role fie
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignItems="baseline"
     container={true}
-    spacing={16}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
   >
     <WithStyles(Grid)
       item={true}
-      md={5}
-      sm={9}
+      sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ username (if known)"
+        hintText="eg. uqjsmith"
+        id="identifierField"
+        onChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="contained"
+      >
+        Add author
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</React.Fragment>
+`;
+
+exports[`Component ContributorForm should render display name field and role field 1`] = `
+<React.Fragment>
+  <div>
+    Please 
+    <b>
+      add to a list of contributors below
+    </b>
+    , in the format and order that they are published.
+  </div>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        label="Name as published"
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -123,13 +212,17 @@ exports[`Component ContributorForm should render display name field and role fie
         hintText="Role of the creator in relation to the dataset"
         if="creatorRoleField"
         onChange={[Function]}
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      md={2}
-      sm={3}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
       xs={12}
     >
       <WithStyles(Button)
@@ -143,17 +236,11 @@ exports[`Component ContributorForm should render display name field and role fie
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field only 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-    }
-  }
->
+<React.Fragment>
   <div>
     Please 
     <b>
@@ -162,32 +249,40 @@ exports[`Component ContributorForm should render display name field only 1`] = `
     , in the format and order that they are published.
   </div>
   <WithStyles(Grid)
-    alignItems="baseline"
     container={true}
-    spacing={16}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
   >
     <WithStyles(Grid)
       item={true}
-      md={10}
-      sm={9}
+      sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
+        required={false}
         value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      md={2}
-      sm={3}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
       xs={12}
     >
       <WithStyles(Button)
@@ -201,5 +296,5 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</div>
+</React.Fragment>
 `;

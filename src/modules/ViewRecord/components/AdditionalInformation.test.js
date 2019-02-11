@@ -3,14 +3,14 @@ import {AdditionalInformation} from "./AdditionalInformation";
 
 function setup(testProps, isShallow = true){
     const props = {
+        ...testProps,
         classes: {
             header: 'header',
             data: 'data',
             gridRow: 'gridRow',
             list: 'list'
         },
-        publication: testProps.publication || records.journalArticle,
-        ...testProps
+        publication: {...(testProps.publication || records.journalArticle), rek_formatted_abstract: 'This is a&nbsp;test'}
     };
     return getElement(AdditionalInformation, props, isShallow);
 }
