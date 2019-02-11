@@ -209,7 +209,7 @@ export class AdditionalInformation extends PureComponent {
     }
 
     getAbstract = (publication) => {
-        return publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ');
+        return !this.props.isNtro && publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ');
     }
 
     // TODO: display original contact email for admin users
