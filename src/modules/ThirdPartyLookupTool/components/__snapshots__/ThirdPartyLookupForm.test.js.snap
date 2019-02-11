@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component AdminLookupForm should display form in minimised view 1`] = `
+exports[`Component ThirdPartyLookupForm should display form in minimised view 1`] = `
 <StandardCard
   noHeader={true}
 >
@@ -40,7 +40,7 @@ exports[`Component AdminLookupForm should display form in minimised view 1`] = `
 </StandardCard>
 `;
 
-exports[`Component AdminLookupForm should display form without a secondary field 1`] = `
+exports[`Component ThirdPartyLookupForm should display form without a secondary field 1`] = `
 <StandardCard
   noHeader={true}
 >
@@ -109,7 +109,7 @@ exports[`Component AdminLookupForm should display form without a secondary field
 </StandardCard>
 `;
 
-exports[`Component AdminLookupForm should not submit if no primary field is entered 1`] = `
+exports[`Component ThirdPartyLookupForm should not submit if no primary field is entered 1`] = `
 <StandardCard
   noHeader={true}
 >
@@ -198,7 +198,7 @@ exports[`Component AdminLookupForm should not submit if no primary field is ente
 </StandardCard>
 `;
 
-exports[`Component AdminLookupForm should return values as expected for a valid submit button click 1`] = `
+exports[`Component ThirdPartyLookupForm should return values as expected for a valid submit button click 1`] = `
 <StandardCard
   noHeader={true}
 >
@@ -287,7 +287,7 @@ exports[`Component AdminLookupForm should return values as expected for a valid 
 </StandardCard>
 `;
 
-exports[`Component AdminLookupForm should show form with non-minimised form 1`] = `
+exports[`Component ThirdPartyLookupForm should show form with non-minimised form 1`] = `
 <StandardCard
   noHeader={true}
 >
@@ -376,7 +376,7 @@ exports[`Component AdminLookupForm should show form with non-minimised form 1`] 
 </StandardCard>
 `;
 
-exports[`Component AdminLookupForm should toggle nested items on click 1`] = `
+exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] = `
 <StandardCard
   noHeader={true}
 >
@@ -465,7 +465,7 @@ exports[`Component AdminLookupForm should toggle nested items on click 1`] = `
 </StandardCard>
 `;
 
-exports[`Component AdminLookupForm should toggle nested items on click 2`] = `
+exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
 <StandardCard
   noHeader={true}
 >

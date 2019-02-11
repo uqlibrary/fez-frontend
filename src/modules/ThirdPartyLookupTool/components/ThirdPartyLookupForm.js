@@ -12,7 +12,7 @@ import IconButton from '@material-ui/core/IconButton/IconButton';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 
-export class AdminLookupForm extends PureComponent {
+export class ThirdPartyLookupForm extends PureComponent {
     static propTypes = {
         actions: PropTypes.object.isRequired,
         localeform: PropTypes.object.isRequired,
@@ -48,8 +48,8 @@ export class AdminLookupForm extends PureComponent {
 
         this.props.sendInputsToResultComponent(primaryValue, secondaryValue);
 
-        if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadAdminLookup) {
-            this.props.actions.loadAdminLookup(lookupType, primaryValue, secondaryValue);
+        if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadThirdPartyLookup) {
+            this.props.actions.loadThirdPartyLookup(lookupType, primaryValue, secondaryValue);
         }
     };
 
@@ -62,7 +62,7 @@ export class AdminLookupForm extends PureComponent {
 
     render() {
         const txt = {
-            title: locale.components.adminLookupTools.title,
+            title: locale.components.thirdPartyLookupTools.title,
             thisForm: this.props.localeform,
         };
         const { primaryValue, secondaryValue } = this.state;
@@ -77,8 +77,8 @@ export class AdminLookupForm extends PureComponent {
                         <IconButton
                             onClick={this._toggleMinimise}
                             tooltip={!!this.state.isMinimised
-                                ? locale.components.adminLookupTools.tooltip.show + ' for ' + lookupLabel
-                                : locale.components.adminLookupTools.tooltip.hide + ' for ' + lookupLabel
+                                ? locale.components.thirdPartyLookupTools.tooltip.show + ' for ' + lookupLabel
+                                : locale.components.thirdPartyLookupTools.tooltip.hide + ' for ' + lookupLabel
                             }>
                             {
                                 !!this.state.isMinimised

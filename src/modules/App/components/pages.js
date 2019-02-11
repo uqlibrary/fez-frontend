@@ -12,7 +12,7 @@ export const ThesisSubmission = (componentProps) => (<Async load={import('module
 export const SbsSubmission = (componentProps) => (<Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />);
 export const ViewRecord = () => (<Async load={import('modules/ViewRecord/containers/ViewRecord')} />);
 export const AddDataCollection = () => (<Async load={import('modules/AddDataCollection/containers/AddDataCollection')} />);
-export const AdminLookupTool = () => (<Async load={import('modules/AdminLookupTool/containers/AdminLookupTool')} />);
+export const ThirdPartyLookupTool = () => (<Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />);
 
 // always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';

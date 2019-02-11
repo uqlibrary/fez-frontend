@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as adminLookupTool from './adminLookupTool';
+import * as thirdPartyLookupTool from './thirdPartyLookupTool';
 
 const mockLookupResult = {
     "data": [{
@@ -41,11 +41,11 @@ describe('Lookup action creators', () => {
             .reply(200, mockLookupResult);
 
         const expectedActions = [
-            actions.ADMIN_LOOKUP_TOOL_LOADING,
-            actions.ADMIN_LOOKUP_TOOL_SUCCESS
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
+            actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(adminLookupTool.loadAdminLookup('incites', 'dummyUT'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'dummyUT'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -55,11 +55,11 @@ describe('Lookup action creators', () => {
             .reply(200, {"data": [{}]});
 
         const expectedActions = [
-            actions.ADMIN_LOOKUP_TOOL_LOADING,
-            actions.ADMIN_LOOKUP_TOOL_SUCCESS
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
+            actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(adminLookupTool.loadAdminLookup('incites', 'missing UTs'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'missing UTs'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -69,11 +69,11 @@ describe('Lookup action creators', () => {
             .reply(403, {});
 
         const expectedActions = [
-            actions.ADMIN_LOOKUP_TOOL_LOADING,
-            actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED
         ];
 
-        await mockActionsStore.dispatch(adminLookupTool.loadAdminLookup('incites', 'dummyUT'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'dummyUT'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -83,11 +83,11 @@ describe('Lookup action creators', () => {
             .reply(500, {});
 
         const expectedActions = [
-            actions.ADMIN_LOOKUP_TOOL_LOADING,
-            actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED
         ];
 
-        await mockActionsStore.dispatch(adminLookupTool.loadAdminLookup('incites', 'dummyUT'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'dummyUT'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

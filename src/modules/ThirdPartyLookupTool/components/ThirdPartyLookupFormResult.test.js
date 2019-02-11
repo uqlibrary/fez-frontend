@@ -1,4 +1,4 @@
-import {AdminLookupFormResult} from './AdminLookupFormResult';
+import {ThirdPartyLookupFormResult} from './ThirdPartyLookupFormResult';
 import {locale} from 'locale';
 import PropTypes from "prop-types";
 import React from "react";
@@ -8,15 +8,15 @@ function setup(testProps, isShallow = true) {
         lookupResults: testProps.lookupResults || [{"IS_INTERNATIONAL_COLLAB":"0"}],
         primaryValue: testProps.primaryValue || "dummy UT",
         secondaryValue: testProps.secondaryValue || "123456789",
-        localeform: testProps.localeform || locale.components.adminLookupTools.forms.incites,
+        localeform: testProps.localeform || locale.components.thirdPartyLookupTools.forms.incites,
         actions: testProps.actions || {
-            clearAdminLookup: jest.fn()
+            clearThirdPartyLookup: jest.fn()
         },
     };
-    return getElement(AdminLookupFormResult, props, isShallow);
+    return getElement(ThirdPartyLookupFormResult, props, isShallow);
 }
 
-describe('Component AdminLookupFormResult', () => {
+describe('Component ThirdPartyLookupFormResult', () => {
     it('renders api data', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('Component AdminLookupFormResult', () => {
 
         const props = {
             actions: {
-                clearAdminLookup: mockCallback
+                clearThirdPartyLookup: mockCallback
             }
         };
         const wrapper = setup({...props});

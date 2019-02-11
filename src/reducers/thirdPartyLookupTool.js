@@ -6,14 +6,14 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.ADMIN_LOOKUP_TOOL_LOADING]: () => (
+    [actions.THIRD_PARTY_LOOKUP_TOOL_LOADING]: () => (
         {
             ...initialState,
             loadingResults: true,
         }
     ),
 
-    [actions.ADMIN_LOOKUP_TOOL_SUCCESS]: (state, action) => (
+    [actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS]: (state, action) => (
         {
             ...state,
             loadingResults: false,
@@ -21,7 +21,7 @@ const handlers = {
         }
     ),
 
-    [actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED]: (state, action) => (
+    [actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED]: (state, action) => (
         {
             ...state,
             loadingResults: false,
@@ -29,7 +29,7 @@ const handlers = {
         }
     ),
 
-    [actions.ADMIN_LOOKUP_TOOL_CLEAR]: () => (
+    [actions.THIRD_PARTY_LOOKUP_TOOL_CLEAR]: () => (
         {
             ...initialState,
             lookupResults: []
@@ -37,7 +37,7 @@ const handlers = {
     )
 };
 
-export default function adminLookupToolReducer(state = initialState, action) {
+export default function thirdPartyLookupToolReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

@@ -1,20 +1,20 @@
-import {AdminLookupForm} from './AdminLookupForm';
+import {ThirdPartyLookupForm} from './ThirdPartyLookupForm';
 import {locale} from 'locale';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         isMinimised: false !== testProps.isMinimised,
-        localeform: testProps.localeform || locale.components.adminLookupTools.forms.incites,
+        localeform: testProps.localeform || locale.components.thirdPartyLookupTools.forms.incites,
         sendInputsToResultComponent: testProps.sendInputsToResultComponent || jest.fn(),
         actions: testProps.actions || {
-            loadAdminLookup: jest.fn()
+            loadThirdParty: jest.fn()
         }
     };
-    return getElement(AdminLookupForm, props, isShallow);
+    return getElement(ThirdPartyLookupForm, props, isShallow);
 }
 
-describe('Component AdminLookupForm', () => {
+describe('Component ThirdPartyLookupForm', () => {
 
     it('should display form in minimised view', () => {
         const props = {};

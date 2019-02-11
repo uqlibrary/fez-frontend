@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import {ADMIN_LOOKUP_API_1FIELD, ADMIN_LOOKUP_API_2FIELD} from 'repositories/routes';
+import {THIRD_PARTY_LOOKUP_API_1FIELD, THIRD_PARTY_LOOKUP_API_2FIELD} from 'repositories/routes';
 import {locale} from 'locale';
 
 /**
@@ -10,11 +10,11 @@ import {locale} from 'locale';
  * @param field2
  * @returns {*}
  */
-export function getAdminLookupApiUrl(type, field1, field2) {
+export function getThirdPartyLookupApiUrl(type, field1, field2) {
     if (typeof field2 !== 'undefined') {
-        return ADMIN_LOOKUP_API_2FIELD({type: type, field1: field1, field2: field2});
+        return THIRD_PARTY_LOOKUP_API_2FIELD({type: type, field1: field1, field2: field2});
     } else {
-        return ADMIN_LOOKUP_API_1FIELD({type: type, field1: field1});
+        return THIRD_PARTY_LOOKUP_API_1FIELD({type: type, field1: field1});
     }
 }
 
@@ -25,20 +25,20 @@ export function getAdminLookupApiUrl(type, field1, field2) {
  * @param field2
  * @returns {function(*): (*|void|Promise<T | never>)}
  */
-export function loadAdminLookup(type, field1, field2) {
+export function loadThirdPartyLookup(type, field1, field2) {
     return dispatch => {
-        dispatch({type: actions.ADMIN_LOOKUP_TOOL_LOADING});
+        dispatch({type: actions.THIRD_PARTY_LOOKUP_TOOL_LOADING});
 
-        return get(getAdminLookupApiUrl(type, field1, field2))
+        return get(getThirdPartyLookupApiUrl(type, field1, field2))
             .then(response => {
                 if (response.data.length === 0) {
                     dispatch({
-                        type: actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED,
+                        type: actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED,
                         payload: ['No Results']
                     });
                 } else {
                     dispatch({
-                        type: actions.ADMIN_LOOKUP_TOOL_SUCCESS,
+                        type: actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS,
                         payload: response.data
                     });
                 }
@@ -53,17 +53,17 @@ export function loadAdminLookup(type, field1, field2) {
                     message = [error.message];
                 }
                 dispatch({
-                    type: actions.ADMIN_LOOKUP_TOOL_LOAD_FAILED,
+                    type: actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED,
                     payload: message
                 });
             });
     };
 }
 
-export function clearAdminLookup() {
+export function clearThirdPartyLookup() {
     return dispatch => {
         dispatch({
-            type: actions.ADMIN_LOOKUP_TOOL_CLEAR
+            type: actions.THIRD_PARTY_LOOKUP_TOOL_CLEAR
         });
     };
 }

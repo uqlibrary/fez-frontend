@@ -77,9 +77,9 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    const adminLookupUrlRoot = API_URL + pathConfig.admin.lookupTools.substring('/'.length);
-    if (requestUrl.startsWith(adminLookupUrlRoot) ) {
-        // do nothing here - 403 for admin tool api lookup is handled in actions/adminLookupTool.js
+    const thirdPartyLookupUrlRoot = API_URL + pathConfig.thirdPartyTools.lookup.substring('/'.length);
+    if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
+        // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
         console.log('skipping root 403 handling for 3rd party api');
     } else if (error.response && error.response.status === 403) {
         if (!!Cookies.get(SESSION_COOKIE_NAME)) {

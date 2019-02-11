@@ -1,14 +1,14 @@
-import {AdminLookupTool} from './AdminLookupTool';
+import {ThirdPartyLookupTool} from './ThirdPartyLookupTool';
 
 function setup(testProps, isShallow = true) {
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(AdminLookupTool, props, isShallow);
+    return getElement(ThirdPartyLookupTool, props, isShallow);
 }
 
-describe('Component AdminLookupTool', () => {
+describe('Component ThirdPartyLookupTool', () => {
     it('renders incites', () => {
         const wrapper = setup({});
         wrapper.update();

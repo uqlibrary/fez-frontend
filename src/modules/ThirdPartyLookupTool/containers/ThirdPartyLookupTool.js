@@ -3,11 +3,11 @@ import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 
-import AdminLookupTool from '../components/AdminLookupTool';
+import ThirdPartyLookupTool from '../components/ThirdPartyLookupTool';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('adminLookupToolReducer'),
+        ...state.get('thirdPartyLookupToolReducer'),
     };
 };
 
@@ -17,7 +17,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let AdminLookupContainer = connect(mapStateToProps, mapDispatchToProps)(AdminLookupTool);
-AdminLookupContainer = withRouter(AdminLookupContainer);
+let ThirdPartyLookupContainer = connect(mapStateToProps, mapDispatchToProps)(ThirdPartyLookupTool);
+ThirdPartyLookupContainer = withRouter(ThirdPartyLookupContainer);
 
-export default AdminLookupContainer;
+export default ThirdPartyLookupContainer;

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component AdminLookupTool renders incites 1`] = `
+exports[`Component ThirdPartyLookupTool renders incites 1`] = `
 <StandardPage
-  title="Admin Lookup Tools"
+  title="Third Party Lookup Tools"
 >
   <React.Fragment>
-    <AdminLookupForm
+    <ThirdPartyLookupForm
       isMinimised={false}
       localeform={
         Object {

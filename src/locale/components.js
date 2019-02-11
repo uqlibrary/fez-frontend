@@ -273,8 +273,8 @@ export default {
                 }
             }
         },
-        adminLookupTools: {
-            title: 'Admin Lookup Tools',
+        thirdPartyLookupTools: {
+            title: 'Third Party Lookup Tools',
             forms: {
                 incites: {
                     lookupType: 'incites', // this value should match the 'type' in the path used in api

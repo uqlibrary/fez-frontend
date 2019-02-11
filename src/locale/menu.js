@@ -37,7 +37,7 @@ export default {
             primaryText: 'Contact',
             secondaryText: ''
         },
-        adminLookupTools: {
+        thirdPartyLookupTools: {
             primaryText: 'Lookup Tools'
         },
         legacyEspace: {

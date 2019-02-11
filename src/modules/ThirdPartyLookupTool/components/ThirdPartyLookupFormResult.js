@@ -7,7 +7,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid/Grid';
 import Button from '@material-ui/core/Button/Button';
 
-export class AdminLookupFormResult extends PureComponent {
+export class ThirdPartyLookupFormResult extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
         lookupResults: PropTypes.array,
@@ -21,14 +21,14 @@ export class AdminLookupFormResult extends PureComponent {
     };
 
     _handleClear = () => {
-        if (this.props.actions && this.props.actions.clearAdminLookup) {
-            this.props.actions.clearAdminLookup();
+        if (this.props.actions && this.props.actions.clearThirdPartyLookup) {
+            this.props.actions.clearThirdPartyLookup();
         }
     };
 
     render() {
         const txt = {
-            tools: locale.components.adminLookupTools,
+            tools: locale.components.thirdPartyLookupTools,
             thisForm: this.props.localeform,
         };
         return (

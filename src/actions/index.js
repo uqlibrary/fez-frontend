@@ -11,4 +11,4 @@ export * from './fixRecord';
 export * from './viewRecord';
 export * from './controlledVocabularies';
 export * from './newsFeed';
-export * from './adminLookupTool';
+export * from './thirdPartyLookupTool';
