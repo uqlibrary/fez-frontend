@@ -64,7 +64,7 @@ export class NtroDetails extends PureComponent {
                                         heading={`${locale.viewRecord.headings.NTRO.significance}`}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
                                         data={item.rek_significance === general.SIGNIFICANCE_MINOR && 'Minor'
-                                            || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major' || 'Not set'}
+                                        || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major' || 'Not set'}
                                     />
                                 );
                             }
@@ -91,11 +91,17 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* NTRO Abstract */}
                     {
-                        publication.rek_description && publication.rek_description.length > 0 &&
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.ntroAbstract}
-                            data={ReactHtmlParser(publication.rek_description)}
-                        />
+                        publication.rek_formatted_abstract ?
+                            <this.ViewNtroRow
+                                className={this.props.classes.richTextParagraphFix}
+                                heading={locale.viewRecord.headings.NTRO.ntroAbstract}
+                                data={ReactHtmlParser(publication.rek_formatted_abstract)}
+                            />
+                            :
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.ntroAbstract}
+                                data={publication.rek_description}
+                            />
                     }
                     {/* ISMN */}
                     {
