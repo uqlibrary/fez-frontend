@@ -273,6 +273,40 @@ export default {
                 }
             }
         },
+        thirdPartyLookupTools: {
+            title: 'Third Party Lookup Tools',
+            forms: {
+                incites: {
+                    lookupType: 'incites', // this value should match the 'type' in the path used in api
+                    lookupLabel: 'Incites',
+                    tip: 'View raw output we receive from Incites via their API',
+                    primaryField: {
+                        heading: 'UTs',
+                        fromAria: '',
+                        tip: '',
+                        inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                    },
+                    secondaryField: {
+                        heading: 'API Key',
+                        fromAria: '',
+                        tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
+                        inputPlaceholder: 'Enter API key',
+                        reportInOutput: false, // determines if secondaryField will apear in the results page
+                    },
+                    bottomTip: '',
+                    submitButtonLabel: 'Submit to Incites',
+                },
+            },
+            tooltip: {
+                show: 'Show form',
+                hide: 'Hide form'
+            },
+            resultsLabel: 'Results',
+            noResultsFound: {
+                text: 'No results found'
+            },
+            clearButtonLabel: 'New Search'
+        },
         typeOfDataForm: {
             field: {
                 form: {

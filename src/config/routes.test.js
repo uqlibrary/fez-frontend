@@ -11,7 +11,7 @@ describe('Routes method', () => {
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(12);
+        expect(testRoutes.length).toEqual(13);
     });
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
@@ -21,7 +21,7 @@ describe('Routes method', () => {
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
-        expect(testRoutes.length).toEqual(15);
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should return a list of routes for anon user', () => {
@@ -31,12 +31,12 @@ describe('Routes method', () => {
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
-        expect(testRoutes.length).toEqual(20);
+        expect(testRoutes.length).toEqual(21);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqstaff});
-        expect(testRoutes.length).toEqual(21);
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -46,7 +46,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(20);
+        expect(testRoutes.length).toEqual(21);
     });
 
     it('should render auth required page', () => {
@@ -98,7 +98,7 @@ describe('Routes method', () => {
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
         const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
-        expect(testMenuItems.length).toEqual(12);
+        expect(testMenuItems.length).toEqual(13);
     });
 });
 
