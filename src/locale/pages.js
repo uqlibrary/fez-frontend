@@ -445,6 +445,9 @@ export default {
                 message: (message) => message
             },
         },
+        collection: {
+            title: 'Add a missing collection'
+        },
         masquerade: {
             title: 'Masquerade',
             help: {

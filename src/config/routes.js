@@ -301,7 +301,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 component: components.CollectionForm,
                 exact: true,
                 access: [roles.admin],
-                pageTitle: 'Add a collection'
+                pageTitle: locale.pages.collection.title
             }
         ] : []),
         ...publicPages,
