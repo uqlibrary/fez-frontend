@@ -37,6 +37,9 @@ export default {
             primaryText: 'Contact',
             secondaryText: ''
         },
+        thirdPartyLookupTools: {
+            primaryText: 'Lookup Tools'
+        },
         legacyEspace: {
             primaryText: 'Switch to old interface'
         },

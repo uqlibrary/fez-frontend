@@ -148,6 +148,13 @@ export const NEWS_LOADING = 'NEWS_LOADING';
 export const NEWS_LOADED = 'NEWS_LOADED';
 export const NEWS_LOAD_FAILED = 'NEWS_LOAD_FAILED';
 
+// Lookup Tools
+export const THIRD_PARTY_LOOKUP_TOOL_CLEAR = 'THIRD_PARTY_LOOKUP_TOOL_CLEAR';
+export const THIRD_PARTY_LOOKUP_TOOL_LOADING = 'THIRD_PARTY_LOOKUP_TOOL_LOADING';
+export const THIRD_PARTY_LOOKUP_TOOL_SUCCESS = 'THIRD_PARTY_LOOKUP_TOOL_SUCCESS';
+export const THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED = 'THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED';
+
+
 // List of all actions loading publications - for middleware
 export const loadPublicationsListActions = new RegExp(`^(\
 ${LATEST_PUBLICATIONS_LOADED}|\
