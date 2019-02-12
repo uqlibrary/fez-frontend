@@ -2201,6 +2201,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
               className="citationDate"
               date="2017-10-31T13:53:23Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -4451,6 +4452,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
               className="citationDate"
               date="2017-10-31T13:53:23Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -5432,6 +5434,7 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >

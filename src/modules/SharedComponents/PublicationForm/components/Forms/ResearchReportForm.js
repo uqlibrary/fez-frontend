@@ -17,12 +17,14 @@ import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, NTRO_SUBTYPE_RREB_INDUSTRY, NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT, NTRO_SUBTYPE_RREB_OTHER } from 'config/general';
 
 export default class ResearchReportForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         isNtro: PropTypes.bool,
-        isAuthorSelected: PropTypes.bool
+        isAuthorSelected: PropTypes.bool,
+        formValues: PropTypes.any
     };
 
     constructor(props) {
@@ -35,6 +37,12 @@ export default class ResearchReportForm extends Component {
 
     render() {
         const txt = formLocale.researchReport;
+        const pubsMandatory = this.props.formValues &&
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_PUBLIC_SECTOR) ||
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_INDUSTRY) ||
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT) ||
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_OTHER)
+        ;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -63,6 +71,8 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publicationPlace}
+                                    required={pubsMandatory}
+                                    validate={pubsMandatory ? [validation.required] : undefined}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>
@@ -73,6 +83,8 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publisher}
+                                    required={pubsMandatory}
+                                    validate={pubsMandatory ? [validation.required] : undefined}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>

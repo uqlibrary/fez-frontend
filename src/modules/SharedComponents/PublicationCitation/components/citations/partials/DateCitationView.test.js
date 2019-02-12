@@ -51,4 +51,8 @@ describe('DateCitationView test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with date in user\'s timezone', () => {
+        const wrapper = setup({ date: '2017-06-30T22:00:00Z', format: 'YYYY-MM-DD', isLocalised: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

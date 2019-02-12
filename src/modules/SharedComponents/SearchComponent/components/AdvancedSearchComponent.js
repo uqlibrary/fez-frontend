@@ -14,6 +14,7 @@ import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
+import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
 import {withStyles} from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
@@ -52,6 +53,9 @@ export class AdvancedSearchComponent extends PureComponent {
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
         isLoading: PropTypes.bool,
+        showUnpublishedFields: PropTypes.bool,
+        createdRange: PropTypes.object,
+        updatedRange: PropTypes.object,
 
         // Event handlers
         onToggleSearchMode: PropTypes.func,
@@ -62,6 +66,7 @@ export class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchReset: PropTypes.func,
         updateDocTypeValues: PropTypes.func,
         updateYearRangeFilter: PropTypes.func,
+        updateDateRange: PropTypes.func,
 
         onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
@@ -79,6 +84,9 @@ export class AdvancedSearchComponent extends PureComponent {
         },
         isMinimised: false,
         isOpenAccess: false,
+        showUnpublishedFields: false,
+        createdRange: {},
+        updatedRange: {},
 
         onToggleSearchMode: () => {},
         onToggleMinimise: () => {},
@@ -153,6 +161,10 @@ export class AdvancedSearchComponent extends PureComponent {
         }
     };
 
+    _handleDateRangeChange = (key) => (value) => {
+        this.props.updateDateRange(key, value);
+    };
+
     render() {
         const {classes} = this.props;
         const txt = locale.components.searchComponent;
@@ -160,6 +172,7 @@ export class AdvancedSearchComponent extends PureComponent {
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
             && lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
+
         return (
             <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{padding: 12}}>
                 <Grid container spacing={24}>
@@ -198,6 +211,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                                         disabledFields={alreadyAddedFields}
                                                         onSearchRowChange={this._handleAdvancedSearchRowChange}
                                                         onSearchRowDelete={this._removeAdvancedSearchRow}
+                                                        showUnpublishedFields={this.props.showUnpublishedFields}
                                                         {...item}
                                                     />
                                                 ))
@@ -220,6 +234,29 @@ export class AdvancedSearchComponent extends PureComponent {
                                                     invalid={this.props.yearFilter.invalid}
                                                 />
                                             </Grid>
+                                            {
+                                                this.props.showUnpublishedFields &&
+                                                <React.Fragment>
+                                                    <Grid item xs={12}>
+                                                        <DateRangeField
+                                                            onChange={this._handleDateRangeChange('rek_created_date')}
+                                                            disabled={this.props.isLoading}
+                                                            disableFuture
+                                                            locale={locale.components.searchComponent.advancedSearch.fieldTypes.rek_created_date}
+                                                            {...this.props.createdRange}
+                                                        />
+                                                    </Grid>
+                                                    <Grid item xs={12}>
+                                                        <DateRangeField
+                                                            onChange={this._handleDateRangeChange('rek_updated_date')}
+                                                            disabled={this.props.isLoading}
+                                                            disableFuture
+                                                            locale={locale.components.searchComponent.advancedSearch.fieldTypes.rek_updated_date}
+                                                            {...this.props.updatedRange}
+                                                        />
+                                                    </Grid>
+                                                </React.Fragment>
+                                            }
                                             <Grid item xs={12}>
                                                 <FormControlLabel
                                                     control={<Checkbox

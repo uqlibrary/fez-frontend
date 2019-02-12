@@ -483,7 +483,54 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -535,7 +582,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -580,6 +627,7 @@ exports[`Additional Information Component  should render component with audio do
               className="citationDate"
               date="2007-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -588,7 +636,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -633,6 +681,7 @@ exports[`Additional Information Component  should render component with audio do
               className="citationDate"
               date="1963-10-17T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -641,7 +690,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -691,7 +740,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -738,7 +787,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -794,7 +843,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -858,7 +907,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -914,7 +963,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -980,7 +1029,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(Grid)>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -1442,7 +1491,54 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -1489,7 +1585,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -1541,7 +1637,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -1586,6 +1682,7 @@ exports[`Additional Information Component  should render component with book 1`]
               className="citationDate"
               date="2011-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -1594,7 +1691,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -1641,7 +1738,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -1707,7 +1804,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -2059,7 +2156,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -2635,7 +2732,54 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -2687,7 +2831,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -2734,7 +2878,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -2786,7 +2930,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -2831,6 +2975,7 @@ exports[`Additional Information Component  should render component with book cha
               className="citationDate"
               date="2016-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -2839,7 +2984,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -2889,7 +3034,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -2934,7 +3079,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -2990,7 +3135,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -3046,7 +3191,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -3516,7 +3661,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -3563,7 +3708,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -3610,7 +3755,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -3657,7 +3802,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -3704,7 +3849,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -3751,7 +3896,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -3798,7 +3943,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -3859,7 +4004,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(Grid)>
     </div>
     <div
-      key="24"
+      key="25"
       style={
         Object {
           "padding": 8,
@@ -5791,6 +5936,7 @@ exports[`Additional Information Component  should render component with conferen
               className="citationDate"
               date="2014-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -6260,7 +6406,54 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -6722,7 +6915,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -6774,7 +6967,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -6821,7 +7014,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -6868,7 +7061,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -6915,7 +7108,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -6971,7 +7164,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -7018,7 +7211,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -7070,7 +7263,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -7115,6 +7308,7 @@ exports[`Additional Information Component  should render component with conferen
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -7123,7 +7317,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -7168,6 +7362,7 @@ exports[`Additional Information Component  should render component with conferen
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -7176,7 +7371,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -7223,7 +7418,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="28"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -7270,7 +7465,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="29"
+      key="30"
       style={
         Object {
           "padding": 8,
@@ -7317,7 +7512,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="32"
+      key="33"
       style={
         Object {
           "padding": 8,
@@ -7373,7 +7568,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="33"
+      key="34"
       style={
         Object {
           "padding": 8,
@@ -7444,7 +7639,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="34"
+      key="35"
       style={
         Object {
           "padding": 8,
@@ -7615,7 +7810,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(Grid)>
     </div>
     <div
-      key="36"
+      key="37"
       style={
         Object {
           "padding": 8,
@@ -8233,6 +8428,53 @@ exports[`Additional Information Component  should render component with creative
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Place of publication"
         spacing={16}
       >
@@ -8269,7 +8511,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -8314,7 +8556,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -8366,7 +8608,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -8411,6 +8653,7 @@ exports[`Additional Information Component  should render component with creative
               className="citationDate"
               date="2006-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -8419,7 +8662,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -8480,7 +8723,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -10460,6 +10703,53 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Dataset description"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Dataset description
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="8"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Access conditions"
         spacing={16}
       >
@@ -10496,7 +10786,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -10558,7 +10848,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -10619,7 +10909,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -10669,7 +10959,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -10730,7 +11020,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -10801,7 +11091,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -10857,7 +11147,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -10913,7 +11203,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -10958,6 +11248,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2005-01-05 00:00:00"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -10966,7 +11257,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -11011,6 +11302,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2005-01-05 00:00:00"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11019,7 +11311,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -11064,6 +11356,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2001-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11072,7 +11365,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -11117,6 +11410,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2009-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11125,7 +11419,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -11226,7 +11520,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -11300,7 +11594,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -11356,7 +11650,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -11403,7 +11697,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="24"
+      key="25"
       style={
         Object {
           "padding": 8,
@@ -11455,7 +11749,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -11500,6 +11794,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11508,7 +11803,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="26"
+      key="27"
       style={
         Object {
           "padding": 8,
@@ -11555,7 +11850,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -12988,6 +13283,53 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Dataset description"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Dataset description
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="8"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Access conditions"
         spacing={16}
       >
@@ -13024,7 +13366,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -13088,7 +13430,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -13154,7 +13496,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -13204,7 +13546,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -13260,7 +13602,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -13316,7 +13658,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -13361,6 +13703,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2002-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -13369,7 +13712,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -13414,6 +13757,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2007-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -13422,7 +13766,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -13513,7 +13857,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -13587,7 +13931,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -13634,7 +13978,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="24"
+      key="25"
       style={
         Object {
           "padding": 8,
@@ -13686,7 +14030,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -13731,6 +14075,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -13739,7 +14084,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="26"
+      key="27"
       style={
         Object {
           "padding": 8,
@@ -13786,7 +14131,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(Grid)>
     </div>
     <div
-      key="29"
+      key="30"
       style={
         Object {
           "padding": 8,
@@ -14369,6 +14714,53 @@ exports[`Additional Information Component  should render component with design d
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Project description"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Project description
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="3"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Project name"
         spacing={16}
       >
@@ -14405,7 +14797,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -14450,6 +14842,7 @@ exports[`Additional Information Component  should render component with design d
               className="citationDate"
               date="2005-01-05 00:00:00"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -14458,7 +14851,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -14503,6 +14896,7 @@ exports[`Additional Information Component  should render component with design d
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -14511,7 +14905,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -14558,7 +14952,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -14605,7 +14999,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -14650,6 +15044,7 @@ exports[`Additional Information Component  should render component with design d
               className="citationDate"
               date="2017-10-31T13:53:23Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -14658,7 +15053,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -14714,7 +15109,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -14761,7 +15156,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -15227,7 +15622,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -15298,7 +15693,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -15399,7 +15794,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -15510,7 +15905,54 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="1"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -15555,6 +15997,7 @@ exports[`Additional Information Component  should render component with digilib 
               className="citationDate"
               date="1986-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -15563,7 +16006,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -15608,6 +16051,7 @@ exports[`Additional Information Component  should render component with digilib 
               className="citationDate"
               date="2006-07-18T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -15616,7 +16060,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -15668,7 +16112,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -16004,7 +16448,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -16065,7 +16509,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -16110,7 +16554,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -16171,7 +16615,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -16232,7 +16676,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -16288,7 +16732,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -16344,7 +16788,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -16405,7 +16849,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -16536,6 +16980,53 @@ exports[`Additional Information Component  should render component with generic 
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Keyword(s)"
         spacing={16}
       >
@@ -16656,7 +17147,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -16701,6 +17192,7 @@ exports[`Additional Information Component  should render component with generic 
               className="citationDate"
               date="2011-03-29T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -16709,7 +17201,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -16765,7 +17257,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -17288,7 +17780,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -17811,7 +18303,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -17974,7 +18466,54 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="1"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Summary/Description"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Summary/Description
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -18356,7 +18895,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -18401,6 +18940,7 @@ exports[`Additional Information Component  should render component with journal 
               className="citationDate"
               date="2005-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -18409,7 +18949,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -18456,7 +18996,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -18503,7 +19043,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -18564,7 +19104,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -18609,7 +19149,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -18656,7 +19196,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -18708,7 +19248,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -18764,7 +19304,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -18820,7 +19360,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -20067,7 +20607,54 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -21178,7 +21765,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -21234,7 +21821,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -21279,6 +21866,7 @@ exports[`Additional Information Component  should render component with journal 
               className="citationDate"
               date="2017-07-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -21287,7 +21875,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -21332,6 +21920,7 @@ exports[`Additional Information Component  should render component with journal 
               className="citationDate"
               date="2017-07-15T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -21340,7 +21929,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -21390,7 +21979,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -21435,7 +22024,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -21482,7 +22071,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -21529,7 +22118,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -21576,7 +22165,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -21623,7 +22212,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -21670,7 +22259,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -21717,7 +22306,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -21769,7 +22358,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -22458,7 +23047,54 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -22503,7 +23139,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -22548,6 +23184,7 @@ exports[`Additional Information Component  should render component with manuscri
               className="citationDate"
               date="1944-07-15T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -22556,7 +23193,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -22601,6 +23238,7 @@ exports[`Additional Information Component  should render component with manuscri
               className="citationDate"
               date="2017-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -22609,7 +23247,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -23118,7 +23756,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -23170,7 +23808,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -23217,7 +23855,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -23264,7 +23902,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -23311,7 +23949,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -23367,7 +24005,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -23414,7 +24052,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -23515,7 +24153,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -24738,7 +25376,54 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -25849,7 +26534,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -25905,7 +26590,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -25950,6 +26635,7 @@ exports[`Additional Information Component  should render component with newspape
               className="citationDate"
               date="2017-07-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -25958,7 +26644,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -26003,6 +26689,7 @@ exports[`Additional Information Component  should render component with newspape
               className="citationDate"
               date="2017-07-15T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -26011,7 +26698,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -26061,7 +26748,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -26106,7 +26793,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -26153,7 +26840,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -26200,7 +26887,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -26247,7 +26934,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -26294,7 +26981,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -26341,7 +27028,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -26388,7 +27075,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -26440,7 +27127,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(Grid)>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -26888,7 +27575,54 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -26933,6 +27667,7 @@ exports[`Additional Information Component  should render component with patent 1
               className="citationDate"
               date="2008-08-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -26941,7 +27676,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -26993,7 +27728,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -27040,7 +27775,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -27087,7 +27822,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -27143,7 +27878,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -27269,6 +28004,53 @@ exports[`Additional Information Component  should render component with preprint
     </div>
     <div
       key="1"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="2"
       style={
         Object {
           "padding": 8,
@@ -27429,7 +28211,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -27474,6 +28256,7 @@ exports[`Additional Information Component  should render component with preprint
               className="citationDate"
               date="2004-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -27482,7 +28265,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -27548,7 +28331,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -27932,7 +28715,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -27977,7 +28760,7 @@ exports[`Additional Information Component  should render component with preprint
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -29875,6 +30658,7 @@ exports[`Additional Information Component  should render component with proceedi
               className="citationDate"
               date="2012-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -29928,6 +30712,7 @@ exports[`Additional Information Component  should render component with proceedi
               className="citationDate"
               date="2012-08-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -30854,7 +31639,54 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -30901,7 +31733,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -30953,7 +31785,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -30998,6 +31830,7 @@ exports[`Additional Information Component  should render component with referenc
               className="citationDate"
               date="2001-11-29T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -31006,7 +31839,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -31335,7 +32168,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -31396,7 +32229,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -31443,7 +32276,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -31490,7 +32323,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -31537,7 +32370,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -31593,7 +32426,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -31664,7 +32497,7 @@ exports[`Additional Information Component  should render component with referenc
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -32132,7 +32965,54 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -32177,6 +33057,7 @@ exports[`Additional Information Component  should render component with research
               className="citationDate"
               date="2017-10-12T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -32185,7 +33066,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -32246,7 +33127,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -32298,7 +33179,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -32345,7 +33226,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -32392,7 +33273,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(Grid)>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -32829,7 +33710,54 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -32881,7 +33809,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -32928,7 +33856,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -32973,6 +33901,7 @@ exports[`Additional Information Component  should render component with thesis 1
               className="citationDate"
               date="2008-06-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -32981,7 +33910,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -33028,7 +33957,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -33073,7 +34002,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -33139,7 +34068,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -33195,7 +34124,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -33256,7 +34185,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -33704,7 +34633,54 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="3"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -33749,6 +34725,7 @@ exports[`Additional Information Component  should render component with video do
               className="citationDate"
               date="2002-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -33757,7 +34734,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -33809,7 +34786,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -33856,7 +34833,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -33903,7 +34880,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -33959,7 +34936,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -34006,7 +34983,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -34507,7 +35484,54 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -34559,7 +35583,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -34606,7 +35630,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -34651,7 +35675,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -34703,7 +35727,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -34750,7 +35774,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -34795,6 +35819,7 @@ exports[`Additional Information Component  should render component with working 
               className="citationDate"
               date="2006-11-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -34803,7 +35828,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -34853,7 +35878,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -34905,7 +35930,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -34952,7 +35977,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -34999,7 +36024,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -35046,7 +36071,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -35102,7 +36127,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -35163,7 +36188,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -35254,7 +36279,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(Grid)>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -35692,7 +36717,54 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="3"
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            component="span"
+            variant="body2"
+          >
+            This is a test
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -35744,7 +36816,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="4"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -35791,7 +36863,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -35836,6 +36908,7 @@ exports[`Additional Information Component  should render oa status value link in
               className="citationDate"
               date="2008-06-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -35844,7 +36917,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -35891,7 +36964,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -35938,7 +37011,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -36004,7 +37077,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -36060,7 +37133,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -36121,7 +37194,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(Grid)>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,

@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 // Max Length
 export const maxLength = max => value => value && value.replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLengthWithWhitespace = max => value => value && (value.plainText && value.plainText.length > max) || (!value.plainText && value.length > max + 7) ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLength9 = maxLength(9);
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
 export const maxLength800 = maxLength(800);

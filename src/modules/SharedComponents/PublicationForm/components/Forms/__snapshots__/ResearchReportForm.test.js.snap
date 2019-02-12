@@ -51,6 +51,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             placeholder="Type the place of publication"
+            required={false}
             type="text"
           />
         </WithStyles(Grid)>
@@ -66,6 +67,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             placeholder="Type the name of the publisher"
+            required={false}
             type="text"
           />
         </WithStyles(Grid)>
