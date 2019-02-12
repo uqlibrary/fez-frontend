@@ -558,6 +558,43 @@ export const defaultQueryParams = {
     }
 };
 
+export const ANY_UNPUBLISHED = -4;
+export const IN_CREATION = 4;
+export const IN_DRAFT = 6;
+export const IN_REVIEW = 5;
+export const RETRACTED = 7;
+export const SUBMITTED_FOR_APPROVAL = 3;
+export const UNPUBLISHED = 1;
+
+export const UNPUBLISHED_STATUS = [
+    'Any unpublished',
+    'In Creation',
+    'In Draft',
+    'In Review',
+    'Retracted',
+    'Submitted for Approval',
+    'Unpublished'
+];
+
+export const UNPUBLISHED_STATUS_MAP = {
+    'Any unpublished': ANY_UNPUBLISHED,
+    'In Creation': IN_CREATION,
+    'In Draft': IN_DRAFT,
+    'In Review': IN_REVIEW,
+    'Retracted': RETRACTED,
+    'Submitted for Approval': SUBMITTED_FOR_APPROVAL,
+    'Unpublished': UNPUBLISHED
+};
+
+export const UNPUBLISHED_STATUS_TEXT_MAP = {
+    [ANY_UNPUBLISHED]: 'Any unpublished',
+    [IN_CREATION]: 'In Creation',
+    [IN_DRAFT]: 'In Draft',
+    [IN_REVIEW]: 'In Review',
+    [RETRACTED]: 'Retracted',
+    [SUBMITTED_FOR_APPROVAL]: 'Submitted for Approval',
+    [UNPUBLISHED]: 'Unpublished'
+};
 export const DATA_COLLECTION_CREATOR_ROLES = [
     {value: 'Project lead/Principal investigator'},
     {value: 'Co-investigator'},
@@ -910,4 +947,31 @@ export const LANGUAGE = [
     {text: 'Vietnamese', value: 'vie'},
     {text: 'Waray', value: 'war'},
     {text: 'Yiddish', value: 'yid'}
+];
+
+export const unpublishedBufferActionUrls = [
+    {
+        label: 'More options',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}`
+    },
+    {
+        label: 'Update selected record - Generic',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Edit author affiliations',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Edit security for selected record',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Manage thesis assessor access',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'Delete selected record',
+        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+    }
 ];

@@ -580,6 +580,7 @@ exports[`Additional Information Component  should render component with audio do
               className="citationDate"
               date="2007-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -633,6 +634,7 @@ exports[`Additional Information Component  should render component with audio do
               className="citationDate"
               date="1963-10-17T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -1586,6 +1588,7 @@ exports[`Additional Information Component  should render component with book 1`]
               className="citationDate"
               date="2011-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -2831,6 +2834,7 @@ exports[`Additional Information Component  should render component with book cha
               className="citationDate"
               date="2016-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -5791,6 +5795,7 @@ exports[`Additional Information Component  should render component with conferen
               className="citationDate"
               date="2014-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -7115,6 +7120,7 @@ exports[`Additional Information Component  should render component with conferen
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -7168,6 +7174,7 @@ exports[`Additional Information Component  should render component with conferen
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -8411,6 +8418,7 @@ exports[`Additional Information Component  should render component with creative
               className="citationDate"
               date="2006-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -10958,6 +10966,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2005-01-05 00:00:00"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11011,6 +11020,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2005-01-05 00:00:00"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11064,6 +11074,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2001-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11117,6 +11128,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2009-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -11500,6 +11512,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -13361,6 +13374,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2002-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -13414,6 +13428,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2007-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -13731,6 +13746,7 @@ exports[`Additional Information Component  should render component with data col
               className="citationDate"
               date="2015-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -14450,6 +14466,7 @@ exports[`Additional Information Component  should render component with design d
               className="citationDate"
               date="2005-01-05 00:00:00"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -14503,6 +14520,7 @@ exports[`Additional Information Component  should render component with design d
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -14650,6 +14668,7 @@ exports[`Additional Information Component  should render component with design d
               className="citationDate"
               date="2017-10-31T13:53:23Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -15555,6 +15574,7 @@ exports[`Additional Information Component  should render component with digilib 
               className="citationDate"
               date="1986-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -15608,6 +15628,7 @@ exports[`Additional Information Component  should render component with digilib 
               className="citationDate"
               date="2006-07-18T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -16701,6 +16722,7 @@ exports[`Additional Information Component  should render component with generic 
               className="citationDate"
               date="2011-03-29T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -18401,6 +18423,7 @@ exports[`Additional Information Component  should render component with journal 
               className="citationDate"
               date="2005-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -21279,6 +21302,7 @@ exports[`Additional Information Component  should render component with journal 
               className="citationDate"
               date="2017-07-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -21332,6 +21356,7 @@ exports[`Additional Information Component  should render component with journal 
               className="citationDate"
               date="2017-07-15T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -22548,6 +22573,7 @@ exports[`Additional Information Component  should render component with manuscri
               className="citationDate"
               date="1944-07-15T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -22601,6 +22627,7 @@ exports[`Additional Information Component  should render component with manuscri
               className="citationDate"
               date="2017-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -25950,6 +25977,7 @@ exports[`Additional Information Component  should render component with newspape
               className="citationDate"
               date="2017-07-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -26003,6 +26031,7 @@ exports[`Additional Information Component  should render component with newspape
               className="citationDate"
               date="2017-07-15T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -26933,6 +26962,7 @@ exports[`Additional Information Component  should render component with patent 1
               className="citationDate"
               date="2008-08-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -27474,6 +27504,7 @@ exports[`Additional Information Component  should render component with preprint
               className="citationDate"
               date="2004-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -29875,6 +29906,7 @@ exports[`Additional Information Component  should render component with proceedi
               className="citationDate"
               date="2012-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -29928,6 +29960,7 @@ exports[`Additional Information Component  should render component with proceedi
               className="citationDate"
               date="2012-08-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -30998,6 +31031,7 @@ exports[`Additional Information Component  should render component with referenc
               className="citationDate"
               date="2001-11-29T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -32177,6 +32211,7 @@ exports[`Additional Information Component  should render component with research
               className="citationDate"
               date="2017-10-12T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -32973,6 +33008,7 @@ exports[`Additional Information Component  should render component with thesis 1
               className="citationDate"
               date="2008-06-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -33749,6 +33785,7 @@ exports[`Additional Information Component  should render component with video do
               className="citationDate"
               date="2002-01-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -34795,6 +34832,7 @@ exports[`Additional Information Component  should render component with working 
               className="citationDate"
               date="2006-11-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />
@@ -35836,6 +35874,7 @@ exports[`Additional Information Component  should render oa status value link in
               className="citationDate"
               date="2008-06-01T00:00:00Z"
               format="YYYY-MM-DD"
+              isLocalised={false}
               prefix=""
               suffix=""
             />

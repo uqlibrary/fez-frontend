@@ -2042,6 +2042,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               className="citationDate"
               date="2010-05-01T00:00:00Z"
               format="YYYY[,] MMMM D"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -4159,6 +4160,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               className="citationDate"
               date="2010-05-01T00:00:00Z"
               format="YYYY[,] MMMM D"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -5166,6 +5168,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
             <DateCitationView
               className="citationDate"
               format="YYYY[,] MMMM D"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
