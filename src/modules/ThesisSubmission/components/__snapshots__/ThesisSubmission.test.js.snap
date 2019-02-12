@@ -36,7 +36,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Return to the Graduate School website
       </WithStyles(Button)>
@@ -81,7 +81,7 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Return to the Graduate School website
       </WithStyles(Button)>
@@ -583,7 +583,7 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Return to the Graduate School website
       </WithStyles(Button)>
