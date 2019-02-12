@@ -29,12 +29,15 @@ const options = {
                 "/history.php",
                 "/adv_search.php",
                 "/list.php",
+                "/oai.php",
                 "/collection/",
                 "/community/",
                 "/flviewer/",
                 "/records/search",
                 "/documentation/",
-                "/data/"
+                "/data/",
+                "/list/",
+                "/RHDThesesByAltmetricScore"
             ],
         }
     ],
