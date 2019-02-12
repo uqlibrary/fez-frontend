@@ -107,6 +107,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
 * @returns {Object} formatted {fez_record_search_key_author} for record request
 */
 export const getRecordAuthorsSearchKey = (authors) => {
+    console.log(authors);
     if (!authors || authors.length === 0) return {};
     return {
         fez_record_search_key_author: authors.map((item, index) => (

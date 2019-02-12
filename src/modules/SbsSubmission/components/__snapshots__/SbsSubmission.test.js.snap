@@ -536,7 +536,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -550,7 +550,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           color="primary"
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Deposit your thesis
         </WithStyles(Button)>
@@ -1044,7 +1044,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -1058,7 +1058,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           color="primary"
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Deposit your thesis
         </WithStyles(Button)>
