@@ -47,7 +47,7 @@ describe('Backend routes method', () => {
                 three: 'three key'
             },
             ranges: {
-                four: {
+                'Year published': {
                     from: 2000,
                     to: 2013
                 }
@@ -58,7 +58,7 @@ describe('Backend routes method', () => {
             [`filters[facets][one]`]: 'one key',
             [`filters[facets][two]`]: 'two key',
             [`filters[facets][three]`]: 'three key',
-            ['ranges[facets][four]']: '[2000 TO 2013]'
+            ['ranges[facets][Year published]']: '[2000 TO 2013]'
         };
 
         expect(routes.getFacetsParams(testCases)).toEqual(expected);
@@ -420,4 +420,50 @@ describe('Backend routes method', () => {
         MockDate.reset();
     });
 
+    it('should correctly construct url for SEARCH_INTERNAL_RECORDS_API when rek_status key value is less than 0', () => {
+        const testCases = [
+            {
+                values: {searchMode: 'advanced', searchQueryParams: {rek_status: {value: -4}}},
+                expected: {
+                    apiUrl: 'records/search',
+                    options: {
+                        params: {
+                            export_to: '',
+                            order_by: 'desc',
+                            page: 1,
+                            per_page: 20,
+                            sort: 'score',
+                            mode: 'advanced',
+                            key: {
+                                rek_status: [1, 3, 4, 5, 6, 7]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                values: {searchMode: 'advanced', searchQueryParams: {rek_status: {value: 4}}},
+                expected: {
+                    apiUrl: 'records/search',
+                    options: {
+                        params: {
+                            export_to: '',
+                            order_by: 'desc',
+                            page: 1,
+                            per_page: 20,
+                            sort: 'score',
+                            mode: 'advanced',
+                            key: {
+                                rek_status: 4
+                            }
+                        }
+                    }
+                }
+            }
+        ];
+
+        testCases.map(item => {
+            expect(routes.SEARCH_INTERNAL_RECORDS_API({...item.values})).toEqual(item.expected);
+        });
+    });
 });

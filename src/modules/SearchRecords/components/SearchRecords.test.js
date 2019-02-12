@@ -6,6 +6,7 @@ function setup(testProps, isShallow = true) {
         publicationsList: [],
         searchLoading: false,
         exportPublicationsLoading: false,
+        isAdvancedSearch: false,
         actions: {
             exportEspacePublications: jest.fn(),
             searchEspacePublications: jest.fn()
@@ -26,6 +27,10 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render advanced search component', () => {
+        const wrapper = setup({isAdvancedSearch: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
     it('should render loading screen while loading search results', () => {
         const wrapper = setup({searchLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();

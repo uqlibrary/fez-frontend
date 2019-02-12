@@ -1,4 +1,5 @@
 import {validation, openAccessConfig} from 'config';
+import {IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL} from 'config/general';
 
 const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
@@ -17,10 +18,14 @@ export const getFacetsParams = (facets) => {
 
     if (facets.hasOwnProperty('ranges')) {
         Object.keys(facets.ranges).map(key => {
-            const {from, to} = facets.ranges[key];
-            const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
-            const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
-            facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
+            if (key === 'Year published') {
+                const {from, to} = facets.ranges[key];
+                const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
+                const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
+                facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
+            } else {
+                facetsParam[`ranges[facets][${key}]`] = facets.ranges[key];
+            }
         });
     }
 
@@ -178,6 +183,8 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         return (
             (key === 'rek_pid' && value.toLowerCase().indexOf('uq:') !== 0) && {...result, [key]: `UQ:${value}`}
             || (key === 'rek_genre_type') && {...result, [key]: value.map(item => `"${item}"`)}
+            || (key === 'rek_status' && value < 0) && {...result, [key]: [UNPUBLISHED, SUBMITTED_FOR_APPROVAL, IN_CREATION,  IN_REVIEW, IN_DRAFT, RETRACTED]}
+            || (key === 'rek_created_date' || key === 'rek_updated_date') && result
             || (key === 'all' || !!value) && {...result, [key]: value}
             || {...result, [key]: searchQueryParams[key]}
         );

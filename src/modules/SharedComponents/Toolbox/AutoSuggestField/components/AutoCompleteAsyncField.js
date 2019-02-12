@@ -60,7 +60,7 @@ export class AutoCompleteAsyncField extends Component {
         required: false,
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(`(${searchText.split(' ').join('|')})`, 'gi');
+            const regex = new RegExp(`(${searchText.split(' ').join('|').replace(/[()]/g, '')})`, 'gi');
             return regex.test(anyKey);
         },
         MenuItemComponent: ({suggestion}) => (
@@ -165,9 +165,16 @@ export class AutoCompleteAsyncField extends Component {
         }
     };
 
-    render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, allowFreeText, required, selectedValue } = this.props;
+    handleStateChange = () => (
+        this.props.allowFreeText
+            ? ({inputValue}) => {
+                inputValue !== undefined && this.props.onChange({value: inputValue});
+            }
+            : () => {}
+    );
 
+    render() {
+        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, required, selectedValue } = this.props;
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
 
         return (
@@ -178,10 +185,7 @@ export class AutoCompleteAsyncField extends Component {
                     stateReducer={this.stateReducer}
                     onChange={this.handleSelected}
                     itemToString={itemToString}
-                    onStateChange={allowFreeText
-                        ? ({inputValue}) => !!inputValue && this.props.onChange({value: inputValue})
-                        : () => {}
-                    }
+                    onStateChange={this.handleStateChange()}
                 >
                     {
                         ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {

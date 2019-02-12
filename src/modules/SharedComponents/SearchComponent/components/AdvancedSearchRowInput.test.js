@@ -54,7 +54,7 @@ describe('AdvancedSearchRowInput', () => {
                 "aria-label": undefined,
                 "autoComplete": "search",
                 "error": true,
-                "helperText": "Must be at least 10 characters",
+                "errorText": "Must be at least 10 characters",
                 "label": null,
                 "placeholder": "This is hint for text input",
                 'onChange': inputProps.onChange

@@ -2624,6 +2624,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -5370,6 +5371,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
               className="citationDate"
               date="2008-01-01T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -6446,6 +6448,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
