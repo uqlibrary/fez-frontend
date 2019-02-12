@@ -371,6 +371,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -489,6 +493,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -577,6 +585,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -831,6 +843,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_language_of_title',
                     order: 3
                 },
@@ -981,6 +997,10 @@ export default {
                     order: 4
                 },
                 {
+                    field: 'rek_description',
+                    order: 4.5
+                },
+                {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 5
                 },
@@ -1083,6 +1103,10 @@ export default {
                     order: 7
                 },
                 {
+                    field: 'rek_description',
+                    order: 7.5
+                },
+                {
                     field: 'fez_record_search_key_access_conditions',
                     order: 8
                 },
@@ -1177,6 +1201,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1245,6 +1273,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_project_name',
@@ -1357,6 +1389,10 @@ export default {
                     order: 1
                 },
                 {
+                    field: 'rek_description',
+                    order: 1.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 2
                 },
@@ -1451,6 +1487,10 @@ export default {
                     order: 1
                 },
                 {
+                    field: 'rek_description',
+                    order: 1.5
+                },
+                {
                     field: 'fez_record_search_key_keywords',
                     order: 2
                 },
@@ -1491,6 +1531,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1575,6 +1619,10 @@ export default {
                     order: 1
                 },
                 {
+                    field: 'rek_description',
+                    order: 1.5
+                },
+                {
                     field: 'fez_record_search_key_series',
                     order: 2
                 },
@@ -1655,6 +1703,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1755,6 +1807,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1827,6 +1883,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1907,6 +1967,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1983,6 +2047,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2067,6 +2135,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -2115,6 +2187,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 1
+                },
+                {
+                    field: 'rek_description',
+                    order: 1.5
                 },
                 {
                     field: 'fez_record_search_key_keywords',
@@ -2173,6 +2249,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 3
+                },
+                {
+                    field: 'rek_description',
+                    order: 3.5
                 },
                 {
                     field: 'fez_record_search_key_org_unit_name',
@@ -2235,6 +2315,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2301,6 +2385,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 3
+                },
+                {
+                    field: 'rek_description',
+                    order: 3.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2371,6 +2459,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
