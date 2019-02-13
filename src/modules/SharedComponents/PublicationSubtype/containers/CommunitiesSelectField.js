@@ -10,8 +10,8 @@ const mapStateToProps = (state, props) => {
     return {
         selectedValue: props.input.value || [],
         itemsList: translatedItemList || [],
-        itemsLoading: state.get('communitiesReducer').itemsLoading || false,
-        itemsLoadingError: state.get('communitiesReducer').itemsLoadingError || false,
+        itemsLoading: state.get('communitiesReducer') && state.get('communitiesReducer').itemsLoading || false,
+        itemsLoadingError: state.get('communitiesReducer') && state.get('communitiesReducer').itemsLoadingError || false,
         itemsLoadingHint: props.loadingHint || 'Loading..',
     };
 };

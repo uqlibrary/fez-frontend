@@ -78,7 +78,8 @@ export default {
         significance: 'Scale/Significance of work is required',
         dateRange: 'Publication start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range',
+        // Collection form validations
         community: 'You must select a community',
-        title: 'You must add a title'
+        title: 'Title is required'
     }
 };

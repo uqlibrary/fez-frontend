@@ -64,7 +64,7 @@ describe('Collection form test', () => {
     it('should render form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(6);
+        expect(wrapper.find('Field').length).toEqual(1);
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
     });
 

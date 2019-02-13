@@ -132,6 +132,7 @@ export default class CollectionForm extends Component {
                                             name="community"
                                             locale={{label: 'Member of community'}}
                                             required
+                                            multiple
                                             validate={[validation.required]}
                                         />
                                     </Grid>
