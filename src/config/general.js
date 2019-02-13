@@ -567,13 +567,13 @@ export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 
 export const UNPUBLISHED_STATUS = [
-    'Any unpublished',
-    'In Creation',
-    'In Draft',
-    'In Review',
-    'Retracted',
-    'Submitted for Approval',
-    'Unpublished'
+    {value: 'Any unpublished', text: 'Any unpublished'},
+    {value: 'In Creation', text: 'In Creation'},
+    {value: 'In Draft', text: 'In Draft'},
+    {value: 'In Review', text: 'In Review'},
+    {value: 'Retracted', text: 'Retracted'},
+    {value: 'Submitted for Approval', text: 'Submitted for Approval'},
+    {value: 'Unpublished', text: 'Unpublished'}
 ];
 
 export const UNPUBLISHED_STATUS_MAP = {
