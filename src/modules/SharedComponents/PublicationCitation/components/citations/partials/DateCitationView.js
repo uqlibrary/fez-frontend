@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-// Using moment.js to format the date - https://momentjs.com/
-const moment = require('moment');
+import moment from 'moment';
 
 export default class DateCitationView extends PureComponent {
     static propTypes = {
@@ -9,14 +8,16 @@ export default class DateCitationView extends PureComponent {
         prefix: PropTypes.string,
         suffix: PropTypes.string,
         format: PropTypes.string,
-        className: PropTypes.string
+        className: PropTypes.string,
+        isLocalised: PropTypes.bool
     };
 
     static defaultProps = {
         format: 'YYYY',
         prefix: '(',
         suffix: ').',
-        className: 'citationDate'
+        className: 'citationDate',
+        isLocalised: false
     };
 
     constructor(props) {
@@ -24,9 +25,13 @@ export default class DateCitationView extends PureComponent {
     }
 
     render() {
-        const {date, prefix, suffix, format, className} = this.props;
+        const {date, prefix, suffix, format, className, isLocalised} = this.props;
         // If there is no date, or it is invalid
         if (!date || !moment(date).isValid()) return (<span className="citationDate empty"/>);
-        return (<span className={className}>{prefix}{moment(date).format(format)}{suffix}</span>);
+        return (<span className={className}>{prefix}{
+            isLocalised
+                ? moment.utc(date).local().format(format)
+                : moment.utc(date).format(format)
+        }{suffix}</span>);
     }
 }

@@ -33,6 +33,9 @@ class SearchRecords extends PureComponent {
         canUseExport: PropTypes.bool,
         searchLoading: PropTypes.bool,
         searchLoadingError: PropTypes.bool,
+        isAdvancedSearch: PropTypes.bool,
+        isAdmin: PropTypes.bool,
+        isUnpublishedBufferPage: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -141,6 +144,12 @@ class SearchRecords extends PureComponent {
             ? locale.components.sorting.sortBy[1].value
             : providedSearchQuery.sortBy;
 
+        if (!this.props.isUnpublishedBufferPage) {
+            delete providedSearchQuery.searchQueryParams.rek_status;
+            delete providedSearchQuery.searchQueryParams.rek_created_date;
+            delete providedSearchQuery.searchQueryParams.rek_updated_date;
+        }
+
         return providedSearchQuery;
     };
 
@@ -185,7 +194,11 @@ class SearchRecords extends PureComponent {
 
     updateHistoryAndSearch = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.search}`,
+            pathname: (
+                this.props.location.pathname === routes.pathConfig.admin.unpublished
+                    ? routes.pathConfig.admin.unpublished
+                    : routes.pathConfig.records.search
+            ),
             search: param(this.state),
             state: {...this.state}
         });
@@ -236,6 +249,9 @@ class SearchRecords extends PureComponent {
                                 searchLoading={this.props.searchLoading}
                                 clearSearchQuery={this.props.actions.clearSearchQuery}
                                 updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
+                                isAdvancedSearch={this.props.isAdvancedSearch}
+                                isAdmin={this.props.isAdmin}
+                                isUnpublishedBufferPage={this.props.isUnpublishedBufferPage}
                             />
                         </StandardCard>
                     </Grid>
@@ -315,7 +331,10 @@ class SearchRecords extends PureComponent {
                                 {
                                     !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                         <div style={{marginTop: 16}}>
-                                            <PublicationsList publicationsList={this.props.publicationsList} />
+                                            <PublicationsList
+                                                showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
+                                                publicationsList={this.props.publicationsList}
+                                            />
                                         </div>
                                 }
                                 <PublicationsListPaging

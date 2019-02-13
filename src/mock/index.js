@@ -117,6 +117,9 @@ mock
         } else if (config.params.rule === 'lookup') {
             // SEARCH_KEY_LOOKUP_API
             return [200, mockData.searchKeyList[config.params.search_key]];
+        } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
+            // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
+            return [200, mockData.collections];
         } else if (config.params.id || config.params.doi || config.params.hasOwnProperty('all') || config.params.rek_title || config.params.key) {
             // SEARCH_INTERNAL_RECORDS_API
             // return [200, mockData.internalTitleSearchListNoResults];
@@ -151,6 +154,10 @@ mock
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
     .reply(200, mockData.newsFeed)
+    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: '.*'}).apiUrl)))
+    .reply(200, mockData.lookupToolIncites)
+    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_2FIELD({type: 'incites', field1: '.*', field2: '.*'}).apiUrl)))
+    .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
         if (config.url.indexOf('UQ:164935') >= 0) {

@@ -3,14 +3,15 @@ import {bindActionCreators} from 'redux';
 import SearchRecords from '../components/SearchRecords';
 import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
+import {routes} from 'config';
 
-const mapStateToProps = (state) => {
-    return {
-        ...state.get('searchRecordsReducer'),
-        ...state.get('exportPublicationsReducer'),
-        canUseExport: state.get('accountReducer') && state.get('accountReducer').account && !!state.get('accountReducer').account.hasSession
-    };
-};
+const mapStateToProps = (state, props) => ({
+    ...state.get('searchRecordsReducer'),
+    ...state.get('exportPublicationsReducer'),
+    canUseExport: true,
+    isUnpublishedBufferPage: props.location.pathname === routes.pathConfig.admin.unpublished,
+    isAdmin: !!state && !!state.get('accountReducer') && !!state.get('accountReducer').account && state.get('accountReducer').account.canMasquerade
+});
 
 function mapDispatchToProps(dispatch) {
     return {

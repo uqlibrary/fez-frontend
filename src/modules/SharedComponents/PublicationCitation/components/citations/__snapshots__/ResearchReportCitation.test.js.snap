@@ -1773,6 +1773,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
               className="citationDate"
               date="2017-10-12T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -4541,6 +4542,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
               className="citationDate"
               date="2017-10-12T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -7315,6 +7317,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
               className="citationDate"
               date="2017-10-12T00:00:00Z"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >
@@ -9248,6 +9251,7 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
             <DateCitationView
               className="citationDate"
               format="YYYY"
+              isLocalised={false}
               prefix="("
               suffix=")."
             >

@@ -1,8 +1,8 @@
 User-agent: *
-Crawl-delay: 10
 Disallow: /login.php
 Disallow: /stat_details.php
 Disallow: /stats.php
+Disallow: /oai.php
 Disallow: /history.php
 Disallow: /adv_search.php
 Disallow: /list.php
@@ -12,6 +12,8 @@ Disallow: /flviewer/
 Disallow: /records/search
 Disallow: /documentation/
 Disallow: /data/
+Disallow: /list/
+Disallow: /RHDThesesByAltmetricScore
 Allow: /data/*?*Signature=*&Key-Pair-Id=*
 
 Sitemap: https://espace.library.uq.edu.au/sitemap/sitemap-index.xml

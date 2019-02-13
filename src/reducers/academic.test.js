@@ -12,7 +12,7 @@ export const initialState = {
 
 describe('academicStatsReducer', () => {
     describe('updates store correctly when', () => {
-        it('current autor stats loading', () => {
+        it('current author stats loading', () => {
             const state = academicStatsReducer(initialState, {type: actions.AUTHOR_PUBLICATIONS_STATS_LOADING});
             expect(state).toEqual(initialState);
             expect(state.loadingPublicationsByYear).toBeTruthy();
