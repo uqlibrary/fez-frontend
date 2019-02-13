@@ -16,5 +16,6 @@ export myLatestPublicationsReducer from './myLatestPublications';
 export topCitedPublicationsReducer from './topCitedPublications';
 export newsFeedReducer from './newsFeed';
 export collectionsReducer from './searchCollections';
+export communitiesReducer from './searchCommunities';
 export thirdPartyLookupToolReducer from './thirdPartyLookupTool';
 

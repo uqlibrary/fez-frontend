@@ -6,18 +6,15 @@ import {Field} from 'redux-form/immutable';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+// import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-
 import {validation} from 'config';
 import locale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {thesisSubmissionSubtypes} from 'config/general';
+import {CommunitiesSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -30,7 +27,9 @@ export default class CollectionForm extends Component {
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
         actions: PropTypes.object,
-        isSessionValid: PropTypes.bool
+        isSessionValid: PropTypes.bool,
+        formValues: PropTypes.object,
+        formErrors: PropTypes.object
     };
 
     static contextTypes = {
@@ -115,12 +114,12 @@ export default class CollectionForm extends Component {
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={formLocale.cancelWorkflowConfirmation}/>
+                        txt={txt.cancelWorkflowConfirmation}/>
 
                     <ConfirmDialogBox
                         onRef={this.setDepositConfirmation}
                         onAction={this.props.handleSubmit}
-                        locale={formLocale.thesisSubmission.depositConfirmation}
+                        locale={txt.depositConfirmation}
                     />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -128,74 +127,49 @@ export default class CollectionForm extends Component {
                                 <Grid container spacing={24}>
                                     <Grid item xs={12}>
                                         <Field
-                                            component={RichEditorField}
-                                            name="thesisTitle"
-                                            title={txt.information.fieldLabels.documentTitle.placeholder}
+                                            component={CommunitiesSelectField}
                                             disabled={this.props.submitting}
-                                            height={50}
-                                            validate={[validation.required]}/>
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <Field
-                                            component={TextField}
-                                            disabled={this.props.submitting}
-                                            name="currentAuthor.0.nameAsPublished"
-                                            type="text"
-                                            fullWidth
-                                            rows={1}
-                                            {...txt.information.fieldLabels.author}
+                                            name="community"
+                                            locale={{label: 'Member of community'}}
                                             required
-                                            validate={[validation.required]}/>
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <Field
-                                            component={ThesisSubtypeField}
-                                            itemsList={thesisSubmissionSubtypes}
-                                            name="rek_genre_type"
-                                            disabled={this.props.submitting}
                                             validate={[validation.required]}
-                                            locale={txt.information.fieldLabels.thesisType}
-                                            required
                                         />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={RichEditorField}
-                                            disabled={this.props.submitting}
-                                            title={txt.optional.fieldLabels.abstract.label}
-                                            name="thesisAbstract"
-                                            validate={[validation.required]}/>
                                     </Grid>
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
-                                <Typography>{txt.keywords.description}</Typography>
-                                <Field
-                                    component={ListEditorField}
-                                    name="fez_record_search_key_keywords"
-                                    required
-                                    maxCount={10}
-                                    validate={[validation.requiredList]}
-                                    maxInputLength={111}
-                                    searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
-                                    locale={locale.components.keywordsForm.field}
-                                    disabled={this.props.submitting}/>
-                            </StandardCard>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
-                                <Field
-                                    name="files"
-                                    component={FileUploadField}
-                                    disabled={this.props.submitting}
-                                    locale={formLocale.thesisSubmission.fileUpload.locale}
-                                    defaultQuickTemplateId={this.props.fileAccessId}
-                                    validate={[validation.fileUploadRequired]}/>
-                            </StandardCard>
-                        </Grid>
-
+                        {
+                            this.props.formValues.get('community') &&
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.information.title} help={txt.information.help}>
+                                    <Grid container spacing={24}>
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={RichEditorField}
+                                                name="title"
+                                                title={'Title'}
+                                                disabled={this.props.submitting}
+                                                height={50}
+                                                maxLength={800}
+                                                validate={[validation.required]}/>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Typography>{txt.keywords.description}</Typography>
+                                            <Field
+                                                component={ListEditorField}
+                                                name="fez_record_search_key_keywords"
+                                                required
+                                                maxCount={10}
+                                                validate={[validation.requiredList]}
+                                                maxInputLength={111}
+                                                searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
+                                                locale={locale.components.keywordsForm.field}
+                                                disabled={this.props.submitting}/>
+                                        </Grid>
+                                    </Grid>
+                                </StandardCard>
+                            </Grid>
+                        }
                         {
                             alertProps &&
                             <Grid item xs={12}>
