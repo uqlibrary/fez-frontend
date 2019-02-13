@@ -1,4 +1,3 @@
-/* eslint-disable */
 import {api, sessionApi} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
@@ -9,12 +8,12 @@ import * as mockData from './data';
 const queryString = require('query-string');
 const mock = new MockAdapter(api, {delayResponse: 200});
 const mockSessionApi = new MockAdapter(sessionApi, {delayResponse: 200});
-const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
-const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
+const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, '\\$&'));
+// const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 
-//get user from query string
+// Get user from query string
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
 
 if (user && !mockData.accounts[user]) {
@@ -29,37 +28,37 @@ user = user || 'uqresearcher';
  * for thesis submissions for now
  */
 mockSessionApi
-    .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {
-    // mock account response
-    if (user === 's2222222') {
-        return [200, mockData.accounts[user]];
-    } else if (mockData.accounts[user]) {
-        return [403, {}];
-    }
-    return [404, {}];
-});
+    .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
+        // mock account response
+        if (user === 's2222222') {
+            return [200, mockData.accounts[user]];
+        } else if (mockData.accounts[user]) {
+            return [403, {}];
+        }
+        return [404, {}];
+    });
 
 mock
-    .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {
+    .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
     // mock account response
-    if (user === 'anon') {
-        return [403, {}];
-    } else if (mockData.accounts[user]) {
-        return [200, mockData.accounts[user]];
-    }
-    return [404, {}];
-})
-    .onGet(routes.AUTHOR_DETAILS_API({userId: user}).apiUrl).reply(config => {
+        if (user === 'anon') {
+            return [403, {}];
+        } else if (mockData.accounts[user]) {
+            return [200, mockData.accounts[user]];
+        }
+        return [404, {}];
+    })
+    .onGet(routes.AUTHOR_DETAILS_API({userId: user}).apiUrl).reply(() => {
     // mock current author details
-    if (user === 'anon') {
-        return [403, {}];
-    } else if (mockData.authorDetails[user]) {
-        return [200, mockData.authorDetails[user]];
-    }
-    return [404, {}];
-})
+        if (user === 'anon') {
+            return [403, {}];
+        } else if (mockData.authorDetails[user]) {
+            return [200, mockData.authorDetails[user]];
+        }
+        return [404, {}];
+    })
     .onGet(routes.CURRENT_AUTHOR_API().apiUrl)
-    .reply(config => {
+    .reply(() => {
         // mock current author details from fez
         if (user === 'anon') {
             return [403, {}];
@@ -77,29 +76,28 @@ mock
         else if (config.params.source === 'crossref' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
         else if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
+        return [500, []];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
         if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
-        }
-        // CURRENT_USER_RECORDS_API - myDataset
-        else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
+        } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
+            // CURRENT_USER_RECORDS_API - myDataset
             const totalRecords = mockData.MyDatasetList.data.length;
             const fromRecord = 1;
             const toRecord = 2;
-                return [
-                    200,
-                    // {total: 0, data: []}
-                    {
-                        ...mockData.MyDatasetList,
-                        current_page: config.params.page,
-                        data: mockData.MyDatasetList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
-                    }
-                ];
-        }
-        // CURRENT_USER_RECORDS_API - myResearch
-        else if (config.params.rule === 'mine') {
+            return [
+                200,
+                // {total: 0, data: []}
+                {
+                    ...mockData.MyDatasetList,
+                    current_page: config.params.page,
+                    data: mockData.MyDatasetList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                }
+            ];
+        } else if (config.params.rule === 'mine') {
+            // CURRENT_USER_RECORDS_API - myResearch
             const totalRecords = mockData.myRecordsList.data.length;
             const fromRecord = 5 * (config.params.page - 1);
             const toRecord = 5 * (config.params.page);
@@ -112,24 +110,27 @@ mock
                     data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
                 }
             ];
-        }
-        // POSSIBLE_RECORDS_API
-        else if (config.params.rule === 'possible') {
+        } else if (config.params.rule === 'possible') {
+            // POSSIBLE_RECORDS_API
             return [200, mockData.possibleUnclaimedList];
             // return [500, ['ERROR POSSIBLE_RECORDS_API']];
-        }
-        // SEARCH_KEY_LOOKUP_API
-        else if (config.params.rule === 'lookup') {
+        } else if (config.params.rule === 'lookup') {
+            // SEARCH_KEY_LOOKUP_API
             return [200, mockData.searchKeyList[config.params.search_key]];
-        }
-        // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
-        else if (!!config.params.key && config.params.key.rek_object_type === 2) {
+        } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
+            // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
             return [200, mockData.collections];
-        }
-        // SEARCH_INTERNAL_RECORDS_API
-        else if (config.params.id || config.params.doi || config.params.hasOwnProperty('all') || config.params.rek_title || config.params.key) {
+        } else if (config.params.id || config.params.doi || config.params.hasOwnProperty('all') || config.params.rek_title || config.params.key) {
+            // SEARCH_INTERNAL_RECORDS_API
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
+        } else if (config.params.key.id || config.params.key.doi || config.params.key.title || config.params.key.all || config.params.key.rek_title) {
+            // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
+            // return [200, mockData.internalTitleSearchListNoResults];
+            return [200, mockData.internalTitleSearchList];
+        } else if (config.params.key.rek_object_type === 2) {
+            // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
+            return [200, mockData.collections];
         }
         return [404, ['Request not found']];
     })
@@ -153,6 +154,10 @@ mock
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
     .reply(200, mockData.newsFeed)
+    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: '.*'}).apiUrl)))
+    .reply(200, mockData.lookupToolIncites)
+    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_2FIELD({type: 'incites', field1: '.*', field2: '.*'}).apiUrl)))
+    .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
         if (config.url.indexOf('UQ:164935') >= 0) {
@@ -178,13 +183,13 @@ mock
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
-    // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
+// .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
 
 
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     .reply(200, {data: {}});
-    // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
+// .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
 
 mock
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)))
@@ -195,8 +200,8 @@ mock
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(200, {data: {rek_pid: 'UQ:1111111'}}); // TODO: add actual record to data return!!!
-    // .reply(500, {message: 'error - failed NEW_RECORD_API'});
-    // .reply(403, {message: 'Session expired'});
+// .reply(500, {message: 'error - failed NEW_RECORD_API'});
+// .reply(403, {message: 'Session expired'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))

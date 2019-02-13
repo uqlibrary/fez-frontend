@@ -10,14 +10,14 @@ export default {
             eraJournalListed: '(ERA [year] Journal(s) Listed)'
         },
         sections: {
-            publicationDetails: 'Publication details',
+            publicationDetails: 'Type & Collection',
             grantInformation: 'Grant information',
             additionalInformation: {
                 title: 'Additional information',
                 licenseLinkText: 'View license details'
             },
             relatedPublications: {
-                title: 'Related publications and datasets',
+                title: 'Related works and datasets',
                 depositedBy: 'deposited',
                 currentRecord: 'Current Record'
             },
@@ -65,12 +65,54 @@ export default {
                 'Journal': 'Summary/Description',
                 'Data Collection': 'Dataset description',
                 'Design': 'Project description'
-            }
+            },
+            ntro: {
+                title: 'Non-traditional research output metadata',
+                fields: {
+                    abstract: {
+                        label: 'Abstract/Description (for public view)',
+                        description: 'Enter a statement (800 characters or less, approximately 100 words) that summarises the work',
+                    },
+                    series: {
+                        floatingLabelText: 'Series',
+                        hintText: 'Enter the name of publication, performance, recording, or event series'
+                    },
+                    volume: {
+                        label: 'Volume',
+                    },
+                    issue: {
+                        label: 'Issue',
+                    },
+                    startPage: {
+                        label: 'Start page',
+                    },
+                    endPage: {
+                        label: 'End page',
+                    },
+                    extent: {
+                        label: 'Extent',
+                        placeholder: 'Enter total pages, size or duration of work'
+                    },
+                    physicalDescription: {
+                        label: 'Physical description',
+                        placeholder: 'Type of work, e.g. Video, Map, Oil painting'
+                    },
+                    audienceSize: {
+                        label: 'Audience size',
+                    },
+                    peerReviewActivity: {
+                        label: 'Quality indicators',
+                    },
+                    notes: {
+                        label: 'Notes',
+                    },
+                }
+            },
         },
         headings: {
             default: {
                 rek_title: 'Title',
-                rek_date: 'Publication date',
+                rek_date: 'Publication/Start date',
                 rek_subtype: 'Sub-type',
                 rek_genre: 'Type',
                 rek_genre_type: 'Sub-type',
@@ -149,8 +191,8 @@ export default {
                 fez_record_search_key_acknowledgements: 'Acknowledgements',
                 fez_record_search_key_advisory_statement: 'Advisory statement',
                 fez_record_search_key_report_number: 'Report number',
-                fez_record_search_key_parent_publication: 'Parent publication',
-                fez_record_search_key_related_publications: 'Related publications',
+                fez_record_search_key_parent_publication: 'Parent work',
+                fez_record_search_key_related_publications: 'Related works',
                 fez_record_search_key_time_period_start_date: 'Time coverage start date',
                 fez_record_search_key_time_period_end_date: 'Time coverage end date',
                 fez_record_search_key_start_date: 'Collection start date',
@@ -182,7 +224,7 @@ export default {
                     fez_record_search_key_grant_text: 'Grant text'
                 },
                 publicationDetails: {
-                    rek_display_type: 'Publication type',
+                    rek_display_type: 'Type of work',
                     rek_subtype: 'Sub-type',
                     fez_record_search_key_ismemberof: 'Collections'
                 }
@@ -213,7 +255,12 @@ export default {
                 fez_record_search_key_date_available: 'Collection year',
                 fez_record_search_key_translated_title: 'Translated title of proceedings'
             },
-            'Creative Work': {},
+            'Creative Work': {
+                rek_genre: 'Type',
+                fez_record_search_key_start_date: 'Start date',
+                fez_record_search_key_end_date: 'End date',
+                rek_total_pages: 'Extent',
+            },
             'Data Collection': {
                 rek_date: 'Publication year',
                 rek_genre: 'Collection type',
@@ -294,7 +341,24 @@ export default {
                 fez_record_search_key_author: 'Creator',
                 fez_record_search_key_rights: 'Rights'
             },
-            'Working Paper': {}
+            'Working Paper': {},
+            'NTRO': {
+                significance: 'Scale/Significance of work',
+                impactStatement: 'Creator contribution statement',
+                ntroAbstract: 'Abstract/Description',
+                fez_record_search_key_ismn: 'ISMN',
+                fez_record_search_key_isrc: 'ISRC',
+                rek_series: 'Series',
+                rek_volume_number: 'Volume',
+                rek_issue_number: 'Issue',
+                rek_start_page: 'Start page',
+                rek_end_page: 'End page',
+                rek_total_pages: 'Extent',
+                rek_original_format: 'Physical description',
+                rek_audience_size: 'Audience size',
+                qualityIndicators: 'Quality indicators',
+                rek_language: 'Language(s)'
+            }
         },
         fields: {
             'Audio Document': [
@@ -305,6 +369,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -425,6 +493,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -460,10 +532,10 @@ export default {
                     field: 'fez_record_search_key_edition',
                     order: 11
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 12
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 12
+                // },
                 {
                     field: 'fez_record_search_key_isbn',
                     order: 13
@@ -476,10 +548,10 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 15
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 16
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 16
+                // },
                 {
                     field: 'fez_record_search_key_start_page',
                     order: 17
@@ -513,6 +585,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -558,10 +634,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 13
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 14
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 14
+                // },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 15
@@ -602,10 +678,10 @@ export default {
                     field: 'fez_record_search_key_total_chapters',
                     order: 24
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 25
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 25
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 26
@@ -767,6 +843,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_language_of_title',
                     order: 3
                 },
@@ -917,6 +997,10 @@ export default {
                     order: 4
                 },
                 {
+                    field: 'rek_description',
+                    order: 4.5
+                },
+                {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 5
                 },
@@ -933,52 +1017,60 @@ export default {
                     order: 8
                 },
                 {
-                    field: 'fez_record_search_key_date_available',
+                    field: 'fez_record_search_key_start_date',
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_series',
+                    field: 'fez_record_search_key_end_date',
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_edition',
+                    field: 'fez_record_search_key_date_available',
                     order: 11
                 },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 12
+                // },
                 {
-                    field: 'fez_record_search_key_contributor',
-                    order: 12
-                },
-                {
-                    field: 'fez_record_search_key_isbn',
+                    field: 'fez_record_search_key_edition',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_issn',
+                    field: 'fez_record_search_key_contributor',
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_isbn',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_issn',
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_start_page',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_end_page',
                     order: 18
                 },
+                // {
+                //     field: 'fez_record_search_key_total_pages',
+                //     order: 19
+                // },
                 {
-                    field: 'fez_record_search_key_language',
-                    order: 19
+                    field: 'fez_record_search_key_subject',
+                    order: 20
                 },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 21
+                // },
                 {
                     field: 'fez_record_search_key_keywords',
-                    order: 20
+                    order: 22
                 },
             ],
             'Data Collection': [
@@ -1009,6 +1101,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 7
+                },
+                {
+                    field: 'rek_description',
+                    order: 7.5
                 },
                 {
                     field: 'fez_record_search_key_access_conditions',
@@ -1105,6 +1201,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1175,6 +1275,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_project_name',
                     order: 3
                 },
@@ -1230,10 +1334,10 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 16
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 17
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 17
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 18
@@ -1258,10 +1362,10 @@ export default {
                     field: 'fez_record_search_key_source',
                     order: 23
                 },
-                {
-                    field: 'fez_record_search_key_original_format',
-                    order: 24
-                },
+                // {
+                //     field: 'fez_record_search_key_original_format',
+                //     order: 24
+                // },
                 {
                     field: 'fez_record_search_key_scale',
                     order: 25
@@ -1283,6 +1387,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 1
+                },
+                {
+                    field: 'rek_description',
+                    order: 1.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1379,6 +1487,10 @@ export default {
                     order: 1
                 },
                 {
+                    field: 'rek_description',
+                    order: 1.5
+                },
+                {
                     field: 'fez_record_search_key_keywords',
                     order: 2
                 },
@@ -1419,6 +1531,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1503,6 +1619,10 @@ export default {
                     order: 1
                 },
                 {
+                    field: 'rek_description',
+                    order: 1.5
+                },
+                {
                     field: 'fez_record_search_key_series',
                     order: 2
                 },
@@ -1585,6 +1705,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1660,10 +1784,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 21
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 22
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 22
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 23
@@ -1681,6 +1805,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1755,6 +1883,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -1835,6 +1967,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1913,6 +2049,10 @@ export default {
                     order: 2
                 },
                 {
+                    field: 'rek_description',
+                    order: 2.5
+                },
+                {
                     field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
@@ -1948,10 +2088,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 11
                 },
-                {
-                    field: 'fez_record_search_key_series',
-                    order: 12
-                },
+                // {
+                //     field: 'fez_record_search_key_series',
+                //     order: 12
+                // },
                 {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 13
@@ -1968,10 +2108,10 @@ export default {
                     field: 'fez_record_search_key_total_pages',
                     order: 16
                 },
-                {
-                    field: 'fez_record_search_key_language',
-                    order: 17
-                },
+                // {
+                //     field: 'fez_record_search_key_language',
+                //     order: 17
+                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 18
@@ -1979,6 +2119,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19
+                },
+                {
+                    field: 'fez_record_search_key_report_number',
+                    order: 20
                 }
             ],
             'Patent': [
@@ -1989,6 +2133,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2039,6 +2187,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 1
+                },
+                {
+                    field: 'rek_description',
+                    order: 1.5
                 },
                 {
                     field: 'fez_record_search_key_keywords',
@@ -2097,6 +2249,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 3
+                },
+                {
+                    field: 'rek_description',
+                    order: 3.5
                 },
                 {
                     field: 'fez_record_search_key_org_unit_name',
@@ -2159,6 +2315,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2225,6 +2385,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 3
+                },
+                {
+                    field: 'rek_description',
+                    order: 3.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2295,6 +2459,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5
                 },
                 {
                     field: 'fez_record_search_key_translated_title',
@@ -2385,10 +2553,6 @@ export default {
                 {
                     field: 'fez_record_search_key_notes',
                     order: 54
-                },
-                {
-                    field: 'rek_description',
-                    order: 55
                 }
             ]
         },

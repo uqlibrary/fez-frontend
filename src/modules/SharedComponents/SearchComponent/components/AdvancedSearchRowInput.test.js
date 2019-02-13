@@ -32,7 +32,7 @@ describe('AdvancedSearchRowInput', () => {
             expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
                 "aria-label": undefined,
-                "autoComplete": "off",
+                "autoComplete": "search",
                 "error": false,
                 "helperText": undefined,
                 "label": null,
@@ -52,7 +52,7 @@ describe('AdvancedSearchRowInput', () => {
             expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
                 "aria-label": undefined,
-                "autoComplete": "off",
+                "autoComplete": "search",
                 "error": true,
                 "errorText": "Must be at least 10 characters",
                 "label": null,

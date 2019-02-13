@@ -145,7 +145,7 @@ export default {
                 // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
-                    countTitle: 'eSpace articles from'
+                    countTitle: 'eSpace works from'
                 },
                 dashboardAuthorAvatar: {
                     ariaPrefix: 'Photograph of '
@@ -166,29 +166,29 @@ export default {
                 }
             },
             myLatestPublications: {
-                title: 'My publications',
+                title: 'My works',
             },
             myTrendingPublications: {
-                title: 'My trending publications'
+                title: 'My trending works'
             },
             possiblePublicationsLure: {
                 title: 'Claim now!',
-                message: 'We have found [count] record(s) that could possibly be your work.',
+                message: 'We have found [count] record(s) that could possibly be your works.',
                 type: 'info_outline',
-                actionButtonLabel: 'Claim your publications now'
+                actionButtonLabel: 'Claim your works now'
             },
             nothingToClaimLure: {
                 title: 'Add your work to eSpace',
-                message: 'We found nothing new for you to claim, but you may add a publication any time.',
+                message: 'We found nothing new for you to claim, but you may add a work any time.',
                 type: 'info_outline',
-                actionButtonLabel: 'Add a publication'
+                actionButtonLabel: 'Add a missing work'
             },
             publicationsByYearChart: {
-                title: 'eSpace publications per year',
+                title: 'eSpace works per year',
                 yAxisTitle: 'Total publications'
             },
             publicationTypesCountChart: {
-                title: 'Publication types overview'
+                title: 'Work types overview'
             },
         },
         myResearch: {
@@ -196,18 +196,18 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
+                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a work</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing work</a>.
                 </span>
             ),
-            loadingMessage: 'Searching for your publications',
-            loadingPagingMessage: 'Retrieving your publications',
-            exportPublicationsLoadingMessage: 'Exporting your publications',
+            loadingMessage: 'Searching for your works',
+            loadingPagingMessage: 'Retrieving your works',
+            exportPublicationsLoadingMessage: 'Exporting your works',
             noResultsFound: {
-                title: 'No publications found',
+                title: 'No works found',
                 text: (
                     <div>
                         We were unable to find any results. You may be able to <a href={`${pathConfig.records.possible}`}>claim
-                        publications we think may be yours</a> or <a href={`${pathConfig.records.add.find}`}>add a
+                        works we think may be yours</a> or <a href={`${pathConfig.records.add.find}`}>add a
                         missing publication</a>
                     </div>
                 ),
@@ -259,13 +259,13 @@ export default {
             }
         },
         claimPublications: {
-            title: 'Claim possible publications',
-            loadingMessage: 'Searching for possibly your publications',
+            title: 'Claim possible works',
+            loadingMessage: 'Searching for possibly your works',
             noResultsFound: {
-                title: 'No matching publications found',
+                title: 'No matching works found',
                 text: (
                     <div>
-                        <p>No publications were automatically matched for you to claim.</p>
+                        <p>No works were automatically matched for you to claim.</p>
                     </div>
                 ),
                 // help: {
@@ -283,12 +283,12 @@ export default {
                 //     buttonLabel: 'Ok'
                 // },
                 hide: 'Not mine',
-                claim: 'Claim this publication',
+                claim: 'Claim this work',
                 inProgress: 'In progress'
             },
             hidePublicationConfirmation: {
-                confirmationTitle: 'Hide publication',
-                confirmationMessage: 'Are you sure you want to hide selected possibly your publication from this view?',
+                confirmationTitle: 'Hide work',
+                confirmationMessage: 'Are you sure you want to hide selected possible work from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
@@ -298,23 +298,23 @@ export default {
                 type: 'error'
             },
             hideAllPublicationsConfirmation: {
-                confirmationTitle: 'Hide publications',
-                confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
+                confirmationTitle: 'Hide works',
+                confirmationMessage: 'Are you sure you want to hide all possible works from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
             facetsFilter: {...locale.components.facetsFilter}
         },
         addRecord: {
-            title: 'Add a missing publication to eSpace',
+            title: 'Add a missing work to eSpace',
             stepper: [
-                {label: 'Search for your publication'},
+                {label: 'Search for your work'},
                 {label: 'Search results'},
-                {label: 'Add your publication'}
+                {label: 'Add your work'}
             ],
             step1: {
-                title: 'Search for your publication',
-                text: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
+                title: 'Search for your works',
+                text: 'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the record is already in eSpace or is available from another source.',
                 // help: {
                 //     title: 'Search for your publication',
                 //     text: 'Help about search....',
@@ -328,7 +328,7 @@ export default {
             },
             step2: {
                 noResultsFound: {
-                    title: 'No matching publications found',
+                    title: 'No matching works found',
                     text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace record.',
                     // help: {
                     //     title: 'No matching records found',
@@ -339,7 +339,7 @@ export default {
                 searchResults: {
                     title: 'Possible matches found',
                     resultsText: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]".',
-                    text: 'Claim a matching publication below, refine your search or create a new eSpace record.',
+                    text: 'Claim a matching work below, refine your search or create a new eSpace record.',
                     // help: {
                     //     title: 'Possible matches found',
                     //     text: 'Why search displays these items....',
@@ -373,47 +373,46 @@ export default {
                         ]
                     }
                 },
-                loadingMessage: 'Searching for publications',
+                loadingMessage: 'Searching for works',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
-                claim: 'Claim this publication',
+                claim: 'Claim this work',
                 unclaimable: 'All authors have been assigned'
             },
             step3: {
                 // all text values come from forms.PublicationForm
             },
             successWorkflowConfirmation: {
-                confirmationTitle: 'Your record has been submitted',
+                confirmationTitle: 'Your work has been submitted',
                 recordSuccessConfirmationMessage: (
                     <p>
-                        Your record has been saved.<br/><br/>
-                        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
-                        record.
+                        Your work has been saved.<br/><br/>
+                        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
                     </p>),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or notes post failed',
-                    message: 'Retry uploading files and/or submitting publication notes via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry uploading files and/or submitting notes via "Fix record" screen or contact eSpace administrators.',
                     type: 'warning'
                 },
-                cancelButtonLabel: 'Add another missing record',
+                cancelButtonLabel: 'Add another missing work',
                 confirmButtonLabel: 'Go to my research'
             }
         },
         fixRecord: {
-            loadingMessage: 'Loading record',
+            loadingMessage: 'Loading work',
             title: 'Request a correction or upload files',
-            subTitle: 'Record to be amended',
+            subTitle: 'Work to be amended',
             fieldLabels: {
                 action: 'Select an action'
             },
             actionsOptions: [
                 {
                     action: 'fix',
-                    title: 'I am the author/editor/contributor of this record - I would like to make a correction, or upload files'
+                    title: 'I am the author/editor/contributor of this work - I would like to make a correction, or upload files'
                 },
                 {
                     action: 'unclaim',
-                    title: 'I am not the author/editor/contributor of this record - I would like this record removed from my profile'
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile'
                 }
             ],
             cancel: 'Cancel',
@@ -425,12 +424,12 @@ export default {
         },
         searchRecords: {
             title: 'eSpace search',
-            loadingMessage: 'Searching for publications',
-            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
-            loadingPagingMessage: 'Searching for publications',
+            loadingMessage: 'Searching for works',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
-                title: 'No publications found',
+                title: 'No works found',
                 text: (
                     <div>
                         We were unable to find any results.
@@ -507,7 +506,7 @@ export default {
                 description: (
                     <div>
                         <p>Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and
-                            accurately group all the citations of your publications into one pool. A profile generally lists
+                            accurately group all the citations of your works into one pool. A profile generally lists
                             your name, chosen keywords of research interest, generated citation metrics, and citations
                             (including links to citing articles).</p>
                         <p>In order to create a Google Scholar Citation profile, you need a Google Account.</p>
@@ -595,7 +594,7 @@ export default {
                             <a href="http://support.orcid.org/knowledgebase/articles/188278-link-works-website-user" target="_blank">click here</a>.
                         </p>
                         <p>
-                            You can also import publications from your Google Scholar to your ORCID iD. <a href="http://support.orcid.org/knowledgebase/articles/390530-import-works-from-bibtex-files-website-user" target="_blank">Click here</a> for information
+                            You can also import works from your Google Scholar to your ORCID iD. <a href="http://support.orcid.org/knowledgebase/articles/390530-import-works-from-bibtex-files-website-user" target="_blank">Click here</a> for information
                         </p>
                         <p>
                             There are many other types of work that you may add to your ORCID including artistic
@@ -652,7 +651,7 @@ export default {
             successAlert: {
                 type: 'done',
                 title: 'ORCID linked',
-                message: 'Your ORCID has been linked to your eSpace profile. Your publications will be synced within the next 24 hours',
+                message: 'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and CrossRef will be synced to your eSpace profile within the next 7 days.',
                 allowDismiss: true
             },
             progressAlert: {

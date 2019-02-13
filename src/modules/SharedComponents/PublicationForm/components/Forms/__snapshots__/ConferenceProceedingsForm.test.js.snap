@@ -177,7 +177,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         Please provide a list of editors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -247,18 +246,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this editor ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed editor",
@@ -268,6 +255,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           }
         }
         name="editors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -296,10 +284,10 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISBN",
-                "inputFieldHint": "Type ISBN value",
+                "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -370,10 +358,10 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISSN",
-                "inputFieldHint": "Type ISSN value",
+                "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -430,7 +418,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Optional details"
     >
       <WithStyles(Grid)
         container={true}
@@ -461,7 +449,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
-            placeholder="Enter URL for this publication"
+            placeholder="Enter URL for this work"
             type="text"
             validate={
               Array [

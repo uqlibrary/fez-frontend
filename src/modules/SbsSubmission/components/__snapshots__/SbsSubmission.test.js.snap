@@ -99,16 +99,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
               item={true}
               xs={12}
             >
-              <WithStyles(Typography)
-                variant="caption"
-              >
-                Thesis title
-              </WithStyles(Typography)>
               <Field
                 component={[Function]}
                 disabled={false}
                 height={50}
                 name="thesisTitle"
+                title="Thesis title"
                 validate={
                   Array [
                     [Function],
@@ -148,9 +144,22 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
@@ -227,15 +236,11 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
               item={true}
               xs={12}
             >
-              <WithStyles(Typography)
-                variant="caption"
-              >
-                Abstract
-              </WithStyles(Typography)>
               <Field
                 component={[Function]}
                 disabled={false}
                 name="thesisAbstract"
+                title="Abstract"
                 validate={
                   Array [
                     [Function],
@@ -295,18 +300,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "ordinalData": Array [
-                      "First",
-                      "Second",
-                      "Third",
-                      "Fourth",
-                      "Fifth",
-                      "Sixth",
-                      "Seventh",
-                      "Eighth",
-                      "Ninth",
-                      "Tenth",
-                    ],
                     "selectHint": "Select this supervisor ([name]) to assign it as you",
                     "suffix": " listed supervisor",
                   },
@@ -390,7 +383,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           title="Keywords"
         >
           <WithStyles(Typography)>
-            Add up to 10 keywords that describe the content of the thesis
+            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -543,7 +536,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -557,7 +550,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           color="primary"
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Deposit your thesis
         </WithStyles(Button)>
@@ -614,16 +607,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
               item={true}
               xs={12}
             >
-              <WithStyles(Typography)
-                variant="caption"
-              >
-                Thesis title
-              </WithStyles(Typography)>
               <Field
                 component={[Function]}
                 disabled={false}
                 height={50}
                 name="thesisTitle"
+                title="Thesis title"
                 validate={
                   Array [
                     [Function],
@@ -663,9 +652,22 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
@@ -742,15 +744,11 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
               item={true}
               xs={12}
             >
-              <WithStyles(Typography)
-                variant="caption"
-              >
-                Abstract
-              </WithStyles(Typography)>
               <Field
                 component={[Function]}
                 disabled={false}
                 name="thesisAbstract"
+                title="Abstract"
                 validate={
                   Array [
                     [Function],
@@ -810,18 +808,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "ordinalData": Array [
-                      "First",
-                      "Second",
-                      "Third",
-                      "Fourth",
-                      "Fifth",
-                      "Sixth",
-                      "Seventh",
-                      "Eighth",
-                      "Ninth",
-                      "Tenth",
-                    ],
                     "selectHint": "Select this supervisor ([name]) to assign it as you",
                     "suffix": " listed supervisor",
                   },
@@ -905,7 +891,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           title="Keywords"
         >
           <WithStyles(Typography)>
-            Add up to 10 keywords that describe the content of the thesis
+            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -1058,7 +1044,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -1072,7 +1058,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           color="primary"
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Deposit your thesis
         </WithStyles(Button)>

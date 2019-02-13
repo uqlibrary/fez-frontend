@@ -57,6 +57,11 @@ const styles = theme => ({
     },
     citationCounts: {
         whiteSpace: 'nowrap'
+    },
+    buttonMargin: {
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 12
+        }
     }
 });
 
@@ -269,7 +274,7 @@ export class PublicationCitation extends PureComponent {
                 </Grid>
                 {
                     (this.props.showDefaultActions || this.props.customActions) &&
-                    <Grid container spacing={8}>
+                    <Grid container spacing={8} className={classes.buttonMargin}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>

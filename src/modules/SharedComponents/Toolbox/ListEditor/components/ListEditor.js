@@ -19,7 +19,9 @@ export default class ListsEditor extends Component {
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
         input: PropTypes.object,
-        transformFunction: PropTypes.func.isRequired
+        transformFunction: PropTypes.func.isRequired,
+        maxInputLength: PropTypes.number,
+        inputNormalizer: PropTypes.func
     };
 
     static defaultProps = {
@@ -33,7 +35,8 @@ export default class ListsEditor extends Component {
         transformFunction: (searchKey, item, index) => ({
             [searchKey.value]: item,
             [searchKey.order]: index + 1
-        })
+        }),
+        inputNormalizer: value => value
     };
 
     constructor(props) {
@@ -59,11 +62,32 @@ export default class ListsEditor extends Component {
         if (!!item
             && (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
             && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
-            this.setState({
-                itemList: [...this.state.itemList, item]
-            });
+            // If when the item is submitted, there is no maxCount, its not exceeding the maxCount, is distinct and isnt already in the list...
+            if (!!item.key && !!item.value) {
+                // Item is an object with {key: 'something', value: 'something} - as per FoR codes
+                this.setState({
+                    itemList: [...this.state.itemList, item]
+                });
+            } else if (!!item && item.includes(',') && !item.key && !item.value) {
+                // Item is a string with commas in it - we will strip and separate the values to be individual keywords
+                const commaSepListToArray = item.split(','); // Convert the string to an array of values
+                const cleanArray = commaSepListToArray.filter(item => item.trim() !== ''); // Filter out empty array values
+                const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
+                if(totalArray.length > this.props.maxCount) {
+                    // If the final list is longer that maxCount, trim it back
+                    totalArray.length = this.props.maxCount;
+                }
+                this.setState({
+                    itemList: [...totalArray]
+                });
+            } else {
+                // Item is just a string - so just add it
+                this.setState({
+                    itemList: [...this.state.itemList, item]
+                });
+            }
         }
-    }
+    };
 
     moveUpList = (item, index) => {
         if (index === 0) return;
@@ -126,6 +150,8 @@ export default class ListsEditor extends Component {
                     isValid={this.props.isValid}
                     disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}
                     errorText={this.props.errorText}
+                    maxInputLength={this.props.maxInputLength}
+                    normalize={this.props.inputNormalizer}
                 />
                 {
                     this.state.itemList.length > 0 &&

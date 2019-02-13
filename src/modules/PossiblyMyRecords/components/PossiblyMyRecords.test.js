@@ -1,5 +1,4 @@
 import PossiblyMyRecords from './PossiblyMyRecords';
-import {possibleUnclaimedList} from 'mock/data';
 import {routes} from 'config';
 
 function setup(testProps, isShallow = true) {

@@ -10,6 +10,9 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions/authors';
 
+import OrgAffilicationTypeSelector from './OrgAffiliationTypeSelector';
+import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
+
 export class ContributorForm extends PureComponent {
     static propTypes = {
         authorsList: PropTypes.array.isRequired,
@@ -21,10 +24,13 @@ export class ContributorForm extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
-        required: PropTypes.bool
+        required: PropTypes.bool,
+        isNtro: PropTypes.bool,
+        isContributorAssigned: PropTypes.bool
     };
 
     static defaultProps = {
+        required: false,
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
@@ -44,7 +50,11 @@ export class ContributorForm extends PureComponent {
             nameAsPublished: '',
             creatorRole: '',
             uqIdentifier: '',
-            contributor: {}
+            contributor: {},
+            affiliation: '',
+            orgaff: '',
+            orgtype: '',
+            showIdentifierLookup: false
         };
     }
 
@@ -60,7 +70,10 @@ export class ContributorForm extends PureComponent {
         ) return;
 
         // pass on the selected contributor
-        this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished, creatorRole: this.state.creatorRole}});
+        this.props.onAdd(
+            {
+                ...this.state.contributor,
+                ...{nameAsPublished: this.state.nameAsPublished, creatorRole: this.state.creatorRole, affiliation: this.state.affiliation, orgaff: this.state.orgaff, orgtype: this.state.orgtype}});
 
         // reset internal state
         this.setState({
@@ -68,7 +81,10 @@ export class ContributorForm extends PureComponent {
             creatorRole: '',
             uqIdentifier: '',
             clearRoleInput: true,
-            contributor: {}
+            contributor: {},
+            affiliation: '',
+            orgaff: '',
+            orgtype: ''
         });
     }
 
@@ -103,53 +119,75 @@ export class ContributorForm extends PureComponent {
         }
     };
 
+    handleAffiliationChange = (event) => {
+        this.setState({
+            affiliation: event.target.value,
+            showIdentifierLookup: !!(event.target.value === 'UQ')
+        });
+    };
+
+    handleOrgAfflicationChange = (event) => {
+        this.setState({
+            orgaff: event.target.value
+        });
+    };
+
+    handleOrgTypeChange = (event) => {
+        this.setState({
+            orgtype: event.target.value,
+        });
+    };
+
     render() {
-        const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
+        const {showContributorAssignment, showIdentifierLookup, showRoleInput, isNtro, disabled} = this.props;
+        const description = showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
         return (
-            <div style={{flexGrow: 1}}>
+            <React.Fragment>
                 {description}
-                <Grid container spacing={16} alignItems="baseline">
-                    <Grid
-                        item
-                        xs={12}
-                        sm={this.props.showIdentifierLookup ? 12 : 9}
-                        md={
-                            this.props.showIdentifierLookup && this.props.showRoleInput && 4 ||
-                            (this.props.showIdentifierLookup || this.props.showRoleInput) && 5 ||
-                            10
-                        }
-                    >
+                <Grid container spacing={8} style={{marginTop: 8}}>
+                    {
+                        isNtro &&
+                        <Grid item xs={12} sm={2}>
+                            <OrgAffilicationTypeSelector
+                                affiliation={this.state.affiliation}
+                                onAffiliationChange={this.handleAffiliationChange}
+                                error={this.props.required && !this.state.affiliation && !this.props.isContributorAssigned}
+                            />
+                        </Grid>
+                    }
+                    <Grid item xs={12} sm >
                         <TextField
                             fullWidth
-                            ref="nameAsPublishedField"
                             id="nameAsPublishedField"
                             label={this.props.locale.nameAsPublishedLabel}
                             placeholder={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyPress={this._addContributor}
-                            disabled={this.props.disabled}
+                            disabled={disabled || isNtro && this.state.affiliation.length === 0}
                             required={this.props.required}
                             autoComplete="off"
+                            error={!!(!isNtro && this.props.required && !this.props.isContributorAssigned && !this.state.nameAsPublished) ||
+                            !!(isNtro && this.state.affiliation && !this.state.nameAsPublished)}
                         />
                     </Grid>
                     {
-                        this.props.showIdentifierLookup &&
-                        <Grid item xs={12} sm={12} md={this.props.showIdentifierLookup && this.props.showRoleInput && 3 || 5}>
+                        (showIdentifierLookup || this.state.showIdentifierLookup) &&
+                        <Grid item xs={12} sm={3}>
                             <UqIdField
-                                disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                                disabled={disabled || this.state.nameAsPublished.trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
-                                ref="identifierField"
+                                floatingLabelText="UQ username (if known)"
+                                hintText="eg. uqjsmith"
                                 id="identifierField"
                             />
                         </Grid>
                     }
                     {
-                        this.props.showRoleInput &&
-                        <Grid item xs={12} sm={12} md={this.props.showIdentifierLookup && this.props.showRoleInput && 3 || 5}>
+                        showRoleInput &&
+                        <Grid item xs={12} sm={12} md={showIdentifierLookup && showRoleInput && 3 || 5}>
                             <RoleField
                                 fullWidth
-                                ref="creatorRoleField"
                                 if="creatorRoleField"
                                 floatingLabelText={this.props.locale.creatorRoleLabel}
                                 hintText={this.props.locale.creatorRoleHint}
@@ -163,19 +201,30 @@ export class ContributorForm extends PureComponent {
                             />
                         </Grid>
                     }
-                    <Grid item xs={12} sm={3} md={2}>
+                    {
+                        this.state.affiliation === 'NotUQ' &&
+                        <Grid item xs={12}>
+                            <NonUqOrgAffiliationFormSection
+                                orgAffiliation={this.state.orgaff}
+                                orgType={this.state.orgtype}
+                                onOrgAffiliationChange={this.handleOrgAfflicationChange}
+                                onOrgTypeChange={this.handleOrgTypeChange}
+                            />
+                        </Grid>
+                    }
+                    <Grid item xs={12} style={{marginBottom: 8}}>
                         <Button
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0 || this.props.showRoleInput && this.state.creatorRole.length === 0}
+                            disabled={disabled || this.state.nameAsPublished.trim().length === 0 || showRoleInput && this.state.creatorRole.length === 0 || this.state.affiliation === 'NotUQ' && this.state.orgaff === ''}
                             onClick={this._addContributor}
                         >
                             {this.props.locale.addButton}
                         </Button>
                     </Grid>
                 </Grid>
-            </div>
+            </React.Fragment>
         );
     }
 }

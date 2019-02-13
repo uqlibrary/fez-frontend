@@ -17,10 +17,10 @@ export default {
             primaryText: 'Author statistics'
         },
         claimPublication: {
-            primaryText: 'Claim possible publications'
+            primaryText: 'Claim possible work'
         },
         addMissingRecord: {
-            primaryText: 'Add a missing publication'
+            primaryText: 'Add a missing work'
         },
         addMissingDataset: {
             primaryText: 'Add a missing dataset'
@@ -36,6 +36,9 @@ export default {
         contact: {
             primaryText: 'Contact',
             secondaryText: ''
+        },
+        thirdPartyLookupTools: {
+            primaryText: 'Lookup Tools'
         },
         legacyEspace: {
             primaryText: 'Switch to old interface'

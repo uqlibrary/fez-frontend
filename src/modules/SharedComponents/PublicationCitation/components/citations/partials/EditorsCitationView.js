@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import AuthorsCitationView from './AuthorsCitationView';
 import {pathConfig} from 'config/routes';
 
-const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. ', separator = ', ', showLink = false, initialNumberOfEditors = 10}) => {
+const EditorsCitationView = ({publication, prefix = ' Edited by ', suffix = '. ', separator = ', ', showLink = false, initialNumberOfEditors = 10}) => {
     return (
         <AuthorsCitationView
             publication={publication}

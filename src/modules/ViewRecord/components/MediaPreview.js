@@ -66,11 +66,11 @@ export default class MediaPreview extends PureComponent {
                     isImage &&
                         <div style={{padding: 16, margin: 16}}>
                             <Grid container spacing={32}>
-                                <Grid xs />
-                                <Grid xs={'auto'}>
+                                <Grid item xs />
+                                <Grid item xs={'auto'}>
                                     <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{border: '5px solid black', maxWidth: '100%'}} />
                                 </Grid>
-                                <Grid xs />
+                                <Grid item xs />
                             </Grid>
                         </div>
                 }

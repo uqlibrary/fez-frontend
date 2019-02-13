@@ -189,6 +189,28 @@ export const viewRecordsConfig = {
             ]
         },
         {
+            searchKey: 'fez_record_search_key_start_date',
+            subkey: 'rek_start_date',
+            tags: [
+                {
+                    name: 'citation_start_date',
+                    isMultiple: false,
+                    format: 'YYYY/MM/DD'
+                }
+            ]
+        },
+        {
+            searchKey: 'fez_record_search_key_end_date',
+            subkey: 'rek_end_date',
+            tags: [
+                {
+                    name: 'citation_end_date',
+                    isMultiple: false,
+                    format: 'YYYY/MM/DD'
+                }
+            ]
+        },
+        {
             searchKey: 'fez_record_search_key_doi',
             subkey: 'rek_doi',
             tags: [

@@ -103,7 +103,7 @@ export default class NewspaperArticleForm extends Component {
                             name="authors"
                             locale={txt.authors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.authorRequired]}
                             disabled={this.props.submitting}/>
                     </StandardCard>

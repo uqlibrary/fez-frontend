@@ -34,7 +34,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -73,6 +73,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -219,7 +229,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -258,6 +268,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -416,7 +436,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -455,6 +475,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -613,7 +643,7 @@ exports[`Component FileUploader should accept terms and condition and reset back
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -652,6 +682,16 @@ exports[`Component FileUploader should accept terms and condition and reset back
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -801,7 +841,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -840,6 +880,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1048,7 +1098,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -1087,6 +1137,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1297,7 +1357,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -1336,6 +1396,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1550,7 +1620,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -1589,6 +1659,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -1918,7 +1998,7 @@ exports[`Component FileUploader should render default component 1`] = `
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -1957,6 +2037,16 @@ exports[`Component FileUploader should render default component 1`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2005,7 +2095,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2044,6 +2134,16 @@ exports[`Component FileUploader should render disabled component 1`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2091,7 +2191,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2130,6 +2230,16 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2182,7 +2292,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2221,6 +2331,16 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2428,7 +2548,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2467,6 +2587,16 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2609,7 +2739,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2648,6 +2778,16 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2695,7 +2835,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2734,6 +2874,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -2786,7 +2936,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -2825,6 +2975,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3032,7 +3192,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -3071,6 +3231,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3123,7 +3293,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -3162,6 +3332,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3370,7 +3550,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -3409,6 +3589,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3619,7 +3809,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -3658,6 +3848,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -3878,7 +4078,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -3917,6 +4117,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -4132,7 +4342,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -4171,6 +4381,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {
@@ -4223,7 +4443,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               contain only upper and lowercase alphanumeric characters, and underscores
             </li>
             <li>
-              have only a single period which precedes the file extension: “.pdf”
+              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -4262,6 +4482,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "uploadInProgressText": "Uploading...",
         },
         "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+        "ntroSpecificInstructions": <span>
+          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+          <a
+            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            target="_blank"
+          >
+            More information
+          </a>
+          .
+        </span>,
         "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
         "successTitle": "Success",
         "validation": Object {

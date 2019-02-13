@@ -17,7 +17,7 @@ export default {
                 activeFilter: 'Show only open access records'
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
-            renameFacetsList: {'Display type': 'Publication type', 'Subtype': 'Publication subtype'},
+            renameFacetsList: {'Display type': 'Work type', 'Subtype': 'Work subtype'},
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
@@ -30,15 +30,15 @@ export default {
             // },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace publications',
+            publicationStatsTitle1: 'eSpace works',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
             publicationStatsRowTitle1: 'h-index',
-            publicationStatsRowTitle2: 'Average citation count per publication',
+            publicationStatsRowTitle2: 'Average citation count per work',
             publicationStatsRowTitle3: 'Total citations',
-            publicationStatsRowTitle4: 'Total publications',
-            publicationStatsRowTitle5: 'Publication range',
+            publicationStatsRowTitle4: 'Total works',
+            publicationStatsRowTitle5: 'Works year range',
             publicationStatsNA: 'N/A'
         },
         publicationCitation: {
@@ -147,7 +147,7 @@ export default {
                 order: 0
             },
             scopus: {
-                title: (<span>Hot papers on Scopus</span>),
+                title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
@@ -273,6 +273,40 @@ export default {
                 }
             }
         },
+        thirdPartyLookupTools: {
+            title: 'Third Party Lookup Tools',
+            forms: {
+                incites: {
+                    lookupType: 'incites', // this value should match the 'type' in the path used in api
+                    lookupLabel: 'Incites',
+                    tip: 'View raw output we receive from Incites via their API',
+                    primaryField: {
+                        heading: 'UTs',
+                        fromAria: '',
+                        tip: '',
+                        inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                    },
+                    secondaryField: {
+                        heading: 'API Key',
+                        fromAria: '',
+                        tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
+                        inputPlaceholder: 'Enter API key',
+                        reportInOutput: false, // determines if secondaryField will apear in the results page
+                    },
+                    bottomTip: '',
+                    submitButtonLabel: 'Submit to Incites',
+                },
+            },
+            tooltip: {
+                show: 'Show form',
+                hide: 'Hide form'
+            },
+            resultsLabel: 'Results',
+            noResultsFound: {
+                text: 'No results found'
+            },
+            clearButtonLabel: 'New Search'
+        },
         typeOfDataForm: {
             field: {
                 form: {
@@ -359,9 +393,9 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISBN value',
-                        inputFieldHint: 'Type ISBN value',
+                        inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -404,9 +438,9 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISSN value',
-                        inputFieldHint: 'Type ISSN value',
+                        inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -437,15 +471,107 @@ export default {
                 }
             }
         },
+        ismnForm: {
+            title: 'ISMN',
+            text: 'You can add up to five ISMN values',
+            // help: {
+            //     title: 'ISMN value',
+            //     text: 'Acceptable ISMN formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISMN value',
+                        inputFieldHint: 'Enter ISMN, e.g. 9790720208015',
+                        addButtonLabel: <span>Add&nbsp;ISMN</span>,
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISMN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        isrcForm: {
+            title: 'ISRC',
+            text: 'You can add up to five ISRC values',
+            // help: {
+            //     title: 'ISRC value',
+            //     text: 'Acceptable ISRC formats are....',
+            //     buttonLabel: 'OK'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISRC value',
+                        inputFieldHint: 'Enter ISRC, e.g. US6R21320619',
+                        addButtonLabel: <span>Add&nbsp;ISRC</span>,
+                        remindToAdd: (<span>Pleasepress <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISRC',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Adding contributors',
-            //     text: 'Help text...',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'Authors/Designers name',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
+                ),
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {
@@ -487,7 +613,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this author ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -550,7 +675,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this editor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -615,7 +739,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this creator ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -630,11 +753,13 @@ export default {
         designers: {
             title: 'Designer name',
             description: 'Please provide a list of designers and then select your name from the list.',
-            // help: {
-            //     title: 'Designers',
-            //     text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
-            //     buttonLabel: 'OK'
-            // },
+            help: {
+                title: 'Designers',
+                text: (
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
+                ),
+                buttonLabel: 'OK'
+            },
             field: {
                 form: {
                     locale: {
@@ -676,7 +801,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this designer ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -737,7 +861,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -789,7 +912,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -849,7 +971,6 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
-                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectHint: 'Select this contributor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -934,6 +1055,20 @@ export default {
         },
         newsFeed: {
             title: 'Latest news'
+        },
+        ntroFields: {
+            metadata: {
+                help: {
+                    title: 'Non-traditional research output metadata',
+                    text: (
+                        <React.Fragment>
+                            <h3>Quality indicators</h3>
+                            <p>For more information about each quality indicator option, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'OK'
+                }
+            }
         },
         export: {
             label: 'Export results',
@@ -1148,8 +1283,8 @@ export default {
                     },
                     'rek_display_type': {
                         order: 20,
-                        map: 'Publication type',
-                        title: 'Publication type',
+                        map: 'Work type',
+                        title: 'Work type',
                         combiner: 'is one of',
                         type: null,
                         hint: 'Select document types',
@@ -1250,4 +1385,3 @@ export default {
         }
     }
 };
-

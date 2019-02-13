@@ -102,7 +102,7 @@ export class Files extends Component {
 
         setTimeout(() => {
             const files = ReactDOM.findDOMNode(this.refs.files);
-            window.scrollTo(0, (files.offsetTop + files.scrollHeight - 30));
+            files && window.scrollTo(0, (files.offsetTop + files.scrollHeight - 30));
         }, 80);
     }
 

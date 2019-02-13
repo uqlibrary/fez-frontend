@@ -1,5 +1,7 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
+import {numberToWords} from 'config';
+import {ORG_TYPES_LOOKUP} from 'config/general';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -76,7 +78,6 @@ export class ContributorRow extends PureComponent {
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             selectHint: 'Select this record ([name]) to assign it to you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
@@ -145,8 +146,8 @@ export class ContributorRow extends PureComponent {
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
         const {index, contributor, classes, width} = this.props;
-        const {ordinalData, suffix} = this.props.locale;
-        const contributorOrder = `${index < ordinalData.length ? ordinalData[index] : (index + 1)} ${suffix}`;
+        const {suffix} = this.props.locale;
+        const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
             <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
@@ -158,11 +159,22 @@ export class ContributorRow extends PureComponent {
                     )}
                 </Grid>
                 {
-                    showIdentifierLookup && !!contributor.aut_title &&
+                    showIdentifierLookup || !!contributor.aut_title &&
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
                             `${contributor.aut_org_username || contributor.aut_student_username}`,
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
+                }
+                {
+                    contributor.affiliation === 'NotUQ' &&
+                    <Grid item xs={5}>
+                        {this.getListItemTypoGraphy(
+                            `${contributor.orgaff}`,
+                            `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}

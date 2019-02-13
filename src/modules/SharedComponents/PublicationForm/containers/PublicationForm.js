@@ -1,11 +1,15 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector, change} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
-import {general} from 'config';
+import {general, publicationTypes} from 'config';
 import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
+import moment from 'moment';
+
+import * as recordForms from '../components/Forms';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -43,6 +47,7 @@ const validate = (values) => {
     const data = values.toJS();
     const errors = {};
 
+    // Check authors validation for special cases
     switch(data.rek_display_type) {
         case general.PUBLICATION_TYPE_BOOK:
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
@@ -61,6 +66,22 @@ const validate = (values) => {
         default:
             break;
     }
+
+    // Check start\end dates are valid
+    const endDate = data.fez_record_search_key_end_date && data.fez_record_search_key_end_date.rek_end_date && moment(data.fez_record_search_key_end_date.rek_end_date, 'YYYY-MM-DD').format();
+    const startDate = data.rek_date && moment(data.rek_date).format();
+
+    if(!!endDate && !!startDate && startDate > endDate) {
+        errors.dateRange = locale.validationErrors.dateRange;
+    }
+
+    // Check start/end pages are alid
+    const startPage = data.fez_record_search_key_start_page && data.fez_record_search_key_start_page.rek_start_page;
+    const endPage = data.fez_record_search_key_end_page && data.fez_record_search_key_end_page.rek_end_page;
+    if(!!startPage && !!endPage && startPage > endPage) {
+        errors.pageRange = locale.validationErrors.pageRange;
+    }
+
     return errors;
 };
 
@@ -68,18 +89,66 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
+
 })(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const selector = formValueSelector(FORM_NAME);
+
+const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
+    const displayType = selector(state, 'rek_display_type');
+    const publicationSubtype = selector(state, 'rek_subtype');
+
+    const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
+        type.id === displayType
+    );
+
+    let hasDefaultDocTypeSubType = false;
+    let docTypeSubTypeCombo = null;
+
+    if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
+        hasDefaultDocTypeSubType = true;
+        docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
+    }
+
+    const hasSubtypes = !!selectedPublicationType && selectedPublicationType.length > 0 && !!selectedPublicationType[0].subtypes || false;
+    const subtypes = hasSubtypes && selectedPublicationType[0].subtypes || null;
+    const formComponent = hasSubtypes
+        ? !!publicationSubtype && selectedPublicationType[0].formComponent
+        : (selectedPublicationType.length > 0 && selectedPublicationType[0].formComponent || null);
 
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formValues: formValues,
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        hasSubtypes: hasSubtypes,
+        subtypes: !!publicationSubtype && general.NTRO_SUBTYPES.includes(publicationSubtype) && subtypes.filter(type => general.NTRO_SUBTYPES.includes(type)) || subtypes,
+        subtype: publicationSubtype,
+        formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null,
+        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
+        hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
+        docTypeSubTypeCombo: docTypeSubTypeCombo,
+        isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false,
+        initialValues: {
+            languages: ['eng'],
+            rek_title: props.initialValues.rek_title || ''
+        }
     };
 };
 
-PublicationFormContainer = connect(mapStateToProps)(PublicationFormContainer);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeDisplayType: (docTypeSubType) => {
+            dispatch(change(FORM_NAME, 'rek_display_type', docTypeSubType.docTypeId));
+            dispatch(change(FORM_NAME, 'rek_subtype', docTypeSubType.subtype));
+        },
+        changeFormType: (isNtro) => {
+            dispatch(change(FORM_NAME, 'isNtro', isNtro));
+        }
+    };
+};
+
+PublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationFormContainer);
 
 export default PublicationFormContainer;

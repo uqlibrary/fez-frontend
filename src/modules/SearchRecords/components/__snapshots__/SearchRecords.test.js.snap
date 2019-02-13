@@ -169,7 +169,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
             xs={12}
           >
             <span>
-              Searching for publications
+              Searching for works
             </span>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -257,7 +257,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for publications"
+        message="Searching for works"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -278,7 +278,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
             xs={12}
           >
             <span>
-              Searching for publications
+              Searching for works
             </span>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -314,7 +314,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
             item={true}
           >
             <WithStyles(InlineLoader)
-              message="Searching for publications"
+              message="Searching for works"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -366,7 +366,7 @@ exports[`SearchRecords page should render loading screen while loading search re
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Searching for publications"
+        message="Searching for works"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -415,7 +415,7 @@ exports[`SearchRecords page should render no results 1`] = `
             We were unable to find any results.
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results.
@@ -503,7 +503,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             We were unable to find any results.
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results.
@@ -557,7 +557,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             We were unable to find any results.
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results.
@@ -614,7 +614,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             We were unable to find any results.
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results.
@@ -667,7 +667,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             We were unable to find any results.
           </div>
         }
-        title="No publications found"
+        title="No works found"
       >
         <div>
           We were unable to find any results.
@@ -719,8 +719,8 @@ exports[`SearchRecords page should show available filters or selected filters if
             onFacetsChanged={[Function]}
             renameFacetsList={
               Object {
-                "Display type": "Publication type",
-                "Subtype": "Publication subtype",
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
               }
             }
             showOpenAccessFilter={true}

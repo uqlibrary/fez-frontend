@@ -28,7 +28,8 @@ const styles = (theme) => ({
 export class AdditionalInformation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        isNtro: PropTypes.bool
     };
 
     renderRow = (heading, data, index) => {
@@ -122,6 +123,8 @@ export class AdditionalInformation extends PureComponent {
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
+            case 'rek_start_date': return this.formatPublicationDate(value);
+            case 'rek_end_date': return this.formatPublicationDate(value);
             case 'rek_description': return this.renderHTML(value);
             default: return value;
         }
@@ -206,7 +209,7 @@ export class AdditionalInformation extends PureComponent {
     }
 
     getAbstract = (publication) => {
-        return publication.rek_formatted_abstract || publication.rek_description;
+        return this.props.isNtro ? null : publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ') || null;
     }
 
     // TODO: display original contact email for admin users
@@ -277,7 +280,7 @@ export class AdditionalInformation extends PureComponent {
         if (!this.props.publication || !this.props.publication.rek_display_type_lookup) {
             return null;
         }
-
+        console.log('IN Additional Info - ', this.props.isNtro);
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>

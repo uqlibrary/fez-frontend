@@ -9,7 +9,7 @@ export default class DateCitationView extends PureComponent {
         suffix: PropTypes.string,
         format: PropTypes.string,
         className: PropTypes.string,
-        isLocalised: PropTypes.string
+        isLocalised: PropTypes.bool
     };
 
     static defaultProps = {

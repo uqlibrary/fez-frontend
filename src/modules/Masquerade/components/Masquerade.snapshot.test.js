@@ -2,14 +2,13 @@ import Masquerade from './Masquerade';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
         author: testProps.author || null,
-        actions: testProps.actions || {
-
-        },
+        actions: testProps.actions || {},
         history: testProps.history || {
             push: jest.fn()
-        }
+        },
+        account: testProps.account || {},
+        ...testProps
     };
     return getElement(Masquerade, props, isShallow);
 }

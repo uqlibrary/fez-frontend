@@ -478,8 +478,10 @@ exports[`RichEditor tests  should render component 1`] = `
           disabled={false}
           height={100}
           onChange={[MockFunction]}
+          returnSingleValue={false}
           value=""
         >
+          <span />
           <div
             className=""
           />

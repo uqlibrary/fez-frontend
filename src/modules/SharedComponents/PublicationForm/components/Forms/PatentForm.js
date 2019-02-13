@@ -16,8 +16,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default class PatentForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        vocabId: PropTypes.number
+        submitting: PropTypes.bool
     };
 
     constructor(props) {
@@ -93,7 +92,7 @@ export default class PatentForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}

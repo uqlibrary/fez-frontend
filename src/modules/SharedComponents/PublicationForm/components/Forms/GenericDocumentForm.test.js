@@ -22,11 +22,6 @@ describe('GenericDocumentForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(8);
     });
 
-    it('component with 3 required input fields', () => {
-        const wrapper = setup({});
-        expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
-    });
-
     it('component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
         wrapper.find('Field').forEach(field => {

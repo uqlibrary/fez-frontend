@@ -101,31 +101,6 @@ exports[`BookChapterForm renders  component 1`] = `
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "label": "Publication subtype",
-                "loading": "Loading",
-              }
-            }
-            name="rek_subtype"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-            vocabId={0}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={6}
           xs={12}
         >
           <Field
@@ -152,10 +127,24 @@ exports[`BookChapterForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <p>
+            For more information about identification of author/creator/designer, click 
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>,
+          "title": "Authors/Designers name",
+        }
+      }
       title="Authors"
     >
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -225,18 +214,6 @@ exports[`BookChapterForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this author ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed author",
@@ -246,6 +223,7 @@ exports[`BookChapterForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -332,18 +310,6 @@ exports[`BookChapterForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this editor ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed editor",
@@ -375,10 +341,10 @@ exports[`BookChapterForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISBN",
-                "inputFieldHint": "Type ISBN value",
+                "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -449,10 +415,10 @@ exports[`BookChapterForm renders  component 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add ISSN",
-                "inputFieldHint": "Type ISSN value",
+                "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Please, press 
+                  Pleasepress 
                   <b>
                     ENTER
                   </b>
@@ -509,7 +475,7 @@ exports[`BookChapterForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Other publication details"
+      title="Other work details"
     >
       <WithStyles(Grid)
         container={true}
@@ -536,6 +502,8 @@ exports[`BookChapterForm renders  component 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            error={false}
+            errorText=""
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
@@ -556,6 +524,8 @@ exports[`BookChapterForm renders  component 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            error={false}
+            errorText=""
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"

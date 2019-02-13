@@ -9,6 +9,7 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';
+import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import {validation} from 'config';
 import {locale} from 'locale';
@@ -16,10 +17,14 @@ import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, NTRO_SUBTYPE_RREB_INDUSTRY, NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT, NTRO_SUBTYPE_RREB_OTHER } from 'config/general';
 
 export default class ResearchReportForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        isNtro: PropTypes.bool,
+        isAuthorSelected: PropTypes.bool,
+        formValues: PropTypes.any
     };
 
     constructor(props) {
@@ -32,12 +37,18 @@ export default class ResearchReportForm extends Component {
 
     render() {
         const txt = formLocale.researchReport;
+        const pubsMandatory = this.props.formValues &&
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_PUBLIC_SECTOR) ||
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_INDUSTRY) ||
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT) ||
+            (this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_OTHER)
+        ;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={16}>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     autoFocus
@@ -52,7 +63,7 @@ export default class ResearchReportForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -60,9 +71,11 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publicationPlace}
+                                    required={pubsMandatory}
+                                    validate={pubsMandatory ? [validation.required] : undefined}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -70,22 +83,48 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publisher}
+                                    required={pubsMandatory}
+                                    validate={pubsMandatory ? [validation.required] : undefined}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
-                                    name="fez_record_search_key_total_pages.rek_total_pages"
-                                    type="text"
                                     disabled={this.props.submitting}
+                                    name="fez_record_search_key_report_number.rek_report_number"
+                                    type="text"
                                     fullWidth
-                                    required
-                                    {...txt.information.fieldLabels.totalPages}
-                                    normalize={this.getNumbersOnly}
-                                    validate={[validation.required]}
+                                    {...txt.information.fieldLabels.reportNumber}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            {
+                                !this.props.isNtro &&
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        name="fez_record_search_key_total_pages.rek_total_pages"
+                                        type="text"
+                                        disabled={this.props.submitting}
+                                        fullWidth
+                                        required
+                                        {...txt.information.fieldLabels.totalPages}
+                                        normalize={this.getNumbersOnly}
+                                        validate={[validation.required]}
+                                    />
+                                </Grid>
+                            }
+                            <Grid item xs={12} sm={this.props.isNtro ? 6 : 4}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_doi.rek_doi"
+                                    type="text"
+                                    fullWidth
+                                    validate={[validation.doi]}
+                                    {...txt.information.fieldLabels.doi}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={this.props.isNtro ? 6 : 4}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
@@ -97,14 +136,17 @@ export default class ResearchReportForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid iteam xs={12}>
-                                <Field
-                                    component={SeriesField}
-                                    name="fez_record_search_key_series.rek_series"
-                                    disabled={this.props.submitting}
-                                    {...txt.information.fieldLabels.series}
-                                />
-                            </Grid>
+                            {
+                                !this.props.isNtro &&
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={SeriesField}
+                                        name="fez_record_search_key_series.rek_series"
+                                        disabled={this.props.submitting}
+                                        {...txt.information.fieldLabels.series}
+                                    />
+                                </Grid>
+                            }
                         </Grid>
                     </StandardCard>
                 </Grid>
@@ -114,13 +156,32 @@ export default class ResearchReportForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             name="authors"
+                            isNtro={this.props.isNtro}
                             locale={txt.authors.field}
                             showContributorAssignment
-                            className="requiredField"
+                            required
                             validate={[validation.authorRequired]}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                            isNtro={this.props.isNtro}
+                        />
                     </StandardCard>
                 </Grid>
+                {
+                    this.props.isNtro &&
+                    <NtroFields
+                        submitting={this.props.submitting}
+                        showContributionStatement={this.props.isAuthorSelected}
+                        hideIsmn
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent={!this.props.isNtro}
+                        hideOriginalFormat
+                        hideAudienceSize
+                    />
+                }
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
@@ -154,19 +215,22 @@ export default class ResearchReportForm extends Component {
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
                         <Grid container spacing={16}>
-                            <Grid iteam xs={12}>
-                                <Field
-                                    component={TextField}
-                                    name="rek_description"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiline
-                                    rows={3}
-                                    {...txt.other.fieldLabels.abstract}
-                                />
-                            </Grid>
-                            <Grid iteam xs={12}>
+                            {
+                                !this.props.isNtro &&
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        name="rek_description"
+                                        type="text"
+                                        disabled={this.props.submitting}
+                                        fullWidth
+                                        multiline
+                                        rows={3}
+                                        {...txt.other.fieldLabels.abstract}
+                                    />
+                                </Grid>
+                            }
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="comments"
@@ -177,7 +241,7 @@ export default class ResearchReportForm extends Component {
                                     {...txt.other.fieldLabels.notes}
                                 />
                             </Grid>
-                            <Grid iteam xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="rek_link"

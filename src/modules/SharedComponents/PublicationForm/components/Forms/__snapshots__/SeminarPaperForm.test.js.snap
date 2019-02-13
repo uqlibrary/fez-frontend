@@ -103,13 +103,27 @@ exports[`SeminarPaperForm renders  component 1`] = `
     xs={12}
   >
     <StandardCard
+      help={
+        Object {
+          "buttonLabel": "OK",
+          "text": <p>
+            For more information about identification of author/creator/designer, click 
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>,
+          "title": "Authors/Designers name",
+        }
+      }
       title="Authors"
     >
       <WithStyles(Typography)>
         Please provide a list of authors and then select your name from the list.
       </WithStyles(Typography)>
       <Field
-        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -179,18 +193,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "ordinalData": Array [
-                  "First",
-                  "Second",
-                  "Third",
-                  "Fourth",
-                  "Fifth",
-                  "Sixth",
-                  "Seventh",
-                  "Eighth",
-                  "Ninth",
-                  "Tenth",
-                ],
                 "selectHint": "Select this author ([name]) to assign it as you",
                 "selectedHint": "This is you",
                 "suffix": " listed author",
@@ -200,6 +202,7 @@ exports[`SeminarPaperForm renders  component 1`] = `
           }
         }
         name="authors"
+        required={true}
         showContributorAssignment={true}
         validate={
           Array [
@@ -245,7 +248,7 @@ exports[`SeminarPaperForm renders  component 1`] = `
             fullWidth={true}
             label="Link"
             name="fez_record_search_key_link[0].rek_link"
-            placeholder="Enter a valid URL for this publication"
+            placeholder="Enter a valid URL for this work"
             type="text"
             validate={
               Array [

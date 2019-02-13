@@ -2724,7 +2724,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                   }
                 }
                 initialNumberOfAuthors={10}
-                prefix=" edited by "
+                prefix=" Edited by "
                 publication={
                   Object {
                     "fez_record_search_key_access_conditions": null,
@@ -3168,7 +3168,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                     }
                   }
                   initialNumberOfAuthors={10}
-                  prefix=" edited by "
+                  prefix=" Edited by "
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -4019,7 +4019,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                   <span
                     className="citationEditors"
                   >
-                     edited by 
+                     Edited by 
                     <CitationView
                       className="citationAuthor"
                       key="citationAuthor_1"
@@ -7307,7 +7307,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                   }
                 }
                 initialNumberOfAuthors={10}
-                prefix=" edited by "
+                prefix=" Edited by "
                 publication={Object {}}
                 searchKey={
                   Object {
@@ -7336,7 +7336,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                     }
                   }
                   initialNumberOfAuthors={10}
-                  prefix=" edited by "
+                  prefix=" Edited by "
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -7815,7 +7815,10 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
             >
               <span
                 className="citationPageRange empty"
-              />
+              >
+                 
+                 
+              </span>
             </PageRangeCitationView>
             <DoiCitationView
               doi={null}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
-import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import {ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 import UnpublishedStatusField from './Fields/UnpublishedStatusField';
 
 export default class AdvancedSearchRowInput extends PureComponent {
@@ -61,8 +61,6 @@ export default class AdvancedSearchRowInput extends PureComponent {
                 return TextField;
             case 'PublisherLookup':
                 return PublisherField;
-            case 'SubTypeLookup':
-                return PublicationSubtypeField;
             case 'ThesisTypeLookup':
                 return ThesisSubtypeField;
             case 'CollectionsLookup':
@@ -115,7 +113,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'TextField':
                 return {
                     ...textFieldMui1Props,
-                    'autoComplete': 'off',
+                    'autoComplete': 'search',
                     'onChange': (event) => this.props.onChange(event.target.value),
                 };
             case 'PublisherLookup':
@@ -136,10 +134,6 @@ export default class AdvancedSearchRowInput extends PureComponent {
                             this.props.onChange(0, '');
                         }
                     }
-                };
-            case 'SubTypeLookup':
-                return {
-                    ...selectDefaultProps,
                 };
             case 'ThesisTypeLookup':
                 return {

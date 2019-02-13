@@ -3424,7 +3424,7 @@ export const journalArticle = {
     "rek_genre": "Journal Article",
     "rek_genre_type": "Article (original research)",
     "rek_formatted_title": null,
-    "rek_formatted_abstract": null,
+    "rek_formatted_abstract": 'This is a test of the&nbsp;abstract',
     "rek_depositor_affiliation": 1247,
     "rek_thomson_citation_count": 0,
     "rek_subtype": "Article (original research)",
