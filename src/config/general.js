@@ -567,7 +567,6 @@ export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 
 export const UNPUBLISHED_STATUS = [
-    {value: undefined, text: 'Select status'},
     {value: 'Any unpublished', text: 'Any unpublished'},
     {value: 'In Creation', text: 'In Creation'},
     {value: 'In Draft', text: 'In Draft'},
