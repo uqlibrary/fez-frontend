@@ -94,7 +94,7 @@ export const pathConfig = {
     },
     admin: {
         masquerade: '/admin/masquerade',
-        collectionForm: '/admin/collection'
+        collectionForm: '/admin/collection',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished'
     },
@@ -119,7 +119,6 @@ export const pathConfig = {
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', 'admin/collection', '/tool/lookup', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
-];
 
 // TODO: will we even have roles?
 export const roles = {
