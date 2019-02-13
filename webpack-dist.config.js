@@ -18,7 +18,7 @@ const options = {
     policy: [
         {
             userAgent: "*",
-            crawlDelay: 10,
+            // crawlDelay: 10,
             allow: [
                 "/data/*?*Signature=*&Key-Pair-Id=*"
             ],
