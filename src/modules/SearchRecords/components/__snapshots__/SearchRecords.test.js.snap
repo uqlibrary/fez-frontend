@@ -26,6 +26,7 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -73,6 +74,7 @@ exports[`SearchRecords page renders loading screen while export publications loa
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -109,6 +111,7 @@ exports[`SearchRecords page should render advanced search component 1`] = `
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={true}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -145,6 +148,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -246,6 +250,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={true}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -355,6 +360,7 @@ exports[`SearchRecords page should render loading screen while loading search re
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={true}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -399,6 +405,7 @@ exports[`SearchRecords page should render no results 1`] = `
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -452,6 +459,7 @@ exports[`SearchRecords page should render placeholders 1`] = `
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -487,6 +495,7 @@ exports[`SearchRecords page should show available filters or selected filters if
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -541,6 +550,7 @@ exports[`SearchRecords page should show available filters or selected filters if
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -598,6 +608,7 @@ exports[`SearchRecords page should show available filters or selected filters if
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}
@@ -651,6 +662,7 @@ exports[`SearchRecords page should show available filters or selected filters if
           className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
           searchLoading={false}
           showAdvancedSearchButton={true}
           updateFacetExcludesFromSearchFields={[Function]}

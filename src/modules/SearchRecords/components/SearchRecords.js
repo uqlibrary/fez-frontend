@@ -144,7 +144,7 @@ class SearchRecords extends PureComponent {
             ? locale.components.sorting.sortBy[1].value
             : providedSearchQuery.sortBy;
 
-        if (!this.props.isUnpublishedBufferPage) {
+        if (!this.props.isUnpublishedBufferPage && !!providedSearchQuery.searchQueryParams) {
             delete providedSearchQuery.searchQueryParams.rek_status;
             delete providedSearchQuery.searchQueryParams.rek_created_date;
             delete providedSearchQuery.searchQueryParams.rek_updated_date;
