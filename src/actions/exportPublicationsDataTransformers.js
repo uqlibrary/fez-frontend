@@ -1,7 +1,7 @@
 import FileSaver from 'file-saver';
-import locale from 'locale/components';
+import locale from '../locale/components';
 import moment from 'moment';
-import {exportFormatToExtension} from 'config/general';
+import {exportFormatToExtension} from '../config/general';
 
 export const getExceptionMessage = (format) => `Export format ${format} is not supported.`;
 

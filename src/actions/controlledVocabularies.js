@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import {VOCABULARIES_API} from 'repositories/routes';
+import {get} from '../repositories/generic';
+import {VOCABULARIES_API} from '../repositories/routes';
 
 /**
  * Fetches the controlled vocabularies list

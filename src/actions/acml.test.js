@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as acmlActions from './acml';
 
 describe('ACML actions', () => {

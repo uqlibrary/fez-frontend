@@ -1,9 +1,9 @@
 jest.mock('file-saver', ()=>({saveAs: jest.fn((data, filename) => [data, filename])}));
 
 import FileSaver from 'file-saver';
-import {exportSearchToExcel as exportSearchToExcelResponse} from "mock/data/testing/searchRecords";
+import {exportSearchToExcel as exportSearchToExcelResponse} from '../mock/data/testing/searchRecords';
 import * as transformers from './exportPublicationsDataTransformers';
-import {exportFormatToExtension} from 'config/general';
+import {exportFormatToExtension} from '../config/general';
 
 beforeEach(() => {
     FileSaver.saveAs.mockClear();

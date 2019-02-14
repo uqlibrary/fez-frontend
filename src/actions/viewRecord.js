@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import {EXISTING_RECORD_API} from 'repositories/routes';
+import {get} from '../repositories/generic';
+import {EXISTING_RECORD_API} from '../repositories/routes';
 
 /**
  * Load publication

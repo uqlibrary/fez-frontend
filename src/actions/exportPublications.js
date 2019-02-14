@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
+import {get} from '../repositories/generic';
 import {promptForDownload} from './exportPublicationsDataTransformers';
 
 /**

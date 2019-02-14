@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import {GET_ACML_QUICK_TEMPLATES_API} from 'repositories/routes';
+import {get} from '../repositories/generic';
+import {GET_ACML_QUICK_TEMPLATES_API} from '../repositories/routes';
 
 /**
  * Load a list of file access types from fez, eg open access, embargo, etc
