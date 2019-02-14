@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as authorsActions from './authors';
-import * as mockData from 'mock/data';
-import * as routes from 'config/routes';
+import * as mockData from '../mock/data';
+import * as routes from '../config/routes';
 
 describe('Action creators for authors', () => {
     // extend expect to check actions

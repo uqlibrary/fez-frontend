@@ -1,5 +1,5 @@
 import * as transformers from './transformers';
-import {APP_URL} from 'config';
+
 const moment = require('moment');
 
 describe('getRecordLinkSearchKey test ', () => {

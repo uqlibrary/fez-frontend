@@ -1,5 +1,5 @@
-import locale from 'locale/global';
-import templates from 'locale/templates';
+import locale from '../locale/global';
+import templates from '../locale/templates';
 
 const moment = require('moment');
 

@@ -1,5 +1,4 @@
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
 import * as thirdPartyLookupTool from './thirdPartyLookupTool';
 
 const mockLookupResult = {

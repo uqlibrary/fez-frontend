@@ -1,7 +1,6 @@
-import {hindexResponse, currentAuthorStats} from 'mock/data/academicStats';
-
+import {hindexResponse, currentAuthorStats} from '../mock/data/academicStats';
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as academicActions from './academic';
 
 describe('Academic action creators', () => {
