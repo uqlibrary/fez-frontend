@@ -159,7 +159,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     ...selectDefaultProps,
                     'autoWidth': false,
                     'hideLabel': true,
-                    'displayEmtpy': false,
+                    'displayEmpty': false,
                     'onChange': (item) => this.props.onChange(item)
                 };
             default: return {};
