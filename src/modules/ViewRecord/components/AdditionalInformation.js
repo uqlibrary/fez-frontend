@@ -280,7 +280,6 @@ export class AdditionalInformation extends PureComponent {
         if (!this.props.publication || !this.props.publication.rek_display_type_lookup) {
             return null;
         }
-        console.log('IN Additional Info - ', this.props.isNtro);
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
