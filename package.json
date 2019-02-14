@@ -232,6 +232,13 @@
       "enzyme"
     ],
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/modules/**/*.{js,jsx}",
+      "!src/**/index.js",
+      "src/actions/*.{js,jsx}",
+      "src/middleware/*.{js,jsx}",
+      "src/reducers/*.{js,jsx}"
+    ],
     "coverageReporters": [
       "html",
       "text"

@@ -14,10 +14,8 @@ const isLeftNodeApiToken = node => {
             node.left.object.property.name === 'common' &&
             node.left.property.name === 'TOKEN_NAME'
         );
-    } else {
-        console.log('It worked');
-        return false;
     }
+    return false;
 };
 
 const isMockToken = node => {
