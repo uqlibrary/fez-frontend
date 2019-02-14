@@ -4,6 +4,7 @@ const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
@@ -82,6 +83,10 @@ const webpackConfig = {
         host: '0.0.0.0'
     },
     plugins: [
+        new AssetsPlugin({
+            filename: 'frontend.json',
+            path: resolve(__dirname, './dist/', config.basePath),
+        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
