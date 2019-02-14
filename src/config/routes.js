@@ -88,11 +88,9 @@ export const pathConfig = {
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: {all: herdcStatus}}),
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: {all: institutionalStatus}})
     },
-    thirdPartyTools: {
-        lookup: '/tool/lookup',
-    },
     admin: {
         masquerade: '/admin/masquerade',
+        thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished'
     },
@@ -116,7 +114,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', '/admin/unpublished', '/tool/lookup', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
+    '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 
 // TODO: will we even have roles?
@@ -290,13 +288,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
             },
-            {
-                path: pathConfig.thirdPartyTools.lookup,
-                component: components.ThirdPartyLookupTool,
-                exact: true,
-                access: [roles.admin],
-                pageTitle: locale.components.thirdPartyLookupTools.title
-            }
         ] : []),
         ...(account && account.canMasquerade ? [
             {
@@ -312,6 +303,15 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.unpublished.title
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [ // this should check if the user is an admin
+            {
+                path: pathConfig.admin.thirdPartyTools,
+                component: components.ThirdPartyLookupTool,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.components.thirdPartyLookupTools.title
             }
         ] : []),
         ...publicPages,
@@ -407,10 +407,6 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.authorStatistics
             },
             {
-                linkTo: pathConfig.thirdPartyTools.lookup,
-                ...locale.menu.thirdPartyLookupTools,
-            },
-            {
                 divider: true,
                 path: '/234234234242'
             }
@@ -419,6 +415,11 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
+            },
+            {
+                // maybe this should be in some admin bit? tbd
+                linkTo: pathConfig.admin.thirdPartyTools,
+                ...locale.menu.thirdPartyLookupTools,
             },
             {
                 linkTo: getSearchUrl({searchQuery: {'rek_status': {'value': -4}}}, pathConfig.admin.unpublished),

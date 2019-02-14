@@ -77,7 +77,7 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    const thirdPartyLookupUrlRoot = API_URL + pathConfig.thirdPartyTools.lookup.substring('/'.length);
+    const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
         // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
         console.log('skipping root 403 handling for 3rd party api');
