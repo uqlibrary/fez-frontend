@@ -309,4 +309,165 @@ describe('AdvancedSearchRowInput', () => {
         wrapper.setProps({value: 'test'});
         expect(childrenFn).toHaveBeenCalled();
     });
+
+    it('should call onChange from input props for TextField', () => {
+        const onChangeFn = jest.fn((value) => expect(value).toEqual('Testing'));
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('WithStyles(Input)').simulate('change', {target: {value: 'Testing'}});
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'TextField',
+                validation: ['required']
+            },
+            value: null,
+            onChange: onChangeFn
+        });
+    });
+
+    it('should call onChange from input props for AuthorIdLookup for numeric value', () => {
+        const onChangeFn = jest.fn((id, value) => {
+            expect(id).toEqual('1234');
+            expect(value).toEqual('Test value');
+        });
+
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps, true, true);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('AuthorIdField').simulate('change', {id: '1234', value: 'Test value'});
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'AuthorIdLookup',
+                validation: ['required'],
+            },
+            value: null,
+            onChange: onChangeFn,
+        });
+    });
+
+    it('should call onChange from input props for AuthorIdLookup for non-numeric value', () => {
+        const onChangeFn = jest.fn((id, value) => {
+            expect(id).toEqual(0);
+            expect(value).toEqual('');
+        });
+
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps, true, true);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('AuthorIdField').simulate('change', {id: 'test', value: 'Test value'});
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'AuthorIdLookup',
+                validation: ['required'],
+            },
+            value: null,
+            onChange: onChangeFn,
+        });
+    });
+
+    it('should call onChange from input props for OrgUnitLookup field', () => {
+        const onChangeFn = jest.fn((value, label) => {
+            expect(value).toEqual('Test Value');
+            expect(label).toEqual('Test Value');
+        });
+
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps, true, true);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('OrgUnitNameField').simulate('change', {id: '1245', value: 'Test Value'});
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'OrgUnitLookup',
+                validation: ['required'],
+            },
+            value: null,
+            onChange: onChangeFn,
+        });
+    });
+
+    it('should call onChange from input props for StatusLookup field', () => {
+        const onChangeFn = jest.fn((value) => {
+            expect(value).toEqual('Test Value');
+        });
+
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps, true, true);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('UnpublishedStatusField').simulate('change', 'Test Value');
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'StatusLookup',
+                validation: ['required'],
+            },
+            value: null,
+            onChange: onChangeFn,
+        });
+    });
+
+    it('should call onChange from input props for CollectionsLookup field', () => {
+        const onChangeFn = jest.fn((value) => {
+            expect(value).toEqual('Test Value');
+        });
+
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps, true, true);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('CollectionsSelectField').simulate('change', 'Test Value');
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'CollectionsLookup',
+                validation: ['required'],
+            },
+            value: [],
+            onChange: onChangeFn,
+        });
+    });
+
+    it('should call onChange from input props from ThesisTypeLookup field', () => {
+        const onChangeFn = jest.fn((value, label) => {
+            expect(value).toEqual('Test');
+            expect(label).toEqual('Test');
+        });
+
+        const childrenFn = jest.fn((InputComponent, inputProps) => {
+            const wrapper = getElement(InputComponent, inputProps, true, true);
+            expect(wrapper).toMatchSnapshot();
+            wrapper.find('ThesisSubtypeField').simulate('change', 'Test');
+            expect(onChangeFn).toHaveBeenCalled();
+        });
+
+        setup({
+            children: childrenFn,
+            inputField: {
+                type: 'ThesisTypeLookup',
+                validation: ['required'],
+            },
+            value: [],
+            onChange: onChangeFn,
+        });
+    });
 });

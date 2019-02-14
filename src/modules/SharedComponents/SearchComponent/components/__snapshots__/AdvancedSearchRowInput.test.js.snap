@@ -1,5 +1,763 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AdvancedSearchRowInput should call onChange from input props for AuthorIdLookup for non-numeric value 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction],
+        "subscribe": [MockFunction],
+      }
+    }
+  >
+    <AuthorIdField
+      allowFreeText={true}
+      aria-label={undefined}
+      error={true}
+      errorText="This field is required"
+      hintText={undefined}
+      label={undefined}
+      onChange={[Function]}
+      value={null}
+    />
+  </Provider>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "allowFreeText": true,
+      "aria-label": undefined,
+      "error": true,
+      "errorText": "This field is required",
+      "hintText": undefined,
+      "label": undefined,
+      "onChange": [Function],
+      "value": null,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "allowFreeText": true,
+        "aria-label": undefined,
+        "error": true,
+        "errorText": "This field is required",
+        "hintText": undefined,
+        "label": undefined,
+        "onChange": [Function],
+        "value": null,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for AuthorIdLookup for numeric value 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction],
+        "subscribe": [MockFunction],
+      }
+    }
+  >
+    <AuthorIdField
+      allowFreeText={true}
+      aria-label={undefined}
+      error={true}
+      errorText="This field is required"
+      hintText={undefined}
+      label={undefined}
+      onChange={[Function]}
+      value={null}
+    />
+  </Provider>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "allowFreeText": true,
+      "aria-label": undefined,
+      "error": true,
+      "errorText": "This field is required",
+      "hintText": undefined,
+      "label": undefined,
+      "onChange": [Function],
+      "value": null,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "allowFreeText": true,
+        "aria-label": undefined,
+        "error": true,
+        "errorText": "This field is required",
+        "hintText": undefined,
+        "label": undefined,
+        "onChange": [Function],
+        "value": null,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for CollectionsLookup field 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction],
+        "subscribe": [MockFunction],
+      }
+    }
+  >
+    <CollectionsSelectField
+      aria-label={undefined}
+      autoWidth={false}
+      displayEmpty={true}
+      error={false}
+      errorHint={undefined}
+      errorText={undefined}
+      hideLabel={true}
+      hintText={undefined}
+      label={undefined}
+      loadingHint={undefined}
+      multiple={undefined}
+      onChange={[MockFunction]}
+      selectedValue={Array []}
+    />
+  </Provider>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "aria-label": undefined,
+      "autoWidth": false,
+      "displayEmpty": true,
+      "error": false,
+      "errorHint": undefined,
+      "errorText": undefined,
+      "hideLabel": true,
+      "hintText": undefined,
+      "label": undefined,
+      "loadingHint": undefined,
+      "multiple": undefined,
+      "onChange": [MockFunction],
+      "selectedValue": Array [],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "aria-label": undefined,
+        "autoWidth": false,
+        "displayEmpty": true,
+        "error": false,
+        "errorHint": undefined,
+        "errorText": undefined,
+        "hideLabel": true,
+        "hintText": undefined,
+        "label": undefined,
+        "loadingHint": undefined,
+        "multiple": undefined,
+        "onChange": [MockFunction],
+        "selectedValue": Array [],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for OrgUnitLookup field 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction],
+        "subscribe": [MockFunction],
+      }
+    }
+  >
+    <OrgUnitNameField
+      allowFreeText={true}
+      aria-label={undefined}
+      error={true}
+      errorText="This field is required"
+      hintText={undefined}
+      label={undefined}
+      onChange={[Function]}
+      value={null}
+    />
+  </Provider>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "allowFreeText": true,
+      "aria-label": undefined,
+      "error": true,
+      "errorText": "This field is required",
+      "hintText": undefined,
+      "label": undefined,
+      "onChange": [Function],
+      "value": null,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "allowFreeText": true,
+        "aria-label": undefined,
+        "error": true,
+        "errorText": "This field is required",
+        "hintText": undefined,
+        "label": undefined,
+        "onChange": [Function],
+        "value": null,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for StatusLookup field 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction],
+        "subscribe": [MockFunction],
+      }
+    }
+  >
+    <UnpublishedStatusField
+      aria-label={undefined}
+      autoWidth={false}
+      displayEmpty={false}
+      error={true}
+      errorText="This field is required"
+      hideLabel={true}
+      hintText={undefined}
+      label={undefined}
+      onChange={[Function]}
+      selectedValue={null}
+    />
+  </Provider>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "aria-label": undefined,
+      "autoWidth": false,
+      "displayEmpty": false,
+      "error": true,
+      "errorText": "This field is required",
+      "hideLabel": true,
+      "hintText": undefined,
+      "label": undefined,
+      "onChange": [Function],
+      "selectedValue": null,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "aria-label": undefined,
+        "autoWidth": false,
+        "displayEmpty": false,
+        "error": true,
+        "errorText": "This field is required",
+        "hideLabel": true,
+        "hintText": undefined,
+        "label": undefined,
+        "onChange": [Function],
+        "selectedValue": null,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for TextField 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextField
+    aria-label={undefined}
+    autoComplete="search"
+    error={true}
+    errorText="This field is required"
+    label={null}
+    onChange={[Function]}
+    placeholder={undefined}
+    required={false}
+    select={false}
+    variant="standard"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "aria-describedby": undefined,
+      "aria-label": undefined,
+      "children": Array [
+        null,
+        <WithStyles(Input)
+          autoComplete="search"
+          autoFocus={undefined}
+          defaultValue={undefined}
+          fullWidth={undefined}
+          id={undefined}
+          inputProps={undefined}
+          inputRef={undefined}
+          multiline={undefined}
+          name={undefined}
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          placeholder={undefined}
+          rows={undefined}
+          rowsMax={undefined}
+          type={undefined}
+          value={undefined}
+        />,
+        undefined,
+      ],
+      "className": undefined,
+      "error": true,
+      "errorText": "This field is required",
+      "fullWidth": undefined,
+      "required": false,
+      "variant": "standard",
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoComplete": "search",
+          "autoFocus": undefined,
+          "defaultValue": undefined,
+          "fullWidth": undefined,
+          "id": undefined,
+          "inputProps": undefined,
+          "inputRef": undefined,
+          "multiline": undefined,
+          "name": undefined,
+          "onBlur": undefined,
+          "onChange": [Function],
+          "onFocus": undefined,
+          "placeholder": undefined,
+          "rows": undefined,
+          "rowsMax": undefined,
+          "type": undefined,
+          "value": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "aria-describedby": undefined,
+        "aria-label": undefined,
+        "children": Array [
+          null,
+          <WithStyles(Input)
+            autoComplete="search"
+            autoFocus={undefined}
+            defaultValue={undefined}
+            fullWidth={undefined}
+            id={undefined}
+            inputProps={undefined}
+            inputRef={undefined}
+            multiline={undefined}
+            name={undefined}
+            onBlur={undefined}
+            onChange={[Function]}
+            onFocus={undefined}
+            placeholder={undefined}
+            rows={undefined}
+            rowsMax={undefined}
+            type={undefined}
+            value={undefined}
+          />,
+          undefined,
+        ],
+        "className": undefined,
+        "error": true,
+        "errorText": "This field is required",
+        "fullWidth": undefined,
+        "required": false,
+        "variant": "standard",
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoComplete": "search",
+            "autoFocus": undefined,
+            "defaultValue": undefined,
+            "fullWidth": undefined,
+            "id": undefined,
+            "inputProps": undefined,
+            "inputRef": undefined,
+            "multiline": undefined,
+            "name": undefined,
+            "onBlur": undefined,
+            "onChange": [Function],
+            "onFocus": undefined,
+            "placeholder": undefined,
+            "rows": undefined,
+            "rowsMax": undefined,
+            "type": undefined,
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props from ThesisTypeLookup field 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction],
+        "subscribe": [MockFunction],
+      }
+    }
+  >
+    <ThesisSubtypeField
+      aria-label={undefined}
+      autoWidth={false}
+      displayEmpty={true}
+      error={false}
+      errorText={undefined}
+      hideLabel={true}
+      hintText={undefined}
+      label={undefined}
+      multiple={undefined}
+      onChange={[Function]}
+      selectedValue={Array []}
+    />
+  </Provider>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "aria-label": undefined,
+      "autoWidth": false,
+      "displayEmpty": true,
+      "error": false,
+      "errorText": undefined,
+      "hideLabel": true,
+      "hintText": undefined,
+      "label": undefined,
+      "multiple": undefined,
+      "onChange": [Function],
+      "selectedValue": Array [],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "aria-label": undefined,
+        "autoWidth": false,
+        "displayEmpty": true,
+        "error": false,
+        "errorText": undefined,
+        "hideLabel": true,
+        "hintText": undefined,
+        "label": undefined,
+        "multiple": undefined,
+        "onChange": [Function],
+        "selectedValue": Array [],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
 exports[`AdvancedSearchRowInput should render default view 1`] = `""`;
 
 exports[`AdvancedSearchRowInput should render given children function 1`] = `"Testing"`;
