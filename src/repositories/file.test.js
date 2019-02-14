@@ -1,6 +1,6 @@
 import {putUploadFile} from './file';
-import * as repositories from 'repositories';
-import {locale} from 'locale';
+import * as repositories from '../repositories';
+import {locale} from '../locale';
 
 describe('File repository tests ', () => {
     // extend expect to check actions

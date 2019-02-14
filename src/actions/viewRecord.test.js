@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as viewRecordActions from './viewRecord';
-import * as mockData from 'mock/data';
-import {locale} from 'locale'
+import * as mockData from '../mock/data';
+import {locale} from '../locale'
 
 describe('View record actions', () => {
     const testPid = "UQ:396321";

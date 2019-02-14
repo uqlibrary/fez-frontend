@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as controlledVocabActions from './controlledVocabularies';
 
 describe('Controlled Vocabularies actions', () => {

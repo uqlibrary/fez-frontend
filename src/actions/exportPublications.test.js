@@ -1,11 +1,11 @@
 jest.mock('./exportPublicationsDataTransformers');
 
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as exportPublicationsActions from './exportPublications';
-import {exportSearchToExcel as exportSearchToExcelResponse} from "mock/data/testing/searchRecords";
+import {exportSearchToExcel as exportSearchToExcelResponse} from "../mock/data/testing/searchRecords";
 import {promptForDownload} from './exportPublicationsDataTransformers';
-import {exportFormatToExtension} from 'config/general';
+import {exportFormatToExtension} from '../config/general';
 
 beforeEach(() => {
     promptForDownload.mockClear();

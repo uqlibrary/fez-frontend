@@ -22,9 +22,9 @@ Template for actions unit tests:
 ````javascript
 
 import * as actions from './actionTypes';
-import * as repositories from 'repositories';
+import * as repositories from '../repositories';
 import * as [ACTIONS] from './[ACTIONS]';
-import * as mockData from 'mock/data';
+import * as mockData from '../mock/data';
 
 describe('[ACTIONS NAME] actions', () => {
     // extend expect to check actions
