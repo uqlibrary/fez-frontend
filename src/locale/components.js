@@ -274,17 +274,17 @@ export default {
             }
         },
         thirdPartyLookupTools: {
-            title: 'Third Party Lookup Tools',
+            title: 'Lookup Tools - view raw output from APIs',
             forms: {
                 incites: {
                     lookupType: 'incites', // this value should match the 'type' in the path used in api
                     lookupLabel: 'Incites',
-                    tip: 'View raw output we receive from Incites via their API',
+                    // tip: 'View raw output we receive from Incites via their API',
                     primaryField: {
                         heading: 'UTs',
                         fromAria: '',
                         tip: '',
-                        inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                        inputPlaceholder: 'Enter one or more UTs separated by a comma e.g. 000455548800001',
                     },
                     secondaryField: {
                         heading: 'API Key',
