@@ -279,7 +279,6 @@ export default {
                 incites: {
                     lookupType: 'incites', // this value should match the 'type' in the path used in api
                     lookupLabel: 'Incites',
-                    // tip: 'View raw output we receive from Incites via their API',
                     primaryField: {
                         heading: 'UTs',
                         fromAria: '',
