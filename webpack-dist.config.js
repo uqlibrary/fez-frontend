@@ -112,8 +112,7 @@ const webpackConfig = {
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        new ExtractTextPlugin('[name]-[hash].min.css'),
-        new ExtractTextPlugin2('frontend.min.css'),
+        new ExtractTextPlugin('frontend-css/[name]-[hash].min.css'),
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
@@ -200,11 +199,6 @@ const webpackConfig = {
                     fallback: "style-loader",
                     use: "css-loader!sass-loader",
                 }),
-            },
-            {
-                test: /\.scss/,
-                include: resolve(__dirname, './dist'),
-                loader: ExtractTextPlugin2.extract('style', 'css')
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
