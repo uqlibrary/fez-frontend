@@ -19,7 +19,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(ContributorRowHeader, props, isShallow, createShallow);
+    return getElement(ContributorRowHeader, props, isShallow);
 }
 
 describe('Component ContributorRowHeader', () => {
