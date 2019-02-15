@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -14,10 +14,8 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <React.Fragment>
-    <br />
-    Step 2 - Select your name from the list below
-  </React.Fragment>
+  <br />
+  Step 2 - Select your name from the list below
   <WithStyles(ListItem)
     classes={
       Object {
@@ -118,11 +116,11 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -213,11 +211,11 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -308,11 +306,11 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for creator role 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -425,5 +423,5 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;

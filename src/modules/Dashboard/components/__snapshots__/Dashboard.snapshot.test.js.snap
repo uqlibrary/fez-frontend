@@ -6,68 +6,66 @@ exports[`Dashboard test does render latest and trending publications tabs correc
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
       xs={12}
@@ -137,68 +135,66 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
       xs={12}
@@ -252,395 +248,391 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={8}
+      xs={12}
+    >
+      <StandardCard
+        className="barChart"
+        customBackgroundColor="#1e7d94"
+        customTitleColor="#FFFFFF"
+        title="eSpace works per year"
       >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        sm={8}
-        xs={12}
-      >
-        <StandardCard
+        <AuthorsPublicationsPerYearChart
+          categories={
+            Array [
+              1977,
+              1980,
+              1982,
+              1983,
+              1984,
+              1985,
+              1986,
+              1987,
+              1988,
+              1989,
+              1990,
+              1991,
+              1992,
+              1993,
+              1994,
+              1995,
+              1996,
+              1997,
+              1998,
+              1999,
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+            ]
+          }
           className="barChart"
-          customBackgroundColor="#1e7d94"
-          customTitleColor="#FFFFFF"
-          title="eSpace works per year"
-        >
-          <AuthorsPublicationsPerYearChart
-            categories={
-              Array [
-                1977,
-                1980,
-                1982,
-                1983,
-                1984,
-                1985,
-                1986,
-                1987,
-                1988,
-                1989,
-                1990,
-                1991,
-                1992,
-                1993,
-                1994,
-                1995,
-                1996,
-                1997,
-                1998,
-                1999,
-                2000,
-                2001,
-                2002,
-                2003,
-                2004,
-                2005,
-                2006,
-                2007,
-                2008,
-                2009,
-                2010,
-                2011,
-                2012,
-                2013,
-                2014,
-                2015,
-                2016,
-                2017,
-              ]
-            }
-            className="barChart"
-            series={
-              Array [
-                Object {
-                  "data": Array [
-                    1,
-                    1,
-                    3,
-                    5,
-                    5,
-                    8,
-                    8,
-                    2,
-                    5,
-                    3,
-                    6,
-                    4,
-                    4,
-                    7,
-                    8,
-                    8,
-                    6,
-                    4,
-                    10,
-                    10,
-                    8,
-                    10,
-                    12,
-                    7,
-                    19,
-                    11,
-                    11,
-                    12,
-                    6,
-                    8,
-                    15,
-                    10,
-                    9,
-                    3,
-                    13,
-                    6,
-                    5,
-                    5,
-                  ],
-                  "name": "Journal Article",
-                },
-                Object {
-                  "data": Array [
-                    0,
-                    0,
-                    1,
-                    4,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    6,
-                    4,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    3,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0,
-                    1,
-                    0,
-                    5,
-                    0,
-                    0,
-                    2,
-                    1,
-                    1,
-                    0,
-                    9,
-                    0,
-                  ],
-                  "name": "Conference Paper",
-                },
-                Object {
-                  "data": Array [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    4,
-                    0,
-                    1,
-                    0,
-                    0,
-                    2,
-                    1,
-                    0,
-                    1,
-                    0,
-                    1,
-                    2,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                  ],
-                  "name": "Book Chapter",
-                },
-                Object {
-                  "data": Array [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                  ],
-                  "name": "Book",
-                },
-                Object {
-                  "data": Array [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                  ],
-                  "name": "Other",
-                },
-              ]
-            }
-            yAxisTitle="Total publications"
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={4}
-        xs={12}
+          series={
+            Array [
+              Object {
+                "data": Array [
+                  1,
+                  1,
+                  3,
+                  5,
+                  5,
+                  8,
+                  8,
+                  2,
+                  5,
+                  3,
+                  6,
+                  4,
+                  4,
+                  7,
+                  8,
+                  8,
+                  6,
+                  4,
+                  10,
+                  10,
+                  8,
+                  10,
+                  12,
+                  7,
+                  19,
+                  11,
+                  11,
+                  12,
+                  6,
+                  8,
+                  15,
+                  10,
+                  9,
+                  3,
+                  13,
+                  6,
+                  5,
+                  5,
+                ],
+                "name": "Journal Article",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  1,
+                  4,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  3,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  5,
+                  0,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  9,
+                  0,
+                ],
+                "name": "Conference Paper",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Book Chapter",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Book",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Other",
+              },
+            ]
+          }
+          yAxisTitle="Total publications"
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={4}
+      xs={12}
+    >
+      <StandardCard
+        className="donutChart"
+        customBackgroundColor="#d72865"
+        customTitleColor="#FFFFFF"
+        fullHeight={true}
+        noPadding={true}
+        title="Work types overview"
       >
-        <StandardCard
+        <AuthorsPublicationTypesCountChart
           className="donutChart"
-          customBackgroundColor="#d72865"
-          customTitleColor="#FFFFFF"
-          fullHeight={true}
-          noPadding={true}
-          title="Work types overview"
-        >
-          <AuthorsPublicationTypesCountChart
-            className="donutChart"
-            series={
-              Array [
-                Object {
-                  "data": Array [
-                    Array [
-                      "Journal Article",
-                      278,
-                    ],
-                    Array [
-                      "Conference Paper",
-                      42,
-                    ],
-                    Array [
-                      "Book Chapter",
-                      12,
-                    ],
-                    Array [
-                      "Book",
-                      1,
-                    ],
-                    Array [
-                      "Other",
-                      1,
-                    ],
+          series={
+            Array [
+              Object {
+                "data": Array [
+                  Array [
+                    "Journal Article",
+                    278,
                   ],
-                  "name": "Work types overview",
-                },
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
+                  Array [
+                    "Conference Paper",
+                    42,
+                  ],
+                  Array [
+                    "Book Chapter",
+                    12,
+                  ],
+                  Array [
+                    "Book",
+                    1,
+                  ],
+                  Array [
+                    "Other",
+                    1,
+                  ],
+                ],
+                "name": "Work types overview",
+              },
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;
@@ -651,68 +643,66 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
       xs={12}
@@ -770,51 +760,49 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
+          Object {
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        }
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;
@@ -825,68 +813,66 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;
@@ -897,51 +883,49 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
+          Object {
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        }
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;
@@ -952,68 +936,66 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;
@@ -1033,68 +1015,66 @@ exports[`Dashboard test renders dashboard header only 1`] = `
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Add a missing work"
-          message="We found nothing new for you to claim, but you may add a work any time."
-          title="Add your work to eSpace"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;
@@ -1105,69 +1085,67 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
     container={true}
     spacing={24}
   >
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(DashboardAuthorProfile)
-          authorDetails={
-            Object {
-              "espace": Object {
-                "doc_count": 357,
-                "first_year": 1975,
-                "last_year": 2018,
-              },
-              "espace_id": 20288,
-              "family_name": "Researcher",
-              "given_name": "J",
-              "google_scholar_id": "kUemDfMAAAAJ",
-              "image_exists": 1,
-              "mypub_url": "uqresearcher",
-              "orcid_id": "0000-0001-1111-1111",
-              "org_units": Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ],
-              "positions": Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ],
-              "publons_id": "",
-              "researcher_id": "G-111-1111",
-              "scopus_id": "",
-              "staff_id": "0000111",
-              "title": "Professor",
-              "uqr_id": 14,
-              "username": "uqresearcher",
-            }
-          }
-          history={Object {}}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        style={
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
           Object {
-            "marginTop": -27,
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
           }
         }
-        xs={12}
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Claim your works now"
-          allowDismiss={true}
-          message="We have found 5 record(s) that could possibly be your works."
-          title="Claim now!"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Claim your works now"
+        allowDismiss={true}
+        message="We have found 5 record(s) that could possibly be your works."
+        title="Claim now!"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
 `;

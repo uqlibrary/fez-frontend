@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRow  Row should be clickable when showContributorAssignment set to true 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -157,11 +157,11 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  Row should not be clickable when showContributorAssignment set to false 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -317,11 +317,11 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -441,11 +441,11 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -565,11 +565,11 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -759,11 +759,11 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -862,6 +862,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
+      <Component />
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
@@ -883,11 +884,11 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected for mobile view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -986,6 +987,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
+      <Component />
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
@@ -1007,11 +1009,11 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -1110,6 +1112,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
+      <Component />
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
@@ -1131,11 +1134,11 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -1291,11 +1294,11 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected for mobile view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -1451,5 +1454,5 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;

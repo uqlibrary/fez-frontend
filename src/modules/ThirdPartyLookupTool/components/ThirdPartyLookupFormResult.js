@@ -32,39 +32,43 @@ export class ThirdPartyLookupFormResult extends PureComponent {
             thisForm: this.props.localeform,
         };
         return (
-            <StandardCard title={txt.thisForm.lookupLabel}>
-                <p>{txt.thisForm.primaryField.heading} - {this.props.primaryValue}</p>
-                {
-                    // not all forms will have a second field; some of them shouldn't be reported
-                    !!txt.thisForm.secondaryField && !!txt.thisForm.secondaryField.reportInOutput && this.props.secondaryValue &&
-                    <p>{txt.thisForm.secondaryField.heading} - {this.props.secondaryValue}</p>
-                }
-                <StandardCard title={txt.tools.resultsLabel ? txt.tools.resultsLabel : 'Results'}>
-                    {
-                        this.props.lookupResults.length > 0 &&
-                        <Fragment>
-                            <pre>
-                                {JSON.stringify(this.props.lookupResults, null, 2)}
-                            </pre>
-                        </Fragment>
-                    }
-                    {
-                        this.props.lookupResults.length === 0 &&
-                        <Grid item xs={12}>
-                            <StandardCard>
-                                {txt.tools.noResultsFound.text ? txt.tools.noResultsFound.text : 'No results found'}
-                            </StandardCard>
-                        </Grid>
-                    }
-                </StandardCard>
-                <Button
-                    children= {txt.tools.clearButtonLabel ? txt.tools.clearButtonLabel : 'New Search'}
-                    variant="contained"
-                    color={'primary'}
-                    onClick={() => this._handleClear()}
-                    style={{marginTop: 20}}
-                />
-            </StandardCard>
+            <Grid container spacing={24}>
+                <Grid item xs={12}>
+                    <StandardCard title={txt.thisForm.lookupLabel}>
+                        <p>{txt.thisForm.primaryField.heading} - {this.props.primaryValue}</p>
+                        {
+                            // not all forms will have a second field; some of them shouldn't be reported
+                            !!txt.thisForm.secondaryField && !!txt.thisForm.secondaryField.reportInOutput && this.props.secondaryValue &&
+                            <p>{txt.thisForm.secondaryField.heading} - {this.props.secondaryValue}</p>
+                        }
+                        <StandardCard title={txt.tools.resultsLabel ? txt.tools.resultsLabel : 'Results'}>
+                            {
+                                this.props.lookupResults.length > 0 &&
+                                <Fragment>
+                                    <pre>
+                                        {JSON.stringify(this.props.lookupResults, null, 2)}
+                                    </pre>
+                                </Fragment>
+                            }
+                            {
+                                this.props.lookupResults.length === 0 &&
+                                <Grid item xs={12}>
+                                    <StandardCard>
+                                        {txt.tools.noResultsFound.text ? txt.tools.noResultsFound.text : 'No results found'}
+                                    </StandardCard>
+                                </Grid>
+                            }
+                        </StandardCard>
+                        <Button
+                            children= {txt.tools.clearButtonLabel ? txt.tools.clearButtonLabel : 'New Search'}
+                            variant="contained"
+                            color={'primary'}
+                            onClick={() => this._handleClear()}
+                            style={{marginTop: 20}}
+                        />
+                    </StandardCard>
+                </Grid>
+            </Grid>
         );
     }
 }

@@ -2,35 +2,32 @@
 
 exports[`Component ThirdPartyLookupTool renders incites 1`] = `
 <StandardPage
-  title="Third Party Lookup Tools"
+  title="Lookup Tools - view raw output from APIs"
 >
-  <React.Fragment>
-    <ThirdPartyLookupForm
-      isMinimised={false}
-      localeform={
-        Object {
-          "bottomTip": "",
-          "lookupLabel": "Incites",
-          "lookupType": "incites",
-          "primaryField": Object {
-            "fromAria": "",
-            "heading": "UTs",
-            "inputPlaceholder": "Enter one or more UTs, separated by a comma",
-            "tip": "",
-          },
-          "secondaryField": Object {
-            "fromAria": "",
-            "heading": "API Key",
-            "inputPlaceholder": "Enter API key",
-            "reportInOutput": false,
-            "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
-          },
-          "submitButtonLabel": "Submit to Incites",
-          "tip": "View raw output we receive from Incites via their API",
-        }
+  <ThirdPartyLookupForm
+    isMinimised={false}
+    localeform={
+      Object {
+        "bottomTip": "",
+        "lookupLabel": "Incites",
+        "lookupType": "incites",
+        "primaryField": Object {
+          "fromAria": "",
+          "heading": "UTs",
+          "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+          "tip": "",
+        },
+        "secondaryField": Object {
+          "fromAria": "",
+          "heading": "API Key",
+          "inputPlaceholder": "Enter API key",
+          "reportInOutput": false,
+          "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+        },
+        "submitButtonLabel": "Submit to Incites",
       }
-      sendInputsToResultComponent={[Function]}
-    />
-  </React.Fragment>
+    }
+    sendInputsToResultComponent={[Function]}
+  />
 </StandardPage>
 `;

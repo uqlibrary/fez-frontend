@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -281,11 +281,11 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </WithStyles(Typography)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -565,11 +565,11 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </WithStyles(Typography)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -849,11 +849,11 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </WithStyles(Typography)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -1133,7 +1133,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </WithStyles(Typography)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationStats component should render an empty component 1`] = `
@@ -1143,7 +1143,7 @@ exports[`PublicationStats component should render an empty component 1`] = `
 `;
 
 exports[`PublicationStats component should render statistics with table and data 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -1423,5 +1423,5 @@ exports[`PublicationStats component should render statistics with table and data
       </WithStyles(Typography)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;

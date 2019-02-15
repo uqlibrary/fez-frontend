@@ -441,111 +441,109 @@ exports[`Component FixRecord should render fix record form 1`] = `
           </Field>
         </StandardCard>
       </WithStyles(Grid)>
-      <React.Fragment>
-        <NavigationDialogBox
-          txt={
-            Object {
-              "cancelButtonLabel": "No",
-              "confirmButtonLabel": "Yes",
-              "confirmationMessage": "Are you sure you want to cancel this request?",
-              "confirmationTitle": "Cancel request",
-            }
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel this request?",
+            "confirmationTitle": "Cancel request",
           }
-          when={true}
-        />
-        <WithStyles(ConfirmDialogBox)
-          locale={
-            Object {
-              "cancelButtonLabel": "Go to my dashboard",
-              "confirmButtonLabel": "Go to my research",
-              "confirmationMessage": <UNDEFINED>
-                <p>
-                  Your request will be referred to a UQ eSpace staff member for review/action.
-                </p>
-              </UNDEFINED>,
-              "confirmationTitle": "Your request has been submitted",
-              "fileFailConfirmationAlert": Object {
-                "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-                "title": "File upload failed",
-                "type": "info",
-              },
-            }
+        }
+        when={true}
+      />
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "Go to my dashboard",
+            "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <React.Fragment>
+              <p>
+                Your request will be referred to a UQ eSpace staff member for review/action.
+              </p>
+            </React.Fragment>,
+            "confirmationTitle": "Your request has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload failed",
+              "type": "info",
+            },
           }
-          onAction={[Function]}
-          onCancelAction={[Function]}
-          onRef={[Function]}
-        />
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Suggest a correction"
         >
-          <StandardCard
-            title="Suggest a correction"
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
           >
             <WithStyles(Grid)
-              container={true}
-              spacing={16}
+              item={true}
+              xs={12}
             >
-              <WithStyles(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
-                  multiline={true}
-                  name="comments"
-                  rows={3}
-                  type="text"
-                />
-              </WithStyles(Grid)>
-              <WithStyles(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Link (URL)"
-                  name="rek_link"
-                  type="text"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </WithStyles(Grid)>
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
             </WithStyles(Grid)>
-          </StandardCard>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
         >
-          <StandardCard
-            title="Upload files"
-          >
-            <div>
-              Upload an Open Access file, HERDC evidence or an NTRO Research Statement
-            </div>
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="files"
-              requireOpenAccessStatus={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </WithStyles(Grid)>
-      </React.Fragment>
+          <div>
+            Upload an Open Access file, HERDC evidence or an NTRO Research Statement
+          </div>
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="files"
+            requireOpenAccessStatus={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
@@ -585,19 +583,19 @@ exports[`Component FixRecord should render fix record form 1`] = `
 `;
 
 exports[`Component FixRecord should render loader when author is loading 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(InlineLoader)
     message="Loading work"
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component FixRecord should render loader when record is loading 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(InlineLoader)
     message="Loading work"
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component FixRecord should render record citation, two actions in select field and a cancel button 1`] = `
@@ -1508,116 +1506,114 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           </Field>
         </StandardCard>
       </WithStyles(Grid)>
-      <React.Fragment>
-        <NavigationDialogBox
-          txt={
-            Object {
-              "cancelButtonLabel": "No",
-              "confirmButtonLabel": "Yes",
-              "confirmationMessage": "Are you sure you want to cancel this request?",
-              "confirmationTitle": "Cancel request",
-            }
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel this request?",
+            "confirmationTitle": "Cancel request",
           }
-          when={true}
-        />
-        <WithStyles(ConfirmDialogBox)
-          locale={
-            Object {
-              "cancelButtonLabel": "Go to my dashboard",
-              "confirmButtonLabel": "Go to my research",
-              "confirmationMessage": <UNDEFINED>
-                <WithStyles(Alert)
-                  message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-                  title="File upload failed"
-                  type="info"
-                />
-                <p>
-                  Your request will be referred to a UQ eSpace staff member for review/action.
-                </p>
-              </UNDEFINED>,
-              "confirmationTitle": "Your request has been submitted",
-              "fileFailConfirmationAlert": Object {
-                "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-                "title": "File upload failed",
-                "type": "info",
-              },
-            }
+        }
+        when={true}
+      />
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "Go to my dashboard",
+            "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <React.Fragment>
+              <WithStyles(Alert)
+                message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                title="File upload failed"
+                type="info"
+              />
+              <p>
+                Your request will be referred to a UQ eSpace staff member for review/action.
+              </p>
+            </React.Fragment>,
+            "confirmationTitle": "Your request has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload failed",
+              "type": "info",
+            },
           }
-          onAction={[Function]}
-          onCancelAction={[Function]}
-          onRef={[Function]}
-        />
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Suggest a correction"
         >
-          <StandardCard
-            title="Suggest a correction"
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
           >
             <WithStyles(Grid)
-              container={true}
-              spacing={16}
+              item={true}
+              xs={12}
             >
-              <WithStyles(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
-                  multiline={true}
-                  name="comments"
-                  rows={3}
-                  type="text"
-                />
-              </WithStyles(Grid)>
-              <WithStyles(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Link (URL)"
-                  name="rek_link"
-                  type="text"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </WithStyles(Grid)>
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
             </WithStyles(Grid)>
-          </StandardCard>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
         >
-          <StandardCard
-            title="Upload files"
-          >
-            <div>
-              Upload an Open Access file, HERDC evidence or an NTRO Research Statement
-            </div>
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="files"
-              requireOpenAccessStatus={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </WithStyles(Grid)>
-      </React.Fragment>
+          <div>
+            Upload an Open Access file, HERDC evidence or an NTRO Research Statement
+          </div>
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="files"
+            requireOpenAccessStatus={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
@@ -2097,111 +2093,109 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           </Field>
         </StandardCard>
       </WithStyles(Grid)>
-      <React.Fragment>
-        <NavigationDialogBox
-          txt={
-            Object {
-              "cancelButtonLabel": "No",
-              "confirmButtonLabel": "Yes",
-              "confirmationMessage": "Are you sure you want to cancel this request?",
-              "confirmationTitle": "Cancel request",
-            }
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel this request?",
+            "confirmationTitle": "Cancel request",
           }
-          when={true}
-        />
-        <WithStyles(ConfirmDialogBox)
-          locale={
-            Object {
-              "cancelButtonLabel": "Go to my dashboard",
-              "confirmButtonLabel": "Go to my research",
-              "confirmationMessage": <UNDEFINED>
-                <p>
-                  Your request will be referred to a UQ eSpace staff member for review/action.
-                </p>
-              </UNDEFINED>,
-              "confirmationTitle": "Your request has been submitted",
-              "fileFailConfirmationAlert": Object {
-                "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-                "title": "File upload failed",
-                "type": "info",
-              },
-            }
+        }
+        when={true}
+      />
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "Go to my dashboard",
+            "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <React.Fragment>
+              <p>
+                Your request will be referred to a UQ eSpace staff member for review/action.
+              </p>
+            </React.Fragment>,
+            "confirmationTitle": "Your request has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload failed",
+              "type": "info",
+            },
           }
-          onAction={[Function]}
-          onCancelAction={[Function]}
-          onRef={[Function]}
-        />
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Suggest a correction"
         >
-          <StandardCard
-            title="Suggest a correction"
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
           >
             <WithStyles(Grid)
-              container={true}
-              spacing={16}
+              item={true}
+              xs={12}
             >
-              <WithStyles(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
-                  multiline={true}
-                  name="comments"
-                  rows={3}
-                  type="text"
-                />
-              </WithStyles(Grid)>
-              <WithStyles(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Link (URL)"
-                  name="rek_link"
-                  type="text"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </WithStyles(Grid)>
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
             </WithStyles(Grid)>
-          </StandardCard>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
         >
-          <StandardCard
-            title="Upload files"
-          >
-            <div>
-              Upload an Open Access file, HERDC evidence or an NTRO Research Statement
-            </div>
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="files"
-              requireOpenAccessStatus={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </WithStyles(Grid)>
-      </React.Fragment>
+          <div>
+            Upload an Open Access file, HERDC evidence or an NTRO Research Statement
+          </div>
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="files"
+            requireOpenAccessStatus={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}

@@ -71,78 +71,76 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       }
     />
   </WithStyles(ListItem)>
-  <React.Fragment>
-    <WithStyles(ListItem)
-      classes={
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)>
+      <pure(LockOutlinedIcon) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      secondary="File access"
+      secondaryTypographyProps={
         Object {
-          "root": "listItem",
+          "variant": "caption",
         }
       }
     >
-      <WithStyles(ListItemIcon)>
-        <pure(LockOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-      <WithStyles(ListItemText)
-        secondary="File access"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-      >
-        <WithStyles(FileUploadAccessSelector)
-          autoFocus={false}
-          disabled={false}
-          onChange={[MockFunction]}
-          value={8}
-        />
-      </WithStyles(ListItemText)>
-    </WithStyles(ListItem)>
-    <WithStyles(ListItem)
-      classes={
+      <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
+        disabled={false}
+        onChange={[MockFunction]}
+        value={8}
+      />
+    </WithStyles(ListItemText)>
+  </WithStyles(ListItem)>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)>
+      <pure(CalendarTodayOutlinedIcon) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      primaryTypographyProps={
         Object {
-          "root": "listItem",
+          "variant": "body1",
+        }
+      }
+      secondary="Embargo date"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
         }
       }
     >
-      <WithStyles(ListItemIcon)>
-        <pure(CalendarTodayOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-      <WithStyles(ListItemText)
-        primaryTypographyProps={
-          Object {
-            "variant": "body1",
-          }
-        }
-        secondary="Embargo date"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="body2"
       >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="body2"
-        >
-          No date required
-        </WithStyles(Typography)>
-      </WithStyles(ListItemText)>
-      <WithStyles(ListItemSecondaryAction)
-        classes={
-          Object {
-            "root": undefined,
-          }
+        No date required
+      </WithStyles(Typography)>
+    </WithStyles(ListItemText)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
         }
-      >
-        <Connect(FileUploadRowStatus)
-          disabled={false}
-          name="test.pdf"
-          onDelete={[MockFunction]}
-        />
-      </WithStyles(ListItemSecondaryAction)>
-    </WithStyles(ListItem)>
-  </React.Fragment>
+      }
+    >
+      <Connect(FileUploadRowStatus)
+        disabled={false}
+        name="test.pdf"
+        onDelete={[MockFunction]}
+      />
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
 </WithStyles(List)>
 `;
 
@@ -180,78 +178,76 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       }
     />
   </WithStyles(ListItem)>
-  <React.Fragment>
-    <WithStyles(ListItem)
-      classes={
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)>
+      <pure(LockOutlinedIcon) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      secondary="File access"
+      secondaryTypographyProps={
         Object {
-          "root": "listItem",
+          "variant": "caption",
         }
       }
     >
-      <WithStyles(ListItemIcon)>
-        <pure(LockOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-      <WithStyles(ListItemText)
-        secondary="File access"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-      >
-        <WithStyles(FileUploadAccessSelector)
-          autoFocus={false}
-          disabled={false}
-          onChange={[MockFunction]}
-          value={null}
-        />
-      </WithStyles(ListItemText)>
-    </WithStyles(ListItem)>
-    <WithStyles(ListItem)
-      classes={
+      <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
+        disabled={false}
+        onChange={[MockFunction]}
+        value={null}
+      />
+    </WithStyles(ListItemText)>
+  </WithStyles(ListItem)>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)>
+      <pure(CalendarTodayOutlinedIcon) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      primaryTypographyProps={
         Object {
-          "root": "listItem",
+          "variant": "body1",
+        }
+      }
+      secondary="Embargo date"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
         }
       }
     >
-      <WithStyles(ListItemIcon)>
-        <pure(CalendarTodayOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-      <WithStyles(ListItemText)
-        primaryTypographyProps={
-          Object {
-            "variant": "body1",
-          }
-        }
-        secondary="Embargo date"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="body2"
       >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="body2"
-        >
-          No date required
-        </WithStyles(Typography)>
-      </WithStyles(ListItemText)>
-      <WithStyles(ListItemSecondaryAction)
-        classes={
-          Object {
-            "root": undefined,
-          }
+        No date required
+      </WithStyles(Typography)>
+    </WithStyles(ListItemText)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
         }
-      >
-        <Connect(FileUploadRowStatus)
-          disabled={false}
-          name="test.pdf"
-          onDelete={[MockFunction]}
-        />
-      </WithStyles(ListItemSecondaryAction)>
-    </WithStyles(ListItem)>
-  </React.Fragment>
+      }
+    >
+      <Connect(FileUploadRowStatus)
+        disabled={false}
+        name="test.pdf"
+        onDelete={[MockFunction]}
+      />
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
 </WithStyles(List)>
 `;
 
@@ -289,76 +285,74 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       }
     />
   </WithStyles(ListItem)>
-  <React.Fragment>
-    <WithStyles(ListItem)
-      classes={
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)>
+      <pure(LockOutlinedIcon) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      secondary="File access"
+      secondaryTypographyProps={
         Object {
-          "root": "listItem",
+          "variant": "caption",
         }
       }
     >
-      <WithStyles(ListItemIcon)>
-        <pure(LockOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-      <WithStyles(ListItemText)
-        secondary="File access"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-      >
-        <WithStyles(FileUploadAccessSelector)
-          autoFocus={false}
-          disabled={false}
-          onChange={[MockFunction]}
-          value={9}
-        />
-      </WithStyles(ListItemText)>
-    </WithStyles(ListItem)>
-    <WithStyles(ListItem)
-      classes={
+      <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
+        disabled={false}
+        onChange={[MockFunction]}
+        value={9}
+      />
+    </WithStyles(ListItemText)>
+  </WithStyles(ListItem)>
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ListItemIcon)>
+      <pure(CalendarTodayOutlinedIcon) />
+    </WithStyles(ListItemIcon)>
+    <WithStyles(ListItemText)
+      primaryTypographyProps={
         Object {
-          "root": "listItem",
+          "variant": "body1",
+        }
+      }
+      secondary="Embargo date"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
         }
       }
     >
-      <WithStyles(ListItemIcon)>
-        <pure(CalendarTodayOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-      <WithStyles(ListItemText)
-        primaryTypographyProps={
-          Object {
-            "variant": "body1",
-          }
+      <WithStyles(FileUploadEmbargoDate)
+        disabled={false}
+        onChange={[MockFunction]}
+        value={2016-12-31T14:00:00.000Z}
+      />
+    </WithStyles(ListItemText)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
         }
-        secondary="Embargo date"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-      >
-        <WithStyles(FileUploadEmbargoDate)
-          disabled={false}
-          onChange={[MockFunction]}
-          value={2016-12-31T14:00:00.000Z}
-        />
-      </WithStyles(ListItemText)>
-      <WithStyles(ListItemSecondaryAction)
-        classes={
-          Object {
-            "root": undefined,
-          }
-        }
-      >
-        <Connect(FileUploadRowStatus)
-          disabled={false}
-          name="test.pdf"
-          onDelete={[MockFunction]}
-        />
-      </WithStyles(ListItemSecondaryAction)>
-    </WithStyles(ListItem)>
-  </React.Fragment>
+      }
+    >
+      <Connect(FileUploadRowStatus)
+        disabled={false}
+        name="test.pdf"
+        onDelete={[MockFunction]}
+      />
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
 </WithStyles(List)>
 `;

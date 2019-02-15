@@ -22,7 +22,9 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
     selectedItemChanged={[Function]}
     stateReducer={[Function]}
     suppressRefError={false}
-  />
+  >
+    <Component />
+  </Downshift>
 </div>
 `;
 
@@ -1283,6 +1285,12 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                   null,
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
           maxResults={7}
@@ -2062,6 +2070,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   null,
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
           maxResults={7}
@@ -2840,6 +2854,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 Array [
                   null,
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
