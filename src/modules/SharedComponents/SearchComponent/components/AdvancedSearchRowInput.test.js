@@ -29,7 +29,6 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render given children with component and props', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
                 "aria-label": undefined,
                 "autoComplete": "search",
@@ -49,7 +48,6 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render given children with component and props and show error', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.defaultProps.select).toEqual(false);
             expect(inputProps).toEqual({
                 "aria-label": undefined,
                 "autoComplete": "search",
@@ -315,7 +313,7 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             const wrapper = getElement(InputComponent, inputProps);
             expect(wrapper).toMatchSnapshot();
-            wrapper.find('WithStyles(Input)').simulate('change', {target: {value: 'Testing'}});
+            wrapper.find('TextFieldWrapper').simulate('change', {target: {value: 'Testing'}});
             expect(onChangeFn).toHaveBeenCalled();
         });
         setup({

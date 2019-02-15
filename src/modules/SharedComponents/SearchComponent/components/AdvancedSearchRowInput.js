@@ -1,7 +1,7 @@
 import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 import UnpublishedStatusField from './Fields/UnpublishedStatusField';

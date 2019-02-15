@@ -475,7 +475,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for TextFi
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TextField
+  Symbol(enzyme.__unrendered__): <WithStyles(TextFieldWrapper)
     aria-label={undefined}
     autoComplete="search"
     error={true}
@@ -483,9 +483,6 @@ ShallowWrapper {
     label={null}
     onChange={[Function]}
     placeholder={undefined}
-    required={false}
-    select={false}
-    variant="standard"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -498,144 +495,38 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "aria-describedby": undefined,
       "aria-label": undefined,
-      "children": Array [
-        null,
-        <WithStyles(Input)
-          autoComplete="search"
-          autoFocus={undefined}
-          defaultValue={undefined}
-          fullWidth={undefined}
-          id={undefined}
-          inputProps={undefined}
-          inputRef={undefined}
-          multiline={undefined}
-          name={undefined}
-          onBlur={undefined}
-          onChange={[Function]}
-          onFocus={undefined}
-          placeholder={undefined}
-          rows={undefined}
-          rowsMax={undefined}
-          type={undefined}
-          value={undefined}
-        />,
-        undefined,
-      ],
-      "className": undefined,
+      "autoComplete": "search",
+      "classes": Object {},
       "error": true,
       "errorText": "This field is required",
-      "fullWidth": undefined,
-      "required": false,
-      "variant": "standard",
+      "label": null,
+      "onChange": [Function],
+      "placeholder": undefined,
     },
     "ref": null,
-    "rendered": Array [
-      null,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "autoComplete": "search",
-          "autoFocus": undefined,
-          "defaultValue": undefined,
-          "fullWidth": undefined,
-          "id": undefined,
-          "inputProps": undefined,
-          "inputRef": undefined,
-          "multiline": undefined,
-          "name": undefined,
-          "onBlur": undefined,
-          "onChange": [Function],
-          "onFocus": undefined,
-          "placeholder": undefined,
-          "rows": undefined,
-          "rowsMax": undefined,
-          "type": undefined,
-          "value": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      undefined,
-    ],
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
-        "aria-describedby": undefined,
         "aria-label": undefined,
-        "children": Array [
-          null,
-          <WithStyles(Input)
-            autoComplete="search"
-            autoFocus={undefined}
-            defaultValue={undefined}
-            fullWidth={undefined}
-            id={undefined}
-            inputProps={undefined}
-            inputRef={undefined}
-            multiline={undefined}
-            name={undefined}
-            onBlur={undefined}
-            onChange={[Function]}
-            onFocus={undefined}
-            placeholder={undefined}
-            rows={undefined}
-            rowsMax={undefined}
-            type={undefined}
-            value={undefined}
-          />,
-          undefined,
-        ],
-        "className": undefined,
+        "autoComplete": "search",
+        "classes": Object {},
         "error": true,
         "errorText": "This field is required",
-        "fullWidth": undefined,
-        "required": false,
-        "variant": "standard",
+        "label": null,
+        "onChange": [Function],
+        "placeholder": undefined,
       },
       "ref": null,
-      "rendered": Array [
-        null,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "autoComplete": "search",
-            "autoFocus": undefined,
-            "defaultValue": undefined,
-            "fullWidth": undefined,
-            "id": undefined,
-            "inputProps": undefined,
-            "inputRef": undefined,
-            "multiline": undefined,
-            "name": undefined,
-            "onBlur": undefined,
-            "onChange": [Function],
-            "onFocus": undefined,
-            "placeholder": undefined,
-            "rows": undefined,
-            "rowsMax": undefined,
-            "type": undefined,
-            "value": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        undefined,
-      ],
+      "rendered": null,
       "type": [Function],
     },
   ],
