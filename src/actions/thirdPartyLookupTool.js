@@ -47,7 +47,9 @@ export function loadThirdPartyLookup(type, field1, field2) {
             })
             .catch(error => {
                 let message;
-                if (error.message === locale.global.errorMessages[403].message) {
+                if (!!error.response && !!error.response.data) {
+                    message = [error.response.data];
+                } else if (error.message === locale.global.errorMessages[403].message) {
                     message = ['Invalid authentication credentials - use a valid api key'];
                 } else {
                     message = [error.message];
