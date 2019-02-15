@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component FileUploadRowHeader should render confirmation on delete all 1`] = `"{\\"length\\":1}"`;
+exports[`Component FileUploadRowHeader should render confirmation on delete all 1`] = `"{}"`;
 
 exports[`Component FileUploadRowHeader should render with access condition and embargo date column 1`] = `
 <Hidden

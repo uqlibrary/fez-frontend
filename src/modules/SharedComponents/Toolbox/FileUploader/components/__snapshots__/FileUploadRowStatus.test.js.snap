@@ -1,26 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadRowStatus should render circular progress if upload is in progress 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    <WithStyles(CircularProgress)
-      size={20}
-      thickness={4}
-      value={50}
-      variant="determinate"
-    />
-    <WithStyles(Typography)
-      aria-label="50%"
-      variant="caption"
-    >
-      50%
-    </WithStyles(Typography)>
-  </React.Fragment>
-</React.Fragment>
+<Fragment>
+  <WithStyles(CircularProgress)
+    size={20}
+    thickness={4}
+    value={50}
+    variant="determinate"
+  />
+  <WithStyles(Typography)
+    aria-label="50%"
+    variant="caption"
+  >
+    50%
+  </WithStyles(Typography)>
+</Fragment>
 `;
 
 exports[`Component FileUploadRowStatus should render default view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Tooltip)
     title="Remove this file"
   >
@@ -30,11 +28,11 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
       <pure(DeleteIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component FileUploadRowStatus should render disabled view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Tooltip)
     title="Remove this file"
   >
@@ -45,36 +43,34 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
       <pure(DeleteIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(IconButton)>
     <pure(DoneIcon) />
   </WithStyles(IconButton)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component FileUploadRowStatus should render for edge browser if file is being uploaded but no progress data 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    <WithStyles(CircularProgress)
-      size={20}
-      thickness={4}
-    />
-    <WithStyles(Typography)
-      aria-label="Uploading..."
-      variant="caption"
-    >
-      Uploading...
-    </WithStyles(Typography)>
-  </React.Fragment>
-</React.Fragment>
+<Fragment>
+  <WithStyles(CircularProgress)
+    size={20}
+    thickness={4}
+  />
+  <WithStyles(Typography)
+    aria-label="Uploading..."
+    variant="caption"
+  >
+    Uploading...
+  </WithStyles(Typography)>
+</Fragment>
 `;
 
 exports[`Component FileUploadRowStatus should render if file uploaded successfully but later other file failed 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Tooltip)
     title="Remove this file"
   >
@@ -84,5 +80,5 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
       <pure(DeleteIcon) />
     </WithStyles(IconButton)>
   </WithStyles(Tooltip)>
-</React.Fragment>
+</Fragment>
 `;

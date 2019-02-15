@@ -4,10 +4,9 @@ const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
+const ExtractTextPlugin2 = require('extract-text-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -83,13 +82,6 @@ const webpackConfig = {
         host: '0.0.0.0'
     },
     plugins: [
-        new AssetsPlugin({
-            filename: 'frontend.json',
-            path: resolve(__dirname, './dist/', config.basePath),
-            fileTypes: ['js', 'css'],
-            includeAllFileTypes: false,
-            prettyPrint: true
-        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
@@ -120,7 +112,7 @@ const webpackConfig = {
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        new ExtractTextPlugin('[name]-[hash].min.css'),
+        new ExtractTextPlugin('frontend-css/[name]-[hash].min.css'),
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
@@ -158,7 +150,7 @@ const webpackConfig = {
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
         }),
-        new RobotstxtPlugin(options)
+        new RobotstxtPlugin(options),
     ],
     optimization: {
         splitChunks: {

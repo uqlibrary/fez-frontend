@@ -5,27 +5,25 @@ exports[`Dashboard Article Count test Render the authors article counts as expec
   container={true}
   direction="column"
 >
-  <React.Fragment>
-    <WithStyles(Grid)
-      item={true}
-    >
-      313
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-    >
-      eSpace works from
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-    >
-      1970
-      <span>
-         to 
-      </span>
-      2054
-    </WithStyles(Grid)>
-  </React.Fragment>
+  <WithStyles(Grid)
+    item={true}
+  >
+    313
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    eSpace works from
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    1970
+    <span>
+       to 
+    </span>
+    2054
+  </WithStyles(Grid)>
 </WithStyles(Grid)>
 `;
 

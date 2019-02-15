@@ -23,7 +23,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
 `;
 
 exports[`Component TopCitedPublications should render top cited publications 1`] = `
-<React.Fragment>
+<Fragment>
   <StandardCard
     noHeader={true}
   >
@@ -106,7 +106,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         <Connect(WithStyles(HelpIcon))
           buttonLabel="OK"
           text={
-            <UNDEFINED>
+            <React.Fragment>
               <h3>
                 WOS and Scopus
               </h3>
@@ -131,7 +131,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               >
                 https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
               </a>
-            </UNDEFINED>
+            </React.Fragment>
           }
           title="About these metrics"
         />
@@ -960,15 +960,15 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </StandardCard>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Alert)
     message="Trending publications are temporarily unavailable"
     title="There has been an error"
     type="error"
   />
-</React.Fragment>
+</Fragment>
 `;

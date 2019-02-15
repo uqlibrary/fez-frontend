@@ -77,32 +77,30 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         )
       </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
+        disabled={false}
+        onChange={[MockFunction]}
+        value={8}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="body2"
       >
-        <WithStyles(FileUploadAccessSelector)
-          autoFocus={false}
-          disabled={false}
-          onChange={[MockFunction]}
-          value={8}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={2}
-        sm={2}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="body2"
-        >
-          No date required
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </React.Fragment>
+        No date required
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       className=""
       item={true}
@@ -149,32 +147,30 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         )
       </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
+        disabled={false}
+        onChange={[MockFunction]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="body2"
       >
-        <WithStyles(FileUploadAccessSelector)
-          autoFocus={false}
-          disabled={false}
-          onChange={[MockFunction]}
-          value={null}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={2}
-        sm={2}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="body2"
-        >
-          No date required
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </React.Fragment>
+        No date required
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       className=""
       item={true}
@@ -221,31 +217,29 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         )
       </WithStyles(Typography)>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(FileUploadAccessSelector)
-          autoFocus={false}
-          disabled={false}
-          onChange={[MockFunction]}
-          value={9}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={2}
-        sm={2}
-      >
-        <WithStyles(FileUploadEmbargoDate)
-          disabled={false}
-          onChange={[MockFunction]}
-          value={2016-12-31T14:00:00.000Z}
-        />
-      </WithStyles(Grid)>
-    </React.Fragment>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <WithStyles(FileUploadAccessSelector)
+        autoFocus={false}
+        disabled={false}
+        onChange={[MockFunction]}
+        value={9}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(FileUploadEmbargoDate)
+        disabled={false}
+        onChange={[MockFunction]}
+        value={2016-12-31T14:00:00.000Z}
+      />
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       className=""
       item={true}
