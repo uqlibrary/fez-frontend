@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
-import * as repositories from '../repositories';
+import * as repositories from 'repositories';
 import * as newsFeedActions from './newsFeed';
-import * as newsFeedData from '../mock/data/newsFeed';
+import * as newsFeedData from 'mock/data/newsFeed';
 
 describe('NewsFeed actions', () => {
     // extend expect to check actions

@@ -1,9 +1,10 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import {NEW_RECORD_DEFAULT_VALUES} from '../config/general';
-import {get, post, patch} from '../repositories/generic';
-import * as routes from '../repositories/routes';
-import {putUploadFiles} from '../repositories';
+import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+
+import {get, post, patch} from 'repositories/generic';
+import * as routes from 'repositories/routes';
+import {putUploadFiles} from 'repositories';
 
 /**
  * Search publications from eSpace which are matched to currently logged in username

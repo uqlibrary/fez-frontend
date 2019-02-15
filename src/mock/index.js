@@ -1,8 +1,8 @@
-import {api, sessionApi} from '../config';
+import {api, sessionApi} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import {SESSION_COOKIE_NAME} from '../config';
-import * as routes from '../repositories/routes';
+import {SESSION_COOKIE_NAME} from 'config';
+import * as routes from 'repositories/routes';
 import * as mockData from './data';
 
 const queryString = require('query-string');

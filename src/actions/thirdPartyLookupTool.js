@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
-import {get} from '../repositories/generic';
-import {THIRD_PARTY_LOOKUP_API_1FIELD, THIRD_PARTY_LOOKUP_API_2FIELD} from '../repositories/routes';
-import {locale} from '../locale';
+import {get} from 'repositories/generic';
+import {THIRD_PARTY_LOOKUP_API_1FIELD, THIRD_PARTY_LOOKUP_API_2FIELD} from 'repositories/routes';
+import {locale} from 'locale';
 
 /**
  * build the api url

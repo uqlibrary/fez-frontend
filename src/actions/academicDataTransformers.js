@@ -1,4 +1,4 @@
-import {trendingPublicationsConfig} from '../config';
+import {trendingPublicationsConfig} from 'config';
 
 /**
  * Returns the data for graph - count of unique publication types

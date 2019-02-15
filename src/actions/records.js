@@ -1,8 +1,8 @@
-import {post, patch} from '../repositories/generic';
-import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API} from '../repositories/routes';
-import {putUploadFiles} from '../repositories';
+import {post, patch} from 'repositories/generic';
+import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API} from 'repositories/routes';
+import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
-import {NEW_RECORD_DEFAULT_VALUES} from '../config/general';
+import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
 import Raven from 'raven-js';
 
