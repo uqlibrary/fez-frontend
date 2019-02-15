@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationCitation  should render component with custom actions 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -912,11 +912,11 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component with default actions 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -1795,11 +1795,11 @@ exports[`PublicationCitation  should render component with default actions 1`] =
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component with default item 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -2639,11 +2639,11 @@ exports[`PublicationCitation  should render component with default item 1`] = `
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component with default item without links to title and doi 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -3478,11 +3478,11 @@ exports[`PublicationCitation  should render component with default item without 
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component with default list hiding the difference count 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -4322,11 +4322,11 @@ exports[`PublicationCitation  should render component with default list hiding t
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component with default list hiding the total count 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -5166,11 +5166,11 @@ exports[`PublicationCitation  should render component with default list hiding t
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component with publication from multiple sources 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -6026,28 +6026,26 @@ exports[`PublicationCitation  should render component with publication from mult
           <WithStyles(Typography)
             variant="caption"
           >
-            <React.Fragment>
-              Found in: 
-              <WithStyles(ExternalLink)
-                aria-label="Link to eSpace will open in a new window."
-                className="publicationSource"
-                href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
-                key="source_0"
-              >
-                eSpace
-              </WithStyles(ExternalLink)>
-            </React.Fragment>
+            Found in: 
+            <WithStyles(ExternalLink)
+              aria-label="Link to eSpace will open in a new window."
+              className="publicationSource"
+              href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
+              key="source_0"
+            >
+              eSpace
+            </WithStyles(ExternalLink)>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render component without a title 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -6886,28 +6884,26 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           <WithStyles(Typography)
             variant="caption"
           >
-            <React.Fragment>
-              Found in: 
-              <WithStyles(ExternalLink)
-                aria-label="Link to eSpace will open in a new window."
-                className="publicationSource"
-                href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
-                key="source_0"
-              >
-                eSpace
-              </WithStyles(ExternalLink)>
-            </React.Fragment>
+            Found in: 
+            <WithStyles(ExternalLink)
+              aria-label="Link to eSpace will open in a new window."
+              className="publicationSource"
+              href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
+              key="source_0"
+            >
+              eSpace
+            </WithStyles(ExternalLink)>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`PublicationCitation  should render publication with citation metric 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -7801,5 +7797,5 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
-</React.Fragment>
+</Fragment>
 `;

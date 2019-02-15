@@ -4,10 +4,9 @@ const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
+const ExtractTextPlugin2 = require('extract-text-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -83,13 +82,6 @@ const webpackConfig = {
         host: '0.0.0.0'
     },
     plugins: [
-        new AssetsPlugin({
-            filename: 'frontend.json',
-            path: resolve(__dirname, './dist/', config.basePath),
-            fileTypes: ['js', 'css'],
-            includeAllFileTypes: false,
-            prettyPrint: true
-        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
@@ -158,7 +150,7 @@ const webpackConfig = {
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
         }),
-        new RobotstxtPlugin(options)
+        new RobotstxtPlugin(options),
     ],
     optimization: {
         splitChunks: {

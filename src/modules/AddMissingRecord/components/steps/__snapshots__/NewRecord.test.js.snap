@@ -3,7 +3,7 @@
 exports[`Add new record should not render publication form if author is not loaded  1`] = `<span />`;
 
 exports[`Add new record should render stepper and a publication form 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
@@ -58,7 +58,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onFormCancel={[Function]}
     onFormSubmitSuccess={[Function]}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `

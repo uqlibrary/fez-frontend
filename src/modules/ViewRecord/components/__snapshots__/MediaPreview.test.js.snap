@@ -3011,7 +3011,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
 `;
 
 exports[`Media Preview Component  should render component 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     direction="row"
@@ -3080,7 +3080,7 @@ exports[`Media Preview Component  should render component 1`] = `
       videoTitle="Video preview"
     />
   </Hidden>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Media Preview Component  should render component with image 1`] = `

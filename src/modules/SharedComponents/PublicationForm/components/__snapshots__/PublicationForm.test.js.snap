@@ -1283,44 +1283,42 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <BookForm
-          formValues={
-            Immutable.Map {
-              "rek_display_type": 174,
-            }
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <BookForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 174,
           }
-          isAuthorSelected={false}
-          isNtro={false}
-          submitting={false}
-          subtype={null}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
+        }
+        isAuthorSelected={false}
+        isNtro={false}
+        submitting={false}
+        subtype={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Upload files"
       >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="files"
-            requireOpenAccessStatus={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
+        <Field
+          component={[Function]}
+          disabled={false}
+          name="files"
+          requireOpenAccessStatus={true}
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
@@ -1775,41 +1773,39 @@ exports[`Component PublicationForm should render component with GenericDocument 
         </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <GenericDocumentForm
-          formValues={
-            Immutable.Map {
-              "rek_display_type": 202,
-            }
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <GenericDocumentForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 202,
           }
-          submitting={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
+        }
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Upload files"
       >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="files"
-            requireOpenAccessStatus={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
+        <Field
+          component={[Function]}
+          disabled={false}
+          name="files"
+          requireOpenAccessStatus={true}
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
@@ -2264,41 +2260,39 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <JournalArticleForm
-          formValues={
-            Immutable.Map {
-              "rek_display_type": 179,
-            }
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <JournalArticleForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 179,
           }
-          submitting={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
+        }
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Upload files"
       >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="files"
-            requireOpenAccessStatus={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
+        <Field
+          component={[Function]}
+          disabled={false}
+          name="files"
+          requireOpenAccessStatus={true}
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
@@ -2753,41 +2747,39 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
-    <React.Fragment>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <ResearchReportForm
-          formValues={
-            Immutable.Map {
-              "rek_display_type": 275,
-            }
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <ResearchReportForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 275,
           }
-          submitting={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
+        }
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="Upload files"
       >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="files"
-            requireOpenAccessStatus={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(Grid)>
-    </React.Fragment>
+        <Field
+          component={[Function]}
+          disabled={false}
+          name="files"
+          requireOpenAccessStatus={true}
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}

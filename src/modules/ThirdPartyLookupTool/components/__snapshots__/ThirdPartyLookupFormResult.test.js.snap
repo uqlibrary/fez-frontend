@@ -20,15 +20,13 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
       <StandardCard
         title="Results"
       >
-        <React.Fragment>
-          <pre>
-            [
+        <pre>
+          [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-          </pre>
-        </React.Fragment>
+        </pre>
       </StandardCard>
       <WithStyles(Button)
         color="primary"
@@ -67,15 +65,13 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
       <StandardCard
         title="Results"
       >
-        <React.Fragment>
-          <pre>
-            [
+        <pre>
+          [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-          </pre>
-        </React.Fragment>
+        </pre>
       </StandardCard>
       <WithStyles(Button)
         color="primary"
@@ -119,15 +115,13 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
       <StandardCard
         title="Results"
       >
-        <React.Fragment>
-          <pre>
-            [
+        <pre>
+          [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-          </pre>
-        </React.Fragment>
+        </pre>
       </StandardCard>
       <WithStyles(Button)
         color="primary"
@@ -166,15 +160,13 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
       <StandardCard
         title="Results"
       >
-        <React.Fragment>
-          <pre>
-            [
+        <pre>
+          [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-          </pre>
-        </React.Fragment>
+        </pre>
       </StandardCard>
       <WithStyles(Button)
         color="primary"

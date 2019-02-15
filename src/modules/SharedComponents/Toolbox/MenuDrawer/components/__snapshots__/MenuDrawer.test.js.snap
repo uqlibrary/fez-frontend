@@ -32,115 +32,113 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
   open={true}
   variant="temporary"
 >
-  <React.Fragment>
-    <WithStyles(List)
-      component="nav"
-      id="mainMenu"
-      tabIndex={-1}
+  <WithStyles(List)
+    component="nav"
+    id="mainMenu"
+    tabIndex={-1}
+  >
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      classes={
+        Object {
+          "container": undefined,
+        }
+      }
+      container={true}
+      spacing={0}
+      wrap="nowrap"
     >
       <WithStyles(Grid)
-        alignContent="center"
-        alignItems="center"
-        classes={
-          Object {
-            "container": undefined,
-          }
-        }
-        container={true}
-        spacing={0}
-        wrap="nowrap"
+        item={true}
+        sm={12}
+        xs={10}
+        zeroMinWidth={true}
+      />
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={true}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
       >
         <WithStyles(Grid)
           item={true}
-          sm={12}
-          xs={10}
-          zeroMinWidth={true}
-        />
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={true}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          xs={2}
         >
-          <WithStyles(Grid)
-            item={true}
-            xs={2}
+          <WithStyles(IconButton)
+            aria-label="Close menu"
+            onClick={[MockFunction]}
           >
-            <WithStyles(IconButton)
-              aria-label="Close menu"
-              onClick={[MockFunction]}
-            >
-              <pure(KeyboardArrowLeftIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Grid)>
-        </Hidden>
-      </WithStyles(Grid)>
-      <span
-        className="menu-item-container"
-        key="menu_item_0"
+            <pure(KeyboardArrowLeftIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </Hidden>
+    </WithStyles(Grid)>
+    <span
+      className="menu-item-container"
+      key="menu_item_0"
+    >
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
       >
-        <WithStyles(ListItem)
-          button={true}
-          onClick={[Function]}
-        >
-          <WithStyles(ListItemText)
-            classes={
-              Object {
-                "primary": undefined,
-                "secondary": undefined,
-              }
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "primary": undefined,
+              "secondary": undefined,
             }
-            primary="Primary text 0"
-            secondary="secondary text 0"
-          />
-        </WithStyles(ListItem)>
-      </span>
-      <WithStyles(Divider)
-        key="menu_item_1"
-      />
-      <span
-        className="menu-item-container"
-        key="menu_item_2"
-      >
-        <WithStyles(ListItem)
-          button={true}
-          onClick={[Function]}
-        >
-          <WithStyles(ListItemText)
-            classes={
-              Object {
-                "primary": undefined,
-                "secondary": undefined,
-              }
-            }
-            primary="Primary text 1"
-            secondary="secondary text 1"
-          />
-        </WithStyles(ListItem)>
-      </span>
-    </WithStyles(List)>
-    <div
-      id="afterMenuDrawer"
-      tabIndex={-1}
+          }
+          primary="Primary text 0"
+          secondary="secondary text 0"
+        />
+      </WithStyles(ListItem)>
+    </span>
+    <WithStyles(Divider)
+      key="menu_item_1"
     />
-    <div>
-      CRICOS Provider No: 
-      <WithStyles(ExternalLink)
-        href="http://www.uq.edu.au/about/cricos-link"
-        openInNewIcon={false}
-        title="CRICOS Provider No: "
+    <span
+      className="menu-item-container"
+      key="menu_item_2"
+    >
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
       >
-        00025B
-      </WithStyles(ExternalLink)>
-    </div>
-  </React.Fragment>
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "primary": undefined,
+              "secondary": undefined,
+            }
+          }
+          primary="Primary text 1"
+          secondary="secondary text 1"
+        />
+      </WithStyles(ListItem)>
+    </span>
+  </WithStyles(List)>
+  <div
+    id="afterMenuDrawer"
+    tabIndex={-1}
+  />
+  <div>
+    CRICOS Provider No: 
+    <WithStyles(ExternalLink)
+      href="http://www.uq.edu.au/about/cricos-link"
+      openInNewIcon={false}
+      title="CRICOS Provider No: "
+    >
+      00025B
+    </WithStyles(ExternalLink)>
+  </div>
 </WithStyles(Drawer)>
 `;
 
@@ -158,133 +156,131 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   open={true}
   variant="permanent"
 >
-  <React.Fragment>
-    <WithStyles(List)
-      component="nav"
-      id="mainMenu"
-      tabIndex={-1}
+  <WithStyles(List)
+    component="nav"
+    id="mainMenu"
+    tabIndex={-1}
+  >
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      classes={
+        Object {
+          "container": undefined,
+        }
+      }
+      container={true}
+      spacing={0}
+      wrap="nowrap"
     >
       <WithStyles(Grid)
-        alignContent="center"
-        alignItems="center"
-        classes={
-          Object {
-            "container": undefined,
-          }
-        }
-        container={true}
-        spacing={0}
-        wrap="nowrap"
+        item={true}
+        sm={12}
+        xs={10}
+        zeroMinWidth={true}
+      />
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={true}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
       >
         <WithStyles(Grid)
           item={true}
-          sm={12}
-          xs={10}
-          zeroMinWidth={true}
-        />
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={true}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          xs={2}
         >
-          <WithStyles(Grid)
-            item={true}
-            xs={2}
+          <WithStyles(IconButton)
+            aria-label="Close menu"
+            onClick={[MockFunction]}
           >
-            <WithStyles(IconButton)
-              aria-label="Close menu"
-              onClick={[MockFunction]}
-            >
-              <pure(KeyboardArrowLeftIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Grid)>
-        </Hidden>
-      </WithStyles(Grid)>
-      <div
-        aria-label="Skip navigation"
-        id="skipNav"
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex={1}
-        type="button"
-      >
-        <WithStyles(Button)
-          className="skipNavButton"
-          color="primary"
-          onClick={[Function]}
-          tabIndex={-1}
-          variant="contained"
-        >
-          Skip navigation
-        </WithStyles(Button)>
-      </div>
-      <span
-        className="menu-item-container"
-        key="menu_item_0"
-      >
-        <WithStyles(ListItem)
-          button={true}
-          onClick={[Function]}
-        >
-          <WithStyles(ListItemText)
-            classes={
-              Object {
-                "primary": undefined,
-                "secondary": undefined,
-              }
-            }
-            primary="Primary text 0"
-            secondary="secondary text 0"
-          />
-        </WithStyles(ListItem)>
-      </span>
-      <WithStyles(Divider)
-        key="menu_item_1"
-      />
-      <span
-        className="menu-item-container"
-        key="menu_item_2"
-      >
-        <WithStyles(ListItem)
-          button={true}
-          onClick={[Function]}
-        >
-          <WithStyles(ListItemText)
-            classes={
-              Object {
-                "primary": undefined,
-                "secondary": undefined,
-              }
-            }
-            primary="Primary text 1"
-            secondary="secondary text 1"
-          />
-        </WithStyles(ListItem)>
-      </span>
-    </WithStyles(List)>
+            <pure(KeyboardArrowLeftIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </Hidden>
+    </WithStyles(Grid)>
     <div
-      id="afterMenuDrawer"
-      tabIndex={-1}
-    />
-    <div>
-      CRICOS Provider No: 
-      <WithStyles(ExternalLink)
-        href="http://www.uq.edu.au/about/cricos-link"
-        openInNewIcon={false}
-        title="CRICOS Provider No: "
+      aria-label="Skip navigation"
+      id="skipNav"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={1}
+      type="button"
+    >
+      <WithStyles(Button)
+        className="skipNavButton"
+        color="primary"
+        onClick={[Function]}
+        tabIndex={-1}
+        variant="contained"
       >
-        00025B
-      </WithStyles(ExternalLink)>
+        Skip navigation
+      </WithStyles(Button)>
     </div>
-  </React.Fragment>
+    <span
+      className="menu-item-container"
+      key="menu_item_0"
+    >
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "primary": undefined,
+              "secondary": undefined,
+            }
+          }
+          primary="Primary text 0"
+          secondary="secondary text 0"
+        />
+      </WithStyles(ListItem)>
+    </span>
+    <WithStyles(Divider)
+      key="menu_item_1"
+    />
+    <span
+      className="menu-item-container"
+      key="menu_item_2"
+    >
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "primary": undefined,
+              "secondary": undefined,
+            }
+          }
+          primary="Primary text 1"
+          secondary="secondary text 1"
+        />
+      </WithStyles(ListItem)>
+    </span>
+  </WithStyles(List)>
+  <div
+    id="afterMenuDrawer"
+    tabIndex={-1}
+  />
+  <div>
+    CRICOS Provider No: 
+    <WithStyles(ExternalLink)
+      href="http://www.uq.edu.au/about/cricos-link"
+      openInNewIcon={false}
+      title="CRICOS Provider No: "
+    >
+      00025B
+    </WithStyles(ExternalLink)>
+  </div>
 </WithStyles(Drawer)>
 `;
 
@@ -302,132 +298,130 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   open={true}
   variant="permanent"
 >
-  <React.Fragment>
-    <WithStyles(List)
-      component="nav"
-      id="mainMenu"
-      tabIndex={-1}
+  <WithStyles(List)
+    component="nav"
+    id="mainMenu"
+    tabIndex={-1}
+  >
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      classes={
+        Object {
+          "container": undefined,
+        }
+      }
+      container={true}
+      spacing={0}
+      wrap="nowrap"
     >
       <WithStyles(Grid)
-        alignContent="center"
-        alignItems="center"
-        classes={
-          Object {
-            "container": undefined,
-          }
-        }
-        container={true}
-        spacing={0}
-        wrap="nowrap"
+        item={true}
+        sm={12}
+        xs={10}
+        zeroMinWidth={true}
+      />
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={true}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
       >
         <WithStyles(Grid)
           item={true}
-          sm={12}
-          xs={10}
-          zeroMinWidth={true}
-        />
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={true}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          xs={2}
         >
-          <WithStyles(Grid)
-            item={true}
-            xs={2}
+          <WithStyles(IconButton)
+            aria-label="Close menu"
+            onClick={[MockFunction]}
           >
-            <WithStyles(IconButton)
-              aria-label="Close menu"
-              onClick={[MockFunction]}
-            >
-              <pure(KeyboardArrowLeftIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Grid)>
-        </Hidden>
-      </WithStyles(Grid)>
-      <div
-        aria-label="Skip navigation"
-        id="skipNav"
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex={1}
-        type="button"
-      >
-        <WithStyles(Button)
-          className="skipNavButton"
-          color="primary"
-          onClick={[Function]}
-          tabIndex={-1}
-          variant="contained"
-        >
-          Skip navigation
-        </WithStyles(Button)>
-      </div>
-      <span
-        className="menu-item-container"
-        key="menu_item_0"
-      >
-        <WithStyles(ListItem)
-          button={true}
-          onClick={[Function]}
-        >
-          <WithStyles(ListItemText)
-            classes={
-              Object {
-                "primary": undefined,
-                "secondary": undefined,
-              }
-            }
-            primary="Primary text 0"
-            secondary="secondary text 0"
-          />
-        </WithStyles(ListItem)>
-      </span>
-      <WithStyles(Divider)
-        key="menu_item_1"
-      />
-      <span
-        className="menu-item-container"
-        key="menu_item_2"
-      >
-        <WithStyles(ListItem)
-          button={true}
-          onClick={[Function]}
-        >
-          <WithStyles(ListItemText)
-            classes={
-              Object {
-                "primary": undefined,
-                "secondary": undefined,
-              }
-            }
-            primary="Primary text 1"
-            secondary="secondary text 1"
-          />
-        </WithStyles(ListItem)>
-      </span>
-    </WithStyles(List)>
+            <pure(KeyboardArrowLeftIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </Hidden>
+    </WithStyles(Grid)>
     <div
-      id="afterMenuDrawer"
-      tabIndex={-1}
-    />
-    <div>
-      CRICOS Provider No: 
-      <WithStyles(ExternalLink)
-        href="http://www.uq.edu.au/about/cricos-link"
-        openInNewIcon={false}
-        title="CRICOS Provider No: "
+      aria-label="Skip navigation"
+      id="skipNav"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={1}
+      type="button"
+    >
+      <WithStyles(Button)
+        className="skipNavButton"
+        color="primary"
+        onClick={[Function]}
+        tabIndex={-1}
+        variant="contained"
       >
-        00025B
-      </WithStyles(ExternalLink)>
+        Skip navigation
+      </WithStyles(Button)>
     </div>
-  </React.Fragment>
+    <span
+      className="menu-item-container"
+      key="menu_item_0"
+    >
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "primary": undefined,
+              "secondary": undefined,
+            }
+          }
+          primary="Primary text 0"
+          secondary="secondary text 0"
+        />
+      </WithStyles(ListItem)>
+    </span>
+    <WithStyles(Divider)
+      key="menu_item_1"
+    />
+    <span
+      className="menu-item-container"
+      key="menu_item_2"
+    >
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "primary": undefined,
+              "secondary": undefined,
+            }
+          }
+          primary="Primary text 1"
+          secondary="secondary text 1"
+        />
+      </WithStyles(ListItem)>
+    </span>
+  </WithStyles(List)>
+  <div
+    id="afterMenuDrawer"
+    tabIndex={-1}
+  />
+  <div>
+    CRICOS Provider No: 
+    <WithStyles(ExternalLink)
+      href="http://www.uq.edu.au/about/cricos-link"
+      openInNewIcon={false}
+      title="CRICOS Provider No: "
+    >
+      00025B
+    </WithStyles(ExternalLink)>
+  </div>
 </WithStyles(Drawer)>
 `;
