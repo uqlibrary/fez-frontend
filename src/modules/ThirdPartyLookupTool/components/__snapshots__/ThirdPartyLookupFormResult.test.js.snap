@@ -1,154 +1,194 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
-<StandardCard
-  title="Incites"
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
 >
-  <p>
-    UTs
-     - 
-    dummy UT
-  </p>
-  <StandardCard
-    title="Results"
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
   >
-    <React.Fragment>
-      <pre>
-        [
+    <StandardCard
+      title="Incites"
+    >
+      <p>
+        UTs
+         - 
+        dummy UT
+      </p>
+      <StandardCard
+        title="Results"
+      >
+        <React.Fragment>
+          <pre>
+            [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-      </pre>
-    </React.Fragment>
-  </StandardCard>
-  <WithStyles(Button)
-    color="primary"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-    variant="contained"
-  >
-    New Search
-  </WithStyles(Button)>
-</StandardCard>
+          </pre>
+        </React.Fragment>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupFormResult renders api data when no second field provided 1`] = `
-<StandardCard
-  title="Incites"
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
 >
-  <p>
-    UTs
-     - 
-    dummy UT
-  </p>
-  <StandardCard
-    title="Results"
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
   >
-    <React.Fragment>
-      <pre>
-        [
+    <StandardCard
+      title="Incites"
+    >
+      <p>
+        UTs
+         - 
+        dummy UT
+      </p>
+      <StandardCard
+        title="Results"
+      >
+        <React.Fragment>
+          <pre>
+            [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-      </pre>
-    </React.Fragment>
-  </StandardCard>
-  <WithStyles(Button)
-    color="primary"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-    variant="contained"
-  >
-    New Search
-  </WithStyles(Button)>
-</StandardCard>
-`;
-
-exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
-<StandardCard
-  title="Incites"
->
-  <p>
-    UTs
-     - 
-    dummy UT
-  </p>
-  <StandardCard
-    title="Results"
-  >
-    <React.Fragment>
-      <pre>
-        [
-  {
-    "IS_INTERNATIONAL_COLLAB": "0"
-  }
-]
-      </pre>
-    </React.Fragment>
-  </StandardCard>
-  <WithStyles(Button)
-    color="primary"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-    variant="contained"
-  >
-    New Search
-  </WithStyles(Button)>
-</StandardCard>
+          </pre>
+        </React.Fragment>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupFormResult should display the secondary field when required 1`] = `
-<StandardCard
-  title="Incites"
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
 >
-  <p>
-    UTs
-     - 
-    dummy UT
-  </p>
-  <p>
-    API Key
-     - 
-    123456789
-  </p>
-  <StandardCard
-    title="Results"
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
   >
-    <React.Fragment>
-      <pre>
-        [
+    <StandardCard
+      title="Incites"
+    >
+      <p>
+        UTs
+         - 
+        dummy UT
+      </p>
+      <p>
+        API Key
+         - 
+        123456789
+      </p>
+      <StandardCard
+        title="Results"
+      >
+        <React.Fragment>
+          <pre>
+            [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-      </pre>
-    </React.Fragment>
-  </StandardCard>
-  <WithStyles(Button)
-    color="primary"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-    variant="contained"
+          </pre>
+        </React.Fragment>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
   >
-    New Search
-  </WithStyles(Button)>
-</StandardCard>
+    <StandardCard
+      title="Incites"
+    >
+      <p>
+        UTs
+         - 
+        dummy UT
+      </p>
+      <StandardCard
+        title="Results"
+      >
+        <React.Fragment>
+          <pre>
+            [
+  {
+    "IS_INTERNATIONAL_COLLAB": "0"
+  }
+]
+          </pre>
+        </React.Fragment>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;
