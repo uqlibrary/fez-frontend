@@ -1,8 +1,8 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import {get, patch, post} from '../repositories/generic';
-import {EXISTING_RECORD_API, RECORDS_ISSUES_API, HIDE_POSSIBLE_RECORD_API} from '../repositories/routes';
-import {putUploadFiles} from '../repositories';
+import {get, patch, post} from 'repositories/generic';
+import {EXISTING_RECORD_API, RECORDS_ISSUES_API, HIDE_POSSIBLE_RECORD_API} from 'repositories/routes';
+import {putUploadFiles} from 'repositories';
 
 /**
  * Load publication

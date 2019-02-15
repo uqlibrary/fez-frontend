@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from '../repositories/generic';
-import {GET_NEWS_API} from '../repositories/routes';
+import {get} from 'repositories/generic';
+import {GET_NEWS_API} from 'repositories/routes';
 
 /**
  * Load a list of news from fez

@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from '../repositories/generic';
-import * as routes from '../repositories/routes';
+import {get} from 'repositories/generic';
+import * as routes from 'repositories/routes';
 import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
 import {exportPublications} from './exportPublications';
 

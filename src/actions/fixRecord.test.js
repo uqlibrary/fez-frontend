@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
-import * as repositories from '../repositories';
+import * as repositories from 'repositories';
 import * as fixRecordActions from './fixRecord';
-import * as mockData from '../mock/data/testing/records';
+import * as mockData from 'mock/data/testing/records';
 
 describe('Fix record actions', () => {
     const testPid = "UQ:41878";

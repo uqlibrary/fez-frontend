@@ -1,7 +1,7 @@
 import * as transformer from './academicDataTransformers';
 import * as actions from './actionTypes';
-import {get} from '../repositories/generic';
-import {ACADEMIC_STATS_PUBLICATION_HINDEX_API, AUTHOR_PUBLICATIONS_STATS_ONLY_API} from '../repositories/routes';
+import {get} from 'repositories/generic';
+import {ACADEMIC_STATS_PUBLICATION_HINDEX_API, AUTHOR_PUBLICATIONS_STATS_ONLY_API} from 'repositories/routes';
 
 export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
