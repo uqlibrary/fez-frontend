@@ -86,6 +86,9 @@ const webpackConfig = {
         new AssetsPlugin({
             filename: 'frontend.json',
             path: resolve(__dirname, './dist/', config.basePath),
+            fileTypes: ['js', 'css'],
+            includeAllFileTypes: false,
+            prettyPrint: true
         }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
