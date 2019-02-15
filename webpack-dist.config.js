@@ -13,7 +13,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
-const ConcatPlugin = require('webpack-concat-plugin');
 
 const options = {
     policy: [
@@ -153,25 +152,6 @@ const webpackConfig = {
             openAnalyzer: !process.env.CI_BRANCH
         }),
         new RobotstxtPlugin(options),
-        new ConcatPlugin({
-            uglify: false,
-            sourceMap: false,
-            name: 'result',
-            outputPath: './',
-            fileName: 'frontend.min.js',
-            filesToConcat: [
-                [
-                    './src/**',
-                    '!./src/**/*.test.js',
-                    '!./src/mock/**'
-                ],
-                [
-                    './node_modules/uqlibrary-react-toolbox/src/**',
-                    '!./node_modules/uqlibrary-react-toolbox/src/**/*.test.js'
-                ]
-            ],
-            injectType: 'none'
-        }),
     ],
     optimization: {
         splitChunks: {
