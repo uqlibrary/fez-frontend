@@ -68,73 +68,77 @@ export class ThirdPartyLookupForm extends PureComponent {
         const { primaryValue, secondaryValue } = this.state;
         const lookupLabel = txt.thisForm.lookupLabel ? txt.thisForm.lookupLabel : 'this form';
         return (
-            <StandardCard noHeader>
-                <Grid container spacing={24}>
-                    <Grid item style={{flexGrow: 1, width: 1}}>
-                        <Typography variant={'headline'}>{txt.thisForm.lookupLabel}</Typography>
-                    </Grid>
-                    <Grid item>
-                        <IconButton
-                            onClick={this._toggleMinimise}
-                            tooltip={!!this.state.isMinimised
-                                ? locale.components.thirdPartyLookupTools.tooltip.show + ' for ' + lookupLabel
-                                : locale.components.thirdPartyLookupTools.tooltip.hide + ' for ' + lookupLabel
-                            }>
-                            {
-                                !!this.state.isMinimised
-                                    ? <KeyboardArrowDown/>
-                                    : <KeyboardArrowUp/>
-                            }
-                        </IconButton>
-                    </Grid>
-                </Grid>
-                <p>{txt.thisForm.tip ? txt.thisForm.tip : ''}</p>
-                {
-                    !this.state.isMinimised &&
-                    <form>
-
-                        <div>
-                            <h4>{txt.thisForm.primaryField.heading}</h4>
-                            <p>{txt.thisForm.primaryField.tip ? txt.thisForm.primaryField.tip : ''}</p>
-                            <TextField
-                                fullWidth
-                                name={'primaryValue'}
-                                placeholder={txt.thisForm.primaryField.inputPlaceholder ? txt.thisForm.primaryField.inputPlaceholder : ''}
-                                aria-label={txt.thisForm.primaryField.fromAria ? txt.thisForm.primaryField.fromAria : ''}
-                                value={primaryValue}
-                                onChange={this._onChange}
-                                required
-                                className={'primaryValue'}
-                            />
-                        </div>
+            <Grid container spacing={24}>
+                <Grid item xs={12}>
+                    <StandardCard noHeader>
+                        <Grid container spacing={24}>
+                            <Grid item style={{flexGrow: 1, width: 1}}>
+                                <Typography variant={'headline'}>{txt.thisForm.lookupLabel}</Typography>
+                            </Grid>
+                            <Grid item>
+                                <IconButton
+                                    onClick={this._toggleMinimise}
+                                    tooltip={!!this.state.isMinimised
+                                        ? locale.components.thirdPartyLookupTools.tooltip.show + ' for ' + lookupLabel
+                                        : locale.components.thirdPartyLookupTools.tooltip.hide + ' for ' + lookupLabel
+                                    }>
+                                    {
+                                        !!this.state.isMinimised
+                                            ? <KeyboardArrowDown/>
+                                            : <KeyboardArrowUp/>
+                                    }
+                                </IconButton>
+                            </Grid>
+                        </Grid>
+                        <p>{txt.thisForm.tip ? txt.thisForm.tip : ''}</p>
                         {
-                            // not all forms will have a second field
-                            !!txt.thisForm.secondaryField &&
+                            !this.state.isMinimised &&
+                            <form>
+
                                 <div>
-                                    <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                    <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
+                                    <h4>{txt.thisForm.primaryField.heading}</h4>
+                                    <p>{txt.thisForm.primaryField.tip ? txt.thisForm.primaryField.tip : ''}</p>
                                     <TextField
                                         fullWidth
-                                        name={'secondaryValue'}
-                                        placeholder={txt.thisForm.secondaryField.inputPlaceholder ? txt.thisForm.secondaryField.inputPlaceholder : ''}
-                                        aria-label={txt.thisForm.secondaryField.fromAria ? txt.thisForm.secondaryField.fromAria : ''}
-                                        value={secondaryValue}
+                                        name={'primaryValue'}
+                                        placeholder={txt.thisForm.primaryField.inputPlaceholder ? txt.thisForm.primaryField.inputPlaceholder : ''}
+                                        aria-label={txt.thisForm.primaryField.fromAria ? txt.thisForm.primaryField.fromAria : ''}
+                                        value={primaryValue}
                                         onChange={this._onChange}
-                                        className={'secondaryValue'}
+                                        required
+                                        className={'primaryValue'}
                                     />
                                 </div>
+                                {
+                                    // not all forms will have a second field
+                                    !!txt.thisForm.secondaryField &&
+                                        <div>
+                                            <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                            <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
+                                            <TextField
+                                                fullWidth
+                                                name={'secondaryValue'}
+                                                placeholder={txt.thisForm.secondaryField.inputPlaceholder ? txt.thisForm.secondaryField.inputPlaceholder : ''}
+                                                aria-label={txt.thisForm.secondaryField.fromAria ? txt.thisForm.secondaryField.fromAria : ''}
+                                                value={secondaryValue}
+                                                onChange={this._onChange}
+                                                className={'secondaryValue'}
+                                            />
+                                        </div>
+                                }
+                                <p>{txt.thisForm.bottomTip ?  txt.thisForm.bottomTip : ''}</p>
+                                <Button
+                                    children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
+                                    variant="contained"
+                                    aria-label={txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
+                                    color={'primary'}
+                                    onClick={() => this._handleSubmitLookup()}
+                                />
+                            </form>
                         }
-                        <p>{txt.thisForm.bottomTip ?  txt.thisForm.bottomTip : ''}</p>
-                        <Button
-                            children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
-                            variant="contained"
-                            aria-label={txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
-                            color={'primary'}
-                            onClick={() => this._handleSubmitLookup()}
-                        />
-                    </form>
-                }
-            </StandardCard>
+                    </StandardCard>
+                </Grid>
+            </Grid>
         );
     }
 }

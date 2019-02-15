@@ -274,17 +274,16 @@ export default {
             }
         },
         thirdPartyLookupTools: {
-            title: 'Third Party Lookup Tools',
+            title: 'Lookup Tools - view raw output from APIs',
             forms: {
                 incites: {
                     lookupType: 'incites', // this value should match the 'type' in the path used in api
                     lookupLabel: 'Incites',
-                    tip: 'View raw output we receive from Incites via their API',
                     primaryField: {
                         heading: 'UTs',
                         fromAria: '',
                         tip: '',
-                        inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                        inputPlaceholder: 'Enter one or more UTs separated by a comma e.g. 000455548800001',
                     },
                     secondaryField: {
                         heading: 'API Key',
@@ -1258,7 +1257,7 @@ export default {
                         combiner: 'is',
                         type: 'AuthorIdLookup',
                         hint: 'Add an author id',
-                        validation: ['required'],
+                        validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list'
                     },
                     'rek_contributor_id': {
@@ -1268,7 +1267,7 @@ export default {
                         combiner: 'is',
                         type: 'ContributorIdLookup',
                         hint: 'Add a contributor id',
-                        validation: ['required'],
+                        validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an contributor ID to select an author from the list'
                     },
                     'rek_org_unit_name': {
@@ -1288,7 +1287,6 @@ export default {
                         combiner: 'is one of',
                         type: null,
                         hint: 'Select document types',
-                        floatingLabelText: 'Test',
                         validation: [],
                         ariaLabel: 'Select multiple publications types to search on'
                     },
@@ -1305,6 +1303,39 @@ export default {
                         toHint: 'Year to',
                         invalidText: 'Invalid year range',
                         ariaLabel: 'Add valid year ranges to search between'
+                    },
+                    'rek_status': {
+                        order: 16,
+                        map: 'Status',
+                        title: 'Status',
+                        combiner: 'is',
+                        type: 'StatusLookup',
+                        hint: 'Select status',
+                        validation: [],
+                        ariaLabel: 'Select a status to search on',
+                        isUnpublishedField: true
+                    },
+                    'rek_created_date': {
+                        order: 22,
+                        title: 'Created date range',
+                        captionTitle: 'Created',
+                        type: null,
+                        combiner: 'between',
+                        ariaLabel: 'Add valid date ranges to search between',
+                        isUnpublishedField: true,
+                        validation: [],
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
+                    },
+                    'rek_updated_date': {
+                        order: 23,
+                        title: 'Updated date range',
+                        captionTitle: 'Updated',
+                        type: null,
+                        combiner: 'between',
+                        ariaLabel: 'Add valid date ranges to search between',
+                        isUnpublishedField: true,
+                        validation: [],
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
                     }
                 },
                 openAccess: {

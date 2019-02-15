@@ -45,6 +45,9 @@ export default {
         },
         help: {
             primaryText: 'Help'
+        },
+        unpublished: {
+            primaryText: 'Unpublished buffer'
         }
     },
     footer: {

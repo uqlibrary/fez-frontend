@@ -270,7 +270,7 @@ export default class SbsSubmission extends Component {
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 fullWidth
                                 children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
@@ -278,7 +278,7 @@ export default class SbsSubmission extends Component {
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 color={'primary'}
                                 fullWidth
                                 children={formLocale.thesisSubmission.submit}

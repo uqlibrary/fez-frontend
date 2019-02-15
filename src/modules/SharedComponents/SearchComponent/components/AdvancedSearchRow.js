@@ -51,6 +51,7 @@ export class AdvancedSearchRow extends PureComponent {
         ]),
         label: PropTypes.any,
         disabledFields: PropTypes.array,
+        showUnpublishedFields: PropTypes.bool,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,
         classes: PropTypes.object
@@ -107,6 +108,7 @@ export class AdvancedSearchRow extends PureComponent {
                                         {
                                             Object.keys(txt.fieldTypes)
                                                 .filter(item => txt.fieldTypes[item].type !== null)
+                                                .filter(item => !txt.fieldTypes[item].isUnpublishedField || this.props.showUnpublishedFields)
                                                 .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
                                                 .map((item, index) => {
                                                     if(txt.fieldTypes[item].type === 'divider') {

@@ -14,12 +14,17 @@ function setup(testProps, isShallow = true) {
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
         updateFacetExcludesFromSearchFields: jest.fn(),
+        isAdmin: false,
+        isUnpublishedBufferPage: false,
 
         history: {
             push: jest.fn()
         },
         actions: {
             searchEspacePublications: jest.fn()
+        },
+        location: {
+            pathname: ''
         },
         ...testProps
     };
@@ -115,6 +120,52 @@ describe('SearchComponent', () => {
                 pageSize: 20,
                 searchQueryParams: {
                     all: 'i feel lucky',
+                },
+                sortBy: 'score',
+                sortDirection: 'Desc'
+            }
+        });
+    });
+
+
+    it('should submit search for given search query params for unpublished buffer', () => {
+        const testMethod = jest.fn();
+        const testHistoryPushMehtod = jest.fn();
+        const wrapper = setup({
+            actions: {searchEspacePublications: testMethod},
+            history: {push: testHistoryPushMehtod},
+            location: {pathname: '/admin/unpublished'},
+            isAdmin: true,
+            isUnpublishedBufferPage: true
+        });
+
+        const searchQuery = {
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                rek_status: 3
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
+        };
+
+        wrapper.instance().handleSearch(searchQuery);
+        wrapper.update();
+
+        expect(testMethod).toHaveBeenCalled();
+        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+            pathname: '/admin/unpublished',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_status%5D=3',
+            state: {
+                activeFacets: {filters: {}, ranges: {}},
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: {
+                    rek_status: 3,
                 },
                 sortBy: 'score',
                 sortDirection: 'Desc'

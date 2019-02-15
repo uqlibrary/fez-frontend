@@ -209,7 +209,7 @@ export class AdditionalInformation extends PureComponent {
     }
 
     getAbstract = (publication) => {
-        return !this.props.isNtro && publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ');
+        return this.props.isNtro ? null : publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ') || null;
     }
 
     // TODO: display original contact email for admin users
@@ -280,7 +280,6 @@ export class AdditionalInformation extends PureComponent {
         if (!this.props.publication || !this.props.publication.rek_display_type_lookup) {
             return null;
         }
-
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>

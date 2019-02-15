@@ -6,6 +6,8 @@ function setup(testProps, isShallow = true) {
         publicationsList: [],
         searchLoading: false,
         exportPublicationsLoading: false,
+        isAdvancedSearch: false,
+        isUnpublishedBufferPage: false,
         actions: {
             exportEspacePublications: jest.fn(),
             searchEspacePublications: jest.fn()
@@ -26,6 +28,10 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render advanced search component', () => {
+        const wrapper = setup({isAdvancedSearch: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
     it('should render loading screen while loading search results', () => {
         const wrapper = setup({searchLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -458,5 +464,20 @@ describe('SearchRecords page', () => {
         const result = ["Scopus document type", "Genre", "Year published", "Published year range", "Title", "Author"];
         wrapper.instance().handleFacetExcludesFromSearchFields(test);
         expect(wrapper.instance().state.advancedSearchFields).toEqual(result)
+    });
+
+    it('should handle empty search query string and should not fail to WSoD', () => {
+        const wrapper = setup();
+        const expected = {
+            "activeFacets": {
+              "filters": {},
+              "ranges": {},
+            },
+            "pageSize": 20,
+            "sortBy": "score",
+            "sortDirection": "Desc",
+        };
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('');
+        expect(result).toEqual(expected);
     });
 });
