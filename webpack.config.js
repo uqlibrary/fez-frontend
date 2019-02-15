@@ -165,7 +165,7 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        new webpack.AssetsPlugin({
+        new AssetsPlugin({
             filename: 'frontend.json',
             prettyPrint: true
         })
