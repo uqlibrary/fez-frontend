@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search record results should render a single claimable item with no authors on the record (record should appear in publicationsList prop) 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={24}
@@ -476,11 +476,11 @@ exports[`Search record results should render a single claimable item with no aut
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Search record results should render a single unclaimable item with no authors on the record (record should appear in publicationsListSubset prop) 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={24}
@@ -728,11 +728,11 @@ exports[`Search record results should render a single unclaimable item with no a
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Search record results should render publications list with one publication to be able to claim (record should not appear in publicationsListSubset prop) 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={24}
@@ -960,11 +960,11 @@ exports[`Search record results should render publications list with one publicat
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Search record results should render stepper and no results 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={24}
@@ -1082,5 +1082,5 @@ exports[`Search record results should render stepper and no results 1`] = `
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;

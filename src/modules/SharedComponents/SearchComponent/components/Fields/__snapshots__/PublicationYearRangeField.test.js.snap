@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component PublicationYearRangeField should render as expected 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -95,5 +95,5 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;

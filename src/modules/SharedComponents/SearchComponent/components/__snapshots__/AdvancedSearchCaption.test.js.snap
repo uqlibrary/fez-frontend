@@ -4,128 +4,116 @@ exports[`Component AdvancedSearchCaption should render as expected with no props
 <div
   className="undefined searchQueryCaption"
 >
-  <React.Fragment>
-    <span>
-       
-       
+  <span>
+     
+     
+  </span>
+  <span>
+    Any field
+     
+  </span>
+  <span>
+     
+    contains
+     
+  </span>
+  <span>
+     
+    anything
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Collection
+     
+  </span>
+  <span>
+     
+    is one of
+     
+  </span>
+  <span>
+     
+    UQ:120743, UQ:217419 or UQ:217422
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Author ID
+     
+  </span>
+  <span>
+     
+    is
+     
+  </span>
+  <span>
+     
+    570
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Work type
+     
+  </span>
+  <span>
+     
+    is one of
+     
+  </span>
+  <span>
+     
+    Audio document or Book
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+     
+  </span>
+  <span>
+     
+    is
+     
+  </span>
+  <span>
+     
+    <span
+      className="value"
+    >
+      open access/full text
     </span>
-    <span>
-      Any field
-       
-    </span>
-    <span>
-       
-      contains
-       
-    </span>
-    <span>
-       
-      anything
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Collection
-       
-    </span>
-    <span>
-       
-      is one of
-       
-    </span>
-    <span>
-       
-      UQ:120743, UQ:217419 or UQ:217422
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Author ID
-       
-    </span>
-    <span>
-       
-      is
-       
-    </span>
-    <span>
-       
-      570
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Work type
-       
-    </span>
-    <span>
-       
-      is one of
-       
-    </span>
-    <span>
-       
-      Audio document or Book
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-       
-    </span>
-    <span>
-       
-      is
-       
-    </span>
-    <span>
-       
-      <span
-        className="value"
-      >
-        open access/full text
-      </span>
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Published
-       
-    </span>
-    <span>
-       
-      between
-       
-    </span>
-    <span>
-       
-      1991 to 2012
-    </span>
-  </React.Fragment>
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Published
+     
+  </span>
+  <span>
+     
+    between
+     
+  </span>
+  <span>
+     
+    1991 to 2012
+  </span>
 </div>
 `;
 
@@ -133,65 +121,59 @@ exports[`Component AdvancedSearchCaption updateStateData should return expected 
 <div
   className="search-body searchQueryCaption"
 >
-  <React.Fragment>
-    <span>
-       
-       
-    </span>
-    <span>
-      Any field
-       
-    </span>
-    <span>
-       
-      contains
-       
-    </span>
-    <span>
-       
-      sdsdfsdfgsdfg
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Collection
-       
-    </span>
-    <span>
-       
-      is one of
-       
-    </span>
-    <span>
-       
-      UQ:120743, UQ:217419 or UQ:217422
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Author ID
-       
-    </span>
-    <span>
-       
-      is
-       
-    </span>
-    <span>
-       
-      81861
-    </span>
-  </React.Fragment>
+  <span>
+     
+     
+  </span>
+  <span>
+    Any field
+     
+  </span>
+  <span>
+     
+    contains
+     
+  </span>
+  <span>
+     
+    sdsdfsdfgsdfg
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Collection
+     
+  </span>
+  <span>
+     
+    is one of
+     
+  </span>
+  <span>
+     
+    UQ:120743, UQ:217419 or UQ:217422
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Author ID
+     
+  </span>
+  <span>
+     
+    is
+     
+  </span>
+  <span>
+     
+    81861
+  </span>
 </div>
 `;
 
@@ -199,64 +181,58 @@ exports[`Component AdvancedSearchCaption updateStateData should return expected 
 <div
   className="search-body searchQueryCaption"
 >
-  <React.Fragment>
-    <span>
-       
-       
-    </span>
-    <span>
-      Any field
-       
-    </span>
-    <span>
-       
-      contains
-       
-    </span>
-    <span>
-       
-      sdsdfsdfgsdfg
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Collection
-       
-    </span>
-    <span>
-       
-      is one of
-       
-    </span>
-    <span>
-       
-      UQ:120743, UQ:217419 or UQ:217422
-    </span>
-  </React.Fragment>
-  <React.Fragment>
-    <span>
-       
-       AND 
-       
-    </span>
-    <span>
-      Author ID
-       
-    </span>
-    <span>
-       
-      is
-       
-    </span>
-    <span>
-       
-      81861
-    </span>
-  </React.Fragment>
+  <span>
+     
+     
+  </span>
+  <span>
+    Any field
+     
+  </span>
+  <span>
+     
+    contains
+     
+  </span>
+  <span>
+     
+    hello
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Collection
+     
+  </span>
+  <span>
+     
+    is one of
+     
+  </span>
+  <span>
+     
+    UQ:120743 or UQ:217423
+  </span>
+  <span>
+     
+     AND 
+     
+  </span>
+  <span>
+    Author ID
+     
+  </span>
+  <span>
+     
+    is
+     
+  </span>
+  <span>
+     
+    2917705
+  </span>
 </div>
 `;

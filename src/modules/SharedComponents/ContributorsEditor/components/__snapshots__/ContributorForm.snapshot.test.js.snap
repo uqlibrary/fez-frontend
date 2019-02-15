@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorForm should render NTRO fields 1`] = `
-<React.Fragment>
+<Fragment>
   <div>
     Please 
     <b>
@@ -84,11 +84,11 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field and identifier field 1`] = `
-<React.Fragment>
+<Fragment>
   <div>
     Please 
     <b>
@@ -157,11 +157,11 @@ exports[`Component ContributorForm should render display name field and identifi
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field and role field 1`] = `
-<React.Fragment>
+<Fragment>
   <div>
     Please 
     <b>
@@ -236,11 +236,11 @@ exports[`Component ContributorForm should render display name field and role fie
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field only 1`] = `
-<React.Fragment>
+<Fragment>
   <div>
     Please 
     <b>
@@ -296,5 +296,5 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;

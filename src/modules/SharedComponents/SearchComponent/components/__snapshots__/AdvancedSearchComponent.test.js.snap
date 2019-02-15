@@ -44,185 +44,183 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "all",
-              ]
-            }
-            key="advanced-search-field-all"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="all"
-            showUnpublishedFields={false}
-            value="i feel lucky"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-                docTypes={
-                  Array [
-                    "179",
-                    "202",
-                  ]
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={true}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "all",
+            ]
+          }
+          key="advanced-search-field-all"
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="all"
+          showUnpublishedFields={false}
+          value="i feel lucky"
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+              docTypes={
+                Array [
+                  "179",
+                  "202",
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >
@@ -322,185 +320,183 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "all",
-              ]
-            }
-            key="advanced-search-field-all"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="all"
-            showUnpublishedFields={false}
-            value="i feel lucky"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-                docTypes={
-                  Array [
-                    179,
-                    202,
-                  ]
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={true}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "all",
+            ]
+          }
+          key="advanced-search-field-all"
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="all"
+          showUnpublishedFields={false}
+          value="i feel lucky"
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+              docTypes={
+                Array [
+                  179,
+                  202,
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >
@@ -600,179 +596,177 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "all",
-              ]
-            }
-            key="advanced-search-field-all"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="all"
-            showUnpublishedFields={false}
-            value="i feel lucky"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={true}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "all",
+            ]
+          }
+          key="advanced-search-field-all"
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="all"
+          showUnpublishedFields={false}
+          value="i feel lucky"
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >
@@ -866,185 +860,183 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "all",
-              ]
-            }
-            key="advanced-search-field-all"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="all"
-            showUnpublishedFields={false}
-            value="i feel lucky"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-                docTypes={
-                  Array [
-                    "test",
-                    202,
-                  ]
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={true}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "all",
+            ]
+          }
+          key="advanced-search-field-all"
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="all"
+          showUnpublishedFields={false}
+          value="i feel lucky"
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+              docTypes={
+                Array [
+                  "test",
+                  202,
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >
@@ -1144,180 +1136,178 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "0",
-              ]
-            }
-            key="advanced-search-field-0"
-            label=""
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="0"
-            showUnpublishedFields={false}
-            value=""
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={false}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "0",
+            ]
+          }
+          key="advanced-search-field-0"
+          label=""
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="0"
+          showUnpublishedFields={false}
+          value=""
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={true}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={false}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={true}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >
@@ -1412,180 +1402,178 @@ exports[`AdvancedSearchComponent should render default view with open access che
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "0",
-              ]
-            }
-            key="advanced-search-field-0"
-            label=""
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="0"
-            showUnpublishedFields={false}
-            value=""
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={true}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "0",
+            ]
+          }
+          key="advanced-search-field-0"
+          label=""
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="0"
+          showUnpublishedFields={false}
+          value=""
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={true}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={true}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={true}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >
@@ -1774,180 +1762,178 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
-    <React.Fragment>
+    <WithStyles(Grid)
+      container={true}
+    >
       <WithStyles(Grid)
-        container={true}
+        item={true}
+        md={8}
+        xs={12}
       >
-        <WithStyles(Grid)
-          item={true}
-          md={8}
-          xs={12}
-        >
-          <WithStyles(AdvancedSearchRow)
-            disabledFields={
-              Array [
-                "0",
-              ]
-            }
-            key="advanced-search-field-0"
-            label=""
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="0"
-            showUnpublishedFields={false}
-            value=""
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(DocumentTypeField)
-                disabled={false}
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(PublicationYearRangeField)
-                disabled={false}
-                invalid={false}
-                updateYearRangeFilter={[MockFunction]}
-                yearFilter={
-                  Object {
-                    "invalid": false,
-                  }
-                }
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(FormControlLabel)
-                control={
-                  <WithStyles(Checkbox)
-                    aria-label="Check to search for publications with are only open access / full text"
-                    checked={false}
-                    disabled={false}
-                    onChange={[Function]}
-                  />
-                }
-                label="Open access"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(AdvancedSearchRow)
+          disabledFields={
+            Array [
+              "0",
+            ]
+          }
+          key="advanced-search-field-0"
+          label=""
+          onSearchRowChange={[Function]}
+          onSearchRowDelete={[Function]}
+          rowIndex={0}
+          searchField="0"
+          showUnpublishedFields={false}
+          value=""
+        />
       </WithStyles(Grid)>
       <WithStyles(Grid)
-        container={true}
-        spacing={16}
-        style={
-          Object {
-            "marginTop": 24,
-          }
-        }
+        item={true}
+        md={4}
+        xs={12}
       >
         <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to add another advanced search field"
-            classes={
-              Object {
-                "root": undefined,
-              }
-            }
-            disabled={true}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Add another field
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to reset the advanced search"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Reset
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to return to the simple search"
-            fullWidth={true}
-            onClick={[Function]}
-          >
-            Simple search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
+          container={true}
+          spacing={16}
         >
           <WithStyles(Grid)
             item={true}
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": 1,
-              }
-            }
-          />
-        </Hidden>
-        <WithStyles(Grid)
-          item={true}
-          md={4}
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
+            xs={12}
           >
-            Search
-          </WithStyles(Button)>
+            <WithStyles(DocumentTypeField)
+              disabled={false}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationYearRangeField)
+              disabled={false}
+              invalid={false}
+              updateYearRangeFilter={[MockFunction]}
+              yearFilter={
+                Object {
+                  "invalid": false,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(FormControlLabel)
+              control={
+                <WithStyles(Checkbox)
+                  aria-label="Check to search for publications with are only open access / full text"
+                  checked={false}
+                  disabled={false}
+                  onChange={[Function]}
+                />
+              }
+              label="Open access"
+            />
+          </WithStyles(Grid)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to add another advanced search field"
+          classes={
+            Object {
+              "root": undefined,
+            }
+          }
+          disabled={true}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Add another field
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to reset the advanced search"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Reset
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to return to the simple search"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Simple search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
     >

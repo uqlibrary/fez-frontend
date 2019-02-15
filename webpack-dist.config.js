@@ -4,16 +4,16 @@ const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
+const ExtractTextPlugin2 = require('extract-text-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
+const ConcatPlugin = require('webpack-concat-plugin');
 
 const options = {
     policy: [
@@ -83,13 +83,6 @@ const webpackConfig = {
         host: '0.0.0.0'
     },
     plugins: [
-        new AssetsPlugin({
-            filename: 'frontend.json',
-            path: resolve(__dirname, './dist/', config.basePath),
-            fileTypes: ['js', 'css'],
-            includeAllFileTypes: false,
-            prettyPrint: true
-        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
@@ -121,6 +114,7 @@ const webpackConfig = {
             clear: false,
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
+        new ExtractTextPlugin2('frontend.min.css'),
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
@@ -158,7 +152,16 @@ const webpackConfig = {
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
         }),
-        new RobotstxtPlugin(options)
+        new RobotstxtPlugin(options),
+        new ConcatPlugin({
+            uglify: true,
+            sourceMap: false,
+            name: 'result',
+            outputPath: './',
+            fileName: 'frontend.min.js',
+            filesToConcat: [resolve(__dirname, './dist/', config.basePath, 'frontend-js/*.js')],
+            injectType: 'none'
+        }),
     ],
     optimization: {
         splitChunks: {
@@ -207,6 +210,11 @@ const webpackConfig = {
                     fallback: "style-loader",
                     use: "css-loader!sass-loader",
                 }),
+            },
+            {
+                test: /\.scss/,
+                include: resolve(__dirname, './dist'),
+                loader: ExtractTextPlugin2.extract('style', 'css')
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,

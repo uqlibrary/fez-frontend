@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdvancedSearchRow should render default view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={16}
@@ -289,7 +289,9 @@ exports[`AdvancedSearchRow should render default view 1`] = `
             rowIndex={0}
             searchField="0"
             value=""
-          />
+          >
+            <Component />
+          </AdvancedSearchRowInput>
         </WithStyles(Grid)>
         <Hidden
           implementation="js"
@@ -314,11 +316,11 @@ exports[`AdvancedSearchRow should render default view 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`AdvancedSearchRow should render search field row with given disabled options 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={16}
@@ -614,7 +616,9 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
             rowIndex={0}
             searchField="all"
             value="i feel lucky"
-          />
+          >
+            <Component />
+          </AdvancedSearchRowInput>
         </WithStyles(Grid)>
         <Hidden
           implementation="js"
@@ -639,11 +643,11 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`AdvancedSearchRow should render search field row with select field and search text 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
     spacing={16}
@@ -934,7 +938,9 @@ exports[`AdvancedSearchRow should render search field row with select field and 
             rowIndex={0}
             searchField="all"
             value="i feel lucky"
-          />
+          >
+            <Component />
+          </AdvancedSearchRowInput>
         </WithStyles(Grid)>
         <Hidden
           implementation="js"
@@ -959,5 +965,5 @@ exports[`AdvancedSearchRow should render search field row with select field and 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;

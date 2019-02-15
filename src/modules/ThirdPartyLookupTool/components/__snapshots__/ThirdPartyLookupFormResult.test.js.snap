@@ -12,15 +12,13 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
   <StandardCard
     title="Results"
   >
-    <React.Fragment>
-      <pre>
-        [
+    <pre>
+      [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-      </pre>
-    </React.Fragment>
+    </pre>
   </StandardCard>
   <WithStyles(Button)
     color="primary"
@@ -49,52 +47,13 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
   <StandardCard
     title="Results"
   >
-    <React.Fragment>
-      <pre>
-        [
+    <pre>
+      [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-      </pre>
-    </React.Fragment>
-  </StandardCard>
-  <WithStyles(Button)
-    color="primary"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginTop": 20,
-      }
-    }
-    variant="contained"
-  >
-    New Search
-  </WithStyles(Button)>
-</StandardCard>
-`;
-
-exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
-<StandardCard
-  title="Incites"
->
-  <p>
-    UTs
-     - 
-    dummy UT
-  </p>
-  <StandardCard
-    title="Results"
-  >
-    <React.Fragment>
-      <pre>
-        [
-  {
-    "IS_INTERNATIONAL_COLLAB": "0"
-  }
-]
-      </pre>
-    </React.Fragment>
+    </pre>
   </StandardCard>
   <WithStyles(Button)
     color="primary"
@@ -128,15 +87,48 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
   <StandardCard
     title="Results"
   >
-    <React.Fragment>
-      <pre>
-        [
+    <pre>
+      [
   {
     "IS_INTERNATIONAL_COLLAB": "0"
   }
 ]
-      </pre>
-    </React.Fragment>
+    </pre>
+  </StandardCard>
+  <WithStyles(Button)
+    color="primary"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginTop": 20,
+      }
+    }
+    variant="contained"
+  >
+    New Search
+  </WithStyles(Button)>
+</StandardCard>
+`;
+
+exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
+<StandardCard
+  title="Incites"
+>
+  <p>
+    UTs
+     - 
+    dummy UT
+  </p>
+  <StandardCard
+    title="Results"
+  >
+    <pre>
+      [
+  {
+    "IS_INTERNATIONAL_COLLAB": "0"
+  }
+]
+    </pre>
   </StandardCard>
   <WithStyles(Button)
     color="primary"
