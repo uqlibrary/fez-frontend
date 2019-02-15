@@ -113,6 +113,7 @@ const webpackConfig = {
             clear: false,
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
+
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
