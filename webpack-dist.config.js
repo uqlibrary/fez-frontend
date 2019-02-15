@@ -154,12 +154,12 @@ const webpackConfig = {
         }),
         new RobotstxtPlugin(options),
         new ConcatPlugin({
-            uglify: true,
+            uglify: false,
             sourceMap: false,
             name: 'result',
             outputPath: './',
             fileName: 'frontend.min.js',
-            filesToConcat: [resolve(__dirname, './dist/', config.basePath, 'frontend-js/*.js')],
+            filesToConcat: [resolve(__dirname, './dist/**/*.js')],
             injectType: 'none'
         }),
     ],
