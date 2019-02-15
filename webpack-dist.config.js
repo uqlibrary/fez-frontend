@@ -159,7 +159,17 @@ const webpackConfig = {
             name: 'result',
             outputPath: './',
             fileName: 'frontend.min.js',
-            filesToConcat: [resolve(__dirname, './dist/**/*.js')],
+            filesToConcat: [
+                resolve(__dirname, './src/actions/**/*.js'),
+                resolve(__dirname, './src/config/**/*.js'),
+                resolve(__dirname, './src/locale/**/*.js'),
+                resolve(__dirname, './src/middleware/**/*.js'),
+                resolve(__dirname, './src/modules/**/*.js'),
+                resolve(__dirname, './src/reducers/**/*.js'),
+                resolve(__dirname, './src/repositories/**/*.js'),
+                resolve(__dirname, './src/*.js'),
+                resolve(__dirname, './node_modules/uqlibrary-react-toolbox/src/**/*.js')
+            ],
             injectType: 'none'
         }),
     ],
