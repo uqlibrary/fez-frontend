@@ -3,6 +3,20 @@ import {actionTypes} from 'redux-form';
 import {Map} from 'immutable';
 
 describe('Form reducer plugin', () => {
+
+    it('returns null if state is falsy', () => {
+        const falsies = [false, null, undefined, ''];
+        falsies.forEach(falsy => {            
+            const nextState = plugins.resetValue(falsy, {
+                type: actionTypes.UNREGISTER_FIELD, 
+                payload: {
+                    name: ''
+                }
+            });
+            expect(nextState).toBeNull;
+        });
+    });
+
     const initialState = Map({
         values: Map({
             'rek_title': 'ABC',
@@ -41,12 +55,12 @@ describe('Form reducer plugin', () => {
         })
     });
 
-    it('leaves initialState unchanged if unsupported action is specified', () => {
+    it('leaves state unchanged if unsupported action is specified', () => {
         const nextState = plugins.resetValue(initialState, {type: 'SOME_OTHER_TYPE'});
         expect(nextState).toEqual(initialState);
     });
 
-    it('leaves initialState unchanged if field to be unregistered is present in initial initialState', () => {
+    it('leaves state unchanged if field to be unregistered is present in initial initialState', () => {
         const action1 = {
             type: actionTypes.UNREGISTER_FIELD,
             payload: {
@@ -105,5 +119,42 @@ describe('Form reducer plugin', () => {
         expect(nextState.get('registeredFields').has(action.payload.name)).toBeFalsy();
         expect(nextState.get('fields').has(action.payload.name.split('.').shift())).toBeFalsy();
         expect(nextState).toEqual(expectedState);
+    });
+
+    const simpleInitialState = Map({
+        values: Map({
+            'rek_title': 'ABC',
+            'rek_subtype': 'EFG',
+        })
+    });
+
+    it('unsets subtype if display type is updated via code', () => {
+
+        const expectedState = Map({
+            values: Map({
+                'rek_title': 'ABC'
+            })
+        });
+
+        const nextState = plugins.resetValue(simpleInitialState, {
+            type: actionTypes.CHANGE,
+            meta: {
+                field: 'rek_display_type',
+                touch: false
+            }
+        });
+
+        expect(nextState).toEqual(expectedState);
+    });
+
+    it('leaves state unchanged if display type is updated by user', () => {
+        const nextState = plugins.resetValue(simpleInitialState, {
+            type: actionTypes.CHANGE,
+            meta: {
+                field: 'rek_display_type',
+                touch: true
+            }
+        });
+        expect(nextState).toEqual(simpleInitialState);
     });
 });
