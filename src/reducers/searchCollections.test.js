@@ -2,7 +2,7 @@ import * as actions from 'actions/actionTypes';
 import collectionsReducer from './searchCollections';
 
 describe('searchCollections reducer', () => {
-    
+
     const initState = {
         itemsList: [],
         itemsLoading: false,

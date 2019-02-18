@@ -6,9 +6,9 @@ describe('Form reducer plugin', () => {
 
     it('returns null if state is falsy', () => {
         const falsies = [false, null, undefined, ''];
-        falsies.forEach(falsy => {            
+        falsies.forEach(falsy => {
             const nextState = plugins.resetValue(falsy, {
-                type: actionTypes.UNREGISTER_FIELD, 
+                type: actionTypes.UNREGISTER_FIELD,
                 payload: {
                     name: ''
                 }
@@ -100,12 +100,12 @@ describe('Form reducer plugin', () => {
             "initial": Map({
                 "rek_title": "Initial value",
                 "currentAuthor": [{
-                    "authorId": 123, 
+                    "authorId": 123,
                     "nameAsPublished": "Test user"
                 }]
             })
         });
-        
+
         const action = {
             type: actionTypes.UNREGISTER_FIELD,
             payload: {
