@@ -11,7 +11,7 @@ describe('searchCollections reducer', () => {
 
     it('is setting the "items loading" status', () => {
         const result = collectionsReducer({}, {type: actions.SEARCH_COLLECTION_LOADING});
-        expect(result.itemsLoading).toBeTruthy;
+        expect(result.itemsLoading).toBe(true);
         expect(result).toEqual({...initState, itemsLoading: true});
     });
 
@@ -25,7 +25,7 @@ describe('searchCollections reducer', () => {
 
     it('is setting the "loading error" status', () => {
         const result = collectionsReducer({}, {type: actions.SEARCH_COLLECTION_FAILED});
-        expect(result.itemsLoadingError).toBeTruthy;
+        expect(result.itemsLoadingError).toBe(true);
         expect(result).toEqual({...initState, itemsLoadingError: true});
     });
 });
