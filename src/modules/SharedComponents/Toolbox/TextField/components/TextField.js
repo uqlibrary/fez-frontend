@@ -37,4 +37,4 @@ TextFieldWrapper.propTypes = {
     classes: PropTypes.object
 };
 
-export default withStyles(styles, {withTheme: true})(TextFieldWrapper);
+export default withStyles(styles)(TextFieldWrapper);

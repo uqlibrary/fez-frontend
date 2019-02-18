@@ -8,7 +8,7 @@ e2eTestLog
 chromedriver.log
 coverage
 yarn.lock
-
+frontend.json
 # ignore js bungle analyser files
 assets
 bundle.js
