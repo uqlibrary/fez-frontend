@@ -47,6 +47,7 @@ There are two ways to run `eslint`:
 
 - Run `npm run eslint` command
 - Run the following in the project root directory to run eslint automatically before every local commit:
+
     ```sh
     ln -sf "../../scripts/pre-commit" ".git/hooks/pre-commit"
     ```
