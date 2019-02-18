@@ -1,5 +1,373 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 1`] = `
+<div
+  className="root"
+>
+  <Downshift
+    defaultHighlightedIndex={null}
+    defaultInputValue="test 1"
+    defaultIsOpen={false}
+    defaultSelectedItem={null}
+    environment={[Window]}
+    getA11yStatusMessage={[Function]}
+    itemToString={[MockFunction]}
+    onChange={[MockFunction]}
+    onInputValueChange={[Function]}
+    onOuterClick={[Function]}
+    onSelect={[Function]}
+    onStateChange={[Function]}
+    onUserAction={[Function]}
+    scrollIntoView={[Function]}
+    selectedItem=""
+    selectedItemChanged={[Function]}
+    stateReducer={[Function]}
+    suppressRefError={false}
+  />
+</div>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 2`] = `
+<Downshift
+  defaultHighlightedIndex={null}
+  defaultInputValue="test 1"
+  defaultIsOpen={false}
+  defaultSelectedItem={null}
+  environment={[Window]}
+  getA11yStatusMessage={[Function]}
+  itemToString={[MockFunction]}
+  onChange={[MockFunction]}
+  onInputValueChange={[Function]}
+  onOuterClick={[Function]}
+  onSelect={[Function]}
+  onStateChange={[Function]}
+  onUserAction={[Function]}
+  scrollIntoView={[Function]}
+  selectedItem=""
+  selectedItemChanged={[Function]}
+  stateReducer={[Function]}
+  suppressRefError={false}
+/>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 3`] = `
+<div
+  className="container"
+>
+  <WithStyles(TextFieldWrapper)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "inputRoot",
+        },
+        "inputRef": [Function],
+        "onChange": [Function],
+      }
+    }
+    disabled={false}
+    error={true}
+    errorText="This field is required"
+    fullWidth={true}
+    label=""
+    placeholder={null}
+    required={true}
+    value="tes"
+  />
+  <div>
+    <WithTheme(Popper)
+      disablePortal={true}
+      id="downshift-popper"
+      open={true}
+      placement="bottom-start"
+    >
+      <WithStyles(Paper)
+        className="paper"
+        square={true}
+        style={
+          Object {
+            "width": null,
+          }
+        }
+      >
+        <WithStyles(MenuItem)
+          button={true}
+          key="test 1"
+          selected={false}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": 123,
+                "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          button={true}
+          key="test 2"
+          selected={false}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": 456,
+                "value": "test 2",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+      </WithStyles(Paper)>
+    </WithTheme(Popper)>
+  </div>
+</div>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 4`] = `
+<div
+  className="container"
+>
+  <WithStyles(TextFieldWrapper)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "inputRoot",
+        },
+        "inputRef": [Function],
+      }
+    }
+    disabled={false}
+    error={true}
+    errorText="This field is required"
+    fullWidth={true}
+    label=""
+    placeholder={null}
+    required={true}
+    value="123"
+  />
+  <div>
+    <WithTheme(Popper)
+      disablePortal={true}
+      id="downshift-popper"
+      open={true}
+      placement="bottom-start"
+    >
+      <WithStyles(Paper)
+        className="paper"
+        square={true}
+        style={
+          Object {
+            "width": null,
+          }
+        }
+      >
+        <WithStyles(MenuItem)
+          button={true}
+          key="test 1"
+          selected={false}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": 123,
+                "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+      </WithStyles(Paper)>
+    </WithTheme(Popper)>
+  </div>
+</div>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 5`] = `
+<MenuItem
+  button={true}
+  classes={
+    Object {
+      "root": "MuiMenuItem-root-35",
+      "selected": "MuiMenuItem-selected-36",
+    }
+  }
+  component="li"
+  role="menuitem"
+  selected={false}
+  style={
+    Object {
+      "fontWeight": 400,
+      "height": "auto",
+      "whiteSpace": "normal",
+    }
+  }
+>
+  <MenuItemComponent
+    suggestion={
+      Object {
+        "id": 123,
+        "value": "test 1",
+      }
+    }
+  />
+</MenuItem>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 6`] = `
+<WithStyles(ListItemText)
+  primary="test 1"
+  primaryTypographyProps={
+    Object {
+      "variant": "body1",
+    }
+  }
+  secondary={123}
+  secondaryTypographyProps={
+    Object {
+      "variant": "body2",
+    }
+  }
+/>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 7`] = `
+<WithStyles(FormControl)
+  classes={Object {}}
+  disabled={false}
+  error={true}
+  fullWidth={true}
+  required={true}
+  variant="standard"
+>
+  <WithStyles(Input)
+    classes={
+      Object {
+        "root": "inputRoot",
+      }
+    }
+    fullWidth={true}
+    id=""
+    inputRef={[Function]}
+    placeholder={null}
+    value="123"
+  />
+  <WithStyles(FormHelperText)>
+    This field is required
+  </WithStyles(FormHelperText)>
+</WithStyles(FormControl)>
+`;
+
+exports[`AutoCompleteAsyncField component should call filter function on itemsList 8`] = `
+<div
+  className="container"
+>
+  <WithStyles(TextFieldWrapper)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "inputRoot",
+        },
+        "inputRef": [Function],
+      }
+    }
+    disabled={false}
+    error={true}
+    errorText="This field is required"
+    fullWidth={true}
+    label=""
+    placeholder={null}
+    required={true}
+    value="123"
+  />
+  <div>
+    <WithTheme(Popper)
+      disablePortal={true}
+      id="downshift-popper"
+      open={true}
+      placement="bottom-start"
+    >
+      <WithStyles(Paper)
+        className="paper"
+        square={true}
+        style={
+          Object {
+            "width": null,
+          }
+        }
+      >
+        <WithStyles(MenuItem)
+          button={true}
+          key="test 1"
+          selected={false}
+          style={
+            Object {
+              "fontWeight": 500,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": 123,
+                "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+      </WithStyles(Paper)>
+    </WithTheme(Popper)>
+  </div>
+</div>
+`;
+
+exports[`AutoCompleteAsyncField component should call given filter function on itemsList 1`] = `
+<div
+  className="root"
+>
+  <Downshift
+    defaultHighlightedIndex={null}
+    defaultInputValue=""
+    defaultIsOpen={false}
+    defaultSelectedItem={null}
+    environment={[Window]}
+    getA11yStatusMessage={[Function]}
+    itemToString={[MockFunction]}
+    onChange={[MockFunction]}
+    onInputValueChange={[Function]}
+    onOuterClick={[Function]}
+    onSelect={[Function]}
+    onStateChange={[Function]}
+    onUserAction={[Function]}
+    scrollIntoView={[Function]}
+    selectedItemChanged={[Function]}
+    stateReducer={[Function]}
+    suppressRefError={false}
+  />
+</div>
+`;
+
 exports[`AutoCompleteAsyncField component should render 1`] = `
 <div
   className="root"
@@ -12,7 +380,7 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     itemToString={[MockFunction]}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     onInputValueChange={[Function]}
     onOuterClick={[Function]}
     onSelect={[Function]}
@@ -514,7 +882,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
           }
           disabled={false}
           error={false}
-          filter={[MockFunction]}
+          filter={[Function]}
           floatingLabelText=""
           hintText={null}
           itemToString={[MockFunction]}
@@ -538,7 +906,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               environment={[Window]}
               getA11yStatusMessage={[Function]}
               itemToString={[MockFunction]}
-              onChange={[Function]}
+              onChange={[MockFunction]}
               onInputValueChange={[Function]}
               onOuterClick={[Function]}
               onSelect={[Function]}
@@ -557,7 +925,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 className="container"
                 role="combobox"
               >
-                <TextField
+                <WithStyles(TextFieldWrapper)
                   InputProps={
                     Object {
                       "aria-activedescendant": null,
@@ -578,95 +946,103 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                   }
                   disabled={false}
                   error={false}
+                  errorText=""
                   fullWidth={true}
-                  helperText=""
                   label=""
                   placeholder={null}
                   required={true}
-                  select={false}
                   value=""
-                  variant="standard"
                 >
-                  <WithStyles(FormControl)
+                  <TextFieldWrapper
+                    InputProps={
+                      Object {
+                        "aria-activedescendant": null,
+                        "aria-autocomplete": "list",
+                        "aria-controls": null,
+                        "aria-labelledby": "downshift-1-label",
+                        "autoComplete": "off",
+                        "classes": Object {
+                          "root": "inputRoot",
+                        },
+                        "id": "downshift-1-input",
+                        "inputRef": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onKeyDown": [Function],
+                        "value": "",
+                      }
+                    }
+                    classes={Object {}}
                     disabled={false}
                     error={false}
+                    errorText=""
                     fullWidth={true}
+                    label=""
+                    placeholder={null}
                     required={true}
-                    variant="standard"
+                    value=""
                   >
-                    <FormControl
-                      classes={
+                    <TextField
+                      InputLabelProps={null}
+                      InputProps={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "aria-activedescendant": null,
+                          "aria-autocomplete": "list",
+                          "aria-controls": null,
+                          "aria-labelledby": "downshift-1-label",
+                          "autoComplete": "off",
+                          "classes": Object {
+                            "root": "inputRoot",
+                          },
+                          "id": "downshift-1-input",
+                          "inputRef": [Function],
+                          "onBlur": [Function],
+                          "onChange": [Function],
+                          "onKeyDown": [Function],
+                          "value": "",
                         }
                       }
-                      component="div"
+                      classes={Object {}}
                       disabled={false}
                       error={false}
                       fullWidth={true}
-                      margin="none"
+                      id=""
+                      label=""
+                      placeholder={null}
                       required={true}
+                      select={false}
+                      value=""
                       variant="standard"
                     >
-                      <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                      <WithStyles(FormControl)
+                        classes={Object {}}
+                        disabled={false}
+                        error={false}
+                        fullWidth={true}
+                        required={true}
+                        variant="standard"
                       >
-                        <WithStyles(Input)
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-labelledby="downshift-1-label"
-                          autoComplete="off"
+                        <FormControl
                           classes={
                             Object {
-                              "root": "inputRoot",
+                              "fullWidth": "MuiFormControl-fullWidth-4",
+                              "marginDense": "MuiFormControl-marginDense-3",
+                              "marginNormal": "MuiFormControl-marginNormal-2",
+                              "root": "MuiFormControl-root-1",
                             }
                           }
+                          component="div"
+                          disabled={false}
+                          error={false}
                           fullWidth={true}
-                          id="downshift-1-input"
-                          inputRef={[Function]}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder={null}
-                          value=""
+                          margin="none"
+                          required={true}
+                          variant="standard"
                         >
-                          <Input
-                            aria-activedescendant={null}
-                            aria-autocomplete="list"
-                            aria-controls={null}
-                            aria-labelledby="downshift-1-label"
-                            autoComplete="off"
-                            classes={
-                              Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
-                              }
-                            }
-                            fullWidth={true}
-                            id="downshift-1-input"
-                            inputRef={[Function]}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onKeyDown={[Function]}
-                            placeholder={null}
-                            value=""
+                          <div
+                            className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                           >
-                            <WithStyles(InputBase)
+                            <WithStyles(Input)
                               aria-activedescendant={null}
                               aria-autocomplete="list"
                               aria-controls={null}
@@ -674,34 +1050,19 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                               autoComplete="off"
                               classes={
                                 Object {
-                                  "disabled": "MuiInput-disabled-8",
-                                  "error": "MuiInput-error-10",
-                                  "focused": "MuiInput-focused-7",
-                                  "formControl": "MuiInput-formControl-6",
-                                  "fullWidth": "MuiInput-fullWidth-12",
-                                  "input": "MuiInput-input-13",
-                                  "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                  "inputMultiline": "MuiInput-inputMultiline-15",
-                                  "inputType": "MuiInput-inputType-16",
-                                  "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                  "multiline": "MuiInput-multiline-11",
-                                  "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
-                                  "underline": null,
+                                  "root": "inputRoot",
                                 }
                               }
                               fullWidth={true}
                               id="downshift-1-input"
-                              inputComponent="input"
                               inputRef={[Function]}
-                              multiline={false}
                               onBlur={[Function]}
                               onChange={[Function]}
                               onKeyDown={[Function]}
                               placeholder={null}
-                              type="text"
                               value=""
                             >
-                              <InputBase
+                              <Input
                                 aria-activedescendant={null}
                                 aria-autocomplete="list"
                                 aria-controls={null}
@@ -709,69 +1070,138 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                 autoComplete="off"
                                 classes={
                                   Object {
-                                    "adornedEnd": "MuiInputBase-adornedEnd-23",
-                                    "adornedStart": "MuiInputBase-adornedStart-22",
-                                    "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
-                                    "error": "MuiInputBase-error-24 MuiInput-error-10",
-                                    "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
-                                    "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
-                                    "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
-                                    "input": "MuiInputBase-input-28 MuiInput-input-13",
-                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
-                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
-                                    "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
-                                    "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
-                                    "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
-                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
-                                    "marginDense": "MuiInputBase-marginDense-25",
-                                    "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
-                                    "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                    "disabled": "MuiInput-disabled-8",
+                                    "error": "MuiInput-error-10",
+                                    "focused": "MuiInput-focused-7",
+                                    "formControl": "MuiInput-formControl-6",
+                                    "fullWidth": "MuiInput-fullWidth-12",
+                                    "input": "MuiInput-input-13",
+                                    "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                    "inputMultiline": "MuiInput-inputMultiline-15",
+                                    "inputType": "MuiInput-inputType-16",
+                                    "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                    "multiline": "MuiInput-multiline-11",
+                                    "root": "MuiInput-root-5 inputRoot",
+                                    "underline": "MuiInput-underline-9",
                                   }
                                 }
                                 fullWidth={true}
                                 id="downshift-1-input"
-                                inputComponent="input"
                                 inputRef={[Function]}
-                                multiline={false}
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
                                 placeholder={null}
-                                type="text"
                                 value=""
                               >
-                                <div
+                                <WithStyles(InputBase)
                                   aria-activedescendant={null}
                                   aria-autocomplete="list"
                                   aria-controls={null}
                                   aria-labelledby="downshift-1-label"
-                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                  onClick={[Function]}
+                                  autoComplete="off"
+                                  classes={
+                                    Object {
+                                      "disabled": "MuiInput-disabled-8",
+                                      "error": "MuiInput-error-10",
+                                      "focused": "MuiInput-focused-7",
+                                      "formControl": "MuiInput-formControl-6",
+                                      "fullWidth": "MuiInput-fullWidth-12",
+                                      "input": "MuiInput-input-13",
+                                      "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                      "inputMultiline": "MuiInput-inputMultiline-15",
+                                      "inputType": "MuiInput-inputType-16",
+                                      "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                      "multiline": "MuiInput-multiline-11",
+                                      "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      "underline": null,
+                                    }
+                                  }
+                                  fullWidth={true}
+                                  id="downshift-1-input"
+                                  inputComponent="input"
+                                  inputRef={[Function]}
+                                  multiline={false}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
                                 >
-                                  <input
-                                    aria-invalid={false}
+                                  <InputBase
+                                    aria-activedescendant={null}
+                                    aria-autocomplete="list"
+                                    aria-controls={null}
+                                    aria-labelledby="downshift-1-label"
                                     autoComplete="off"
-                                    className="MuiInputBase-input-28 MuiInput-input-13"
-                                    disabled={false}
+                                    classes={
+                                      Object {
+                                        "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                        "adornedStart": "MuiInputBase-adornedStart-22",
+                                        "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                        "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                        "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                        "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                        "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                        "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                        "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                        "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                        "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                        "marginDense": "MuiInputBase-marginDense-25",
+                                        "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                        "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      }
+                                    }
+                                    fullWidth={true}
                                     id="downshift-1-input"
+                                    inputComponent="input"
+                                    inputRef={[Function]}
+                                    multiline={false}
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     placeholder={null}
-                                    required={true}
                                     type="text"
                                     value=""
-                                  />
-                                </div>
-                              </InputBase>
-                            </WithStyles(InputBase)>
-                          </Input>
-                        </WithStyles(Input)>
-                      </div>
-                    </FormControl>
-                  </WithStyles(FormControl)>
-                </TextField>
+                                  >
+                                    <div
+                                      aria-activedescendant={null}
+                                      aria-autocomplete="list"
+                                      aria-controls={null}
+                                      aria-labelledby="downshift-1-label"
+                                      className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        aria-invalid={false}
+                                        autoComplete="off"
+                                        className="MuiInputBase-input-28 MuiInput-input-13"
+                                        disabled={false}
+                                        id="downshift-1-input"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        required={true}
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </InputBase>
+                                </WithStyles(InputBase)>
+                              </Input>
+                            </WithStyles(Input)>
+                          </div>
+                        </FormControl>
+                      </WithStyles(FormControl)>
+                    </TextField>
+                  </TextFieldWrapper>
+                </WithStyles(TextFieldWrapper)>
               </div>
             </Downshift>
           </div>
@@ -1270,7 +1700,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
           }
           disabled={false}
           error={false}
-          filter={[MockFunction]}
+          filter={[Function]}
           floatingLabelText=""
           hintText={null}
           itemToString={[MockFunction]}
@@ -1302,7 +1732,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               environment={[Window]}
               getA11yStatusMessage={[Function]}
               itemToString={[MockFunction]}
-              onChange={[Function]}
+              onChange={[MockFunction]}
               onInputValueChange={[Function]}
               onOuterClick={[Function]}
               onSelect={[Function]}
@@ -1321,7 +1751,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 className="container"
                 role="combobox"
               >
-                <TextField
+                <WithStyles(TextFieldWrapper)
                   InputProps={
                     Object {
                       "aria-activedescendant": null,
@@ -1342,95 +1772,103 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                   }
                   disabled={false}
                   error={false}
+                  errorText=""
                   fullWidth={true}
-                  helperText=""
                   label=""
                   placeholder={null}
                   required={false}
-                  select={false}
                   value=""
-                  variant="standard"
                 >
-                  <WithStyles(FormControl)
+                  <TextFieldWrapper
+                    InputProps={
+                      Object {
+                        "aria-activedescendant": null,
+                        "aria-autocomplete": "list",
+                        "aria-controls": null,
+                        "aria-labelledby": "downshift-2-label",
+                        "autoComplete": "off",
+                        "classes": Object {
+                          "root": "inputRoot",
+                        },
+                        "id": "downshift-2-input",
+                        "inputRef": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onKeyDown": [Function],
+                        "value": "",
+                      }
+                    }
+                    classes={Object {}}
                     disabled={false}
                     error={false}
+                    errorText=""
                     fullWidth={true}
+                    label=""
+                    placeholder={null}
                     required={false}
-                    variant="standard"
+                    value=""
                   >
-                    <FormControl
-                      classes={
+                    <TextField
+                      InputLabelProps={null}
+                      InputProps={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "aria-activedescendant": null,
+                          "aria-autocomplete": "list",
+                          "aria-controls": null,
+                          "aria-labelledby": "downshift-2-label",
+                          "autoComplete": "off",
+                          "classes": Object {
+                            "root": "inputRoot",
+                          },
+                          "id": "downshift-2-input",
+                          "inputRef": [Function],
+                          "onBlur": [Function],
+                          "onChange": [Function],
+                          "onKeyDown": [Function],
+                          "value": "",
                         }
                       }
-                      component="div"
+                      classes={Object {}}
                       disabled={false}
                       error={false}
                       fullWidth={true}
-                      margin="none"
+                      id=""
+                      label=""
+                      placeholder={null}
                       required={false}
+                      select={false}
+                      value=""
                       variant="standard"
                     >
-                      <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                      <WithStyles(FormControl)
+                        classes={Object {}}
+                        disabled={false}
+                        error={false}
+                        fullWidth={true}
+                        required={false}
+                        variant="standard"
                       >
-                        <WithStyles(Input)
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-labelledby="downshift-2-label"
-                          autoComplete="off"
+                        <FormControl
                           classes={
                             Object {
-                              "root": "inputRoot",
+                              "fullWidth": "MuiFormControl-fullWidth-4",
+                              "marginDense": "MuiFormControl-marginDense-3",
+                              "marginNormal": "MuiFormControl-marginNormal-2",
+                              "root": "MuiFormControl-root-1",
                             }
                           }
+                          component="div"
+                          disabled={false}
+                          error={false}
                           fullWidth={true}
-                          id="downshift-2-input"
-                          inputRef={[Function]}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder={null}
-                          value=""
+                          margin="none"
+                          required={false}
+                          variant="standard"
                         >
-                          <Input
-                            aria-activedescendant={null}
-                            aria-autocomplete="list"
-                            aria-controls={null}
-                            aria-labelledby="downshift-2-label"
-                            autoComplete="off"
-                            classes={
-                              Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
-                              }
-                            }
-                            fullWidth={true}
-                            id="downshift-2-input"
-                            inputRef={[Function]}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onKeyDown={[Function]}
-                            placeholder={null}
-                            value=""
+                          <div
+                            className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                           >
-                            <WithStyles(InputBase)
+                            <WithStyles(Input)
                               aria-activedescendant={null}
                               aria-autocomplete="list"
                               aria-controls={null}
@@ -1438,34 +1876,19 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                               autoComplete="off"
                               classes={
                                 Object {
-                                  "disabled": "MuiInput-disabled-8",
-                                  "error": "MuiInput-error-10",
-                                  "focused": "MuiInput-focused-7",
-                                  "formControl": "MuiInput-formControl-6",
-                                  "fullWidth": "MuiInput-fullWidth-12",
-                                  "input": "MuiInput-input-13",
-                                  "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                  "inputMultiline": "MuiInput-inputMultiline-15",
-                                  "inputType": "MuiInput-inputType-16",
-                                  "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                  "multiline": "MuiInput-multiline-11",
-                                  "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
-                                  "underline": null,
+                                  "root": "inputRoot",
                                 }
                               }
                               fullWidth={true}
                               id="downshift-2-input"
-                              inputComponent="input"
                               inputRef={[Function]}
-                              multiline={false}
                               onBlur={[Function]}
                               onChange={[Function]}
                               onKeyDown={[Function]}
                               placeholder={null}
-                              type="text"
                               value=""
                             >
-                              <InputBase
+                              <Input
                                 aria-activedescendant={null}
                                 aria-autocomplete="list"
                                 aria-controls={null}
@@ -1473,69 +1896,138 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                 autoComplete="off"
                                 classes={
                                   Object {
-                                    "adornedEnd": "MuiInputBase-adornedEnd-23",
-                                    "adornedStart": "MuiInputBase-adornedStart-22",
-                                    "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
-                                    "error": "MuiInputBase-error-24 MuiInput-error-10",
-                                    "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
-                                    "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
-                                    "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
-                                    "input": "MuiInputBase-input-28 MuiInput-input-13",
-                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
-                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
-                                    "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
-                                    "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
-                                    "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
-                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
-                                    "marginDense": "MuiInputBase-marginDense-25",
-                                    "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
-                                    "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                    "disabled": "MuiInput-disabled-8",
+                                    "error": "MuiInput-error-10",
+                                    "focused": "MuiInput-focused-7",
+                                    "formControl": "MuiInput-formControl-6",
+                                    "fullWidth": "MuiInput-fullWidth-12",
+                                    "input": "MuiInput-input-13",
+                                    "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                    "inputMultiline": "MuiInput-inputMultiline-15",
+                                    "inputType": "MuiInput-inputType-16",
+                                    "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                    "multiline": "MuiInput-multiline-11",
+                                    "root": "MuiInput-root-5 inputRoot",
+                                    "underline": "MuiInput-underline-9",
                                   }
                                 }
                                 fullWidth={true}
                                 id="downshift-2-input"
-                                inputComponent="input"
                                 inputRef={[Function]}
-                                multiline={false}
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
                                 placeholder={null}
-                                type="text"
                                 value=""
                               >
-                                <div
+                                <WithStyles(InputBase)
                                   aria-activedescendant={null}
                                   aria-autocomplete="list"
                                   aria-controls={null}
                                   aria-labelledby="downshift-2-label"
-                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                  onClick={[Function]}
+                                  autoComplete="off"
+                                  classes={
+                                    Object {
+                                      "disabled": "MuiInput-disabled-8",
+                                      "error": "MuiInput-error-10",
+                                      "focused": "MuiInput-focused-7",
+                                      "formControl": "MuiInput-formControl-6",
+                                      "fullWidth": "MuiInput-fullWidth-12",
+                                      "input": "MuiInput-input-13",
+                                      "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                      "inputMultiline": "MuiInput-inputMultiline-15",
+                                      "inputType": "MuiInput-inputType-16",
+                                      "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                      "multiline": "MuiInput-multiline-11",
+                                      "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      "underline": null,
+                                    }
+                                  }
+                                  fullWidth={true}
+                                  id="downshift-2-input"
+                                  inputComponent="input"
+                                  inputRef={[Function]}
+                                  multiline={false}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
                                 >
-                                  <input
-                                    aria-invalid={false}
+                                  <InputBase
+                                    aria-activedescendant={null}
+                                    aria-autocomplete="list"
+                                    aria-controls={null}
+                                    aria-labelledby="downshift-2-label"
                                     autoComplete="off"
-                                    className="MuiInputBase-input-28 MuiInput-input-13"
-                                    disabled={false}
+                                    classes={
+                                      Object {
+                                        "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                        "adornedStart": "MuiInputBase-adornedStart-22",
+                                        "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                        "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                        "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                        "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                        "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                        "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                        "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                        "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                        "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                        "marginDense": "MuiInputBase-marginDense-25",
+                                        "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                        "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      }
+                                    }
+                                    fullWidth={true}
                                     id="downshift-2-input"
+                                    inputComponent="input"
+                                    inputRef={[Function]}
+                                    multiline={false}
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     placeholder={null}
-                                    required={false}
                                     type="text"
                                     value=""
-                                  />
-                                </div>
-                              </InputBase>
-                            </WithStyles(InputBase)>
-                          </Input>
-                        </WithStyles(Input)>
-                      </div>
-                    </FormControl>
-                  </WithStyles(FormControl)>
-                </TextField>
+                                  >
+                                    <div
+                                      aria-activedescendant={null}
+                                      aria-autocomplete="list"
+                                      aria-controls={null}
+                                      aria-labelledby="downshift-2-label"
+                                      className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        aria-invalid={false}
+                                        autoComplete="off"
+                                        className="MuiInputBase-input-28 MuiInput-input-13"
+                                        disabled={false}
+                                        id="downshift-2-input"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        required={false}
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </InputBase>
+                                </WithStyles(InputBase)>
+                              </Input>
+                            </WithStyles(Input)>
+                          </div>
+                        </FormControl>
+                      </WithStyles(FormControl)>
+                    </TextField>
+                  </TextFieldWrapper>
+                </WithStyles(TextFieldWrapper)>
               </div>
             </Downshift>
           </div>
@@ -1544,6 +2036,28 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
     </Router>
   </MemoryRouter>
 </Provider>
+`;
+
+exports[`AutoCompleteAsyncField component should render default MenuItemComponent 1`] = `
+<WithStyles(MenuItem)
+  button={true}
+  selected={true}
+  style={
+    Object {
+      "fontWeight": 400,
+      "height": "auto",
+      "whiteSpace": "normal",
+    }
+  }
+>
+  <MenuItemComponent
+    suggestion={
+      Object {
+        "value": "Testing menu item",
+      }
+    }
+  />
+</WithStyles(MenuItem)>
 `;
 
 exports[`AutoCompleteAsyncField component should render items list on focusing on input 1`] = `
@@ -2034,7 +2548,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
           }
           disabled={false}
           error={false}
-          filter={[MockFunction]}
+          filter={[Function]}
           floatingLabelText=""
           hintText={null}
           itemToString={[MockFunction]}
@@ -2081,7 +2595,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               environment={[Window]}
               getA11yStatusMessage={[Function]}
               itemToString={[MockFunction]}
-              onChange={[Function]}
+              onChange={[MockFunction]}
               onInputValueChange={[Function]}
               onOuterClick={[Function]}
               onSelect={[Function]}
@@ -2100,7 +2614,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 className="container"
                 role="combobox"
               >
-                <TextField
+                <WithStyles(TextFieldWrapper)
                   InputProps={
                     Object {
                       "aria-activedescendant": null,
@@ -2121,95 +2635,103 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   }
                   disabled={false}
                   error={false}
+                  errorText=""
                   fullWidth={true}
-                  helperText=""
                   label=""
                   placeholder={null}
                   required={false}
-                  select={false}
                   value=""
-                  variant="standard"
                 >
-                  <WithStyles(FormControl)
+                  <TextFieldWrapper
+                    InputProps={
+                      Object {
+                        "aria-activedescendant": null,
+                        "aria-autocomplete": "list",
+                        "aria-controls": null,
+                        "aria-labelledby": "downshift-3-label",
+                        "autoComplete": "off",
+                        "classes": Object {
+                          "root": "inputRoot",
+                        },
+                        "id": "downshift-3-input",
+                        "inputRef": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onKeyDown": [Function],
+                        "value": "",
+                      }
+                    }
+                    classes={Object {}}
                     disabled={false}
                     error={false}
+                    errorText=""
                     fullWidth={true}
+                    label=""
+                    placeholder={null}
                     required={false}
-                    variant="standard"
+                    value=""
                   >
-                    <FormControl
-                      classes={
+                    <TextField
+                      InputLabelProps={null}
+                      InputProps={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "aria-activedescendant": null,
+                          "aria-autocomplete": "list",
+                          "aria-controls": null,
+                          "aria-labelledby": "downshift-3-label",
+                          "autoComplete": "off",
+                          "classes": Object {
+                            "root": "inputRoot",
+                          },
+                          "id": "downshift-3-input",
+                          "inputRef": [Function],
+                          "onBlur": [Function],
+                          "onChange": [Function],
+                          "onKeyDown": [Function],
+                          "value": "",
                         }
                       }
-                      component="div"
+                      classes={Object {}}
                       disabled={false}
                       error={false}
                       fullWidth={true}
-                      margin="none"
+                      id=""
+                      label=""
+                      placeholder={null}
                       required={false}
+                      select={false}
+                      value=""
                       variant="standard"
                     >
-                      <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                      <WithStyles(FormControl)
+                        classes={Object {}}
+                        disabled={false}
+                        error={false}
+                        fullWidth={true}
+                        required={false}
+                        variant="standard"
                       >
-                        <WithStyles(Input)
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-labelledby="downshift-3-label"
-                          autoComplete="off"
+                        <FormControl
                           classes={
                             Object {
-                              "root": "inputRoot",
+                              "fullWidth": "MuiFormControl-fullWidth-4",
+                              "marginDense": "MuiFormControl-marginDense-3",
+                              "marginNormal": "MuiFormControl-marginNormal-2",
+                              "root": "MuiFormControl-root-1",
                             }
                           }
+                          component="div"
+                          disabled={false}
+                          error={false}
                           fullWidth={true}
-                          id="downshift-3-input"
-                          inputRef={[Function]}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder={null}
-                          value=""
+                          margin="none"
+                          required={false}
+                          variant="standard"
                         >
-                          <Input
-                            aria-activedescendant={null}
-                            aria-autocomplete="list"
-                            aria-controls={null}
-                            aria-labelledby="downshift-3-label"
-                            autoComplete="off"
-                            classes={
-                              Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
-                              }
-                            }
-                            fullWidth={true}
-                            id="downshift-3-input"
-                            inputRef={[Function]}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onKeyDown={[Function]}
-                            placeholder={null}
-                            value=""
+                          <div
+                            className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                           >
-                            <WithStyles(InputBase)
+                            <WithStyles(Input)
                               aria-activedescendant={null}
                               aria-autocomplete="list"
                               aria-controls={null}
@@ -2217,34 +2739,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                               autoComplete="off"
                               classes={
                                 Object {
-                                  "disabled": "MuiInput-disabled-8",
-                                  "error": "MuiInput-error-10",
-                                  "focused": "MuiInput-focused-7",
-                                  "formControl": "MuiInput-formControl-6",
-                                  "fullWidth": "MuiInput-fullWidth-12",
-                                  "input": "MuiInput-input-13",
-                                  "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                  "inputMultiline": "MuiInput-inputMultiline-15",
-                                  "inputType": "MuiInput-inputType-16",
-                                  "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                  "multiline": "MuiInput-multiline-11",
-                                  "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
-                                  "underline": null,
+                                  "root": "inputRoot",
                                 }
                               }
                               fullWidth={true}
                               id="downshift-3-input"
-                              inputComponent="input"
                               inputRef={[Function]}
-                              multiline={false}
                               onBlur={[Function]}
                               onChange={[Function]}
                               onKeyDown={[Function]}
                               placeholder={null}
-                              type="text"
                               value=""
                             >
-                              <InputBase
+                              <Input
                                 aria-activedescendant={null}
                                 aria-autocomplete="list"
                                 aria-controls={null}
@@ -2252,69 +2759,138 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 autoComplete="off"
                                 classes={
                                   Object {
-                                    "adornedEnd": "MuiInputBase-adornedEnd-23",
-                                    "adornedStart": "MuiInputBase-adornedStart-22",
-                                    "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
-                                    "error": "MuiInputBase-error-24 MuiInput-error-10",
-                                    "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
-                                    "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
-                                    "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
-                                    "input": "MuiInputBase-input-28 MuiInput-input-13",
-                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
-                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
-                                    "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
-                                    "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
-                                    "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
-                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
-                                    "marginDense": "MuiInputBase-marginDense-25",
-                                    "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
-                                    "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                    "disabled": "MuiInput-disabled-8",
+                                    "error": "MuiInput-error-10",
+                                    "focused": "MuiInput-focused-7",
+                                    "formControl": "MuiInput-formControl-6",
+                                    "fullWidth": "MuiInput-fullWidth-12",
+                                    "input": "MuiInput-input-13",
+                                    "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                    "inputMultiline": "MuiInput-inputMultiline-15",
+                                    "inputType": "MuiInput-inputType-16",
+                                    "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                    "multiline": "MuiInput-multiline-11",
+                                    "root": "MuiInput-root-5 inputRoot",
+                                    "underline": "MuiInput-underline-9",
                                   }
                                 }
                                 fullWidth={true}
                                 id="downshift-3-input"
-                                inputComponent="input"
                                 inputRef={[Function]}
-                                multiline={false}
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
                                 placeholder={null}
-                                type="text"
                                 value=""
                               >
-                                <div
+                                <WithStyles(InputBase)
                                   aria-activedescendant={null}
                                   aria-autocomplete="list"
                                   aria-controls={null}
                                   aria-labelledby="downshift-3-label"
-                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                  onClick={[Function]}
+                                  autoComplete="off"
+                                  classes={
+                                    Object {
+                                      "disabled": "MuiInput-disabled-8",
+                                      "error": "MuiInput-error-10",
+                                      "focused": "MuiInput-focused-7",
+                                      "formControl": "MuiInput-formControl-6",
+                                      "fullWidth": "MuiInput-fullWidth-12",
+                                      "input": "MuiInput-input-13",
+                                      "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                      "inputMultiline": "MuiInput-inputMultiline-15",
+                                      "inputType": "MuiInput-inputType-16",
+                                      "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                      "multiline": "MuiInput-multiline-11",
+                                      "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      "underline": null,
+                                    }
+                                  }
+                                  fullWidth={true}
+                                  id="downshift-3-input"
+                                  inputComponent="input"
+                                  inputRef={[Function]}
+                                  multiline={false}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
                                 >
-                                  <input
-                                    aria-invalid={false}
+                                  <InputBase
+                                    aria-activedescendant={null}
+                                    aria-autocomplete="list"
+                                    aria-controls={null}
+                                    aria-labelledby="downshift-3-label"
                                     autoComplete="off"
-                                    className="MuiInputBase-input-28 MuiInput-input-13"
-                                    disabled={false}
+                                    classes={
+                                      Object {
+                                        "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                        "adornedStart": "MuiInputBase-adornedStart-22",
+                                        "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                        "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                        "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                        "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                        "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                        "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                        "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                        "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                        "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                        "marginDense": "MuiInputBase-marginDense-25",
+                                        "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                        "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      }
+                                    }
+                                    fullWidth={true}
                                     id="downshift-3-input"
+                                    inputComponent="input"
+                                    inputRef={[Function]}
+                                    multiline={false}
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     placeholder={null}
-                                    required={false}
                                     type="text"
                                     value=""
-                                  />
-                                </div>
-                              </InputBase>
-                            </WithStyles(InputBase)>
-                          </Input>
-                        </WithStyles(Input)>
-                      </div>
-                    </FormControl>
-                  </WithStyles(FormControl)>
-                </TextField>
+                                  >
+                                    <div
+                                      aria-activedescendant={null}
+                                      aria-autocomplete="list"
+                                      aria-controls={null}
+                                      aria-labelledby="downshift-3-label"
+                                      className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        aria-invalid={false}
+                                        autoComplete="off"
+                                        className="MuiInputBase-input-28 MuiInput-input-13"
+                                        disabled={false}
+                                        id="downshift-3-input"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        required={false}
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </InputBase>
+                                </WithStyles(InputBase)>
+                              </Input>
+                            </WithStyles(Input)>
+                          </div>
+                        </FormControl>
+                      </WithStyles(FormControl)>
+                    </TextField>
+                  </TextFieldWrapper>
+                </WithStyles(TextFieldWrapper)>
               </div>
             </Downshift>
           </div>
@@ -2813,7 +3389,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
           }
           disabled={false}
           error={false}
-          filter={[MockFunction]}
+          filter={[Function]}
           floatingLabelText=""
           hintText={null}
           itemToString={[MockFunction]}
@@ -2860,7 +3436,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               environment={[Window]}
               getA11yStatusMessage={[Function]}
               itemToString={[MockFunction]}
-              onChange={[Function]}
+              onChange={[MockFunction]}
               onInputValueChange={[Function]}
               onOuterClick={[Function]}
               onSelect={[Function]}
@@ -2879,7 +3455,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 className="container"
                 role="combobox"
               >
-                <TextField
+                <WithStyles(TextFieldWrapper)
                   InputProps={
                     Object {
                       "aria-activedescendant": null,
@@ -2900,95 +3476,103 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   }
                   disabled={false}
                   error={false}
+                  errorText=""
                   fullWidth={true}
-                  helperText=""
                   label=""
                   placeholder={null}
                   required={false}
-                  select={false}
                   value=""
-                  variant="standard"
                 >
-                  <WithStyles(FormControl)
+                  <TextFieldWrapper
+                    InputProps={
+                      Object {
+                        "aria-activedescendant": null,
+                        "aria-autocomplete": "list",
+                        "aria-controls": null,
+                        "aria-labelledby": "downshift-3-label",
+                        "autoComplete": "off",
+                        "classes": Object {
+                          "root": "inputRoot",
+                        },
+                        "id": "downshift-3-input",
+                        "inputRef": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onKeyDown": [Function],
+                        "value": "",
+                      }
+                    }
+                    classes={Object {}}
                     disabled={false}
                     error={false}
+                    errorText=""
                     fullWidth={true}
+                    label=""
+                    placeholder={null}
                     required={false}
-                    variant="standard"
+                    value=""
                   >
-                    <FormControl
-                      classes={
+                    <TextField
+                      InputLabelProps={null}
+                      InputProps={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "aria-activedescendant": null,
+                          "aria-autocomplete": "list",
+                          "aria-controls": null,
+                          "aria-labelledby": "downshift-3-label",
+                          "autoComplete": "off",
+                          "classes": Object {
+                            "root": "inputRoot",
+                          },
+                          "id": "downshift-3-input",
+                          "inputRef": [Function],
+                          "onBlur": [Function],
+                          "onChange": [Function],
+                          "onKeyDown": [Function],
+                          "value": "",
                         }
                       }
-                      component="div"
+                      classes={Object {}}
                       disabled={false}
                       error={false}
                       fullWidth={true}
-                      margin="none"
+                      id=""
+                      label=""
+                      placeholder={null}
                       required={false}
+                      select={false}
+                      value=""
                       variant="standard"
                     >
-                      <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                      <WithStyles(FormControl)
+                        classes={Object {}}
+                        disabled={false}
+                        error={false}
+                        fullWidth={true}
+                        required={false}
+                        variant="standard"
                       >
-                        <WithStyles(Input)
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-labelledby="downshift-3-label"
-                          autoComplete="off"
+                        <FormControl
                           classes={
                             Object {
-                              "root": "inputRoot",
+                              "fullWidth": "MuiFormControl-fullWidth-4",
+                              "marginDense": "MuiFormControl-marginDense-3",
+                              "marginNormal": "MuiFormControl-marginNormal-2",
+                              "root": "MuiFormControl-root-1",
                             }
                           }
+                          component="div"
+                          disabled={false}
+                          error={false}
                           fullWidth={true}
-                          id="downshift-3-input"
-                          inputRef={[Function]}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder={null}
-                          value=""
+                          margin="none"
+                          required={false}
+                          variant="standard"
                         >
-                          <Input
-                            aria-activedescendant={null}
-                            aria-autocomplete="list"
-                            aria-controls={null}
-                            aria-labelledby="downshift-3-label"
-                            autoComplete="off"
-                            classes={
-                              Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
-                              }
-                            }
-                            fullWidth={true}
-                            id="downshift-3-input"
-                            inputRef={[Function]}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onKeyDown={[Function]}
-                            placeholder={null}
-                            value=""
+                          <div
+                            className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                           >
-                            <WithStyles(InputBase)
+                            <WithStyles(Input)
                               aria-activedescendant={null}
                               aria-autocomplete="list"
                               aria-controls={null}
@@ -2996,34 +3580,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                               autoComplete="off"
                               classes={
                                 Object {
-                                  "disabled": "MuiInput-disabled-8",
-                                  "error": "MuiInput-error-10",
-                                  "focused": "MuiInput-focused-7",
-                                  "formControl": "MuiInput-formControl-6",
-                                  "fullWidth": "MuiInput-fullWidth-12",
-                                  "input": "MuiInput-input-13",
-                                  "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                  "inputMultiline": "MuiInput-inputMultiline-15",
-                                  "inputType": "MuiInput-inputType-16",
-                                  "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                  "multiline": "MuiInput-multiline-11",
-                                  "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
-                                  "underline": null,
+                                  "root": "inputRoot",
                                 }
                               }
                               fullWidth={true}
                               id="downshift-3-input"
-                              inputComponent="input"
                               inputRef={[Function]}
-                              multiline={false}
                               onBlur={[Function]}
                               onChange={[Function]}
                               onKeyDown={[Function]}
                               placeholder={null}
-                              type="text"
                               value=""
                             >
-                              <InputBase
+                              <Input
                                 aria-activedescendant={null}
                                 aria-autocomplete="list"
                                 aria-controls={null}
@@ -3031,69 +3600,138 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 autoComplete="off"
                                 classes={
                                   Object {
-                                    "adornedEnd": "MuiInputBase-adornedEnd-23",
-                                    "adornedStart": "MuiInputBase-adornedStart-22",
-                                    "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
-                                    "error": "MuiInputBase-error-24 MuiInput-error-10",
-                                    "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
-                                    "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
-                                    "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
-                                    "input": "MuiInputBase-input-28 MuiInput-input-13",
-                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
-                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
-                                    "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
-                                    "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
-                                    "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
-                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
-                                    "marginDense": "MuiInputBase-marginDense-25",
-                                    "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
-                                    "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                    "disabled": "MuiInput-disabled-8",
+                                    "error": "MuiInput-error-10",
+                                    "focused": "MuiInput-focused-7",
+                                    "formControl": "MuiInput-formControl-6",
+                                    "fullWidth": "MuiInput-fullWidth-12",
+                                    "input": "MuiInput-input-13",
+                                    "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                    "inputMultiline": "MuiInput-inputMultiline-15",
+                                    "inputType": "MuiInput-inputType-16",
+                                    "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                    "multiline": "MuiInput-multiline-11",
+                                    "root": "MuiInput-root-5 inputRoot",
+                                    "underline": "MuiInput-underline-9",
                                   }
                                 }
                                 fullWidth={true}
                                 id="downshift-3-input"
-                                inputComponent="input"
                                 inputRef={[Function]}
-                                multiline={false}
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
                                 placeholder={null}
-                                type="text"
                                 value=""
                               >
-                                <div
+                                <WithStyles(InputBase)
                                   aria-activedescendant={null}
                                   aria-autocomplete="list"
                                   aria-controls={null}
                                   aria-labelledby="downshift-3-label"
-                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-focused-20 MuiInput-focused-7 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                  onClick={[Function]}
+                                  autoComplete="off"
+                                  classes={
+                                    Object {
+                                      "disabled": "MuiInput-disabled-8",
+                                      "error": "MuiInput-error-10",
+                                      "focused": "MuiInput-focused-7",
+                                      "formControl": "MuiInput-formControl-6",
+                                      "fullWidth": "MuiInput-fullWidth-12",
+                                      "input": "MuiInput-input-13",
+                                      "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                      "inputMultiline": "MuiInput-inputMultiline-15",
+                                      "inputType": "MuiInput-inputType-16",
+                                      "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                      "multiline": "MuiInput-multiline-11",
+                                      "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      "underline": null,
+                                    }
+                                  }
+                                  fullWidth={true}
+                                  id="downshift-3-input"
+                                  inputComponent="input"
+                                  inputRef={[Function]}
+                                  multiline={false}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
                                 >
-                                  <input
-                                    aria-invalid={false}
+                                  <InputBase
+                                    aria-activedescendant={null}
+                                    aria-autocomplete="list"
+                                    aria-controls={null}
+                                    aria-labelledby="downshift-3-label"
                                     autoComplete="off"
-                                    className="MuiInputBase-input-28 MuiInput-input-13"
-                                    disabled={false}
+                                    classes={
+                                      Object {
+                                        "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                        "adornedStart": "MuiInputBase-adornedStart-22",
+                                        "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                        "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                        "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                        "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                        "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                        "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                        "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                        "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                        "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                        "marginDense": "MuiInputBase-marginDense-25",
+                                        "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                        "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      }
+                                    }
+                                    fullWidth={true}
                                     id="downshift-3-input"
+                                    inputComponent="input"
+                                    inputRef={[Function]}
+                                    multiline={false}
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     placeholder={null}
-                                    required={false}
                                     type="text"
                                     value=""
-                                  />
-                                </div>
-                              </InputBase>
-                            </WithStyles(InputBase)>
-                          </Input>
-                        </WithStyles(Input)>
-                      </div>
-                    </FormControl>
-                  </WithStyles(FormControl)>
-                </TextField>
+                                  >
+                                    <div
+                                      aria-activedescendant={null}
+                                      aria-autocomplete="list"
+                                      aria-controls={null}
+                                      aria-labelledby="downshift-3-label"
+                                      className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-focused-20 MuiInput-focused-7 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        aria-invalid={false}
+                                        autoComplete="off"
+                                        className="MuiInputBase-input-28 MuiInput-input-13"
+                                        disabled={false}
+                                        id="downshift-3-input"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        required={false}
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </InputBase>
+                                </WithStyles(InputBase)>
+                              </Input>
+                            </WithStyles(Input)>
+                          </div>
+                        </FormControl>
+                      </WithStyles(FormControl)>
+                    </TextField>
+                  </TextFieldWrapper>
+                </WithStyles(TextFieldWrapper)>
               </div>
             </Downshift>
           </div>
@@ -3102,6 +3740,32 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
     </Router>
   </MemoryRouter>
 </Provider>
+`;
+
+exports[`AutoCompleteAsyncField component should render with an input which allows free text input 1`] = `
+<div
+  className="root"
+>
+  <Downshift
+    defaultHighlightedIndex={null}
+    defaultInputValue=""
+    defaultIsOpen={false}
+    defaultSelectedItem={null}
+    environment={[Window]}
+    getA11yStatusMessage={[Function]}
+    itemToString={[MockFunction]}
+    onChange={[MockFunction]}
+    onInputValueChange={[Function]}
+    onOuterClick={[Function]}
+    onSelect={[Function]}
+    onStateChange={[Function]}
+    onUserAction={[Function]}
+    scrollIntoView={[Function]}
+    selectedItemChanged={[Function]}
+    stateReducer={[Function]}
+    suppressRefError={false}
+  />
+</div>
 `;
 
 exports[`AutoCompleteAsyncField component should render with disabled flag set to true 1`] = `
@@ -3592,7 +4256,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
           }
           disabled={true}
           error={false}
-          filter={[MockFunction]}
+          filter={[Function]}
           floatingLabelText=""
           hintText={null}
           itemToString={[MockFunction]}
@@ -3616,7 +4280,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
               environment={[Window]}
               getA11yStatusMessage={[Function]}
               itemToString={[MockFunction]}
-              onChange={[Function]}
+              onChange={[MockFunction]}
               onInputValueChange={[Function]}
               onOuterClick={[Function]}
               onSelect={[Function]}
@@ -3635,7 +4299,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 className="container"
                 role="combobox"
               >
-                <TextField
+                <WithStyles(TextFieldWrapper)
                   InputProps={
                     Object {
                       "aria-activedescendant": null,
@@ -3656,95 +4320,103 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                   }
                   disabled={true}
                   error={false}
+                  errorText=""
                   fullWidth={true}
-                  helperText=""
                   label=""
                   placeholder={null}
                   required={false}
-                  select={false}
                   value=""
-                  variant="standard"
                 >
-                  <WithStyles(FormControl)
+                  <TextFieldWrapper
+                    InputProps={
+                      Object {
+                        "aria-activedescendant": null,
+                        "aria-autocomplete": "list",
+                        "aria-controls": null,
+                        "aria-labelledby": "downshift-0-label",
+                        "autoComplete": "off",
+                        "classes": Object {
+                          "root": "inputRoot",
+                        },
+                        "id": "downshift-0-input",
+                        "inputRef": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onKeyDown": [Function],
+                        "value": "",
+                      }
+                    }
+                    classes={Object {}}
                     disabled={true}
                     error={false}
+                    errorText=""
                     fullWidth={true}
+                    label=""
+                    placeholder={null}
                     required={false}
-                    variant="standard"
+                    value=""
                   >
-                    <FormControl
-                      classes={
+                    <TextField
+                      InputLabelProps={null}
+                      InputProps={
                         Object {
-                          "fullWidth": "MuiFormControl-fullWidth-4",
-                          "marginDense": "MuiFormControl-marginDense-3",
-                          "marginNormal": "MuiFormControl-marginNormal-2",
-                          "root": "MuiFormControl-root-1",
+                          "aria-activedescendant": null,
+                          "aria-autocomplete": "list",
+                          "aria-controls": null,
+                          "aria-labelledby": "downshift-0-label",
+                          "autoComplete": "off",
+                          "classes": Object {
+                            "root": "inputRoot",
+                          },
+                          "id": "downshift-0-input",
+                          "inputRef": [Function],
+                          "onBlur": [Function],
+                          "onChange": [Function],
+                          "onKeyDown": [Function],
+                          "value": "",
                         }
                       }
-                      component="div"
+                      classes={Object {}}
                       disabled={true}
                       error={false}
                       fullWidth={true}
-                      margin="none"
+                      id=""
+                      label=""
+                      placeholder={null}
                       required={false}
+                      select={false}
+                      value=""
                       variant="standard"
                     >
-                      <div
-                        className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+                      <WithStyles(FormControl)
+                        classes={Object {}}
+                        disabled={true}
+                        error={false}
+                        fullWidth={true}
+                        required={false}
+                        variant="standard"
                       >
-                        <WithStyles(Input)
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-labelledby="downshift-0-label"
-                          autoComplete="off"
+                        <FormControl
                           classes={
                             Object {
-                              "root": "inputRoot",
+                              "fullWidth": "MuiFormControl-fullWidth-4",
+                              "marginDense": "MuiFormControl-marginDense-3",
+                              "marginNormal": "MuiFormControl-marginNormal-2",
+                              "root": "MuiFormControl-root-1",
                             }
                           }
+                          component="div"
+                          disabled={true}
+                          error={false}
                           fullWidth={true}
-                          id="downshift-0-input"
-                          inputRef={[Function]}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder={null}
-                          value=""
+                          margin="none"
+                          required={false}
+                          variant="standard"
                         >
-                          <Input
-                            aria-activedescendant={null}
-                            aria-autocomplete="list"
-                            aria-controls={null}
-                            aria-labelledby="downshift-0-label"
-                            autoComplete="off"
-                            classes={
-                              Object {
-                                "disabled": "MuiInput-disabled-8",
-                                "error": "MuiInput-error-10",
-                                "focused": "MuiInput-focused-7",
-                                "formControl": "MuiInput-formControl-6",
-                                "fullWidth": "MuiInput-fullWidth-12",
-                                "input": "MuiInput-input-13",
-                                "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                "inputMultiline": "MuiInput-inputMultiline-15",
-                                "inputType": "MuiInput-inputType-16",
-                                "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                "multiline": "MuiInput-multiline-11",
-                                "root": "MuiInput-root-5 inputRoot",
-                                "underline": "MuiInput-underline-9",
-                              }
-                            }
-                            fullWidth={true}
-                            id="downshift-0-input"
-                            inputRef={[Function]}
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onKeyDown={[Function]}
-                            placeholder={null}
-                            value=""
+                          <div
+                            className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
                           >
-                            <WithStyles(InputBase)
+                            <WithStyles(Input)
                               aria-activedescendant={null}
                               aria-autocomplete="list"
                               aria-controls={null}
@@ -3752,34 +4424,19 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                               autoComplete="off"
                               classes={
                                 Object {
-                                  "disabled": "MuiInput-disabled-8",
-                                  "error": "MuiInput-error-10",
-                                  "focused": "MuiInput-focused-7",
-                                  "formControl": "MuiInput-formControl-6",
-                                  "fullWidth": "MuiInput-fullWidth-12",
-                                  "input": "MuiInput-input-13",
-                                  "inputMarginDense": "MuiInput-inputMarginDense-14",
-                                  "inputMultiline": "MuiInput-inputMultiline-15",
-                                  "inputType": "MuiInput-inputType-16",
-                                  "inputTypeSearch": "MuiInput-inputTypeSearch-17",
-                                  "multiline": "MuiInput-multiline-11",
-                                  "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
-                                  "underline": null,
+                                  "root": "inputRoot",
                                 }
                               }
                               fullWidth={true}
                               id="downshift-0-input"
-                              inputComponent="input"
                               inputRef={[Function]}
-                              multiline={false}
                               onBlur={[Function]}
                               onChange={[Function]}
                               onKeyDown={[Function]}
                               placeholder={null}
-                              type="text"
                               value=""
                             >
-                              <InputBase
+                              <Input
                                 aria-activedescendant={null}
                                 aria-autocomplete="list"
                                 aria-controls={null}
@@ -3787,69 +4444,138 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                 autoComplete="off"
                                 classes={
                                   Object {
-                                    "adornedEnd": "MuiInputBase-adornedEnd-23",
-                                    "adornedStart": "MuiInputBase-adornedStart-22",
-                                    "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
-                                    "error": "MuiInputBase-error-24 MuiInput-error-10",
-                                    "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
-                                    "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
-                                    "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
-                                    "input": "MuiInputBase-input-28 MuiInput-input-13",
-                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
-                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
-                                    "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
-                                    "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
-                                    "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
-                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
-                                    "marginDense": "MuiInputBase-marginDense-25",
-                                    "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
-                                    "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                    "disabled": "MuiInput-disabled-8",
+                                    "error": "MuiInput-error-10",
+                                    "focused": "MuiInput-focused-7",
+                                    "formControl": "MuiInput-formControl-6",
+                                    "fullWidth": "MuiInput-fullWidth-12",
+                                    "input": "MuiInput-input-13",
+                                    "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                    "inputMultiline": "MuiInput-inputMultiline-15",
+                                    "inputType": "MuiInput-inputType-16",
+                                    "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                    "multiline": "MuiInput-multiline-11",
+                                    "root": "MuiInput-root-5 inputRoot",
+                                    "underline": "MuiInput-underline-9",
                                   }
                                 }
                                 fullWidth={true}
                                 id="downshift-0-input"
-                                inputComponent="input"
                                 inputRef={[Function]}
-                                multiline={false}
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
                                 placeholder={null}
-                                type="text"
                                 value=""
                               >
-                                <div
+                                <WithStyles(InputBase)
                                   aria-activedescendant={null}
                                   aria-autocomplete="list"
                                   aria-controls={null}
                                   aria-labelledby="downshift-0-label"
-                                  className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                  onClick={[Function]}
+                                  autoComplete="off"
+                                  classes={
+                                    Object {
+                                      "disabled": "MuiInput-disabled-8",
+                                      "error": "MuiInput-error-10",
+                                      "focused": "MuiInput-focused-7",
+                                      "formControl": "MuiInput-formControl-6",
+                                      "fullWidth": "MuiInput-fullWidth-12",
+                                      "input": "MuiInput-input-13",
+                                      "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                      "inputMultiline": "MuiInput-inputMultiline-15",
+                                      "inputType": "MuiInput-inputType-16",
+                                      "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                      "multiline": "MuiInput-multiline-11",
+                                      "root": "MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      "underline": null,
+                                    }
+                                  }
+                                  fullWidth={true}
+                                  id="downshift-0-input"
+                                  inputComponent="input"
+                                  inputRef={[Function]}
+                                  multiline={false}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
                                 >
-                                  <input
-                                    aria-invalid={false}
+                                  <InputBase
+                                    aria-activedescendant={null}
+                                    aria-autocomplete="list"
+                                    aria-controls={null}
+                                    aria-labelledby="downshift-0-label"
                                     autoComplete="off"
-                                    className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-disabled-21 MuiInput-disabled-8"
-                                    disabled={true}
+                                    classes={
+                                      Object {
+                                        "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                        "adornedStart": "MuiInputBase-adornedStart-22",
+                                        "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                        "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                        "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                        "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                        "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                        "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                        "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                        "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                        "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                        "marginDense": "MuiInputBase-marginDense-25",
+                                        "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                        "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                      }
+                                    }
+                                    fullWidth={true}
                                     id="downshift-0-input"
+                                    inputComponent="input"
+                                    inputRef={[Function]}
+                                    multiline={false}
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     placeholder={null}
-                                    required={false}
                                     type="text"
                                     value=""
-                                  />
-                                </div>
-                              </InputBase>
-                            </WithStyles(InputBase)>
-                          </Input>
-                        </WithStyles(Input)>
-                      </div>
-                    </FormControl>
-                  </WithStyles(FormControl)>
-                </TextField>
+                                  >
+                                    <div
+                                      aria-activedescendant={null}
+                                      aria-autocomplete="list"
+                                      aria-controls={null}
+                                      aria-labelledby="downshift-0-label"
+                                      className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        aria-invalid={false}
+                                        autoComplete="off"
+                                        className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-disabled-21 MuiInput-disabled-8"
+                                        disabled={true}
+                                        id="downshift-0-input"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        required={false}
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </InputBase>
+                                </WithStyles(InputBase)>
+                              </Input>
+                            </WithStyles(Input)>
+                          </div>
+                        </FormControl>
+                      </WithStyles(FormControl)>
+                    </TextField>
+                  </TextFieldWrapper>
+                </WithStyles(TextFieldWrapper)>
               </div>
             </Downshift>
           </div>
