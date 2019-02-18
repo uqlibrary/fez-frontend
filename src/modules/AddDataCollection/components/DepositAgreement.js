@@ -62,11 +62,11 @@ const styles = (theme) => ({
         lineHeight: '24px'
     },
     checkboxRoot: {
-        color: theme.status.danger,
+        color: !!theme.status && theme.status.danger || '',
     },
     checkboxChecked: {
-        color: `${theme.palette.primary.main} !important`
+        color: !!theme.palette && `${theme.palette.primary.main} !important` || ''
     }
 });
 
-export default withStyles(styles)(DepositAgreement);
+export default withStyles(styles, {withTheme: true})(DepositAgreement);
