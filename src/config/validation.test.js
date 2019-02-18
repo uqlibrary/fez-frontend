@@ -86,7 +86,7 @@ describe('Validation method', () => {
         expect(testValue).toEqual('');
     });
 
-    fit('should validate max length', () => {
+    it('should validate max length', () => {
         expect(validation.maxLength10('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl')).toEqual(locale.validationErrors.maxLength.replace('[max]', 10));
         expect(validation.maxLength10('123')).toEqual(undefined);
         expect(validation.maxLength10('abc def gji')).toEqual(undefined);
