@@ -1,6 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ThirdPartyLookupTool renders incites 1`] = `
+exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
+<StandardPage
+  title="Lookup Tools - view raw output from APIs"
+>
+  <ThirdPartyLookupFormResult
+    localeform={
+      Object {
+        "bottomTip": "",
+        "lookupLabel": "Incites",
+        "lookupType": "incites",
+        "primaryField": Object {
+          "fromAria": "",
+          "heading": "UTs",
+          "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+          "tip": "",
+        },
+        "secondaryField": Object {
+          "fromAria": "",
+          "heading": "API Key",
+          "inputPlaceholder": "Enter API key",
+          "reportInOutput": false,
+          "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+        },
+        "submitButtonLabel": "Submit to Incites",
+      }
+    }
+    lookupResults="blah blah blah"
+    primaryValue=""
+    secondaryValue=""
+  />
+</StandardPage>
+`;
+
+exports[`Component ThirdPartyLookupTool renders loading screen while loading data 1`] = `
+<StandardPage
+  title="Lookup Tools - view raw output from APIs"
+>
+  <WithStyles(InlineLoader)
+    message="Loading"
+  />
+</StandardPage>
+`;
+
+exports[`Component ThirdPartyLookupTool should render a form ready for input 1`] = `
+<StandardPage
+  title="Lookup Tools - view raw output from APIs"
+>
+  <React.Fragment>
+    <ThirdPartyLookupForm
+      isMinimised={false}
+      locale={
+        Object {
+          "clearButtonLabel": "New Search",
+          "forms": Object {
+            "incites": Object {
+              "bottomTip": "",
+              "lookupLabel": "Incites",
+              "lookupType": "incites",
+              "primaryField": Object {
+                "fromAria": "",
+                "heading": "UTs",
+                "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+                "tip": "",
+              },
+              "secondaryField": Object {
+                "fromAria": "",
+                "heading": "API Key",
+                "inputPlaceholder": "Enter API key",
+                "reportInOutput": false,
+                "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+              },
+              "submitButtonLabel": "Submit to Incites",
+            },
+          },
+          "loadingMessage": "Loading",
+          "noResultsFound": Object {
+            "text": "No results found",
+          },
+          "resultsLabel": "Results",
+          "title": "Lookup Tools - view raw output from APIs",
+          "tooltip": Object {
+            "hide": "Hide form for",
+            "show": "Show form for",
+          },
+        }
+      }
+      localeform={
+        Object {
+          "bottomTip": "",
+          "lookupLabel": "Incites",
+          "lookupType": "incites",
+          "primaryField": Object {
+            "fromAria": "",
+            "heading": "UTs",
+            "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+            "tip": "",
+          },
+          "secondaryField": Object {
+            "fromAria": "",
+            "heading": "API Key",
+            "inputPlaceholder": "Enter API key",
+            "reportInOutput": false,
+            "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+          },
+          "submitButtonLabel": "Submit to Incites",
+        }
+      }
+      sendInputsToResultComponent={[Function]}
+    />
+  </React.Fragment>
+</StandardPage>
+`;
+
+exports[`Component ThirdPartyLookupTool should set state with submitted data 1`] = `
 <StandardPage
   title="Lookup Tools - view raw output from APIs"
 >
@@ -29,5 +142,140 @@ exports[`Component ThirdPartyLookupTool renders incites 1`] = `
     }
     sendInputsToResultComponent={[Function]}
   />
+  <React.Fragment>
+    <ThirdPartyLookupForm
+      actions={Object {}}
+      isMinimised={false}
+      locale={
+        Object {
+          "clearButtonLabel": "New Search",
+          "forms": Object {
+            "incites": Object {
+              "bottomTip": "",
+              "lookupLabel": "Incites",
+              "lookupType": "incites",
+              "primaryField": Object {
+                "fromAria": "",
+                "heading": "UTs",
+                "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+                "tip": "",
+              },
+              "secondaryField": Object {
+                "fromAria": "",
+                "heading": "API Key",
+                "inputPlaceholder": "Enter API key",
+                "reportInOutput": false,
+                "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+              },
+              "submitButtonLabel": "Submit to Incites",
+            },
+          },
+          "loadingMessage": "Loading",
+          "noResultsFound": Object {
+            "text": "No results found",
+          },
+          "resultsLabel": "Results",
+          "title": "Lookup Tools - view raw output from APIs",
+          "tooltip": Object {
+            "hide": "Hide form for",
+            "show": "Show form for",
+          },
+        }
+      }
+      localeform={
+        Object {
+          "bottomTip": "",
+          "lookupLabel": "Incites",
+          "lookupType": "incites",
+          "primaryField": Object {
+            "fromAria": "",
+            "heading": "UTs",
+            "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+            "tip": "",
+          },
+          "secondaryField": Object {
+            "fromAria": "",
+            "heading": "API Key",
+            "inputPlaceholder": "Enter API key",
+            "reportInOutput": false,
+            "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+          },
+          "submitButtonLabel": "Submit to Incites",
+        }
+      }
+      sendInputsToResultComponent={[Function]}
+    />
+  </React.Fragment>
+</StandardPage>
+`;
+
+exports[`Component ThirdPartyLookupTool should set state with submitted data 2`] = `
+<StandardPage
+  title="Lookup Tools - view raw output from APIs"
+>
+  <React.Fragment>
+    <ThirdPartyLookupForm
+      actions={Object {}}
+      isMinimised={false}
+      locale={
+        Object {
+          "clearButtonLabel": "New Search",
+          "forms": Object {
+            "incites": Object {
+              "bottomTip": "",
+              "lookupLabel": "Incites",
+              "lookupType": "incites",
+              "primaryField": Object {
+                "fromAria": "",
+                "heading": "UTs",
+                "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+                "tip": "",
+              },
+              "secondaryField": Object {
+                "fromAria": "",
+                "heading": "API Key",
+                "inputPlaceholder": "Enter API key",
+                "reportInOutput": false,
+                "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+              },
+              "submitButtonLabel": "Submit to Incites",
+            },
+          },
+          "loadingMessage": "Loading",
+          "noResultsFound": Object {
+            "text": "No results found",
+          },
+          "resultsLabel": "Results",
+          "title": "Lookup Tools - view raw output from APIs",
+          "tooltip": Object {
+            "hide": "Hide form for",
+            "show": "Show form for",
+          },
+        }
+      }
+      localeform={
+        Object {
+          "bottomTip": "",
+          "lookupLabel": "Incites",
+          "lookupType": "incites",
+          "primaryField": Object {
+            "fromAria": "",
+            "heading": "UTs",
+            "inputPlaceholder": "Enter one or more UTs separated by a comma e.g. 000455548800001",
+            "tip": "",
+          },
+          "secondaryField": Object {
+            "fromAria": "",
+            "heading": "API Key",
+            "inputPlaceholder": "Enter API key",
+            "reportInOutput": false,
+            "tip": "Optional, a default key is provided. Limit: 1,000 queries per day",
+          },
+          "submitButtonLabel": "Submit to Incites",
+        }
+      }
+      sendInputsToResultComponent={[Function]}
+    />
+  </React.Fragment>
 </StandardPage>
 `;
