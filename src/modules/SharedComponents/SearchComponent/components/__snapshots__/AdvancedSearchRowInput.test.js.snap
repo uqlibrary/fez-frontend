@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AdvancedSearchRowInput should call onChange from input props for AuthorIdLookup for non-numeric value 1`] = `
+<AuthorIdField
+  allowFreeText={true}
+  error={true}
+  errorText="This field is required"
+  onChange={[Function]}
+  value={null}
+/>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for AuthorIdLookup for numeric value 1`] = `
+<AuthorIdField
+  allowFreeText={true}
+  error={true}
+  errorText="This field is required"
+  onChange={[Function]}
+  value={null}
+/>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for CollectionsLookup field 1`] = `
+<CollectionsSelectField
+  autoWidth={false}
+  displayEmpty={true}
+  error={false}
+  hideLabel={true}
+  onChange={[MockFunction]}
+  selectedValue={Array []}
+/>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for OrgUnitLookup field 1`] = `
+<OrgUnitNameField
+  allowFreeText={true}
+  error={true}
+  errorText="This field is required"
+  onChange={[Function]}
+  value={null}
+/>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for StatusLookup field 1`] = `
+<UnpublishedStatusField
+  autoWidth={false}
+  displayEmpty={false}
+  error={true}
+  errorText="This field is required"
+  hideLabel={true}
+  onChange={[Function]}
+  selectedValue={null}
+/>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for TextField 1`] = `
+<TextFieldWrapper
+  autoComplete="search"
+  classes={Object {}}
+  error={true}
+  errorText="This field is required"
+  label={null}
+  onChange={[Function]}
+/>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props from ThesisTypeLookup field 1`] = `
+<ThesisSubtypeField
+  autoWidth={false}
+  displayEmpty={true}
+  error={false}
+  hideLabel={true}
+  onChange={[Function]}
+  selectedValue={Array []}
+/>
+`;
+
 exports[`AdvancedSearchRowInput should render default view 1`] = `""`;
 
 exports[`AdvancedSearchRowInput should render given children function 1`] = `"Testing"`;

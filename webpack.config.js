@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');
 
 const port = 3000;
 const url = process.env.URL || 'localhost';
@@ -163,6 +164,10 @@ module.exports = {
             'process.env.BRANCH': JSON.stringify('development'),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
+        }),
+        new AssetsPlugin({
+            filename: 'frontend.json',
+            prettyPrint: true
         })
     ],
     resolve: {
