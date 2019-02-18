@@ -62,10 +62,6 @@ export class ThirdPartyLookupForm extends PureComponent {
     };
 
     render() {
-        // console.log('this.props.locale');
-        // console.log(this.props.locale);
-        // console.log('this.props.locale.tooltip = ');
-        // console.log(this.props.locale.tooltip);
         const lookupLabel = !!this.props.localeform.lookupLabel ? this.props.localeform.lookupLabel : 'this form';
         const txt = {
             title: this.props.locale && this.props.locale.title ? this.props.locale.title : '',
@@ -74,7 +70,6 @@ export class ThirdPartyLookupForm extends PureComponent {
             labelHide: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.hide ? `${this.props.locale.tooltip.hide} ${lookupLabel}` : `Hide form for ${lookupLabel}`,
         };
         const { primaryValue, secondaryValue } = this.state;
-        // console.log('labelShow = ' + txt.labelShow);
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
