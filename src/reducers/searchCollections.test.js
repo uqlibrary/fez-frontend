@@ -11,7 +11,6 @@ describe('searchCollections reducer', () => {
 
     it('is setting the "items loading" status', () => {
         const result = collectionsReducer({}, {type: actions.SEARCH_COLLECTION_LOADING});
-        console.log(JSON.stringify(result));
         expect(result.itemsLoading).toBeTruthy;
         expect(result).toEqual({...initState, itemsLoading: true});
     });
