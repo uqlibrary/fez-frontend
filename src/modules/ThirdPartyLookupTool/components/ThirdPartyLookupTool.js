@@ -47,14 +47,21 @@ export class ThirdPartyLookupTool extends PureComponent {
     };
 
     render() {
+        const localeContent = locale.components.thirdPartyLookupTools;
+        // console.log('1');
+        // console.log(localeContent);
+        // delete localeContent.forms; // cleanup so we dont pass the forms values twice / dont give the form access to a non-current form...
+        // console.log('2');
+        // console.log(localeContent);
         return (
-            <StandardPage title={locale.components.thirdPartyLookupTools.title}>
+            <StandardPage title={localeContent.title}>
                 {
                     this.props.loadingResults &&
-                    <InlineLoader message={locale.components.thirdPartyLookupTools.loadingMessage ? locale.components.thirdPartyLookupTools.loadingMessage : 'Loading'}/>
+                    <InlineLoader message={localeContent.loadingMessage}/>
                 }
                 {
-                    !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length > 0 &&
+                    !this.props.loadingResults && !!locale.components.thirdPartyLookupTools.forms &&
+                    !!this.props.lookupResults && this.props.lookupResults.length > 0 &&
                     <ThirdPartyLookupFormResult
                         lookupResults={this.props.lookupResults}
                         actions={this.props.actions}
@@ -65,12 +72,13 @@ export class ThirdPartyLookupTool extends PureComponent {
                 }
 
                 {
-                    !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length === 0 &&
+                    !this.props.loadingResults && !!locale.components.thirdPartyLookupTools.forms &&
+                    !!this.props.lookupResults && this.props.lookupResults.length === 0 &&
                     <Fragment>
-
                         {/* incites */}
                         <ThirdPartyLookupForm
                             isMinimised={false}
+                            locale={localeContent}
                             localeform={locale.components.thirdPartyLookupTools.forms.incites}
                             actions={this.props.actions}
                             sendInputsToResultComponent={this.recordInputs} // function

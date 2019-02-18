@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+// import {locale} from 'locale';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
@@ -15,6 +15,7 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 export class ThirdPartyLookupForm extends PureComponent {
     static propTypes = {
         actions: PropTypes.object.isRequired,
+        locale: PropTypes.object.isRequired,
         localeform: PropTypes.object.isRequired,
         sendInputsToResultComponent: PropTypes.func.isRequired,
         isMinimised: PropTypes.bool,
@@ -24,6 +25,7 @@ export class ThirdPartyLookupForm extends PureComponent {
     };
 
     constructor(props) {
+        // console.log('ThirdPartyLookupForm');
         super(props);
         this.state = {
             isMinimised: props.isMinimised,
@@ -46,9 +48,8 @@ export class ThirdPartyLookupForm extends PureComponent {
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
 
-        this.props.sendInputsToResultComponent(primaryValue, secondaryValue);
-
         if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadThirdPartyLookup) {
+            this.props.sendInputsToResultComponent(primaryValue, secondaryValue);
             this.props.actions.loadThirdPartyLookup(lookupType, primaryValue, secondaryValue);
         }
     };
@@ -61,26 +62,31 @@ export class ThirdPartyLookupForm extends PureComponent {
     };
 
     render() {
+        // console.log('this.props.locale');
+        // console.log(this.props.locale);
+        // console.log('this.props.locale.tooltip = ');
+        // console.log(this.props.locale.tooltip);
+        const lookupLabel = !!this.props.localeform.lookupLabel ? this.props.localeform.lookupLabel : 'this form';
         const txt = {
-            title: locale.components.thirdPartyLookupTools.title,
+            title: this.props.locale && this.props.locale.title ? this.props.locale.title : '',
             thisForm: this.props.localeform,
+            labelShow: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.show ? `${this.props.locale.tooltip.show} ${lookupLabel}` : `Show form for ${lookupLabel}`,
+            labelHide: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.hide ? `${this.props.locale.tooltip.hide} ${lookupLabel}` : `Hide form for ${lookupLabel}`,
         };
         const { primaryValue, secondaryValue } = this.state;
-        const lookupLabel = txt.thisForm.lookupLabel ? txt.thisForm.lookupLabel : 'this form';
+        // console.log('labelShow = ' + txt.labelShow);
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <StandardCard noHeader>
                         <Grid container spacing={24}>
                             <Grid item style={{flexGrow: 1, width: 1}}>
-                                <Typography variant={'headline'}>{txt.thisForm.lookupLabel}</Typography>
+                                <Typography variant={'headline'}>{lookupLabel}</Typography>
                             </Grid>
                             <Grid item>
                                 <IconButton
                                     onClick={this._toggleMinimise}
-                                    tooltip={!!this.state.isMinimised
-                                        ? locale.components.thirdPartyLookupTools.tooltip.show + ' for ' + lookupLabel
-                                        : locale.components.thirdPartyLookupTools.tooltip.hide + ' for ' + lookupLabel
+                                    tooltip={!!this.state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`
                                     }>
                                     {
                                         !!this.state.isMinimised

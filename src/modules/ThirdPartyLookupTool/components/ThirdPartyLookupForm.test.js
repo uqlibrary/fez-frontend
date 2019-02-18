@@ -1,5 +1,6 @@
 import {ThirdPartyLookupForm} from './ThirdPartyLookupForm';
 import {locale} from 'locale';
+import PropTypes from "prop-types";
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -51,7 +52,7 @@ describe('Component ThirdPartyLookupForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should return values as expected for a valid submit button click', () => {
+    it('should submit if fields are valid', () => {
         const submitMock = jest.fn();
 
         const props = {
@@ -77,7 +78,43 @@ describe('Component ThirdPartyLookupForm', () => {
 
         // clicking the button class the passed in function
         expect(submitMock).toHaveBeenCalledTimes(1);
+    });
 
+    it('should submit if fields are valid where no secondary field is required', () => {
+        const submitMock = jest.fn();
+
+        const props = {
+            isMinimised: false,
+            sendInputsToResultComponent: submitMock,
+            localeform: {
+                lookupType: 'incites',
+                lookupLabel: 'Incites',
+                tip: 'View raw output we receive from Incites via their API',
+                primaryField: {
+                    heading: 'UTs',
+                    fromAria: '',
+                    tip: '',
+                    inputPlaceholder: 'Enter one or more UTs, separated by a comma',
+                },
+                bottomTip: '',
+                submitButtonLabel: 'Submit to Incites',
+            }
+        };
+        const wrapper = setup({...props});
+        wrapper.instance()._handleSubmitLookup = submitMock;
+
+        const primaryField = wrapper.find('.primaryValue');
+        expect(primaryField.length).toEqual(1);
+        primaryField.simulate('change', {target: {name: 'primaryValue', value: 'blah'}});
+
+        // confirm the entered values of the fields made it into state
+        expect(wrapper.state()).toEqual({isMinimised: false, primaryValue: 'blah', secondaryValue: ''});
+
+        const button = wrapper.find('WithStyles(Button)');
+        expect(button.length).toEqual(1);
+        button.simulate('click');
+
+        expect(submitMock).toHaveBeenCalledTimes(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -102,12 +139,30 @@ describe('Component ThirdPartyLookupForm', () => {
             sendInputsToResultComponent: submitMock
         };
         const wrapper = setup({...props});
-        wrapper.instance()._handleSubmitLookup = submitMock;
+        // wrapper.instance()._handleSubmitLookup = submitMock;
+        wrapper.update();
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
-        expect(toJson(wrapper)).toMatchSnapshot(); // still on form page
+        expect(wrapper.state()).toEqual({isMinimised: false, primaryValue: '',secondaryValue: ''});
+        expect(submitMock).not.toHaveBeenCalled();
+    });
+
+    it('should not submit if ENTER was not the key pressed', () => {
+        const testMethod = jest.fn();
+        const testProps = {
+            sendInputsToResultComponent: testMethod,
+            locale3rdParty: {
+                title: 'xxx'
+            },
+        };
+        const wrapper = setup(testProps);
+
+        wrapper.instance()._handleSubmitLookup({key: 'a'});
+        wrapper.update();
+
+        expect(testMethod).not.toHaveBeenCalled();
     });
 });

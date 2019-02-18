@@ -275,6 +275,7 @@ export default {
         },
         thirdPartyLookupTools: {
             title: 'Lookup Tools - view raw output from APIs',
+            loadingMessage: 'Loading',
             forms: {
                 incites: {
                     lookupType: 'incites', // this value should match the 'type' in the path used in api
@@ -297,8 +298,8 @@ export default {
                 },
             },
             tooltip: {
-                show: 'Show form',
-                hide: 'Hide form'
+                show: 'Show form for',
+                hide: 'Hide form for'
             },
             resultsLabel: 'Results',
             noResultsFound: {
