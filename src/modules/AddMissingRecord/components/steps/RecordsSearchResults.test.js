@@ -1,5 +1,11 @@
 import RecordsSearchResults from './RecordsSearchResults';
 
+jest.mock('react-dom', () => ({
+    findDOMNode: () => ({
+        focus: jest.fn()
+    })
+}));
+
 function setup(testProps, isShallow = true) {
     const props = {
         history: {},
@@ -15,6 +21,30 @@ describe('Search record results', () => {
             history: {}
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render spinner', () => {
+        const wrapper = setup({
+            history: {},
+            searchLoading: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should call componentWillReceiveProps lifecycle method', () => {
+
+        const wrapper = setup({
+            history: {}
+        });
+        wrapper.instance().showNewRecordButton = true;
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+
+        wrapper.setProps({
+            publicationsList: []
+        });
+        wrapper.update();
+
+        expect(componentWillReceiveProps).toHaveBeenCalled();
     });
 
     it('should navigate to find on cancel workflow', () => {
@@ -422,6 +452,69 @@ describe('Search record results', () => {
         const wrapper = setup({
             publicationsList: publicationsList
         });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render a single unclaimable item with no authors on the record (record should appear in publicationsListSubset prop) with full mount', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+        const publicationsList = [{
+            "rek_pid": "UQ:795469",
+            "fez_record_search_key_author": [],
+            "fez_record_search_key_author_id": [],
+            "fez_record_search_key_contributor": [{
+                "rek_contributor_id": 3210380,
+                "rek_contributor_pid": "UQ:795469",
+                "rek_contributor_xsdmf_id": null,
+                "rek_contributor": "El-Hawary, Ron",
+                "rek_contributor_order": 1
+            }, {
+                "rek_contributor_id": 3210381,
+                "rek_contributor_pid": "UQ:795469",
+                "rek_contributor_xsdmf_id": null,
+                "rek_contributor": "Eberson, Craig P.",
+                "rek_contributor_order": 2
+            }],
+            "fez_record_search_key_contributor_id": [{
+                    "rek_contributor_id_id": 28581254,
+                    "rek_contributor_id_pid": "UQ:70915",
+                    "rek_contributor_id_xsdmf_id": null,
+                    "rek_contributor_id": 111,
+                    "rek_contributor_id_order": 1
+                },
+                {
+                    "rek_contributor_id_id": 28581254,
+                    "rek_contributor_id_pid": "UQ:70915",
+                    "rek_contributor_id_xsdmf_id": null,
+                    "rek_contributor_id": 222,
+                    "rek_contributor_id_order": 2
+                }
+            ],
+            "fez_record_search_key_doi": {
+                "rek_doi_id": 1706187,
+                "rek_doi_pid": "UQ:795469",
+                "rek_doi_xsdmf_id": null,
+                "rek_doi": "10.1007/978-3-319-71580-3"
+            },
+            "sources": [{
+                "source": "espace",
+                "id": "UQ:795469"
+            }, {
+                "source": "crossref",
+                "id": "10.1007/978-3-319-71580-3"
+            }],
+            "currentSource": "espace"
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
