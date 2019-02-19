@@ -21,7 +21,6 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
         hideTitle={true}
         publication={Object {}}
       />
-      <ShareThisErrorBoundary />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
@@ -491,7 +490,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
           }
         }
       />
-      <ShareThisErrorBoundary />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
@@ -3685,7 +3683,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
           }
         }
       />
-      <ShareThisErrorBoundary />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)

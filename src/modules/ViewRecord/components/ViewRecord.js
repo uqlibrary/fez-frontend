@@ -13,7 +13,6 @@ import GrantInformation from './GrantInformation';
 import RelatedPublications from './RelatedPublications';
 import Links from './Links';
 import NtroDetails from './NtroDetails';
-import {ShareThisErrorBoundary} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
@@ -69,7 +68,6 @@ export default class ViewRecord extends PureComponent {
                 <Grid container style={{marginTop: -24}}>
                     <Grid item xs={12}>
                         <PublicationCitation publication={recordToView} hideTitle />
-                        <ShareThisErrorBoundary />
                     </Grid>
                 </Grid>
                 <Grid container spacing={24}>
