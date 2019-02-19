@@ -23,7 +23,10 @@ const options = {
                 "/index.html$",
                 "/contact$",
                 "/view/*",
-                "/data/*?*Signature=*&Key-Pair-Id=*"
+                "/data/*?*Signature=*&Key-Pair-Id=*",
+                "/assets/*.svg",
+                "/*.js",
+                "/*.css"
             ],
             disallow: [
                 "/"
