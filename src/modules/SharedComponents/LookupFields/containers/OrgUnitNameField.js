@@ -1,3 +1,4 @@
+import React from 'react';
 import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
@@ -32,5 +33,8 @@ const mapDispatchToProps = (dispatch, props) => (
     }
 );
 
-export const OrgUnitNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+const OrgUnitNameAutoComplete = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
 
+export function OrgUnitNameField(fieldProps) {
+    return <OrgUnitNameAutoComplete {...fieldProps}/>;
+}

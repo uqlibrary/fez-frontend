@@ -18,31 +18,20 @@ const options = {
     policy: [
         {
             userAgent: "*",
-            // crawlDelay: 10,
             allow: [
+                "/$",
+                "/index.html$",
+                "/contact$",
+                "/view/*",
                 "/data/*?*Signature=*&Key-Pair-Id=*"
             ],
             disallow: [
-                "/login.php",
-                "/stat_details.php",
-                "/stats.php",
-                "/history.php",
-                "/adv_search.php",
-                "/list.php",
-                "/oai.php",
-                "/collection/",
-                "/community/",
-                "/flviewer/",
-                "/records/search",
-                "/documentation/",
-                "/data/",
-                "/list/",
-                "/RHDThesesByAltmetricScore"
-            ],
+                "/"
+            ]
         }
     ],
     sitemap: "https://espace.library.uq.edu.au/sitemap/sitemap-index.xml"
-}
+};
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
