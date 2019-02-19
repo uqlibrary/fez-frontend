@@ -1,5 +1,10 @@
 import * as actions from 'actions/actionTypes';
-import searchRecordsReducer, {deduplicateResults, getEspaceDuplicatePublicationsByIdExceptLastItem, getIdCountHash, getDuplicateList} from './searchRecords';
+import searchRecordsReducer, {
+    deduplicateResults,
+    getEspaceDuplicatePublicationsByIdExceptLastItem,
+    getIdCountHash,
+    getDuplicateList
+} from './searchRecords';
 import * as records from 'mock/data/testing/searchRecords';
 
 const initialSearchSources = {
@@ -54,6 +59,24 @@ describe('searchRecords reducer', () => {
         const loadingState = searchRecordsReducer(initialState, {type: actions.SEARCH_LOADING});
         expect(loadingState.searchLoading).toBeTruthy();
         expect(loadingState.publicationsList).toEqual([]);
+    });
+
+    it('sets publication list to empty array if the payload array "data" is empty in SEARCH_LOADED', () => {
+        const test = searchRecordsReducer(initialState, {
+            payload: {data: []},
+            type: actions.SEARCH_LOADED
+        });
+        expect(test.publicationsList).toBeInstanceOf(Array);
+        expect(test.publicationsList.length).toBe(0);
+    });
+
+    it('sets publication list to empty array if the payload array "data" is empty in SEARCH_LOADED@', () => {
+        const test = searchRecordsReducer(initialState, {
+            payload: {data: []},
+            type: `${actions.SEARCH_LOADED}@`
+        });
+        expect(test.publicationsList).toBeInstanceOf(Array);
+        expect(test.publicationsList.length).toBe(0);
     });
 
     it('updates correctly once general API data loaded', () => {
@@ -346,7 +369,7 @@ describe('searchRecords reducer', () => {
             {
                 inputList: [...espaceList, ...scopusList, ...wosList],
                 idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
-                isOnlyForEspace: false,
+                isOnlyForEspace: undefined,
                 espaceDuplicates: [espaceList[0]],
                 expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSWithEsapceDuplicatesProvided
             },
