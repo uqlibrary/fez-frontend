@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmDiscardFormChanges should render wrapped component with default props 1`] = `
+<ComponentToWrap
+  dirty={false}
+  submitSucceeded={false}
+/>
+`;
