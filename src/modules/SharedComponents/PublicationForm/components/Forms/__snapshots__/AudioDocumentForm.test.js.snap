@@ -13,7 +13,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
       help={
         Object {
           "buttonLabel": "OK",
-          "text": <React.Fragment>
+          "text": <UNDEFINED>
             <p>
               <b>
                 Place of publication:
@@ -26,7 +26,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
               </b>
                Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released. 
             </p>
-          </React.Fragment>,
+          </UNDEFINED>,
           "title": "Audio document information",
         }
       }
