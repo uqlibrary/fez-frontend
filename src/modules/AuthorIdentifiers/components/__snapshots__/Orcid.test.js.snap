@@ -449,6 +449,296 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
 </StandardPage>
 `;
 
+exports[`Component Orcid  should render from window location as per example 1`] = `
+<StandardPage
+  title="Link ORCID ID to UQ eSpace"
+>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "Cancel",
+        "confirmButtonLabel": "OK",
+        "confirmationMessage": <div>
+          <p>
+            In order to proceed you will now be directed to ORCID.org website.
+          </p>
+          <p>
+            You will be redirected back after you have granted UQ access.
+          </p>
+        </div>,
+        "confirmationTitle": "ORCID Grant Access",
+      }
+    }
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="I already have an ORCID iD"
+      >
+        <WithStyles(Typography)
+          component="span"
+          gutterBottom={true}
+        >
+          This option enables you to link your existing ORCID iD to UQ.
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="contained"
+            >
+              Link your existing ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="I need an ORCID iD"
+      >
+        <WithStyles(Typography)
+          component="span"
+          gutterBottom={true}
+        >
+          <p>
+            This option enables you to create a new ORCID iD and link it with UQ.
+          </p>
+          <p>
+            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+          </p>
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="contained"
+            >
+              Create a new ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`Component Orcid  should render from window location param alternative to example 1`] = `
+<StandardPage
+  title="Link ORCID ID to UQ eSpace"
+>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "Cancel",
+        "confirmButtonLabel": "OK",
+        "confirmationMessage": <div>
+          <p>
+            In order to proceed you will now be directed to ORCID.org website.
+          </p>
+          <p>
+            You will be redirected back after you have granted UQ access.
+          </p>
+        </div>,
+        "confirmationTitle": "ORCID Grant Access",
+      }
+    }
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    />
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="I already have an ORCID iD"
+      >
+        <WithStyles(Typography)
+          component="span"
+          gutterBottom={true}
+        >
+          This option enables you to link your existing ORCID iD to UQ.
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="contained"
+            >
+              Link your existing ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        title="I need an ORCID iD"
+      >
+        <WithStyles(Typography)
+          component="span"
+          gutterBottom={true}
+        >
+          <p>
+            This option enables you to create a new ORCID iD and link it with UQ.
+          </p>
+          <p>
+            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+          </p>
+        </WithStyles(Typography)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={true}
+            />
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            sm="auto"
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={false}
+              fullWidth={true}
+              onClick={[Function]}
+              variant="contained"
+            >
+              Create a new ORCID iD
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
 exports[`Component Orcid  should render nothing if account is set, but author is null 1`] = `<div />`;
 
 exports[`Component Orcid  should render nothing if account/author is not loaded 1`] = `<div />`;
