@@ -318,7 +318,7 @@ describe('Component Orcid ', () => {
         expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
     });
 
-    it('should set query params correclty with code and state', () => {
+    it('should set query params correctly with code and state', () => {
         delete window.location;
         global.window.location = {hash: 'http://localhost:3000?code=123&state=testing'};
         const wrapper = setup({});
