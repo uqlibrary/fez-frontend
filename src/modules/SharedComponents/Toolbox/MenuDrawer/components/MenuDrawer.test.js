@@ -26,6 +26,9 @@ function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         classes: {},
+        logoText: 'test',
+        logoImage: 'test',
+        logoLink: 'test',
         menuItems: testProps.menuItems || defaultMenuItems,
         onToggleDrawer: testProps.onToggleDrawer || jest.fn(),
         history: testProps.history || {push: jest.fn()},
@@ -62,16 +65,6 @@ describe('Component MenuDrawer', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should navigate to internal route', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
-        // navigateToLink
-        wrapper.find('span.menu-item-container ListItem').forEach(listItem => {
-            listItem.props().onClick();
-            expect(testMethod).toHaveBeenCalled();
-        });
-    });
-
     it('should render CRICOS footer', () => {
         const testMethod = jest.fn();
         const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
@@ -79,11 +72,45 @@ describe('Component MenuDrawer', () => {
     });
 
     it('should call the lifecycle method of the component if props change', () => {
-        const testFunction = jest.fn();
         const wrapper = setup({drawerOpen: true, docked: true});
-        wrapper.instance().shouldComponentUpdate = testFunction;
+        const test = jest.spyOn(wrapper.instance(), 'shouldComponentUpdate');
         wrapper.setProps({docked: false});
-        expect(testFunction).toBeCalled();
+        expect(test).toBeCalled();
     });
 
+    it('should have working method for navigating to links', () => {
+        const wrapper1 = setup({});
+        const test1 = jest.spyOn(wrapper1.instance().props, 'onToggleDrawer');
+        wrapper1.instance().navigateToLink(null, undefined);
+        expect(test1).toBeCalled();
+
+        const test2 = jest.fn();
+        const wrapper2 = setup({docked: true, history: {push: test2}});
+
+        wrapper2.instance().navigateToLink('/', '');
+        expect(test2).toBeCalledWith('/');
+
+        global.open = jest.fn();
+        wrapper2.instance().navigateToLink('https://www.example.com', '');
+        expect(global.open).toBeCalledWith('https://www.example.com', '');
+    });
+
+    it('should have working method for skipping menu items', () => {
+        const wrapper = setup({});
+        const test = jest.spyOn(wrapper.instance(), 'focusOnElementId');
+        wrapper.instance().skipMenuItems();
+        expect(test).toBeCalledWith('afterMenuDrawer');
+    });
+
+    it('should have working method for focusing on given element ID', () => {
+        let test = false;
+        let dummyElement = document.createElement('div');
+        dummyElement.focus = () => {
+            test = true;
+        };
+        document.getElementById = jasmine.createSpy('HTML Element').and.returnValue(dummyElement);
+        const wrapper = setup({});
+        wrapper.instance().focusOnElementId('anything');
+        expect(test).toBe(true);
+    });
 });
