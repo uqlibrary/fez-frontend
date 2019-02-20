@@ -473,16 +473,49 @@ exports[`Journal Name Component test  should render closed access 1`] = `
           }
         }
       >
-        <OpenAccessIcon
-          embargoDate={null}
-          isOpenAccess={false}
-          openAccessStatusId={1234}
-          showEmbargoText={false}
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
+            }
+          }
         >
-          <span
-            className="noOaIcon"
-          />
-        </OpenAccessIcon>
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={false}
+            openAccessStatusId={1234}
+            showEmbargoText={false}
+          >
+            <span
+              className="noOaIcon"
+            />
+          </OpenAccessIcon>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
@@ -962,19 +995,46 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
           }
         }
       >
-        <OpenAccessIcon
-          embargoDate="2019-01-01"
-          isOpenAccess={false}
-          openAccessStatusId={453694}
-          showEmbargoText={false}
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
+            }
+          }
         >
-          <span
-            aria-label="Link (no DOI) - Open access after 2019-01-01"
-            className="fez-icon openAccessEmbargoed large"
-            role="img"
-            title="Link (no DOI) - Open access after 2019-01-01"
-          />
-        </OpenAccessIcon>
+          <OpenAccessIcon
+            embargoDate="2019-01-01"
+            isOpenAccess={false}
+            openAccessStatusId={453694}
+            showEmbargoText={false}
+          >
+            <span
+              aria-label="Link (no DOI) - Open access after 2019-01-01"
+              className="fez-icon openAccessEmbargoed large"
+              role="img"
+              title="Link (no DOI) - Open access after 2019-01-01"
+            />
+          </OpenAccessIcon>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
@@ -1454,24 +1514,63 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
           }
         }
       >
-        <OpenAccessIcon
-          embargoDate="2019-01-01"
-          isOpenAccess={false}
-          openAccessStatusId={453694}
-          showEmbargoText={true}
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
+            }
+          }
         >
-          <span
-            className="is-hidden-mobile is-hidden-tablet-only"
+          <OpenAccessIcon
+            embargoDate="2019-01-01"
+            isOpenAccess={false}
+            openAccessStatusId={453694}
+            showEmbargoText={true}
           >
-            Open access after 2019-01-01 
-          </span>
-          <span
-            aria-label="Link (no DOI) - Open access after 2019-01-01"
-            className="fez-icon openAccessEmbargoed large"
-            role="img"
-            title="Link (no DOI) - Open access after 2019-01-01"
-          />
-        </OpenAccessIcon>
+            <span
+              className="is-hidden-mobile is-hidden-tablet-only"
+            >
+              Open access after 2019-01-01 
+            </span>
+            <span
+              aria-label="Link (no DOI) - Open access after 2019-01-01"
+              className="fez-icon openAccessEmbargoed large"
+              role="img"
+              title="Link (no DOI) - Open access after 2019-01-01"
+            />
+          </OpenAccessIcon>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
@@ -1951,19 +2050,34 @@ exports[`Journal Name Component test  should render open access 1`] = `
           }
         }
       >
-        <OpenAccessIcon
-          embargoDate={null}
-          isOpenAccess={true}
-          openAccessStatusId={1234}
-          showEmbargoText={false}
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
+            }
+          }
         >
-          <span
-            aria-label="Open Access - undefined - Free to read"
-            className="fez-icon openAccess large"
-            role="img"
-            title="Open Access - undefined - Free to read"
-          />
-        </OpenAccessIcon>
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={1234}
+            showEmbargoText={false}
+          >
+            <span
+              aria-label="Open Access - undefined - Free to read"
+              className="fez-icon openAccess large"
+              role="img"
+              title="Open Access - undefined - Free to read"
+            />
+          </OpenAccessIcon>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
@@ -2443,19 +2557,40 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
           }
         }
       >
-        <OpenAccessIcon
-          embargoDate={null}
-          isOpenAccess={true}
-          openAccessStatusId={453694}
-          showEmbargoText={false}
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
+            }
+          }
         >
-          <span
-            aria-label="Open Access - Free to read"
-            className="fez-icon openAccess large"
-            role="img"
-            title="Open Access - Free to read"
-          />
-        </OpenAccessIcon>
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453694}
+            showEmbargoText={false}
+          >
+            <span
+              aria-label="Open Access - Free to read"
+              className="fez-icon openAccess large"
+              role="img"
+              title="Open Access - Free to read"
+            />
+          </OpenAccessIcon>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
