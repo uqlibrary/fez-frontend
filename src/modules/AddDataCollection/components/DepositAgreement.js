@@ -10,7 +10,7 @@ export class DepositAgreement extends PureComponent {
         isDepositAgreementAccepted: PropTypes.bool,
         onChange: PropTypes.func,
         classes: PropTypes.object,
-        depositAgreement: PropTypes.string,
+        depositAgreement: PropTypes.node,
         disabled: PropTypes.bool
     };
 

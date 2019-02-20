@@ -490,21 +490,21 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
           }
         }
       >
-        <WithStyles(Thumbnail)
-          mediaUrl="/test/mediaUrl"
-          mimeType="image/jpeg"
-          onClick={[MockFunction]}
-          previewMediaUrl="/test/preview/mediaUrl"
-          thumbnailFileName="thumbnail.jpg"
-          thumbnailMediaUrl="/test/thumbnail/mediaUrl"
-        >
-          <Thumbnail
-            classes={
-              Object {
-                "brokenImage": "Thumbnail-brokenImage-4",
-                "image": "Thumbnail-image-3",
-              }
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
             }
+          }
+        >
+          <WithStyles(Thumbnail)
             mediaUrl="/test/mediaUrl"
             mimeType="image/jpeg"
             onClick={[MockFunction]}
@@ -512,20 +512,35 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
             thumbnailFileName="thumbnail.jpg"
             thumbnailMediaUrl="/test/thumbnail/mediaUrl"
           >
-            <a
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              title="Click to open a preview of /test/mediaUrl"
+            <Thumbnail
+              classes={
+                Object {
+                  "brokenImage": "Thumbnail-brokenImage-4",
+                  "image": "Thumbnail-image-3",
+                }
+              }
+              mediaUrl="/test/mediaUrl"
+              mimeType="image/jpeg"
+              onClick={[MockFunction]}
+              previewMediaUrl="/test/preview/mediaUrl"
+              thumbnailFileName="thumbnail.jpg"
+              thumbnailMediaUrl="/test/thumbnail/mediaUrl"
             >
-              <img
-                alt="thumbnail.jpg"
-                className="Thumbnail-image-3"
-                onError={[Function]}
-                src="/test/thumbnail/mediaUrl"
-              />
-            </a>
-          </Thumbnail>
-        </WithStyles(Thumbnail)>
+              <a
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                title="Click to open a preview of /test/mediaUrl"
+              >
+                <img
+                  alt="thumbnail.jpg"
+                  className="Thumbnail-image-3"
+                  onError={[Function]}
+                  src="/test/thumbnail/mediaUrl"
+                />
+              </a>
+            </Thumbnail>
+          </WithStyles(Thumbnail)>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
@@ -1005,21 +1020,27 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
           }
         }
       >
-        <WithStyles(Thumbnail)
-          mediaUrl="/test/mediaUrl"
-          mimeType="image/jpeg"
-          onClick={[MockFunction]}
-          previewMediaUrl="/test/preview/mediaUrl"
-          thumbnailFileName="thumbnail.jpg"
-          thumbnailMediaUrl="/test/thumbnail/mediaUrl"
-        >
-          <Thumbnail
-            classes={
-              Object {
-                "brokenImage": "Thumbnail-brokenImage-4",
-                "image": "Thumbnail-image-3",
-              }
+        <MuiPickersUtilsProvider
+          utils={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
+              ],
             }
+          }
+        >
+          <WithStyles(Thumbnail)
             mediaUrl="/test/mediaUrl"
             mimeType="image/jpeg"
             onClick={[MockFunction]}
@@ -1027,20 +1048,35 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
             thumbnailFileName="thumbnail.jpg"
             thumbnailMediaUrl="/test/thumbnail/mediaUrl"
           >
-            <a
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              title="Click to open a preview of /test/mediaUrl"
+            <Thumbnail
+              classes={
+                Object {
+                  "brokenImage": "Thumbnail-brokenImage-4",
+                  "image": "Thumbnail-image-3",
+                }
+              }
+              mediaUrl="/test/mediaUrl"
+              mimeType="image/jpeg"
+              onClick={[MockFunction]}
+              previewMediaUrl="/test/preview/mediaUrl"
+              thumbnailFileName="thumbnail.jpg"
+              thumbnailMediaUrl="/test/thumbnail/mediaUrl"
             >
-              <img
-                alt="thumbnail.jpg"
-                className="Thumbnail-image-3"
-                onError={[Function]}
-                src="/test/thumbnail/mediaUrl"
-              />
-            </a>
-          </Thumbnail>
-        </WithStyles(Thumbnail)>
+              <a
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                title="Click to open a preview of /test/mediaUrl"
+              >
+                <img
+                  alt="thumbnail.jpg"
+                  className="Thumbnail-image-3"
+                  onError={[Function]}
+                  src="/test/thumbnail/mediaUrl"
+                />
+              </a>
+            </Thumbnail>
+          </WithStyles(Thumbnail)>
+        </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
