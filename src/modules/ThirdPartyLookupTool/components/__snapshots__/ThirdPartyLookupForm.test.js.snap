@@ -91,7 +91,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
         </WithStyles(Grid)>
       </WithStyles(Grid)>
       <p>
-        View raw output we receive from Incites via their API
+        tip 1
       </p>
       <form>
         <div>
@@ -120,6 +120,182 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
           variant="contained"
         >
           Submit to Incites
+        </WithStyles(Button)>
+      </form>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      noHeader={true}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        >
+          <WithStyles(Typography)
+            variant="headline"
+          >
+            Test Lookup Action Fired
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(IconButton)
+            onClick={[Function]}
+            tooltip="Hide form for Test Lookup Action Fired"
+          >
+            <pure(KeyboardArrowUpIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <p>
+        Tip 3
+      </p>
+      <form>
+        <div>
+          <h4>
+            PF 1
+          </h4>
+          <p />
+          <TextField
+            aria-label=""
+            className="primaryValue"
+            fullWidth={true}
+            name="primaryValue"
+            onChange={[Function]}
+            placeholder=""
+            required={true}
+            select={false}
+            value="blah"
+            variant="standard"
+          />
+        </div>
+        <p />
+        <WithStyles(Button)
+          aria-label="Submit 1"
+          color="primary"
+          onClick={[Function]}
+          variant="contained"
+        >
+          Submit 1
+        </WithStyles(Button)>
+      </form>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupForm should fire the lookup action when there is a secondary field 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      noHeader={true}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        >
+          <WithStyles(Typography)
+            variant="headline"
+          >
+            Test Lookup Action Fired7
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(IconButton)
+            onClick={[Function]}
+            tooltip="Hide form for Test Lookup Action Fired7"
+          >
+            <pure(KeyboardArrowUpIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <p>
+        Tip 7
+      </p>
+      <form>
+        <div>
+          <h4>
+            PF 7
+          </h4>
+          <p />
+          <TextField
+            aria-label=""
+            className="primaryValue"
+            fullWidth={true}
+            name="primaryValue"
+            onChange={[Function]}
+            placeholder=""
+            required={true}
+            select={false}
+            value="blah"
+            variant="standard"
+          />
+        </div>
+        <div>
+          <h4>
+            SF 7
+          </h4>
+          <p />
+          <TextField
+            aria-label=""
+            className="secondaryValue"
+            fullWidth={true}
+            name="secondaryValue"
+            onChange={[Function]}
+            placeholder=""
+            required={false}
+            select={false}
+            value="blah"
+            variant="standard"
+          />
+        </div>
+        <p />
+        <WithStyles(Button)
+          aria-label="Submit 7"
+          color="primary"
+          onClick={[Function]}
+          variant="contained"
+        >
+          Submit 7
         </WithStyles(Button)>
       </form>
     </StandardCard>
@@ -267,7 +443,7 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
         </WithStyles(Grid)>
       </WithStyles(Grid)>
       <p>
-        View raw output we receive from Incites via their API
+        Tip 2
       </p>
       <form>
         <div>
@@ -304,6 +480,54 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
 `;
 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      noHeader={true}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        >
+          <WithStyles(Typography)
+            variant="headline"
+          >
+            Incites
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(IconButton)
+            onClick={[Function]}
+            tooltip="Show form for Incites"
+          >
+            <pure(KeyboardArrowDownIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <p />
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
 <WithStyles(Grid)
   container={true}
   spacing={24}
@@ -400,7 +624,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
 </WithStyles(Grid)>
 `;
 
-exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
+exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] = `
 <WithStyles(Grid)
   container={true}
   spacing={24}
@@ -443,6 +667,202 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
         </WithStyles(Grid)>
       </WithStyles(Grid)>
       <p />
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupForm should use defaults when locale values are not provided 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      noHeader={true}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        >
+          <WithStyles(Typography)
+            variant="headline"
+          >
+            this form
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(IconButton)
+            onClick={[Function]}
+            tooltip="Hide form for this form"
+          >
+            <pure(KeyboardArrowUpIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <p />
+      <form>
+        <div>
+          <h4>
+            PF3
+          </h4>
+          <p />
+          <TextField
+            aria-label=""
+            className="primaryValue"
+            fullWidth={true}
+            name="primaryValue"
+            onChange={[Function]}
+            placeholder=""
+            required={true}
+            select={false}
+            value=""
+            variant="standard"
+          />
+        </div>
+        <div>
+          <h4>
+            SF3
+          </h4>
+          <p />
+          <TextField
+            aria-label=""
+            className="secondaryValue"
+            fullWidth={true}
+            name="secondaryValue"
+            onChange={[Function]}
+            placeholder=""
+            required={false}
+            select={false}
+            value=""
+            variant="standard"
+          />
+        </div>
+        <p>
+          test bottom tip
+        </p>
+        <WithStyles(Button)
+          aria-label="Submit"
+          color="primary"
+          onClick={[Function]}
+          variant="contained"
+        >
+          Submit
+        </WithStyles(Button)>
+      </form>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupForm should use locale values when provided 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      noHeader={true}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "width": 1,
+            }
+          }
+        >
+          <WithStyles(Typography)
+            variant="headline"
+          >
+            this form
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(IconButton)
+            onClick={[Function]}
+            tooltip="Hide form for this form"
+          >
+            <pure(KeyboardArrowUpIcon) />
+          </WithStyles(IconButton)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <p />
+      <form>
+        <div>
+          <h4>
+            PF 2
+          </h4>
+          <p>
+            Tip 2p
+          </p>
+          <TextField
+            aria-label="aria pf2"
+            className="primaryValue"
+            fullWidth={true}
+            name="primaryValue"
+            onChange={[Function]}
+            placeholder="placeholder 2p"
+            required={true}
+            select={false}
+            value=""
+            variant="standard"
+          />
+        </div>
+        <div>
+          <h4>
+            SF2
+          </h4>
+          <p>
+            tip 2S
+          </p>
+          <TextField
+            aria-label="aria sf2"
+            className="secondaryValue"
+            fullWidth={true}
+            name="secondaryValue"
+            onChange={[Function]}
+            placeholder="placeholder 2s"
+            required={false}
+            select={false}
+            value=""
+            variant="standard"
+          />
+        </div>
+        <p />
+        <WithStyles(Button)
+          aria-label="Submit2"
+          color="primary"
+          onClick={[Function]}
+          variant="contained"
+        >
+          Submit2
+        </WithStyles(Button)>
+      </form>
     </StandardCard>
   </WithStyles(Grid)>
 </WithStyles(Grid)>

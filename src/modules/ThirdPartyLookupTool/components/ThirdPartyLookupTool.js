@@ -48,11 +48,6 @@ export class ThirdPartyLookupTool extends PureComponent {
 
     render() {
         const localeContent = locale.components.thirdPartyLookupTools;
-        // console.log('1');
-        // console.log(localeContent);
-        // delete localeContent.forms; // cleanup so we dont pass the forms values twice / dont give the form access to a non-current form...
-        // console.log('2');
-        // console.log(localeContent);
         return (
             <StandardPage title={localeContent.title}>
                 {
@@ -68,6 +63,7 @@ export class ThirdPartyLookupTool extends PureComponent {
                         localeform={locale.components.thirdPartyLookupTools.forms.incites}
                         primaryValue={this.state.primaryValue}
                         secondaryValue={this.state.secondaryValue}
+                        locale={localeContent}
                     />
                 }
 

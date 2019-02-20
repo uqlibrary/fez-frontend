@@ -1,6 +1,5 @@
 import React, {Fragment, PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
@@ -14,6 +13,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
         primaryValue: PropTypes.string.isRequired,
         secondaryValue: PropTypes.string,
         localeform: PropTypes.object.isRequired,
+        locale: PropTypes.object.isRequired
     };
 
     static defaultProps = {
@@ -28,7 +28,6 @@ export class ThirdPartyLookupFormResult extends PureComponent {
 
     render() {
         const txt = {
-            tools: locale.components.thirdPartyLookupTools,
             thisForm: this.props.localeform,
         };
         return (
@@ -41,7 +40,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
                             !!txt.thisForm.secondaryField && !!txt.thisForm.secondaryField.reportInOutput && this.props.secondaryValue &&
                             <p>{txt.thisForm.secondaryField.heading} - {this.props.secondaryValue}</p>
                         }
-                        <StandardCard title={txt.tools.resultsLabel ? txt.tools.resultsLabel : 'Results'}>
+                        <StandardCard title={this.props.locale.resultsLabel ? this.props.locale.resultsLabel : 'Results'}>
                             {
                                 this.props.lookupResults.length > 0 &&
                                 <Fragment>
@@ -54,13 +53,13 @@ export class ThirdPartyLookupFormResult extends PureComponent {
                                 this.props.lookupResults.length === 0 &&
                                 <Grid item xs={12}>
                                     <StandardCard>
-                                        {txt.tools.noResultsFound.text ? txt.tools.noResultsFound.text : 'No results found'}
+                                        {this.props.locale.noResultsFound && this.props.locale.noResultsFound.text ? this.props.locale.noResultsFound.text : 'No results found'}
                                     </StandardCard>
                                 </Grid>
                             }
                         </StandardCard>
                         <Button
-                            children= {txt.tools.clearButtonLabel ? txt.tools.clearButtonLabel : 'New Search'}
+                            children= {this.props.locale.clearButtonLabel ? this.props.locale.clearButtonLabel : 'New Search'}
                             variant="contained"
                             color={'primary'}
                             onClick={() => this._handleClear()}
