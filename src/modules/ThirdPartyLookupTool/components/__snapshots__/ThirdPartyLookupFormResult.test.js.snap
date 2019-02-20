@@ -55,10 +55,10 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
     xs={12}
   >
     <StandardCard
-      title="Incites"
+      title="label 9"
     >
       <p>
-        UTs
+        pf heading 9
          - 
         dummy UT
       </p>
@@ -90,7 +90,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
 </WithStyles(Grid)>
 `;
 
-exports[`Component ThirdPartyLookupFormResult should display the secondary field when required 1`] = `
+exports[`Component ThirdPartyLookupFormResult should display a blank when the response is blank 1`] = `
 <WithStyles(Grid)
   container={true}
   spacing={24}
@@ -107,8 +107,54 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
          - 
         dummy UT
       </p>
+      <StandardCard
+        title="Results"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <StandardCard>
+            No results found
+          </StandardCard>
+        </WithStyles(Grid)>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupFormResult should display the secondary field when required 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="label 10"
+    >
       <p>
-        API Key
+        pf heading 10
+         - 
+        dummy UT
+      </p>
+      <p>
+        sf heading 10
          - 
         123456789
       </p>
@@ -141,6 +187,97 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
 `;
 
 exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="label 8"
+    >
+      <p>
+        PF 8
+         - 
+        dummy UT
+      </p>
+      <StandardCard
+        title="Results"
+      >
+        <pre>
+          [
+  {
+    "IS_INTERNATIONAL_COLLAB": "0"
+  }
+]
+        </pre>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupFormResult should show locale-defined message when no results 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={24}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Incites"
+    >
+      <p>
+        UTs
+         - 
+        dummy UT
+      </p>
+      <StandardCard
+        title="Results"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <StandardCard>
+            No results found
+          </StandardCard>
+        </WithStyles(Grid)>
+      </StandardCard>
+      <WithStyles(Button)
+        color="primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+        variant="contained"
+      >
+        New Search
+      </WithStyles(Button)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ThirdPartyLookupFormResult should use defaults when locale values are not provided 1`] = `
 <WithStyles(Grid)
   container={true}
   spacing={24}

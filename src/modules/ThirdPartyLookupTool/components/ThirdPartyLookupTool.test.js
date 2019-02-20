@@ -3,8 +3,8 @@ import {routes} from "../../../../config";
 
 function setup(testProps, isShallow = true) {
     const props = {
-        classes: {},
         ...testProps,
+        actions: testProps.actions || {},
     };
     return getElement(ThirdPartyLookupTool, props, isShallow);
 }
@@ -42,7 +42,7 @@ describe('Component ThirdPartyLookupTool', () => {
 
     it('renders a results screen', () => {
         const testprops = {
-                lookupResults: 'blah blah blah'
+            lookupResults: ['blah blah blah']
         };
         const wrapper = setup(testprops);
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -25,7 +25,6 @@ export class ThirdPartyLookupForm extends PureComponent {
     };
 
     constructor(props) {
-        // console.log('ThirdPartyLookupForm');
         super(props);
         this.state = {
             isMinimised: props.isMinimised,
@@ -55,10 +54,10 @@ export class ThirdPartyLookupForm extends PureComponent {
     };
 
     // update state for the form fields on input
-    _onChange = (e) => {
-        if (typeof e !== 'undefined') {
-            this.setState({[e.target.name]: e.target.value});
-        }
+    _onChange = (event) => {
+        // if (typeof event !== 'undefined') {
+        this.setState({[event.target.name]: event.target.value});
+        // }
     };
 
     render() {
