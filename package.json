@@ -236,6 +236,7 @@
     "collectCoverageFrom": [
       "src/modules/**/*.{js,jsx}",
       "!src/**/index.js",
+      "!src/**/containers/*.{js,jsx}",
       "src/modules/Index/*.{js,jsx}",
       "src/actions/*.{js,jsx}",
       "src/middleware/*.{js,jsx}",
