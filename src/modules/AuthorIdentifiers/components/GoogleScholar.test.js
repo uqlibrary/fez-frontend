@@ -1,6 +1,8 @@
 import GoogleScholar from './GoogleScholar';
 import {currentAuthor} from 'mock/data/account';
 
+jest.mock('redux-form/immutable');
+
 function setup(testProps, isShallow = true) {
     const props = {
         "array": {
@@ -140,5 +142,27 @@ describe('Component GoogleScholar ', () => {
         const wrapper = setup({});
         wrapper.instance().componentWillUnmount();
         expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
+    });
+
+   it('should handle keyboard form submit event', () => {
+        const handleSubmitFn = jest.fn();
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data,
+            handleSubmit: handleSubmitFn
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.find('form').simulate('keyDown', {key: 'Enter'});
+        expect(handleSubmitFn).toHaveBeenCalled();
+    });
+
+    it('should get correct alert message', () => {
+        const wrapper = setup({});
+        const alert1 = wrapper.instance().getAlert({});
+        expect(alert1).toBeNull();
+        const alert2 = wrapper.instance().getAlert({
+            submitFailed: true,
+            error: 'test'
+        });
+        console.log(alert2);
     });
 });
