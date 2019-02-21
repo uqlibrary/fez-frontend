@@ -274,11 +274,22 @@ export default {
             }
         },
         thirdPartyLookupTools: {
-            title: 'Lookup Tools - view raw output from APIs',
-            loadingMessage: 'Loading',
-            forms: {
-                incites: {
-                    lookupType: 'incites', // this value should match the 'type' in the path used in api
+            display: {
+                title: 'Lookup Tools - view raw output from APIs',
+                loadingMessage: 'Loading',
+                tooltip: {
+                    show: 'Show form for',
+                    hide: 'Hide form for'
+                },
+                resultsLabel: 'Results',
+                noResultsFound: {
+                    text: 'No results found'
+                },
+                clearButtonLabel: 'New Search'
+            },
+            forms: [
+                {
+                    apiType: 'incites', // this value should match the 'type' in the path used in api
                     lookupLabel: 'Incites',
                     primaryField: {
                         heading: 'UTs',
@@ -295,17 +306,9 @@ export default {
                     },
                     bottomTip: '',
                     submitButtonLabel: 'Submit to Incites',
-                },
-            },
-            tooltip: {
-                show: 'Show form for',
-                hide: 'Hide form for'
-            },
-            resultsLabel: 'Results',
-            noResultsFound: {
-                text: 'No results found'
-            },
-            clearButtonLabel: 'New Search'
+                    isMinimised: false // set this to false when we have more than one form
+                }
+            ],
         },
         typeOfDataForm: {
             field: {

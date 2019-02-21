@@ -12,7 +12,8 @@ export class ThirdPartyLookupFormResult extends PureComponent {
         lookupResults: PropTypes.array,
         primaryValue: PropTypes.string.isRequired,
         secondaryValue: PropTypes.string,
-        localeform: PropTypes.object.isRequired,
+        formDisplay: PropTypes.object,
+        // localeform: PropTypes.object.isRequired,
         locale: PropTypes.object.isRequired
     };
 
@@ -27,18 +28,19 @@ export class ThirdPartyLookupFormResult extends PureComponent {
     };
 
     render() {
+        // console.log(this.props.formDisplay);
         const txt = {
-            thisForm: this.props.localeform,
+            thisForm: this.props.formDisplay,
         };
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.thisForm.lookupLabel}>
-                        <p>{txt.thisForm.primaryField.heading} - {this.props.primaryValue}</p>
+                        <p>{txt.thisForm.primaryFieldHeading} - {this.props.primaryValue}</p>
                         {
                             // not all forms will have a second field; some of them shouldn't be reported
-                            !!txt.thisForm.secondaryField && !!txt.thisForm.secondaryField.reportInOutput && this.props.secondaryValue &&
-                            <p>{txt.thisForm.secondaryField.heading} - {this.props.secondaryValue}</p>
+                            !!txt.thisForm.secondaryFieldHeading && !!txt.thisForm.reportSecondaryFieldInOutput && this.props.secondaryValue &&
+                            <p>{txt.thisForm.secondaryFieldHeading} - {this.props.secondaryValue}</p>
                         }
                         <StandardCard title={this.props.locale.resultsLabel ? this.props.locale.resultsLabel : 'Results'}>
                             {

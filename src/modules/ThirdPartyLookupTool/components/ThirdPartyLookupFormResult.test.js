@@ -8,9 +8,27 @@ function setup(testProps, isShallow = true) {
         lookupResults: testProps.lookupResults || [{"IS_INTERNATIONAL_COLLAB":"0"}],
         primaryValue: testProps.primaryValue || "dummy UT",
         secondaryValue: testProps.secondaryValue || "123456789",
-        localeform: testProps.localeform || locale.components.thirdPartyLookupTools.forms.incites,
+        formDisplay: testProps.formDisplay || {
+            apiType: 'apiType',
+            lookupLabel: 'Test Form',
+            primaryFieldHeading: 'primary heading',
+            secondaryFieldHeading: 'secondary heading',
+        },
         actions: testProps.actions || {},
-        locale: testProps.locale || locale.components.thirdPartyLookupTools
+        locale: testProps.locale || {
+            title: 'Test Tool Display',
+            loadingMessage: 'Loading test Form',
+            tooltip: {
+                show: 'Show test form for',
+                hide: 'Hide test form for'
+
+            },
+            resultsLabel: 'Test Results',
+            noResultsFound: {
+                text: 'No test results found'
+            },
+            clearButtonLabel: 'New Test Search'
+        }
     };
     return getElement(ThirdPartyLookupFormResult, props, isShallow);
 }
@@ -55,38 +73,40 @@ describe('Component ThirdPartyLookupFormResult', () => {
     });
 
     it('should display the secondary field when required', () => {
-        const testProps = {localeform: {
-            lookupLabel: 'label 10',
-            primaryField: {
-                heading: 'pf heading 10',
-            },
-            secondaryField: {
-                heading: 'sf heading 10',
-                reportInOutput: true,  // <---- value defines point of test
+        const testProps = {
+            formDisplay: {
+                apiType: 'type 10',
+                lookupLabel: 'label 10',
+                primaryFieldHeading: 'pf heading 10',
+                secondaryFieldHeading: 'sf heading 10',
+                reportSecondaryFieldInOutput: true,  // <---- value defines point of test
             }
-        }};
+        };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders api data when no second field provided', () => {
-        const testProps = {localeform: {
+        const testProps = {
+            formDisplay: {
+                apiType: 'apiType 9',
                 lookupLabel: 'label 9',
-                primaryField: {
-                    heading: 'pf heading 9',
-                },
-            }};
+                primaryFieldHeading: 'pf heading 9',
+            }
+        };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not display the secondary field if reportInOutput is not specifically turned on', () => {
-        const testProps = {localeform: {
+        const testProps = {
+            formDisplay: {
+                apiType: 'apiType 8',
                 lookupLabel: 'label 8',
-                primaryField: {
-                    heading: 'PF 8',
-                },
-            }};
+                primaryFieldHeading: 'PF 8',
+                secondaryFieldHeading: 'SF 8',
+            }
+        };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });

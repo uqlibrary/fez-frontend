@@ -1,50 +1,25 @@
-import {ThirdPartyLookupTool} from './ThirdPartyLookupTool';
 import {routes} from "../../../../config";
-
-function setup(testProps, isShallow = true) {
-    const props = {
-        ...testProps,
-        actions: testProps.actions || {},
-    };
-    return getElement(ThirdPartyLookupTool, props, isShallow);
-}
+import {locale} from 'locale';
+import React from "react";
 
 describe('Component ThirdPartyLookupTool', () => {
-    it('should render a form ready for input', () => {
-        const wrapper = setup({});
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    it('have a valid set of live form data in components.js', () => {
+        // these fields must be in the locale for thirdPartyLookupTools
+        expect(locale.components.thirdPartyLookupTools.display).toHaveProperty('title');
+        expect(locale.components.thirdPartyLookupTools.display.title).not.toEqual('');
+        expect(locale.components.thirdPartyLookupTools.display).toHaveProperty('loadingMessage');
+        expect(locale.components.thirdPartyLookupTools.display.loadingMessage).not.toEqual('');
 
-    it('should set state with submitted data', () => {
-        // const testAction = jest.fn();
-        // const wrapper = setup({actions: {loadThirdPartyLookup: testAction}});
-        const wrapper = setup({actions: {}});
-
-        expect(wrapper.state().primaryValue).toEqual('');
-        expect(wrapper.state().secondaryValue).toEqual('');
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance().recordInputs('a value', 'another value');
-        wrapper.update();
-
-        expect(wrapper.state().primaryValue).toEqual('a value');
-        expect(wrapper.state().secondaryValue).toEqual('another value');
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('renders loading screen while loading data', () => {
-        const wrapper = setup({ loadingResults: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('renders a results screen', () => {
-        const testprops = {
-            lookupResults: ['blah blah blah']
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(locale.components.thirdPartyLookupTools.forms.length).toBeGreaterThan(0);
+        locale.components.thirdPartyLookupTools.forms.map((form, index) => {
+            expect(form).toHaveProperty('apiType');
+            expect(form).toHaveProperty('lookupLabel');
+            expect(form).toHaveProperty('primaryField.heading');
+            if (!!form.secondaryField) {
+                // if they include a secondary field then it must have a heading
+                expect(form).toHaveProperty('secondaryField.heading');
+            }
+            expect(form).toHaveProperty('isMinimised');
+        });
     });
 });

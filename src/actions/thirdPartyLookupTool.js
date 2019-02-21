@@ -25,7 +25,7 @@ export function getThirdPartyLookupApiUrl(type, field1, field2) {
  * @param field2
  * @returns {function(*): (*|void|Promise<T | never>)}
  */
-export function loadThirdPartyLookup(type, field1, field2) {
+export function loadThirdPartyResults(type, field1, field2) {
     return dispatch => {
         dispatch({type: actions.THIRD_PARTY_LOOKUP_TOOL_LOADING});
 
