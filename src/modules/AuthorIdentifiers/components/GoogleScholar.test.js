@@ -159,10 +159,10 @@ describe('Component GoogleScholar ', () => {
         const wrapper = setup({});
         const alert1 = wrapper.instance().getAlert({});
         expect(alert1).toBeNull();
-        const alert2 = wrapper.instance().getAlert({
+        const Alert = wrapper.instance().getAlert({
             submitFailed: true,
             error: 'test'
         });
-        console.log(alert2);
+        expect(Alert.props.message).toEqual('test');
     });
 });
