@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import {withStyles} from '@material-ui/core/styles';
 
+/* istanbul ignore next */
 const styles = (theme) => ({
     blueButton: {
         backgroundColor: theme.palette.accent.main,
