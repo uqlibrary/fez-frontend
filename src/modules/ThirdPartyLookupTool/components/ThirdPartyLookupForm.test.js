@@ -1,11 +1,19 @@
 import {ThirdPartyLookupForm} from './ThirdPartyLookupForm';
 import {locale} from 'locale';
-//import PropTypes from "prop-types";
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        localeform: testProps.localeform || locale.components.thirdPartyLookupTools.forms.incites,
+        localeform: testProps.localeform || {
+            apiType: 'apiType',
+            lookupLabel: 'Test Form',
+            primaryField: {
+                heading: 'UTs',
+            },
+            secondaryField: {
+                heading: 'API Key',
+            },
+        },
         sendInputsToResultComponent: testProps.sendInputsToResultComponent || jest.fn(),
         actions: testProps.actions || {},
         locale: testProps.locale || {} // locale.components.thirdPartyLookupTools,
@@ -33,7 +41,7 @@ describe('Component ThirdPartyLookupForm', () => {
         const props = {
             isMinimised: false,
             localeform: {
-                lookupType: 'incites',
+                apiType: 'incites',
                 lookupLabel: 'Incites',
                 tip: 'tip 1',
                 primaryField: {
@@ -68,7 +76,7 @@ describe('Component ThirdPartyLookupForm', () => {
         });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({isMinimised: false, primaryValue: 'blah',secondaryValue: 'blah'});
+        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: 'blah',secondaryValue: 'blah'});
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -85,7 +93,7 @@ describe('Component ThirdPartyLookupForm', () => {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
             localeform: {
-                lookupType: 'incites',
+                apiType: 'incites',
                 lookupLabel: 'Incites',
                 tip: 'Tip 2',
                 primaryField: {
@@ -106,7 +114,7 @@ describe('Component ThirdPartyLookupForm', () => {
         primaryField.simulate('change', {target: {name: 'primaryValue', value: 'blah'}});
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({isMinimised: false, primaryValue: 'blah', secondaryValue: ''});
+        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: 'blah', secondaryValue: ''});
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -117,9 +125,7 @@ describe('Component ThirdPartyLookupForm', () => {
     });
 
     it('should toggle nested items on click', () => {
-        const wrapper = setup({
-            // localeform: locale.components.thirdPartyLookupTools.forms.incites
-        });
+        const wrapper = setup({});
 
         expect(toJson(wrapper)).toMatchSnapshot(); // starts minimised by default
 
@@ -148,7 +154,7 @@ describe('Component ThirdPartyLookupForm', () => {
         expect(button.length).toEqual(1);
         button.simulate('click');
 
-        expect(wrapper.state()).toEqual({isMinimised: false, primaryValue: '',secondaryValue: ''});
+        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: '',secondaryValue: ''});
         expect(submitMock).not.toHaveBeenCalled();
     });
 
@@ -173,10 +179,10 @@ describe('Component ThirdPartyLookupForm', () => {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
             actions: {
-                loadThirdPartyLookup: testMethod
+                loadThirdPartyResults: testMethod
             },
             localeform: {
-                lookupType: 'fire1',
+                apiType: 'fire1',
                 lookupLabel: 'Test Lookup Action Fired',
                 tip: 'Tip 3',
                 primaryField: {
@@ -208,10 +214,10 @@ describe('Component ThirdPartyLookupForm', () => {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
             actions: {
-                loadThirdPartyLookup: testMethod
+                loadThirdPartyResults: testMethod
             },
             localeform: {
-                lookupType: 'fire7',
+                apiType: 'fire7',
                 lookupLabel: 'Test Lookup Action Fired7',
                 tip: 'Tip 7',
                 primaryField: {
@@ -233,7 +239,7 @@ describe('Component ThirdPartyLookupForm', () => {
         });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({isMinimised: false, primaryValue: 'blah',secondaryValue: 'blah'});
+        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: 'blah',secondaryValue: 'blah'});
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -247,7 +253,7 @@ describe('Component ThirdPartyLookupForm', () => {
         const testProps = {
             locale: {},
             localeform: {
-                lookupType: 'provided1',
+                apiType: 'provided1',
                 primaryField: {
                     heading: 'PF 2',
                     fromAria: 'aria pf2',
@@ -273,7 +279,7 @@ describe('Component ThirdPartyLookupForm', () => {
         const testProps = {
             // locale: {},
             localeform: {
-                lookupType: 'dummytest',
+                apiType: 'dummytest',
                 primaryField: {
                     heading: 'PF3',
                 },

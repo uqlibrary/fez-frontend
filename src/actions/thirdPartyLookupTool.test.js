@@ -45,7 +45,7 @@ describe('Lookup action creators', () => {
             actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'dummyUT'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -59,7 +59,7 @@ describe('Lookup action creators', () => {
             actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'missing UTs'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyResults('incites', 'missing UTs'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -73,7 +73,7 @@ describe('Lookup action creators', () => {
             actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED
         ];
 
-        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'dummyUT'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -87,7 +87,7 @@ describe('Lookup action creators', () => {
             actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED
         ];
 
-        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyLookup('incites', 'dummyUT'));
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT'));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

@@ -28,7 +28,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
           <WithStyles(Typography)
             variant="headline"
           >
-            Incites
+            Test Form
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -36,13 +36,12 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Show form for Incites"
+            tooltip="Show form for Test Form"
           >
             <pure(KeyboardArrowDownIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
     </StandardCard>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -90,10 +89,10 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p>
-        tip 1
-      </p>
       <form>
+        <p>
+          tip 1
+        </p>
         <div>
           <h4>
             UTs
@@ -169,10 +168,10 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p>
-        Tip 3
-      </p>
       <form>
+        <p>
+          Tip 3
+        </p>
         <div>
           <h4>
             PF 1
@@ -248,10 +247,10 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p>
-        Tip 7
-      </p>
       <form>
+        <p>
+          Tip 7
+        </p>
         <div>
           <h4>
             PF 7
@@ -331,7 +330,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
           <WithStyles(Typography)
             variant="headline"
           >
-            Incites
+            Test Form
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -339,14 +338,14 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Hide form for Incites"
+            tooltip="Hide form for Test Form"
           >
             <pure(KeyboardArrowUpIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
       <form>
+        <p />
         <div>
           <h4>
             UTs
@@ -358,7 +357,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             fullWidth={true}
             name="primaryValue"
             onChange={[Function]}
-            placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
+            placeholder=""
             required={true}
             select={false}
             value=""
@@ -369,16 +368,14 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
           <h4>
             API Key
           </h4>
-          <p>
-            Optional, a default key is provided. Limit: 1,000 queries per day
-          </p>
+          <p />
           <TextField
             aria-label=""
             className="secondaryValue"
             fullWidth={true}
             name="secondaryValue"
             onChange={[Function]}
-            placeholder="Enter API key"
+            placeholder=""
             required={false}
             select={false}
             value=""
@@ -387,12 +384,12 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
         </div>
         <p />
         <WithStyles(Button)
-          aria-label="Submit to Incites"
+          aria-label="Submit"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
-          Submit to Incites
+          Submit
         </WithStyles(Button)>
       </form>
     </StandardCard>
@@ -442,10 +439,10 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p>
-        Tip 2
-      </p>
       <form>
+        <p>
+          Tip 2
+        </p>
         <div>
           <h4>
             UTs
@@ -507,7 +504,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
           <WithStyles(Typography)
             variant="headline"
           >
-            Incites
+            Test Form
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -515,13 +512,12 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Show form for Incites"
+            tooltip="Show form for Test Form"
           >
             <pure(KeyboardArrowDownIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
     </StandardCard>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -555,7 +551,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
           <WithStyles(Typography)
             variant="headline"
           >
-            Incites
+            Test Form
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -563,14 +559,14 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Hide form for Incites"
+            tooltip="Hide form for Test Form"
           >
             <pure(KeyboardArrowUpIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
       <form>
+        <p />
         <div>
           <h4>
             UTs
@@ -582,7 +578,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             fullWidth={true}
             name="primaryValue"
             onChange={[Function]}
-            placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
+            placeholder=""
             required={true}
             select={false}
             value=""
@@ -593,16 +589,14 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
           <h4>
             API Key
           </h4>
-          <p>
-            Optional, a default key is provided. Limit: 1,000 queries per day
-          </p>
+          <p />
           <TextField
             aria-label=""
             className="secondaryValue"
             fullWidth={true}
             name="secondaryValue"
             onChange={[Function]}
-            placeholder="Enter API key"
+            placeholder=""
             required={false}
             select={false}
             value=""
@@ -611,12 +605,12 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
         </div>
         <p />
         <WithStyles(Button)
-          aria-label="Submit to Incites"
+          aria-label="Submit"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
-          Submit to Incites
+          Submit
         </WithStyles(Button)>
       </form>
     </StandardCard>
@@ -652,7 +646,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
           <WithStyles(Typography)
             variant="headline"
           >
-            Incites
+            Test Form
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -660,13 +654,12 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Show form for Incites"
+            tooltip="Show form for Test Form"
           >
             <pure(KeyboardArrowDownIcon) />
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
     </StandardCard>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -714,8 +707,8 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
       <form>
+        <p />
         <div>
           <h4>
             PF3
@@ -811,8 +804,8 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
           </WithStyles(IconButton)>
         </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <p />
       <form>
+        <p />
         <div>
           <h4>
             PF 2
