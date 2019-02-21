@@ -176,7 +176,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
       md={3}
       sm={6}
     >
-      <WithStyles(ExportPublications)
+      <ExportPublications
         disabled={false}
         onChange={[Function]}
       />

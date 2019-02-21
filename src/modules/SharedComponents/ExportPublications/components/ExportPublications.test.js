@@ -28,15 +28,14 @@ describe('Export Publications renders', () => {
         const mockOnChange = jest.fn();
         const wrapper = setup({onChange: mockOnChange});
         expect(toJson(wrapper)).toMatchSnapshot();
-        // const format = wrapper.find('SelectField');
-        // format.simulate('change', {target: {value: expected}});
-        // expect(mockOnChange.mock.calls.length).toBe(1);
+        wrapper.find('WithStyles(Select)').simulate('change', {target: {value: expected}});
+        expect(mockOnChange.mock.calls.length).toBe(1);
     });
 
     it('component with all fields disabled', () => {
         const wrapper = setup({disabled: true});
         wrapper.find('SelectField').forEach(option => {
             expect(option.props().disabled).toEqual(true);
-        })
+        });
     });
 });
