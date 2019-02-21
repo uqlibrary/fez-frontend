@@ -10,15 +10,15 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Incites"
+      title="Test Form"
     >
       <p>
-        UTs
+        primary heading
          - 
         dummy UT
       </p>
       <StandardCard
-        title="Results"
+        title="Test Results"
       >
         <pre>
           [
@@ -38,7 +38,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
         }
         variant="contained"
       >
-        New Search
+        New Test Search
       </WithStyles(Button)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -63,7 +63,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
         dummy UT
       </p>
       <StandardCard
-        title="Results"
+        title="Test Results"
       >
         <pre>
           [
@@ -83,7 +83,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
         }
         variant="contained"
       >
-        New Search
+        New Test Search
       </WithStyles(Button)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -100,10 +100,10 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
     xs={12}
   >
     <StandardCard
-      title="Incites"
+      title="Test Form"
     >
       <p>
-        UTs
+        primary heading
          - 
         dummy UT
       </p>
@@ -159,7 +159,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
         123456789
       </p>
       <StandardCard
-        title="Results"
+        title="Test Results"
       >
         <pre>
           [
@@ -179,7 +179,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
         }
         variant="contained"
       >
-        New Search
+        New Test Search
       </WithStyles(Button)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -204,7 +204,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
         dummy UT
       </p>
       <StandardCard
-        title="Results"
+        title="Test Results"
       >
         <pre>
           [
@@ -224,7 +224,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
         }
         variant="contained"
       >
-        New Search
+        New Test Search
       </WithStyles(Button)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -241,22 +241,22 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
     xs={12}
   >
     <StandardCard
-      title="Incites"
+      title="Test Form"
     >
       <p>
-        UTs
+        primary heading
          - 
         dummy UT
       </p>
       <StandardCard
-        title="Results"
+        title="Test Results"
       >
         <WithStyles(Grid)
           item={true}
           xs={12}
         >
           <StandardCard>
-            No results found
+            No test results found
           </StandardCard>
         </WithStyles(Grid)>
       </StandardCard>
@@ -270,7 +270,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
         }
         variant="contained"
       >
-        New Search
+        New Test Search
       </WithStyles(Button)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -287,10 +287,10 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
     xs={12}
   >
     <StandardCard
-      title="Incites"
+      title="Test Form"
     >
       <p>
-        UTs
+        primary heading
          - 
         dummy UT
       </p>

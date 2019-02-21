@@ -96,8 +96,8 @@ export default class Orcid extends Component {
                 },
                 existingOrcidRequest: {
                     ...prevState.existingOrcidRequest,
-                    family_names: nextProps.account ? nextProps.account.lastName : '',
-                    given_names: nextProps.account ? nextProps.account.firstName : ''
+                    family_names: !!nextProps.account && !!nextProps.account.lastName ? nextProps.account.lastName : '',
+                    given_names: !!nextProps.account && !!nextProps.account.firstName ? nextProps.account.firstName : ''
                 }
             }));
         }
