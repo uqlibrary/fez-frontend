@@ -106,7 +106,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         <Connect(WithStyles(HelpIcon))
           buttonLabel="OK"
           text={
-            <React.Fragment>
+            <UNDEFINED>
               <h3>
                 WOS and Scopus
               </h3>
@@ -131,7 +131,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               >
                 https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
               </a>
-            </React.Fragment>
+            </UNDEFINED>
           }
           title="About these metrics"
         />
