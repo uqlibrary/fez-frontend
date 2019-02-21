@@ -331,7 +331,7 @@ describe('Component Orcid ', () => {
     it('should check condition for account id on receiving new props', () => {
         const author = {
             aut_id: 123
-        }
+        };
         const wrapper = setup({
             account: {
                 id: 123
