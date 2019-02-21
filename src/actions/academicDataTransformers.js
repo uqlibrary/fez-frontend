@@ -131,18 +131,22 @@ function getData(object, path) {
     }, object);
 }
 
+function getDifference(publication, config) {
+    return getData(publication, config.metricDataPath.count) - getData(publication, config.metricDataPath.past_count);
+}
+
 export const transformTrendingPublicationsMetricsData = ({data}, recordsToDisplayPerSource) => {
     const sources = trendingPublicationsConfig.sources;
 
     const trendingPublications = Object.entries(sources).map(([key, config]) => {
         const values = data.map(publication => {
             const count = getData(publication, config.metricDataPath.count);
-            const difference = getData(publication, config.metricDataPath.difference);
-            if (count && difference) {
+            const pastCount = getData(publication, config.metricDataPath.past_count);
+            if (count && pastCount) {
                 const metricData = {
                     source: key,
                     count: count,
-                    difference: getData(publication, config.metricDataPath.difference),
+                    difference: getDifference(publication, config),
                     citation_url: getData(publication, config.metricDataPath.citation_url)
                 };
 
@@ -155,11 +159,11 @@ export const transformTrendingPublicationsMetricsData = ({data}, recordsToDispla
             }
         }).filter(value => value);
 
-        // Sort top publications for each source in descening order and return asking number of records
+        // Sort top publications for each source in descending order and return asking number of records
         const recordsToDisplay = values
             .sort((publication1, publication2) => {
-                const difference1 = getData(publication1, config.metricDataPath.difference);
-                const difference2 = getData(publication2, config.metricDataPath.difference);
+                const difference1 = getDifference(publication1, config);
+                const difference2 = getDifference(publication2, config);
                 return difference2 - difference1;
             })
             .slice(0, recordsToDisplayPerSource);

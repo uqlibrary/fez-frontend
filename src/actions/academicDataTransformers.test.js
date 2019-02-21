@@ -416,7 +416,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 count: 23,
-                                difference: 45,
+                                difference: -22,
                                 citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
                                 source: "scopus"
                             }
@@ -446,7 +446,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 15,
-                                "difference": 8,
+                                "difference": 7,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -471,7 +471,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 6,
-                                "difference": 4,
+                                "difference": 2,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -501,7 +501,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 10,
-                                "difference": 4,
+                                "difference": 6,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
@@ -519,7 +519,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 3,
-                                "difference": 3,
+                                "difference": 0,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
@@ -576,7 +576,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 15,
-                                "difference": 8,
+                                "difference": 7,
                                 "citation_url": "http://www.wos.com?details.php?citation_id=548872",
                                 "source": "thomson"
                             }
@@ -594,7 +594,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 6,
-                                "difference": 4,
+                                "difference": 2,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -785,7 +785,7 @@ describe('Academic data transformers ', () => {
                             metricData: {
                                 citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
                                 count: 23,
-                                difference: 45,
+                                difference: -22,
                                 source: "scopus"
                             },
                             rek_date: "2018-01-01T00:00:00Z",
@@ -817,7 +817,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 15,
-                                "difference": 8,
+                                "difference": 7,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -842,7 +842,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 6,
-                                "difference": 4,
+                                "difference": 2,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -932,7 +932,7 @@ describe('Academic data transformers ', () => {
                             metricData: {
                                 citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
                                 count: 23,
-                                difference: 45,
+                                difference: -22,
                                 source: "scopus"
                             },
                             rek_date: "2018-01-01T00:00:00Z",
@@ -964,7 +964,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 10,
-                                "difference": 4,
+                                "difference": 6,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
@@ -982,7 +982,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 3,
-                                "difference": 3,
+                                "difference": 0,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
@@ -1074,7 +1074,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 15,
-                                "difference": 8,
+                                "difference": 7,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -1099,7 +1099,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 6,
-                                "difference": 4,
+                                "difference": 2,
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
@@ -1129,7 +1129,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 10,
-                                "difference": 4,
+                                "difference": 6,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
@@ -1147,7 +1147,7 @@ describe('Academic data transformers ', () => {
                             },
                             metricData: {
                                 "count": 3,
-                                "difference": 3,
+                                "difference": 0,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
