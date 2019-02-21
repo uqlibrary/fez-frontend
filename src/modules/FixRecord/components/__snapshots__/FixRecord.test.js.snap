@@ -457,11 +457,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
           Object {
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your request will be referred to a UQ eSpace staff member for review/action.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -1522,7 +1522,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           Object {
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <WithStyles(Alert)
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
                 title="File upload failed"
@@ -1531,7 +1531,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               <p>
                 Your request will be referred to a UQ eSpace staff member for review/action.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -2109,11 +2109,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           Object {
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your request will be referred to a UQ eSpace staff member for review/action.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",

@@ -12,6 +12,12 @@ exports[`NavigationPrompt component should render 1`] = `
             [Function],
           ],
         ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
       },
     }
   }

@@ -81,7 +81,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
       help={
         Object {
           "buttonLabel": "OK",
-          "text": <UNDEFINED>
+          "text": <React.Fragment>
             <h3>
               Quality indicators
             </h3>
@@ -94,7 +94,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                 here
               </a>
             </p>
-          </UNDEFINED>,
+          </React.Fragment>,
           "title": "Non-traditional research output metadata",
         }
       }
@@ -547,7 +547,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
       help={
         Object {
           "buttonLabel": "OK",
-          "text": <UNDEFINED>
+          "text": <React.Fragment>
             <h3>
               Quality indicators
             </h3>
@@ -560,7 +560,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                 here
               </a>
             </p>
-          </UNDEFINED>,
+          </React.Fragment>,
           "title": "Non-traditional research output metadata",
         }
       }
@@ -942,7 +942,7 @@ exports[`Component NtroFields should render default view 1`] = `
       help={
         Object {
           "buttonLabel": "OK",
-          "text": <UNDEFINED>
+          "text": <React.Fragment>
             <h3>
               Quality indicators
             </h3>
@@ -955,7 +955,7 @@ exports[`Component NtroFields should render default view 1`] = `
                 here
               </a>
             </p>
-          </UNDEFINED>,
+          </React.Fragment>,
           "title": "Non-traditional research output metadata",
         }
       }
@@ -1408,7 +1408,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
       help={
         Object {
           "buttonLabel": "OK",
-          "text": <UNDEFINED>
+          "text": <React.Fragment>
             <h3>
               Quality indicators
             </h3>
@@ -1421,7 +1421,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                 here
               </a>
             </p>
-          </UNDEFINED>,
+          </React.Fragment>,
           "title": "Non-traditional research output metadata",
         }
       }
