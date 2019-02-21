@@ -24,6 +24,12 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component Orcid ', () => {
+    const saveLocation = window.location;
+
+    afterEach(() => {
+        window.location = saveLocation;
+    });
+
     it('should render nothing if account/author is not loaded', () => {
         const wrapper = setup({accountAuthorLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -74,12 +80,29 @@ describe('Component Orcid ', () => {
             author: currentAuthor.uqresearcher.data
         });
         const showConfirmation = jest.fn();
+        const getOrcidUrl = jest.spyOn(wrapper.instance(), 'getOrcidUrl');
 
         wrapper.instance().authoriseConfirmationBox = {
             showConfirmation: showConfirmation
         };
         wrapper.instance()._showAuthoriseConfirmation();
         expect(showConfirmation).toBeCalled();
+        expect(getOrcidUrl).toHaveBeenCalledWith(true);
+
+        delete global.window.location;
+        const assignFn = jest.fn();
+        global.window.location = {
+            assign: assignFn
+        };
+
+        wrapper.instance().authoriseConfirmationBox._onAction();
+        expect(assignFn).toHaveBeenCalledWith('http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=249b6a5213ce5461cf558037a47e5df5&show_login=true');
+
+        wrapper.instance()._showAuthoriseConfirmation(false);
+        wrapper.instance().authoriseConfirmationBox._onAction();
+
+        expect(getOrcidUrl).toHaveBeenCalledWith(false);
+        expect(assignFn).toHaveBeenCalledWith('http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=249b6a5213ce5461cf558037a47e5df5&show_login=false&family_names=Researcher&given_names=J');
     });
 
     it('should display appropriate alert message', () => {
@@ -293,5 +316,35 @@ describe('Component Orcid ', () => {
         const wrapper = setup({});
         wrapper.instance().componentWillUnmount();
         expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
+    });
+
+    it('should set query params correclty with code and state', () => {
+        delete window.location;
+        global.window.location = {hash: 'http://localhost:3000?code=123&state=testing'};
+        const wrapper = setup({});
+        expect(wrapper.state().orcidResponse).toMatchObject({
+            code: '123',
+            state: 'testing'
+        });
+    });
+
+    it('should check condition for account id on receiving new props', () => {
+        const author = {
+            aut_id: 123
+        }
+        const wrapper = setup({
+            account: {
+                id: 123
+            },
+            author
+        });
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        wrapper.setProps({
+            account: {
+                id: 2323
+            },
+            author
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
     });
 });
