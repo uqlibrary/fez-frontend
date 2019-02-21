@@ -25,6 +25,8 @@ const options = {
                 "/view/*",
                 "/data/*?*Signature=*&Key-Pair-Id=*",
                 "/assets/*.svg",
+                "/sitemap/*.xml",
+                "/list-by-year/*.html",
                 "/*.js",
                 "/*.css"
             ],
