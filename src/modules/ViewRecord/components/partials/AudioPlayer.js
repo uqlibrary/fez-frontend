@@ -10,7 +10,8 @@ export default class AudioPlayer extends Component {
     static propTypes = {
         pid: PropTypes.string.isRequired,
         fileName: PropTypes.string.isRequired,
-        mimeType: PropTypes.string.isRequired
+        mimeType: PropTypes.string.isRequired,
+        audioPlayerRef: PropTypes.object
     };
 
     constructor(props) {
@@ -22,13 +23,18 @@ export default class AudioPlayer extends Component {
     }
 
     audioPlayerPlay = () => {
-        const playPromise = this.audioPlayerRef.play();
+        const playPromise = !!this.audioPlayerRef
+            ? this.audioPlayerRef.play()
+            : false;
 
         if (!!playPromise) {
             playPromise.then(() => this.setState({isPlaying: true}));
+            return playPromise;
         } else {
             this.setState({isPlaying: true});
         }
+        // for eslint
+        return null;
     };
 
     audioPlayerPause = () => {

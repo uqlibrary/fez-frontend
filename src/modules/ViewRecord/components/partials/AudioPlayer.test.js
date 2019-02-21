@@ -17,7 +17,25 @@ describe('Audio Player Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should play audio', () => {
+    it('should set playing state via audioPlayerPlay()', async () => {
+        const wrapper = setup({}, true);
+
+        // Without promise
+        wrapper.instance().audioPlayerPlay();
+        expect(wrapper.state().isPlaying).toBe(true);
+
+        // reset
+        wrapper.instance().setState({isPlaying: false});
+
+        // with promise
+        wrapper.instance().audioPlayerRef = {
+            play: () => Promise.resolve()
+        };
+        await wrapper.instance().audioPlayerPlay();
+        expect(wrapper.state().isPlaying).toBe(true);
+    });
+
+    it('should play audio via button click', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         const element = wrapper.find('PlayArrowIcon.play');

@@ -723,7 +723,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
 </Provider>
 `;
 
-exports[`Audio Player Component  should play audio 1`] = `
+exports[`Audio Player Component  should play audio via button click 1`] = `
 <Provider
   store={
     Object {
