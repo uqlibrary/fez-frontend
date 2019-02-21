@@ -2,7 +2,7 @@ import {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 
-class ScrollToTop extends Component {
+export class ScrollToTop extends Component {
     static propTypes = {
         children: PropTypes.any,
         location: PropTypes.object
