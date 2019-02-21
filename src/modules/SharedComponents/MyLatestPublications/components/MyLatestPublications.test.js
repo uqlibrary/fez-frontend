@@ -35,4 +35,18 @@ describe('Component MyLatestPublications', () => {
         setup({accountAuthorDetailsLoading: true, actions: {searchLatestPublications: testFn}});
         expect(testFn).toHaveBeenCalledTimes(0);
     });
+
+    it('_viewMyResearch method', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({history: {push: testFn}});
+        wrapper.instance()._viewMyResearch();
+        expect(testFn).toHaveBeenCalledWith('/records/mine');
+    });
+
+    describe('FileName component', () => {
+        it('should get styles for full render', () => {
+            const wrapper = setup({}, false);
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+    });
 });
