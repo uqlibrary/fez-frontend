@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component MyLatestPublications FileName component should get styles for full render 1`] = `
+exports[`Component MyLatestPublications Full mount of component should get styles for full render 1`] = `
 <Provider
   store={
     Object {

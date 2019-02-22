@@ -43,7 +43,7 @@ describe('Component MyLatestPublications', () => {
         expect(testFn).toHaveBeenCalledWith('/records/mine');
     });
 
-    describe('FileName component', () => {
+    describe('Full mount of component', () => {
         it('should get styles for full render', () => {
             const wrapper = setup({}, false);
             expect(toJson(wrapper)).toMatchSnapshot();
