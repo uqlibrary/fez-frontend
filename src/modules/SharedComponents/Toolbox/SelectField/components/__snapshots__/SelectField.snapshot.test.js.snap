@@ -24,3 +24,31 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
   </WithStyles(FormControl)>
 </Fragment>
 `;
+
+exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
+<Fragment>
+  <WithStyles(FormControl)
+    error={true}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <WithStyles(InputLabel) />
+    <WithStyles(Select)
+      autoWidth={true}
+      error={true}
+      floatingLabelText="test selectfield component"
+      fullWidth={true}
+      name="selectfield"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="text"
+    />
+    <WithStyles(FormHelperText)>
+      Something bad happened
+    </WithStyles(FormHelperText)>
+  </WithStyles(FormControl)>
+</Fragment>
+`;
