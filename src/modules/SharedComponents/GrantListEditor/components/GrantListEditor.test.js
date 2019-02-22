@@ -73,6 +73,15 @@ describe('GrantListEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render string error from props', () => {
+        const wrapper = setup({
+            meta: {
+                error: 'Test error'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should update with error message', () => {
         const wrapper = setup({});
 
