@@ -306,7 +306,7 @@ export default {
                     },
                     bottomTip: '',
                     submitButtonLabel: 'Submit to Incites',
-                    isMinimised: false // set this to false when we have more than one form
+                    isMinimised: false // set this to true when we have more than one form
                 }
             ],
         },
