@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true) {
         name: 'selectfield',
         type: 'text',
         fullWidth: true,
-        floatingLabelText: 'This is a test selectfield component',
+        floatingLabelText: 'test selectfield component',
         ...testProps
     };
     const consolidatedProps = filterProps(props, SelectField.propTypes);
@@ -27,5 +27,21 @@ describe('SelectfieldWrapper snapshots tests', () => {
         const wrapper = setup(props);
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
+    });
+
+    it ('renders an error', () => {
+        const props =
+            {
+                name: 'selectfield',
+                error: true,
+                errorText: 'Something bad happened',
+            };
+
+        const wrapper = setup(props);
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it ('changes filteredprops when props are changed', () => {
     });
 });
