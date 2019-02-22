@@ -147,8 +147,6 @@ describe('Component ThirdPartyLookupForm', () => {
             sendInputsToResultComponent: submitMock,
         };
         const wrapper = setup({...props});
-        // wrapper.instance()._handleSubmitLookup = submitMock;
-        wrapper.update();
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
