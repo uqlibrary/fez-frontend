@@ -73,7 +73,6 @@ export class ThirdPartyLookupForm extends PureComponent {
             labelShow: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.show ? `${this.props.locale.tooltip.show} ${lookupLabel}` : `Show form for ${lookupLabel}`,
             labelHide: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.hide ? `${this.props.locale.tooltip.hide} ${lookupLabel}` : `Hide form for ${lookupLabel}`,
         };
-        // console.log(txt.thisForm);
         const { primaryValue, secondaryValue } = this.state;
         return (
             <Grid container spacing={24}>

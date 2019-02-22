@@ -28,7 +28,6 @@ export class ThirdPartyLookupFormResult extends PureComponent {
     };
 
     render() {
-        // console.log(this.props.formDisplay);
         const txt = {
             thisForm: this.props.formDisplay,
         };

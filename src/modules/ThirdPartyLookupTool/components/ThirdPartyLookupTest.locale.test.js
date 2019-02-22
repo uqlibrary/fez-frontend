@@ -63,7 +63,6 @@ describe('Component ThirdPartyLookupTool', () => {
 
     it('should set state with submitted data', () => {
         const wrapper = setup({actions: {}});
-        // console.log(wrapper.state());
         expect(wrapper.state().primaryValue).toEqual('');
         expect(wrapper.state().secondaryValue).toEqual('');
         expect(wrapper.state().formDisplay).toEqual({});
