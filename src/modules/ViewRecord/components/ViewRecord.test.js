@@ -1,5 +1,5 @@
 import ViewRecord from './ViewRecord';
-import {mockRecordToFix} from 'mock/data/testing/records';
+import {mockRecordToFix, ntro} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -57,5 +57,45 @@ describe('Component ViewRecord ', () => {
         const wrapper = setup({});
         wrapper.instance().componentWillUnmount();
         expect(wrapper.instance().props.actions.clearRecordToView).toHaveBeenCalled();
+    });
+
+    it('should have componentWillReceiveProps load updated pid', () => {
+        const wrapper = setup({});
+        const test = jest.spyOn(wrapper.instance().props.actions, 'loadRecordToView');
+        const newProps = {
+            match: {
+                params: {
+                    pid: 'UQ:12345'
+                }
+            }
+        };
+        wrapper.instance().componentWillReceiveProps(newProps);
+        expect(test).toBeCalledWith(newProps.match.params.pid);
+
+        // test else branch
+        test.mockClear(); // Reset the called counter from earlier tests
+        wrapper.instance().componentWillReceiveProps(wrapper.instance().props);
+        expect(test).toHaveBeenCalledTimes(0);
+    });
+
+    it('should not load a record unnecessarily', () => {
+        const wrapper = setup({ recordToView: {} });
+        const test = jest.spyOn(wrapper.instance().props.actions, 'loadRecordToView');
+        test.mockClear();
+        wrapper.instance().componentDidMount();
+        expect(test).toHaveBeenCalledTimes(0);
+    });
+
+    it('should render NTRO Details', () => {
+        const wrapper = setup({
+            recordToView: ntro,
+            loadingRecordToView: false,
+            recordToViewError: '',
+            account: {
+                canMasquerade: true
+            }
+        });
+        expect(wrapper.find('WithStyles(NtroDetails)').length).toBe(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

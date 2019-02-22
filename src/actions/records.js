@@ -66,7 +66,7 @@ export function createNewRecord(data) {
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
             .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
+            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new thesis record: ' +  data.comments}) : newRecord))
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
@@ -104,11 +104,12 @@ export function createNewRecord(data) {
 
 /**
  * Submit thesis involves two steps: upload files, create record with uploaded files.
+ * This method has been deprecated.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function submitThesis(data, author) {
+export function submitThesisOld(data, author) {
     return dispatch => {
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
         if (!hasFilesToUpload) {
@@ -172,6 +173,88 @@ export function submitThesis(data, author) {
             });
     };
 }
+
+/**
+ * Submit thesis involves two steps: create record - get signed url to upload files - upload files - patch record.
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function submitThesis(data) {
+    return dispatch => {
+        dispatch({type: actions.CREATE_RECORD_SAVING});
+        // set default values, links
+        const recordRequest = {
+            ...JSON.parse(JSON.stringify(data)),
+            ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
+            ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
+            ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+            rek_title: data.thesisTitle.plainText,
+            rek_formatted_title: data.thesisTitle.htmlText,
+            rek_description: data.thesisAbstract.plainText,
+            rek_formatted_abstract: data.thesisAbstract.htmlText
+        };
+
+        // delete extra form values from request object
+        if (recordRequest.authors) delete recordRequest.authors;
+        if (recordRequest.editors) delete recordRequest.editors;
+        if (recordRequest.files) delete recordRequest.files;
+        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
+        if (recordRequest.supervisors) delete recordRequest.supervisors;
+        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
+        if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
+        if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
+
+        let newRecord = null;
+        const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+        const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
+
+        return post(NEW_RECORD_API(), recordRequest)
+            .then(response => {
+                // save new record response
+                newRecord = response.data;
+                return response;
+            })
+            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            // .then(() =>(hasFilesToUpload ?  putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch) // to upload files renamed to student ID
+            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
+            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
+            .then((response) => {
+                dispatch({
+                    type: actions.CREATE_RECORD_SUCCESS,
+                    payload: {
+                        newRecord: response.data ? response.data : newRecord,
+                        fileUploadOrIssueFailed: false
+                    }
+                });
+                return Promise.resolve(response.data ? response.data : newRecord);
+            })
+            .catch(error => {
+                // record was created, but file upload or record patch failed or issue post failed
+                if (!!newRecord && !!newRecord.rek_pid) {
+                    dispatch({
+                        type: actions.CREATE_RECORD_SUCCESS,
+                        payload: {
+                            newRecord: newRecord,
+                            fileUploadOrIssueFailed: true
+                        }
+                    });
+
+                    return Promise.resolve(newRecord);
+                }
+
+                dispatch({
+                    type: actions.CREATE_RECORD_FAILED,
+                    payload: error.message
+                });
+
+                return Promise.reject(error);
+            });
+    };
+}
+
+
 /**
  * Clear new record
  * @returns {action}
