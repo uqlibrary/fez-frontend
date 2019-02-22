@@ -464,7 +464,6 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
           }
         }
       />
-      <ShareThisErrorBoundary />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
