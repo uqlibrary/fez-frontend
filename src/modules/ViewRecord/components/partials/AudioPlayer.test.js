@@ -26,6 +26,7 @@ describe('Audio Player Component ', () => {
 
         // reset
         wrapper.instance().setState({isPlaying: false});
+        expect(wrapper.state().isPlaying).toBe(false);
 
         // with promise
         wrapper.instance().audioPlayerRef = {

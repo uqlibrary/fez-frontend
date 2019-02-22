@@ -10,8 +10,7 @@ export default class AudioPlayer extends Component {
     static propTypes = {
         pid: PropTypes.string.isRequired,
         fileName: PropTypes.string.isRequired,
-        mimeType: PropTypes.string.isRequired,
-        audioPlayerRef: PropTypes.object
+        mimeType: PropTypes.string.isRequired
     };
 
     constructor(props) {
