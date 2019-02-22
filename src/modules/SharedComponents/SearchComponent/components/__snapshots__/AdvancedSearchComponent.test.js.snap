@@ -234,8 +234,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           docTypes={
             Array [
               "179",
@@ -250,20 +248,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={true}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -510,8 +495,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           docTypes={
             Array [
               179,
@@ -526,20 +509,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={true}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -780,8 +750,6 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -790,20 +758,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={true}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1050,8 +1005,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           docTypes={
             Array [
               "test",
@@ -1066,20 +1019,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={true}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1321,8 +1261,6 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1332,20 +1270,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={false}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1587,8 +1512,6 @@ exports[`AdvancedSearchComponent should render default view with open access che
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1598,20 +1521,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={true}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1681,8 +1591,6 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1692,20 +1600,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
               },
             ]
           }
-          isLoading={false}
-          isMinimised={true}
           isOpenAccess={false}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[Function]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
@@ -1947,8 +1842,6 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
       >
         <WithStyles(AdvancedSearchCaption)
           className="advanced-search"
-          classes={Object {}}
-          createdRange={Object {}}
           fieldRows={
             Array [
               Object {
@@ -1958,20 +1851,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
               },
             ]
           }
-          isLoading={false}
-          isMinimised={false}
           isOpenAccess={false}
-          onAdvancedSearchReset={[Function]}
-          onAdvancedSearchRowAdd={[Function]}
-          onAdvancedSearchRowChange={[MockFunction]}
-          onAdvancedSearchRowRemove={[Function]}
-          onSearch={[MockFunction]}
-          onToggleMinimise={[MockFunction]}
-          onToggleOpenAccess={[Function]}
-          onToggleSearchMode={[Function]}
-          showUnpublishedFields={false}
-          updateYearRangeFilter={[MockFunction]}
-          updatedRange={Object {}}
           yearFilter={
             Object {
               "invalid": false,
