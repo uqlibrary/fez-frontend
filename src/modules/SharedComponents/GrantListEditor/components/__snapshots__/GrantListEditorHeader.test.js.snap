@@ -1,0 +1,690 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
+<Fragment>
+  <WithStyles(ConfirmDialogBox)
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={9}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={5}
+          >
+            <WithStyles(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
+                }
+              }
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={4}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={3}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={true}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={false}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={8}
+            >
+              <WithStyles(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
+                  }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+            xs={4}
+          >
+            <WithStyles(ListItemSecondaryAction)
+              style={
+                Object {
+                  "smarginTop": -4,
+                }
+              }
+            >
+              <WithStyles(Tooltip)>
+                <WithStyles(IconButton)
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <pure(DeleteForeverIcon) />
+                </WithStyles(IconButton)>
+              </WithStyles(Tooltip)>
+            </WithStyles(ListItemSecondaryAction)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`GrantListEditorHeader should render default mobile view 1`] = `
+<Fragment>
+  <WithStyles(ConfirmDialogBox)
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={11}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
+                }
+              }
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={5}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={4}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={1}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={true}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={false}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={8}
+            >
+              <WithStyles(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
+                  }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+            xs={12}
+          >
+            <WithStyles(ListItemSecondaryAction)
+              style={
+                Object {
+                  "smarginTop": -4,
+                }
+              }
+            >
+              <WithStyles(Tooltip)>
+                <WithStyles(IconButton)
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <pure(DeleteForeverIcon) />
+                </WithStyles(IconButton)>
+              </WithStyles(Tooltip)>
+            </WithStyles(ListItemSecondaryAction)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`GrantListEditorHeader should render default view 1`] = `
+<Fragment>
+  <WithStyles(ConfirmDialogBox)
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={9}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={5}
+          >
+            <WithStyles(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
+                }
+              }
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={4}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={3}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={3}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={true}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={false}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={8}
+            >
+              <WithStyles(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
+                  }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+            xs={4}
+          >
+            <WithStyles(ListItemSecondaryAction)
+              style={
+                Object {
+                  "smarginTop": -4,
+                }
+              }
+            >
+              <WithStyles(Tooltip)>
+                <WithStyles(IconButton)
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <pure(DeleteForeverIcon) />
+                </WithStyles(IconButton)>
+              </WithStyles(Tooltip)>
+            </WithStyles(ListItemSecondaryAction)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`GrantListEditorHeader should render default view with styles 1`] = `
+<WithTheme(WithWidth(GrantListEditorHeader))
+  classes={
+    Object {
+      "header": "WithTheme-WithWidth-GrantListEditorHeader---header-2",
+      "paddingRight14": "WithTheme-WithWidth-GrantListEditorHeader---paddingRight14-5",
+      "paddingRight24": "WithTheme-WithWidth-GrantListEditorHeader---paddingRight24-3",
+      "paddingRight36": "WithTheme-WithWidth-GrantListEditorHeader---paddingRight36-4",
+      "right": "WithTheme-WithWidth-GrantListEditorHeader---right-1",
+    }
+  }
+/>
+`;
+
+exports[`GrantListEditorHeader should show confirmation box 1`] = `
+<Fragment>
+  <WithStyles(ConfirmDialogBox)
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={9}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={5}
+          >
+            <WithStyles(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
+                }
+              }
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={false}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={true}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={4}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={3}
+            >
+              <WithStyles(ListItemText)
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={3}
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          spacing={0}
+        >
+          <Hidden
+            implementation="js"
+            lgDown={false}
+            lgUp={false}
+            mdDown={false}
+            mdUp={false}
+            smDown={true}
+            smUp={false}
+            xlDown={false}
+            xlUp={false}
+            xsDown={false}
+            xsUp={false}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={8}
+            >
+              <WithStyles(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
+                  }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
+                  }
+                }
+                style={
+                  Object {
+                    "padding": 0,
+                  }
+                }
+              />
+            </WithStyles(Grid)>
+          </Hidden>
+          <WithStyles(Grid)
+            item={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+            xs={4}
+          >
+            <WithStyles(ListItemSecondaryAction)
+              style={
+                Object {
+                  "smarginTop": -4,
+                }
+              }
+            >
+              <WithStyles(Tooltip)>
+                <WithStyles(IconButton)
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <pure(DeleteForeverIcon) />
+                </WithStyles(IconButton)>
+              </WithStyles(Tooltip)>
+            </WithStyles(ListItemSecondaryAction)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
