@@ -165,6 +165,16 @@ export class AdvancedSearchComponent extends PureComponent {
         this.props.updateDateRange(key, value);
     };
 
+    _captionProps = () => {
+        return {
+            className: this.props.className,
+            fieldRows: this.props.fieldRows,
+            docTypes: this.props.docTypes,
+            yearFilter: this.props.yearFilter,
+            isOpenAccess: this.props.isOpenAccess
+        };
+    };
+
     render() {
         const {classes} = this.props;
         const txt = locale.components.searchComponent;
@@ -319,7 +329,7 @@ export class AdvancedSearchComponent extends PureComponent {
                     }
                     <Grid container>
                         <Grid item style={{paddingTop: 24}}>
-                            <AdvancedSearchCaption {...this.props} />
+                            <AdvancedSearchCaption {...this._captionProps()} />
                         </Grid>
                     </Grid>
                 </Grid>

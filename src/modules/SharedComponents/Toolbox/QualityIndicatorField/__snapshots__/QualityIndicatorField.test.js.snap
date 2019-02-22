@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`QualityIndicatorField component should render default view 1`] = `
-<WithStyles(GenericSelectField)
+<GenericSelectField
   error={false}
   errorText=""
   hideLabel={false}
@@ -60,7 +60,7 @@ exports[`QualityIndicatorField component should render default view 1`] = `
 `;
 
 exports[`QualityIndicatorField component should render with given field props 1`] = `
-<WithStyles(GenericSelectField)
+<GenericSelectField
   error={true}
   errorText="Test error"
   hideLabel={false}

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LanguageField component should render default view 1`] = `
-<WithStyles(GenericSelectField)
+<GenericSelectField
   error={false}
   errorText=""
   hideLabel={false}
@@ -271,7 +271,7 @@ exports[`LanguageField component should render default view 1`] = `
 `;
 
 exports[`LanguageField component should render immutable list as selected value with given field props 1`] = `
-<WithStyles(GenericSelectField)
+<GenericSelectField
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -563,7 +563,7 @@ exports[`LanguageField component should render immutable list as selected value 
 `;
 
 exports[`LanguageField component should render with given field props 1`] = `
-<WithStyles(GenericSelectField)
+<GenericSelectField
   error={true}
   errorText="Test error"
   hideLabel={false}
