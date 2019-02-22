@@ -23,7 +23,12 @@ const options = {
                 "/index.html$",
                 "/contact$",
                 "/view/*",
-                "/data/*?*Signature=*&Key-Pair-Id=*"
+                "/data/*?*Signature=*&Key-Pair-Id=*",
+                "/assets/*.svg",
+                "/sitemap/*.xml",
+                "/list-by-year/*.html",
+                "/*.js",
+                "/*.css"
             ],
             disallow: [
                 "/"
@@ -102,6 +107,7 @@ const webpackConfig = {
             clear: false,
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
+
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI

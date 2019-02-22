@@ -9409,6 +9409,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "setRedirectPath": [Function],
                                                               "showAppAlert": [Function],
                                                               "submitThesis": [Function],
+                                                              "submitThesisOld": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
                                                             }
@@ -14959,6 +14960,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "setRedirectPath": [Function],
                                 "showAppAlert": [Function],
                                 "submitThesis": [Function],
+                                "submitThesisOld": [Function],
                                 "unclaimRecord": [Function],
                                 "updateCurrentAuthor": [Function],
                               }
@@ -16589,6 +16591,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "setRedirectPath": [Function],
                                                                             "showAppAlert": [Function],
                                                                             "submitThesis": [Function],
+                                                                            "submitThesisOld": [Function],
                                                                             "unclaimRecord": [Function],
                                                                             "updateCurrentAuthor": [Function],
                                                                           }
@@ -16693,6 +16696,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "setRedirectPath": [Function],
                                                                               "showAppAlert": [Function],
                                                                               "submitThesis": [Function],
+                                                                              "submitThesisOld": [Function],
                                                                               "unclaimRecord": [Function],
                                                                               "updateCurrentAuthor": [Function],
                                                                             }
@@ -16804,6 +16808,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "setRedirectPath": [Function],
                                                                                 "showAppAlert": [Function],
                                                                                 "submitThesis": [Function],
+                                                                                "submitThesisOld": [Function],
                                                                                 "unclaimRecord": [Function],
                                                                                 "updateCurrentAuthor": [Function],
                                                                               }
@@ -17334,6 +17339,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "setRedirectPath": [Function],
                                                                                   "showAppAlert": [Function],
                                                                                   "submitThesis": [Function],
+                                                                                  "submitThesisOld": [Function],
                                                                                   "unclaimRecord": [Function],
                                                                                   "updateCurrentAuthor": [Function],
                                                                                 }
@@ -20728,6 +20734,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "setRedirectPath": [Function],
                                                                                     "showAppAlert": [Function],
                                                                                     "submitThesis": [Function],
+                                                                                    "submitThesisOld": [Function],
                                                                                     "unclaimRecord": [Function],
                                                                                     "updateCurrentAuthor": [Function],
                                                                                   }
@@ -20786,6 +20793,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "setRedirectPath": [Function],
                                                                                       "showAppAlert": [Function],
                                                                                       "submitThesis": [Function],
+                                                                                      "submitThesisOld": [Function],
                                                                                       "unclaimRecord": [Function],
                                                                                       "updateCurrentAuthor": [Function],
                                                                                     }
