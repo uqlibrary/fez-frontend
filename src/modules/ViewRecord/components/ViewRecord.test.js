@@ -1,6 +1,5 @@
 import ViewRecord from './ViewRecord';
 import {mockRecordToFix, ntro} from 'mock/data/testing/records';
-import {accounts} from 'mock/data/account';
 
 function setup(testProps, isShallow = true){
     const props = {
