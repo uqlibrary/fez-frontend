@@ -31,7 +31,7 @@ export default class ViewRecord extends PureComponent {
     };
 
     componentDidMount() {
-        if (this.props.actions && !this.props.recordToView) {
+        if (this.props.actions.loadRecordToView && !this.props.recordToView) {
             this.props.actions.loadRecordToView(this.props.match.params.pid);
         }
     }
@@ -44,7 +44,8 @@ export default class ViewRecord extends PureComponent {
 
     componentWillUnmount() {
         // clear previously selected record
-        if (this.props.actions) {
+        /* istanbul ignore else */
+        if (this.props.actions.clearRecordToView) {
             this.props.actions.clearRecordToView();
         }
     }
