@@ -18,7 +18,7 @@ import {ORG_TYPES_LOOKUP} from 'config/general';
 
 const styles = (theme) => ({
     rowSelected: {
-        backgroundColor: theme.palette.accent.light
+        backgroundColor: ((theme.palette || {}).accent || {}).light
     },
     selected: {
         color: 'white !important',
@@ -78,6 +78,8 @@ export class GrantListEditorRow extends PureComponent {
     constructor(props) {
         super(props);
     }
+
+    handleConfirmationBoxRef = (ref) => (this.confirmationBox = ref);
 
     _showConfirmation = () => {
         this.confirmationBox.showConfirmation();
@@ -153,7 +155,7 @@ export class GrantListEditorRow extends PureComponent {
         return (
             <Fragment>
                 <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
+                    onRef={this.handleConfirmationBoxRef}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation}
                 />
