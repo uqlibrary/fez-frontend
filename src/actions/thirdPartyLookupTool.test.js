@@ -66,7 +66,7 @@ describe('Lookup action creators', () => {
     it('should dispatch 2 actions on error 403 while fetching a lookup', async () => {
         mockApi
             .onAny()
-            .reply(403, {});
+            .reply(403, {"data":"[I006] The API Key was invalid. Please use a different key."});
 
         const expectedActions = [
             actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
@@ -80,7 +80,35 @@ describe('Lookup action creators', () => {
     it('should dispatch 2 actions on non-403 error', async () => {
         mockApi
             .onAny()
-            .reply(500, {});
+            .reply(500, {"data":"[I008] Incites is not currently available. Support have been advised."});
+
+        const expectedActions = [
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED
+        ];
+
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT'));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch 2 actions on unexpected error', async () => {
+        mockApi
+            .onAny()
+            .reply(500, "unformatted response was received from Incites");
+
+        const expectedActions = [
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
+            actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED
+        ];
+
+        await mockActionsStore.dispatch(thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT'));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch 2 actions on missing error message', async () => {
+        mockApi
+            .onAny()
+            .reply(500);
 
         const expectedActions = [
             actions.THIRD_PARTY_LOOKUP_TOOL_LOADING,
