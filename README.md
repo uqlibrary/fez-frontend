@@ -172,6 +172,8 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`.
 
+[Code coverage](http://localhost:3000/coverage/index.html) is available (after running npm run)
+
 #### Guidelines
 
 - [Action creators](https://github.com/uqlibrary/fez-frontend/blob/master/src/actions/README.md#testing)
