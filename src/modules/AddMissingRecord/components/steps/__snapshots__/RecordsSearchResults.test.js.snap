@@ -1219,6 +1219,30 @@ exports[`Search record results should render a single unclaimable item with no a
           }
         >
           <RecordsSearchResults
+            account={
+              Object {
+                "barcode": "240675201000000",
+                "blocked": false,
+                "canMasquerade": false,
+                "class": Array [
+                  "Campus-MATERHOSP",
+                ],
+                "classes": Array [],
+                "expiryDate": "31-12-19",
+                "firstName": "J",
+                "groups": Array [
+                  "CN=Sci Faculty",
+                ],
+                "hasSession": true,
+                "homeLib": "St Lucia",
+                "id": "uqresearcher",
+                "lastName": "Researcher",
+                "mail": "j.Researcher@uq.edu.au",
+                "name": "J Researcher",
+                "tokenBased": false,
+                "type": 3,
+              }
+            }
             history={Object {}}
             loadingPublicationSources={Object {}}
             publicationsList={
