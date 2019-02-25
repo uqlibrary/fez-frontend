@@ -1,4 +1,5 @@
 import RecordsSearchResults from './RecordsSearchResults';
+import {accounts} from 'mock/data/account';
 
 jest.mock('react-dom', () => ({
     findDOMNode: () => ({
@@ -9,6 +10,7 @@ jest.mock('react-dom', () => ({
 function setup(testProps, isShallow = true) {
     const props = {
         history: {},
+        account: accounts.uqresearcher || testProps.account || {},
         ...testProps
     };
     return getElement(RecordsSearchResults, props, isShallow);
