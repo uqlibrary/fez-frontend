@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
-import InputLabel from '@material-ui/core/InputLabel';
 import {withStyles} from '@material-ui/core/styles';
 
 const styles = () => ({
