@@ -1,4 +1,5 @@
 import {PublicationYearRangeField} from './PublicationYearRangeField';
+import PublicationYearRangeFieldWithStyles from './PublicationYearRangeField';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -47,4 +48,8 @@ describe('Component PublicationYearRangeField', () => {
         expect(updateMock).toBeCalledWith({"from": 1999, "invalid": true, "to": 1100});
     });
 
+    it('should render with styles', () => {
+        const wrapper = getElement(PublicationYearRangeFieldWithStyles, {updateYearRangeFilter: jest.fn()});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
