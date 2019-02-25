@@ -3,9 +3,10 @@ import RichEditor from './RichEditor';
 import 'ckeditor';
 import Immutable from 'immutable';
 
+const setReadOnlyFn = jest.fn();
 window.CKEDITOR = {
     appendTo: () => ({
-        setReadOnly: jest.fn(),
+        setReadOnly: setReadOnlyFn,
         on: jest.fn()
     })
 };
@@ -15,9 +16,9 @@ jest.mock('react-dom');
 
 function setup(testProps, isShallow = true) {
     const props = {
+        onChange: jest.fn(), // PropTypes.func.isRequired,
+        disabled: false,
         ...testProps,
-        onChange: testProps.onChange || jest.fn(), // PropTypes.func.isRequired,
-        disabled: testProps.disabled || false,
     };
 
     return getElement(RichEditor, props, isShallow);
@@ -108,5 +109,50 @@ describe('RichEditor tests ', () => {
             disabled: true
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
+    });
+
+    it('should set CKEditor as read only', () => {
+        const wrapper = setup({disabled: true});
+        wrapper.instance().onInstanceReady();
+        expect(setReadOnlyFn).toHaveBeenCalledWith(true);
+    });
+
+    it('should call onChange function passed in props with value', () => {
+        const onChangeFn = jest.fn();
+        const wrapper = setup({onChange: onChangeFn});
+        wrapper.instance().onChange({
+            editor: {
+                document: {
+                    getBody: () => ({
+                        getText: () => ({
+                            trim: () => 'test'
+                        })
+                    })
+                },
+                getData: () => (<span>test</span>)
+            }
+        });
+        expect(onChangeFn).toHaveBeenCalledWith({
+            htmlText: <span>test</span>,
+            plainText: 'test'
+        });
+    });
+
+    it('should call onChange function passed in props with null', () => {
+        const onChangeFn = jest.fn();
+        const wrapper = setup({onChange: onChangeFn});
+        wrapper.instance().onChange({
+            editor: {
+                document: {
+                    getBody: () => ({
+                        getText: () => ({
+                            trim: () => ''
+                        })
+                    })
+                },
+                getData: () => (<span>test</span>)
+            }
+        });
+        expect(onChangeFn).toHaveBeenCalledWith(null);
     });
 });
