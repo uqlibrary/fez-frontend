@@ -2,7 +2,8 @@
 
 exports[`Component ContributorRow  Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -162,7 +163,8 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
 
 exports[`Component ContributorRow  Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -322,7 +324,8 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -446,7 +449,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -570,7 +574,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
 
 exports[`Component ContributorRow  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -764,7 +769,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -889,7 +895,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1014,7 +1021,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
 
 exports[`Component ContributorRow  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1139,7 +1147,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
 
 exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1299,7 +1308,8 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
 
 exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",

@@ -997,7 +997,8 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -1836,7 +1837,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -3041,7 +3043,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -3916,7 +3919,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -5181,7 +5185,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -6556,7 +6561,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -7931,7 +7937,8 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -9306,7 +9313,8 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -11724,7 +11732,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -13114,7 +13123,8 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -14489,7 +14499,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -15877,7 +15888,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -17263,7 +17275,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -18650,7 +18663,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
@@ -18990,7 +19004,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <WithStyles(ConfirmDialogBox)
+      <ConfirmDialogBox
+        hideCancelButton={false}
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
