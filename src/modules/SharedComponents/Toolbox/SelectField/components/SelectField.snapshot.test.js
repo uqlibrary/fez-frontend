@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true) {
         ...testProps
     };
     const consolidatedProps = filterProps(props, SelectField.propTypes);
-    return getElement(SelectField, consolidatedProps, isShallow);
+    return getElement(SelectField, {...consolidatedProps, ...props}, isShallow);
 }
 
 describe('SelectfieldWrapper snapshots tests', () => {
@@ -29,7 +29,7 @@ describe('SelectfieldWrapper snapshots tests', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it ('renders an error', () => {
+    it('renders an error', () => {
         const props =
             {
                 name: 'selectfield',
@@ -42,6 +42,21 @@ describe('SelectfieldWrapper snapshots tests', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it ('changes filteredprops when props are changed', () => {
+    it('should call onChange', () => {
+        const onChangeFn = jest.fn();
+        const onBlurFn = jest.fn();
+        const wrapper = setup({
+            input: {
+                onChange: onChangeFn,
+                onBlur: onBlurFn,
+                value: 'testing'
+            }
+        });
+
+        wrapper.find('WithStyles(Select)').props().onChange({target: {value: 'test'}});
+        expect(onChangeFn).toHaveBeenCalledWith('test');
+
+        wrapper.find('WithStyles(Select)').props().onBlur();
+        expect(onBlurFn).toHaveBeenCalledWith('testing');
     });
 });
