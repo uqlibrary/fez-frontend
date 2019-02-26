@@ -2,9 +2,9 @@ import {FreeTextForm} from './FreeTextForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        onAdd: testProps.onAdd || jest.fn(),
-        isValid: testProps.isValid || jest.fn(() => ('')),
-        disabled: testProps.disabled || false,
+        onAdd: jest.fn(),
+        isValid: jest.fn(() => ''),
+        disabled: false,
         locale: {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name',
@@ -13,6 +13,7 @@ function setup(testProps, isShallow = true) {
         classes: {
             remindToAdd: ''
         },
+        errorText: 'This field is required',
         normalize: value => value,
         ...testProps
     };
@@ -63,4 +64,29 @@ describe('FreeTextForm tests ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should not add item if state is not set', () => {
+        const wrapper = setup({});
+        wrapper.instance().addItem({key: 'Enter'});
+    });
+
+    it('should focus on textField', () => {
+        const focusFn = jest.fn();
+        const wrapper = setup({});
+        wrapper.instance().textField = {
+            focus: focusFn
+        };
+        wrapper.setState({itemName: 'one'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().addItem({key: 'Enter'});
+        expect(focusFn).toHaveBeenCalled();
+    });
+
+    it('should display error about input length', () => {
+        const wrapper = setup({
+            maxInputLength: 3
+        });
+        wrapper.setState({itemName: 'test'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
