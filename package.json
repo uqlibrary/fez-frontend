@@ -240,7 +240,9 @@
       "src/modules/Index/*.{js,jsx}",
       "src/actions/*.{js,jsx}",
       "src/middleware/*.{js,jsx}",
-      "src/reducers/*.{js,jsx}"
+      "src/reducers/*.{js,jsx}",
+      "!src/modules/SharedComponents/RichEditor/components/RichEditor.js",
+      "!src/modules/SharedComponents/Toolbox/Charts/components/*.js"
     ],
     "coverageReporters": [
       "html",
