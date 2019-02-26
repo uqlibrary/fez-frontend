@@ -135,7 +135,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",

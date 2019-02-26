@@ -2,7 +2,8 @@
 
 exports[`FileUploadRow renders with uploaded file 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",

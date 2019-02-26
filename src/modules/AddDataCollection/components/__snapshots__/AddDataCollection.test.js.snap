@@ -3,7 +3,8 @@
 exports[`AddDataCollection test should get save confirmation locale correctly 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "Add another missing dataset",
@@ -1196,7 +1197,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
 exports[`AddDataCollection test should render data set form 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "Add another missing dataset",
