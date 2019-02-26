@@ -141,3 +141,89 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
   </WithStyles(Grid)>
 </div>
 `;
+
+exports[`ListRowHeader renders  should render default view with styles 1`] = `
+<ListRowHeader
+  classes={
+    Object {
+      "center": "ListRowHeader-center-2",
+      "header": "ListRowHeader-header-3",
+      "right": "ListRowHeader-right-1",
+    }
+  }
+  locale={
+    Object {
+      "deleteAll": "Remove all items",
+      "deleteAllConfirmation": Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all items?",
+        "confirmationTitle": "Delete all",
+      },
+      "nameColumn": "Name",
+      "reorderColumn": "Reorder items",
+    }
+  }
+  onDeleteAll={[MockFunction]}
+/>
+`;
+
+exports[`ListRowHeader renders  should render larger grid item 1`] = `
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all items?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    className=""
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={11}
+      xs={10}
+    >
+      <WithStyles(Typography)
+        variant="caption"
+      >
+        Name
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className=""
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove all items"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteForeverIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
