@@ -65,6 +65,52 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
+        it('dispatches expected actions on successful save on alternate data format', async () => {
+            const testInput = {
+                "currentAuthor": [
+                    {
+                        "nameAsPublished": "Researcher, J",
+                        "authorId": 410
+                    }
+                ],
+                "rek_title": "test",
+                "rek_display_type": 179,
+                "authors": [
+                    {
+                        "nameAsPublished": "test",
+                        "disabled": false,
+                        "selected": true,
+                        "authorId": 410
+                    }
+                ],
+                "editors": [],
+                "files": [],
+                "supervisors": [],
+                "fieldOfResearch": "",
+                "fez_record_search_key_journal_name": {
+                    "rek_journal_name": "test"
+                },
+                "rek_date": "2017-01-01",
+                "rek_subtype": "Article (original research)"
+            };
+            const pidRequest = {pid: 'UQ:396321'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, {data: {data: {...record}}})
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, {data: {data: {...record}}});
+
+
+            const expectedActions = [
+                actions.CREATE_RECORD_SAVING,
+                actions.CREATE_RECORD_SUCCESS
+            ];
+
+            await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
         it('dispatches expected actions on successful save with files', async () => {
             const testInput = {
                 "currentAuthor": [
@@ -1045,6 +1091,60 @@ describe('Record action creators', () => {
                 .reply(200, {data: {...record}})
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, {data: {...record}});
+
+
+            const expectedActions = [
+                actions.CREATE_RECORD_SAVING,
+                actions.CREATE_RECORD_SUCCESS
+            ];
+
+            await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on successful save with alternate record format', async () => {
+            const testInput = {
+                "thesisTitle": {
+                    planText: 'Title',
+                    htmlText: 'Title'
+                },
+                "thesisAbstract": {
+                    plainText: 'Abstract',
+                    htmlText: 'Abstract'
+                },
+                "currentAuthor": [
+                    {
+                        "nameAsPublished": "Researcher, J",
+                        "authorId": 410
+                    }
+                ],
+                "rek_title": "test",
+                "rek_display_type": 179,
+                "authors": [
+                    {
+                        "nameAsPublished": "test",
+                        "disabled": false,
+                        "selected": true,
+                        "authorId": 410
+                    }
+                ],
+                "editors": [],
+                "files": [],
+                "supervisors": [],
+                "fieldOfResearch": "",
+                "fez_record_search_key_journal_name": {
+                    "rek_journal_name": "test"
+                },
+                "rek_date": "2017-01-01",
+                "rek_subtype": "Article (original research)"
+            };
+            const pidRequest = {pid: 'UQ:396321'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, {data: {data: {...record}}})
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, {data: {data: {...record}}});
 
 
             const expectedActions = [
