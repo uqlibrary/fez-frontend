@@ -1971,7 +1971,6 @@ exports[`Index page should render placeholders 1`] = `
                                                           "setRedirectPath": [Function],
                                                           "showAppAlert": [Function],
                                                           "submitThesis": [Function],
-                                                          "submitThesisOld": [Function],
                                                           "unclaimRecord": [Function],
                                                           "updateCurrentAuthor": [Function],
                                                         }
@@ -2076,7 +2075,6 @@ exports[`Index page should render placeholders 1`] = `
                                                             "setRedirectPath": [Function],
                                                             "showAppAlert": [Function],
                                                             "submitThesis": [Function],
-                                                            "submitThesisOld": [Function],
                                                             "unclaimRecord": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                           }
@@ -2188,7 +2186,6 @@ exports[`Index page should render placeholders 1`] = `
                                                               "setRedirectPath": [Function],
                                                               "showAppAlert": [Function],
                                                               "submitThesis": [Function],
-                                                              "submitThesisOld": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
                                                             }
@@ -2719,7 +2716,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "setRedirectPath": [Function],
                                                                 "showAppAlert": [Function],
                                                                 "submitThesis": [Function],
-                                                                "submitThesisOld": [Function],
                                                                 "unclaimRecord": [Function],
                                                                 "updateCurrentAuthor": [Function],
                                                               }
@@ -6114,7 +6110,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "setRedirectPath": [Function],
                                                                   "showAppAlert": [Function],
                                                                   "submitThesis": [Function],
-                                                                  "submitThesisOld": [Function],
                                                                   "unclaimRecord": [Function],
                                                                   "updateCurrentAuthor": [Function],
                                                                 }
@@ -6173,7 +6168,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "setRedirectPath": [Function],
                                                                     "showAppAlert": [Function],
                                                                     "submitThesis": [Function],
-                                                                    "submitThesisOld": [Function],
                                                                     "unclaimRecord": [Function],
                                                                     "updateCurrentAuthor": [Function],
                                                                   }
