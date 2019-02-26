@@ -177,4 +177,79 @@ describe('Component PublicationForm', () => {
         expect(testMethod).toHaveBeenCalled();
     });
 
+    it('_handleDefaultSubmit', () => {
+        const event = {preventDefault: jest.fn()};
+        const wrapper = setup({initialValues: {}});
+        wrapper.instance()._handleDefaultSubmit(event);
+        expect(event.preventDefault).toHaveBeenCalled();
+    });
+
+    it('Shows an alert', () => {
+        const wrapper = setup({initialValues: {}, formComponent: null, changeFormType: jest.fn(), error: 'There is an error', formErrors: ['error'] });
+        // export const getErrorAlertProps = ({dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({formComponent: 'test'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({submitSucceeded: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should call componentWillReceiveProps when props change', () => {
+        const changeDisplayType = jest.fn();
+        const changeFormType = jest.fn();
+        const wrapper = setup({initialValues: {}, changeDisplayType: changeDisplayType, changeFormType: changeFormType});
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": false,
+            "subtypes": null,
+            "formComponent": null,
+            "isNtro": false,
+            "hasDefaultDocTypeSubType": false,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        // Testing conditional paths
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": true,
+            "subtypes": null,
+            "formComponent": null,
+            "isNtro": false,
+            "hasDefaultDocTypeSubType": false,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": true,
+            "subtypes": ['test', 'test2'],
+            "formComponent": null,
+            "isNtro": false,
+            "hasDefaultDocTypeSubType": false,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": true,
+            "subtypes": ['test', 'test2'],
+            "formComponent": null,
+            "isNtro": true,
+            "hasDefaultDocTypeSubType": true,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(changeDisplayType).toHaveBeenCalled();
+        expect(changeFormType).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
 });

@@ -80,6 +80,7 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        console.log(!!alertProps, this.props.isNtro);
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
