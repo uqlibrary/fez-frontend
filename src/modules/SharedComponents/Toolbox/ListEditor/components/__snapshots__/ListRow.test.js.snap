@@ -9,7 +9,8 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
     }
   }
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -78,7 +79,8 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
     }
   }
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
