@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component PublicationYearRangeField should render as expected 1`] = `
+exports[`DateRangeField component should render default view 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
@@ -11,9 +11,7 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
     >
       <WithStyles(InputLabel)
         shrink={true}
-      >
-        Published year range
-      </WithStyles(InputLabel)>
+      />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
@@ -29,18 +27,12 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       }
       zeroMinWidth={true}
     >
-      <TextField
-        aria-label="Enter a year to search from"
-        disabled={false}
-        error={false}
-        fullWidth={true}
-        id="to"
+      <DatePickerField
+        disableFuture={false}
+        errorText=""
+        format="DD/MM/YYYY"
         onChange={[Function]}
-        placeholder="Year from"
-        required={false}
-        select={false}
-        value="1999"
-        variant="standard"
+        value={null}
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -75,38 +67,31 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       }
       zeroMinWidth={true}
     >
-      <TextField
-        InputLabelProps={
-          Object {
-            "shrink": true,
-          }
-        }
-        aria-label="Enter a year to search to"
-        disabled={false}
+      <DatePickerField
+        disableFuture={false}
         error={false}
-        fullWidth={true}
-        id="from"
+        errorText=""
+        format="DD/MM/YYYY"
         onChange={[Function]}
-        placeholder="Year to"
-        required={false}
-        select={false}
-        value="2001"
-        variant="standard"
+        value={null}
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </Fragment>
 `;
 
-exports[`Component PublicationYearRangeField should render with styles 1`] = `
-<PublicationYearRangeField
+exports[`DateRangeField component should render default view with styles 1`] = `
+<DateRangeField
   className="publicationyearrange menuitem"
   classes={
     Object {
-      "title": "PublicationYearRangeField-title-1",
+      "title": "DateRangeField-title-1",
     }
   }
+  disableFuture={false}
   disabled={false}
+  format="DD/MM/YYYY"
+  onChange={[MockFunction]}
   theme={
     Object {
       "breakpoints": Object {
@@ -470,13 +455,325 @@ exports[`Component PublicationYearRangeField should render with styles 1`] = `
       },
     }
   }
-  updateYearRangeFilter={[MockFunction]}
-  yearFilter={
-    Object {
-      "from": null,
-      "to": null,
-      "valid": true,
-    }
-  }
 />
+`;
+
+exports[`DateRangeField component should render disabled view 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InputLabel)
+        shrink={true}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
+    >
+      <TextField
+        InputProps={
+          Object {
+            "disableUnderline": true,
+          }
+        }
+        disabled={true}
+        required={false}
+        select={false}
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+        value=" to "
+        variant="standard"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={false}
+        error={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`DateRangeField component should render with future disabled 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InputLabel)
+        shrink={true}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={true}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
+    >
+      <TextField
+        InputProps={
+          Object {
+            "disableUnderline": true,
+          }
+        }
+        disabled={true}
+        required={false}
+        select={false}
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+        value=" to "
+        variant="standard"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={true}
+        error={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`DateRangeField component should update on receiving new state 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InputLabel)
+        shrink={true}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
+    >
+      <TextField
+        InputProps={
+          Object {
+            "disableUnderline": true,
+          }
+        }
+        disabled={true}
+        required={false}
+        select={false}
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+        value=" to "
+        variant="standard"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={false}
+        error={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value={null}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`DateRangeField component should update on receiving new state 2`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InputLabel)
+        shrink={true}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value="01/01/1970"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs="auto"
+    >
+      <TextField
+        InputProps={
+          Object {
+            "disableUnderline": true,
+          }
+        }
+        disabled={true}
+        required={false}
+        select={false}
+        style={
+          Object {
+            "width": 24,
+          }
+        }
+        value=" to "
+        variant="standard"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "flexGrow": 1,
+          "width": 1,
+        }
+      }
+      zeroMinWidth={true}
+    >
+      <DatePickerField
+        disableFuture={false}
+        error={false}
+        errorText=""
+        format="DD/MM/YYYY"
+        onChange={[Function]}
+        value="01/01/1980"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
 `;

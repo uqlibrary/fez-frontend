@@ -13,8 +13,8 @@ const styles = theme => ({
         ...theme.typography.caption
     },
     selectedMenuItem: {
-        backgroundColor: `${theme.palette.accent.main} !important`,
-        color: theme.palette.white.main
+        backgroundColor: `${((theme.palette || {}).accent || {}).main || ''} !important`,
+        color: ((theme.palette || {}).white || {}).main || ''
     }
 });
 
