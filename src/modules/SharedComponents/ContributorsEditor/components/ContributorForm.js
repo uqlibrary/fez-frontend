@@ -109,6 +109,9 @@ export class ContributorForm extends PureComponent {
         });
     }
 
+    /**
+     * @deprecated
+     */
     _onUQIdentifierChanged = (newValue) => {
         this.setState({
             uqIdentifier: newValue
