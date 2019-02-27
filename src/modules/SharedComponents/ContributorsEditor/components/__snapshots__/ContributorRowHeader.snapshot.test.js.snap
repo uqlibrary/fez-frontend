@@ -429,3 +429,131 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
   </WithStyles(ListItem)>
 </Fragment>
 `;
+
+exports[`Component ContributorRowHeader should display infinite class 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(PeopleIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      secondary="Name as published"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "undefined test-class-1",
+          }
+        }
+        secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+    </Hidden>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": "test-class-2",
+        }
+      }
+    >
+      <WithStyles(Tooltip)
+        title="Remove all records"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteForeverIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`Component ContributorRowHeader should render component with styles 1`] = `
+<ContributorRowHeader
+  classes={
+    Object {
+      "header": "ContributorRowHeader-header-2",
+      "paddingRight14": "ContributorRowHeader-paddingRight14-5",
+      "paddingRight24": "ContributorRowHeader-paddingRight24-3",
+      "paddingRight36": "ContributorRowHeader-paddingRight36-4",
+      "right": "ContributorRowHeader-right-1",
+    }
+  }
+  locale={
+    Object {
+      "contributorAssignmentColumn": "Select your name",
+      "deleteAll": "Remove all records",
+      "deleteAllConfirmation": Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      },
+      "descriptionStep2": "Step 2 - Select your name from the list below",
+      "identifierColumn": "UQ identifier",
+      "nameColumn": "Name as published",
+      "reorderColumn": "Reorder records",
+      "roleColumn": "Role",
+    }
+  }
+  onDeleteAll={[MockFunction]}
+/>
+`;
