@@ -61,7 +61,10 @@ export class UnpublishedBufferCitationView extends Component {
                         onClose={this.handleClose}
                     >
                         {options.map((option, index) => (
-                            <MenuItem key={index} onClick={this.navigateToUrl(option.url(this.props.publication.rek_pid))}>
+                            <MenuItem
+                                key={index}
+                                onClick={this.navigateToUrl(option.url(this.props.publication.rek_pid))}
+                            >
                                 {option.label}
                             </MenuItem>
                         ))}
