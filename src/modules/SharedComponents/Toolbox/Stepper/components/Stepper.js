@@ -28,8 +28,8 @@ const styles = theme => ({
 export class CustomStepper extends Component {
     static propTypes = {
         activeStep: PropTypes.number,
-        steps: PropTypes.array,
-        classes: PropTypes.object,
+        steps: PropTypes.array.isRequired,
+        classes: PropTypes.object.isRequired,
         width: PropTypes.any
     };
 
