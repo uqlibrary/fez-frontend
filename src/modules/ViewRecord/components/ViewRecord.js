@@ -78,7 +78,7 @@ export default class ViewRecord extends PureComponent {
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
                     <Links publication={recordToView}/>
                     <RelatedPublications publication={recordToView} />
-                    <AdditionalInformation publication={recordToView} isNtro={isNtro} />
+                    <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
                     {
                         isNtro &&
                         <NtroDetails publication={recordToView} account={this.props.account}/>

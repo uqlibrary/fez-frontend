@@ -36,7 +36,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     <WithStyles(RelatedPublications)
       publication={Object {}}
     />
-    <WithStyles(AdditionalInformation)
+    <AdditionalInformation
       isNtro={false}
       publication={Object {}}
     />
@@ -1637,7 +1637,12 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
         }
       }
     />
-    <WithStyles(AdditionalInformation)
+    <AdditionalInformation
+      account={
+        Object {
+          "canMasquerade": true,
+        }
+      }
       isNtro={true}
       publication={
         Object {
@@ -5220,7 +5225,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
         }
       }
     />
-    <WithStyles(AdditionalInformation)
+    <AdditionalInformation
       isNtro={false}
       publication={
         Object {
@@ -8413,7 +8418,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         }
       }
     />
-    <WithStyles(AdditionalInformation)
+    <AdditionalInformation
       isNtro={false}
       publication={
         Object {
