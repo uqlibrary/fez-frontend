@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('AddDataCollection container', () => {
-    fit('should correctly connect AddDataCollection component to the store', () => {
+    it('should correctly connect AddDataCollection component to the store', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });

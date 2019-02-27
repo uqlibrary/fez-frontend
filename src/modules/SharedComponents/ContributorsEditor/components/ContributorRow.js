@@ -25,7 +25,7 @@ const styles = (theme) => ({
         padding: '0'
     },
     rowSelected: {
-        backgroundColor: theme.palette.accent.light
+        backgroundColor: ((theme.palette || {}).accent || {}).light
     },
     selected: {
         color: 'white !important',
@@ -159,7 +159,7 @@ export class ContributorRow extends PureComponent {
                     )}
                 </Grid>
                 {
-                    showIdentifierLookup || !!contributor.aut_title &&
+                    (showIdentifierLookup || !!contributor.aut_title) &&
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
