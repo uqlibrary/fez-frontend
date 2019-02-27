@@ -217,7 +217,30 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('should render with Styles', () => {
-        const wrapper = getElement(ContributorsEditorWithStyles, {}, true);
+        const wrapper = getElement(ContributorsEditorWithStyles, {}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not move contributor up', () => {
+        const wrapper = setup({});
+        expect(wrapper.instance().moveUpContributor('test', 0)).toBeUndefined();
+    });
+
+    it('should not move contributor down', () => {
+        const wrapper = setup({
+            locale: {
+                form: 'test',
+                header: 'test header',
+                row: 'test row'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setState({
+            contributors: [
+                'test1',
+                'test2'
+            ]
+        });
+        expect(wrapper.instance().moveDownContributor('test2', 1)).toBeUndefined();
     });
 });
