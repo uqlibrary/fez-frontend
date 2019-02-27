@@ -90,4 +90,9 @@ describe('PublicationCitation ', () => {
         const wrapper = setup({publication: publicationWithMetricData, showMetrics: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render publication with unpublished buffer', () => {
+        const wrapper = setup({publication: mockRecordToFix, showUnpublishedBufferFields: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
