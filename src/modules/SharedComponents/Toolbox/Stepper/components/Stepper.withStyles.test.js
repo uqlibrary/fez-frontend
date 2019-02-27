@@ -18,11 +18,11 @@ describe('Component Stepper with Styles', () => {
         {label: 'Step 3'}
     ];
 
-    fit('should render properly', () => {
+    it('should render properly', () => {
         const wrapper = setup({
             steps
         }, false);
-        expect(wrapper.find('WithStyles(Stepper)').length).toBe(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
 });

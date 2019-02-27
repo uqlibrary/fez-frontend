@@ -1,5 +1,8 @@
 import {ContributorsEditor} from './ContributorsEditor';
+import ContributorsEditorWithStyles from './ContributorsEditor';
 import {authorsSearch} from 'mock/data';
+import Immutable from 'immutable';
+import React from 'react';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -145,4 +148,76 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.find('WithStyles(Typography)').length).toEqual(1);
     });
 
+    it('should update component', () => {
+        const onChangeFn = jest.fn();
+        const wrapper = setup({
+            onChange: onChangeFn
+        });
+        wrapper.setState({
+            contributors: [
+                {displayName: 'test 1'},
+                {displayName: 'test 2'},
+            ]
+        });
+
+        expect(onChangeFn).toHaveBeenCalledWith([
+            {displayName: 'test 1'},
+            {displayName: 'test 2'},
+        ]);
+    });
+
+    it('should get contributors from props and input value set as an array', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: [
+                    {displayName: 'test 1'},
+                    {displayName: 'test 2'},
+                ]
+            }
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should get contributors from props and input value set as an Immutable list', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: Immutable.List([
+                    {displayName: 'test 1'},
+                    {displayName: 'test 2'},
+                ])
+            }
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render error as html', () => {
+        const wrapper = setup({
+            meta: {
+                error: (
+                    <p>
+                        <span>test</span>
+                    </p>
+                )
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render error as one child', () => {
+        const wrapper = setup({
+            meta: {
+                error: (<span>test</span>)
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render with Styles', () => {
+        const wrapper = getElement(ContributorsEditorWithStyles, {}, true);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

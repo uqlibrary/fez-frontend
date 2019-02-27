@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
@@ -251,7 +250,4 @@ const styles = () => ({
     }
 });
 
-export default compose(
-    withStyles(styles),
-    connect(mapStateToProps)
-)(ContributorsEditor);
+export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));

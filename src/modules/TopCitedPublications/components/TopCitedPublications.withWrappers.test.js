@@ -13,6 +13,6 @@ function setup(testProps, isShallow = true){
 describe('Component TopCitedPublications with wrappers', () => {
     it('should render properly', () => {
         const wrapper = setup({}, false);
-        expect(toJson(wrapper.instance())).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
