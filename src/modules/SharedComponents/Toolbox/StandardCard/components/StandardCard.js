@@ -27,7 +27,7 @@ const styles = theme => ({
     }
 });
 
-class Cards extends Component {
+export class Cards extends Component {
     static propTypes = {
         title: PropTypes.any,
         darkHeader: PropTypes.bool,
@@ -35,7 +35,7 @@ class Cards extends Component {
         noPadding: PropTypes.bool,
         noHeader: PropTypes.bool,
         children: PropTypes.any,
-        classes: PropTypes.object,
+        classes: PropTypes.object.isRequired,
         help: PropTypes.object,
         customBackgroundColor: PropTypes.any,
         customTitleColor: PropTypes.any
