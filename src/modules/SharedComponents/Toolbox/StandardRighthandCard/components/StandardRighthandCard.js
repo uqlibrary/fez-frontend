@@ -16,9 +16,9 @@ const styles = {
     }
 };
 
-class RighthandCard extends React.Component {
+export class RighthandCard extends React.Component {
     static propTypes ={
-        classes: PropTypes.object,
+        classes: PropTypes.object.isRequired,
         children: PropTypes.any,
         title: PropTypes.string,
         help: PropTypes.shape({
