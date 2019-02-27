@@ -10,14 +10,14 @@ const styles = theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        ...theme.palette.primary.gradient.diagonal,
+        ...(((theme.palette || {}).primary || {}).gradient || {}).diagonal,
         width: '100%',
         height: '100%',
         textAlign: 'center !important'
     },
     white: {
-        color: theme.palette.white.main,
-        fontWeight: theme.typography.fontWeightLight
+        color: ((theme.palette || {}).white || {}).main,
+        fontWeight: (theme.typography || {}).fontWeightLight
     },
     spaceBetween: {
         margin: '16px 0'
