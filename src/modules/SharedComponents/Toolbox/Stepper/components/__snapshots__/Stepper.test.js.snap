@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Add record stepper tests should render steps and activate step 1 1`] = `
+exports[`Add record stepper tests should render steps with specific active step 1`] = `
 <WithStyles(Stepper)
   activeStep={0}
 >
@@ -34,7 +34,7 @@ exports[`Add record stepper tests should render steps and activate step 1 1`] = 
 </WithStyles(Stepper)>
 `;
 
-exports[`Add record stepper tests should render steps and activate step 2 1`] = `
+exports[`Add record stepper tests should render steps with specific active step 2`] = `
 <WithStyles(Stepper)
   activeStep={1}
 >
@@ -68,7 +68,7 @@ exports[`Add record stepper tests should render steps and activate step 2 1`] = 
 </WithStyles(Stepper)>
 `;
 
-exports[`Add record stepper tests should render steps and activate step 3 1`] = `
+exports[`Add record stepper tests should render steps with specific active step 3`] = `
 <WithStyles(Stepper)
   activeStep={2}
 >
