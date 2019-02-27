@@ -21,6 +21,7 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
+import {PublicationListLoadingProgressClass} from "../../SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress";
 
 const styles = (theme) => ({
     header: {
@@ -35,7 +36,7 @@ const styles = (theme) => ({
     },
 });
 
-export class Files extends Component {
+export class FilesClass extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
@@ -279,4 +280,6 @@ export class Files extends Component {
     }
 }
 
-export default withStyles(styles)(Files);
+const StyledFilesClass = withStyles(styles, {withTheme: true})(FilesClass);
+const Files = (props) => <StyledFilesClass {...props}/>;
+export default Files;
