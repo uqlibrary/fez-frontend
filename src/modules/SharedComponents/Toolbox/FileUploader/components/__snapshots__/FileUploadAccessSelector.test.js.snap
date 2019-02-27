@@ -3220,6 +3220,30 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
 </WithStyles(FormControl)>
 `;
 
+exports[`Component FileUploadAccessSelector should render with styles 1`] = `
+<FileUploadAccessSelector
+  classes={
+    Object {
+      "error": "FileUploadAccessSelector-error-66",
+      "placeholder": "FileUploadAccessSelector-placeholder-64",
+      "selected": "FileUploadAccessSelector-selected-65",
+      "selector": "FileUploadAccessSelector-selector-63",
+    }
+  }
+  locale={
+    Object {
+      "accessSelectOptionsText": Object {
+        "8": "Closed Access",
+        "9": "Open Access",
+      },
+      "errorMessage": "This field is required",
+      "initialValue": "Select access conditions",
+    }
+  }
+  value=""
+/>
+`;
+
 exports[`Component FileUploadAccessSelector should render with value 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}

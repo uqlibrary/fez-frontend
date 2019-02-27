@@ -40,6 +40,15 @@ export class FileUploadDropzone extends PureComponent {
         this.dropzoneRef = null;
     }
 
+    onReadFileError = (file, errors, resolve) => () => {
+        errors.push(file.name);
+        return resolve(false);
+    };
+
+    onReadFileLoad = (file, resolve) => () => {
+        resolve(file);
+    };
+
     /**
      * Try to read file and set error for a folder
      *
@@ -49,11 +58,8 @@ export class FileUploadDropzone extends PureComponent {
      */
     readFile = (file, errors, resolve) => {
         const fileReader = new FileReader();
-        fileReader.onerror = () => {
-            errors.push(file.name);
-            return resolve(false);
-        };
-        fileReader.onload = () => resolve(file);
+        fileReader.onerror = this.onReadFileError(file, errors, resolve);
+        fileReader.onload = this.onReadFileLoad(file, resolve);
         const slice = file.slice(0, 10);
         return fileReader.readAsDataURL(slice);
     };
