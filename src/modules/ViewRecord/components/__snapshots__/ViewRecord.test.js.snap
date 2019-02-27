@@ -27,7 +27,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     container={true}
     spacing={24}
   >
-    <WithStyles(Files)
+    <Files
       publication={Object {}}
     />
     <WithStyles(Links)
@@ -470,7 +470,7 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
     container={true}
     spacing={24}
   >
-    <WithStyles(Files)
+    <Files
       publication={
         Object {
           "fez_datastream_info": Array [],
@@ -4040,7 +4040,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
     container={true}
     spacing={24}
   >
-    <WithStyles(Files)
+    <Files
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -7233,7 +7233,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
     container={true}
     spacing={24}
   >
-    <WithStyles(Files)
+    <Files
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
