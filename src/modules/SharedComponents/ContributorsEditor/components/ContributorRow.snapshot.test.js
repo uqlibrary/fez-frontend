@@ -1,4 +1,5 @@
 import {ContributorRow} from './ContributorRow';
+import ContributorRowWithStyle from './ContributorRow';
 
 import {authorsSearch} from 'mock/data';
 
@@ -188,5 +189,72 @@ describe('Component ContributorRow ', () => {
         wrapper.instance().confirmationBox = {showConfirmation: testFunction};
         wrapper.instance()._showConfirmation();
         expect(testFunction).toBeCalled();
+    });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(ContributorRowWithStyle, {
+            index: 0,
+            contributor: {
+                nameAsPublished: 'test'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should delete record', () => {
+        const onDeleteFn = jest.fn();
+        const wrapper = setup({
+            disabled: false,
+            onDelete: onDeleteFn,
+            contributor: {
+                nameAsPublished: 'test'
+            },
+            index: 0
+        });
+        wrapper.instance()._deleteRecord();
+        expect(onDeleteFn).toHaveBeenCalled();
+    });
+
+    it('should assign contributor', () => {
+        const wrapper = setup({
+            showContributorAssignment: true,
+            disabledContributorAssignment: false,
+            contributor: {
+                nameAsPublished: 'test',
+                selected: true,
+                affiliation: 'NotUQ',
+                orgtype: '453983'
+            },
+        });
+
+        const blurFn = jest.fn();
+        wrapper.find('WithStyles(ListItem)').props().onClick({currentTarget: {blur: blurFn}});
+        expect(blurFn).toHaveBeenCalled();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should call callback functions on ListItem', () => {
+        const wrapper = setup({
+            showIdentifierLookup: true,
+            showContributorAssignment: false,
+            showRoleInput: true,
+            disabledContributorAssignment: false,
+            contributor: {
+                nameAsPublished: 'test',
+                selected: true,
+                affiliation: 'NotUQ',
+                orgtype: '453983'
+            },
+            width: 'xs',
+            classes: {
+                identifierName: 'test-class-1',
+                identifierSubtitle: 'test-class-2'
+            }
+        });
+
+        wrapper.find('WithStyles(ListItem)').props().onClick();
+        wrapper.find('WithStyles(ListItem)').props().onKeyDown();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
