@@ -21,7 +21,6 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
-import {PublicationListLoadingProgressClass} from "../../SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress";
 
 const styles = (theme) => ({
     header: {
