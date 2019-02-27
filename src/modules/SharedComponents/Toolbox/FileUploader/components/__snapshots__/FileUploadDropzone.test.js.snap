@@ -4356,7 +4356,7 @@ exports[`Component FileUploadDropzone should render with styles 1`] = `
 <FileUploadDropzone
   classes={
     Object {
-      "hideLabel": "FileUploadDropzone-hideLabel-146",
+      "hideLabel": "FileUploadDropzone-hideLabel-160",
     }
   }
   fileNameRestrictions={/\\.\\+/}
