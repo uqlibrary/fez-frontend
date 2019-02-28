@@ -1,24 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
-<TextFieldWrapper
-  classes={Object {}}
-  error={false}
-  floatingLabelText="This is a test textfield component"
-  fullWidth={true}
-  name="testField"
-  type="text"
-/>
+<Fragment>
+  <TextField
+    InputLabelProps={null}
+    error={false}
+    floatingLabelText="This is a test textfield component"
+    fullWidth={true}
+    id=""
+    name="testField"
+    required={false}
+    select={false}
+    type="text"
+    variant="standard"
+  />
+</Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
-<TextFieldWrapper
-  className="requiredField"
-  classes={Object {}}
-  error={false}
-  floatingLabelText="This is a test textfield component"
-  fullWidth={true}
-  name="testField"
-  type="text"
-/>
+<Fragment>
+  <TextField
+    InputLabelProps={null}
+    className="requiredField"
+    error={false}
+    floatingLabelText="This is a test textfield component"
+    fullWidth={true}
+    id=""
+    name="testField"
+    required={false}
+    select={false}
+    type="text"
+    variant="standard"
+  />
+</Fragment>
+`;
+
+exports[`TextFieldWrapper snapshots tests renders TextField component with shrink:true 1`] = `
+<Fragment>
+  <TextField
+    InputLabelProps={
+      Object {
+        "shrink": true,
+      }
+    }
+    error={false}
+    floatingLabelText="This is a test textfield component"
+    floatinglabelfixed={true}
+    fullWidth={true}
+    id=""
+    name="testField"
+    required={false}
+    select={false}
+    type="text"
+    variant="standard"
+  />
+</Fragment>
 `;

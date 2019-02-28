@@ -4452,3 +4452,19 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
   </MemoryRouter>
 </Provider>
 `;
+
+exports[`Component FileUploadDropzone should render with styles 1`] = `
+<FileUploadDropzone
+  classes={
+    Object {
+      "hideLabel": "FileUploadDropzone-hideLabel-160",
+    }
+  }
+  fileNameRestrictions={/\\.\\+/}
+  fileUploadLimit={10}
+  filesInQueue={Array []}
+  locale={Object {}}
+  maxSize={8}
+  onDrop={[MockFunction]}
+/>
+`;

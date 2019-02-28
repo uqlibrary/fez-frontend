@@ -1,4 +1,5 @@
 import {FileUploadDropzone} from './FileUploadDropzone';
+import FileUploadDropzoneWithStyles from './FileUploadDropzone';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -219,5 +220,34 @@ describe('Component FileUploadDropzone', () => {
         await wrapper.instance()._onDrop(accepted, []);
         // wrapper.update();
         expect(onDropTestFn).toHaveBeenCalledWith(expectedFiles, expectedError);
+    });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(FileUploadDropzoneWithStyles, {
+            onDrop: jest.fn(),
+            maxSize: 8,
+            locale: {},
+            fileNameRestrictions: /.+/
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should read file', () => {
+        const wrapper = setup({});
+        const readAsDataURLFn = jest.fn((slice) => slice);
+        window.FileReader = jest.fn(() => ({
+            readAsDataURL: readAsDataURLFn
+        }));
+        const result = wrapper.instance().readFile('this is test file', [], Promise.resolve);
+        expect(result).toBe('this is te');
+    });
+
+    it('should call onerror if fail on read file', () => {
+        const wrapper = setup({});
+        const result = wrapper.instance().onReadFileError({name: 'test'}, [], jest.fn((result) => result))();
+        expect(result).toBeFalsy();
+
+        const file = wrapper.instance().onReadFileLoad({name: 'test'}, jest.fn())();
+        expect(file).toBeUndefined();
     });
 });
