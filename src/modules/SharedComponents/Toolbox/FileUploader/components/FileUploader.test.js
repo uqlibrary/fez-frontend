@@ -1,19 +1,21 @@
 import {FileUploader} from './FileUploader';
+import FileUploaderContainer from './FileUploader';
+
+const getProps = (testProps = {}) => ({
+    fileRestrictionsConfig: {
+        fileUploadLimit: 5,
+        maxFileSize: 1,
+        fileSizeUnit: 'K',
+        fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+    },
+    filesInQueue: [],
+    // locale: locale,
+    fileNameRestrictions: /.+/,
+    ...testProps
+});
 
 function setup(testProps, isShallow = true) {
-    const props = {
-        fileRestrictionsConfig: {
-            fileUploadLimit: 5,
-            maxFileSize: 1,
-            fileSizeUnit: 'K',
-            fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
-        },
-        filesInQueue: [],
-        // locale: locale,
-        fileNameRestrictions: /.+/,
-        ...testProps
-    };
-    return getElement(FileUploader, props, isShallow);
+    return getElement(FileUploader, getProps(testProps), isShallow);
 }
 
 describe('Component FileUploader', () => {
@@ -33,6 +35,24 @@ describe('Component FileUploader', () => {
     it('should render default component', () => {
         const wrapper = setup({});
         const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should mount and unmount container and clear file uploader', () => {
+        const wrapper = getElement(FileUploaderContainer, getProps({
+            isNtro: true,
+            fileRestrictionsConfig: {
+                fileUploadLimit: 5,
+                maxFileSize: 1,
+                fileSizeUnit: 'B',
+                fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+            }
+        }), false);
+        const tree = toJson(wrapper);
+
+        expect(tree).toMatchSnapshot();
+
+        wrapper.unmount();
         expect(tree).toMatchSnapshot();
     });
 
@@ -272,5 +292,30 @@ describe('Component FileUploader', () => {
             notFiles: ['someFolder'],
             tooBigFiles: ['big_file.txt']
         })).toEqual('Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have invalid file name; Invalid files (someFolder); File(s) (big_file.txt) exceed maximum allowed upload file size');
-    })
+    });
+
+    it('should get empty string as an error message', () => {
+        const wrapper = setup({});
+        expect(wrapper.instance().getErrorMessage({
+            tooManyFiles: [],
+            duplicateFiles: [],
+            invalidFileNames: [],
+            notFiles: [],
+            tooBigFiles: []
+        })).toEqual('');
+    });
+
+    it('should update', () => {
+        const onChangeFn = jest.fn();
+        const wrapper = setup({
+            requireOpenAccessStatus: false,
+            onChange: onChangeFn
+        });
+        wrapper.setState({
+            filesInQueue: ['a.txt']
+        });
+        wrapper.update();
+
+        expect(onChangeFn).toHaveBeenCalled();
+    });
 });
