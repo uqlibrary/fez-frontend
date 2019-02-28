@@ -45,10 +45,12 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([""], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({onEmbargoDateChange: testFunction, uploadedFile: file, index: 0});
+        const wrapper = setup({onEmbargoDateChange: testFunction, uploadedFile: file, index: 0, onDelete: false});
 
         wrapper.instance()._updateEmbargoDate(new Date(2016));
         expect(testFunction).toHaveBeenCalledWith(file, 0, new Date(2016));
+
+        wrapper.instance()._deleteFile();
     });
 
     it('should show confirmation and delete file', () => {
@@ -59,6 +61,9 @@ describe('FileUploadRow', () => {
             onDelete: onDeleteFn
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.find('WithStyles(FileUploadRowMobileView)').props().onDelete();
+        expect(showConfirmationFn).toHaveBeenCalledTimes(0);
 
         wrapper.find('ConfirmDialogBox').props().onRef({
             showConfirmation: showConfirmationFn
