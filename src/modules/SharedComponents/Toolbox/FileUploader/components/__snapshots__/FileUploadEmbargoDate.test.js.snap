@@ -54,8 +54,8 @@ exports[`Component FileUploadEmbargoDate should render with default setup with s
       "input": "FileUploadEmbargoDate-input-1",
     }
   }
-  minDate={2019-02-28T02:25:56.104Z}
-  value={2019-02-28T02:25:56.104Z}
+  minDate={2016-01-01T00:00:00.000Z}
+  value={2016-01-01T00:00:00.000Z}
 />
 `;
 

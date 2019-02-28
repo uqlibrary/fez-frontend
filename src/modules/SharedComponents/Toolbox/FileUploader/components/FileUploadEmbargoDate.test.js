@@ -21,7 +21,13 @@ describe('Component FileUploadEmbargoDate', () => {
     });
 
     it('should render with default setup with styles', () => {
-        const wrapper = getElement(FileUploadEmbargoDateWithStyles, {});
+        const wrapper = getElement(FileUploadEmbargoDateWithStyles, {
+            minDate: new Date('2016'),
+            value: new Date('2016'),
+            classes: {
+                input: ''
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
