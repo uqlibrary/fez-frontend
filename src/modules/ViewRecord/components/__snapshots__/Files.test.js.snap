@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Files Component  getFileData{} 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":true,\\"embargoDate\\":null,\\"openAccessStatusId\\":453697},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":true,\\"embargoDate\\":null,\\"openAccessStatusId\\":453697},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":true,\\"embargoDate\\":null,\\"openAccessStatusId\\":453697},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":true,\\"embargoDate\\":null,\\"openAccessStatusId\\":453697},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":true,\\"embargoDate\\":null,\\"openAccessStatusId\\":453697},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"thumbnailFileName\\":false,\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":true,\\"embargoDate\\":null,\\"openAccessStatusId\\":453697},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\"}]"`;
+exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"thumbnailFileName\\":false,\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\"}]"`;
 
 exports[`Files Component  should not render component with no files 1`] = `""`;
 
@@ -1269,6 +1269,273 @@ exports[`Files Component  should render component 1`] = `
   <StandardCard
     title="Files"
   >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
+
+exports[`Files Component  should render component 2 1`] = `
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <WithStyles(Alert)
+      allowDismiss={true}
+      dismissAction={[MockFunction]}
+      message="Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes."
+      type="info"
+    />
     <div
       style={
         Object {

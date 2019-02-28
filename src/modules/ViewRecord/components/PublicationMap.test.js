@@ -11,6 +11,7 @@ function setup(testProps, isShallow = false){
 }
 
 describe('Publication\'s map coordinates', () => {
+
     it('should render component with a selected area', () => {
         const wrapper = setup({coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337'});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -25,5 +26,11 @@ describe('Publication\'s map coordinates', () => {
         const wrapper = setup({coordinates: '153.021781,-27.489337' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render component with a marker', () => {
+        const wrapper = setup({coordinates: '153.021781,-27.489337' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });
 

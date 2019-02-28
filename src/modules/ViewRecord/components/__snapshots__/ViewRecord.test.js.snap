@@ -30,20 +30,20 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     <Files
       publication={Object {}}
     />
-    <WithStyles(Links)
+    <Links
       publication={Object {}}
     />
-    <WithStyles(RelatedPublications)
+    <RelatedPublications
       publication={Object {}}
     />
     <AdditionalInformation
       isNtro={false}
       publication={Object {}}
     />
-    <WithStyles(GrantInformation)
+    <GrantInformation
       publication={Object {}}
     />
-    <WithStyles(PublicationDetails)
+    <PublicationDetails
       publication={Object {}}
     />
     <AvailableVersions
@@ -859,7 +859,7 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
         }
       }
     />
-    <WithStyles(Links)
+    <Links
       publication={
         Object {
           "fez_datastream_info": Array [],
@@ -1248,7 +1248,7 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
         }
       }
     />
-    <WithStyles(RelatedPublications)
+    <RelatedPublications
       publication={
         Object {
           "fez_datastream_info": Array [],
@@ -2032,7 +2032,7 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
         }
       }
     />
-    <WithStyles(NtroDetails)
+    <NtroDetails
       account={
         Object {
           "canMasquerade": true,
@@ -2426,7 +2426,7 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
         }
       }
     />
-    <WithStyles(GrantInformation)
+    <GrantInformation
       publication={
         Object {
           "fez_datastream_info": Array [],
@@ -2815,7 +2815,7 @@ exports[`Component ViewRecord  should render NTRO Details 1`] = `
         }
       }
     />
-    <WithStyles(PublicationDetails)
+    <PublicationDetails
       publication={
         Object {
           "fez_datastream_info": Array [],
@@ -4435,7 +4435,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
         }
       }
     />
-    <WithStyles(Links)
+    <Links
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -4830,7 +4830,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
         }
       }
     />
-    <WithStyles(RelatedPublications)
+    <RelatedPublications
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -5621,7 +5621,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
         }
       }
     />
-    <WithStyles(GrantInformation)
+    <GrantInformation
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -6016,7 +6016,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
         }
       }
     />
-    <WithStyles(PublicationDetails)
+    <PublicationDetails
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -7628,7 +7628,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         }
       }
     />
-    <WithStyles(Links)
+    <Links
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -8023,7 +8023,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         }
       }
     />
-    <WithStyles(RelatedPublications)
+    <RelatedPublications
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -8814,7 +8814,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         }
       }
     />
-    <WithStyles(GrantInformation)
+    <GrantInformation
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -9209,7 +9209,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         }
       }
     />
-    <WithStyles(PublicationDetails)
+    <PublicationDetails
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,

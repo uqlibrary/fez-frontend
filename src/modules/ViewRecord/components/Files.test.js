@@ -30,6 +30,19 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component 2', () => {
+        const wrapper = setup({
+            hideCulturalSensitivityStatement: false,
+            publication: {
+                ...journalArticle,
+                fez_record_search_key_advisory_statement: {
+                    rek_advisory_statement: null
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component full mount', () => {
         const wrapper = getElement(Files, {theme: {},
             publication: journalArticle,
@@ -1016,7 +1029,7 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    fit('getFileData{}', () => {
+    it('getFileData{} branch 1', () => {
         const pub = {
             "rek_pid": "UQ:185044",
             "rek_title_xsdmf_id": 10766,
@@ -1342,7 +1355,7 @@ describe('Files Component ', () => {
                 "rek_oa_status_id": 319686,
                 "rek_oa_status_pid": "UQ:185044",
                 "rek_oa_status_xsdmf_id": 16978,
-                "rek_oa_status": 453697,
+                "rek_oa_status": 453693,
                 "rek_oa_status_lookup": "Other"
             },
             "fez_record_search_key_org_name": {
@@ -1425,17 +1438,17 @@ describe('Files Component ', () => {
             "fez_datastream_info": [{
                 "dsi_pid": "UQ:185044",
                 "dsi_dsid": "CH7409_movie_1.mov",
-                "dsi_embargo_date": null,
+                "dsi_embargo_date": '01-01-2001',
                 "dsi_open_access": 1,
                 "dsi_label": "Movie 1",
-                "dsi_mimetype": "video/quicktime",
+                "dsi_mimetype": null,
                 "dsi_copyright": null,
                 "dsi_state": "A",
                 "dsi_size": 3000090
             }, {
                 "dsi_pid": "UQ:185044",
                 "dsi_dsid": "CH7409_movie_2.mov",
-                "dsi_embargo_date": null,
+                "dsi_embargo_date": '',
                 "dsi_open_access": 1,
                 "dsi_label": "Movie 2",
                 "dsi_mimetype": "video/quicktime",
@@ -1715,8 +1728,8 @@ describe('Files Component ', () => {
             }, {
                 "dsi_pid": "UQ:185044",
                 "dsi_dsid": "thumbnail_CH7409_movie_5.jpg",
-                "dsi_embargo_date": null,
-                "dsi_open_access": null,
+                "dsi_embargo_date": '2050-01-01T00:00:00.000Z',
+                "dsi_open_access": 1,
                 "dsi_label": "",
                 "dsi_mimetype": "image/jpeg",
                 "dsi_copyright": null,
@@ -1737,4 +1750,6 @@ describe('Files Component ', () => {
         const wrapper = setup({publication: pub});
         expect(JSON.stringify(wrapper.instance().getFileData(pub))).toMatchSnapshot();
     });
+
+
 });

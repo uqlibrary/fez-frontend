@@ -1,5 +1,6 @@
 import {publicationDetails} from 'mock/data/testing/records';
-import {PublicationDetails} from "./PublicationDetails";
+import {PublicationDetailsClass} from "./PublicationDetails";
+import PublicationDetails from "./PublicationDetails";
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -9,7 +10,7 @@ function setup(testProps, isShallow = true){
         actions: testProps.actions,
         classes: {ul: 'ul', header: 'header', data: 'data', gridRow: 'gridRow'}
     };
-    return getElement(PublicationDetails, props, isShallow);
+    return getElement(PublicationDetailsClass, props, isShallow);
 }
 
 describe('Publication Details Component ', () => {
@@ -34,5 +35,29 @@ describe('Publication Details Component ', () => {
         const wrapper = setup({publication: publicationDetails});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.publicationDetails li').length).toEqual(0);
+    });
+
+    it('ViewRecordRow()', () => {
+        const wrapper = setup({publication: publicationDetails});
+        expect(toJson(wrapper.instance().ViewRecordRow({heading: 'Heading', data: 'Data'}))).toMatchSnapshot();
+    });
+
+    it('Renders nothing for no display type lookup', () => {
+        const wrapper = setup({publication: {
+                ...publicationDetails,
+                rek_display_type_lookup: null
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Renders full mount', () => {
+        const wrapper = getElement(PublicationDetails, {
+            publication: {
+                ...publicationDetails,
+                rek_display_type_lookup: null
+            }
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
