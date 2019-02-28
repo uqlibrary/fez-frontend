@@ -1,14 +1,15 @@
 import {FileUploadRowStatus} from './FileUploadRowStatus';
+import FileUploadRowStatusContainer from './FileUploadRowStatus';
+
+const getProps = (testProps = {}) => ({
+    progress: 0,
+    isUploadInProgress: false,
+    onDelete: jest.fn(),
+    ...testProps
+});
 
 function setup(testProps, isShallow = true) {
-    const props = {
-        progress: 0,
-        isUploadInProgress: false,
-        onDelete: jest.fn(),
-        ...testProps
-    };
-
-    return getElement(FileUploadRowStatus, props, isShallow);
+    return getElement(FileUploadRowStatus, getProps(testProps), isShallow);
 }
 
 describe('Component FileUploadRowStatus', () => {
@@ -45,6 +46,11 @@ describe('Component FileUploadRowStatus', () => {
 
     it('should render if file uploaded successfully but later other file failed', () => {
         const wrapper = setup({progress: 100, isUploadInProgress: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should mount the container', () => {
+        const wrapper = getElement(FileUploadRowStatusContainer, getProps(), false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
