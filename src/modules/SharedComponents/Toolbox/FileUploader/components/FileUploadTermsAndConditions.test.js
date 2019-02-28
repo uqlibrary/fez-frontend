@@ -1,25 +1,31 @@
 import { FileUploadTermsAndConditions } from './FileUploadTermsAndConditions';
+import FileUploadTermsAndConditionsWithStyles from './FileUploadTermsAndConditions';
+
+const getProps = (testProps = {}) => ({
+    disabled: false,
+    isTermsAndConditionsAccepted: false,
+    onAcceptTermsAndConditions: jest.fn(),
+    acceptTermsAndConditions: 'test terms and conditions',
+    classes: {
+        label: '',
+        error: '',
+        accepted: ''
+    },
+    ...testProps
+});
 
 function setup(testProps, isShallow = true) {
-    const props = {
-        disabled: false,
-        isTermsAndConditionsAccepted: false,
-        onAcceptTermsAndConditions: jest.fn(),
-        acceptTermsAndConditions: 'test terms and conditions',
-        classes: {
-            label: '',
-            error: '',
-            accepted: ''
-        },
-        ...testProps
-    };
-
-    return getElement(FileUploadTermsAndConditions, props, isShallow);
+    return getElement(FileUploadTermsAndConditions, getProps(testProps), isShallow);
 }
 
 describe('Component FileUploadTermsAndConditions', () => {
     it('should render default view', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default view with styles', () => {
+        const wrapper = getElement(FileUploadTermsAndConditionsWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
