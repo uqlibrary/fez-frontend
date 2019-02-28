@@ -18,6 +18,7 @@ describe('Component FileUploadEmbargoDate', () => {
     it('should render with default setup', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.instance()._onChange();
     });
 
     it('should render with default setup with styles', () => {
