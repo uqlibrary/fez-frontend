@@ -65,3 +65,20 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
   }
 />
 `;
+
+exports[`Component FileUploadTermsAndConditions should render default view with styles 1`] = `
+<FileUploadTermsAndConditions
+  acceptTermsAndConditions="test terms and conditions"
+  classes={
+    Object {
+      "checkboxChecked": "FileUploadTermsAndConditions-checkboxChecked-4",
+      "checkboxRoot": "FileUploadTermsAndConditions-checkboxRoot-3",
+      "label": "FileUploadTermsAndConditions-label-2",
+      "root": "FileUploadTermsAndConditions-root-1",
+    }
+  }
+  disabled={false}
+  isTermsAndConditionsAccepted={false}
+  onAcceptTermsAndConditions={[MockFunction]}
+/>
+`;
