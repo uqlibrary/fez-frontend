@@ -47,6 +47,18 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
 />
 `;
 
+exports[`Component FileUploadEmbargoDate should render with default setup with styles 1`] = `
+<FileUploadEmbargoDate
+  classes={
+    Object {
+      "input": "FileUploadEmbargoDate-input-1",
+    }
+  }
+  minDate={2019-02-28T02:25:56.104Z}
+  value={2019-02-28T02:25:56.104Z}
+/>
+`;
+
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 1`] = `
 <ForwardRef
   InputProps={
