@@ -1,35 +1,36 @@
 import {FileUploadRowMobileView} from './FileUploadRowMobileView';
+import FileUploadRowMobileViewWithStyles from './FileUploadRowMobileView';
+
+const getProps = (testProps = {}) => ({
+    index: 0,
+    name: 'test.pdf',
+    size: '100 MB',
+    accessConditionId: null,
+    embargoDate: '01/01/2017',
+    requireOpenAccessStatus: true,
+    disabled: false,
+    classes: {
+        root: 'root',
+        listItem: 'listItem',
+    },
+    onDelete: jest.fn(),
+    onEmbargoDateChange: jest.fn(),
+    onAccessConditionChange: jest.fn(),
+    ...testProps
+})
 
 function setup(testProps, isShallow = true) {
-    const props = {
-        index: 0,
-        name: 'test.pdf',
-        size: '100 MB',
-        accessConditionId: null,
-        embargoDate: '01/01/2017',
-        requireOpenAccessStatus: true,
-        disabled: false,
-        classes: {
-            root: 'root',
-            listItem: 'listItem',
-            listIcon: 'listIcon',
-            primary: 'primary',
-            secondary: 'secondary',
-            primaryText: 'primaryText',
-            secondaryText: 'secondaryText'
-        },
-        onDelete: jest.fn(),
-        onEmbargoDateChange: jest.fn(),
-        onAccessConditionChange: jest.fn(),
-        ...testProps
-    };
-
-    return getElement(FileUploadRowMobileView, props, isShallow);
+    return getElement(FileUploadRowMobileView, getProps(testProps), isShallow);
 }
 
 describe('Component FileUploadRowMobileView', () => {
     it('should render default view', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default view with styles', () => {
+        const wrapper = getElement(FileUploadRowMobileViewWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
