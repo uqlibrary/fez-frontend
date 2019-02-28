@@ -23,7 +23,7 @@ const styles = (theme) => ({
     }
 });
 
-export class NtroDetails extends PureComponent {
+export class NtroDetailsClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
@@ -81,7 +81,7 @@ export class NtroDetails extends PureComponent {
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
+                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length > 0 ? ReactHtmlParser(item.rek_creator_contribution_statement) : null}
                                     />
                                 );
                             } else {
@@ -228,7 +228,7 @@ export class NtroDetails extends PureComponent {
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_audience_size}
                             data={general.AUDIENCE_SIZE.map((item) => {
-                                return item.value === publication.fez_record_search_key_audience_size.rek_audience_size && item.text;
+                                return (item.value === publication.fez_record_search_key_audience_size.rek_audience_size) && item.text;
                             })}
                         />
                     }
@@ -255,4 +255,6 @@ export class NtroDetails extends PureComponent {
     }
 }
 
-export default withStyles(styles)(NtroDetails);
+const StyledNtroDetailsClass = withStyles(styles, {withTheme: true})(NtroDetailsClass);
+const NtroDetails = (props) => <StyledNtroDetailsClass {...props}/>;
+export default NtroDetails;

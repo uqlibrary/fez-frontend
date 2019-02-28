@@ -95,7 +95,7 @@ describe('Component ViewRecord ', () => {
                 canMasquerade: true
             }
         });
-        expect(wrapper.find('WithStyles(NtroDetails)').length).toBe(1);
+        expect(wrapper.find('NtroDetails').length).toBe(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

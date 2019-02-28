@@ -11,7 +11,7 @@ const styles = (theme) => ({
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     }
 });
-export class GrantInformation extends PureComponent {
+export class GrantInformationClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object
@@ -108,4 +108,6 @@ export class GrantInformation extends PureComponent {
     }
 }
 
-export default withStyles(styles)(GrantInformation);
+const StyledGrantInformation = withStyles(styles, {withTheme: true})(GrantInformationClass);
+const GrantInformation = (props) => <StyledGrantInformation {...props}/>;
+export default GrantInformation;
