@@ -115,13 +115,7 @@ export class PartialDateForm extends Component {
 
         this._displayErrors(date, valid);
 
-        if (valid) {
-            if (this.props.allowPartial) {
-                date.month = date.month < 0 ? 0 : date.month;
-            }
-            return moment(date).format(this.props.dateFormat);
-        }
-        return '';
+        return valid ? moment(date).format(this.props.dateFormat) : '';
     };
 
     _isNumber = (event) => {
