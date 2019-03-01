@@ -6,7 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 
-const styles = theme => ({
+export const styles = theme => ({
     stepper: {
         backgroundColor: theme.hexToRGBA('#F7F7F7', 0),
         [theme.breakpoints.down('sm')]: {
@@ -16,12 +16,7 @@ const styles = theme => ({
     },
     stepperLabel: {
         textOverflow: 'ellipsis',
-        overflow: 'hidden',
-        // [theme.breakpoints.down('sm')]: {
-        //     '& span': {
-        //         display: 'none'
-        //     }
-        // }
+        overflow: 'hidden'
     }
 });
 

@@ -5,7 +5,7 @@ import BrokenImage from '@material-ui/icons/BrokenImage';
 import {withStyles} from '@material-ui/core/styles';
 import locale from 'locale/pages';
 
-const styles = () => ({
+export const styles = () => ({
     image: {
         width: '100%',
         '&:hover': {
