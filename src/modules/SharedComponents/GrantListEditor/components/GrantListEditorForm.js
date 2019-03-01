@@ -9,10 +9,18 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import {orgAffiliationTypes} from 'config/general';
-
 import locale from 'locale/validationErrors';
+import {withStyles} from '@material-ui/core';
 
-export default class GrantListEditorForm extends PureComponent {
+const styles = () => ({
+    reminderMessage: {
+        marginTop: 8,
+        borderTop: '1px solid red',
+        paddingTop: 4
+    }
+});
+
+export class GrantListEditorForm extends PureComponent {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
         errorText: PropTypes.string,
@@ -20,6 +28,7 @@ export default class GrantListEditorForm extends PureComponent {
         disabled: PropTypes.bool,
         required: PropTypes.bool,
         hideType: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -31,7 +40,8 @@ export default class GrantListEditorForm extends PureComponent {
             grantAgencyType: 'Funder/Sponsor type',
             grantAgencyTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
-            description: 'Add the Funder/Sponsor\'s name, grant ID and type - then add each to the list'
+            description: 'Add the Funder/Sponsor\'s name, grant ID and type - then click the ADD GRANT button to add each to the list',
+            remindToAdd: 'Click ADD GRANT to add this item to your list'
         },
         hideType: false
     };
@@ -86,6 +96,7 @@ export default class GrantListEditorForm extends PureComponent {
 
     render() {
         const {disabled} = this.props;
+        // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 || this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;
         return (
             <React.Fragment>
                 {this.props.locale.description}
@@ -134,16 +145,21 @@ export default class GrantListEditorForm extends PureComponent {
                                     disabled={disabled || this.state.grantAgencyName.trim().length === 0}
                                 >
                                     <MenuItem value={''} disabled>{this.props.locale.grantAgencyTypeHint}</MenuItem>
-                                    {orgAffiliationTypes.map((item, index) => <MenuItem value={item.value} key={index}>{item.text}</MenuItem>)}
+                                    {
+                                        orgAffiliationTypes.map((item, index) => {
+                                            return item.value !== '454045' ?
+                                                <MenuItem value={item.value} key={index}>{item.text}</MenuItem> : null;
+                                        })
+                                    }
                                 </Select>
                                 {
-                                    this.props.required || this.state.grantAgencyName.trim().length > 0 && this.state.grantId.trim().length > 0 && this.state.grantAgencyType.trim().length === 0 &&
+                                    this.state.grantAgencyName.trim().length > 0 && this.state.grantAgencyType.trim().length === 0 &&
                                     <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
                                 }
                             </FormControl>
                         </Grid>
                     }
-                    <Grid item xs={12} sm={12} md={'auto'}>
+                    <Grid item xs={12}>
                         <Button
                             variant="contained"
                             fullWidth
@@ -160,3 +176,4 @@ export default class GrantListEditorForm extends PureComponent {
     }
 }
 
+export default withStyles(styles)(GrantListEditorForm);

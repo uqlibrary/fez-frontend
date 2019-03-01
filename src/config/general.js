@@ -650,6 +650,7 @@ export const ORG_TYPE_ID_FOUNDATION = '453987';
 export const ORG_TYPE_ID_CORPORATE = '453988';
 export const ORG_TYPE_ID_UNIVERSITY = '453989';
 export const ORG_TYPE_ID_OTHER = '453990';
+export const ORG_TYPE_NOT_SET = '454045';
 
 export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_ID_MUSEUM]: 'Museum',
@@ -660,6 +661,7 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_ID_CORPORATE]: 'Corporate/Industry',
     [ORG_TYPE_ID_UNIVERSITY]: 'University',
     [ORG_TYPE_ID_OTHER]: 'Other',
+    [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
 /**
@@ -674,6 +676,7 @@ export const grantAgencyTypes = [
     'Corporate/Industry',
     'University',
     'Other',
+    'Not set'
 ];
 
 export const orgAffiliationTypes = [
@@ -684,7 +687,8 @@ export const orgAffiliationTypes = [
     {value: '453987', text: 'Foundation'},
     {value: '453988', text: 'Corporate/Industry'},
     {value: '453989', text: 'University'},
-    {value: '453990', text: 'Other'}
+    {value: '453990', text: 'Other'},
+    {value: '454045', text: 'Not set'}
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
