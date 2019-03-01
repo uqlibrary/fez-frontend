@@ -87,9 +87,9 @@ export class FreeTextForm extends Component {
                         value={this.state.itemName}
                         onChange={this.onNameChanged}
                         onKeyPress={this.addItem}
-                        error={!!errorText || !!this.props.isValid(this.state.itemName) || inputLength}
+                        error={!!errorText || this.props.isValid(this.state.itemName) || !!inputLength}
                         helperText={this.props.isValid(this.state.itemName) || errorText || inputLength
-                            ? `${!!errorText ? errorText : ''} ${!!errorText && !!inputLength ? ' - ' : ''} ${!!inputLength ? inputLength : ''}`
+                            ? `${!!errorText ? errorText : ''}${!!errorText && !!inputLength ? ' - ' : ''}${!!inputLength ? inputLength : ''}`
                             : null}
                         disabled={disabled}
                     />
