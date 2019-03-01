@@ -1,25 +1,34 @@
 import { AdvancedSearchCaption } from './AdvancedSearchCaption';
+import AdvancedSearchCaptionWithStyles from './AdvancedSearchCaption';
 import React from 'react';
+import moment from 'moment';
+
+const getProps = (testProps = {}) => ({
+    classes: {},
+    fieldRows: [
+        { "searchField": "all", "value": "", "label": "" },
+        { "searchField": "rek_ismemberof", "value": ["UQ:120743", "UQ:217419", "UQ:217422"], "label": "" },
+        { "searchField": "rek_author_id", "value": "570", "label": "570 (Ashkanasy, Neal M.)" }
+    ],
+    docTypes: [263, 174],
+    yearFilter: { "from": "1991", "to": "2012", invalid: false },
+    isOpenAccess: true,
+    ...testProps
+});
+
 function setup(testProps, isShallow = true) {
-    const props = {
-        classes: {},
-        fieldRows: [
-            { "searchField": "all", "value": "", "label": "" },
-            { "searchField": "rek_ismemberof", "value": ["UQ:120743", "UQ:217419", "UQ:217422"], "label": "" },
-            { "searchField": "rek_author_id", "value": "570", "label": "570 (Ashkanasy, Neal M.)" }
-        ],
-        docTypes: [263, 174],
-        yearFilter: { "from": "1991", "to": "2012", invalid: false },
-        isOpenAccess: true,
-        ...testProps
-    };
-    return getElement(AdvancedSearchCaption, props, isShallow);
+    return getElement(AdvancedSearchCaption, getProps(testProps), isShallow);
 }
 
 describe('Component AdvancedSearchCaption', () => {
 
     it('should render as expected with no props', () => {
         const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render as default with styles', () => {
+        const wrapper = getElement(AdvancedSearchCaptionWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -71,12 +80,32 @@ describe('Component AdvancedSearchCaption', () => {
 
     it('getSearchFieldData should return expected with props', () => {
         const wrapper = setup();
-        const test = [{
-            "searchField": "rek_genre_type",
-            "value": ["B.A. Thesis", "B.Sc Thesis", "Bachelor's Thesis"],
-            "label": ["B.A. Thesis", "B.Sc Thesis", "Bachelor's Thesis"]
-        }];
-        const result = [{ "combiner": "is one of", "title": "Thesis type", "value": "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis" }];
+        const test = [
+            {
+                "searchField": "rek_genre_type",
+                "value": ["B.A. Thesis", "B.Sc Thesis", "Bachelor's Thesis"],
+                "label": ["B.A. Thesis", "B.Sc Thesis", "Bachelor's Thesis"]
+            },
+            {
+                "searchField": "rek_created_date",
+                "value": {
+                    from: moment('01/01/2010'),
+                    to: moment('02/02/2010')
+                }
+            }
+        ];
+        const result = [
+            {
+                "combiner": "is one of",
+                "title": "Thesis type",
+                "value": "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis"
+            },
+            {
+                "combiner": "between",
+                "title": "Created",
+                "value": "1st January, 2010 and 2nd February, 2010",
+            }
+        ];
         expect(wrapper.instance().getSearchFieldData(test)).toEqual(result);
     });
 
