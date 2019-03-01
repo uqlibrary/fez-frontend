@@ -80,7 +80,9 @@ export class PartialDateForm extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) this.props.onChange(this._setDate(nextState));
+        if (this.props.onChange) {
+            this.props.onChange(this._setDate(nextState));
+        }
     }
 
     _validate = (state) => {
@@ -88,9 +90,9 @@ export class PartialDateForm extends Component {
         const {day, month, year} = state;
 
         if (this.props.allowPartial) {
-            valid = year && moment(state).isValid();
+            valid = !!year && moment(state).isValid();
         } else {
-            valid = day && (month !== null) && year && moment(state).isValid();
+            valid = !!day && (month !== null) && !!year && moment(state).isValid();
         }
         return valid;
     };

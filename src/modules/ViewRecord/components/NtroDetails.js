@@ -55,33 +55,33 @@ export class NtroDetailsClass extends PureComponent {
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
                     {/* Scale of work */}
                     {
-                        publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
+                        publication.fez_record_search_key_significance &&
+                        publication.fez_record_search_key_significance.length > 0 &&
+                        !!this.props.account.canMasquerade &&
                         publication.fez_record_search_key_significance.map((item, index) => {
-                            if((item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) && !this.props.account.canMasquerade) { return null; } else {
-                                return (
-                                    <this.ViewNtroRow
-                                        key={index}
-                                        heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                        subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                        data={item.rek_significance === general.SIGNIFICANCE_MINOR && 'Minor'
-                                        || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major' || 'Not set'}
-                                    />
-                                );
-                            }
+                            return (
+                                <this.ViewNtroRow
+                                    key={index}
+                                    heading={`${locale.viewRecord.headings.NTRO.significance}`}
+                                    subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
+                                    data={(item.rek_significance !== 0 && item.rek_significance !== '0' && !!item.rek_significance && item.rek_significance_lookup) || 'Not set'}
+                                />
+                            );
                         })
                     }
                     {/* Contribution statement */}
                     {
                         publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
-                            if(this.props.account.canMasquerade || item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
+                            if(!!this.props.account.canMasquerade ||
+                                item.rek_creator_contribution_statement !== global.global.defaultContributorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
                                 return (
                                     <this.ViewNtroRow
                                         className={this.props.classes.richTextParagraphFix}
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length > 0 ? ReactHtmlParser(item.rek_creator_contribution_statement) : null}
+                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
                                     />
                                 );
                             } else {
@@ -168,8 +168,8 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* Start page */}
                     {
-                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
-                        && docType !== 'Book Chapter' && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
+                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK && docType !== 'Book Chapter'
+                        && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_start_page}
                             data={publication.fez_record_search_key_start_page.rek_start_page}
@@ -201,14 +201,15 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_language && publication.fez_record_search_key_language.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_language}
-                            data={publication.fez_record_search_key_language.map((item1, index) => {
-                                return general.LANGUAGE.map((item2) => {
-                                    return item1.rek_language === item2.value &&
-                                        <span key={index}>
-                                            {item2.text}
-                                            {publication.fez_record_search_key_language.length > 1 && index < publication.fez_record_search_key_language.length - 1 && ', '}
-                                        </span>;
-                                });
+                            data={publication.fez_record_search_key_language.map((item, index) => {
+                                return (<span key={index}>
+                                    {
+                                        general.LANGUAGE
+                                            .filter(language => { return item.rek_language === language.value; })
+                                            .map(language => { return language.text; })
+                                    }
+                                    {publication.fez_record_search_key_language.length > 1 && index < publication.fez_record_search_key_language.length - 1 && ', '}
+                                </span>);
                             })
                             }
                         />
@@ -227,9 +228,7 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_audience_size && publication.fez_record_search_key_audience_size.rek_audience_size &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_audience_size}
-                            data={general.AUDIENCE_SIZE.map((item) => {
-                                return (item.value === publication.fez_record_search_key_audience_size.rek_audience_size) && item.text;
-                            })}
+                            data={publication.fez_record_search_key_audience_size.rek_audience_size_lookup || 'Not set'}
                         />
                     }
                     {/* Quality indicators */}
@@ -237,16 +236,15 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_quality_indicator && publication.fez_record_search_key_quality_indicator.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.qualityIndicators}
-                            data={publication.fez_record_search_key_quality_indicator.map((item1, index) => {
-                                return general.QUALITY_INDICATORS.map((item2) => {
-                                    return item1.rek_quality_indicator === item2.value &&
-                                        <span key={index}>
-                                            {item2.text}
-                                            {publication.fez_record_search_key_quality_indicator.length > 1 && index < publication.fez_record_search_key_quality_indicator.length - 1 && ', '}
-                                        </span>;
-                                });
-                            })
-                            }
+                            data={publication.fez_record_search_key_quality_indicator.map((item, index) => {
+                                return (
+                                    <span key={index}>
+                                        {item.rek_quality_indicator_lookup || 'Not set'}
+                                        {publication.fez_record_search_key_quality_indicator.length > 1 && index < publication.fez_record_search_key_quality_indicator.length - 1 && ', '}
+                                    </span>
+                                );
+                            })}
+
                         />
                     }
                 </StandardCard>
