@@ -131,7 +131,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />
@@ -291,7 +291,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />
@@ -699,7 +699,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />

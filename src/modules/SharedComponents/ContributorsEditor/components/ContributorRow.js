@@ -148,6 +148,7 @@ export class ContributorRow extends PureComponent {
         const {index, contributor, classes, width} = this.props;
         const {suffix} = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
+        console.log(contributor);
         return (
             <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
@@ -163,14 +164,14 @@ export class ContributorRow extends PureComponent {
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
-                            `${contributor.aut_org_username || contributor.aut_student_username}`,
+                            `University of Queensland (${contributor.aut_org_username || contributor.aut_student_username})`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}
                     </Grid>
                 }
                 {
-                    contributor.affiliation === 'NotUQ' &&
+                    contributor.affiliation && contributor.affiliation !== 'UQ' &&
                     <Grid item xs={5}>
                         {this.getListItemTypoGraphy(
                             `${contributor.orgaff}`,
@@ -179,6 +180,17 @@ export class ContributorRow extends PureComponent {
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}
                     </Grid>
+                }
+                {
+                    contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
+                        <Grid item xs={5}>
+                            {this.getListItemTypoGraphy(
+                                'University of Queensland',
+                                'Organisation type: University',
+                                `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                                `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                            )}
+                        </Grid>
                 }
                 {
                     showRoleInput &&

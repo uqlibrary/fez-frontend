@@ -1,5 +1,6 @@
 import * as transformers from './transformers';
 import {APP_URL} from 'config';
+
 const moment = require('moment');
 
 describe('getRecordLinkSearchKey test ', () => {
@@ -272,7 +273,7 @@ describe('getFixIssueRequest test ', () => {
         input.author.aut_org_username = 'uqjsmith';
         input.comments = 'Some comments...';
         input.rek_link = 'http://www.test.com';
-        input.files = {queue: [{name: '1.jpg'},{name: '2.jpg'}]};
+        input.files = {queue: [{name: '1.jpg'}, {name: '2.jpg'}]};
 
         const expected = ["Added comments: Some comments...", "Added link: http://www.test.com", "Added files: 1.jpg, 2.jpg"];
         const result = transformers.getFixIssueRequest(input);
@@ -577,14 +578,7 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
             {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith D.", disabled: false, selected: false, aut_id: 1001}
         ];
-        const expected = {
-            fez_record_search_key_author_id: [
-                {rek_author_id: null, rek_author_id_order: 1},
-                {rek_author_id: 100, rek_author_id_order: 2},
-                {rek_author_id: null, rek_author_id_order: 3},
-                {rek_author_id: 1001, rek_author_id_order: 4}
-            ]
-        };
+        const expected = {"fez_record_search_key_author_id": [{"rek_author_id": 0, "rek_author_id_order": 1}, {"rek_author_id": 100, "rek_author_id_order": 2}, {"rek_author_id": 0, "rek_author_id_order": 3}, {"rek_author_id": 1001, "rek_author_id_order": 4}]};
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
@@ -1028,15 +1022,19 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
             }
         ];
         const expected = {
-            fez_record_search_key_author_affiliation_name: [
-                {
-                    rek_author_affiliation_name: 'Test organisation',
-                    rek_author_affiliation_name_order: 2
-                },
-                {
-                    rek_author_affiliation_name: 'Some Organisation',
-                    rek_author_affiliation_name_order: 3
-                }
+            "fez_record_search_key_author_affiliation_name": [{
+                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name_order": 1
+            }, {
+                "rek_author_affiliation_name": "Test organisation",
+                "rek_author_affiliation_name_order": 2
+            }, {
+                "rek_author_affiliation_name": "Some Organisation",
+                "rek_author_affiliation_name_order": 3
+            }, {
+                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name_order": 4
+            }
             ]
         };
         const result = transformers.getRecordAuthorAffiliationSearchKey(input);
@@ -1154,16 +1152,16 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
             }
         ];
         const expected = {
-            fez_record_search_key_author_affiliation_type: [
-                {
-                    rek_author_affiliation_type: 453983,
-                    rek_author_affiliation_type_order: 2
-                },
-                {
-                    rek_author_affiliation_type: 453987,
-                    rek_author_affiliation_type_order: 3
-                }
-            ]
+            "fez_record_search_key_author_affiliation_type": [{
+                "rek_author_affiliation_type": 453989,
+                "rek_author_affiliation_type_order": 1
+            }, {
+                "rek_author_affiliation_type": 453983,
+                "rek_author_affiliation_type_order": 2
+            }, {
+                "rek_author_affiliation_type": 453987,
+                "rek_author_affiliation_type_order": 3
+            }, {"rek_author_affiliation_type": 453989, "rek_author_affiliation_type_order": 4}]
         };
         const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
         expect(result).toEqual(expected);
@@ -1249,42 +1247,29 @@ describe('getGrantsListSearchKey tests', () => {
         ];
 
         const expected = {
-            fez_record_search_key_grant_agency: [
-                {
-                    rek_grant_agency: 'test',
-                    rek_grant_agency_order: 1
-                },
-                {
-                    rek_grant_agency: 'testing',
-                    rek_grant_agency_order: 2
-                },
-                {
-                    rek_grant_agency: 'tested',
-                    rek_grant_agency_order: 3
-                }
-            ],
-            fez_record_search_key_grant_id: [
-                {
-                    rek_grant_id: 'test123',
-                    rek_grant_id_order: 1
-                },
-                {
-                    rek_grant_id: 'testing123',
-                    rek_grant_id_order: 2
-                }
-            ],
-            fez_record_search_key_grant_agency_type: [
-                {
-                    rek_grant_agency_type: 12345,
-                    rek_grant_agency_type_order: 2
-                },
-                {
-                    rek_grant_agency_type: 56465,
-                    rek_grant_agency_type_order: 3
-                }
-            ],
+            "fez_record_search_key_grant_agency": [{
+                "rek_grant_agency": "test",
+                "rek_grant_agency_order": 1
+            }, {"rek_grant_agency": "testing", "rek_grant_agency_order": 2}, {
+                "rek_grant_agency": "tested",
+                "rek_grant_agency_order": 3
+            }],
+            "fez_record_search_key_grant_agency_type": [{
+                "rek_grant_agency_type": 454045,
+                "rek_grant_agency_type_order": 1
+            }, {"rek_grant_agency_type": 12345, "rek_grant_agency_type_order": 2}, {
+                "rek_grant_agency_type": 56465,
+                "rek_grant_agency_type_order": 3
+            }],
+            "fez_record_search_key_grant_id": [{
+                "rek_grant_id": "test123",
+                "rek_grant_id_order": 1
+            }, {"rek_grant_id": "testing123", "rek_grant_id_order": 2}, {
+                "rek_grant_id": "Not set",
+                "rek_grant_id_order": 3
+            }]
         };
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
     });
-})
+});
