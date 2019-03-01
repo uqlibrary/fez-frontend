@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
-import InputLabel from '@material-ui/core/InputLabel';
 import {withStyles} from '@material-ui/core/styles';
 
 const styles = () => ({
@@ -171,7 +170,6 @@ export class FileUploadDropzone extends PureComponent {
             <Grid container>
                 <Grid item xs={12}>
                     <div tabIndex="0" onKeyPress={this._onKeyPress}>
-                        <InputLabel htmlFor="Uploader" className={this.props.classes.hideLabel}>Month</InputLabel>
                         <Dropzone
                             inputProps={{id: 'Uploader'}}
                             ref={(ref) => {this.dropzoneRef = ref;}}
