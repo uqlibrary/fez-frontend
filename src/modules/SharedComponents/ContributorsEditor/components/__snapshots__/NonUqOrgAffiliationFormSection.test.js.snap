@@ -86,12 +86,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
         >
           Other
         </WithStyles(MenuItem)>
-        <WithStyles(MenuItem)
-          key="454045"
-          value="454045"
-        >
-          Not set
-        </WithStyles(MenuItem)>
       </WithStyles(Select)>
     </WithStyles(FormControl)>
   </WithStyles(Grid)>
@@ -183,12 +177,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
           value="453990"
         >
           Other
-        </WithStyles(MenuItem)>
-        <WithStyles(MenuItem)
-          key="454045"
-          value="454045"
-        >
-          Not set
         </WithStyles(MenuItem)>
       </WithStyles(Select)>
     </WithStyles(FormControl)>
@@ -282,12 +270,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         >
           Other
         </WithStyles(MenuItem)>
-        <WithStyles(MenuItem)
-          key="454045"
-          value="454045"
-        >
-          Not set
-        </WithStyles(MenuItem)>
       </WithStyles(Select)>
     </WithStyles(FormControl)>
   </WithStyles(Grid)>
@@ -379,12 +361,6 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           value="453990"
         >
           Other
-        </WithStyles(MenuItem)>
-        <WithStyles(MenuItem)
-          key="454045"
-          value="454045"
-        >
-          Not set
         </WithStyles(MenuItem)>
       </WithStyles(Select)>
     </WithStyles(FormControl)>

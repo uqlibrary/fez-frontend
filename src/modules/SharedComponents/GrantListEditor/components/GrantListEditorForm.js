@@ -145,7 +145,12 @@ export class GrantListEditorForm extends PureComponent {
                                     disabled={disabled || this.state.grantAgencyName.trim().length === 0}
                                 >
                                     <MenuItem value={''} disabled>{this.props.locale.grantAgencyTypeHint}</MenuItem>
-                                    {orgAffiliationTypes.map((item, index) => <MenuItem value={item.value} key={index}>{item.text}</MenuItem>)}
+                                    {
+                                        orgAffiliationTypes.map((item, index) => {
+                                            return item.value !== '454045' ?
+                                                <MenuItem value={item.value} key={index}>{item.text}</MenuItem> : null;
+                                        })
+                                    }
                                 </Select>
                                 {
                                     this.state.grantAgencyName.trim().length > 0 && this.state.grantAgencyType.trim().length === 0 &&
