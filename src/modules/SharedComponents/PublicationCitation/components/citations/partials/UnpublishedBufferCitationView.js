@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import CitationView from './CitationView';
 import DateCitationView from './DateCitationView';
 
-import {unpublishedBufferActionUrls as options} from 'config/general';
+import {unpublishedBufferActionUrls as options, GENERIC_DATE_FORMAT} from 'config/general';
 
 export class UnpublishedBufferCitationView extends Component {
     static propTypes = {
@@ -42,8 +42,8 @@ export class UnpublishedBufferCitationView extends Component {
                 <Grid item xs="auto" style={{flexGrow: 1}}>
                     <Typography variant="caption">
                         <i><CitationView suffix=", " value={this.props.publication.rek_status_lookup}/></i>
-                        <DateCitationView isLocalised format="DD/MM/YYYY" prefix="Created " suffix=", " date={this.props.publication.rek_created_date}/>
-                        <DateCitationView isLocalised format="DD/MM/YYYY" prefix="Updated " suffix="." date={this.props.publication.rek_updated_date}/>
+                        <DateCitationView isLocalised format={GENERIC_DATE_FORMAT} prefix="Created " suffix=", " date={this.props.publication.rek_created_date}/>
+                        <DateCitationView isLocalised format={GENERIC_DATE_FORMAT} prefix="Updated " suffix="." date={this.props.publication.rek_updated_date}/>
                     </Typography>
                 </Grid>
                 <Grid item>

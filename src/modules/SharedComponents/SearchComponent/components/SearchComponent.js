@@ -391,7 +391,7 @@ export default class SearchComponent extends PureComponent {
                         ...searchQueries,
                         [searchField]: {
                             ...rest,
-                            label: `[${item.value.from.format('DD/MM/YYYY')} to ${item.value.to.format('DD/MM/YYYY')}]`,
+                            label: `[${item.value.from.format(GENERIC_DATE_FORMAT)} to ${item.value.to.format(GENERIC_DATE_FORMAT)}]`,
                             value: rangeValue
                         }
                     };

@@ -1,6 +1,7 @@
 import DateRangeFieldWithStyles from './DateRangeField';
 import {DateRangeField} from './DateRangeField';
 import moment from 'moment';
+import {GENERIC_DATE_FORMAT} from 'config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -9,7 +10,7 @@ function setup(testProps, isShallow = true) {
         invalid: false,
         classes: {},
         locale: {},
-        format: 'DD/MM/YYYY',
+        format: GENERIC_DATE_FORMAT,
         from: '',
         to: '',
         onChange: jest.fn(),
