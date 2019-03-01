@@ -415,7 +415,6 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 //     }
 // ]
 export const getGrantsListSearchKey = (grants) => {
-    console.log(grants);
     if (!grants || grants.length === 0) return {};
 
     return {
