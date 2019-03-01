@@ -74,7 +74,7 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
                             if(!!this.props.account.canMasquerade ||
-                                item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
+                                item.rek_creator_contribution_statement !== global.global.defaultContributorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
                                 return (
                                     <this.ViewNtroRow
                                         className={this.props.classes.richTextParagraphFix}
