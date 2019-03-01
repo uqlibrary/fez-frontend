@@ -14,7 +14,6 @@ import Typography from '@material-ui/core/Typography';
 
 import locale from 'locale/viewRecord';
 import {openAccessConfig} from 'config';
-import {GrantInformationClass} from "./GrantInformation";
 
 const styles = (theme) => ({
     header: {
