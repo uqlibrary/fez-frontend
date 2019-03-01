@@ -46,6 +46,10 @@ describe('SimpleSearchComponent', () => {
     it('should render with a class "header" for use in AppBar', () => {
         const wrapper = setup({isInHeader: true});
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        const preventDefaultFn = jest.fn();
+        wrapper.find('form').props().onSubmit({preventDefault: preventDefaultFn});
+        expect(preventDefaultFn).toHaveBeenCalled();
     });
 
     it('should set search value from prop', () => {
