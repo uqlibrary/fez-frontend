@@ -38,8 +38,9 @@ describe('TopCitedPublications component', () => {
                 backgroundColor: 'test3'
             }
         };
-        expect(styles(theme)).toMatchObject(result);
+        const test = styles(theme);
         expect(theme.breakpoints.up).toBeCalled();
         expect(theme.breakpoints.down).toBeCalled();
+        expect(test).toMatchObject(result);
     });
 });

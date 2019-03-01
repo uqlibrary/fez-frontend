@@ -21,6 +21,9 @@ describe('Stepper component', () => {
                 overflow: 'hidden'
             }
         };
-        expect(styles(theme)).toMatchObject(result);
+        const test = styles(theme);
+        expect(theme.hexToRGBA).toBeCalled();
+        expect(theme.breakpoints).toBeCalled();
+        expect(test).toMatchObject(result);
     });
 });
