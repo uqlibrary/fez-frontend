@@ -4,7 +4,7 @@ import param from 'can-param';
 
 import Snackbar from '@material-ui/core/Snackbar';
 import {routes} from 'config';
-import {defaultQueryParams, UNPUBLISHED_STATUS_MAP, UNPUBLISHED_STATUS_TEXT_MAP} from 'config/general';
+import {defaultQueryParams, UNPUBLISHED_STATUS_MAP, UNPUBLISHED_STATUS_TEXT_MAP, GENERIC_DATE_FORMAT} from 'config/general';
 import {locale} from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
@@ -175,8 +175,8 @@ export default class SearchComponent extends PureComponent {
     parseDateRange = (range) => {
         const parts = range.indexOf(' to ') > 0 ? range.substring(1, range.length - 1).split(' to ') : [];
         return {
-            from: moment(parts[0], 'DD/MM/YYYY'),
-            to: moment(parts[1], 'DD/MM/YYYY')
+            from: moment(parts[0], GENERIC_DATE_FORMAT),
+            to: moment(parts[1], GENERIC_DATE_FORMAT)
         };
     };
 

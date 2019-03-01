@@ -15,6 +15,7 @@ export const SESSION_COOKIE_NAME = 'UQLID';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
+export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 
 // URLS - values are set in webpack build
 export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
