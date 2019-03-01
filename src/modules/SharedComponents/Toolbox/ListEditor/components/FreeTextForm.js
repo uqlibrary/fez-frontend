@@ -28,7 +28,7 @@ export class FreeTextForm extends Component {
     };
 
     static defaultProps = {
-        isValid: () => '',
+        isValid: () => false,
         remindToAdd: false,
         maxInputLength: 2000,
         locale: {
@@ -49,7 +49,7 @@ export class FreeTextForm extends Component {
     addItem = (event) => {
         // add item if user hits 'enter' key on input field
         if (this.props.disabled
-            || this.props.isValid(this.state.itemName) !== ''
+            || !this.props.isValid(this.state.itemName)
             || (event && event.key && (event.key !== 'Enter' || this.state.itemName.length === 0))) {
             return;
         }
@@ -89,7 +89,7 @@ export class FreeTextForm extends Component {
                         onKeyPress={this.addItem}
                         error={!!errorText || !!this.props.isValid(this.state.itemName) || inputLength}
                         helperText={this.props.isValid(this.state.itemName) || errorText || inputLength
-                            ? `${!!errorText ? errorText : ''} ${!!errorText && !!inputLength ? ' - ' : ''} ${!!inputLength ? inputLength : ''} ${this.props.isValid(this.state.itemName)}`
+                            ? `${!!errorText ? errorText : ''} ${!!errorText && !!inputLength ? ' - ' : ''} ${!!inputLength ? inputLength : ''}`
                             : null}
                         disabled={disabled}
                     />
