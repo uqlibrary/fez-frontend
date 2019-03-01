@@ -1,3 +1,4 @@
+import * as records from 'mock/data/testing/records';
 import {NtroDetailsClass} from './NtroDetails';
 import NtroDetails from './NtroDetails';
 
@@ -595,4 +596,36 @@ describe('NtroDetails ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should not render empty component', () => {
+        const wrapper = setup({
+            publication: {},
+            account: {canMasquerade: false}
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with record', () => {
+        const wrapper = setup({
+            publication: records.ntro2,
+            account: {canMasquerade: false}
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default fields for record with missing lookups', () => {
+        const wrapper = setup({
+            publication: records.ntroMinimal,
+            account: {canMasquerade: false}
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show admin only fields when admin user', () => {
+        const thisProps = {
+            publication: records.ntro2
+        };
+        const wrapper = setup({...thisProps});
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
