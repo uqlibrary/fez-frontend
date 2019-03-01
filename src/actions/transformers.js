@@ -461,7 +461,7 @@ export const getNtroMetadataSearchKeys = (data) => {
                 };
             } else {
                 return {
-                    rek_creator_contribution_statement: locale.global.defaultContibutorStatementMissing,
+                    rek_creator_contribution_statement: locale.global.defaultContributorStatementMissing,
                     rek_creator_contribution_statement_order: index + 1
                 };
             }
