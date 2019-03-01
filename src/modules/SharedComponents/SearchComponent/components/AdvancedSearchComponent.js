@@ -33,10 +33,10 @@ const styles = theme => ({
         }
     },
     blueButton: {
-        backgroundColor: theme.palette.accent.main,
-        color: theme.palette.white.main,
+        backgroundColor: ((theme.palette || {}).accent || {}).main,
+        color: ((theme.palette || {}).white || {}).main,
         '&:hover': {
-            backgroundColor: theme.palette.accent.dark,
+            backgroundColor: ((theme.palette || {}).accent || {}).dark,
         }
     }
 });
