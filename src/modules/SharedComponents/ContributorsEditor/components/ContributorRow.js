@@ -148,7 +148,6 @@ export class ContributorRow extends PureComponent {
         const {index, contributor, classes, width} = this.props;
         const {suffix} = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
-        console.log(contributor);
         return (
             <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
