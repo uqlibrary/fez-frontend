@@ -952,26 +952,26 @@ export const LANGUAGE = [
 export const unpublishedBufferActionUrls = [
     {
         label: 'More options',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}`
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
     },
     {
         label: 'Update selected record - Generic',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Edit author affiliations',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Edit security for selected record',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Manage thesis assessor access',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Delete selected record',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
     }
 ];
