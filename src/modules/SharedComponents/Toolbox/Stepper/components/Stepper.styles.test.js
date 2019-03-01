@@ -23,7 +23,7 @@ describe('Stepper component', () => {
         };
         const test = styles(theme);
         expect(theme.hexToRGBA).toBeCalled();
-        expect(theme.breakpoints).toBeCalled();
+        expect(theme.breakpoints.down).toBeCalled();
         expect(test).toMatchObject(result);
     });
 });
