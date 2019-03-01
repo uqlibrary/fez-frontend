@@ -10,13 +10,6 @@ describe('FileName component', () => {
                 }
             }
         };
-        const result = {
-            filename: {
-                test1: 'test1',
-                test2: 'test2'
-            }
-        };
-
-        expect(styles(theme)).toMatchObject(result);
+        expect(styles(theme)).toMatchSnapshot();
     });
 });
