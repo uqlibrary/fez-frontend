@@ -19,28 +19,9 @@ describe('TopCitedPublications component', () => {
                 }
             }
         };
-        const result = {
-            tabs: {
-                '@media (min-width:600px)': {
-                    margin: '-16px -24px 0px -24px',
-                },
-                '@media (max-width:599.95px)': {
-                    margin: '-16px -16px 0px -16px',
-                },
-                backgroundColor: 'test1',
-                borderRadius: '4px 4px 0px 0px'
-            },
-            tab: {
-                color: 'test2'
-            },
-            tabIndicator: {
-                height: 4,
-                backgroundColor: 'test3'
-            }
-        };
         const test = styles(theme);
         expect(theme.breakpoints.up).toBeCalled();
         expect(theme.breakpoints.down).toBeCalled();
-        expect(test).toMatchObject(result);
+        expect(test).toMatchSnapshot();
     });
 });

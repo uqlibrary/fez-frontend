@@ -15,26 +15,6 @@ describe('AppLoader component', () => {
                 }
             }
         };
-        const result = {
-            card: {
-                overflow: 'unset',
-                fontWeight: 'test1'
-            },
-            cardContentNoPadding: {
-                padding: 0
-            },
-            cardHeaderPurple: {
-                color: 'test2',
-                backgroundColor: 'test3',
-                borderRadius: '4px 4px 0px 0px',
-                padding: '12px 24px',
-            },
-            fullHeight: {
-                border: '10px solid red',
-                height: '100%'
-            }
-        };
-
-        expect(styles(theme)).toMatchObject(result);
+        expect(styles(theme)).toMatchSnapshot();
     });
 });
