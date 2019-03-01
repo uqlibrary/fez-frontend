@@ -829,3 +829,325 @@ exports[`SearchComponent should update advanced search row on search text change
   />
 </Fragment>
 `;
+
+exports[`SearchComponent should update date range filter 1`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update date range filter 2`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+        Object {
+          "label": "",
+          "searchField": "rek_created_date",
+          "value": "[2000 - 2001]",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update date range filter 3`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+        Object {
+          "label": "",
+          "searchField": "rek_created_date",
+          "value": "[2000 - 2005]",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update doc type values 1`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update doc type values 2`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={
+      Array [
+        317,
+        123,
+      ]
+    }
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update year range filter 1`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update year range filter 2`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={
+      Object {
+        "from": "2000",
+        "to": "2003",
+        "valid": true,
+      }
+    }
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
