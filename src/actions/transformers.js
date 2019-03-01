@@ -169,7 +169,7 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
                 item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order')
                     ? item
                     : {
-                        rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
+                        rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || 0,
                         rek_author_id_order: index + 1
                     }
             )
@@ -185,12 +185,11 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
             .map(
                 (item, index) => (
                     {
-                        rek_author_affiliation_name: item.orgaff,
+                        rek_author_affiliation_name: item.orgaff || 'University of Queensland',
                         rek_author_affiliation_name_order: index + 1
                     }
                 )
             )
-            .filter(item => item.rek_author_affiliation_name !== '')
     };
 };
 
@@ -202,12 +201,11 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
             .map(
                 (item, index) => (
                     {
-                        rek_author_affiliation_type: parseInt(item.orgtype, 10),
+                        rek_author_affiliation_type: !!item.orgtype ? parseInt(item.orgtype, 10) : 453989,
                         rek_author_affiliation_type_order: index + 1
                     }
                 )
             )
-            .filter(item => !isNaN(item.rek_author_affiliation_type))
     };
 };
 
@@ -417,32 +415,30 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 //     }
 // ]
 export const getGrantsListSearchKey = (grants) => {
+    console.log(grants);
     if (!grants || grants.length === 0) return {};
 
     return {
         fez_record_search_key_grant_agency: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_agency: item.grantAgencyName,
+                    rek_grant_agency: item.grantAgencyName || 'Not set',
                     rek_grant_agency_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_agency)
         ],
         fez_record_search_key_grant_id: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_id: item.grantId,
+                    rek_grant_id: item.grantId || 'Not set',
                     rek_grant_id_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_id)
         ],
         fez_record_search_key_grant_agency_type: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_agency_type: parseInt(item.grantAgencyType, 10),
+                    rek_grant_agency_type: parseInt(item.grantAgencyType, 10) || 454045, // Vocab value for "Not set"
                     rek_grant_agency_type_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_agency_type)
         ]
     };
 };
