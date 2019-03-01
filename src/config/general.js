@@ -190,6 +190,11 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_RREB_OTHER]: 'CW5'
 };
 
+const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
+const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
+const DOCUMENT_TYPE_BOOK = 'Book';
+const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+
 export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
@@ -201,7 +206,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_BOOK,
-        name: 'Book',
+        name: DOCUMENT_TYPE_BOOK,
         class: 'Uqlibrary\\FezCore\\Types\\Book',
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
@@ -222,7 +227,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
-        name: 'Book Chapter',
+        name: DOCUMENT_TYPE_BOOK_CHAPTER,
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
@@ -332,7 +337,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
-        name: 'Journal Article',
+        name: DOCUMENT_TYPE_JOURNAL_ARTICLE,
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
@@ -387,7 +392,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
-        name: 'Research Report',
+        name: DOCUMENT_TYPE_RESEARCH_REPORT,
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
