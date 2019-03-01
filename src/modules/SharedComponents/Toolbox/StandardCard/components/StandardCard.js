@@ -7,7 +7,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import {HelpIcon} from '../../HelpDrawer';
 import {withStyles} from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     card: {
         overflow: 'unset',
         fontWeight: theme.typography.fontWeightRegular
