@@ -3,7 +3,6 @@ import {FreeTextForm} from './FreeTextForm';
 function setup(testProps, isShallow = true) {
     const props = {
         onAdd: jest.fn(),
-        isValid: jest.fn(() => ''),
         disabled: false,
         locale: {
             inputFieldLabel: 'Item name',
@@ -30,7 +29,6 @@ describe('FreeTextForm tests ', () => {
         const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 
     it('adding item method is called', () => {
         const testMethod = jest.fn();
@@ -71,7 +69,9 @@ describe('FreeTextForm tests ', () => {
 
     it('should focus on textField', () => {
         const focusFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup({
+            isValid: jest.fn(() => true)
+        });
         wrapper.instance().textField = {
             focus: focusFn
         };
