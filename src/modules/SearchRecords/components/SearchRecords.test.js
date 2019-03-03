@@ -31,7 +31,8 @@ describe('SearchRecords page', () => {
     it('should render advanced search component', () => {
         const wrapper = setup({isAdvancedSearch: true});
         expect(toJson(wrapper)).toMatchSnapshot();
-    })
+    });
+
     it('should render loading screen while loading search results', () => {
         const wrapper = setup({searchLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -479,5 +480,19 @@ describe('SearchRecords page', () => {
         };
         const result = wrapper.instance().parseSearchQueryStringFromUrl('');
         expect(result).toEqual(expected);
+    });
+
+    it('should call unmount component', () => {
+        const clearSearchQueryFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                clearSearchQuery: clearSearchQueryFn,
+                searchEspacePublications: jest.fn()
+            }
+        });
+        const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
+        wrapper.unmount();
+        expect(componentWillUnmount).toHaveBeenCalled();
+        expect(clearSearchQueryFn).toHaveBeenCalled();
     });
 });
