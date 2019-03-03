@@ -132,7 +132,8 @@ export class AuthorLinking extends PureComponent {
             );
         });
 
-
+        // not going to test this as we are about to upgrade react, and 16.6 implements context differently, and the testing techniques change
+        /* istanbul ignore if */
         if (this.context.isMobile) {
             return authors;
         }
