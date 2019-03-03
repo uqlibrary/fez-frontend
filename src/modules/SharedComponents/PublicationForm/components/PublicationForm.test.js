@@ -185,10 +185,16 @@ describe('Component PublicationForm', () => {
     });
 
     it('Shows an alert', () => {
-        const wrapper = setup({initialValues: {}, formComponent: null, changeFormType: jest.fn(), error: 'There is an error', formErrors: ['error'] });
+        const wrapper = setup({
+            initialValues: {},
+            formComponent: null,
+            changeFormType: jest.fn(),
+            error: 'There is an error',
+            formErrors: ['error']
+        });
         // export const getErrorAlertProps = ({dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({formComponent: 'test'});
+        wrapper.setProps({formComponent: () => 'test'});
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({submitSucceeded: true});
         expect(toJson(wrapper)).toMatchSnapshot();
