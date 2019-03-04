@@ -390,6 +390,30 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
     };
 };
 
+// * getGrantsListSearchKey - returns the grant grant details as mapped in search keys
+// Input:
+// "grants":[
+//  {"grantAgencyName":"Funder 1","grantID":"00001","grantAgencyType":"Museum","disabled":false},
+//  {"grantAgencyName":"Funder 2","grantID":"00002","grantAgencyType":"Gallery","disabled":false}
+// ]
+//
+// Output:
+// "fez_record_search_key_grant_agency": [
+//     {
+//         "rek_grant_agency_id": 00001,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 1",
+//         "rek_grant_agency_order": 1
+//     },
+//     {
+//         "rek_grant_agency_id": 00002,
+//         "rek_grant_agency_pid": "UQ:123456",
+//         "rek_grant_agency_xsdmf_id": 0,
+//         "rek_grant_agency": "Funder 2",
+//         "rek_grant_agency_order": 2
+//     }
+// ]
 export const getGrantsListSearchKey = (grants) => {
     if (!grants || grants.length === 0) return {};
 
@@ -433,7 +457,8 @@ export const getLanguageSearchKey = (languages) => {
 
 export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
-    const selectedAuthorIdIndex = data.authors.findIndex(author => author.selected === true);
+    const hasAValue = (value) => !!value.rek_author_id && !isNaN(value.rek_author_id);
+    const selectedAuthorIdIndex = getRecordAuthorsIdSearchKey(data.authors).fez_record_search_key_author_id.findIndex(hasAValue);
     const ntroMetadata = {};
 
     if (!!data.significance) {
