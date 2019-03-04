@@ -71,12 +71,26 @@ api.interceptors.request.use(request => {
     return request;
 });
 
+const reportToSentry = (error) => {
+    let detailedError = '';
+    if (error.response) {
+        detailedError = 'Data: ' + error.response.data + '; Status: ' + error.response.status + '; Headers: ' + JSON.stringify(error.response.headers);
+    } else {
+        detailedError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
+    }
+    Raven.captureException(error, {extra: {error: detailedError}});
+};
+
 api.interceptors.response.use(response => {
     if (!isGet) {
         return cache.store.clear().then(() => Promise.resolve(response.data));
     }
     return Promise.resolve(response.data);
 }, error => {
+    const reportHttpStatusToSentry = [422, 500];
+    if (error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+        reportToSentry(error);
+    }
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
         // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
@@ -95,23 +109,16 @@ api.interceptors.response.use(response => {
     }
 
     let errorMessage = null;
-    let specificError = '';
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
         console.log('skipping root error resetting for 3rd party api');
     } else if (!!error.response && !!error.response.status) {
         errorMessage = locale.global.errorMessages[error.response.status];
-        specificError = 'Response: ' + error.response + ' Status: ' + error.status;
     }
 
     if (!!errorMessage) {
         return Promise.reject({...errorMessage});
     } else {
-        if (error.response) {
-            specificError = 'Data: ' + error.response.data + ' Status: ' + error.response.status + ' Headers: ' + error.response.headers;
-        } else {
-            specificError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
-        }
-        Raven.captureException(error, {extra: {error: specificError}});
+        reportToSentry(error);
         return Promise.reject(error);
     }
 });
