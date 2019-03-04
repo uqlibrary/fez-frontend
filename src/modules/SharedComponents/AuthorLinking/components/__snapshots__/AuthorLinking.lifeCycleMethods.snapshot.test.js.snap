@@ -203,3 +203,171 @@ exports[`AuthorLinking should render component if authorList has more authors th
   </WithStyles(Grid)>
 </div>
 `;
+
+exports[`AuthorLinking should maintain question if onchange prop is missing 1`] = `
+<div>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      className="infiniteContainer"
+      item={true}
+    >
+      <Infinite
+        className=""
+        containerHeight={200}
+        displayBottomUpwards={false}
+        elementHeight={73}
+        handleScroll={[Function]}
+        infiniteLoadBeginEdgeOffset={50}
+        isInfiniteLoading={false}
+        loadingSpinnerDelegate={<div />}
+        onInfiniteLoad={[Function]}
+        styles={Object {}}
+        timeScrollStateLastsForAfterUserScrolls={150}
+        useWindowAsScrollContainer={false}
+      >
+        <WithStyles(Grid)
+          container={true}
+          key="0"
+        >
+          <WithStyles(AuthorItem)
+            author={
+              Object {
+                "rek_author": "Overgaard, Nana H.",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:111111",
+              }
+            }
+            disabled={false}
+            index={0}
+            key="0"
+            linked={false}
+            onAuthorSelected={[Function]}
+            selected={null}
+            type="author"
+          />
+          <WithStyles(AuthorItem)
+            author={
+              Object {
+                "rek_author": "Cruz, Jazmina L.",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:111111",
+              }
+            }
+            disabled={false}
+            index={1}
+            key="1"
+            linked={false}
+            onAuthorSelected={[Function]}
+            selected={null}
+            type="author"
+          />
+        </WithStyles(Grid)>
+      </Infinite>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`AuthorLinking should maintain question if onchange prop is missing 2`] = `
+<div>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      className="infiniteContainer"
+      item={true}
+    >
+      <Infinite
+        className=""
+        containerHeight={200}
+        displayBottomUpwards={false}
+        elementHeight={73}
+        handleScroll={[Function]}
+        infiniteLoadBeginEdgeOffset={50}
+        isInfiniteLoading={false}
+        loadingSpinnerDelegate={<div />}
+        onInfiniteLoad={[Function]}
+        styles={Object {}}
+        timeScrollStateLastsForAfterUserScrolls={150}
+        useWindowAsScrollContainer={false}
+      >
+        <WithStyles(Grid)
+          container={true}
+          key="0"
+        >
+          <WithStyles(AuthorItem)
+            author={
+              Object {
+                "rek_author": "Overgaard, Nana H.",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:111111",
+              }
+            }
+            disabled={false}
+            index={0}
+            key="0"
+            linked={false}
+            onAuthorSelected={[Function]}
+            selected={null}
+            type="author"
+          />
+          <WithStyles(AuthorItem)
+            author={
+              Object {
+                "rek_author": "Cruz, Jazmina L.",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:111111",
+              }
+            }
+            disabled={false}
+            index={1}
+            key="1"
+            linked={false}
+            onAuthorSelected={[Function]}
+            selected={null}
+            type="author"
+          />
+        </WithStyles(Grid)>
+      </Infinite>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(FormControlLabel)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    control={
+      <WithStyles(Checkbox)
+        checked={false}
+        classes={
+          Object {
+            "checked": undefined,
+            "root": undefined,
+          }
+        }
+        onChange={[Function]}
+      />
+    }
+    disabled={false}
+    label={
+      <WithStyles(Typography)
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+        color="error"
+      >
+        I confirm and understand that I am claiming this work under the above name, and confirm this is me
+      </WithStyles(Typography)>
+    }
+  />
+</div>
+`;
