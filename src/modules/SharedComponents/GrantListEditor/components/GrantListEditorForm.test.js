@@ -1,4 +1,5 @@
 import React from 'react';
+import {GrantListEditorFormClass} from './GrantListEditorForm';
 import GrantListEditorForm from './GrantListEditorForm';
 
 function setup(testProps, isShallow = true){
@@ -9,14 +10,30 @@ function setup(testProps, isShallow = true){
         disabled: false,
         required: true,
         hideType: false,
+        classes: {},
+        theme: {},
         ...testProps,
     };
-    return getElement(GrantListEditorForm, props, isShallow);
+    return getElement(GrantListEditorFormClass, props, isShallow);
 }
 
 describe('GrantListEditorForm', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = getElement(GrantListEditorForm,{
+            onAdd: jest.fn(),
+            errorText: null,
+            locale: {},
+            disabled: false,
+            required: true,
+            hideType: false,
+            classes: {},
+            theme: {},
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default view', () => {
+        const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

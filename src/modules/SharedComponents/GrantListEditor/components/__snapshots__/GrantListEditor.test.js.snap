@@ -5,18 +5,6 @@ exports[`GrantListEditor should add grant to the list 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -80,18 +68,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -172,18 +148,6 @@ exports[`GrantListEditor should delete all grants 2`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -195,18 +159,6 @@ exports[`GrantListEditor should delete grant 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -287,18 +239,6 @@ exports[`GrantListEditor should delete grant 2`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -362,18 +302,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -454,18 +382,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -546,18 +462,6 @@ exports[`GrantListEditor should move the grant down 3`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -638,18 +542,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -730,18 +622,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -822,18 +702,6 @@ exports[`GrantListEditor should move the grant up 3`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -914,18 +782,6 @@ exports[`GrantListEditor should render default view 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -949,18 +805,6 @@ exports[`GrantListEditor should render error from props 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -978,18 +822,6 @@ exports[`GrantListEditor should render error from props as children 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1016,18 +848,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1142,18 +962,6 @@ exports[`GrantListEditor should render string error from props 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1171,18 +979,6 @@ exports[`GrantListEditor should render with default given value 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1246,18 +1042,6 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1321,18 +1105,6 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1396,18 +1168,6 @@ exports[`GrantListEditor should update with error message 1`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
@@ -1423,18 +1183,6 @@ exports[`GrantListEditor should update with error message 2`] = `
   <GrantListEditorForm
     disabled={false}
     hideType={false}
-    locale={
-      Object {
-        "addButton": "Add grant",
-        "description": "Add the Funder/Sponsor's name, grant ID and type - then add each to the list",
-        "grantAgencyName": "Funder/Sponsor name",
-        "grantAgencyNameHint": "Enter funder/sponsor name for this work",
-        "grantAgencyType": "Funder/Sponsor type",
-        "grantAgencyTypeHint": "Select Funder/Sponsor type",
-        "grantId": "Grant ID",
-        "grantIdHint": "Enter grant number for this work, if available",
-      }
-    }
     onAdd={[Function]}
     required={true}
   />
