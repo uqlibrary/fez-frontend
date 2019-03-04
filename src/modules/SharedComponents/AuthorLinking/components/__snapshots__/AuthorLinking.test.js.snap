@@ -27,6 +27,33 @@ exports[`layout should handle basic props properly 1`] = `
 </div>
 `;
 
+exports[`layout should handle empty params on rendering authors 1`] = `
+<div>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+    >
+      <Infinite
+        className=""
+        containerHeight={200}
+        displayBottomUpwards={false}
+        elementHeight={73}
+        handleScroll={[Function]}
+        infiniteLoadBeginEdgeOffset={50}
+        isInfiniteLoading={false}
+        loadingSpinnerDelegate={<div />}
+        onInfiniteLoad={[Function]}
+        styles={Object {}}
+        timeScrollStateLastsForAfterUserScrolls={150}
+        useWindowAsScrollContainer={false}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
 exports[`layout should handle missing props properly 1`] = `
 <div>
   <WithStyles(Grid)

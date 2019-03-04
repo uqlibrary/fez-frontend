@@ -201,12 +201,22 @@ describe('layout', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should handle empty params on rendering authors', () => {
+        const testprops = {
+            author: {},
+            linkedAuthorIdList: [],
+        };
+        const wrapper = setup(testprops);
+        wrapper.instance().getAuthorsToRender();
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should handle missing search keys properly', () => {
         const testprops = {
             searchKey: {
                 value: 'rek_author_id',
                 order: 'rek_author_id_order'
-                // type is missing
             },
             authorList: authorList
         };
