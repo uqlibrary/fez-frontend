@@ -431,3 +431,15 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
 `;
 
 exports[`Component PossiblyMyRecords renders nothing while account is loading 1`] = `""`;
+
+exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 1`] = `
+<WithStyles(Alert)
+  message={null}
+/>
+`;
+
+exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 2`] = `
+<WithStyles(Alert)
+  message="Alert: test message"
+/>
+`;

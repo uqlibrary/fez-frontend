@@ -98,7 +98,10 @@ export default class PossiblyMyRecords extends PureComponent {
 
     _hidePublication = () => {
         if (this.state.publicationToHide) {
-            this.props.actions.hideRecord({record: this.state.publicationToHide, facets: this.state.activeFacets});
+            this.props.actions.hideRecord({
+                record: this.state.publicationToHide,
+                facets: this.state.activeFacets
+            });
             this.setState({publicationToHide: null});
         }
     };
@@ -141,8 +144,11 @@ export default class PossiblyMyRecords extends PureComponent {
 
     _setHideConfirmationBox = (ref) => (this.hideConfirmationBox = ref);
 
-    getAlert = (hasFailed = false, error = null, alertLocale) => {
-        return hasFailed ? (<Alert {...{...alertLocale, message: alertLocale.message ? alertLocale.message(error) : error}} />) : null;
+    getAlert = (alertLocale, hasFailed = false, error = null) => {
+        return hasFailed ? (<Alert {...{
+            ...alertLocale,
+            message: alertLocale.message ? alertLocale.message(error) : error
+        }} />) : null;
     };
 
     pageChanged = (page) => {
@@ -180,7 +186,11 @@ export default class PossiblyMyRecords extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 {
-                    this.getAlert(this.props.hidePublicationFailed, this.props.hidePublicationFailedErrorMessage, txt.hidePublicationFailedAlert)
+                    this.getAlert(
+                        txt.hidePublicationFailedAlert,
+                        this.props.hidePublicationFailed,
+                        this.props.hidePublicationFailedErrorMessage
+                    )
                 }
 
                 {
@@ -202,7 +212,9 @@ export default class PossiblyMyRecords extends PureComponent {
                 <Grid container spacing={24}>
                     {
                         // no results to display
-                        !this.props.loadingPossibleCounts && !this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length === 0 &&
+                        !this.props.loadingPossibleCounts &&
+                        !this.props.loadingPossiblePublicationsList &&
+                        this.props.possiblePublicationsList.length === 0 &&
                         <Grid item xs={12}>
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -211,7 +223,10 @@ export default class PossiblyMyRecords extends PureComponent {
                     }
                     {
                         // results to display or loading if user is filtering/paging
-                        this.state.hasPublications && (this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length > 0) &&
+                        this.state.hasPublications && (
+                            this.props.loadingPossiblePublicationsList ||
+                            this.props.possiblePublicationsList.length > 0
+                        ) &&
                         <Grid item xs={12} md={9}>
                             <StandardCard noHeader>
                                 {
@@ -223,7 +238,8 @@ export default class PossiblyMyRecords extends PureComponent {
                                     </Grid>
                                 }
                                 {
-                                    !this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
+                                    !this.props.loadingPossiblePublicationsList &&
+                                    this.props.possiblePublicationsList.length > 0 &&
                                         <React.Fragment>
                                             <Grid item xs>
                                                 <Typography>
