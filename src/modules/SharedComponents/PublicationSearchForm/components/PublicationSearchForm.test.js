@@ -62,4 +62,13 @@ describe('PublicationSearchForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
     });
+
+    it('should display with skip search option', () => {
+        const testMethod = jest.fn();
+        const testProps = {
+            onSkipSearch: testMethod
+        };
+        const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
