@@ -180,8 +180,8 @@ export class ContributorForm extends PureComponent {
                             <UqIdField
                                 disabled={disabled || this.state.nameAsPublished.trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
-                                floatingLabelText="UQ username (if known)"
-                                hintText="eg. uqjsmith"
+                                floatingLabelText="UQ Author ID"
+                                hintText="Type UQ author name to search"
                                 id="identifierField"
                             />
                         </Grid>

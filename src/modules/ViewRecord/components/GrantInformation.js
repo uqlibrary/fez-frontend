@@ -5,6 +5,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET} from 'config/general';
 
 const styles = (theme) => ({
     gridRow: {
@@ -52,7 +53,7 @@ export class GrantInformationClass extends PureComponent {
                     <Grid item xs={12} sm={9} className={this.props.classes.data}>
                         <this.GrantInformationCell
                             grantAgencyName={grantAgencyName.rek_grant_agency}
-                            grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id}
+                            grantId={grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET]  && grantId.rek_grant_id}
                             className={this.props.classes.data}
                         />
                         <Typography variant="body2">{grantText && grantText.rek_grant_text}</Typography>

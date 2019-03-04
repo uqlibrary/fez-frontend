@@ -2640,8 +2640,8 @@ exports[`Component ContributorForm should render display name field and identifi
     >
       <Connect(WithStyles(AutoCompleteAsyncField))
         disabled={true}
-        floatingLabelText="UQ username (if known)"
-        hintText="eg. uqjsmith"
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
         id="identifierField"
         onChange={[Function]}
       />

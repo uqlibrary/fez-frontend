@@ -656,6 +656,7 @@ export const ORG_TYPE_ID_FOUNDATION = '453987';
 export const ORG_TYPE_ID_CORPORATE = '453988';
 export const ORG_TYPE_ID_UNIVERSITY = '453989';
 export const ORG_TYPE_ID_OTHER = '453990';
+export const ORG_TYPE_NOT_SET = '454045';
 
 export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_ID_MUSEUM]: 'Museum',
@@ -666,6 +667,7 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_ID_CORPORATE]: 'Corporate/Industry',
     [ORG_TYPE_ID_UNIVERSITY]: 'University',
     [ORG_TYPE_ID_OTHER]: 'Other',
+    [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
 /**
@@ -680,6 +682,7 @@ export const grantAgencyTypes = [
     'Corporate/Industry',
     'University',
     'Other',
+    'Not set'
 ];
 
 export const orgAffiliationTypes = [
@@ -690,7 +693,8 @@ export const orgAffiliationTypes = [
     {value: '453987', text: 'Foundation'},
     {value: '453988', text: 'Corporate/Industry'},
     {value: '453989', text: 'University'},
-    {value: '453990', text: 'Other'}
+    {value: '453990', text: 'Other'},
+    {value: '454045', text: 'Not set'}
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
@@ -958,26 +962,26 @@ export const LANGUAGE = [
 export const unpublishedBufferActionUrls = [
     {
         label: 'More options',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}`
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
     },
     {
         label: 'Update selected record - Generic',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Edit author affiliations',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Edit security for selected record',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Manage thesis assessor access',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Delete selected record',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
     }
 ];
