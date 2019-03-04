@@ -1,25 +1,32 @@
 import {AuthorItem} from './AuthorItem';
+import AuthorItemWithStyles from './AuthorItem';
+
+const getProps = (testProps = {}) => ({
+    author: {rek_author: 'Test user'},
+    index: 0,
+    onAuthorSelected: undefined,
+    type: 'author',
+    classes: {
+        authorLinkIcon: 'authorLinkIcon',
+        buttonBase: 'buttonBase',
+        authorOrder: 'authorOrder'
+    },
+    ...testProps
+});
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
-    const props = {
-        author: testProps.author || {rek_author: 'Test user'},
-        index: testProps.index || 0,
-        onAuthorSelected: testProps.onAuthorSelected || undefined,
-        type: 'author',
-        classes: {
-            authorLinkIcon: 'authorLinkIcon',
-            buttonBase: 'buttonBase',
-            authorOrder: 'authorOrder'
-        },
-        ...testProps
-    };
-    return getElement(AuthorItem, props, isShallow);
+    return getElement(AuthorItem, getProps(testProps), isShallow);
 }
 
 describe('AuthorItem renders ', () => {
     it('should be unselected and able to select author', () => {
         const wrapper = setup({linked: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should be rendered with styles', () => {
+        const wrapper = getElement(AuthorItemWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
