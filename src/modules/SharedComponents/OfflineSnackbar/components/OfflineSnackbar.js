@@ -9,10 +9,10 @@ import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     success: {
-        color: theme.palette.success.light,
+        color: ((theme.palette || {}).success || {}).light,
     },
     error: {
-        color: theme.palette.error.light,
+        color: ((theme.palette || {}).error || {}).light,
     },
 });
 
