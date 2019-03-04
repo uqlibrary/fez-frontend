@@ -49,6 +49,55 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
 </WithStyles(Grid)>
 `;
 
+exports[`FreeTextForm tests  rendering active form 2`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  display="row"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <TextField
+      disabled={false}
+      error={true}
+      fullWidth={true}
+      helperText="Limited to 5 characters"
+      inputRef={[Function]}
+      label="Item name"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Please type the item name"
+      required={false}
+      select={false}
+      value="123456"
+      variant="standard"
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    sm={2}
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={true}
+      fullWidth={true}
+      onClick={[Function]}
+      variant="contained"
+    >
+      Add
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
 exports[`FreeTextForm tests  rendering disabled form 1`] = `
 <WithStyles(Grid)
   alignItems="center"
@@ -200,7 +249,7 @@ exports[`FreeTextForm tests  should display error about input length 1`] = `
 </WithStyles(Grid)>
 `;
 
-exports[`FreeTextForm tests  should focus on textField 1`] = `
+exports[`FreeTextForm tests  should focus on textField after item is added 1`] = `
 <WithStyles(Grid)
   alignItems="center"
   container={true}
@@ -238,7 +287,7 @@ exports[`FreeTextForm tests  should focus on textField 1`] = `
   >
     <WithStyles(Button)
       color="primary"
-      disabled={true}
+      disabled={false}
       fullWidth={true}
       onClick={[Function]}
       variant="contained"

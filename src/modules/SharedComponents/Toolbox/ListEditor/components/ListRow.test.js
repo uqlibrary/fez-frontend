@@ -108,4 +108,16 @@ describe('ListRow renders ', () => {
         wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
         expect(onMoveDownFn).toHaveBeenCalled();
     });
+
+    it('should not call handlers if row is disabled', () => {
+        const wrapper = setup({
+            disabled: true
+        });
+        wrapper.instance().deleteRecord();
+        expect(wrapper.instance().props.onDelete).toHaveBeenCalledTimes(0);
+        wrapper.instance().onMoveUp();
+        expect(wrapper.instance().props.onMoveUp).toHaveBeenCalledTimes(0);
+        wrapper.instance().onMoveDown();
+        expect(wrapper.instance().props.onMoveDown).toHaveBeenCalledTimes(0);
+    })
 });
