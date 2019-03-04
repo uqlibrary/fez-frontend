@@ -819,7 +819,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
       item={true}
       xs={12}
     >
-      <test
+      <formComponent
         formValues={Immutable.Map {}}
         submitting={false}
       />
@@ -1280,7 +1280,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
       item={true}
       xs={12}
     >
-      <test
+      <formComponent
         formValues={Immutable.Map {}}
         submitting={false}
       />

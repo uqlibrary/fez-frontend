@@ -3,7 +3,6 @@ import {FreeTextForm} from './FreeTextForm';
 function setup(testProps, isShallow = true) {
     const props = {
         onAdd: jest.fn(),
-        isValid: jest.fn(() => ''),
         disabled: false,
         locale: {
             inputFieldLabel: 'Item name',
@@ -15,6 +14,7 @@ function setup(testProps, isShallow = true) {
         },
         errorText: 'This field is required',
         normalize: value => value,
+        isValid: jest.fn(() => true),
         ...testProps
     };
     return getElement(FreeTextForm, props, isShallow);
@@ -22,15 +22,20 @@ function setup(testProps, isShallow = true) {
 
 describe('FreeTextForm tests ', () => {
     it('rendering active form', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper1 = setup({});
+        expect(toJson(wrapper1)).toMatchSnapshot();
+        const wrapper2 = setup({
+            errorText: '',
+            maxInputLength: 5
+        });
+        wrapper2.instance().setState({itemName: '123456'});
+        expect(toJson(wrapper2)).toMatchSnapshot();
     });
 
     it('rendering disabled form', () => {
         const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 
     it('adding item method is called', () => {
         const testMethod = jest.fn();
@@ -42,7 +47,10 @@ describe('FreeTextForm tests ', () => {
 
     it('adding item method is not called on disabled form', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({ disabled: true, onAdd: testMethod });
+        const wrapper = setup({
+            disabled: true,
+            onAdd: testMethod
+        });
         wrapper.setState({itemName: 'one'});
         wrapper.instance().addItem({});
         expect(testMethod).not.toBeCalled;
@@ -56,9 +64,15 @@ describe('FreeTextForm tests ', () => {
     });
 
     it('rendering reminder to add input', () => {
-        const isValid = jest.fn(() => false);
         const wrapper = setup({});
-        wrapper.setProps({isValid: isValid, locale: {remindToAdd: 'reminder text',addButtonLabel: 'Add'}, remindToAdd: true});
+        wrapper.setProps({
+            locale: {
+                remindToAdd: 'reminder text',
+                addButtonLabel: 'Add'
+            },
+            remindToAdd: true,
+            isValid: jest.fn(() => false)
+        });
         wrapper.setState({itemName: 'one'});
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -67,9 +81,10 @@ describe('FreeTextForm tests ', () => {
     it('should not add item if state is not set', () => {
         const wrapper = setup({});
         wrapper.instance().addItem({key: 'Enter'});
+        expect(wrapper.instance().props.onAdd).toHaveBeenCalledTimes(0);
     });
 
-    it('should focus on textField', () => {
+    it('should focus on textField after item is added', () => {
         const focusFn = jest.fn();
         const wrapper = setup({});
         wrapper.instance().textField = {

@@ -7,7 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core';
 
-const styles = (theme) => ({
+export const styles = (theme) => ({
     filename: {
         ...theme.typography.body2,
     }

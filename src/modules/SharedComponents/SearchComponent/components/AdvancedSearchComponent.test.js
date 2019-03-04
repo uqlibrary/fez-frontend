@@ -1,27 +1,34 @@
 import {AdvancedSearchComponent} from './AdvancedSearchComponent';
+import AdvancedSearchComponentWithStyles from './AdvancedSearchComponent';
+import moment from 'moment';
+
+const getProps = (testProps = {}) => ({
+    isLoading: false,
+    yearFilter: {
+        invalid: false
+    },
+    className: 'advanced-search',
+    classes: {},
+
+    onAdvancedSearchRowChange: jest.fn(),
+    onSearch: jest.fn(),
+    updateYearRangeFilter: jest.fn(),
+    ...testProps
+});
 
 function setup(testProps, isShallow = true){
-    const props = {
-        isLoading: false,
-        yearFilter: {
-            invalid: false
-        },
-        className: 'advanced-search',
-        classes: {},
-
-        onAdvancedSearchRowChange: jest.fn(),
-        onSearch: jest.fn(),
-        updateYearRangeFilter: jest.fn(),
-        ...testProps
-    };
-
-    return getElement(AdvancedSearchComponent, props, isShallow);
+    return getElement(AdvancedSearchComponent, getProps(testProps), isShallow);
 }
 
 describe('AdvancedSearchComponent', () => {
 
     it('should render default view', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default view with styles', () => {
+        const wrapper = getElement(AdvancedSearchComponentWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -177,4 +184,19 @@ describe('AdvancedSearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render date range fields', () => {
+        const updateDateRangeFn = jest.fn();
+        const wrapper = setup({isOpenAccess: true, showUnpublishedFields: true, updateDateRange: updateDateRangeFn});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.find('WithStyles(DateRangeField)').get(0).props.onChange({
+            from: moment('10/10/2010'),
+            to: moment('12/10/2010')
+        });
+
+        expect(updateDateRangeFn).toHaveBeenCalledWith('rek_created_date', {
+            from: moment('10/10/2010'),
+            to: moment('12/10/2010')
+        });
+    });
 });

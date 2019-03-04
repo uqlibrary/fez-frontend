@@ -183,4 +183,85 @@ describe('ContributorLinking', () => {
             {rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 9}
         ]);
     });
+
+});
+
+describe('layout', () => {
+    it('should handle basic props properly', () => {
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should handle missing props properly', () => {
+        const testprops = {
+            author: {},
+            linkedAuthorIdList: [],
+        };
+        const wrapper = setup(testprops);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should handle empty params on rendering authors', () => {
+        const testprops = {
+            author: {},
+            linkedAuthorIdList: [],
+        };
+        const wrapper = setup(testprops);
+        wrapper.instance().getAuthorsToRender();
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should handle missing search keys properly', () => {
+        const testprops = {
+            searchKey: {
+                value: 'rek_author_id',
+                order: 'rek_author_id_order'
+            },
+            authorList: authorList
+        };
+        const wrapper = setup(testprops);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it ('shows extra small widths correctly (1 per row)', () => {
+        const testprops = {
+            width: 'xs',
+            searchKey: {
+                value: 'rek_author_id',
+                order: 'rek_author_id_order',
+                type: 'author'
+            },
+            authorList: authorList
+        };
+        const wrapper = setup(testprops);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it ('shows small widths correctly (2 per row)', () => {
+        const testprops = {
+            width: 'sm',
+            searchKey: {
+                value: 'rek_author_id',
+                order: 'rek_author_id_order',
+                type: 'author'
+            },
+            authorList: authorList
+        };
+        const wrapper = setup(testprops);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it ('shows normal widths correctly (3 per row)', () => {
+        const testprops = {
+            searchKey: {
+                value: 'rek_author_id',
+                order: 'rek_author_id_order',
+                type: 'author'
+            },
+            authorList: authorList
+        };
+        const wrapper = setup(testprops);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
