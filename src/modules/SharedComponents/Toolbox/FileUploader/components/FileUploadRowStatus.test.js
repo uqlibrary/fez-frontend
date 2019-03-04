@@ -1,4 +1,4 @@
-import {FileUploadRowStatus} from './FileUploadRowStatus';
+import {FileUploadRowStatus, mapStateToProps} from './FileUploadRowStatus';
 import FileUploadRowStatusContainer from './FileUploadRowStatus';
 
 const getProps = (testProps = {}) => ({
@@ -52,5 +52,20 @@ describe('Component FileUploadRowStatus', () => {
     it('should mount the container', () => {
         const wrapper = getElement(FileUploadRowStatusContainer, getProps(), false);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should map state to props as expected', () => {
+        const state = {
+            get: jest.fn(() => ({
+                propName: 'test1',
+                isUploadInProgress: true
+            }))
+        };
+        const test = mapStateToProps(state, {name: 'propName'});
+        const result = {
+            progress: 'test1',
+            isUploadInProgress: true
+        };
+        expect(test).toMatchObject(result);
     });
 });

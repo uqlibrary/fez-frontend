@@ -2,8 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
-import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import {withStyles} from '@material-ui/core/styles';
+import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
+import {FileNameRestrictions} from './FileUploader';
 
 const styles = () => ({
     hideLabel: {
@@ -31,7 +32,7 @@ export class FileUploadDropzone extends PureComponent {
     static defaultProps = {
         fileUploadLimit: 10,
         filesInQueue: [],
-        fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+        fileNameRestrictions: FileNameRestrictions
     };
 
     constructor(props) {
