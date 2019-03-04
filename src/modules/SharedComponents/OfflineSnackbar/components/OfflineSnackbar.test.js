@@ -1,4 +1,5 @@
 import {OfflineSnackbar} from './OfflineSnackbar';
+import OfflineSnackbarWithStyles from './OfflineSnackbar';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -82,4 +83,15 @@ describe('Component OfflineSnackbar', () => {
         expect(wrapper.state()).toEqual({"online": true, "open": true});
     });
 
+    it('should unmount component', () => {
+        const wrapper = setup({});
+        const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
+        wrapper.unmount();
+        expect(componentWillUnmount).toHaveBeenCalled();
+    });
+
+    it('should render with style', () => {
+        const wrapper = getElement(OfflineSnackbarWithStyles, {});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
