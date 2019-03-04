@@ -899,7 +899,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               noWrap={true}
               variant="caption"
             >
-              undefined
+              University of Queensland (undefined)
             </WithStyles(Typography)>
           }
         />
@@ -1060,7 +1060,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               noWrap={true}
               variant="caption"
             >
-              undefined
+              University of Queensland (undefined)
             </WithStyles(Typography)>
           }
         />
@@ -1221,7 +1221,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />
@@ -1863,7 +1863,7 @@ exports[`Component ContributorRow  should call callback functions on ListItem 1`
               noWrap={true}
               variant="caption"
             >
-              undefined
+              University of Queensland (undefined)
             </WithStyles(Typography)>
           }
         />

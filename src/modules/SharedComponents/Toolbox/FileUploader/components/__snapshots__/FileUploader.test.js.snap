@@ -2843,56 +2843,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 onKeyPress={[Function]}
                                 tabIndex="0"
                               >
-                                <WithStyles(InputLabel)
-                                  className="FileUploadDropzone-hideLabel-36"
-                                  htmlFor="Uploader"
-                                >
-                                  <InputLabel
-                                    className="FileUploadDropzone-hideLabel-36"
-                                    classes={
-                                      Object {
-                                        "animated": "MuiInputLabel-animated-138",
-                                        "filled": "MuiInputLabel-filled-139",
-                                        "formControl": "MuiInputLabel-formControl-135",
-                                        "marginDense": "MuiInputLabel-marginDense-136",
-                                        "outlined": "MuiInputLabel-outlined-140",
-                                        "root": "MuiInputLabel-root-134",
-                                        "shrink": "MuiInputLabel-shrink-137",
-                                      }
-                                    }
-                                    disableAnimation={false}
-                                    htmlFor="Uploader"
-                                  >
-                                    <WithStyles(FormLabel)
-                                      className="MuiInputLabel-root-134 MuiInputLabel-animated-138 FileUploadDropzone-hideLabel-36"
-                                      htmlFor="Uploader"
-                                    >
-                                      <FormLabel
-                                        className="MuiInputLabel-root-134 MuiInputLabel-animated-138 FileUploadDropzone-hideLabel-36"
-                                        classes={
-                                          Object {
-                                            "asterisk": "MuiFormLabel-asterisk-147",
-                                            "disabled": "MuiFormLabel-disabled-143",
-                                            "error": "MuiFormLabel-error-144",
-                                            "filled": "MuiFormLabel-filled-145",
-                                            "focused": "MuiFormLabel-focused-142",
-                                            "required": "MuiFormLabel-required-146",
-                                            "root": "MuiFormLabel-root-141",
-                                          }
-                                        }
-                                        component="label"
-                                        htmlFor="Uploader"
-                                      >
-                                        <label
-                                          className="MuiFormLabel-root-141 MuiInputLabel-root-134 MuiInputLabel-animated-138 FileUploadDropzone-hideLabel-36"
-                                          htmlFor="Uploader"
-                                        >
-                                          Month
-                                        </label>
-                                      </FormLabel>
-                                    </WithStyles(FormLabel)>
-                                  </InputLabel>
-                                </WithStyles(InputLabel)>
                                 <t
                                   disableClick={false}
                                   disablePreview={true}
@@ -3012,10 +2962,10 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       <FileUploadDropzoneStaticContent
                                         classes={
                                           Object {
-                                            "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-151",
-                                            "dropzone": "FileUploadDropzoneStaticContent-dropzone-148",
-                                            "heading": "FileUploadDropzoneStaticContent-heading-149",
-                                            "instructions": "FileUploadDropzoneStaticContent-instructions-150",
+                                            "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-137",
+                                            "dropzone": "FileUploadDropzoneStaticContent-dropzone-134",
+                                            "heading": "FileUploadDropzoneStaticContent-heading-135",
+                                            "instructions": "FileUploadDropzoneStaticContent-instructions-136",
                                           }
                                         }
                                         locale={
@@ -3098,13 +3048,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         }
                                       >
                                         <WithStyles(Grid)
-                                          className="FileUploadDropzoneStaticContent-dropzone-148"
+                                          className="FileUploadDropzoneStaticContent-dropzone-134"
                                           container={true}
                                         >
                                           <Grid
                                             alignContent="stretch"
                                             alignItems="stretch"
-                                            className="FileUploadDropzoneStaticContent-dropzone-148"
+                                            className="FileUploadDropzoneStaticContent-dropzone-134"
                                             classes={
                                               Object {
                                                 "align-content-xs-center": "MuiGrid-align-content-xs-center-49",
@@ -3221,7 +3171,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-37 FileUploadDropzoneStaticContent-dropzone-148"
+                                              className="MuiGrid-container-37 FileUploadDropzoneStaticContent-dropzone-134"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -3350,11 +3300,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                     className="MuiGrid-item-38 MuiGrid-grid-xs-12-77 MuiGrid-grid-sm-6-85"
                                                   >
                                                     <WithStyles(Typography)
-                                                      className="FileUploadDropzoneStaticContent-heading-149"
+                                                      className="FileUploadDropzoneStaticContent-heading-135"
                                                     >
                                                       <Typography
                                                         align="inherit"
-                                                        className="FileUploadDropzoneStaticContent-heading-149"
+                                                        className="FileUploadDropzoneStaticContent-heading-135"
                                                         classes={
                                                           Object {
                                                             "alignCenter": "MuiTypography-alignCenter-24",
@@ -3840,7 +3790,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         }
                                                       >
                                                         <p
-                                                          className="MuiTypography-root-1 MuiTypography-body2-9 FileUploadDropzoneStaticContent-heading-149"
+                                                          className="MuiTypography-root-1 MuiTypography-body2-9 FileUploadDropzoneStaticContent-heading-135"
                                                         >
                                                           File upload restrictions
                                                         </p>
@@ -3994,7 +3944,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                   >
                                                     <WithStyles(Grid)
                                                       alignItems="center"
-                                                      className="FileUploadDropzoneStaticContent-instructions-150"
+                                                      className="FileUploadDropzoneStaticContent-instructions-136"
                                                       container={true}
                                                       direction="column"
                                                       justify="center"
@@ -4002,7 +3952,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       <Grid
                                                         alignContent="stretch"
                                                         alignItems="center"
-                                                        className="FileUploadDropzoneStaticContent-instructions-150"
+                                                        className="FileUploadDropzoneStaticContent-instructions-136"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-49",
@@ -4119,7 +4069,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         zeroMinWidth={false}
                                                       >
                                                         <div
-                                                          className="MuiGrid-container-37 MuiGrid-direction-xs-column-40 MuiGrid-align-items-xs-center-45 MuiGrid-justify-xs-center-54 FileUploadDropzoneStaticContent-instructions-150"
+                                                          className="MuiGrid-container-37 MuiGrid-direction-xs-column-40 MuiGrid-align-items-xs-center-45 MuiGrid-justify-xs-center-54 FileUploadDropzoneStaticContent-instructions-136"
                                                         >
                                                           <WithStyles(Grid)
                                                             item={true}
@@ -4246,27 +4196,27 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                 className="MuiGrid-item-38"
                                                               >
                                                                 <pure(CloudUploadIcon)
-                                                                  className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                  className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                 >
                                                                   <CloudUploadIcon
-                                                                    className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                    className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                   >
                                                                     <WithStyles(SvgIcon)
-                                                                      className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                      className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                     >
                                                                       <SvgIcon
-                                                                        className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                        className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                         classes={
                                                                           Object {
-                                                                            "colorAction": "MuiSvgIcon-colorAction-155",
-                                                                            "colorDisabled": "MuiSvgIcon-colorDisabled-157",
-                                                                            "colorError": "MuiSvgIcon-colorError-156",
-                                                                            "colorPrimary": "MuiSvgIcon-colorPrimary-153",
-                                                                            "colorSecondary": "MuiSvgIcon-colorSecondary-154",
-                                                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-158",
-                                                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-160",
-                                                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-159",
-                                                                            "root": "MuiSvgIcon-root-152",
+                                                                            "colorAction": "MuiSvgIcon-colorAction-141",
+                                                                            "colorDisabled": "MuiSvgIcon-colorDisabled-143",
+                                                                            "colorError": "MuiSvgIcon-colorError-142",
+                                                                            "colorPrimary": "MuiSvgIcon-colorPrimary-139",
+                                                                            "colorSecondary": "MuiSvgIcon-colorSecondary-140",
+                                                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-144",
+                                                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-146",
+                                                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-145",
+                                                                            "root": "MuiSvgIcon-root-138",
                                                                           }
                                                                         }
                                                                         color="inherit"
@@ -4276,7 +4226,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                       >
                                                                         <svg
                                                                           aria-hidden="true"
-                                                                          className="MuiSvgIcon-root-152 FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                          className="MuiSvgIcon-root-138 FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                           focusable="false"
                                                                           role="presentation"
                                                                           viewBox="0 0 24 24"
@@ -6521,56 +6471,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 onKeyPress={[Function]}
                                 tabIndex="0"
                               >
-                                <WithStyles(InputLabel)
-                                  className="FileUploadDropzone-hideLabel-36"
-                                  htmlFor="Uploader"
-                                >
-                                  <InputLabel
-                                    className="FileUploadDropzone-hideLabel-36"
-                                    classes={
-                                      Object {
-                                        "animated": "MuiInputLabel-animated-138",
-                                        "filled": "MuiInputLabel-filled-139",
-                                        "formControl": "MuiInputLabel-formControl-135",
-                                        "marginDense": "MuiInputLabel-marginDense-136",
-                                        "outlined": "MuiInputLabel-outlined-140",
-                                        "root": "MuiInputLabel-root-134",
-                                        "shrink": "MuiInputLabel-shrink-137",
-                                      }
-                                    }
-                                    disableAnimation={false}
-                                    htmlFor="Uploader"
-                                  >
-                                    <WithStyles(FormLabel)
-                                      className="MuiInputLabel-root-134 MuiInputLabel-animated-138 FileUploadDropzone-hideLabel-36"
-                                      htmlFor="Uploader"
-                                    >
-                                      <FormLabel
-                                        className="MuiInputLabel-root-134 MuiInputLabel-animated-138 FileUploadDropzone-hideLabel-36"
-                                        classes={
-                                          Object {
-                                            "asterisk": "MuiFormLabel-asterisk-147",
-                                            "disabled": "MuiFormLabel-disabled-143",
-                                            "error": "MuiFormLabel-error-144",
-                                            "filled": "MuiFormLabel-filled-145",
-                                            "focused": "MuiFormLabel-focused-142",
-                                            "required": "MuiFormLabel-required-146",
-                                            "root": "MuiFormLabel-root-141",
-                                          }
-                                        }
-                                        component="label"
-                                        htmlFor="Uploader"
-                                      >
-                                        <label
-                                          className="MuiFormLabel-root-141 MuiInputLabel-root-134 MuiInputLabel-animated-138 FileUploadDropzone-hideLabel-36"
-                                          htmlFor="Uploader"
-                                        >
-                                          Month
-                                        </label>
-                                      </FormLabel>
-                                    </WithStyles(FormLabel)>
-                                  </InputLabel>
-                                </WithStyles(InputLabel)>
                                 <t
                                   disableClick={false}
                                   disablePreview={true}
@@ -6690,10 +6590,10 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       <FileUploadDropzoneStaticContent
                                         classes={
                                           Object {
-                                            "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-151",
-                                            "dropzone": "FileUploadDropzoneStaticContent-dropzone-148",
-                                            "heading": "FileUploadDropzoneStaticContent-heading-149",
-                                            "instructions": "FileUploadDropzoneStaticContent-instructions-150",
+                                            "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-137",
+                                            "dropzone": "FileUploadDropzoneStaticContent-dropzone-134",
+                                            "heading": "FileUploadDropzoneStaticContent-heading-135",
+                                            "instructions": "FileUploadDropzoneStaticContent-instructions-136",
                                           }
                                         }
                                         locale={
@@ -6776,13 +6676,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         }
                                       >
                                         <WithStyles(Grid)
-                                          className="FileUploadDropzoneStaticContent-dropzone-148"
+                                          className="FileUploadDropzoneStaticContent-dropzone-134"
                                           container={true}
                                         >
                                           <Grid
                                             alignContent="stretch"
                                             alignItems="stretch"
-                                            className="FileUploadDropzoneStaticContent-dropzone-148"
+                                            className="FileUploadDropzoneStaticContent-dropzone-134"
                                             classes={
                                               Object {
                                                 "align-content-xs-center": "MuiGrid-align-content-xs-center-49",
@@ -6899,7 +6799,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                             zeroMinWidth={false}
                                           >
                                             <div
-                                              className="MuiGrid-container-37 FileUploadDropzoneStaticContent-dropzone-148"
+                                              className="MuiGrid-container-37 FileUploadDropzoneStaticContent-dropzone-134"
                                             >
                                               <WithStyles(Grid)
                                                 item={true}
@@ -7028,11 +6928,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                     className="MuiGrid-item-38 MuiGrid-grid-xs-12-77 MuiGrid-grid-sm-6-85"
                                                   >
                                                     <WithStyles(Typography)
-                                                      className="FileUploadDropzoneStaticContent-heading-149"
+                                                      className="FileUploadDropzoneStaticContent-heading-135"
                                                     >
                                                       <Typography
                                                         align="inherit"
-                                                        className="FileUploadDropzoneStaticContent-heading-149"
+                                                        className="FileUploadDropzoneStaticContent-heading-135"
                                                         classes={
                                                           Object {
                                                             "alignCenter": "MuiTypography-alignCenter-24",
@@ -7518,7 +7418,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         }
                                                       >
                                                         <p
-                                                          className="MuiTypography-root-1 MuiTypography-body2-9 FileUploadDropzoneStaticContent-heading-149"
+                                                          className="MuiTypography-root-1 MuiTypography-body2-9 FileUploadDropzoneStaticContent-heading-135"
                                                         >
                                                           File upload restrictions
                                                         </p>
@@ -7672,7 +7572,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                   >
                                                     <WithStyles(Grid)
                                                       alignItems="center"
-                                                      className="FileUploadDropzoneStaticContent-instructions-150"
+                                                      className="FileUploadDropzoneStaticContent-instructions-136"
                                                       container={true}
                                                       direction="column"
                                                       justify="center"
@@ -7680,7 +7580,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       <Grid
                                                         alignContent="stretch"
                                                         alignItems="center"
-                                                        className="FileUploadDropzoneStaticContent-instructions-150"
+                                                        className="FileUploadDropzoneStaticContent-instructions-136"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-49",
@@ -7797,7 +7697,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         zeroMinWidth={false}
                                                       >
                                                         <div
-                                                          className="MuiGrid-container-37 MuiGrid-direction-xs-column-40 MuiGrid-align-items-xs-center-45 MuiGrid-justify-xs-center-54 FileUploadDropzoneStaticContent-instructions-150"
+                                                          className="MuiGrid-container-37 MuiGrid-direction-xs-column-40 MuiGrid-align-items-xs-center-45 MuiGrid-justify-xs-center-54 FileUploadDropzoneStaticContent-instructions-136"
                                                         >
                                                           <WithStyles(Grid)
                                                             item={true}
@@ -7924,27 +7824,27 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                 className="MuiGrid-item-38"
                                                               >
                                                                 <pure(CloudUploadIcon)
-                                                                  className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                  className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                 >
                                                                   <CloudUploadIcon
-                                                                    className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                    className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                   >
                                                                     <WithStyles(SvgIcon)
-                                                                      className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                      className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                     >
                                                                       <SvgIcon
-                                                                        className="FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                        className="FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                         classes={
                                                                           Object {
-                                                                            "colorAction": "MuiSvgIcon-colorAction-155",
-                                                                            "colorDisabled": "MuiSvgIcon-colorDisabled-157",
-                                                                            "colorError": "MuiSvgIcon-colorError-156",
-                                                                            "colorPrimary": "MuiSvgIcon-colorPrimary-153",
-                                                                            "colorSecondary": "MuiSvgIcon-colorSecondary-154",
-                                                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-158",
-                                                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-160",
-                                                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-159",
-                                                                            "root": "MuiSvgIcon-root-152",
+                                                                            "colorAction": "MuiSvgIcon-colorAction-141",
+                                                                            "colorDisabled": "MuiSvgIcon-colorDisabled-143",
+                                                                            "colorError": "MuiSvgIcon-colorError-142",
+                                                                            "colorPrimary": "MuiSvgIcon-colorPrimary-139",
+                                                                            "colorSecondary": "MuiSvgIcon-colorSecondary-140",
+                                                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-144",
+                                                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-146",
+                                                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-145",
+                                                                            "root": "MuiSvgIcon-root-138",
                                                                           }
                                                                         }
                                                                         color="inherit"
@@ -7954,7 +7854,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                       >
                                                                         <svg
                                                                           aria-hidden="true"
-                                                                          className="MuiSvgIcon-root-152 FileUploadDropzoneStaticContent-cloudIcon-151"
+                                                                          className="MuiSvgIcon-root-138 FileUploadDropzoneStaticContent-cloudIcon-137"
                                                                           focusable="false"
                                                                           role="presentation"
                                                                           viewBox="0 0 24 24"
