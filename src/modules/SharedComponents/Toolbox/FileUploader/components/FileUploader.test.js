@@ -1,4 +1,4 @@
-import {FileUploader} from './FileUploader';
+import {FileUploader, FileNameRestrictions} from './FileUploader';
 import FileUploaderContainer from './FileUploader';
 
 const getProps = (testProps = {}) => ({
@@ -6,7 +6,7 @@ const getProps = (testProps = {}) => ({
         fileUploadLimit: 5,
         maxFileSize: 1,
         fileSizeUnit: 'K',
-        fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+        fileNameRestrictions: FileNameRestrictions
     },
     filesInQueue: [],
     // locale: locale,
@@ -45,7 +45,7 @@ describe('Component FileUploader', () => {
                 fileUploadLimit: 5,
                 maxFileSize: 1,
                 fileSizeUnit: 'B',
-                fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+                fileNameRestrictions: FileNameRestrictions
             }
         }), false);
         const tree = toJson(wrapper);
@@ -173,7 +173,6 @@ describe('Component FileUploader', () => {
         const file_c = getMockFile('c.txt');
         const file_d = getMockFile('d.txt');
 
-
         wrapper.instance()._handleDroppedFiles([file_a, file_b], {});
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -291,7 +290,11 @@ describe('Component FileUploader', () => {
             invalidFileNames: ['web_a.txt'],
             notFiles: ['someFolder'],
             tooBigFiles: ['big_file.txt']
-        })).toEqual('Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have invalid file name; Invalid files (someFolder); File(s) (big_file.txt) exceed maximum allowed upload file size');
+        })).toEqual(
+            'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; ' +
+            'File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have invalid file name; ' +
+            'Invalid files (someFolder); File(s) (big_file.txt) exceed maximum allowed upload file size'
+        );
     });
 
     it('should get empty string as an error message', () => {
@@ -311,11 +314,26 @@ describe('Component FileUploader', () => {
             requireOpenAccessStatus: false,
             onChange: onChangeFn
         });
+        const file_a = getMockFile('a.txt');
         wrapper.setState({
-            filesInQueue: ['a.txt']
+            filesInQueue: [file_a]
         });
         wrapper.update();
 
         expect(onChangeFn).toHaveBeenCalled();
+    });
+
+    it('should keep terms and conditions as accepted on file delete if any of remaining files are open access', () => {
+        const wrapper = setup({});
+        const file_a = getMockFile('a.txt');
+        const file_b = getMockFile('b.txt');
+        const file_c = getMockFile('c.txt');
+        wrapper.setState({
+            filesInQueue: [file_a, file_b, file_c],
+            isTermsAndConditionsAccepted: true
+        });
+        wrapper.instance().isAnyOpenAccess = jest.fn(() => true);
+        wrapper.instance()._deleteFile(null, 1);
+        expect(wrapper.state().isTermsAndConditionsAccepted).toBe(true);
     });
 });

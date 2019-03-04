@@ -1,5 +1,5 @@
 import {latestPubsPayload} from 'mock/data/testing/latestPublications';
-import {MyLatestPublications} from './MyLatestPublications';
+import {MyLatestPublications, styles} from './MyLatestPublications';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -43,10 +43,18 @@ describe('Component MyLatestPublications', () => {
         expect(testFn).toHaveBeenCalledWith('/records/mine');
     });
 
-    describe('Full mount of component', () => {
-        it('should get styles for full render', () => {
-            const wrapper = setup({}, false);
-            expect(toJson(wrapper)).toMatchSnapshot();
-        });
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                accent: {
+                    main: 'test1',
+                    dark: 'test2'
+                },
+                white: {
+                    main: 'test3'
+                }
+            }
+        }
+        expect(styles(theme)).toMatchSnapshot();
     });
 });
