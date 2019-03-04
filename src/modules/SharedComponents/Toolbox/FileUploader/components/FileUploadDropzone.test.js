@@ -1,5 +1,6 @@
 import {FileUploadDropzone} from './FileUploadDropzone';
 import FileUploadDropzoneWithStyles from './FileUploadDropzone';
+import {FileNameRestrictions} from './FileUploader';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -171,7 +172,7 @@ describe('Component FileUploadDropzone', () => {
             fileUploadLimit: 4,
             filesInQueue: [file_a.name, file_b.name],
             onDrop: onDropTestFn,
-            fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+            fileNameRestrictions: FileNameRestrictions
         });
 
         const expectedFiles = [file_c, file_f].map(file => ({fileData: file, name: file.name, size: file.size}));
@@ -202,7 +203,7 @@ describe('Component FileUploadDropzone', () => {
             fileUploadLimit: 4,
             filesInQueue: [],
             onDrop: onDropTestFn,
-            fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+            fileNameRestrictions: FileNameRestrictions
         });
 
         const expectedFiles = [file_g].map(file => ({fileData: file, name: file.name, size: file.size}));
