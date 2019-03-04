@@ -63,7 +63,10 @@ export class FreeTextForm extends Component {
         });
 
         // move focus to name as published text field after item was added
-        if (this.textField) this.textField.focus();
+        /* istanbul if ignore */
+        if (this.textField) {
+            this.textField.focus();
+        }
     };
 
     onNameChanged = (event) => {
@@ -109,7 +112,12 @@ export class FreeTextForm extends Component {
                         color="primary"
                         variant="contained"
                         children={addButtonLabel}
-                        disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0 || !!inputLength}
+                        disabled={
+                            disabled ||
+                            !this.props.isValid(this.state.itemName) ||
+                            this.state.itemName.trim().length === 0 ||
+                            !!inputLength
+                        }
                         onClick={this.addItem}
                     />
                 </Grid>

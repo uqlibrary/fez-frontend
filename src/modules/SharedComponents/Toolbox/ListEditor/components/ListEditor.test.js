@@ -151,4 +151,13 @@ describe('ListEditor tests ', () => {
         const result = wrapper.find('formComponent').props().normalize('test');
         expect(result).toBe('test');
     });
+
+    it('should not call transformOutput if onChange prop method is not defined', () => {
+        const wrapper = setup({
+            onChange: null
+        });
+        const test = jest.spyOn(wrapper.instance(), 'transformOutput');
+        wrapper.instance().componentWillUpdate({}, {});
+        expect(test).toHaveBeenCalledTimes(0);
+    })
 });
