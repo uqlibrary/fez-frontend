@@ -65,6 +65,7 @@ export default class ConfirmDialogBox extends Component {
 
     _onCancelAction() {
         this._hideConfirmation();
+        /* istanbul ignore else */
         if (this.props.onCancelAction) {
             this.props.onCancelAction();
         }

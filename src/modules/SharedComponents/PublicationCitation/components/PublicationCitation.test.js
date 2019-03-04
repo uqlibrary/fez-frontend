@@ -1,24 +1,31 @@
 import {PublicationCitation} from './PublicationCitation';
+import PublicationCitationWithStyles from './PublicationCitation';
 import {mockRecordToFix} from 'mock/data/testing/records';
 
+const getProps = (testProps = {}) => ({
+    classes: {},
+    publication: mockRecordToFix,
+    history: {push: jest.fn()},
+    actions: {
+        setFixRecord: jest.fn(),
+        setRecordToView: jest.fn()
+    },
+    hideLinks: false,
+    ...testProps
+});
+
 function setup(testProps, isShallow = true){
-    const props = {
-        classes: {},
-        publication: testProps.publication || mockRecordToFix,
-        history: testProps.history || {push: jest.fn()},
-        actions: testProps.actions || {
-            setFixRecord: jest.fn(),
-            setRecordToView: jest.fn()
-        },
-        hideLinks: false,
-        ...testProps
-    };
-    return getElement(PublicationCitation, props, isShallow);
+    return getElement(PublicationCitation, getProps(testProps), isShallow);
 }
 
 describe('PublicationCitation ', () => {
     it('should render component with default item', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(PublicationCitationWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -83,6 +90,7 @@ describe('PublicationCitation ', () => {
         // TODO
         wrapper.instance()._handleDefaultActions('NAN');
         // TODO
+        wrapper.find('WithStyles(Button)').get(0).props.onClick();
     });
 
     it('should render publication with citation metric', () => {
