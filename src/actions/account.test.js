@@ -15,11 +15,13 @@ describe('Account action creators', () => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
+        mockSessionApi = setupSessionMockAdapter();
     });
 
     afterEach(() => {
         MockDate.reset();
         mockApi.reset();
+        mockSessionApi.reset();
     });
 
     it('should dispatch expected actions on successful fetch of user details', async () => {
@@ -168,6 +170,15 @@ describe('Account action creators', () => {
         ];
 
         await mockActionsStore.dispatch(accountActions.checkSession());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch clear session expire action', async () => {
+        const expectedActions = [
+            actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG,
+        ];
+
+        await mockActionsStore.dispatch(accountActions.clearSessionExpiredFlag());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });
