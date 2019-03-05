@@ -20590,6 +20590,994 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
 </div>
 `;
 
+exports[`FacetsFilter  getFacetsToDisplay returns facets correctly with an exclusion and renaming 1`] = `
+Array [
+  Object {
+    "facetTitle": "Display type",
+    "facets": Array [
+      Object {
+        "count": 110,
+        "key": 179,
+        "title": "Journal Article",
+      },
+      Object {
+        "count": 32,
+        "key": 130,
+        "title": "Conference Paper",
+      },
+      Object {
+        "count": 3,
+        "key": 174,
+        "title": "Book",
+      },
+      Object {
+        "count": 1,
+        "key": 177,
+        "title": "Book Chapter",
+      },
+      Object {
+        "count": 1,
+        "key": 202,
+        "title": "Generic Document",
+      },
+    ],
+    "title": "Work type",
+  },
+  Object {
+    "facetTitle": "Keywords",
+    "facets": Array [
+      Object {
+        "count": 15,
+        "key": "Brca1",
+        "title": "Brca1",
+      },
+      Object {
+        "count": 14,
+        "key": "Breast cancer",
+        "title": "Breast cancer",
+      },
+      Object {
+        "count": 9,
+        "key": "Gene",
+        "title": "Gene",
+      },
+      Object {
+        "count": 7,
+        "key": "Cells",
+        "title": "Cells",
+      },
+      Object {
+        "count": 7,
+        "key": "Mutations",
+        "title": "Mutations",
+      },
+    ],
+    "title": "Keywords",
+  },
+  Object {
+    "facetTitle": "Subject",
+    "facets": Array [
+      Object {
+        "count": 23,
+        "key": 450009,
+        "title": "C1",
+      },
+      Object {
+        "count": 16,
+        "key": 450018,
+        "title": "EX",
+      },
+      Object {
+        "count": 15,
+        "key": 450520,
+        "title": "730108 Cancer and related disorders",
+      },
+      Object {
+        "count": 12,
+        "key": 452615,
+        "title": "1112 Oncology and Carcinogenesis",
+      },
+      Object {
+        "count": 9,
+        "key": 270201,
+        "title": "270201 Gene Expression",
+      },
+    ],
+    "title": "Subject",
+  },
+  Object {
+    "facetTitle": "Journal name",
+    "facets": Array [
+      Object {
+        "count": 7,
+        "key": "Human Mutation",
+        "title": "Human Mutation",
+      },
+      Object {
+        "count": 6,
+        "key": "Human Molecular Genetics",
+        "title": "Human Molecular Genetics",
+      },
+      Object {
+        "count": 5,
+        "key": "Oncogene",
+        "title": "Oncogene",
+      },
+      Object {
+        "count": 5,
+        "key": "test",
+        "title": "test",
+      },
+      Object {
+        "count": 4,
+        "key": "Breast Cancer Research",
+        "title": "Breast Cancer Research",
+      },
+    ],
+    "title": "Journal name",
+  },
+  Object {
+    "facetTitle": "Collection",
+    "facets": Array [
+      Object {
+        "count": 84,
+        "key": "UQ:3825",
+        "title": "School of Chemistry and Molecular Biosciences",
+      },
+      Object {
+        "count": 46,
+        "key": "UQ:152266",
+        "title": "Excellence in Research Australia (ERA) - Collection",
+      },
+      Object {
+        "count": 30,
+        "key": "UQ:3831",
+        "title": "School of Medicine Publications",
+      },
+      Object {
+        "count": 22,
+        "key": "UQ:183940",
+        "title": "ResearcherID Downloads",
+      },
+      Object {
+        "count": 20,
+        "key": "UQ:218198",
+        "title": "Unprocessed Records",
+      },
+    ],
+    "title": "Collection",
+  },
+  Object {
+    "facetTitle": "Author",
+    "facets": Array [
+      Object {
+        "count": 147,
+        "key": 1671,
+        "title": "Brown, Melissa Anne",
+      },
+      Object {
+        "count": 36,
+        "key": 950,
+        "title": "French, Juliet D.",
+      },
+      Object {
+        "count": 30,
+        "key": 2463,
+        "title": "Spurdle, Amanda B.",
+      },
+      Object {
+        "count": 24,
+        "key": 1605,
+        "title": "Chanel Smart",
+      },
+      Object {
+        "count": 24,
+        "key": 3247,
+        "title": "Chenevix-Trench, Georgia",
+      },
+    ],
+    "title": "Author",
+  },
+  Object {
+    "facetTitle": "Genre",
+    "facets": Array [
+      Object {
+        "count": 6,
+        "key": "Article (original research)",
+        "title": "Article (original research)",
+      },
+    ],
+    "title": "Genre",
+  },
+]
+`;
+
+exports[`FacetsFilter  getFacetsToDisplay returns facets correctly with an exclusion but no renaming 1`] = `
+Array [
+  Object {
+    "facetTitle": "Display type",
+    "facets": Array [
+      Object {
+        "count": 110,
+        "key": 179,
+        "title": "Journal Article",
+      },
+      Object {
+        "count": 32,
+        "key": 130,
+        "title": "Conference Paper",
+      },
+      Object {
+        "count": 3,
+        "key": 174,
+        "title": "Book",
+      },
+      Object {
+        "count": 1,
+        "key": 177,
+        "title": "Book Chapter",
+      },
+      Object {
+        "count": 1,
+        "key": 202,
+        "title": "Generic Document",
+      },
+    ],
+    "title": "Display type",
+  },
+  Object {
+    "facetTitle": "Keywords",
+    "facets": Array [
+      Object {
+        "count": 15,
+        "key": "Brca1",
+        "title": "Brca1",
+      },
+      Object {
+        "count": 14,
+        "key": "Breast cancer",
+        "title": "Breast cancer",
+      },
+      Object {
+        "count": 9,
+        "key": "Gene",
+        "title": "Gene",
+      },
+      Object {
+        "count": 7,
+        "key": "Cells",
+        "title": "Cells",
+      },
+      Object {
+        "count": 7,
+        "key": "Mutations",
+        "title": "Mutations",
+      },
+    ],
+    "title": "Keywords",
+  },
+  Object {
+    "facetTitle": "Subject",
+    "facets": Array [
+      Object {
+        "count": 23,
+        "key": 450009,
+        "title": "C1",
+      },
+      Object {
+        "count": 16,
+        "key": 450018,
+        "title": "EX",
+      },
+      Object {
+        "count": 15,
+        "key": 450520,
+        "title": "730108 Cancer and related disorders",
+      },
+      Object {
+        "count": 12,
+        "key": 452615,
+        "title": "1112 Oncology and Carcinogenesis",
+      },
+      Object {
+        "count": 9,
+        "key": 270201,
+        "title": "270201 Gene Expression",
+      },
+    ],
+    "title": "Subject",
+  },
+  Object {
+    "facetTitle": "Journal name",
+    "facets": Array [
+      Object {
+        "count": 7,
+        "key": "Human Mutation",
+        "title": "Human Mutation",
+      },
+      Object {
+        "count": 6,
+        "key": "Human Molecular Genetics",
+        "title": "Human Molecular Genetics",
+      },
+      Object {
+        "count": 5,
+        "key": "Oncogene",
+        "title": "Oncogene",
+      },
+      Object {
+        "count": 5,
+        "key": "test",
+        "title": "test",
+      },
+      Object {
+        "count": 4,
+        "key": "Breast Cancer Research",
+        "title": "Breast Cancer Research",
+      },
+    ],
+    "title": "Journal name",
+  },
+  Object {
+    "facetTitle": "Collection",
+    "facets": Array [
+      Object {
+        "count": 84,
+        "key": "UQ:3825",
+        "title": "School of Chemistry and Molecular Biosciences",
+      },
+      Object {
+        "count": 46,
+        "key": "UQ:152266",
+        "title": "Excellence in Research Australia (ERA) - Collection",
+      },
+      Object {
+        "count": 30,
+        "key": "UQ:3831",
+        "title": "School of Medicine Publications",
+      },
+      Object {
+        "count": 22,
+        "key": "UQ:183940",
+        "title": "ResearcherID Downloads",
+      },
+      Object {
+        "count": 20,
+        "key": "UQ:218198",
+        "title": "Unprocessed Records",
+      },
+    ],
+    "title": "Collection",
+  },
+  Object {
+    "facetTitle": "Author",
+    "facets": Array [
+      Object {
+        "count": 147,
+        "key": 1671,
+        "title": "Brown, Melissa Anne",
+      },
+      Object {
+        "count": 36,
+        "key": 950,
+        "title": "French, Juliet D.",
+      },
+      Object {
+        "count": 30,
+        "key": 2463,
+        "title": "Spurdle, Amanda B.",
+      },
+      Object {
+        "count": 24,
+        "key": 1605,
+        "title": "Chanel Smart",
+      },
+      Object {
+        "count": 24,
+        "key": 3247,
+        "title": "Chenevix-Trench, Georgia",
+      },
+    ],
+    "title": "Author",
+  },
+  Object {
+    "facetTitle": "Genre",
+    "facets": Array [
+      Object {
+        "count": 6,
+        "key": "Article (original research)",
+        "title": "Article (original research)",
+      },
+    ],
+    "title": "Genre",
+  },
+]
+`;
+
+exports[`FacetsFilter  getFacetsToDisplay returns facets correctly without an exclusion but has renaming 1`] = `
+Array [
+  Object {
+    "facetTitle": "Scopus document type",
+    "facets": Array [
+      Object {
+        "count": 68,
+        "key": "ar",
+        "title": "Article",
+      },
+      Object {
+        "count": 4,
+        "key": "re",
+        "title": "Review",
+      },
+      Object {
+        "count": 1,
+        "key": "ch",
+        "title": "Letter",
+      },
+      Object {
+        "count": 1,
+        "key": "le",
+        "title": "false",
+      },
+    ],
+    "title": "Scopus document type",
+  },
+  Object {
+    "facetTitle": "Display type",
+    "facets": Array [
+      Object {
+        "count": 110,
+        "key": 179,
+        "title": "Journal Article",
+      },
+      Object {
+        "count": 32,
+        "key": 130,
+        "title": "Conference Paper",
+      },
+      Object {
+        "count": 3,
+        "key": 174,
+        "title": "Book",
+      },
+      Object {
+        "count": 1,
+        "key": 177,
+        "title": "Book Chapter",
+      },
+      Object {
+        "count": 1,
+        "key": 202,
+        "title": "Generic Document",
+      },
+    ],
+    "title": "Work type",
+  },
+  Object {
+    "facetTitle": "Keywords",
+    "facets": Array [
+      Object {
+        "count": 15,
+        "key": "Brca1",
+        "title": "Brca1",
+      },
+      Object {
+        "count": 14,
+        "key": "Breast cancer",
+        "title": "Breast cancer",
+      },
+      Object {
+        "count": 9,
+        "key": "Gene",
+        "title": "Gene",
+      },
+      Object {
+        "count": 7,
+        "key": "Cells",
+        "title": "Cells",
+      },
+      Object {
+        "count": 7,
+        "key": "Mutations",
+        "title": "Mutations",
+      },
+    ],
+    "title": "Keywords",
+  },
+  Object {
+    "facetTitle": "Year published",
+    "facets": Array [
+      Object {
+        "count": 13,
+        "key": "2005",
+        "title": "2005",
+      },
+      Object {
+        "count": 13,
+        "key": "2007",
+        "title": "2007",
+      },
+      Object {
+        "count": 12,
+        "key": "2008",
+        "title": "2008",
+      },
+      Object {
+        "count": 11,
+        "key": "2012",
+        "title": "2012",
+      },
+      Object {
+        "count": 10,
+        "key": "2000",
+        "title": "2000",
+      },
+    ],
+    "title": "Year published",
+  },
+  Object {
+    "facetTitle": "Subject",
+    "facets": Array [
+      Object {
+        "count": 23,
+        "key": 450009,
+        "title": "C1",
+      },
+      Object {
+        "count": 16,
+        "key": 450018,
+        "title": "EX",
+      },
+      Object {
+        "count": 15,
+        "key": 450520,
+        "title": "730108 Cancer and related disorders",
+      },
+      Object {
+        "count": 12,
+        "key": 452615,
+        "title": "1112 Oncology and Carcinogenesis",
+      },
+      Object {
+        "count": 9,
+        "key": 270201,
+        "title": "270201 Gene Expression",
+      },
+    ],
+    "title": "Subject",
+  },
+  Object {
+    "facetTitle": "Journal name",
+    "facets": Array [
+      Object {
+        "count": 7,
+        "key": "Human Mutation",
+        "title": "Human Mutation",
+      },
+      Object {
+        "count": 6,
+        "key": "Human Molecular Genetics",
+        "title": "Human Molecular Genetics",
+      },
+      Object {
+        "count": 5,
+        "key": "Oncogene",
+        "title": "Oncogene",
+      },
+      Object {
+        "count": 5,
+        "key": "test",
+        "title": "test",
+      },
+      Object {
+        "count": 4,
+        "key": "Breast Cancer Research",
+        "title": "Breast Cancer Research",
+      },
+    ],
+    "title": "Journal name",
+  },
+  Object {
+    "facetTitle": "Collection",
+    "facets": Array [
+      Object {
+        "count": 84,
+        "key": "UQ:3825",
+        "title": "School of Chemistry and Molecular Biosciences",
+      },
+      Object {
+        "count": 46,
+        "key": "UQ:152266",
+        "title": "Excellence in Research Australia (ERA) - Collection",
+      },
+      Object {
+        "count": 30,
+        "key": "UQ:3831",
+        "title": "School of Medicine Publications",
+      },
+      Object {
+        "count": 22,
+        "key": "UQ:183940",
+        "title": "ResearcherID Downloads",
+      },
+      Object {
+        "count": 20,
+        "key": "UQ:218198",
+        "title": "Unprocessed Records",
+      },
+    ],
+    "title": "Collection",
+  },
+  Object {
+    "facetTitle": "Author",
+    "facets": Array [
+      Object {
+        "count": 147,
+        "key": 1671,
+        "title": "Brown, Melissa Anne",
+      },
+      Object {
+        "count": 36,
+        "key": 950,
+        "title": "French, Juliet D.",
+      },
+      Object {
+        "count": 30,
+        "key": 2463,
+        "title": "Spurdle, Amanda B.",
+      },
+      Object {
+        "count": 24,
+        "key": 1605,
+        "title": "Chanel Smart",
+      },
+      Object {
+        "count": 24,
+        "key": 3247,
+        "title": "Chenevix-Trench, Georgia",
+      },
+    ],
+    "title": "Author",
+  },
+  Object {
+    "facetTitle": "Genre",
+    "facets": Array [
+      Object {
+        "count": 6,
+        "key": "Article (original research)",
+        "title": "Article (original research)",
+      },
+    ],
+    "title": "Genre",
+  },
+  Object {
+    "facetTitle": "Subtype",
+    "facets": Array [
+      Object {
+        "count": 88,
+        "key": "Article (original research)",
+        "title": "Article (original research)",
+      },
+      Object {
+        "count": 10,
+        "key": "Critical review of research, literature review, critical commentary",
+        "title": "Critical review of research, literature review, critical commentary",
+      },
+      Object {
+        "count": 6,
+        "key": "Other",
+        "title": "Other",
+      },
+      Object {
+        "count": 6,
+        "key": "Poster",
+        "title": "Poster",
+      },
+      Object {
+        "count": 4,
+        "key": "Creative work",
+        "title": "Creative work",
+      },
+    ],
+    "title": "Subtype",
+  },
+]
+`;
+
+exports[`FacetsFilter  getFacetsToDisplay returns facets correctly without any exclusions or renaming 1`] = `
+Array [
+  Object {
+    "facetTitle": "Scopus document type",
+    "facets": Array [
+      Object {
+        "count": 68,
+        "key": "ar",
+        "title": "Article",
+      },
+      Object {
+        "count": 4,
+        "key": "re",
+        "title": "Review",
+      },
+      Object {
+        "count": 1,
+        "key": "ch",
+        "title": "Letter",
+      },
+      Object {
+        "count": 1,
+        "key": "le",
+        "title": "false",
+      },
+    ],
+    "title": "Scopus document type",
+  },
+  Object {
+    "facetTitle": "Display type",
+    "facets": Array [
+      Object {
+        "count": 110,
+        "key": 179,
+        "title": "Journal Article",
+      },
+      Object {
+        "count": 32,
+        "key": 130,
+        "title": "Conference Paper",
+      },
+      Object {
+        "count": 3,
+        "key": 174,
+        "title": "Book",
+      },
+      Object {
+        "count": 1,
+        "key": 177,
+        "title": "Book Chapter",
+      },
+      Object {
+        "count": 1,
+        "key": 202,
+        "title": "Generic Document",
+      },
+    ],
+    "title": "Display type",
+  },
+  Object {
+    "facetTitle": "Keywords",
+    "facets": Array [
+      Object {
+        "count": 15,
+        "key": "Brca1",
+        "title": "Brca1",
+      },
+      Object {
+        "count": 14,
+        "key": "Breast cancer",
+        "title": "Breast cancer",
+      },
+      Object {
+        "count": 9,
+        "key": "Gene",
+        "title": "Gene",
+      },
+      Object {
+        "count": 7,
+        "key": "Cells",
+        "title": "Cells",
+      },
+      Object {
+        "count": 7,
+        "key": "Mutations",
+        "title": "Mutations",
+      },
+    ],
+    "title": "Keywords",
+  },
+  Object {
+    "facetTitle": "Year published",
+    "facets": Array [
+      Object {
+        "count": 13,
+        "key": "2005",
+        "title": "2005",
+      },
+      Object {
+        "count": 13,
+        "key": "2007",
+        "title": "2007",
+      },
+      Object {
+        "count": 12,
+        "key": "2008",
+        "title": "2008",
+      },
+      Object {
+        "count": 11,
+        "key": "2012",
+        "title": "2012",
+      },
+      Object {
+        "count": 10,
+        "key": "2000",
+        "title": "2000",
+      },
+    ],
+    "title": "Year published",
+  },
+  Object {
+    "facetTitle": "Subject",
+    "facets": Array [
+      Object {
+        "count": 23,
+        "key": 450009,
+        "title": "C1",
+      },
+      Object {
+        "count": 16,
+        "key": 450018,
+        "title": "EX",
+      },
+      Object {
+        "count": 15,
+        "key": 450520,
+        "title": "730108 Cancer and related disorders",
+      },
+      Object {
+        "count": 12,
+        "key": 452615,
+        "title": "1112 Oncology and Carcinogenesis",
+      },
+      Object {
+        "count": 9,
+        "key": 270201,
+        "title": "270201 Gene Expression",
+      },
+    ],
+    "title": "Subject",
+  },
+  Object {
+    "facetTitle": "Journal name",
+    "facets": Array [
+      Object {
+        "count": 7,
+        "key": "Human Mutation",
+        "title": "Human Mutation",
+      },
+      Object {
+        "count": 6,
+        "key": "Human Molecular Genetics",
+        "title": "Human Molecular Genetics",
+      },
+      Object {
+        "count": 5,
+        "key": "Oncogene",
+        "title": "Oncogene",
+      },
+      Object {
+        "count": 5,
+        "key": "test",
+        "title": "test",
+      },
+      Object {
+        "count": 4,
+        "key": "Breast Cancer Research",
+        "title": "Breast Cancer Research",
+      },
+    ],
+    "title": "Journal name",
+  },
+  Object {
+    "facetTitle": "Collection",
+    "facets": Array [
+      Object {
+        "count": 84,
+        "key": "UQ:3825",
+        "title": "School of Chemistry and Molecular Biosciences",
+      },
+      Object {
+        "count": 46,
+        "key": "UQ:152266",
+        "title": "Excellence in Research Australia (ERA) - Collection",
+      },
+      Object {
+        "count": 30,
+        "key": "UQ:3831",
+        "title": "School of Medicine Publications",
+      },
+      Object {
+        "count": 22,
+        "key": "UQ:183940",
+        "title": "ResearcherID Downloads",
+      },
+      Object {
+        "count": 20,
+        "key": "UQ:218198",
+        "title": "Unprocessed Records",
+      },
+    ],
+    "title": "Collection",
+  },
+  Object {
+    "facetTitle": "Author",
+    "facets": Array [
+      Object {
+        "count": 147,
+        "key": 1671,
+        "title": "Brown, Melissa Anne",
+      },
+      Object {
+        "count": 36,
+        "key": 950,
+        "title": "French, Juliet D.",
+      },
+      Object {
+        "count": 30,
+        "key": 2463,
+        "title": "Spurdle, Amanda B.",
+      },
+      Object {
+        "count": 24,
+        "key": 1605,
+        "title": "Chanel Smart",
+      },
+      Object {
+        "count": 24,
+        "key": 3247,
+        "title": "Chenevix-Trench, Georgia",
+      },
+    ],
+    "title": "Author",
+  },
+  Object {
+    "facetTitle": "Genre",
+    "facets": Array [
+      Object {
+        "count": 6,
+        "key": "Article (original research)",
+        "title": "Article (original research)",
+      },
+    ],
+    "title": "Genre",
+  },
+  Object {
+    "facetTitle": "Subtype",
+    "facets": Array [
+      Object {
+        "count": 88,
+        "key": "Article (original research)",
+        "title": "Article (original research)",
+      },
+      Object {
+        "count": 10,
+        "key": "Critical review of research, literature review, critical commentary",
+        "title": "Critical review of research, literature review, critical commentary",
+      },
+      Object {
+        "count": 6,
+        "key": "Other",
+        "title": "Other",
+      },
+      Object {
+        "count": 6,
+        "key": "Poster",
+        "title": "Poster",
+      },
+      Object {
+        "count": 4,
+        "key": "Creative work",
+        "title": "Creative work",
+      },
+    ],
+    "title": "Subtype",
+  },
+]
+`;
+
+exports[`FacetsFilter  getNestedListItems returns list of facets correctly for a given category 1`] = `undefined`;
+
+exports[`FacetsFilter  getNestedListItems returns list of facets correctly for categories where item.key is expected to be an integer but supplied in the string form 1`] = `undefined`;
+
 exports[`FacetsFilter  renders empty component for empty data 1`] = `
 <span
   className="facetsFilter empty"
