@@ -83,6 +83,11 @@ describe('View record actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[404].message});
         });
+
+        it('dispatch expected actions on hiding cultural sensitivity statement', () => {
+            mockActionsStore.dispatch(viewRecordActions.setHideCulturalSensitivityStatement());
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE});
+        });
     });
 
     describe('setting/clearing record to view action', () => {

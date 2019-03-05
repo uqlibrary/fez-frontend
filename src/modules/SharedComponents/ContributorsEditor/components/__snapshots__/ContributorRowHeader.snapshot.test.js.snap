@@ -526,34 +526,23 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
 </Fragment>
 `;
 
-exports[`Component ContributorRowHeader should render component with styles 1`] = `
-<ContributorRowHeader
-  classes={
-    Object {
-      "header": "ContributorRowHeader-header-2",
-      "paddingRight14": "ContributorRowHeader-paddingRight14-5",
-      "paddingRight24": "ContributorRowHeader-paddingRight24-3",
-      "paddingRight36": "ContributorRowHeader-paddingRight36-4",
-      "right": "ContributorRowHeader-right-1",
-    }
-  }
-  locale={
-    Object {
-      "contributorAssignmentColumn": "Select your name",
-      "deleteAll": "Remove all records",
-      "deleteAllConfirmation": Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      },
-      "descriptionStep2": "Step 2 - Select your name from the list below",
-      "identifierColumn": "UQ identifier",
-      "nameColumn": "Name as published",
-      "reorderColumn": "Reorder records",
-      "roleColumn": "Role",
-    }
-  }
-  onDeleteAll={[MockFunction]}
-/>
+exports[`Component ContributorRowHeader should have a proper style generator 1`] = `
+Object {
+  "header": Object {
+    "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
+    "marginTop": 8,
+  },
+  "paddingRight14": Object {
+    "paddingRight": 14,
+  },
+  "paddingRight24": Object {
+    "paddingRight": 24,
+  },
+  "paddingRight36": Object {
+    "paddingRight": 36,
+  },
+  "right": Object {
+    "textAlign": "right",
+  },
+}
 `;

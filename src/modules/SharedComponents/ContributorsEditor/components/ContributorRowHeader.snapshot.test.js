@@ -1,7 +1,4 @@
-import {ContributorRowHeader} from './ContributorRowHeader';
-import ContributorRowHeaderWithStyles from './ContributorRowHeader';
-import {createShallow} from '@material-ui/core/test-utils';
-
+import {ContributorRowHeader, styles} from './ContributorRowHeader';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -61,11 +58,6 @@ describe('Component ContributorRowHeader', () => {
         expect(testFunction).toHaveBeenCalled;
     });
 
-    it('should render component with styles', () => {
-        const wrapper = getElement(ContributorRowHeaderWithStyles, {onDeleteAll: jest.fn()});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('set confirmation box ref', () => {
         const wrapper = setup({});
         wrapper.find('ConfirmDialogBox').props().onRef('testRef');
@@ -81,5 +73,9 @@ describe('Component ContributorRowHeader', () => {
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
     });
 });
