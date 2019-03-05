@@ -1,5 +1,6 @@
 import FacetsFilter from './FacetsFilter';
 import { possibleUnclaimedList } from 'mock/data';
+import { general } from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -684,6 +685,30 @@ describe('FacetsFilter ', () => {
         });
         wrapper.instance()._handleResetClick();
         expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });
+    });
+
+    it('_handleResetClick sets state to filter by display type if on "My DataSet" page', () => {
+        const wrapper = setup({ isMyDataSetPage: true });
+        wrapper.setState({
+            activeFacets: {
+                ranges: {
+                    "Year published": {
+                        from: 2010,
+                        to: 2015
+                    }
+                },
+                filters: {
+                    "Keywords": "Cells"
+                }
+            }
+        });
+        wrapper.instance()._handleResetClick();
+        expect(wrapper.state().activeFacets).toEqual({
+            filters: {
+                'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION
+            },
+            ranges: {}
+        });
     });
 
     it('_handleFacetClick returns correct state object for active facets', () => {
