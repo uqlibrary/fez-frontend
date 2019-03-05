@@ -231,13 +231,15 @@ export class ContributorsEditor extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     return {
-        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
+        author: state && state.get('accountReducer')
+            ? state.get('accountReducer').author
+            : null
     };
 };
 
-const styles = () => ({
+export const styles = () => ({
     list: {
         width: '98%',
         margin: '0 1%',

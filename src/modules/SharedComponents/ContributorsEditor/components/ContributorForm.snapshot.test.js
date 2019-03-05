@@ -1,4 +1,4 @@
-import {ContributorForm} from './ContributorForm';
+import {ContributorForm, mapStateToProps} from './ContributorForm';
 import ConnectedContributorForm from './ContributorForm';
 import {authorsSearch} from 'mock/data';
 
@@ -102,6 +102,21 @@ describe('Component ContributorForm', () => {
         expect(onAddFn).not.toBeCalled();
     });
 
+    it('should not add contributor if key is Enter, affiliation is not UQ, and orgaff and orgtype props are empty strings', () => {
+        const onAddFn = jest.fn();
+        const wrapper = setup({
+            onAdd: onAddFn
+        });
+        wrapper.setState({
+            nameAsPublished: 'test',
+            affiliation: 'NOT UQ',
+            orgaff: '',
+            orgtype: ''
+        });
+        wrapper.instance()._addContributor({key: 'Enter'});
+        expect(onAddFn).not.toBeCalled();
+    });
+
     it('should set creator role', () => {
         const wrapper = setup({
             showRoleInput: true
@@ -182,5 +197,39 @@ describe('Component ContributorForm', () => {
             showContributorAssignment: true
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should map state to props as expected', () => {
+        const authorsList = [
+            'test1',
+            'test2'
+        ];
+        const testFunction = () => ({ authorsList });
+        expect(mapStateToProps({
+            get: testFunction
+        })).toEqual({ authorsList });
+        expect(mapStateToProps({
+            get: () => false
+        })).toEqual({
+            authorsList: []
+        });
+    });
+
+    it('should not search authors if new UQ idenitifier value is too short', () => {
+        const wrapper = setup({
+            actions: {
+                searchAuthors: jest.fn()
+            }
+        });
+        wrapper.instance()._onUQIdentifierChanged('a');
+        expect(wrapper.instance().props.actions.searchAuthors).not.toBeCalled();
+    });
+
+    it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
+        const wrapper = setup({
+            showRoleInput: true,
+            showIdentifierLookup: true
+        }, true);
+        expect(wrapper.find('#creatorRoleField').parent().prop('md')).toBe(3);
     });
 });

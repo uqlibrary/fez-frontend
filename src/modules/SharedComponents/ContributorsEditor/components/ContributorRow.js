@@ -20,7 +20,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-const styles = (theme) => ({
+export const styles = (theme) => ({
     listItem: {
         padding: '0'
     },
@@ -97,15 +97,21 @@ export class ContributorRow extends PureComponent {
     };
 
     _deleteRecord = () => {
-        if (!this.props.disabled && this.props.onDelete) this.props.onDelete(this.props.contributor, this.props.index);
+        if (!this.props.disabled && this.props.onDelete) {
+            this.props.onDelete(this.props.contributor, this.props.index);
+        }
     };
 
     _onMoveUp = () => {
-        if (!this.props.disabled && this.props.onMoveUp) this.props.onMoveUp(this.props.contributor, this.props.index);
+        if (!this.props.disabled && this.props.onMoveUp) {
+            this.props.onMoveUp(this.props.contributor, this.props.index);
+        }
     };
 
     _onMoveDown = () => {
-        if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.contributor, this.props.index);
+        if (!this.props.disabled && this.props.onMoveDown) {
+            this.props.onMoveDown(this.props.contributor, this.props.index);
+        }
     };
 
     _onContributorAssignedKeyboard = (event) => {
@@ -122,10 +128,14 @@ export class ContributorRow extends PureComponent {
     _assignContributor = () => {
         if(this.props.contributor.selected) {
             // deselect this contributor
-            if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(null, null);
+            if (!this.props.disabled && this.props.onContributorAssigned) {
+                this.props.onContributorAssigned(null, null);
+            }
         } else {
             // select this contributor
-            if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+            if (!this.props.disabled && this.props.onContributorAssigned) {
+                this.props.onContributorAssigned(this.props.contributor, this.props.index);
+            }
         }
     };
 

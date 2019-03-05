@@ -1,5 +1,4 @@
-import {ContributorsEditor} from './ContributorsEditor';
-import ContributorsEditorWithStyles from './ContributorsEditor';
+import {ContributorsEditor, mapStateToProps, styles} from './ContributorsEditor';
 import {authorsSearch} from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
@@ -216,9 +215,8 @@ describe('ContributorsEditor tests ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render with Styles', () => {
-        const wrapper = getElement(ContributorsEditorWithStyles, {}, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
     });
 
     it('should not move contributor up', () => {
@@ -242,5 +240,21 @@ describe('ContributorsEditor tests ', () => {
             ]
         });
         expect(wrapper.instance().moveDownContributor('test2', 1)).toBeUndefined();
+    });
+
+    it('should map state to props as expected', () => {
+        const testFunction = () => ({
+            author: 'test'
+        });
+        expect(mapStateToProps({
+            get: testFunction
+        })).toEqual({
+            author: 'test'
+        });
+        expect(mapStateToProps({
+            get: () => false
+        })).toEqual({
+            author: null
+        });
     });
 });

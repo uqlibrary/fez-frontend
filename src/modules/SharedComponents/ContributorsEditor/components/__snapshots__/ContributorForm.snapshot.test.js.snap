@@ -2680,7 +2680,7 @@ exports[`Component ContributorForm should render display name field and role fie
         disabled={false}
         error={true}
         fullWidth={true}
-        if="creatorRoleField"
+        id="creatorRoleField"
         onChange={[Function]}
         required={false}
         value=""
