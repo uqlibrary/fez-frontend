@@ -15,7 +15,7 @@ describe('PartialDateForm component', () => {
         const wrapper = setup({});
         wrapper.instance()._setDate = jest.fn();
         wrapper.instance().componentWillUpdate();
-        expect(wrapper.instance()._setDate).toHaveBeenCalledTimes(0);
+        expect(wrapper.instance()._setDate).not.toBeCalled();
     });
 });
 

@@ -69,7 +69,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
         expect(button.length).toEqual(1);
         button.simulate('click');
 
-        expect(mockCallback).toHaveBeenCalledTimes(0);
+        expect(mockCallback).not.toBeCalled();
     });
 
     it('should display the secondary field when required', () => {

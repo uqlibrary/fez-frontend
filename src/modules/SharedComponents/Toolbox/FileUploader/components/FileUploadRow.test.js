@@ -61,7 +61,7 @@ describe('FileUploadRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.find('WithStyles(FileUploadRowMobileView)').props().onDelete();
-        expect(showConfirmationFn).toHaveBeenCalledTimes(0);
+        expect(showConfirmationFn).not.toBeCalled();
 
         wrapper.find('ConfirmDialogBox').props().onRef({
             showConfirmation: showConfirmationFn

@@ -75,7 +75,7 @@ describe('Component ViewRecord ', () => {
         // test else branch
         test.mockClear(); // Reset the called counter from earlier tests
         wrapper.instance().componentWillReceiveProps(wrapper.instance().props);
-        expect(test).toHaveBeenCalledTimes(0);
+        expect(test).not.toBeCalled();
     });
 
     it('should not load a record unnecessarily', () => {
@@ -83,7 +83,7 @@ describe('Component ViewRecord ', () => {
         const test = jest.spyOn(wrapper.instance().props.actions, 'loadRecordToView');
         test.mockClear();
         wrapper.instance().componentDidMount();
-        expect(test).toHaveBeenCalledTimes(0);
+        expect(test).not.toBeCalled();
     });
 
     it('should render NTRO Details', () => {

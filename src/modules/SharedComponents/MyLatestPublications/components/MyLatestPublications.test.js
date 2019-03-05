@@ -33,7 +33,7 @@ describe('Component MyLatestPublications', () => {
     it('should not fetch data if account author details is still loading', () => {
         const testFn = jest.fn();
         setup({accountAuthorDetailsLoading: true, actions: {searchLatestPublications: testFn}});
-        expect(testFn).toHaveBeenCalledTimes(0);
+        expect(testFn).not.toBeCalled();
     });
 
     it('_viewMyResearch method', () => {

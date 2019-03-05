@@ -35,6 +35,6 @@ describe('PartialDateForm unit tests', () => {
             preventDefault: test
         };
         partialDateForm._isNumber(event);
-        expect(test).toHaveBeenCalledTimes(0);
+        expect(test).not.toBeCalled();
     });
 });

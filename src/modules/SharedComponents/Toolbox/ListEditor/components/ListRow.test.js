@@ -114,10 +114,10 @@ describe('ListRow renders ', () => {
             disabled: true
         });
         wrapper.instance().deleteRecord();
-        expect(wrapper.instance().props.onDelete).toHaveBeenCalledTimes(0);
+        expect(wrapper.instance().props.onDelete).not.toBeCalled();
         wrapper.instance().onMoveUp();
-        expect(wrapper.instance().props.onMoveUp).toHaveBeenCalledTimes(0);
+        expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
         wrapper.instance().onMoveDown();
-        expect(wrapper.instance().props.onMoveDown).toHaveBeenCalledTimes(0);
+        expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
     })
 });
