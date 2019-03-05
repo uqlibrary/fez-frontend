@@ -69,7 +69,7 @@ describe('NavigationPrompt component', () => {
         const result = wrapper.instance().blockNavigation('/test');
 
         expect(wrapper.state().nextLocation).toBeNull()
-        expect(showConfirmationFn).toHaveBeenCalledTimes(0);
+        expect(showConfirmationFn).not.toBeCalled();
         expect(result).toBeFalsy();
     });
 

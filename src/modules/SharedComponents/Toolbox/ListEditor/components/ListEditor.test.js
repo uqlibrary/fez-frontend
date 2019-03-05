@@ -158,6 +158,6 @@ describe('ListEditor tests ', () => {
         });
         const test = jest.spyOn(wrapper.instance(), 'transformOutput');
         wrapper.instance().componentWillUpdate({}, {});
-        expect(test).toHaveBeenCalledTimes(0);
+        expect(test).not.toBeCalled();
     })
 });

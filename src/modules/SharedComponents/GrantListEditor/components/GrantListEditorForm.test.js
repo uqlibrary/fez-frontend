@@ -102,8 +102,8 @@ describe('GrantListEditorForm', () => {
         const setState = jest.spyOn(wrapper.instance(), 'setState');
         wrapper.instance()._addGrant({key: 'Esc'});
 
-        expect(onAddFn).toHaveBeenCalledTimes(0);
-        expect(setState).toHaveBeenCalledTimes(0);
+        expect(onAddFn).not.toBeCalled();
+        expect(setState).not.toBeCalled();
     });
 
     it('should not add grant if grant agency name is empty string and enter is pressed', () => {
@@ -119,8 +119,8 @@ describe('GrantListEditorForm', () => {
         const setState = jest.spyOn(wrapper.instance(), 'setState');
         wrapper.instance()._addGrant({key: 'Enter'});
 
-        expect(onAddFn).toHaveBeenCalledTimes(0);
-        expect(setState).toHaveBeenCalledTimes(0);
+        expect(onAddFn).not.toBeCalled();
+        expect(setState).not.toBeCalled();
     });
 
     it('should not add grant if form is disabled', () => {
@@ -136,8 +136,8 @@ describe('GrantListEditorForm', () => {
         const setState = jest.spyOn(wrapper.instance(), 'setState');
         wrapper.instance()._addGrant({key: 'Enter'});
 
-        expect(onAddFn).toHaveBeenCalledTimes(0);
-        expect(setState).toHaveBeenCalledTimes(0);
+        expect(onAddFn).not.toBeCalled();
+        expect(setState).not.toBeCalled();
     });
 
     it('should set correct state on name changed', () => {

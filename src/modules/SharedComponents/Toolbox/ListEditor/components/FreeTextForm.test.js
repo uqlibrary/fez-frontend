@@ -81,7 +81,7 @@ describe('FreeTextForm tests ', () => {
     it('should not add item if state is not set', () => {
         const wrapper = setup({});
         wrapper.instance().addItem({key: 'Enter'});
-        expect(wrapper.instance().props.onAdd).toHaveBeenCalledTimes(0);
+        expect(wrapper.instance().props.onAdd).not.toBeCalled();
     });
 
     it('should focus on textField after item is added', () => {

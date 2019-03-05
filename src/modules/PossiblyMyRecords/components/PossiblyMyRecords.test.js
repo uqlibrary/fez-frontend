@@ -133,7 +133,7 @@ describe('Component PossiblyMyRecords', () => {
 
         // test no-op
         wrapper.instance()._hidePublication();
-        expect(actionFunction).toHaveBeenCalledTimes(0);
+        expect(actionFunction).not.toBeCalled();
 
         wrapper.setState({ publicationToHide: {pid: 1111} });
         wrapper.instance()._hidePublication();

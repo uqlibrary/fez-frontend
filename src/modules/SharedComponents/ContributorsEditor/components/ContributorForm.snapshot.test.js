@@ -73,7 +73,7 @@ describe('Component ContributorForm', () => {
             nameAsPublished: 'testing'
         });
         wrapper.instance()._addContributor({key: 'Esc'});
-        expect(onAddFn).toHaveBeenCalledTimes(0);
+        expect(onAddFn).not.toBeCalled();
     });
 
     it('should not add contributor if key is Enter but name as published is empty string', () => {
@@ -85,7 +85,7 @@ describe('Component ContributorForm', () => {
             nameAsPublished: ''
         });
         wrapper.instance()._addContributor({key: 'Enter'});
-        expect(onAddFn).toHaveBeenCalledTimes(0);
+        expect(onAddFn).not.toBeCalled();
     });
 
     it('should not add contributor if key is Enter, name as published is set but creator role is empty', () => {
@@ -99,7 +99,7 @@ describe('Component ContributorForm', () => {
             creatorRole: ''
         });
         wrapper.instance()._addContributor({key: 'Enter'});
-        expect(onAddFn).toHaveBeenCalledTimes(0);
+        expect(onAddFn).not.toBeCalled();
     });
 
     it('should set creator role', () => {

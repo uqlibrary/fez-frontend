@@ -33,6 +33,6 @@ describe('ScrollToTop component', () => {
         wrapper.setProps({
             location: testLocation
         });
-        expect(scrollToFn).toHaveBeenCalledTimes(0);
+        expect(scrollToFn).not.toBeCalled();
     });
 });
