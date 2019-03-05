@@ -54,7 +54,9 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
-      />
+      >
+        Button
+      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </Fragment>
@@ -552,7 +554,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
             disabled={false}
             errorText={null}
             hideType={false}
-            locale={Object {}}
+            locale={
+              Object {
+                "addButton": "Test",
+              }
+            }
             onAdd={[MockFunction]}
             required={true}
             theme={Object {}}
@@ -562,7 +568,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
               disabled={false}
               errorText={null}
               hideType={false}
-              locale={Object {}}
+              locale={
+                Object {
+                  "addButton": "Test",
+                }
+              }
               onAdd={[MockFunction]}
               required={true}
               theme={Object {}}
@@ -576,7 +586,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                 disabled={false}
                 errorText={null}
                 hideType={false}
-                locale={Object {}}
+                locale={
+                  Object {
+                    "addButton": "Test",
+                  }
+                }
                 onAdd={[MockFunction]}
                 required={true}
                 theme={Object {}}
@@ -2883,7 +2897,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     >
                                       <span
                                         className="MuiButton-label-176"
-                                      />
+                                      >
+                                        Test
+                                      </span>
                                     </button>
                                   </ButtonBase>
                                 </WithStyles(ButtonBase)>
@@ -3403,7 +3419,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
             disabled={false}
             errorText={null}
             hideType={false}
-            locale={Object {}}
+            locale={
+              Object {
+                "addButton": "Button",
+              }
+            }
             onAdd={[MockFunction]}
             required={true}
             theme={Object {}}
@@ -5710,7 +5730,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 >
                                   <span
                                     className="MuiButton-label-176"
-                                  />
+                                  >
+                                    Button
+                                  </span>
                                 </button>
                               </ButtonBase>
                             </WithStyles(ButtonBase)>
@@ -5856,7 +5878,9 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
-      />
+      >
+        Button
+      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </Fragment>
@@ -5993,7 +6017,9 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
-      />
+      >
+        Button
+      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </Fragment>
@@ -6130,7 +6156,9 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
-      />
+      >
+        Button
+      </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </Fragment>

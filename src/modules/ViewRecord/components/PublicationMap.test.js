@@ -162,8 +162,8 @@ describe('GoogleMapViewComponent component', () => {
                     }
                 },
                 ControlPosition: {
-                    TOP_CENTER: 'top-center',
-                    TOP_RIGHT: 'top-right'
+                    TOP_CENTER: 1,
+                    TOP_RIGHT: 1
                 }
             }
         };

@@ -1,5 +1,6 @@
 import {FileUploader, FileNameRestrictions} from './FileUploader';
 import FileUploaderContainer from './FileUploader';
+const moment = require('moment');
 
 const getProps = (testProps = {}) => ({
     fileRestrictionsConfig: {
@@ -19,14 +20,14 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component FileUploader', () => {
-    let getMockFile;
+    const getMockFile = (name) => ({fileData: new File([''], name), name: name, size: 0});
     const MockDate = require('mockdate');
     beforeEach(() => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
         const _File = window.File;
         const FILE = (data = [''], name) => new _File(data, name, {lastModified: 12345678912});
         window.File = jest.fn((data, name) => FILE(data, name));
-        getMockFile = (name) => ({fileData: new File([''], name), name: name, size: 0});
+        // getMockFile = (name) => ({fileData: new File([''], name), name: name, size: 0});
     });
     afterEach(() => {
         MockDate.reset();
@@ -115,7 +116,7 @@ describe('Component FileUploader', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         file_a.access_condition_id = 9;
-        wrapper.instance()._updateFileEmbargoDate(file_a, 0, '10/10/2017');
+        wrapper.instance()._updateFileEmbargoDate(file_a, 0, moment('10/10/2017', 'DD/MM/YYYY'));
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();

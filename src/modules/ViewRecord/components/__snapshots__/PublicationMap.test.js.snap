@@ -14,13 +14,13 @@ exports[`GoogleMapViewComponent component should render component 1`] = `
               "polygon",
               "rectangle",
             ],
-            "position": "top-center",
+            "position": 1,
           },
         }
       }
     />
     <SearchBox
-      controlPosition="top-right"
+      controlPosition={1}
     >
       <input
         placeholder="Search..."

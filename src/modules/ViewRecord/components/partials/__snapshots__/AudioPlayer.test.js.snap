@@ -1,31 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Audio Player Component  should pause audio 1`] = `
-<div>
-  <audio>
-    <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
-      type="audio/mp3"
-    />
-  </audio>
-  <WithStyles(IconButton)
-    aria-label="Click to pause audio file UQ676287_OA.pdf"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": -10,
-        "marginTop": -10,
-      }
-    }
-  >
-    <pure(PauseIcon)
-      className="pause"
-    />
-  </WithStyles(IconButton)>
-</div>
-`;
-
-exports[`Audio Player Component  should pause audio 2`] = `
 <Provider
   store={
     Object {
@@ -514,24 +489,33 @@ exports[`Audio Player Component  should pause audio 2`] = `
                     "moment": undefined,
                   },
                 ],
+                Array [
+                  Object {
+                    "locale": undefined,
+                    "moment": undefined,
+                  },
+                ],
               ],
             }
           }
         >
-          <Component
+          <AudioPlayer
             fileName="UQ676287_OA.pdf"
             mimeType="audio/mp3"
             pid="UQ:676287"
           >
             <div>
-              <audio>
+              <audio
+                id="audioPlayer"
+              >
                 <source
                   src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
                   type="audio/mp3"
                 />
               </audio>
               <WithStyles(IconButton)
-                aria-label="Click to pause audio file UQ676287_OA.pdf"
+                aria-label="Click to play audio file UQ676287_OA.pdf"
+                id="playButton"
                 onClick={[Function]}
                 style={
                   Object {
@@ -541,7 +525,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 }
               >
                 <IconButton
-                  aria-label="Click to pause audio file UQ676287_OA.pdf"
+                  aria-label="Click to play audio file UQ676287_OA.pdf"
                   classes={
                     Object {
                       "colorInherit": "MuiIconButton-colorInherit-2",
@@ -554,6 +538,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                   }
                   color="default"
                   disabled={false}
+                  id="playButton"
                   onClick={[Function]}
                   style={
                     Object {
@@ -563,11 +548,12 @@ exports[`Audio Player Component  should pause audio 2`] = `
                   }
                 >
                   <WithStyles(ButtonBase)
-                    aria-label="Click to pause audio file UQ676287_OA.pdf"
+                    aria-label="Click to play audio file UQ676287_OA.pdf"
                     centerRipple={true}
                     className="MuiIconButton-root-1"
                     disabled={false}
                     focusRipple={true}
+                    id="playButton"
                     onClick={[Function]}
                     style={
                       Object {
@@ -577,7 +563,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                     }
                   >
                     <ButtonBase
-                      aria-label="Click to pause audio file UQ676287_OA.pdf"
+                      aria-label="Click to play audio file UQ676287_OA.pdf"
                       centerRipple={true}
                       className="MuiIconButton-root-1"
                       classes={
@@ -592,6 +578,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
                       disableTouchRipple={false}
                       disabled={false}
                       focusRipple={true}
+                      id="playButton"
                       onClick={[Function]}
                       style={
                         Object {
@@ -603,9 +590,10 @@ exports[`Audio Player Component  should pause audio 2`] = `
                       type="button"
                     >
                       <button
-                        aria-label="Click to pause audio file UQ676287_OA.pdf"
+                        aria-label="Click to play audio file UQ676287_OA.pdf"
                         className="MuiButtonBase-root-7 MuiIconButton-root-1"
                         disabled={false}
+                        id="playButton"
                         onBlur={[Function]}
                         onClick={[Function]}
                         onFocus={[Function]}
@@ -629,17 +617,17 @@ exports[`Audio Player Component  should pause audio 2`] = `
                         <span
                           className="MuiIconButton-label-6"
                         >
-                          <pure(PauseIcon)
-                            className="pause"
+                          <pure(PlayArrowIcon)
+                            className="play"
                           >
-                            <PauseIcon
-                              className="pause"
+                            <PlayArrowIcon
+                              className="play"
                             >
                               <WithStyles(SvgIcon)
-                                className="pause"
+                                className="play"
                               >
                                 <SvgIcon
-                                  className="pause"
+                                  className="play"
                                   classes={
                                     Object {
                                       "colorAction": "MuiSvgIcon-colorAction-13",
@@ -660,13 +648,13 @@ exports[`Audio Player Component  should pause audio 2`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    className="MuiSvgIcon-root-10 pause"
+                                    className="MuiSvgIcon-root-10 play"
                                     focusable="false"
                                     role="presentation"
                                     viewBox="0 0 24 24"
                                   >
                                     <path
-                                      d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"
+                                      d="M8 5v14l11-7z"
                                     />
                                     <path
                                       d="M0 0h24v24H0z"
@@ -675,8 +663,8 @@ exports[`Audio Player Component  should pause audio 2`] = `
                                   </svg>
                                 </SvgIcon>
                               </WithStyles(SvgIcon)>
-                            </PauseIcon>
-                          </pure(PauseIcon)>
+                            </PlayArrowIcon>
+                          </pure(PlayArrowIcon)>
                         </span>
                         <WithStyles(TouchRipple)
                           center={true}
@@ -715,12 +703,40 @@ exports[`Audio Player Component  should pause audio 2`] = `
                 </IconButton>
               </WithStyles(IconButton)>
             </div>
-          </Component>
+          </AudioPlayer>
         </MuiPickersUtilsProvider>
       </MuiThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
+`;
+
+exports[`Audio Player Component  should play audio 1`] = `
+<div>
+  <audio
+    id="audioPlayer"
+  >
+    <source
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      type="audio/mp3"
+    />
+  </audio>
+  <WithStyles(IconButton)
+    aria-label="Click to pause audio file UQ676287_OA.pdf"
+    id="pauseButton"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
+  >
+    <pure(PauseIcon)
+      className="pause"
+    />
+  </WithStyles(IconButton)>
+</div>
 `;
 
 exports[`Audio Player Component  should play audio via button click 1`] = `
@@ -1216,7 +1232,9 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
             pid="UQ:676287"
           >
             <div>
-              <audio>
+              <audio
+                id="audioPlayer"
+              >
                 <source
                   src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
                   type="audio/mp3"
@@ -1224,6 +1242,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
               </audio>
               <WithStyles(IconButton)
                 aria-label="Click to play audio file UQ676287_OA.pdf"
+                id="playButton"
                 onClick={[Function]}
                 style={
                   Object {
@@ -1246,6 +1265,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                   }
                   color="default"
                   disabled={false}
+                  id="playButton"
                   onClick={[Function]}
                   style={
                     Object {
@@ -1260,6 +1280,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                     className="MuiIconButton-root-1"
                     disabled={false}
                     focusRipple={true}
+                    id="playButton"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1284,6 +1305,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                       disableTouchRipple={false}
                       disabled={false}
                       focusRipple={true}
+                      id="playButton"
                       onClick={[Function]}
                       style={
                         Object {
@@ -1298,6 +1320,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                         aria-label="Click to play audio file UQ676287_OA.pdf"
                         className="MuiButtonBase-root-7 MuiIconButton-root-1"
                         disabled={false}
+                        id="playButton"
                         onBlur={[Function]}
                         onClick={[Function]}
                         onFocus={[Function]}
@@ -1417,7 +1440,9 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
 
 exports[`Audio Player Component  should render component 1`] = `
 <div>
-  <audio>
+  <audio
+    id="audioPlayer"
+  >
     <source
       src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
       type="audio/mp3"
@@ -1425,6 +1450,7 @@ exports[`Audio Player Component  should render component 1`] = `
   </audio>
   <WithStyles(IconButton)
     aria-label="Click to play audio file UQ676287_OA.pdf"
+    id="playButton"
     onClick={[Function]}
     style={
       Object {
@@ -1435,56 +1461,6 @@ exports[`Audio Player Component  should render component 1`] = `
   >
     <pure(PlayArrowIcon)
       className="play"
-    />
-  </WithStyles(IconButton)>
-</div>
-`;
-
-exports[`Audio Player Component  should set component state to playing 1`] = `
-<div>
-  <audio>
-    <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
-      type="audio/mp3"
-    />
-  </audio>
-  <WithStyles(IconButton)
-    aria-label="Click to play audio file UQ676287_OA.pdf"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": -10,
-        "marginTop": -10,
-      }
-    }
-  >
-    <pure(PlayArrowIcon)
-      className="play"
-    />
-  </WithStyles(IconButton)>
-</div>
-`;
-
-exports[`Audio Player Component  should set component state to playing 2`] = `
-<div>
-  <audio>
-    <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
-      type="audio/mp3"
-    />
-  </audio>
-  <WithStyles(IconButton)
-    aria-label="Click to pause audio file UQ676287_OA.pdf"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": -10,
-        "marginTop": -10,
-      }
-    }
-  >
-    <pure(PauseIcon)
-      className="pause"
     />
   </WithStyles(IconButton)>
 </div>

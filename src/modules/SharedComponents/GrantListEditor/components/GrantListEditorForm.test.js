@@ -6,7 +6,7 @@ function setup(testProps, isShallow = true){
     const props = {
         onAdd: jest.fn(),
         errorText: null,
-        locale: {},
+        locale: {addButton: 'Button'},
         disabled: false,
         required: true,
         hideType: false,
@@ -22,7 +22,7 @@ describe('GrantListEditorForm', () => {
         const wrapper = getElement(GrantListEditorForm,{
             onAdd: jest.fn(),
             errorText: null,
-            locale: {},
+            locale: {addButton: 'Test'},
             disabled: false,
             required: true,
             hideType: false,

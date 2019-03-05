@@ -47,22 +47,36 @@ describe('Audio Player Component ', () => {
         expect(play).toHaveBeenCalledTimes(1);
     });
 
-    it('should pause audio', () => {
+    it('should play audio', () => {
         const shallowWrapper = setup({});
         shallowWrapper.setState({isPlaying: true});
         expect(toJson(shallowWrapper)).toMatchSnapshot();
-
-        const wrapper = getElement(() => shallowWrapper.instance(), shallowWrapper.instance().props, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        const element = wrapper.find('PauseIcon.pause');
-        const audio = wrapper.find('audio');
-        const pause = jest.fn();
-        audio.getDOMNode().pause = pause;
-        element.simulate('click');
-        expect(pause).toHaveBeenCalledTimes(1);
     });
 
-    it('should set component state to playing', () => {
+    it('should pause audio', () => {
+        const wrapper = getElement(AudioPlayer, {pid: journalArticle.rek_pid,
+            fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+            mimeType: 'audio/mp3'}, false);
+        wrapper.setState({isPlaying: true});
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+        const playElement = wrapper.find('WithStyles(IconButton)#playButton');
+        const audio = wrapper.find('#audioPlayer');
+        const pause = jest.fn();
+        const play = jest.fn();
+        audio.getDOMNode().pause = pause;
+        audio.getDOMNode().play = play;
+        playElement.simulate('click');
+        expect(pause).toHaveBeenCalledTimes(0);
+        expect(play).toHaveBeenCalledTimes(1);
+        const pauseElement = wrapper.find('WithStyles(IconButton)#pauseButton');
+        pauseElement.simulate('click');
+        expect(pause).toHaveBeenCalledTimes(1);
+        expect(play).toHaveBeenCalledTimes(1);
+
+    });
+
+    xit('should set component state to playing', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({isPlaying: true});

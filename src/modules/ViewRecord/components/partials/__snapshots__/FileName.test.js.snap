@@ -4569,7 +4569,9 @@ exports[`File Name Component  should render audio player 1`] = `
                                   pid="UQ:676287"
                                 >
                                   <div>
-                                    <audio>
+                                    <audio
+                                      id="audioPlayer"
+                                    >
                                       <source
                                         src="http://localhost/view/UQ:676287/test.mp3"
                                         type="audio/mp3"
@@ -4577,6 +4579,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                     </audio>
                                     <WithStyles(IconButton)
                                       aria-label="Click to play audio file test.mp3"
+                                      id="playButton"
                                       onClick={[Function]}
                                       style={
                                         Object {
@@ -4599,6 +4602,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                         }
                                         color="default"
                                         disabled={false}
+                                        id="playButton"
                                         onClick={[Function]}
                                         style={
                                           Object {
@@ -4613,6 +4617,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                           className="MuiIconButton-root-144"
                                           disabled={false}
                                           focusRipple={true}
+                                          id="playButton"
                                           onClick={[Function]}
                                           style={
                                             Object {
@@ -4637,6 +4642,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                             disableTouchRipple={false}
                                             disabled={false}
                                             focusRipple={true}
+                                            id="playButton"
                                             onClick={[Function]}
                                             style={
                                               Object {
@@ -4651,6 +4657,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                               aria-label="Click to play audio file test.mp3"
                                               className="MuiButtonBase-root-150 MuiIconButton-root-144"
                                               disabled={false}
+                                              id="playButton"
                                               onBlur={[Function]}
                                               onClick={[Function]}
                                               onFocus={[Function]}

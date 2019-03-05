@@ -68,8 +68,8 @@ describe('DateRangeField component', () => {
         const onChangeFn = jest.fn();
         const wrapper = setup({onChange: onChangeFn});
         const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
-        wrapper.find('DatePickerField').get(0).props.onChange(moment('10/10/2010'));
-        wrapper.find('DatePickerField').get(1).props.onChange(moment('09/10/2010'));
+        wrapper.find('DatePickerField').get(0).props.onChange(moment('10/10/2010', 'DD/MM/YYYY'));
+        wrapper.find('DatePickerField').get(1).props.onChange(moment('09/10/2010', 'DD/MM/YYYY'));
         wrapper.update();
         expect(componentWillUpdate).toHaveBeenCalled();
         expect(onChangeFn).toHaveBeenCalled();

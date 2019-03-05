@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 
 const mapStateToProps = (state) => ({
-    hideViewFullStatisticsLink: !(state.get('accountReducer').account)
+    hideViewFullStatisticsLink: !(state.get('accountReducer') && state.get('accountReducer').account)
 });
 
 const mapDispatchToProps = (dispatch) => ({

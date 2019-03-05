@@ -291,15 +291,15 @@ describe('SearchComponent', () => {
                     {
                         searchField: 'rek_created_date',
                         value: {
-                            from: moment('10/10/1982'),
-                            to: moment('10/10/1985')
+                            from: moment('10/10/1982', 'DD/MM/YYYY'),
+                            to: moment('10/10/1985', 'DD/MM/YYYY')
                         }
                     },
                     {
                         searchField: 'rek_updated_date',
                         value: {
-                            from: moment('10/10/1980'),
-                            to: moment('10/10/1982')
+                            from: moment('10/10/1980', 'DD/MM/YYYY'),
+                            to: moment('10/10/1982', 'DD/MM/YYYY')
                         }
                     }
                 ],

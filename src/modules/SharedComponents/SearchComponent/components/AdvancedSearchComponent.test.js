@@ -190,13 +190,13 @@ describe('AdvancedSearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.find('WithStyles(DateRangeField)').get(0).props.onChange({
-            from: moment('10/10/2010'),
-            to: moment('12/10/2010')
+            from: moment('10/10/2010', 'DD/MM/YYYY'),
+            to: moment('12/10/2010', 'DD/MM/YYYY')
         });
 
         expect(updateDateRangeFn).toHaveBeenCalledWith('rek_created_date', {
-            from: moment('10/10/2010'),
-            to: moment('12/10/2010')
+            from: moment('10/10/2010', 'DD/MM/YYYY'),
+            to: moment('12/10/2010', 'DD/MM/YYYY')
         });
     });
 });

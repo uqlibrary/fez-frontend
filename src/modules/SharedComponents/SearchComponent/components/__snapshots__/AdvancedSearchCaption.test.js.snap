@@ -417,115 +417,139 @@ exports[`Component AdvancedSearchCaption should render as expected with no props
 <div
   className="undefined searchQueryCaption"
 >
-  <span>
-     
-     
-  </span>
-  <span>
-    Any field
-     
-  </span>
-  <span>
-     
-    contains
-     
-  </span>
-  <span>
-     
-    anything
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Collection
-     
-  </span>
-  <span>
-     
-    is one of
-     
-  </span>
-  <span>
-     
-    UQ:120743, UQ:217419 or UQ:217422
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Author ID
-     
-  </span>
-  <span>
-     
-    is
-     
-  </span>
-  <span>
-     
-    570
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Work type
-     
-  </span>
-  <span>
-     
-    is one of
-     
-  </span>
-  <span>
-     
-    Audio document or Book
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-     
-  </span>
-  <span>
-     
-    is
-     
-  </span>
-  <span>
-     
-    <span
-      className="value"
-    >
-      open access/full text
+  <span
+    key="0"
+  >
+    <span>
+       
+       
+    </span>
+    <span>
+      Any field
+       
+    </span>
+    <span>
+       
+      contains
+       
+    </span>
+    <span>
+       
+      anything
     </span>
   </span>
-  <span>
-     
-     AND 
-     
+  <span
+    key="1"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Collection
+       
+    </span>
+    <span>
+       
+      is one of
+       
+    </span>
+    <span>
+       
+      UQ:120743, UQ:217419 or UQ:217422
+    </span>
   </span>
-  <span>
-    Published
-     
+  <span
+    key="2"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Author ID
+       
+    </span>
+    <span>
+       
+      is
+       
+    </span>
+    <span>
+       
+      570
+    </span>
   </span>
-  <span>
-     
-    between
-     
+  <span
+    key="3"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Work type
+       
+    </span>
+    <span>
+       
+      is one of
+       
+    </span>
+    <span>
+       
+      Audio document or Book
+    </span>
   </span>
-  <span>
-     
-    1991 to 2012
+  <span
+    key="4"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+       
+    </span>
+    <span>
+       
+      is
+       
+    </span>
+    <span>
+       
+      <span
+        className="value"
+      >
+        open access/full text
+      </span>
+    </span>
+  </span>
+  <span
+    key="5"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Published
+       
+    </span>
+    <span>
+       
+      between
+       
+    </span>
+    <span>
+       
+      1991 to 2012
+    </span>
   </span>
 </div>
 `;
@@ -534,58 +558,70 @@ exports[`Component AdvancedSearchCaption updateStateData should return expected 
 <div
   className="search-body searchQueryCaption"
 >
-  <span>
-     
-     
+  <span
+    key="0"
+  >
+    <span>
+       
+       
+    </span>
+    <span>
+      Any field
+       
+    </span>
+    <span>
+       
+      contains
+       
+    </span>
+    <span>
+       
+      sdsdfsdfgsdfg
+    </span>
   </span>
-  <span>
-    Any field
-     
+  <span
+    key="1"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Collection
+       
+    </span>
+    <span>
+       
+      is one of
+       
+    </span>
+    <span>
+       
+      UQ:120743, UQ:217419 or UQ:217422
+    </span>
   </span>
-  <span>
-     
-    contains
-     
-  </span>
-  <span>
-     
-    sdsdfsdfgsdfg
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Collection
-     
-  </span>
-  <span>
-     
-    is one of
-     
-  </span>
-  <span>
-     
-    UQ:120743, UQ:217419 or UQ:217422
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Author ID
-     
-  </span>
-  <span>
-     
-    is
-     
-  </span>
-  <span>
-     
-    81861
+  <span
+    key="2"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Author ID
+       
+    </span>
+    <span>
+       
+      is
+       
+    </span>
+    <span>
+       
+      81861
+    </span>
   </span>
 </div>
 `;
@@ -594,58 +630,70 @@ exports[`Component AdvancedSearchCaption updateStateData should return expected 
 <div
   className="search-body searchQueryCaption"
 >
-  <span>
-     
-     
+  <span
+    key="0"
+  >
+    <span>
+       
+       
+    </span>
+    <span>
+      Any field
+       
+    </span>
+    <span>
+       
+      contains
+       
+    </span>
+    <span>
+       
+      hello
+    </span>
   </span>
-  <span>
-    Any field
-     
+  <span
+    key="1"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Collection
+       
+    </span>
+    <span>
+       
+      is one of
+       
+    </span>
+    <span>
+       
+      UQ:120743 or UQ:217423
+    </span>
   </span>
-  <span>
-     
-    contains
-     
-  </span>
-  <span>
-     
-    hello
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Collection
-     
-  </span>
-  <span>
-     
-    is one of
-     
-  </span>
-  <span>
-     
-    UQ:120743 or UQ:217423
-  </span>
-  <span>
-     
-     AND 
-     
-  </span>
-  <span>
-    Author ID
-     
-  </span>
-  <span>
-     
-    is
-     
-  </span>
-  <span>
-     
-    2917705
+  <span
+    key="2"
+  >
+    <span>
+       
+       AND 
+       
+    </span>
+    <span>
+      Author ID
+       
+    </span>
+    <span>
+       
+      is
+       
+    </span>
+    <span>
+       
+      2917705
+    </span>
   </span>
 </div>
 `;

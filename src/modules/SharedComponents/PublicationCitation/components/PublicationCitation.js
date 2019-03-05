@@ -259,8 +259,8 @@ export class PublicationCitation extends PureComponent {
                             }
                             {
                                 this.props.showSources && this.props.publication.sources &&
-                                <Grid item xs={12} gutterBottom>
-                                    <Typography variant="caption">{this.renderSources()}</Typography>
+                                <Grid item xs={12}>
+                                    <Typography gutterBottom variant="caption">{this.renderSources()}</Typography>
                                 </Grid>
                             }
                             {
