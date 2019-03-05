@@ -1161,6 +1161,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         autoComplete="off"
         disabled={true}
         error={true}
+<<<<<<< HEAD
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -1236,9 +1237,15 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         autoComplete="off"
         disabled={true}
         error={true}
+=======
+>>>>>>> master
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+<<<<<<< HEAD
+=======
+        placeholder="Please type the name exactly as published"
+>>>>>>> master
         required={false}
         value=""
       />
@@ -2604,6 +2611,10 @@ exports[`Component ContributorForm should render display name field and identifi
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+<<<<<<< HEAD
+=======
+        placeholder="Please type the name exactly as published"
+>>>>>>> master
         required={false}
         value=""
       />
@@ -2665,6 +2676,10 @@ exports[`Component ContributorForm should render display name field and role fie
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+<<<<<<< HEAD
+=======
+        placeholder="Please type the name exactly as published"
+>>>>>>> master
         required={false}
         value=""
       />
@@ -2730,6 +2745,10 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+<<<<<<< HEAD
+=======
+        placeholder="Please type the name exactly as published"
+>>>>>>> master
         required={false}
         value=""
       />
