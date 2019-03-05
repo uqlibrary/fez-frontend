@@ -13,6 +13,13 @@ function setup(testProps, isShallow = true) {
     return getElement(Masquerade, props, isShallow);
 }
 
+const { href } = window.location;
+
+beforeAll(() => {
+    delete global.window.location;
+    global.window.location = {href: jest.fn(), assign: jest.fn()};
+});
+
 describe('Component Masquerade', () => {
     it('should correctly set state on username change', () => {
        const wrapper = setup({});

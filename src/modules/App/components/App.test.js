@@ -34,6 +34,11 @@ function setup(testProps, isShallow = true) {
     return getElement(AppClass, props, isShallow);
 }
 
+beforeAll(() => {
+    delete global.window.location;
+    global.window.location = {href: jest.fn(), assign: jest.fn()};
+});
+
 describe('Application component', () => {
     let account, author;
     const saveLocation = window.location;
