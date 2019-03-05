@@ -53,12 +53,11 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
-        onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         required={false}
         value=""
@@ -113,12 +112,11 @@ exports[`Component ContributorForm should render display name field and identifi
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
-        onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         required={false}
         value=""
@@ -186,12 +184,11 @@ exports[`Component ContributorForm should render display name field and role fie
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
-        onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         required={false}
         value=""
@@ -265,12 +262,11 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         label="Name as published"
         onChange={[Function]}
-        onKeyPress={[Function]}
         placeholder="Please type the name exactly as published"
         required={false}
         value=""
