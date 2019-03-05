@@ -50,12 +50,11 @@ ShallowWrapper {
             <WithStyles(TextFieldWrapper)
               autoComplete="off"
               disabled={false}
-              error={false}
+              error={true}
               fullWidth={true}
               id="nameAsPublishedField"
               label={undefined}
               onChange={[Function]}
-              onKeyPress={[Function]}
               placeholder={undefined}
               required={false}
               value=""
@@ -99,12 +98,11 @@ ShallowWrapper {
               <WithStyles(TextFieldWrapper)
                 autoComplete="off"
                 disabled={false}
-                error={false}
+                error={true}
                 fullWidth={true}
                 id="nameAsPublishedField"
                 label={undefined}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder={undefined}
                 required={false}
                 value=""
@@ -148,12 +146,11 @@ ShallowWrapper {
               "children": <WithStyles(TextFieldWrapper)
                 autoComplete="off"
                 disabled={false}
-                error={false}
+                error={true}
                 fullWidth={true}
                 id="nameAsPublishedField"
                 label={undefined}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder={undefined}
                 required={false}
                 value=""
@@ -170,12 +167,11 @@ ShallowWrapper {
               "props": Object {
                 "autoComplete": "off",
                 "disabled": false,
-                "error": false,
+                "error": true,
                 "fullWidth": true,
                 "id": "nameAsPublishedField",
                 "label": undefined,
                 "onChange": [Function],
-                "onKeyPress": [Function],
                 "placeholder": undefined,
                 "required": false,
                 "value": "",
@@ -257,12 +253,11 @@ ShallowWrapper {
               <WithStyles(TextFieldWrapper)
                 autoComplete="off"
                 disabled={false}
-                error={false}
+                error={true}
                 fullWidth={true}
                 id="nameAsPublishedField"
                 label={undefined}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder={undefined}
                 required={false}
                 value=""
@@ -306,12 +301,11 @@ ShallowWrapper {
                 <WithStyles(TextFieldWrapper)
                   autoComplete="off"
                   disabled={false}
-                  error={false}
+                  error={true}
                   fullWidth={true}
                   id="nameAsPublishedField"
                   label={undefined}
                   onChange={[Function]}
-                  onKeyPress={[Function]}
                   placeholder={undefined}
                   required={false}
                   value=""
@@ -355,12 +349,11 @@ ShallowWrapper {
                 "children": <WithStyles(TextFieldWrapper)
                   autoComplete="off"
                   disabled={false}
-                  error={false}
+                  error={true}
                   fullWidth={true}
                   id="nameAsPublishedField"
                   label={undefined}
                   onChange={[Function]}
-                  onKeyPress={[Function]}
                   placeholder={undefined}
                   required={false}
                   value=""
@@ -377,12 +370,11 @@ ShallowWrapper {
                 "props": Object {
                   "autoComplete": "off",
                   "disabled": false,
-                  "error": false,
+                  "error": true,
                   "fullWidth": true,
                   "id": "nameAsPublishedField",
                   "label": undefined,
                   "onChange": [Function],
-                  "onKeyPress": [Function],
                   "placeholder": undefined,
                   "required": false,
                   "value": "",
@@ -510,12 +502,11 @@ ShallowWrapper {
             <WithStyles(TextFieldWrapper)
               autoComplete="off"
               disabled={false}
-              error={false}
+              error={true}
               fullWidth={true}
               id="nameAsPublishedField"
               label={undefined}
               onChange={[Function]}
-              onKeyPress={[Function]}
               placeholder={undefined}
               required={false}
               value=""
@@ -584,12 +575,11 @@ ShallowWrapper {
               <WithStyles(TextFieldWrapper)
                 autoComplete="off"
                 disabled={false}
-                error={false}
+                error={true}
                 fullWidth={true}
                 id="nameAsPublishedField"
                 label={undefined}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder={undefined}
                 required={false}
                 value=""
@@ -657,12 +647,11 @@ ShallowWrapper {
               "children": <WithStyles(TextFieldWrapper)
                 autoComplete="off"
                 disabled={false}
-                error={false}
+                error={true}
                 fullWidth={true}
                 id="nameAsPublishedField"
                 label={undefined}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder={undefined}
                 required={false}
                 value=""
@@ -679,12 +668,11 @@ ShallowWrapper {
               "props": Object {
                 "autoComplete": "off",
                 "disabled": false,
-                "error": false,
+                "error": true,
                 "fullWidth": true,
                 "id": "nameAsPublishedField",
                 "label": undefined,
                 "onChange": [Function],
-                "onKeyPress": [Function],
                 "placeholder": undefined,
                 "required": false,
                 "value": "",
@@ -822,12 +810,11 @@ ShallowWrapper {
               <WithStyles(TextFieldWrapper)
                 autoComplete="off"
                 disabled={false}
-                error={false}
+                error={true}
                 fullWidth={true}
                 id="nameAsPublishedField"
                 label={undefined}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder={undefined}
                 required={false}
                 value=""
@@ -896,12 +883,11 @@ ShallowWrapper {
                 <WithStyles(TextFieldWrapper)
                   autoComplete="off"
                   disabled={false}
-                  error={false}
+                  error={true}
                   fullWidth={true}
                   id="nameAsPublishedField"
                   label={undefined}
                   onChange={[Function]}
-                  onKeyPress={[Function]}
                   placeholder={undefined}
                   required={false}
                   value=""
@@ -969,12 +955,11 @@ ShallowWrapper {
                 "children": <WithStyles(TextFieldWrapper)
                   autoComplete="off"
                   disabled={false}
-                  error={false}
+                  error={true}
                   fullWidth={true}
                   id="nameAsPublishedField"
                   label={undefined}
                   onChange={[Function]}
-                  onKeyPress={[Function]}
                   placeholder={undefined}
                   required={false}
                   value=""
@@ -991,12 +976,11 @@ ShallowWrapper {
                 "props": Object {
                   "autoComplete": "off",
                   "disabled": false,
-                  "error": false,
+                  "error": true,
                   "fullWidth": true,
                   "id": "nameAsPublishedField",
                   "label": undefined,
                   "onChange": [Function],
-                  "onKeyPress": [Function],
                   "placeholder": undefined,
                   "required": false,
                   "value": "",
@@ -1176,11 +1160,10 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={false}
         value=""
       />
@@ -1252,11 +1235,10 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={false}
         value=""
       />
@@ -2100,12 +2082,11 @@ exports[`Component ContributorForm should render connected component 1`] = `
                         >
                           <WithStyles(TextFieldWrapper)
                             autoComplete="off"
-                            error={false}
+                            error={true}
                             fullWidth={true}
                             id="nameAsPublishedField"
                             label="Name as published"
                             onChange={[Function]}
-                            onKeyPress={[Function]}
                             placeholder="Please type the name exactly as published"
                             required={false}
                             value=""
@@ -2113,12 +2094,11 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             <TextFieldWrapper
                               autoComplete="off"
                               classes={Object {}}
-                              error={false}
+                              error={true}
                               fullWidth={true}
                               id="nameAsPublishedField"
                               label="Name as published"
                               onChange={[Function]}
-                              onKeyPress={[Function]}
                               placeholder="Please type the name exactly as published"
                               required={false}
                               value=""
@@ -2127,12 +2107,11 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 InputLabelProps={null}
                                 autoComplete="off"
                                 classes={Object {}}
-                                error={false}
+                                error={true}
                                 fullWidth={true}
                                 id="Name as published"
                                 label="Name as published"
                                 onChange={[Function]}
-                                onKeyPress={[Function]}
                                 placeholder="Please type the name exactly as published"
                                 required={false}
                                 select={false}
@@ -2141,9 +2120,8 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               >
                                 <WithStyles(FormControl)
                                   classes={Object {}}
-                                  error={false}
+                                  error={true}
                                   fullWidth={true}
-                                  onKeyPress={[Function]}
                                   required={false}
                                   variant="standard"
                                 >
@@ -2158,16 +2136,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                     }
                                     component="div"
                                     disabled={false}
-                                    error={false}
+                                    error={true}
                                     fullWidth={true}
                                     margin="none"
-                                    onKeyPress={[Function]}
                                     required={false}
                                     variant="standard"
                                   >
                                     <div
                                       className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
-                                      onKeyPress={[Function]}
                                     >
                                       <WithStyles(InputLabel)
                                         htmlFor="Name as published"
@@ -2210,7 +2186,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               htmlFor="Name as published"
                                             >
                                               <label
-                                                className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                className="MuiFormLabel-root-109 MuiFormLabel-error-112 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                 data-shrink={false}
                                                 htmlFor="Name as published"
                                               >
@@ -2314,11 +2290,11 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               value=""
                                             >
                                               <div
-                                                className="MuiInputBase-root-129 MuiInput-root-116 MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
+                                                className="MuiInputBase-root-129 MuiInput-root-116 MuiInput-underline-120 MuiInputBase-error-135 MuiInput-error-121 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                 onClick={[Function]}
                                               >
                                                 <input
-                                                  aria-invalid={false}
+                                                  aria-invalid={true}
                                                   autoComplete="off"
                                                   className="MuiInputBase-input-139 MuiInput-input-124"
                                                   disabled={false}
@@ -2624,11 +2600,10 @@ exports[`Component ContributorForm should render display name field and identifi
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={false}
         value=""
       />
@@ -2686,11 +2661,10 @@ exports[`Component ContributorForm should render display name field and role fie
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={false}
         value=""
       />
@@ -2752,11 +2726,10 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={false}
         value=""
       />
@@ -2802,11 +2775,10 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={false}
         value=""
       />
@@ -2878,11 +2850,10 @@ exports[`Component ContributorForm should show error regarding affiliation type 
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={true}
         value=""
       />
@@ -2931,7 +2902,6 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
-        onKeyPress={[Function]}
         required={true}
         value=""
       />

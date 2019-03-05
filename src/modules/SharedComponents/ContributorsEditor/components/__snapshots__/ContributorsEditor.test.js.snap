@@ -2063,12 +2063,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                               <WithStyles(TextFieldWrapper)
                                 autoComplete="off"
                                 disabled={true}
-                                error={false}
+                                error={true}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
                                 label="Name as published"
                                 onChange={[Function]}
-                                onKeyPress={[Function]}
                                 placeholder="Please type the name exactly as published"
                                 required={false}
                                 value=""
@@ -2077,12 +2076,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                   autoComplete="off"
                                   classes={Object {}}
                                   disabled={true}
-                                  error={false}
+                                  error={true}
                                   fullWidth={true}
                                   id="nameAsPublishedField"
                                   label="Name as published"
                                   onChange={[Function]}
-                                  onKeyPress={[Function]}
                                   placeholder="Please type the name exactly as published"
                                   required={false}
                                   value=""
@@ -2092,12 +2090,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                     autoComplete="off"
                                     classes={Object {}}
                                     disabled={true}
-                                    error={false}
+                                    error={true}
                                     fullWidth={true}
                                     id="Name as published"
                                     label="Name as published"
                                     onChange={[Function]}
-                                    onKeyPress={[Function]}
                                     placeholder="Please type the name exactly as published"
                                     required={false}
                                     select={false}
@@ -2107,9 +2104,8 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={true}
-                                      error={false}
+                                      error={true}
                                       fullWidth={true}
-                                      onKeyPress={[Function]}
                                       required={false}
                                       variant="standard"
                                     >
@@ -2124,16 +2120,14 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                         }
                                         component="div"
                                         disabled={true}
-                                        error={false}
+                                        error={true}
                                         fullWidth={true}
                                         margin="none"
-                                        onKeyPress={[Function]}
                                         required={false}
                                         variant="standard"
                                       >
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
-                                          onKeyPress={[Function]}
                                         >
                                           <WithStyles(InputLabel)
                                             htmlFor="Name as published"
@@ -2176,7 +2170,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   htmlFor="Name as published"
                                                 >
                                                   <label
-                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiFormLabel-error-112 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                     data-shrink={false}
                                                     htmlFor="Name as published"
                                                   >
@@ -2280,11 +2274,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   value=""
                                                 >
                                                   <div
-                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-disabled-139 MuiInput-disabled-126 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
+                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-disabled-139 MuiInput-disabled-126 MuiInputBase-error-142 MuiInput-error-128 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
                                                     onClick={[Function]}
                                                   >
                                                     <input
-                                                      aria-invalid={false}
+                                                      aria-invalid={true}
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-146 MuiInput-input-131 MuiInputBase-disabled-139 MuiInput-disabled-126"
                                                       disabled={true}
@@ -3947,12 +3941,11 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                   <WithStyles(TextFieldWrapper)
                                     autoComplete="off"
                                     disabled={false}
-                                    error={false}
+                                    error={true}
                                     fullWidth={true}
                                     id="nameAsPublishedField"
                                     label="Name as published"
                                     onChange={[Function]}
-                                    onKeyPress={[Function]}
                                     placeholder="Please type the name exactly as published"
                                     required={false}
                                     value=""
@@ -3961,12 +3954,11 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                       autoComplete="off"
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
+                                      error={true}
                                       fullWidth={true}
                                       id="nameAsPublishedField"
                                       label="Name as published"
                                       onChange={[Function]}
-                                      onKeyPress={[Function]}
                                       placeholder="Please type the name exactly as published"
                                       required={false}
                                       value=""
@@ -3976,12 +3968,11 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                         autoComplete="off"
                                         classes={Object {}}
                                         disabled={false}
-                                        error={false}
+                                        error={true}
                                         fullWidth={true}
                                         id="Name as published"
                                         label="Name as published"
                                         onChange={[Function]}
-                                        onKeyPress={[Function]}
                                         placeholder="Please type the name exactly as published"
                                         required={false}
                                         select={false}
@@ -3991,9 +3982,8 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                         <WithStyles(FormControl)
                                           classes={Object {}}
                                           disabled={false}
-                                          error={false}
+                                          error={true}
                                           fullWidth={true}
-                                          onKeyPress={[Function]}
                                           required={false}
                                           variant="standard"
                                         >
@@ -4008,16 +3998,14 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                             }
                                             component="div"
                                             disabled={false}
-                                            error={false}
+                                            error={true}
                                             fullWidth={true}
                                             margin="none"
-                                            onKeyPress={[Function]}
                                             required={false}
                                             variant="standard"
                                           >
                                             <div
                                               className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
-                                              onKeyPress={[Function]}
                                             >
                                               <WithStyles(InputLabel)
                                                 htmlFor="Name as published"
@@ -4060,7 +4048,7 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                                       htmlFor="Name as published"
                                                     >
                                                       <label
-                                                        className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                        className="MuiFormLabel-root-109 MuiFormLabel-error-112 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                         data-shrink={false}
                                                         htmlFor="Name as published"
                                                       >
@@ -4164,11 +4152,11 @@ exports[`ContributorsEditor tests  should render with Styles 1`] = `
                                                       value=""
                                                     >
                                                       <div
-                                                        className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
+                                                        className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-error-142 MuiInput-error-128 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
                                                         onClick={[Function]}
                                                       >
                                                         <input
-                                                          aria-invalid={false}
+                                                          aria-invalid={true}
                                                           autoComplete="off"
                                                           className="MuiInputBase-input-146 MuiInput-input-131"
                                                           disabled={false}

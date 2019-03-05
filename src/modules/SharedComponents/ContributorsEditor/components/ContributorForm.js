@@ -65,7 +65,9 @@ export class ContributorForm extends PureComponent {
             (event && event.key && (
                 event.key !== 'Enter' ||
                 this.state.nameAsPublished.length === 0 ||
-                (this.props.showRoleInput && this.state.creatorRole.length === 0)
+                (this.props.showRoleInput && this.state.creatorRole.length === 0) ||
+                (this.state.affiliation === 'UQ' && this.state.nameAsPublished.trim().length === 0) ||
+                (this.state.affiliation !== 'UQ' && (this.state.nameAsPublished.trim().length === 0 || this.state.orgaff.trim().length === 0 && this.state.orgtype.trim().length === 0))
             ))
         ) return;
 
@@ -86,20 +88,20 @@ export class ContributorForm extends PureComponent {
             orgaff: '',
             orgtype: ''
         });
-    }
+    };
 
     _onNameChanged = (event) => {
         this.setState({
             nameAsPublished: event.target.value,
             clearRoleInput: false
         });
-    }
+    };
 
     _onRoleChanged = (value) => {
         this.setState({
             creatorRole: value
         });
-    }
+    };
 
     _onUQIdentifierSelected = (selectedItem) => {
         this.setState({
@@ -107,7 +109,7 @@ export class ContributorForm extends PureComponent {
         }, () => {
             this._addContributor();
         });
-    }
+    };
 
     /**
      * @deprecated
@@ -166,12 +168,11 @@ export class ContributorForm extends PureComponent {
                             placeholder={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
-                            onKeyPress={this._addContributor}
                             disabled={disabled || isNtro && this.state.affiliation.length === 0}
                             required={this.props.required}
                             autoComplete="off"
                             error={!!(!isNtro && this.props.required && !this.props.isContributorAssigned && !this.state.nameAsPublished) ||
-                            !!(isNtro && this.state.affiliation && !this.state.nameAsPublished)}
+                            !!(isNtro && this.state.affiliation && !this.state.nameAsPublished || this.state.nameAsPublished.trim().length === 0)}
                         />
                     </Grid>
                     {
