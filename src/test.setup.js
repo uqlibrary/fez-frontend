@@ -12,7 +12,7 @@ import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {api, mui1theme} from 'config';
+import {api, mui1theme, sessionApi} from 'config';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
 
@@ -41,6 +41,10 @@ const setupStoreForMount = () => {
 
 const setupMockAdapter = () => {
     return new MockAdapter(api, {delayResponse: 100});
+};
+
+const setupSessionMockAdapter = () => {
+    return new MockAdapter(sessionApi, {delayResponse: 100});
 };
 
 // it's possible to extend expect globally,
@@ -135,7 +139,9 @@ global.mockActionsStore = setupStoreForActions();
 
 // set global mock api
 global.setupMockAdapter = setupMockAdapter;
+global.setupSessionMockAdapter = setupSessionMockAdapter;
 global.mockApi = setupMockAdapter();
+global.mockSessionApi = setupSessionMockAdapter();
 
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;
