@@ -1,9 +1,9 @@
 import FacetsFilter from './FacetsFilter';
-import {possibleUnclaimedList} from 'mock/data';
+import { possibleUnclaimedList } from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        activeFacets: {filters: {}, ranges: {}} || testProps.activeFacets,
+        activeFacets: { filters: {}, ranges: {} } || testProps.activeFacets,
         facetsData: {} || testProps.facetsData,
         excludeFacetsList: [] || testProps.excludeFacetsList,
         onFacetsChanged: jest.fn() || testProps.onFacetsChanged,
@@ -22,31 +22,43 @@ describe('FacetsFilter ', () => {
 
     it('should set state when component receives new props', () => {
         const wrapper = setup({});
-        wrapper.instance().componentWillReceiveProps({activeFacets: {filters: {one: 'one'}, ranges: {}}});
-        expect(wrapper.instance().state.activeFacets).toEqual({filters: {one: 'one'}, ranges: {}});
+        wrapper.instance().componentWillReceiveProps({
+            activeFacets: {
+                filters: {
+                    one: 'one'
+                },
+                ranges: {}
+            }
+        });
+        expect(wrapper.instance().state.activeFacets).toEqual({
+            filters: {
+                one: 'one'
+            },
+            ranges: {}
+        });
     });
 
     it('components for mock data', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData: facetsData});
+        const wrapper = setup({ facetsData: facetsData });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders filter for open access', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData: facetsData, showOpenAccessFilter:true});
+        const wrapper = setup({ facetsData: facetsData, showOpenAccessFilter: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('components for mock data with excluded facets', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, excludeFacetsList: ['Display type']});
+        const wrapper = setup({ facetsData, excludeFacetsList: ['Display type'] });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('components for mock data with disabled flag set', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, disabled: true});
+        const wrapper = setup({ facetsData, disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
 
         const categories = wrapper.find('.facetsCategory');
@@ -57,7 +69,18 @@ describe('FacetsFilter ', () => {
 
     it('components for mock data with active facets set', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}}, false);
+        const wrapper = setup(
+            {
+                facetsData,
+                activeFacets: {
+                    filters: {
+                        'Display type': 179
+                    },
+                    ranges: {}
+                }
+            },
+            false
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         const category = wrapper.find('FacetsFilterListItem#facet-category-Display-type');
         expect(category.length).toEqual(1);
@@ -67,15 +90,24 @@ describe('FacetsFilter ', () => {
 
     it('components for mock data deactivating a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {showOpenAccessOnly: true, filters: {'Display type': 179}, ranges: {}}});
+        const wrapper = setup({
+            facetsData,
+            activeFacets: {
+                showOpenAccessOnly: true,
+                filters: {
+                    'Display type': 179
+                },
+                ranges: {}
+            }
+        });
 
         wrapper.instance()._handleFacetClick('Display type', 130)();
         wrapper.update();
-        expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 130}));
+        expect(wrapper.state().activeFacets.filters).toEqual({ 'Display type': 130 });
 
         wrapper.instance()._handleFacetClick('Display type', 130)();
         wrapper.update();
-        expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({}));
+        expect(wrapper.state().activeFacets.filters).toEqual({});
 
         wrapper.instance()._handleOpenAccessFilter(false);
         wrapper.update();
@@ -84,12 +116,25 @@ describe('FacetsFilter ', () => {
 
     it('components for mock data activating a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
+        const wrapper = setup({
+            facetsData,
+            activeFacets: {
+                filters: {
+                    'Display type': 179
+                },
+                ranges: {}
+            }
+        });
 
         wrapper.instance()._handleFacetClick('Keywords', 'Biochemistry')();
         wrapper.update();
 
-        expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
+        expect(
+            wrapper.state().activeFacets.filters
+        ).toEqual({
+            'Display type': 179,
+            'Keywords': 'Biochemistry'
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.instance()._handleOpenAccessFilter(true);
@@ -99,20 +144,35 @@ describe('FacetsFilter ', () => {
 
     it('components for mock data resetting a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
+        const wrapper = setup({
+            facetsData,
+            activeFacets: {
+                filters: {
+                    'Display type': 179
+                },
+                ranges: {}
+            }
+        });
 
         wrapper.instance()._handleResetClick();
         wrapper.update();
 
-        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({filters: {}, ranges: {}}));
+        expect(
+            wrapper.state().activeFacets
+        ).toEqual(
+            {
+                filters: {},
+                ranges: {}
+            }
+        );
     });
 
     it('components for mock data', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        facetsData['Display type'].buckets.push({'key': 174, 'doc_count': 4});
-        facetsData['Display type (lookup)'].buckets.push({'key': 'Book Chapter', 'doc_count': 4});
+        facetsData['Display type'].buckets.push({ 'key': 174, 'doc_count': 4 });
+        facetsData['Display type (lookup)'].buckets.push({ 'key': 'Book Chapter', 'doc_count': 4 });
 
-        const wrapper = setup({facetsData});
+        const wrapper = setup({ facetsData });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -490,9 +550,15 @@ describe('FacetsFilter ', () => {
         const excludeFacetsList = [];
         const renameFacetsList = {};
         const lookupFacetsList = {};
-        const result = [{"facetTitle": "Scopus document type", "facets": [{"count": 68, "key": "ar", "title": "Article"}, {"count": 4, "key": "re", "title": "Review"}, {"count": 1, "key": "ch", "title": "Letter"}, {"count": 1, "key": "le", "title": "false"}], "title": "Scopus document type"}, {"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Display type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Year published", "facets": [{"count": 13, "key": "2005", "title": "2005"}, {"count": 13, "key": "2007", "title": "2007"}, {"count": 12, "key": "2008", "title": "2008"}, {"count": 11, "key": "2012", "title": "2012"}, {"count": 10, "key": "2000", "title": "2000"}], "title": "Year published"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}, {"facetTitle": "Subtype", "facets": [{"count": 88, "key": "Article (original research)", "title": "Article (original research)"}, {"count": 10, "key": "Critical review of research, literature review, critical commentary", "title": "Critical review of research, literature review, critical commentary"}, {"count": 6, "key": "Other", "title": "Other"}, {"count": 6, "key": "Poster", "title": "Poster"}, {"count": 4, "key": "Creative work", "title": "Creative work"}], "title": "Subtype"}];
         const wrapper = setup({});
-        expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)).toEqual(result);
+        expect(
+            wrapper.instance().getFacetsToDisplay(
+                mockFacetsData,
+                excludeFacetsList,
+                renameFacetsList,
+                lookupFacetsList
+            )
+        ).toMatchSnapshot();
     });
 
     it('getFacetsToDisplay returns empty when no facets supplied ', () => {
@@ -500,97 +566,178 @@ describe('FacetsFilter ', () => {
         const renameFacetsList = {};
         const result = [];
         const wrapper = setup({});
-        expect(wrapper.instance().getFacetsToDisplay({}, excludeFacetsList,renameFacetsList)).toEqual(result);
+        expect(
+            wrapper.instance().getFacetsToDisplay(
+                {},
+                excludeFacetsList,
+                renameFacetsList
+            )
+        ).toEqual(result);
     });
 
     it('getFacetsToDisplay returns facets correctly with an exclusion but no renaming', () => {
 
-        const excludeFacetsList = ["Scopus document type","Subtype","Year published"];
+        const excludeFacetsList = ["Scopus document type", "Subtype", "Year published"];
         const renameFacetsList = {};
         const lookupFacetsList = {};
-        const result = [{"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Display type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}];
 
         const wrapper = setup({});
-        expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)).toEqual(result);
+        expect(
+            wrapper.instance().getFacetsToDisplay(
+                mockFacetsData,
+                excludeFacetsList,
+                renameFacetsList,
+                lookupFacetsList
+            )
+        ).toMatchSnapshot();
     });
 
     it('getFacetsToDisplay returns facets correctly without an exclusion but has renaming', () => {
 
         const excludeFacetsList = [];
-        const renameFacetsList = {"Display type":"Work type"};
+        const renameFacetsList = { "Display type": "Work type" };
         const lookupFacetsList = {};
-        const result = [{"facetTitle": "Scopus document type", "facets": [{"count": 68, "key": "ar", "title": "Article"}, {"count": 4, "key": "re", "title": "Review"}, {"count": 1, "key": "ch", "title": "Letter"}, {"count": 1, "key": "le", "title": "false"}], "title": "Scopus document type"}, {"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Work type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"},{"facetTitle": "Year published", "facets": [{"count": 13, "key": "2005", "title": "2005"}, {"count": 13, "key": "2007", "title": "2007"}, {"count": 12, "key": "2008", "title": "2008"}, {"count": 11, "key": "2012", "title": "2012"}, {"count": 10, "key": "2000", "title": "2000"}], "title": "Year published"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}, {"facetTitle": "Subtype", "facets": [{"count": 88, "key": "Article (original research)", "title": "Article (original research)"}, {"count": 10, "key": "Critical review of research, literature review, critical commentary", "title": "Critical review of research, literature review, critical commentary"}, {"count": 6, "key": "Other", "title": "Other"}, {"count": 6, "key": "Poster", "title": "Poster"}, {"count": 4, "key": "Creative work", "title": "Creative work"}], "title": "Subtype"}];
-
         const wrapper = setup({});
-        expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)).toEqual(result);
+        expect(
+            wrapper.instance().getFacetsToDisplay(
+                mockFacetsData,
+                excludeFacetsList,
+                renameFacetsList,
+                lookupFacetsList
+            )
+        ).toMatchSnapshot();
     });
 
     it('getFacetsToDisplay returns facets correctly with an exclusion and renaming', () => {
 
-        const excludeFacetsList = ["Scopus document type","Subtype","Year published"];
-        const renameFacetsList = {"Display type":"Work type"};
+        const excludeFacetsList = ["Scopus document type", "Subtype", "Year published"];
+        const renameFacetsList = { "Display type": "Work type" };
         const lookupFacetsList = {};
-        const result = [{"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Work type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}];
-
         const wrapper = setup({});
-        expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)).toEqual(result);
+        expect(
+            wrapper.instance().getFacetsToDisplay(
+                mockFacetsData,
+                excludeFacetsList,
+                renameFacetsList,
+                lookupFacetsList
+            )
+        ).toMatchSnapshot();
     });
 
     it('getNestedListItems returns list of facets correctly for a given category', () => {
-
-        const facetsCategory = {"title":"Work type","facets":[{"title":"Journal Article","key":179,"count":110},{"title":"Conference Paper","key":130,"count":32},{"title":"Book","key":174,"count":3},{"title":"Book Chapter","key":177,"count":1},{"title":"Generic Document","key":202,"count":1}]};
-        const result = [{"key":"0","ref":null,"props":{"index":0,"isActive":false,"primaryText":"Journal Article (110)"},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"index":1,"isActive":false,"primaryText":"Conference Paper (32)"},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"index":2,"isActive":false,"primaryText":"Book (3)"},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"index":3,"isActive":false,"primaryText":"Book Chapter (1)"},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"index":4,"isActive":false,"primaryText":"Generic Document (1)"},"_owner":null,"_store":{}}];
-
+        const facetsCategory = {
+            "title": "Work type",
+            "facets": [
+                { "title": "Journal Article", "key": 179, "count": 110 },
+                { "title": "Conference Paper", "key": 130, "count": 32 },
+                { "title": "Book", "key": 174, "count": 3 },
+                { "title": "Book Chapter", "key": 177, "count": 1 },
+                { "title": "Generic Document", "key": 202, "count": 1 }
+            ]
+        };
         const wrapper = setup({});
-        expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
+        expect(
+            toJson(
+                wrapper.instance().getNestedListItems(facetsCategory)
+            )
+        ).toMatchSnapshot();
     });
 
     it('getNestedListItems returns list of facets correctly for categories where item.key is expected to be an integer but supplied in the string form', () => {
-        const facetsCategory = {"facetTitle":"Display type","facets":[{"title":"Journal Article","key":179,"count":110},{"title":"Conference Paper","key":130,"count":32},{"title":"Book","key":174,"count":3},{"title":"Book Chapter","key":177,"count":1},{"title":"Generic Document","key":202,"count":1}]};
-        const result = [{"key":"0","ref":null,"props":{"index":0,"isActive":true,"primaryText":"Journal Article (110)"},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"index":1,"isActive":false,"primaryText":"Conference Paper (32)"},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"index":2,"isActive":false,"primaryText":"Book (3)"},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"index":3,"isActive":false,"primaryText":"Book Chapter (1)"},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"index":4,"isActive":false,"primaryText":"Generic Document (1)"},"_owner":null,"_store":{}}];
-
-        const wrapper = setup({activeFacets: {filters: {"Display type": "179"}, ranges: {}}});
-        expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
+        const facetsCategory = {
+            "facetTitle": "Display type",
+            "facets": [
+                { "title": "Journal Article", "key": 179, "count": 110 },
+                { "title": "Conference Paper", "key": 130, "count": 32 },
+                { "title": "Book", "key": 174, "count": 3 },
+                { "title": "Book Chapter", "key": 177, "count": 1 },
+                { "title": "Generic Document", "key": 202, "count": 1 }
+            ]
+        };
+        const wrapper = setup({
+            activeFacets: {
+                filters: { "Display type": "179" },
+                ranges: {}
+            }
+        });
+        expect(
+            toJson(
+                wrapper.instance().getNestedListItems(facetsCategory)
+            )
+        ).toMatchSnapshot();
     });
 
     it('_handleResetClick returns empty state for activeFacets', () => {
         const wrapper = setup({});
-        wrapper.setState({activeFacets:{ranges: {"Year published": {from: 2010, to: 2015}}, filters: {"Keywords":"Cells"}}});
+        wrapper.setState({
+            activeFacets: {
+                ranges: {
+                    "Year published": {
+                        from: 2010,
+                        to: 2015
+                    }
+                },
+                filters: {
+                    "Keywords": "Cells"
+                }
+            }
+        });
         wrapper.instance()._handleResetClick();
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });
     });
 
     it('_handleFacetClick returns correct state object for active facets', () => {
         const wrapper = setup({});
-        wrapper.setState({activeFacets:{filters:{}, ranges:{}}});
-        wrapper.instance()._handleFacetClick('Category1','Facet1')();
-        wrapper.instance()._handleFacetClick('Category2','Facet2')();
-        wrapper.instance()._handleFacetClick('Category3','Facet3')();
-        expect(wrapper.state().activeFacets).toEqual({"filters": {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, "ranges": {}, "showOpenAccessOnly": false});
+        wrapper.setState({ activeFacets: { filters: {}, ranges: {} } });
+        wrapper.instance()._handleFacetClick('Category1', 'Facet1')();
+        wrapper.instance()._handleFacetClick('Category2', 'Facet2')();
+        wrapper.instance()._handleFacetClick('Category3', 'Facet3')();
+        expect(wrapper.state().activeFacets).toEqual({
+            "filters": {
+                "Category1": "Facet1",
+                "Category2": "Facet2",
+                "Category3": "Facet3"
+            },
+            "ranges": {},
+            "showOpenAccessOnly": false
+        });
     });
 
     it('_handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
-        const wrapper = setup({disabled: true});
-        wrapper.instance()._handleFacetClick('Category1','Facet1')();
-        wrapper.instance()._handleFacetClick('Category2','Facet2')();
-        wrapper.instance()._handleFacetClick('Category3','Facet3')();
+        const wrapper = setup({ disabled: true });
+        wrapper.instance()._handleFacetClick('Category1', 'Facet1')();
+        wrapper.instance()._handleFacetClick('Category2', 'Facet2')();
+        wrapper.instance()._handleFacetClick('Category3', 'Facet3')();
         wrapper.instance()._handleOpenAccessFilter(true);
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });
     });
 
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
         const wrapper = setup({});
-        wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: 2000, to: 2010});
-        expect(wrapper.state().activeFacets).toEqual({"filters": {}, "ranges": {"Year": {"from": 2000, "to": 2010}}, "showOpenAccessOnly": false});
+        wrapper.instance()._handleYearPublishedRangeFacet('Year')({ from: 2000, to: 2010 });
+        expect(wrapper.state().activeFacets).toEqual({
+            "filters": {},
+            "ranges": {
+                "Year": {
+                    "from": 2000,
+                    "to": 2010
+                }
+            },
+            "showOpenAccessOnly": false
+        });
 
-        wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: null, to: null});
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}, "showOpenAccessOnly": false});
+        wrapper.instance()._handleYearPublishedRangeFacet('Year')({ from: null, to: null });
+        expect(wrapper.state().activeFacets).toEqual({
+            filters: {},
+            ranges: {},
+            "showOpenAccessOnly": false
+        });
     });
 
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
-        const wrapper = setup({disabled: true});
-        wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: 2000, to: 2010});
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+        const wrapper = setup({ disabled: true });
+        wrapper.instance()._handleYearPublishedRangeFacet('Year')({ from: 2000, to: 2010 });
+        expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });
     });
 
     it('should return false if facet is not in activeFacets', () => {
