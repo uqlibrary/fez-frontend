@@ -67,7 +67,7 @@ export class GrantInformationClass extends PureComponent {
         return grantData && grantData.filter(grantData=>grantData[orderSubkey] === order)[0];
     }
 
-    renderGrants = (publication, includeFundingText = true) => {
+    renderGrants = (publication, includeFundingText) => {
         const grantAgencies = publication.fez_record_search_key_grant_agency;
         const grantIds = publication.fez_record_search_key_grant_id;
         const grantTexts = publication.fez_record_search_key_grant_text;
