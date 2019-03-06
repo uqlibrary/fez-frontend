@@ -7,7 +7,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Author/Creator contribution statement (not for public view)"
+      title="Author/Creator research statement"
     >
       <WithStyles(Grid)
         container={true}
@@ -18,12 +18,25 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Select the option that desribes the significance of the work for you.
+            Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={true}
-            label="Scale/Significance of work"
+            label={
+              <span>
+                Scale/Significance of work* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
             name="significance"
             required={true}
             validate={
@@ -58,10 +71,33 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
             disabled={true}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember to enter your statement in three sections: Background, Contribution, Significance
+              </span>
+            }
             maxValue={2000}
             name="impactStatement"
-            title="Creator contribution statement *"
+            title={
+              <span>
+                Creator research statement* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
@@ -87,18 +123,25 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click 
-              <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
-                target="_blank"
-              >
-                here
-              </a>
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research output metadata",
+          "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output metadata"
+      title="Non-traditional research output data"
     >
       <WithStyles(Grid)
         container={true}
@@ -113,10 +156,33 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={true}
             fullWidth={true}
-            instructions="Remember that this description is for public view"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember that this description is for public view
+              </span>
+            }
             maxValue={800}
             name="ntroAbstract"
-            title="Abstract/Description (for public view) *"
+            title={
+              <span>
+                Abstract/Description* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
@@ -473,7 +539,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
     xs={12}
   >
     <StandardCard
-      title="Author/Creator contribution statement (not for public view)"
+      title="Author/Creator research statement"
     >
       <WithStyles(Grid)
         container={true}
@@ -484,12 +550,25 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <WithStyles(Typography)>
-            Select the option that desribes the significance of the work for you.
+            Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
-            label="Scale/Significance of work"
+            label={
+              <span>
+                Scale/Significance of work* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
             name="significance"
             required={true}
             validate={
@@ -524,10 +603,33 @@ exports[`Component NtroFields should render contribution statement fields as wel
             description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
             disabled={false}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember to enter your statement in three sections: Background, Contribution, Significance
+              </span>
+            }
             maxValue={2000}
             name="impactStatement"
-            title="Creator contribution statement *"
+            title={
+              <span>
+                Creator research statement* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
@@ -553,18 +655,25 @@ exports[`Component NtroFields should render contribution statement fields as wel
             </h3>
             <p>
               For more information about each quality indicator option, click 
-              <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
-                target="_blank"
-              >
-                here
-              </a>
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research output metadata",
+          "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output metadata"
+      title="Non-traditional research output data"
     >
       <WithStyles(Grid)
         container={true}
@@ -579,10 +688,33 @@ exports[`Component NtroFields should render contribution statement fields as wel
             description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={false}
             fullWidth={true}
-            instructions="Remember that this description is for public view"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember that this description is for public view
+              </span>
+            }
             maxValue={800}
             name="ntroAbstract"
-            title="Abstract/Description (for public view) *"
+            title={
+              <span>
+                Abstract/Description* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
@@ -948,18 +1080,25 @@ exports[`Component NtroFields should render default view 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click 
-              <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
-                target="_blank"
-              >
-                here
-              </a>
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research output metadata",
+          "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output metadata"
+      title="Non-traditional research output data"
     >
       <WithStyles(Grid)
         container={true}
@@ -974,10 +1113,33 @@ exports[`Component NtroFields should render default view 1`] = `
             description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={false}
             fullWidth={true}
-            instructions="Remember that this description is for public view"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember that this description is for public view
+              </span>
+            }
             maxValue={800}
             name="ntroAbstract"
-            title="Abstract/Description (for public view) *"
+            title={
+              <span>
+                Abstract/Description* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
@@ -1334,7 +1496,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Author/Creator contribution statement (not for public view)"
+      title="Author/Creator research statement"
     >
       <WithStyles(Grid)
         container={true}
@@ -1345,12 +1507,25 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <WithStyles(Typography)>
-            Select the option that desribes the significance of the work for you.
+            Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
             disabled={false}
-            label="Scale/Significance of work"
+            label={
+              <span>
+                Scale/Significance of work* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
             name="significance"
             required={true}
             validate={
@@ -1385,10 +1560,33 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
             disabled={false}
             fullWidth={true}
-            instructions="Remember to enter your statement in three sections: Background, Contribution, Significance"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember to enter your statement in three sections: Background, Contribution, Significance
+              </span>
+            }
             maxValue={2000}
             name="impactStatement"
-            title="Creator contribution statement *"
+            title={
+              <span>
+                Creator research statement* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
@@ -1414,18 +1612,25 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click 
-              <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
-                target="_blank"
-              >
-                here
-              </a>
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
             </p>
           </UNDEFINED>,
-          "title": "Non-traditional research output metadata",
+          "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output metadata"
+      title="Non-traditional research output data"
     >
       <WithStyles(Grid)
         container={true}
@@ -1440,10 +1645,33 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
             disabled={false}
             fullWidth={true}
-            instructions="Remember that this description is for public view"
+            instructions={
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                Remember that this description is for public view
+              </span>
+            }
             maxValue={800}
             name="ntroAbstract"
-            title="Abstract/Description (for public view) *"
+            title={
+              <span>
+                Abstract/Description* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (for public view)
+                </span>
+              </span>
+            }
             validate={
               Array [
                 [Function],
