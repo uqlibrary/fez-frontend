@@ -9150,14 +9150,23 @@ exports[`Media Preview Component  should render component with video 1`] = `
               </div>
             </Grid>
           </WithStyles(Grid)>
-          <video
-            controls={true}
+          <div
+            style={
+              Object {
+                "margin": 16,
+                "padding": 16,
+              }
+            }
           >
-            <source
-              src="https://test.com/preview_test.jpg"
-              type="video/mp4"
-            />
-          </video>
+            <video
+              controls={true}
+            >
+              <source
+                src="https://test.com/preview_test.jpg"
+                type="video/mp4"
+              />
+            </video>
+          </div>
           <Hidden
             implementation="js"
             lgDown={false}
