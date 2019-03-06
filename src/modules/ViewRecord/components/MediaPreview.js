@@ -14,8 +14,26 @@ export default class MediaPreview extends PureComponent {
         onClose: PropTypes.func.isRequired
     };
 
+    constructor(props) {
+        super(props);
+        this.mediaPreviewRef = React.createRef();
+    }
+
+    componentDidMount() {
+        this.scrollToPreview();
+    }
+
     openFileInNewWindow = () => {
         window.open(this.props.mediaUrl);
+    };
+
+    scrollToPreview = () => {
+        !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
+        && this.mediaPreviewRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center',
+        });
     };
 
     MediaPreviewButtons = ({openInNewWindow, close}) => {
@@ -56,23 +74,26 @@ export default class MediaPreview extends PureComponent {
                     </Hidden>
                 </Grid>
                 {
-                    isVideo &&
-                    <video controls>
-                        <source src={previewMediaUrl} type={mimeType} />
-                        {browserNotSupportVideoTagMsg}
-                    </video>
-                }
-                {
-                    isImage &&
-                        <div style={{padding: 16, margin: 16}}>
-                            <Grid container spacing={32}>
-                                <Grid item xs />
-                                <Grid item xs={'auto'}>
-                                    <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{border: '5px solid black', maxWidth: '100%'}} />
+                    (isVideo || isImage) &&
+                    <div style={{padding: 16, margin: 16}} ref={this.mediaPreviewRef}>
+                        {
+                            isVideo &&
+                            <video controls>
+                                <source src={previewMediaUrl} type={mimeType} />
+                                {browserNotSupportVideoTagMsg}
+                            </video>
+                        }
+                        {
+                            isImage &&
+                                <Grid container spacing={32}>
+                                    <Grid item xs />
+                                    <Grid item xs={'auto'}>
+                                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{border: '5px solid black', maxWidth: '100%'}} />
+                                    </Grid>
+                                    <Grid item xs />
                                 </Grid>
-                                <Grid item xs />
-                            </Grid>
-                        </div>
+                        }
+                    </div>
                 }
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
