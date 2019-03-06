@@ -60,13 +60,13 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Author/Creator research statement',
                 fields: {
                     scaleOfWork: {
-                        label: <span>Scale/Significance of work* <span style={{fontWeight: 700}}>(not for public view)</span></span>,
+                        label: (<span>Scale/Significance of work* <span style={{fontWeight: 700}}>(not for public view)</span></span>),
                         description: 'Select the option that best describes the significance of the work.',
                     },
                     impactStatement: {
-                        label: <span>Creator research statement* <span style={{fontWeight: 700}}>(not for public view)</span></span>,
+                        label: (<span>Creator research statement* <span style={{fontWeight: 700}}>(not for public view)</span></span>),
                         placeholder: 'Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.',
-                        description: <span style={{fontWeight: 700}}>Remember to enter your statement in three sections: Background, Contribution, Significance</span>
+                        description: (<span style={{fontWeight: 700}}> - Remember to enter your statement in three sections: Background, Contribution, Significance</span>)
                     },
                 }
             },
@@ -74,9 +74,9 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Non-traditional research output data',
                 fields: {
                     abstract: {
-                        label: <span>Abstract/Description* <span style={{fontWeight: 700}}>(for public view)</span></span>,
+                        label: (<span>Abstract/Description* <span style={{fontWeight: 700}}>(for public view)</span></span>),
                         placeholder: 'Enter a brief description (800 characters or less, approximately 100 words) of the work',
-                        description: <span style={{fontWeight: 700}}>Remember that this description is for public view</span>,
+                        description: (<span style={{fontWeight: 700}}> - Remember that this description is for public view</span>),
                     },
                     series: {
                         floatingLabelText: 'Series',
