@@ -26,11 +26,16 @@ exports[`Component PublicationForm should render component initialised with just
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -447,11 +452,16 @@ exports[`Component PublicationForm should render component initialised with two 
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -901,11 +911,16 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -1391,11 +1406,16 @@ exports[`Component PublicationForm should render component with GenericDocument 
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -1878,11 +1898,16 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -2365,11 +2390,16 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -2852,11 +2882,16 @@ exports[`Component PublicationForm should render component with all fields disab
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
