@@ -28,4 +28,16 @@ describe('Search record', () => {
         expect(searchPublications).toBeCalled();
         expect(navigateToResults).toBeCalled();
     });
+
+    it('should handle skip search', () => {
+        const pushFn = jest.fn();
+        const wrapper = setup({
+            history: {
+                push: pushFn
+            }
+        }, true);
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.props().onSkipSearch();
+        expect(pushFn).toHaveBeenCalledWith('/records/add/new');
+    });
 });

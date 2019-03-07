@@ -15,6 +15,8 @@ import locale from '../locale';
 
 const moment = require('moment');
 
+export const FileNameRestrictions = /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/;
+
 export class FileUploader extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
@@ -33,7 +35,7 @@ export class FileUploader extends PureComponent {
             fileUploadLimit: config.DEFAULT_FILE_UPLOAD_LIMIT,
             maxFileSize: config.DEFAULT_MAX_FILE_SIZE,
             fileSizeUnit: config.SIZE_UNIT_G,
-            fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+            fileNameRestrictions: FileNameRestrictions
         },
         requireOpenAccessStatus: false,
         isNtro: false
@@ -101,10 +103,10 @@ export class FileUploader extends PureComponent {
 
         file[config.FILE_META_KEY_ACCESS_CONDITION] = newValue;
 
-        if (newValue !== config.OPEN_ACCESS_ID) {
-            file[config.FILE_META_KEY_EMBARGO_DATE] = null;
-        } else if (newValue === config.OPEN_ACCESS_ID) {
+        if (newValue === config.OPEN_ACCESS_ID) {
             file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
+        } else {
+            file[config.FILE_META_KEY_EMBARGO_DATE] = null;
         }
 
         this.replaceFile(file, index);

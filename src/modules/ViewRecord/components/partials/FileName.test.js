@@ -80,4 +80,13 @@ describe('File Name Component ', () => {
         element.simulate('keyPress');
         expect(onFileSelect).toHaveBeenCalledTimes(1);
     });
+
+    it('should detect videos from mime type', () => {
+        const wrapper = setup({});
+        const test1 = wrapper.instance().isVideo('video/mp4');
+        expect(test1).toBe(true);
+        const test2 = wrapper.instance().isVideo('audio/mp3');
+        expect(test2).toBe(false);
+    });
+
 });

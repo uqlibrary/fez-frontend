@@ -12,7 +12,7 @@ function setup(testProps, isShallow = true){
 }
 
 describe('JournalArticleForm renders ', () => {
-    it.skip('component', () => {
+    it('component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -22,7 +22,7 @@ describe('JournalArticleForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(12);
     });
 
-    it.skip('component with all fields disabled', () => {
+    it('component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);

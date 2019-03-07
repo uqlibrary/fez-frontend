@@ -9,6 +9,11 @@ function confirmDiscardFormChanges(WrappedComponent) {
             submitSucceeded: PropTypes.bool
         };
 
+        static defaultProps = {
+            dirty: false,
+            submitSucceeded: false
+        };
+
         componentDidUpdate() {
             this.promptDiscardFormChanges(this.props.dirty && !this.props.submitSucceeded);
         }
@@ -17,8 +22,10 @@ function confirmDiscardFormChanges(WrappedComponent) {
             window.onbeforeunload = null;
         }
 
+        getDiscardFormChangesConfirmationLocale = () => locale.global.discardFormChangesConfirmation.confirmationMessage;
+
         promptDiscardFormChanges(isDirty = false) {
-            window.onbeforeunload = isDirty && (() => locale.global.discardFormChangesConfirmation.confirmationMessage);
+            window.onbeforeunload = isDirty && (this.getDiscardFormChangesConfirmationLocale);
         }
 
         render() {

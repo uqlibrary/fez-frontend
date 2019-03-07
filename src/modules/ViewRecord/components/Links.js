@@ -29,7 +29,7 @@ const styles = (theme) => ({
     }
 });
 
-export class Links extends PureComponent {
+export class LinksClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object
@@ -176,4 +176,6 @@ export class Links extends PureComponent {
     }
 }
 
-export default withStyles(styles)(Links);
+const StyledLinksClass = withStyles(styles, {withTheme: true})(LinksClass);
+const Links = (props) => <StyledLinksClass {...props}/>;
+export default Links;

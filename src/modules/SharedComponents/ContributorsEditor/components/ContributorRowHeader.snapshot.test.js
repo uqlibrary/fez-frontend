@@ -1,6 +1,4 @@
-import {ContributorRowHeader} from './ContributorRowHeader';
-import {createShallow} from '@material-ui/core/test-utils';
-
+import {ContributorRowHeader, styles} from './ContributorRowHeader';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -58,5 +56,26 @@ describe('Component ContributorRowHeader', () => {
         wrapper.instance().confirmationBox = {showConfirmation: testFunction};
         wrapper.instance()._showConfirmation();
         expect(testFunction).toHaveBeenCalled;
+    });
+
+    it('set confirmation box ref', () => {
+        const wrapper = setup({});
+        wrapper.find('ConfirmDialogBox').props().onRef('testRef');
+        expect(wrapper.instance().confirmationBox).toBe('testRef');
+    });
+
+    it('should display infinite class', () => {
+        const wrapper = setup({
+            isInfinite: true,
+            classes: {
+                paddingRight36: 'test-class-1',
+                paddingRight14: 'test-class-2'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
     });
 });

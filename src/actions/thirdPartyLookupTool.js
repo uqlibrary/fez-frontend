@@ -1,7 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import {THIRD_PARTY_LOOKUP_API_1FIELD, THIRD_PARTY_LOOKUP_API_2FIELD} from 'repositories/routes';
-import {locale} from 'locale';
 
 /**
  * build the api url
@@ -25,7 +24,7 @@ export function getThirdPartyLookupApiUrl(type, field1, field2) {
  * @param field2
  * @returns {function(*): (*|void|Promise<T | never>)}
  */
-export function loadThirdPartyLookup(type, field1, field2) {
+export function loadThirdPartyResults(type, field1, field2) {
     return dispatch => {
         dispatch({type: actions.THIRD_PARTY_LOOKUP_TOOL_LOADING});
 
@@ -47,12 +46,14 @@ export function loadThirdPartyLookup(type, field1, field2) {
             })
             .catch(error => {
                 let message;
-                if (!!error.response && !!error.response.data) {
-                    message = [error.response.data];
-                } else if (error.message === locale.global.errorMessages[403].message) {
-                    message = ['Invalid authentication credentials - use a valid api key'];
+                if (!!error.response && !!error.response.data && !!error.response.data.data && error.response.data.data.length > 0) {
+                    message = [error.response.data.data];
                 } else {
-                    message = [error.message];
+                    if (!!error.response && !!error.response.data && error.response.data.length > 0) {
+                        message = [error.response.data];
+                    } else {
+                        message = ['an unspecified error occurred'];
+                    }
                 }
                 dispatch({
                     type: actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED,

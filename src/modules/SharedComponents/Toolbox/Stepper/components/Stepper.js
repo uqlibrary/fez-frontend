@@ -6,7 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 
-const styles = theme => ({
+export const styles = theme => ({
     stepper: {
         backgroundColor: theme.hexToRGBA('#F7F7F7', 0),
         [theme.breakpoints.down('sm')]: {
@@ -16,20 +16,15 @@ const styles = theme => ({
     },
     stepperLabel: {
         textOverflow: 'ellipsis',
-        overflow: 'hidden',
-        // [theme.breakpoints.down('sm')]: {
-        //     '& span': {
-        //         display: 'none'
-        //     }
-        // }
+        overflow: 'hidden'
     }
 });
 
 export class CustomStepper extends Component {
     static propTypes = {
         activeStep: PropTypes.number,
-        steps: PropTypes.array,
-        classes: PropTypes.object,
+        steps: PropTypes.array.isRequired,
+        classes: PropTypes.object.isRequired,
         width: PropTypes.any
     };
 

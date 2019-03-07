@@ -4,7 +4,6 @@ import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
-import Raven from 'raven-js';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -104,75 +103,75 @@ export function createNewRecord(data) {
 
 /**
  * Submit thesis involves two steps: upload files, create record with uploaded files.
- * This method has been deprecated.
+ * This method has been deprecated - kept for posterity.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function submitThesisOld(data, author) {
-    return dispatch => {
-        const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        if (!hasFilesToUpload) {
-            // reject thesis submission, files are required
-            return Promise.reject('Please attach files to proceed with thesis submission');
-        }
-        // set default values, links
-        const recordRequest = {
-            ...JSON.parse(JSON.stringify(data)),
-            ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
-            ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
-            ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
-            rek_title: data.thesisTitle.plainText,
-            rek_formatted_title: data.thesisTitle.htmlText,
-            rek_description: data.thesisAbstract.plainText,
-            rek_formatted_abstract: data.thesisAbstract.htmlText
-        };
-
-        // delete extra form values from request object
-        if (recordRequest.authors) delete recordRequest.authors;
-        if (recordRequest.editors) delete recordRequest.editors;
-        if (recordRequest.files) delete recordRequest.files;
-        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
-        if (recordRequest.supervisors) delete recordRequest.supervisors;
-        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
-        if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
-        if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
-        let fileUploadSucceeded = false;
-        dispatch({type: actions.CREATE_RECORD_SAVING});
-        return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
-            .then((response) => {
-                fileUploadSucceeded = !!response;
-                return post(NEW_RECORD_API(), recordRequest);
-            })
-            .then(response => {
-                // if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
-                dispatch({
-                    type: actions.CREATE_RECORD_SUCCESS,
-                    payload: {
-                        newRecord: response
-                    }
-                });
-                return response;
-            })
-            .catch(error => {
-                const specificError = !fileUploadSucceeded
-                    ? 'Submit Thesis: File upload failed. '
-                    : 'Submit Thesis: Error occurred while saving record to eSpace. ';
-                const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
-
-                if(process.env.ENABLE_LOG) Raven.captureException(error, {message: specificError});
-
-                dispatch({
-                    type: actions.CREATE_RECORD_FAILED,
-                    payload: compositeError
-                });
-
-                return Promise.reject(compositeError);
-            });
-    };
-}
+// export function submitThesisOld(data, author) {
+//     return dispatch => {
+//         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+//         if (!hasFilesToUpload) {
+//             // reject thesis submission, files are required
+//             return Promise.reject('Please attach files to proceed with thesis submission');
+//         }
+//         // set default values, links
+//         const recordRequest = {
+//             ...JSON.parse(JSON.stringify(data)),
+//             ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
+//             ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
+//             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+//             ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+//             ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+//             rek_title: data.thesisTitle.plainText,
+//             rek_formatted_title: data.thesisTitle.htmlText,
+//             rek_description: data.thesisAbstract.plainText,
+//             rek_formatted_abstract: data.thesisAbstract.htmlText
+//         };
+//
+//         // delete extra form values from request object
+//         if (recordRequest.authors) delete recordRequest.authors;
+//         if (recordRequest.editors) delete recordRequest.editors;
+//         if (recordRequest.files) delete recordRequest.files;
+//         if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
+//         if (recordRequest.supervisors) delete recordRequest.supervisors;
+//         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
+//         if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
+//         if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
+//         let fileUploadSucceeded = false;
+//         dispatch({type: actions.CREATE_RECORD_SAVING});
+//         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
+//             .then((response) => {
+//                 fileUploadSucceeded = !!response;
+//                 return post(NEW_RECORD_API(), recordRequest);
+//             })
+//             .then(response => {
+//                 // if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
+//                 dispatch({
+//                     type: actions.CREATE_RECORD_SUCCESS,
+//                     payload: {
+//                         newRecord: response
+//                     }
+//                 });
+//                 return response;
+//             })
+//             .catch(error => {
+//                 const specificError = !fileUploadSucceeded
+//                     ? 'Submit Thesis: File upload failed. '
+//                     : 'Submit Thesis: Error occurred while saving record to eSpace. ';
+//                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
+//
+//                 if(process.env.ENABLE_LOG) Raven.captureException(error, {message: specificError});
+//
+//                 dispatch({
+//                     type: actions.CREATE_RECORD_FAILED,
+//                     payload: compositeError
+//                 });
+//
+//                 return Promise.reject(compositeError);
+//             });
+//     };
+// }
 
 /**
  * Submit thesis involves two steps: create record - get signed url to upload files - upload files - patch record.
@@ -199,11 +198,14 @@ export function submitThesis(data) {
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;
         if (recordRequest.editors) delete recordRequest.editors;
-        if (recordRequest.files) delete recordRequest.files;
         if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
         if (recordRequest.supervisors) delete recordRequest.supervisors;
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
+        /* istanbul ignore else */
+        if (recordRequest.files) delete recordRequest.files;
+        /* istanbul ignore else */
         if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
+        /* istanbul ignore else */
         if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
 
         let newRecord = null;

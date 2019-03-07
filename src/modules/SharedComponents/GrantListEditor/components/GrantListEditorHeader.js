@@ -47,13 +47,15 @@ export class GrantListEditorHeader extends PureComponent {
         this.confirmationBox.showConfirmation();
     };
 
+    handleConfirmationBoxRef = (ref) => (this.confirmationBox = ref);
+
     render() {
         const {GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
         const {classes} = this.props;
         return (
             <Fragment>
                 <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
+                    onRef={this.handleConfirmationBoxRef}
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
@@ -105,7 +107,7 @@ export class GrantListEditorHeader extends PureComponent {
     }
 }
 
-const styles = () => ({
+export const styles = () => ({
     right: {
         textAlign: 'right'
     },

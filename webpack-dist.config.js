@@ -42,7 +42,7 @@ const options = {
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
 // get configuration for the branch
-const config = require('./config').default[branch] || require('./config').default['development'];
+const config = require('./config').default.branch || require('./config').default.development;
 
 // local port to serve production build
 const port = 9000;
@@ -107,6 +107,7 @@ const webpackConfig = {
             clear: false,
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
+
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI

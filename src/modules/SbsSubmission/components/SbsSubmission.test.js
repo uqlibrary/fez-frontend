@@ -136,4 +136,38 @@ describe('SbsSubmission test', () => {
         wrapper.instance().openDepositConfirmation();
         expect(testMethod).toHaveBeenCalled();
     });
+
+    it('should display confirmation box after submission', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({});
+        wrapper.instance().openDepositConfirmation = testMethod;
+        wrapper.setProps({isSessionValid: true, submitting: false});
+        wrapper.update();
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('deposit() method', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {checkSession: testMethod}});
+        wrapper.instance().deposit();
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('cancelSubmit() method', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({});
+        delete global.window.location;
+        global.window.location = {reload: testMethod};
+        wrapper.instance().cancelSubmit();
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('setDepositConfirmation(ref) method', () => {
+        const ref = 'Hello';
+        const wrapper = setup({});
+        wrapper.instance().setDepositConfirmation(ref);
+        expect(wrapper.instance().depositConfirmationBox).toEqual(ref);
+    });
+
+
 });

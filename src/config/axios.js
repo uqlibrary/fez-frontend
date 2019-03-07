@@ -94,7 +94,7 @@ api.interceptors.response.use(response => {
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
         // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
-        console.log('skipping root error handling for 3rd party api');
+        console.log('Skipping root error handling for 3rd party api');
     } else if (error.response && error.response.status === 403) {
         if (!!Cookies.get(SESSION_COOKIE_NAME)) {
             Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
@@ -110,7 +110,7 @@ api.interceptors.response.use(response => {
 
     let errorMessage = null;
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
-        console.log('skipping root error resetting for 3rd party api');
+        console.log('Skipping root error resetting for 3rd party api');
     } else if (!!error.response && !!error.response.status) {
         errorMessage = locale.global.errorMessages[error.response.status];
     }

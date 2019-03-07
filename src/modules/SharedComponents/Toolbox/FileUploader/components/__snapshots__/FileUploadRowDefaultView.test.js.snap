@@ -186,6 +186,32 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
 </div>
 `;
 
+exports[`Component FileUploadRowDefaultView should render default view with styles 1`] = `
+<FileUploadRowDefaultView
+  accessConditionId={null}
+  classes={
+    Object {
+      "icon": "FileUploadRowDefaultView-icon-1",
+      "row": "FileUploadRowDefaultView-row-2",
+    }
+  }
+  disabled={false}
+  embargoDate="01/01/2017"
+  index={0}
+  locale={
+    Object {
+      "embargoDateClosedAccess": "No date required",
+    }
+  }
+  name="test.pdf"
+  onAccessConditionChange={[MockFunction]}
+  onDelete={[MockFunction]}
+  onEmbargoDateChange={[MockFunction]}
+  requireOpenAccessStatus={true}
+  size="100 MB"
+/>
+`;
+
 exports[`Component FileUploadRowDefaultView should render embargo date picker if access condition is set to open access 1`] = `
 <div
   style={

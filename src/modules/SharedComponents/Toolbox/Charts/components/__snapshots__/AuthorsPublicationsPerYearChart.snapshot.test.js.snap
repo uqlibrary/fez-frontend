@@ -46,6 +46,6 @@ exports[`AuthorsPublicationsPerYearChart  should render empty chart component 1`
       },
     }
   }
-  className=" authors-publications-per-year-chart"
+  className="barChart authors-publications-per-year-chart"
 />
 `;

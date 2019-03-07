@@ -22,22 +22,24 @@ export class NavigationPrompt extends PureComponent {
     }
 
     componentDidMount() {
-        this.unblock = this.props.history.block((nextLocation) => {
-            if (this.props.when) {
-                this.setState({
-                    nextLocation: nextLocation
-                });
-                this.confirmationBox.showConfirmation();
-                return !this.props.when;
-            }
-
-            return this.props.when;
-        });
+        this.unblock = this.props.history.block(this.blockNavigation);
     }
 
     componentWillUnmount() {
         this.unblock();
     }
+
+    blockNavigation = (nextLocation) => {
+        if (this.props.when) {
+            this.setState({
+                nextLocation: nextLocation
+            });
+            this.confirmationBox.showConfirmation();
+            return !this.props.when;
+        }
+
+        return this.props.when;
+    };
 
     setNavigationConfirmation = (ref) => {
         this.confirmationBox = ref;

@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component MyLatestPublications should have a proper style generator 1`] = `
+Object {
+  "blueButton": Object {
+    "&:hover": Object {
+      "backgroundColor": "test2",
+    },
+    "backgroundColor": "test1",
+    "color": "test3",
+  },
+}
+`;
+
 exports[`Component MyLatestPublications should render latest publications 1`] = `
 <Fragment>
   <PublicationsList

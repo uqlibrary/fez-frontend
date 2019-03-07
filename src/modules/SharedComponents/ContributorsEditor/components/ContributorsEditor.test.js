@@ -1,5 +1,7 @@
-import {ContributorsEditor} from './ContributorsEditor';
+import {ContributorsEditor, mapStateToProps, styles} from './ContributorsEditor';
 import {authorsSearch} from 'mock/data';
+import Immutable from 'immutable';
+import React from 'react';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -145,4 +147,114 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.find('WithStyles(Typography)').length).toEqual(1);
     });
 
+    it('should update component', () => {
+        const onChangeFn = jest.fn();
+        const wrapper = setup({
+            onChange: onChangeFn
+        });
+        wrapper.setState({
+            contributors: [
+                {displayName: 'test 1'},
+                {displayName: 'test 2'},
+            ]
+        });
+
+        expect(onChangeFn).toHaveBeenCalledWith([
+            {displayName: 'test 1'},
+            {displayName: 'test 2'},
+        ]);
+    });
+
+    it('should get contributors from props and input value set as an array', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: [
+                    {displayName: 'test 1'},
+                    {displayName: 'test 2'},
+                ]
+            }
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should get contributors from props and input value set as an Immutable list', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: Immutable.List([
+                    {displayName: 'test 1'},
+                    {displayName: 'test 2'},
+                ])
+            }
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render error as html', () => {
+        const wrapper = setup({
+            meta: {
+                error: (
+                    <p>
+                        <span>test</span>
+                    </p>
+                )
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render error as one child', () => {
+        const wrapper = setup({
+            meta: {
+                error: (<span>test</span>)
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
+    });
+
+    it('should not move contributor up', () => {
+        const wrapper = setup({});
+        expect(wrapper.instance().moveUpContributor('test', 0)).toBeUndefined();
+    });
+
+    it('should not move contributor down', () => {
+        const wrapper = setup({
+            locale: {
+                form: 'test',
+                header: 'test header',
+                row: 'test row'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setState({
+            contributors: [
+                'test1',
+                'test2'
+            ]
+        });
+        expect(wrapper.instance().moveDownContributor('test2', 1)).toBeUndefined();
+    });
+
+    it('should map state to props as expected', () => {
+        const testFunction = () => ({
+            author: 'test'
+        });
+        expect(mapStateToProps({
+            get: testFunction
+        })).toEqual({
+            author: 'test'
+        });
+        expect(mapStateToProps({
+            get: () => false
+        })).toEqual({
+            author: null
+        });
+    });
 });

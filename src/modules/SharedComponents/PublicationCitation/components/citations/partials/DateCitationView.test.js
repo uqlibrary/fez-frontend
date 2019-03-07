@@ -40,14 +40,8 @@ describe('DateCitationView test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-
     it('should render component with just the year in brackets : (2017).', () => {
         const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: 'YYYY', prefix: '(', suffix: ').'});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render empty component with date invalid date format', () => {
-        const wrapper = setup({ date: 'This is not a date' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -1,4 +1,4 @@
-import {SimpleSearchComponent} from './SimpleSearchComponent';
+import {SimpleSearchComponent, styles} from './SimpleSearchComponent';
 import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){
@@ -33,9 +33,41 @@ describe('SimpleSearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render show mobile button', () => {
-        const wrapper = setup({showMobileSearchButton: true});
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should render mobile view', () => {
+        const wrapper = setup({
+            showMobileSearchButton: true,
+            isInHeader: true,
+            classes: {
+                mobileHeader: 'mobileHeaderTest'
+            }
+        });
+        wrapper.setState({ showMobile: true });
+        expect(
+            toJson(
+                wrapper.find(
+                    '.mobileHeaderTest Hidden'
+                )
+            )
+        ).toMatchSnapshot();
+    });
+
+    it('should show prefix icon when in header', () => {
+        const wrapper = setup({
+            isInHeader: true,
+            showPrefixIcon: true,
+            classes: {
+                inHeader: 'headerClass',
+                searchIconPrefix: 'searchIconPrefix'
+            }
+        });
+        expect(
+            toJson(
+                wrapper.find(
+                    'WithStyles(Grid).headerClass WithStyles(Grid)'
+                )
+                .first()
+            )
+        ).toMatchSnapshot();
     });
 
     it('should render show prefix icon in the search box', () => {
@@ -46,6 +78,10 @@ describe('SimpleSearchComponent', () => {
     it('should render with a class "header" for use in AppBar', () => {
         const wrapper = setup({isInHeader: true});
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        const preventDefaultFn = jest.fn();
+        wrapper.find('form').props().onSubmit({preventDefault: preventDefaultFn});
+        expect(preventDefaultFn).toHaveBeenCalled();
     });
 
     it('should set search value from prop', () => {
@@ -73,18 +109,31 @@ describe('SimpleSearchComponent', () => {
     });
 
     it('should submit search if search text is not null and ENTER is pressed', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({searchText: 'i feel lucky', onSearch: testMethod});
+        const searchFn = jest.fn();
+        const blurFn = jest.fn();
+        const wrapper = setup({
+            searchText: 'i feel lucky',
+            onSearch: searchFn
+        });
 
-        wrapper.instance()._handleSearch({key: 'Enter'});
+        wrapper.instance()._handleSearch({
+            key: 'Enter',
+            target: {
+                blur: blurFn
+            }
+        });
         wrapper.update();
 
-        expect(testMethod).toHaveBeenCalled();
+        expect(searchFn).toBeCalled();
+        expect(blurFn).toBeCalled();
     });
 
     it('should toggle search mode', () => {
         const testToggleFn = jest.fn();
-        const wrapper = setup({showAdvancedSearchButton: true, onToggleSearchMode: testToggleFn});
+        const wrapper = setup({
+            showAdvancedSearchButton: true,
+            onToggleSearchMode: testToggleFn
+        });
         wrapper.instance()._handleSearchMode();
         expect(testToggleFn).toHaveBeenCalled();
     });
@@ -93,6 +142,8 @@ describe('SimpleSearchComponent', () => {
         const wrapper = setup({});
         wrapper.instance()._handleToggleMobile();
         expect(wrapper.state().showMobile).toBe(true);
+        wrapper.instance()._handleToggleMobile();
+        expect(wrapper.state().showMobile).toBe(false);
     });
 
     it('should handle search and notify with error message for max length for search text', () => {
@@ -119,5 +170,36 @@ describe('SimpleSearchComponent', () => {
         wrapper.setState({searchText: 'this is fine'});
         wrapper.update();
         expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                secondary: {
+                    main: 'test1'
+                },
+                white: {
+                    main: 'test2'
+                }
+            },
+            typography: {
+                fontWeightNormal: 'test3'
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should have default event handler props return undefined', () => {
+        const wrapper = getElement(SimpleSearchComponent, {
+            onSearchTextChange: () => {}
+        });
+        const defaultPropMethodNames = [
+            'onSearch',
+            'onToggleSearchMode',
+            'onInvalidSearch'
+        ];
+        defaultPropMethodNames.forEach(methodName => {
+            expect(wrapper.instance().props[methodName]()).toBeUndefined();
+        });
     });
 });
